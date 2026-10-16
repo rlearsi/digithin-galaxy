@@ -1,5 +1,5 @@
 /* ================================================
-   DIGITINHO — js/audio.js
+   DIGITHIN GALAXY — js/audio.js
    Web Audio API sound engine & sound effects
    ================================================ */
 'use strict';
@@ -13,7 +13,7 @@ function actx() {
 
 let soundEnabled = true;
 try {
-  const savedSound = localStorage.getItem('digitinho_sound');
+  const savedSound = localStorage.getItem('digithin_galaxy_sound');
   if (savedSound !== null) soundEnabled = savedSound === 'true';
 } catch (_) {}
 
@@ -24,7 +24,7 @@ function isSoundEnabled() {
 function setSoundEnabled(val) {
   soundEnabled = !!val;
   try {
-    localStorage.setItem('digitinho_sound', String(soundEnabled));
+    localStorage.setItem('digithin_galaxy_sound', String(soundEnabled));
   } catch (_) {}
   if (typeof updateSoundUI === 'function') updateSoundUI();
 }
@@ -114,19 +114,18 @@ function playSound(type) {
       }
 
       case 'fall': {
-        const len = Math.floor(ctx.sampleRate * 0.09);
-        const buf = ctx.createBuffer(1, len, ctx.sampleRate);
-        const d   = buf.getChannelData(0);
-        for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * (1 - i / len);
-        const src  = ctx.createBufferSource();
-        src.buffer = buf;
-        const filt = ctx.createBiquadFilter();
-        filt.type  = 'lowpass'; filt.frequency.value = 180;
-        const g    = ctx.createGain();
-        g.gain.setValueAtTime(0.4, t);
-        g.gain.exponentialRampToValueAtTime(0.001, t + 0.12);
-        src.connect(filt); filt.connect(g); g.connect(ctx.destination);
-        src.start(t); src.stop(t + 0.13);
+        // Gravitational singularity plunge / black hole swallow sound
+        const o = ctx.createOscillator(), g = ctx.createGain(), f = ctx.createBiquadFilter();
+        o.type = 'sawtooth';
+        f.type = 'lowpass';
+        f.frequency.setValueAtTime(340, t);
+        f.frequency.exponentialRampToValueAtTime(38, t + 0.32);
+        o.frequency.setValueAtTime(180, t);
+        o.frequency.exponentialRampToValueAtTime(28, t + 0.30);
+        g.gain.setValueAtTime(0.32, t);
+        g.gain.exponentialRampToValueAtTime(0.001, t + 0.32);
+        o.connect(f); f.connect(g); g.connect(ctx.destination);
+        o.start(t); o.stop(t + 0.33);
         break;
       }
 

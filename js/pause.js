@@ -1,5 +1,5 @@
 /* ================================================
-   DIGITINHO — js/pause.js
+   DIGITHIN GALAXY — js/pause.js
    Pause / resume state, 3-2-1 countdown & exit confirm
    ================================================ */
 'use strict';

@@ -1,7 +1,7 @@
 {
     "ui": {
-        "app_title": "Digitinho.",
-        "app_subtitle": "在文字坠入深渊之前熟练掌握符文键盘",
+        "app_title": "Digitinho Galaxy.",
+        "app_subtitle": "在文字被黑洞吞噬之前，掌控星际键盘",
         "rules_title": "游戏玩法与符文规则",
         "rule_typing": "<strong>键盘打字：</strong>在字母、音节和单词掉落到底部之前在键盘上输入它们",
         "rule_wildcard": "<strong>万能单词：</strong>瞬间摧毁屏幕上的所有符文并吸取所有点数",
@@ -322,42 +322,42 @@
         "boss_enigma_letters": "{count}个字母",
         "boss_enigma_queue": "谜题 {num} / 3",
         "boss_level_tag": " (Lv. {level})",
-        "boss_cyber_titan_name": "赛博泰坦·莱克西斯",
-        "boss_cyber_titan_title": "自主赛博哨兵",
-        "boss_cyber_titan_scenario": "赛博大都会",
-        "boss_cyber_titan_scenario_desc": "布满发光服务器、神经处理器和自主无人机网格的巨型都市。",
-        "boss_cyber_titan_badge": "机器人 • 科技",
-        "boss_cyber_titan_lore": "算法、计算逻辑与高速数字网络的主宰。",
-        "boss_feral_apex_name": "雷克斯·普里姆斯：荒野顶峰",
-        "boss_feral_apex_title": "远古荒原掠食者",
-        "boss_feral_apex_scenario": "原始大草原",
-        "boss_feral_apex_scenario_desc": "原始凶兽凭借纯粹本能与力量统治的辽阔荒原。",
-        "boss_feral_apex_badge": "野兽 • 凶兽",
-        "boss_feral_apex_lore": "野生兽群、锋利爪刃与精密协作猎群的霸主。",
-        "boss_arcane_chimera_name": "德尔斐秘术奇美拉",
-        "boss_arcane_chimera_title": "神圣万神殿守卫",
-        "boss_arcane_chimera_scenario": "德尔斐神秘神殿",
-        "boss_arcane_chimera_scenario_desc": "巍峨立柱、神圣神谕与神话生物汇聚的古老圣域。",
-        "boss_arcane_chimera_badge": "神话 • 传奇",
-        "boss_arcane_chimera_lore": "淬炼于神话之火、斯芬克斯谜题与九头蛇头颅。",
-        "boss_abyssal_leviathan_name": "深渊利维坦",
-        "boss_abyssal_leviathan_title": "深海海沟君主",
-        "boss_abyssal_leviathan_scenario": "大洋深海海沟",
-        "boss_abyssal_leviathan_scenario_desc": "发光生物在绝对黑暗中游弋的万米高压深海。",
-        "boss_abyssal_leviathan_badge": "海洋 • 深渊",
-        "boss_abyssal_leviathan_lore": "海啸巨浪、巨齿狂鲨与深海海沟的统帅。",
-        "boss_cosmic_chronos_name": "星宿泰坦·克罗诺斯",
-        "boss_cosmic_chronos_title": "星系与星云织造者",
-        "boss_cosmic_chronos_scenario": "恒星星云与宇宙虚空",
-        "boss_cosmic_chronos_scenario_desc": "等离子星云与引力轨道旋涡环绕的无尽宇宙虚空。",
-        "boss_cosmic_chronos_badge": "宇宙 • 空间",
-        "boss_cosmic_chronos_lore": "热核恒星核心、脉冲星标与宇宙引力的统领。",
-        "boss_magma_vulcanus_name": "熔岩巨神·瓦尔坎",
-        "boss_magma_vulcanus_title": "地质破火山口之主",
-        "boss_magma_vulcanus_scenario": "火山破火山口与岩浆核心",
-        "boss_magma_vulcanus_scenario_desc": "地下炽热熔岩之海、玄武岩柱与滚滚浓烟火山口。",
-        "boss_magma_vulcanus_badge": "火山 • 熔岩",
-        "boss_magma_vulcanus_lore": "地壳喷发、碎屑流与熔融岩石的化身。",
+        "boss_cyber_titan_name": "虚空霸主 希拉里昂",
+        "boss_cyber_titan_title": "外星先锋指挥官",
+        "boss_cyber_titan_scenario": "柯伊伯带（太阳系边界）",
+        "boss_cyber_titan_scenario_desc": "希拉里昂的无畏级外星舰队已经越过虚空，开始入侵太阳系！",
+        "boss_cyber_titan_badge": "外星人 • 无畏舰",
+        "boss_cyber_titan_lore": "入侵舰队最高指挥官，掌控高能恒星等离子巨炮。",
+        "boss_feral_apex_name": "轨道征服者 佐尔肯",
+        "boss_feral_apex_title": "生化机械蜂群主脑",
+        "boss_feral_apex_scenario": "海王星轨道",
+        "boss_feral_apex_scenario_desc": "佐尔肯的生物机械群舰已包围太阳系的气态巨行星！",
+        "boss_feral_apex_badge": "外星人 • 蜂群",
+        "boss_feral_apex_lore": "统辖能够吞噬星际舰队的外星生物机械母巢。",
+        "boss_arcane_chimera_name": "反物质女皇 维斯佩拉",
+        "boss_arcane_chimera_title": "星际灵能统治者",
+        "boss_arcane_chimera_scenario": "土星光环",
+        "boss_arcane_chimera_scenario_desc": "维斯佩拉正启动反物质炮阵，企图撕裂太阳系的引力护盾！",
+        "boss_arcane_chimera_badge": "外星人 • 灵能",
+        "boss_arcane_chimera_lore": "操纵暗能量与星系级别的灵能风暴。",
+        "boss_abyssal_leviathan_name": "暗物质使者 涅布拉",
+        "boss_abyssal_leviathan_title": "宇宙阴影实体",
+        "boss_abyssal_leviathan_scenario": "木星轨道",
+        "boss_abyssal_leviathan_scenario_desc": "涅布拉正在扭曲木星磁层，为对地球发动毁灭性打击做准备！",
+        "boss_abyssal_leviathan_badge": "外星人 • 阴影",
+        "boss_abyssal_leviathan_lore": "随心所欲操控时空畸变与引力奇点。",
+        "boss_cosmic_chronos_name": "银河主脑 塞诺尔",
+        "boss_cosmic_chronos_title": "入侵中枢主脑母舰",
+        "boss_cosmic_chronos_scenario": "地月轨道",
+        "boss_cosmic_chronos_scenario_desc": "塞诺尔的巨型外星母舰已逼近月球轨道，正式展开对地球的最终入侵！",
+        "boss_cosmic_chronos_badge": "外星人 • 母舰",
+        "boss_cosmic_chronos_lore": "统筹并指挥整个太阳系大入侵的外星至高母体意志。",
+        "boss_magma_vulcanus_name": "舰队粉碎者 克拉格托尔",
+        "boss_magma_vulcanus_title": "外星军阀大将军",
+        "boss_magma_vulcanus_scenario": "小行星带",
+        "boss_magma_vulcanus_scenario_desc": "克拉格托尔的重型装甲战舰正轰碎小行星群，开辟直通地球的入侵通道！",
+        "boss_magma_vulcanus_badge": "外星人 • 军阀",
+        "boss_magma_vulcanus_lore": "装备毁灭性反物质分解武器的重甲侵略战神。",
         "btn_continue": "继续游戏",
         "btn_new_game": "新游戏",
         "btn_new_game_desc": "使用共享金币重新开始",
@@ -418,28 +418,64 @@
         "privacy_badge_local": "100% 本地存储",
         "privacy_badge_github": "GitHub Pages 托管",
         "privacy_badge_lgpd": "符合 LGPD 和 ANPD 规范",
-        "privacy_sec_collection_title": "1. Digitinho 零个人数据收集",
-        "privacy_sec_collection_desc": "Digitinho 是一款完全在玩家浏览器端（客户端）运行的静态网页游戏。本项目不维护任何后端服务器、远程数据库、注册表单或用户账户系统。我们绝不会索取、收集、处理或出售任何个人数据（如姓名、电子邮箱、证件或电话号码）。",
+        "privacy_sec_collection_title": "1. Digitinho Galaxy 零个人数据收集",
+        "privacy_sec_collection_desc": "Digitinho Galaxy 是一款完全在玩家浏览器端（客户端）运行的静态网页游戏。本项目不维护任何后端服务器、远程数据库、注册表单或用户账户系统。我们绝不会索取、收集、处理或出售任何个人数据（如姓名、电子邮箱、证件或电话号码）。",
         "privacy_sec_storage_title": "2. 设备本地存储 (HTML5 LocalStorage)",
         "privacy_sec_storage_desc": "所有游戏进度——包括得分、存档槽位、图鉴词汇、已获成就、音频设置、难度与界面主题——均仅存储在您浏览器的本地存储（localStorage）中。这些信息绝不会离开您的设备，您随时可以通过浏览器设置或游戏内的存档管理将其彻底清除。",
         "privacy_sec_hosting_title": "3. 托管基础设施与 GitHub Pages 技术日志",
-        "privacy_sec_hosting_desc": "Digitinho 作为静态网站托管在 GitHub Pages（由 GitHub, Inc. / Microsoft 运营）上。当您访问游戏时，GitHub 服务器可能会根据其隐私政策自动记录技术性连接元数据（如 IP 地址、访问时间、浏览器标识、请求 URL 等），用于网络安全防护、基础设施维护与防滥用监控。Digitinho 开发者无权访问原始 IP 日志，也不会将其用于识别或追踪访客。",
+        "privacy_sec_hosting_desc": "Digitinho Galaxy 作为静态网站托管在 GitHub Pages（由 GitHub, Inc. / Microsoft 运营）上。当您访问游戏时，GitHub 服务器可能会根据其隐私政策自动记录技术性连接元数据（如 IP 地址、访问时间、浏览器标识、请求 URL 等），用于网络安全防护、基础设施维护与防滥用监控。Digitinho Galaxy 开发者无权访问原始 IP 日志，也不会将其用于识别或追踪访客。",
         "privacy_sec_cookies_title": "4. 无追踪 Cookie 或第三方数据分析",
         "privacy_sec_cookies_desc": "本游戏不使用任何广告 Cookie、Google Analytics、社交媒体追踪器或第三方行为分析工具。我们致力于提供纯粹的打字练习与街机游戏体验。",
         "privacy_sec_lgpd_title": "5. 符合巴西《通用数据保护法》（LGPD）与 ANPD 监管原则",
         "privacy_sec_lgpd_desc": "根据巴西《通用数据保护法》（第 13.709/2018 号法律 - LGPD）及国家数据保护局（ANPD）的指导方针，本项目严格遵循目的明确、必要性与数据最小化原则。由于开发者不处理玩家的个人数据，因此绝不存在任何出售、共享或向第三方转让个人信息的行为。",
         "privacy_sec_opensource_title": "6. 开源代码与透明度审查",
-        "privacy_sec_opensource_desc": "Digitinho 是一个在 MIT 许可证下发布的开源项目。任何人均可在 GitHub 上自由查阅和审查完整的源代码，以证实本游戏绝无任何隐藏追踪器、遥测脚本或远程数据收集行为。",
+        "privacy_sec_opensource_desc": "Digitinho Galaxy 是一个在 MIT 许可证下发布的开源项目。任何人均可在 GitHub 上自由查阅和审查完整的源代码，以证实本游戏绝无任何隐藏追踪器、遥测脚本或远程数据收集行为。",
         "privacy_sec_links_title": "官方参考与法规来源",
         "privacy_link_github": "GitHub Pages: 运行机制与 IP 日志记录",
         "privacy_link_anpd": "ANPD: 个人数据概念与数据处理主体",
         "privacy_link_lgpd": "LGPD — 巴西《通用数据保护法》（第 13.709/2018 号法律）",
         "privacy_back_game": "返回游戏",
-        "privacy_updated": "最近更新：2026年10月 • Digitinho 打字游戏",
-        "privacy_page_title": "Digitinho — 隐私政策与透明度",
+        "privacy_updated": "最近更新：2026年10月 • Digitinho Galaxy 打字游戏",
+        "privacy_page_title": "Digitinho Galaxy — 隐私政策与透明度",
         "privacy_overview_title": "核心要点概览",
         "privacy_contact_title": "疑问与联系",
-        "privacy_contact_desc": "由于这是一个无需后端服务器且不收集任何数据的客户端开源项目，如有疑问或建议，可直接通过 GitHub 仓库提交 Issue。"
+        "privacy_contact_desc": "由于这是一个无需后端服务器且不收集任何数据的客户端开源项目，如有疑问或建议，可直接通过 GitHub 仓库提交 Issue。",
+        "boss_alien_xylarion_name": "虚空霸主 希拉里昂",
+        "boss_alien_xylarion_title": "外星先锋指挥官",
+        "boss_alien_xylarion_scenario": "柯伊伯带（太阳系边界）",
+        "boss_alien_xylarion_scenario_desc": "希拉里昂的无畏级外星舰队已经越过虚空，开始入侵太阳系！",
+        "boss_alien_xylarion_badge": "外星人 • 无畏舰",
+        "boss_alien_xylarion_lore": "入侵舰队最高指挥官，掌控高能恒星等离子巨炮。",
+        "boss_alien_zorkon_name": "轨道征服者 佐尔肯",
+        "boss_alien_zorkon_title": "生化机械蜂群主脑",
+        "boss_alien_zorkon_scenario": "海王星轨道",
+        "boss_alien_zorkon_scenario_desc": "佐尔肯的生物机械群舰已包围太阳系的气态巨行星！",
+        "boss_alien_zorkon_badge": "外星人 • 蜂群",
+        "boss_alien_zorkon_lore": "统辖能够吞噬星际舰队的外星生物机械母巢。",
+        "boss_alien_vespera_name": "反物质女皇 维斯佩拉",
+        "boss_alien_vespera_title": "星际灵能统治者",
+        "boss_alien_vespera_scenario": "土星光环",
+        "boss_alien_vespera_scenario_desc": "维斯佩拉正启动反物质炮阵，企图撕裂太阳系的引力护盾！",
+        "boss_alien_vespera_badge": "外星人 • 灵能",
+        "boss_alien_vespera_lore": "操纵暗能量与星系级别的灵能风暴。",
+        "boss_alien_kragthor_name": "舰队粉碎者 克拉格托尔",
+        "boss_alien_kragthor_title": "外星军阀大将军",
+        "boss_alien_kragthor_scenario": "小行星带",
+        "boss_alien_kragthor_scenario_desc": "克拉格托尔的重型装甲战舰正轰碎小行星群，开辟直通地球的入侵通道！",
+        "boss_alien_kragthor_badge": "外星人 • 军阀",
+        "boss_alien_kragthor_lore": "装备毁灭性反物质分解武器的重甲侵略战神。",
+        "boss_alien_nebulor_name": "暗物质使者 涅布拉",
+        "boss_alien_nebulor_title": "宇宙阴影实体",
+        "boss_alien_nebulor_scenario": "木星轨道",
+        "boss_alien_nebulor_scenario_desc": "涅布拉正在扭曲木星磁层，为对地球发动毁灭性打击做准备！",
+        "boss_alien_nebulor_badge": "外星人 • 阴影",
+        "boss_alien_nebulor_lore": "随心所欲操控时空畸变与引力奇点。",
+        "boss_alien_xenor_name": "银河主脑 塞诺尔",
+        "boss_alien_xenor_title": "入侵中枢主脑母舰",
+        "boss_alien_xenor_scenario": "地月轨道",
+        "boss_alien_xenor_scenario_desc": "塞诺尔的巨型外星母舰已逼近月球轨道，正式展开对地球的最终入侵！",
+        "boss_alien_xenor_badge": "外星人 • 母舰",
+        "boss_alien_xenor_lore": "统筹并指挥整个太阳系大入侵的外星至高母体意志。"
     },
     "syllables": [
         "ba",
@@ -476,837 +512,1304 @@
     ],
     "words": [
         {
-            "text": "mao",
-            "type": "animal",
-            "meaning": "猫：可爱机敏、呼噜撒娇的小动物"
-        },
-        {
-            "text": "jia",
-            "type": "place",
-            "meaning": "家：充满温暖与守候的安居之所"
-        },
-        {
-            "text": "ai",
-            "type": "feeling",
-            "meaning": "爱：内心深处真挚的情感与守护"
-        },
-        {
-            "text": "qiu",
-            "type": "object",
-            "meaning": "球：运动与游戏中旋转的圆形物体"
-        },
-        {
-            "text": "huo",
-            "type": "element",
-            "meaning": "火：散发炽热光芒与能量的烈焰"
-        },
-        {
-            "text": "feng",
-            "type": "nature",
-            "meaning": "风：在大地上流转吹拂的清新空气"
-        },
-        {
-            "text": "chuang",
-            "type": "place",
-            "meaning": "窗：迎纳阳光与和风的明净之口"
-        },
-        {
-            "text": "lang",
-            "type": "animal",
-            "meaning": "狼：团结勇敢、仰天长啸的旷野生灵"
-        },
-        {
-            "text": "shi",
-            "type": "nature",
-            "meaning": "石：大自然历经岁月洗礼的坚固磐石"
-        },
-        {
-            "text": "ye",
-            "type": "nature",
-            "meaning": "野：无边无际、生机勃勃的开阔原野"
-        },
-        {
-            "text": "yu",
-            "type": "nature",
-            "meaning": "雨：自云端飘落、润泽大地的甘霖"
-        },
-        {
-            "text": "di",
-            "type": "nature",
-            "meaning": "地：孕育万千生命的深厚大地母亲"
-        },
-        {
-            "text": "ye",
-            "type": "time",
-            "meaning": "夜：夕阳隐没后星河闪耀的宁静时刻"
-        },
-        {
-            "text": "xing",
+            "text": "sun",
             "type": "cosmos",
-            "meaning": "星：夜空中永恒闪烁的璀璨天体"
+            "meaning": "宇宙与天体概念: sun"
         },
         {
-            "text": "long",
-            "type": "fantasy",
-            "meaning": "龙：翱翔九天、吐纳烈焰的祥瑞神兽"
-        },
-        {
-            "text": "hu",
-            "type": "animal",
-            "meaning": "狐：身姿灵巧、毛色鲜艳的林间生灵"
-        },
-        {
-            "text": "cheng",
-            "type": "place",
-            "meaning": "城：车水马龙、繁荣喧嚣的现代都市"
-        },
-        {
-            "text": "lin",
-            "type": "nature",
-            "meaning": "林：古木参天、鸟鸣清脆的苍翠森林"
-        },
-        {
-            "text": "xing",
+            "text": "moon",
             "type": "cosmos",
-            "meaning": "行星：沿着轨道静谧运行的广袤天体"
+            "meaning": "宇宙与天体概念: moon"
         },
         {
-            "text": "jian",
-            "type": "object",
-            "meaning": "剑：寒光闪闪、斩除邪祟的正义之刃"
-        },
-        {
-            "text": "jing",
-            "type": "object",
-            "meaning": "晶：纯洁通透、折射彩芒的天然矿石"
-        },
-        {
-            "text": "shan",
-            "type": "nature",
-            "meaning": "火山：涌动灼热岩浆与壮丽熔岩的高山"
-        },
-        {
-            "text": "hai",
-            "type": "nature",
-            "meaning": "海：浩瀚无垠、波澜壮阔的蓝色大洋"
-        },
-        {
-            "text": "she",
-            "type": "animal",
-            "meaning": "蛇：蜿蜒滑行、神秘莫测的灵巧爬虫"
-        },
-        {
-            "text": "lei",
-            "type": "nature",
-            "meaning": "雷：闪电划破长空后的震撼轰鸣"
-        },
-        {
-            "text": "guang",
+            "text": "moons",
             "type": "cosmos",
-            "meaning": "光：驱散所有黑暗的明亮之源"
+            "meaning": "宇宙与天体概念: moons"
         },
         {
-            "text": "ma",
-            "type": "animal",
-            "meaning": "马：昂首嘶鸣、驰骋千里的骏马"
-        },
-        {
-            "text": "yun",
-            "type": "nature",
-            "meaning": "云：随风漂浮于苍穹之上的洁白水气"
-        },
-        {
-            "text": "shi",
-            "type": "animal",
-            "meaning": "狮：威武雄壮、傲视草原的百兽之王"
-        },
-        {
-            "text": "hu",
-            "type": "nature",
-            "meaning": "湖：群山环抱间澄澈如镜的水域"
-        },
-        {
-            "text": "xinpi",
-            "type": "tech",
-            "meaning": "芯片：以纳米级晶体管高速执行二进制指令的集成电路"
-        },
-        {
-            "text": "jiguang",
-            "type": "tech",
-            "meaning": "激光：用于光学传感、高能扫描与数据传输的高相干性光束"
-        },
-        {
-            "text": "wangluo",
-            "type": "tech",
-            "meaning": "网络：将海量计算节点与数据中心连接的互联数字网格"
-        },
-        {
-            "text": "shuju",
-            "type": "tech",
-            "meaning": "数据：由算法系统高速解析和存取的离散信息单元"
-        },
-        {
-            "text": "xiangsu",
-            "type": "tech",
-            "meaning": "像素：组成数字屏幕画面的最小独立可寻址色彩单元"
-        },
-        {
-            "text": "jiqiren",
-            "type": "tech",
-            "meaning": "机器人：具备传感器与执行机构的自律型机电智能设备"
-        },
-        {
-            "text": "dianlu",
-            "type": "tech",
-            "meaning": "电路：由导线与电子元器件构成的闭合导电路径"
-        },
-        {
-            "text": "weixing",
-            "type": "tech",
-            "meaning": "卫星：在地球轨道上中继传输通讯与定位信号的人造天体"
-        },
-        {
-            "text": "daima",
-            "type": "tech",
-            "meaning": "代码：使用编程语言规范书写给计算机执行的程序序列"
-        },
-        {
-            "text": "chuanganqi",
-            "type": "tech",
-            "meaning": "传感器：侦测环境光热、压力等物理变化的微电子元件"
-        },
-        {
-            "text": "ruanjian",
-            "type": "tech",
-            "meaning": "软件：指挥计算机硬件运行与数据处理的程序系统"
-        },
-        {
-            "text": "tianxian",
-            "type": "tech",
-            "meaning": "天线：发射和接收电磁无线电波信号的高频导电装置"
-        },
-        {
-            "text": "taiyang",
+            "text": "sky",
             "type": "cosmos",
-            "meaning": "太阳：温暖照耀大地、维系星系运转的中心恒星"
+            "meaning": "宇宙与天体概念: sky"
         },
         {
-            "text": "yue",
+            "text": "ray",
+            "type": "phenomenon",
+            "meaning": "宇宙与天体概念: ray"
+        },
+        {
+            "text": "halo",
             "type": "cosmos",
-            "meaning": "月亮：夜空中散发柔和银辉的天然卫星"
+            "meaning": "宇宙与天体概念: halo"
         },
         {
-            "text": "he",
-            "type": "nature",
-            "meaning": "江河：自崇山峻岭奔流向海的清澈水系"
-        },
-        {
-            "text": "hai",
-            "type": "nature",
-            "meaning": "大海：环绕辽阔陆地的无垠蔚蓝咸水水域"
-        },
-        {
-            "text": "niao",
-            "type": "animal",
-            "meaning": "飞鸟：披覆羽毛、展翅在晴空翱翔的生灵"
-        },
-        {
-            "text": "mi",
-            "type": "nature",
-            "meaning": "蜂蜜：勤劳工蜂采集百花酿成的金色甘饴"
-        },
-        {
-            "text": "sheng",
-            "type": "element",
-            "meaning": "声音：通过空气介质传播并被双耳感知的波动"
-        },
-        {
-            "text": "hua",
-            "type": "nature",
-            "meaning": "鲜花：色彩娇艳、芬芳怡人的植物绽放部位"
-        },
-        {
-            "text": "ya",
-            "type": "animal",
-            "meaning": "鸭子：扁平嘴喙、在水波中自在浮游的水禽"
-        },
-        {
-            "text": "wa",
-            "type": "animal",
-            "meaning": "青蛙：在池塘荷叶间敏捷跳跃捕食的双栖动物"
-        },
-        {
-            "text": "zhong",
-            "type": "object",
-            "meaning": "铜钟：敲击时回荡悠长清脆余音的中空金属乐器"
-        },
-        {
-            "text": "chuan",
-            "type": "vehicle",
-            "meaning": "舟船：承载旅人与行囊在江海之上平稳航行的船只"
-        },
-        {
-            "text": "ping",
-            "type": "object",
-            "meaning": "花瓶：精工烧制、用以盛水供奉雅致花枝的瓷器"
-        },
-        {
-            "text": "jin",
-            "type": "element",
-            "meaning": "黄金：色泽恒久璀璨、珍贵且极具保值价值的贵金属"
-        },
-        {
-            "text": "ditu",
-            "type": "object",
-            "meaning": "地图：俯瞰描绘山川疆域、道路走向的指引图卷"
-        },
-        {
-            "text": "shu",
-            "type": "object",
-            "meaning": "书卷：装订成册、记载人类智慧与故事的典籍"
-        },
-        {
-            "text": "qiao",
-            "type": "place",
-            "meaning": "桥梁：飞架于峡谷或水流之上沟通两岸的枢纽建筑"
-        },
-        {
-            "text": "xiaozhou",
-            "type": "vehicle",
-            "meaning": "小舟：轻巧灵活、以双桨划行在碧波之上的小艇"
-        },
-        {
-            "text": "ye",
-            "type": "nature",
-            "meaning": "绿叶：吸收阳光并进行光合作用的植物青翠叶片"
-        },
-        {
-            "text": "yaoshi",
-            "type": "object",
-            "meaning": "钥匙：雕有特制齿痕、用来开启重重门锁的金属器具"
-        },
-        {
-            "text": "meng",
-            "type": "feeling",
-            "meaning": "梦境：沉睡时心灵深处展开的斑斓奇妙幻象"
-        },
-        {
-            "text": "cao",
-            "type": "nature",
-            "meaning": "芳草：铺满原野、生机盎然的青翠地被植物"
-        },
-        {
-            "text": "shi",
-            "type": "art",
-            "meaning": "诗歌：饱含节奏旋律与真挚意境的优美韵文"
-        },
-        {
-            "text": "guan",
-            "type": "object",
-            "meaning": "王冠：缀满璀璨宝石与赤金、象征尊荣的冠冕"
-        },
-        {
-            "text": "zhenzhu",
-            "type": "object",
-            "meaning": "珍珠：在母贝温润蚌体深处孕育而出的虹光宝珠"
-        },
-        {
-            "text": "huayuan",
-            "type": "place",
-            "meaning": "花园：花木扶疏、修葺整齐用以漫步赏景的庭院"
-        },
-        {
-            "text": "simiao",
-            "type": "place",
-            "meaning": "寺庙：庄严宁静、供人冥想祈福与修身养性的古刹"
-        },
-        {
-            "text": "men",
-            "type": "fantasy",
-            "meaning": "星门：穿透虚空、连接遥远时空与奇境的神奇通道"
-        },
-        {
-            "text": "dun",
-            "type": "object",
-            "meaning": "坚盾：用以格挡敌方利刃攻势、守护周全的护具"
-        },
-        {
-            "text": "lvxing",
-            "type": "experience",
-            "meaning": "旅行：探索未知风物、领略广袤天地的心灵漫游"
-        },
-        {
-            "text": "jian",
-            "type": "object",
-            "meaning": "飞箭：以紧绷弓弦强力射出、疾速正中靶心的锐利箭头"
-        },
-        {
-            "text": "lin",
-            "type": "nature",
-            "meaning": "树林：乔木丛生、鸟鸣幽幽的苍翠自然林地"
-        },
-        {
-            "text": "huixing",
+            "text": "axis",
             "type": "cosmos",
-            "meaning": "彗星：拖着修长冰雪光芒尘尾掠过深空的奇异天体"
+            "meaning": "宇宙与天体概念: axis"
         },
         {
-            "text": "chengbao",
-            "type": "place",
-            "meaning": "城堡：耸立着坚固石墙与高耸箭塔的宏伟中世纪要塞"
+            "text": "phase",
+            "type": "phenomenon",
+            "meaning": "宇宙与天体概念: phase"
         },
         {
-            "text": "xingxi",
-            "type": "cosmos",
-            "meaning": "星系：由数百亿恒星与星云在重力下交织的巨大漩涡"
+            "text": "wave",
+            "type": "phenomenon",
+            "meaning": "宇宙与天体概念: wave"
         },
         {
-            "text": "jiyi",
-            "type": "mind",
-            "meaning": "记忆：储存在脑海深处的往事经验与宝贵认知"
-        },
-        {
-            "text": "yuzhou",
-            "type": "cosmos",
-            "meaning": "宇宙：包含一切时空、物质与浩瀚星辰的无限整体"
-        },
-        {
-            "text": "migong",
-            "type": "place",
-            "meaning": "迷宫：曲折盘旋、令人迷失方向而探寻唯一出口的通道"
-        },
-        {
-            "text": "hudie",
-            "type": "animal",
-            "meaning": "蝴蝶：破茧而出、展动如画绚烂双翅起舞的花间昆虫"
-        },
-        {
-            "text": "baofeng",
-            "type": "nature",
-            "meaning": "风暴：伴随狂风呼啸、电闪雷鸣的剧烈气象动荡"
-        },
-        {
-            "text": "xingzuo",
-            "type": "cosmos",
-            "meaning": "星座：在夜空中相映成趣、寄托神话传说的恒星图景"
-        },
-        {
-            "text": "shandian",
-            "type": "element",
-            "meaning": "闪电：瞬间划破浓云夜空、爆发出万丈光芒的高压电火"
-        },
-        {
-            "text": "dipingxian",
-            "type": "nature",
-            "meaning": "地平线：极目远眺时广袤大地与苍穹遥遥相接的视界"
-        },
-        {
-            "text": "feichuan",
+            "text": "ship",
             "type": "tech",
-            "meaning": "飞船：航行于浩渺星海之间的先进深空探险巡航舰"
+            "meaning": "宇宙与天体概念: ship"
         },
         {
-            "text": "keji",
+            "text": "nova",
+            "type": "phenomenon",
+            "meaning": "宇宙与天体概念: nova"
+        },
+        {
+            "text": "target",
             "type": "tech",
-            "meaning": "科技：推动人类文明革新与生活便捷的科学成果"
+            "meaning": "宇宙与天体概念: target"
         },
         {
-            "text": "jianzhu",
-            "type": "art",
-            "meaning": "建筑：兼顾稳固功能与空间美学意境的造物艺术"
+            "text": "data",
+            "type": "tech",
+            "meaning": "宇宙与天体概念: data"
         },
         {
-            "text": "sudu",
-            "type": "concept",
-            "meaning": "速度：衡量物体在单位时间内位移快慢的物理概念"
+            "text": "pitch",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: pitch"
         },
         {
-            "text": "mimi",
-            "type": "mystery",
-            "meaning": "秘密：深藏不露、令人无限神往猜度的未解之谜"
+            "text": "year",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: year"
         },
         {
-            "text": "hechenggi",
-            "type": "music",
-            "meaning": "合成器：通过电子电路调制各种奇妙声波音色的现代乐器"
+            "text": "vacuum",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: vacuum"
         },
         {
-            "text": "xinyin",
-            "type": "mind",
-            "meaning": "心灵感应：不假言语而直接在心灵之间传递念想的默契能力"
+            "text": "astro",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: astro"
+        },
+        {
+            "text": "cosmos",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: cosmos"
+        },
+        {
+            "text": "mars",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: mars"
+        },
+        {
+            "text": "venus",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: venus"
+        },
+        {
+            "text": "earth",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: earth"
+        },
+        {
+            "text": "solar",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: solar"
+        },
+        {
+            "text": "probe",
+            "type": "tech",
+            "meaning": "宇宙与天体概念: probe"
+        },
+        {
+            "text": "radar",
+            "type": "tech",
+            "meaning": "宇宙与天体概念: radar"
+        },
+        {
+            "text": "magma",
+            "type": "nature",
+            "meaning": "宇宙与天体概念: magma"
+        },
+        {
+            "text": "cloud",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: cloud"
+        },
+        {
+            "text": "pluto",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: pluto"
+        },
+        {
+            "text": "orbit",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: orbit"
+        },
+        {
+            "text": "comet",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: comet"
+        },
+        {
+            "text": "pulsar",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: pulsar"
+        },
+        {
+            "text": "quasar",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: quasar"
+        },
+        {
+            "text": "corona",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: corona"
+        },
+        {
+            "text": "meteor",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: meteor"
+        },
+        {
+            "text": "optics",
+            "type": "tech",
+            "meaning": "宇宙与天体概念: optics"
+        },
+        {
+            "text": "space",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: space"
+        },
+        {
+            "text": "aurora",
+            "type": "phenomenon",
+            "meaning": "宇宙与天体概念: aurora"
+        },
+        {
+            "text": "zenith",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: zenith"
+        },
+        {
+            "text": "hubble",
+            "type": "tech",
+            "meaning": "宇宙与天体概念: hubble"
+        },
+        {
+            "text": "dust",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: dust"
+        },
+        {
+            "text": "hole",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: hole"
+        },
+        {
+            "text": "star",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: star"
+        },
+        {
+            "text": "planet",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: planet"
+        },
+        {
+            "text": "galaxy",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: galaxy"
+        },
+        {
+            "text": "galaxies",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: galaxies"
+        },
+        {
+            "text": "universe",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: universe"
+        },
+        {
+            "text": "nebula",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: nebula"
+        },
+        {
+            "text": "gravity",
+            "type": "phenomenon",
+            "meaning": "宇宙与天体概念: gravity"
+        },
+        {
+            "text": "supernova",
+            "type": "phenomenon",
+            "meaning": "宇宙与天体概念: supernova"
+        },
+        {
+            "text": "astronaut",
+            "type": "tech",
+            "meaning": "宇宙与天体概念: astronaut"
+        },
+        {
+            "text": "astronomy",
+            "type": "science",
+            "meaning": "宇宙与天体概念: astronomy"
+        },
+        {
+            "text": "exoplanet",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: exoplanet"
+        },
+        {
+            "text": "exoplanets",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: exoplanets"
+        },
+        {
+            "text": "satellite",
+            "type": "tech",
+            "meaning": "宇宙与天体概念: satellite"
+        },
+        {
+            "text": "constellation",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: constellation"
+        },
+        {
+            "text": "telescope",
+            "type": "tech",
+            "meaning": "宇宙与天体概念: telescope"
+        },
+        {
+            "text": "starship",
+            "type": "tech",
+            "meaning": "宇宙与天体概念: starship"
+        },
+        {
+            "text": "atmosphere",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: atmosphere"
+        },
+        {
+            "text": "magnetosphere",
+            "type": "phenomenon",
+            "meaning": "宇宙与天体概念: magnetosphere"
+        },
+        {
+            "text": "radiation",
+            "type": "phenomenon",
+            "meaning": "宇宙与天体概念: radiation"
+        },
+        {
+            "text": "spectrum",
+            "type": "science",
+            "meaning": "宇宙与天体概念: spectrum"
+        },
+        {
+            "text": "andromeda",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: andromeda"
+        },
+        {
+            "text": "heliosphere",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: heliosphere"
+        },
+        {
+            "text": "antimatter",
+            "type": "science",
+            "meaning": "宇宙与天体概念: antimatter"
+        },
+        {
+            "text": "singularity",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: singularity"
+        },
+        {
+            "text": "multiverse",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: multiverse"
+        },
+        {
+            "text": "light-year",
+            "type": "science",
+            "meaning": "宇宙与天体概念: light-year"
+        },
+        {
+            "text": "black-hole",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: black-hole"
+        },
+        {
+            "text": "stardust",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: stardust"
+        },
+        {
+            "text": "dark-matter",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: dark-matter"
+        },
+        {
+            "text": "dark-energy",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: dark-energy"
+        },
+        {
+            "text": "wormhole",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: wormhole"
+        },
+        {
+            "text": "speed-of-light",
+            "type": "science",
+            "meaning": "宇宙与天体概念: speed-of-light"
+        },
+        {
+            "text": "space-station",
+            "type": "tech",
+            "meaning": "宇宙与天体概念: space-station"
+        },
+        {
+            "text": "event-horizon",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: event-horizon"
+        },
+        {
+            "text": "milky-way",
+            "type": "cosmos",
+            "meaning": "宇宙与天体概念: milky-way"
         }
     ],
     "bossWords": {
+        "alien_dreadnought": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: year"
+            }
+        ],
+        "alien_hive": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: year"
+            }
+        ],
+        "alien_psionic": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: year"
+            }
+        ],
+        "alien_warlord": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: year"
+            }
+        ],
+        "alien_darkmatter": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: year"
+            }
+        ],
+        "alien_mothership": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: year"
+            }
+        ],
         "robot": [
             {
-                "text": "xinpi",
-                "type": "tech",
-                "meaning": "芯片：以纳米级晶体管高速执行二进制指令的集成电路"
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sun"
             },
             {
-                "text": "jiguang",
-                "type": "tech",
-                "meaning": "激光：用于光学传感、高能扫描与数据传输的高相干性光束"
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moon"
             },
             {
-                "text": "wangluo",
-                "type": "tech",
-                "meaning": "网络：将海量计算节点与数据中心连接的互联数字网格"
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moons"
             },
             {
-                "text": "shuju",
-                "type": "tech",
-                "meaning": "数据：由算法系统高速解析和存取的离散信息单元"
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sky"
             },
             {
-                "text": "xiangsu",
-                "type": "tech",
-                "meaning": "像素：组成数字屏幕画面的最小独立可寻址色彩单元"
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: ray"
             },
             {
-                "text": "jiqiren",
-                "type": "tech",
-                "meaning": "机器人：具备传感器与执行机构的自律型机电智能设备"
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: halo"
             },
             {
-                "text": "dianlu",
-                "type": "tech",
-                "meaning": "电路：由导线与电子元器件构成的闭合导电路径"
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: axis"
             },
             {
-                "text": "weixing",
-                "type": "tech",
-                "meaning": "卫星：在地球轨道上中继传输通讯与定位信号的人造天体"
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: phase"
             },
             {
-                "text": "daima",
-                "type": "tech",
-                "meaning": "代码：使用编程语言规范书写给计算机执行的程序序列"
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: wave"
             },
             {
-                "text": "chuanganqi",
+                "text": "ship",
                 "type": "tech",
-                "meaning": "传感器：侦测环境光热、压力等物理变化的微电子元件"
+                "meaning": "宇宙与天体概念: ship"
             },
             {
-                "text": "ruanjian",
-                "type": "tech",
-                "meaning": "软件：指挥计算机硬件运行与数据处理的程序系统"
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: nova"
             },
             {
-                "text": "tianxian",
+                "text": "target",
                 "type": "tech",
-                "meaning": "天线：发射和接收电磁无线电波信号的高频导电装置"
+                "meaning": "宇宙与天体概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: year"
             }
         ],
         "beast": [
             {
-                "text": "shizi",
-                "type": "fauna",
-                "meaning": "狮子：拥有威严鬃毛、统治开阔草原与领地的顶级食肉王者"
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sun"
             },
             {
-                "text": "lang",
-                "type": "fauna",
-                "meaning": "狼：以严密纪律协同狩猎、向着夜月发出悠长长嚎的荒野捕食者"
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moon"
             },
             {
-                "text": "laohu",
-                "type": "fauna",
-                "meaning": "老虎：身披斑斓条纹、具备极强爆发力和隐蔽伏击能力的丛林霸主"
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moons"
             },
             {
-                "text": "laoying",
-                "type": "fauna",
-                "meaning": "老鹰：翱翔于九天之上、以极目远眺锁定制胜猎物的猛禽"
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sky"
             },
             {
-                "text": "qunluo",
-                "type": "fauna",
-                "meaning": "群落：遵循野性严密秩序、结阵猎杀强敌的狼群捕食方阵"
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: ray"
             },
             {
-                "text": "lizhao",
-                "type": "fauna",
-                "meaning": "利爪：猛兽脚掌上用于奔袭撕裂与扑杀猎物的尖锐角质武器"
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: halo"
             },
             {
-                "text": "liewu",
-                "type": "fauna",
-                "meaning": "猎物：在大自然残酷食物链中依靠敏捷机敏求生的动物"
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: axis"
             },
             {
-                "text": "yeshou",
-                "type": "fauna",
-                "meaning": "野兽：以原始生存本能主宰旷野山川的强悍陆地生命"
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: phase"
             },
             {
-                "text": "heibao",
-                "type": "fauna",
-                "meaning": "黑豹：遁入夜色之中、步履无声且爆发力极强的敏捷大猫"
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: wave"
             },
             {
-                "text": "lieying",
-                "type": "fauna",
-                "meaning": "猎鹰：以高空俯冲绝技精准截击空中目标的飞禽霸者"
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: ship"
             },
             {
-                "text": "xiong",
-                "type": "fauna",
-                "meaning": "巨熊：身披厚密重铠般皮毛、拥有碎骨巨力的高山巨兽"
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: nova"
             },
             {
-                "text": "caoyuan",
-                "type": "fauna",
-                "meaning": "草原：风吹草低见牛羊、万千野性生灵竞逐奔腾的广袤大地"
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: year"
             }
         ],
         "mythology": [
             {
-                "text": "shenlong",
-                "type": "myth",
-                "meaning": "神龙：翱翔于九霄云外、吞吐焚天烈焰与雷霆的天地神兽"
-            },
-            {
-                "text": "fenghuang",
-                "type": "myth",
-                "meaning": "凤凰：浴火淬炼而生命不灭、在余烬中翱翔重生的百鸟之王"
-            },
-            {
-                "text": "jiutoushe",
-                "type": "myth",
-                "meaning": "九头蛇：断其一首则生两首、蕴藏剧毒血海的上古魔物"
-            },
-            {
-                "text": "shishenrenmian",
-                "type": "myth",
-                "meaning": "狮身人面：盘踞于金字塔前、以致命谜题裁决凡人命运的守门者"
-            },
-            {
-                "text": "aolinpisi",
-                "type": "myth",
-                "meaning": "奥林匹斯：众神居于云海之巅、执掌天地雷火的黄金神山"
-            },
-            {
-                "text": "sifinkesi",
-                "type": "myth",
-                "meaning": "斯芬克斯：身披巨翼与利爪、盘问命运之秘的守护异兽"
-            },
-            {
-                "text": "shenhua",
-                "type": "myth",
-                "meaning": "神话：记载远古神明开辟混沌与英雄传奇的洪荒史诗"
-            },
-            {
-                "text": "qimeila",
-                "type": "myth",
-                "meaning": "奇美拉：狮首羊身蛇尾、吞吐烈火熔岩的凶煞魔物"
-            },
-            {
-                "text": "juren",
-                "type": "myth",
-                "meaning": "泰坦巨人：诞生于天地开辟之初、拥有翻江倒海伟力的上古巨神"
-            },
-            {
-                "text": "tianma",
-                "type": "myth",
-                "meaning": "天马：翱翔天际、踏破星辰破云而出的神圣飞马"
-            },
-            {
-                "text": "banrenma",
-                "type": "myth",
-                "meaning": "半人马：兼具人类智慧与奔马极速的荒野守护智者"
-            },
-            {
-                "text": "shengdian",
-                "type": "myth",
-                "meaning": "圣殿：供奉神谕与永恒圣火、接受万人朝拜的庄严殿堂"
-            }
-        ],
-        "ocean": [
-            {
-                "text": "haiyang",
-                "type": "ocean",
-                "meaning": "海洋：覆盖地球绝大部分地表面积、蕴藏无尽深渊秘密的广阔水域"
-            },
-            {
-                "text": "shayu",
-                "type": "ocean",
-                "meaning": "鲨鱼：拥有敏锐电场感知器官与流线型躯体的远洋顶级掠食者"
-            },
-            {
-                "text": "shanhu",
-                "type": "ocean",
-                "meaning": "珊瑚：由无数微小水螅体分泌碳酸钙堆叠而成的五彩缤纷海底礁石"
-            },
-            {
-                "text": "shenhai",
-                "type": "ocean",
-                "meaning": "深海：阳光无法穿透、承受着巨大水压与永恒寂静的深海深层"
-            },
-            {
-                "text": "zhangyu",
-                "type": "ocean",
-                "meaning": "章鱼：拥有八条灵活触腕、极高智商并能根据环境瞬间拟态的软体生物"
-            },
-            {
-                "text": "haixiao",
-                "type": "ocean",
-                "meaning": "海啸：海底板块震动引发、掀翻万顷波涛呼啸而至的滔天巨浪"
-            },
-            {
-                "text": "jingyu",
-                "type": "ocean",
-                "meaning": "鲸鱼：依靠悠扬低沉的次声波歌声在各大洋中迁徙通信的庞然大物"
-            },
-            {
-                "text": "haigou",
-                "type": "ocean",
-                "meaning": "海沟：大洋板块向下俯冲形成的地球表面最深邃陡峭的峡谷"
-            },
-            {
-                "text": "haichao",
-                "type": "ocean",
-                "meaning": "海潮：在月球引力摄动下昼夜节律性涨落的海洋潮汐水流"
-            },
-            {
-                "text": "shuimu",
-                "type": "ocean",
-                "meaning": "水母：在蔚蓝深海中轻盈律动伞盖、漂浮巡游的半透明刺胞生灵"
-            },
-            {
-                "text": "jiaoshi",
-                "type": "ocean",
-                "meaning": "礁石：隐匿于波涛之下、庇护亿万海洋生灵繁衍生息的坚实壁垒"
-            },
-            {
-                "text": "haitun",
-                "type": "ocean",
-                "meaning": "海豚：利用高频回声定位欢跃浪尖、智慧超凡的群居海洋哺乳精灵"
-            }
-        ],
-        "cosmos": [
-            {
-                "text": "hengxing",
+                "text": "sun",
                 "type": "cosmos",
-                "meaning": "恒星：核心进行剧烈热核聚变、源源不断向深空辐射光热的星体"
+                "meaning": "宇宙与天体概念: sun"
             },
             {
-                "text": "xingqiu",
+                "text": "moon",
                 "type": "cosmos",
-                "meaning": "行星：沿着固定公转椭圆轨道围绕中心恒星安静运行的天体"
+                "meaning": "宇宙与天体概念: moon"
             },
             {
-                "text": "guidao",
+                "text": "moons",
                 "type": "cosmos",
-                "meaning": "轨道：在引力摄动下天体在时空中划出的封闭几何运行路径"
+                "meaning": "宇宙与天体概念: moons"
             },
             {
-                "text": "huixing",
+                "text": "sky",
                 "type": "cosmos",
-                "meaning": "彗星：由冰雪与尘埃构成、接近太阳时喷发万千耀眼气态长尾的行者"
+                "meaning": "宇宙与天体概念: sky"
             },
             {
-                "text": "liuxing",
-                "type": "cosmos",
-                "meaning": "流星：穿梭于深空的星际尘屑撞击大气层剧烈摩擦燃尽的光芒"
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: ray"
             },
             {
-                "text": "maichongxing",
+                "text": "halo",
                 "type": "cosmos",
-                "meaning": "脉冲星：飞速自转、精准扫射极端相对论射线束的高密度中子星"
+                "meaning": "宇宙与天体概念: halo"
             },
             {
-                "text": "yinhe",
+                "text": "axis",
                 "type": "cosmos",
-                "meaning": "银河：由千亿颗恒星系统与星际尘埃在暗物质引力下凝聚的宏大漩涡"
+                "meaning": "宇宙与天体概念: axis"
             },
             {
-                "text": "rishe",
-                "type": "cosmos",
-                "meaning": "日食：月球精确遮挡太阳光盘、将白昼转瞬化为夜色苍穹的天象奇观"
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: phase"
             },
             {
-                "text": "yinli",
-                "type": "cosmos",
-                "meaning": "引力：弯曲时空结构、决定恒星演化与宇宙终极宿命的基本作用力"
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: wave"
             },
             {
-                "text": "xingyun",
-                "type": "cosmos",
-                "meaning": "星云：孕育恒星胚胎与行星系统的弥散性星际气体尘埃天体"
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: ship"
             },
             {
-                "text": "leixing",
-                "type": "cosmos",
-                "meaning": "类星体：超大质量黑洞吞噬物质时释放毁天灭地能量的高能天体"
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: nova"
             },
             {
-                "text": "yuzhou",
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: data"
+            },
+            {
+                "text": "pitch",
                 "type": "cosmos",
-                "meaning": "宇宙：包含一切物质、能量与时空演变的无垠宏观存在"
+                "meaning": "宇宙与天体概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: year"
             }
         ],
         "volcano": [
             {
-                "text": "huoshan",
-                "type": "volcano",
-                "meaning": "火山：地壳板块缝隙中释放高温熔岩、火山灰与高压气体的天然喷口"
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sun"
             },
             {
-                "text": "yanjiang",
-                "type": "volcano",
-                "meaning": "岩浆：存在于地球深部地幔、处于超高温高压熔融状态的液态矿物"
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moon"
             },
             {
-                "text": "rongyan",
-                "type": "volcano",
-                "meaning": "熔岩：喷出地表后奔涌流淌、所到之处重塑地貌的炽热火红岩流"
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moons"
             },
             {
-                "text": "huohui",
-                "type": "volcano",
-                "meaning": "火山灰：剧烈喷发时被送上万米平流层、遮天蔽日的细微矿物碎屑"
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sky"
             },
             {
-                "text": "huokou",
-                "type": "volcano",
-                "meaning": "火山口：位于火山顶部、不断喷吐滚烫地热气体与熔岩柱的碗状凹坑"
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: ray"
             },
             {
-                "text": "xuanyuanyan",
-                "type": "volcano",
-                "meaning": "玄武岩：基性岩浆溢出地表迅速冷却形成的黑色致密火成岩石"
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: halo"
             },
             {
-                "text": "lianlu",
-                "type": "volcano",
-                "meaning": "地热熔炉：在极端构造高热下熔融万物重铸地壳的天然冶炼之所"
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: axis"
             },
             {
-                "text": "jianquan",
-                "type": "volcano",
-                "meaning": "间歇泉：受地下高压蒸汽积蓄定期向空中喷涌沸腾水柱的地热奇景"
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: phase"
             },
             {
-                "text": "yanshi",
-                "type": "volcano",
-                "meaning": "岩石：由玄武岩熔岩冷却固化形成的地壳固态基岩骨架"
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: wave"
             },
             {
-                "text": "lieyan",
-                "type": "volcano",
-                "meaning": "烈焰：在极端地热能量驱动下肆虐翻腾的熔融之焰"
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: ship"
             },
             {
-                "text": "podi",
-                "type": "volcano",
-                "meaning": "破火山口：特大喷发后岩浆房塌陷形成的宽阔壮丽盆状陷落构造"
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: nova"
             },
             {
-                "text": "bankuai",
-                "type": "volcano",
-                "meaning": "板块：浮动于地幔软流层之上、挤压摩擦引爆地心熔岩的陆壳构造"
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: year"
+            }
+        ],
+        "ocean": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: year"
+            }
+        ],
+        "cosmos": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙与天体概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙与天体概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙与天体概念: year"
             }
         ]
     },

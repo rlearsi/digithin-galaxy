@@ -1,7 +1,7 @@
 {
     "ui": {
-        "app_title": "Digitinho.",
-        "app_subtitle": "Master the runic keyboard before words reach the abyss",
+        "app_title": "Digitinho Galaxy.",
+        "app_subtitle": "Master the cosmic keyboard before words are swallowed by the black hole",
         "rules_title": "How to Play & Runic Rules",
         "rule_typing": "<strong>Keyboard Typing:</strong> Type letters, syllables and words before they hit the bottom of the screen",
         "rule_wildcard": "<strong>Wildcard Words:</strong> Instantly destroy all runics on screen simultaneously and absorb all their points",
@@ -322,42 +322,42 @@
         "boss_enigma_letters": "{count} LETTERS",
         "boss_enigma_queue": "ENIGMA {num} / 3",
         "boss_level_tag": " (Lv. {level})",
-        "boss_cyber_titan_name": "Cyber-Titan Lexis",
-        "boss_cyber_titan_title": "Autonomous Cyber Sentinel",
-        "boss_cyber_titan_scenario": "Cybernetic Metropolis",
-        "boss_cyber_titan_scenario_desc": "Mega-city of glowing servers, neural processors and automated drone grids.",
-        "boss_cyber_titan_badge": "ROBOT • TECH",
-        "boss_cyber_titan_lore": "Master of algorithms, computational logic, and digital networks.",
-        "boss_feral_apex_name": "Rex-Primus, the Feral Apex",
-        "boss_feral_apex_title": "Ancient Apex Predator",
-        "boss_feral_apex_scenario": "Primordial Savanna",
-        "boss_feral_apex_scenario_desc": "Vast wild plains where primal beasts rule through pure instinct and strength.",
-        "boss_feral_apex_badge": "FAUNA • BEAST",
-        "boss_feral_apex_lore": "Emperor of wild herds, razor talons, and coordinated pack hunters.",
-        "boss_arcane_chimera_name": "Arcane Chimera of Delphi",
-        "boss_arcane_chimera_title": "Guardian of the Sacred Pantheon",
-        "boss_arcane_chimera_scenario": "Mystic Olympus Temple",
-        "boss_arcane_chimera_scenario_desc": "Ancient sanctuary of high columns, sacred oracles, and mythical creatures.",
-        "boss_arcane_chimera_badge": "MYTHOLOGY • LEGEND",
-        "boss_arcane_chimera_lore": "Forged from mythological fire, riddling sphinxes, and hydra heads.",
-        "boss_abyssal_leviathan_name": "Deep Abyss Leviathan",
-        "boss_abyssal_leviathan_title": "Monarch of the Pelagic Trenches",
-        "boss_abyssal_leviathan_scenario": "Pelagic Ocean Trench",
-        "boss_abyssal_leviathan_scenario_desc": "Crushing deep sea where bioluminescent organisms glide in absolute darkness.",
-        "boss_abyssal_leviathan_badge": "OCEAN • ABYSS",
-        "boss_abyssal_leviathan_lore": "Commander of tidal waves, colossal sharks, and deep-sea trenches.",
-        "boss_cosmic_chronos_name": "Astro-Titan Chronos",
-        "boss_cosmic_chronos_title": "Weaver of Galaxies & Nebulae",
-        "boss_cosmic_chronos_scenario": "Stellar Nebula & Cosmic Void",
-        "boss_cosmic_chronos_scenario_desc": "Infinite cosmic void swirling with ionized star clouds and gravitational orbits.",
-        "boss_cosmic_chronos_badge": "COSMOS • SPACE",
-        "boss_cosmic_chronos_lore": "Ruler of thermonuclear star cores, pulsar beacons, and cosmic gravitational pulls.",
-        "boss_magma_vulcanus_name": "Vulcanus, the Magma Colossus",
-        "boss_magma_vulcanus_title": "Lord of the Tectonic Caldera",
-        "boss_magma_vulcanus_scenario": "Volcanic Caldera & Igneous Core",
-        "boss_magma_vulcanus_scenario_desc": "Incandescent sea of subterranean lava, basalt pillars, and smoking craters.",
-        "boss_magma_vulcanus_badge": "VOLCANO • MAGMA",
-        "boss_magma_vulcanus_lore": "Incarnation of tectonic eruption, pyroclastic surges, and liquid rock.",
+        "boss_cyber_titan_name": "Xylarion, the Void Overlord",
+        "boss_cyber_titan_title": "Commander of the Alien Vanguard",
+        "boss_cyber_titan_scenario": "Kuiper Belt (Edge of the Solar System)",
+        "boss_cyber_titan_scenario_desc": "Xylarion's alien dreadnought armada has crossed the void to invade the Solar System!",
+        "boss_cyber_titan_badge": "ALIEN • DREADNOUGHT",
+        "boss_cyber_titan_lore": "Supreme commander of the alien invasion fleet and master of stellar plasma weaponry.",
+        "boss_feral_apex_name": "Zorkon, Orbit Conqueror",
+        "boss_feral_apex_title": "Master of the Biomechanical Swarm",
+        "boss_feral_apex_scenario": "Neptune's Orbit",
+        "boss_feral_apex_scenario_desc": "Zorkon's bio-organic swarm carriers encircle the gas giants of the Solar System!",
+        "boss_feral_apex_badge": "ALIEN • HIVE",
+        "boss_feral_apex_lore": "Controls alien biomechanical hive minds capable of devouring space fleets.",
+        "boss_arcane_chimera_name": "Vespera, Antimatter Empress",
+        "boss_arcane_chimera_title": "Extraterrestrial Psionic Sovereign",
+        "boss_arcane_chimera_scenario": "Saturn's Rings",
+        "boss_arcane_chimera_scenario_desc": "Vespera commands antimatter batteries to shatter the gravitational shields of the Solar System!",
+        "boss_arcane_chimera_badge": "ALIEN • PSIONIC",
+        "boss_arcane_chimera_lore": "Bends dark energy and commands intergalactic psionic storms.",
+        "boss_abyssal_leviathan_name": "Nebulor, Dark Matter Herald",
+        "boss_abyssal_leviathan_title": "Cosmic Shadow Entity",
+        "boss_abyssal_leviathan_scenario": "Jupiter's Orbit",
+        "boss_abyssal_leviathan_scenario_desc": "Nebulor bends Jupiter's magnetosphere to prepare the final strike on Earth!",
+        "boss_abyssal_leviathan_badge": "ALIEN • SHADOW",
+        "boss_abyssal_leviathan_lore": "Manipulates spacetime anomalies and singularity distortions.",
+        "boss_cosmic_chronos_name": "Xenor, Intergalactic Overmind",
+        "boss_cosmic_chronos_title": "Central Invasion Intelligence",
+        "boss_cosmic_chronos_scenario": "Lunar Orbit",
+        "boss_cosmic_chronos_scenario_desc": "Xenor's titanic alien mothership positions in orbit for the final invasion of Earth!",
+        "boss_cosmic_chronos_badge": "ALIEN • MOTHERSHIP",
+        "boss_cosmic_chronos_lore": "The supreme alien consciousness orchestrating the grand invasion of the Solar System.",
+        "boss_magma_vulcanus_name": "Kragthor, Fleet Breaker",
+        "boss_magma_vulcanus_title": "Alien Warlord General",
+        "boss_magma_vulcanus_scenario": "Asteroid Belt",
+        "boss_magma_vulcanus_scenario_desc": "Kragthor's colossal war juggernaut pulverizes asteroids to clear a direct corridor to Earth!",
+        "boss_magma_vulcanus_badge": "ALIEN • WARLORD",
+        "boss_magma_vulcanus_lore": "Heavily armored alien conqueror wielding antimatter disintegration ordnance.",
         "btn_continue": "Continue Playing",
         "btn_new_game": "New Game",
         "btn_new_game_desc": "Start fresh with shared coins",
@@ -418,28 +418,64 @@
         "privacy_badge_local": "100% Local Storage",
         "privacy_badge_github": "GitHub Pages Hosting",
         "privacy_badge_lgpd": "LGPD & ANPD Compliance",
-        "privacy_sec_collection_title": "1. Zero Personal Data Collection by Digitinho",
-        "privacy_sec_collection_desc": "Digitinho is a static client-side web application. The game does not operate any backend server, remote database, registration forms, or user account systems. We do not request, collect, process, or sell any personal data such as names, emails, documents, or phone numbers.",
+        "privacy_sec_collection_title": "1. Zero Personal Data Collection by Digitinho Galaxy",
+        "privacy_sec_collection_desc": "Digitinho Galaxy is a static client-side web application. The game does not operate any backend server, remote database, registration forms, or user account systems. We do not request, collect, process, or sell any personal data such as names, emails, documents, or phone numbers.",
         "privacy_sec_storage_title": "2. Client-Side Local Storage (HTML5 LocalStorage)",
         "privacy_sec_storage_desc": "All game state — such as scores, save slots, unlocked words in the Library, achievements, audio toggles, difficulty, and color themes — is stored exclusively inside your browser's local storage (localStorage). These files never leave your device and can be permanently deleted at any time through your browser settings or the in-game Save Slots manager.",
         "privacy_sec_hosting_title": "3. Hosting Infrastructure & GitHub Pages Technical Logs",
-        "privacy_sec_hosting_desc": "Digitinho is hosted as a static website on GitHub Pages (operated by GitHub, Inc. / Microsoft). When accessing the site, GitHub servers may automatically receive and log technical network information, such as IP addresses, access timestamps, user-agent headers, and requested URLs, for security, infrastructure defense, and abuse prevention purposes in accordance with the GitHub Privacy Statement. The Digitinho author does not have access to raw IP logs or use them to identify visitors.",
+        "privacy_sec_hosting_desc": "Digitinho Galaxy is hosted as a static website on GitHub Pages (operated by GitHub, Inc. / Microsoft). When accessing the site, GitHub servers may automatically receive and log technical network information, such as IP addresses, access timestamps, user-agent headers, and requested URLs, for security, infrastructure defense, and abuse prevention purposes in accordance with the GitHub Privacy Statement. The Digitinho Galaxy author does not have access to raw IP logs or use them to identify visitors.",
         "privacy_sec_cookies_title": "4. No Tracking Cookies or Third-Party Analytics",
         "privacy_sec_cookies_desc": "The game does not use advertising cookies, Google Analytics, social media trackers, or third-party behavioral profiling scripts. The experience is 100% focused on gameplay and typing practice.",
         "privacy_sec_lgpd_title": "5. LGPD & ANPD Compliance (Brazilian Data Protection Law)",
-        "privacy_sec_lgpd_desc": "In adherence to Brazilian Law No. 13,709/2018 (LGPD) and the National Data Protection Authority (ANPD) guidelines, this project follows the core principles of purpose limitation, necessity, data minimization, and transparency. As Digitinho does not collect or treat personal data, no personal data is shared, sold, or transferred.",
+        "privacy_sec_lgpd_desc": "In adherence to Brazilian Law No. 13,709/2018 (LGPD) and the National Data Protection Authority (ANPD) guidelines, this project follows the core principles of purpose limitation, necessity, data minimization, and transparency. As Digitinho Galaxy does not collect or treat personal data, no personal data is shared, sold, or transferred.",
         "privacy_sec_opensource_title": "6. Open Source Verification & Source Code",
-        "privacy_sec_opensource_desc": "Digitinho is an open-source project licensed under the MIT License. Anyone can inspect, verify, and audit the complete source code on GitHub to confirm the absence of hidden trackers, telemetry, or remote data collection.",
+        "privacy_sec_opensource_desc": "Digitinho Galaxy is an open-source project licensed under the MIT License. Anyone can inspect, verify, and audit the complete source code on GitHub to confirm the absence of hidden trackers, telemetry, or remote data collection.",
         "privacy_sec_links_title": "Official References & Regulatory Sources",
         "privacy_link_github": "GitHub Pages: Operation and IP Logging",
         "privacy_link_anpd": "ANPD: Personal Data Concept & Processing Agents",
         "privacy_link_lgpd": "LGPD — General Personal Data Protection Law (Law 13,709/2018)",
         "privacy_back_game": "Back to Game",
-        "privacy_updated": "Last updated: October 2026 • Digitinho Typing Game",
-        "privacy_page_title": "Digitinho — Privacy Policy & Transparency",
+        "privacy_updated": "Last updated: October 2026 • Digitinho Galaxy Space Typing Game",
+        "privacy_page_title": "Digitinho Galaxy — Privacy Policy & Transparency",
         "privacy_overview_title": "Key Highlights",
         "privacy_contact_title": "Questions & Contact",
-        "privacy_contact_desc": "Since this is a client-side open-source project with no servers or data collection, questions or suggestions can be submitted directly through the GitHub repository by opening an Issue."
+        "privacy_contact_desc": "Since this is a client-side open-source project with no servers or data collection, questions or suggestions can be submitted directly through the GitHub repository by opening an Issue.",
+        "boss_alien_xylarion_name": "Xylarion, the Void Overlord",
+        "boss_alien_xylarion_title": "Commander of the Alien Vanguard",
+        "boss_alien_xylarion_scenario": "Kuiper Belt (Edge of the Solar System)",
+        "boss_alien_xylarion_scenario_desc": "Xylarion's alien dreadnought armada has crossed the void to invade the Solar System!",
+        "boss_alien_xylarion_badge": "ALIEN • DREADNOUGHT",
+        "boss_alien_xylarion_lore": "Supreme commander of the alien invasion fleet and master of stellar plasma weaponry.",
+        "boss_alien_zorkon_name": "Zorkon, Orbit Conqueror",
+        "boss_alien_zorkon_title": "Master of the Biomechanical Swarm",
+        "boss_alien_zorkon_scenario": "Neptune's Orbit",
+        "boss_alien_zorkon_scenario_desc": "Zorkon's bio-organic swarm carriers encircle the gas giants of the Solar System!",
+        "boss_alien_zorkon_badge": "ALIEN • HIVE",
+        "boss_alien_zorkon_lore": "Controls alien biomechanical hive minds capable of devouring space fleets.",
+        "boss_alien_vespera_name": "Vespera, Antimatter Empress",
+        "boss_alien_vespera_title": "Extraterrestrial Psionic Sovereign",
+        "boss_alien_vespera_scenario": "Saturn's Rings",
+        "boss_alien_vespera_scenario_desc": "Vespera commands antimatter batteries to shatter the gravitational shields of the Solar System!",
+        "boss_alien_vespera_badge": "ALIEN • PSIONIC",
+        "boss_alien_vespera_lore": "Bends dark energy and commands intergalactic psionic storms.",
+        "boss_alien_kragthor_name": "Kragthor, Fleet Breaker",
+        "boss_alien_kragthor_title": "Alien Warlord General",
+        "boss_alien_kragthor_scenario": "Asteroid Belt",
+        "boss_alien_kragthor_scenario_desc": "Kragthor's colossal war juggernaut pulverizes asteroids to clear a direct corridor to Earth!",
+        "boss_alien_kragthor_badge": "ALIEN • WARLORD",
+        "boss_alien_kragthor_lore": "Heavily armored alien conqueror wielding antimatter disintegration ordnance.",
+        "boss_alien_nebulor_name": "Nebulor, Dark Matter Herald",
+        "boss_alien_nebulor_title": "Cosmic Shadow Entity",
+        "boss_alien_nebulor_scenario": "Jupiter's Orbit",
+        "boss_alien_nebulor_scenario_desc": "Nebulor bends Jupiter's magnetosphere to prepare the final strike on Earth!",
+        "boss_alien_nebulor_badge": "ALIEN • SHADOW",
+        "boss_alien_nebulor_lore": "Manipulates spacetime anomalies and singularity distortions.",
+        "boss_alien_xenor_name": "Xenor, Intergalactic Overmind",
+        "boss_alien_xenor_title": "Central Invasion Intelligence",
+        "boss_alien_xenor_scenario": "Lunar Orbit",
+        "boss_alien_xenor_scenario_desc": "Xenor's titanic alien mothership positions in orbit for the final invasion of Earth!",
+        "boss_alien_xenor_badge": "ALIEN • MOTHERSHIP",
+        "boss_alien_xenor_lore": "The supreme alien consciousness orchestrating the grand invasion of the Solar System."
     },
     "syllables": [
         "th",
@@ -481,837 +517,1304 @@
     ],
     "words": [
         {
-            "text": "cat",
-            "type": "animal",
-            "meaning": "Small carnivorous mammal with soft fur and playful paws"
-        },
-        {
-            "text": "house",
-            "type": "place",
-            "meaning": "A building for human habitation and family shelter"
-        },
-        {
-            "text": "love",
-            "type": "feeling",
-            "meaning": "An intense feeling of deep affection and care"
-        },
-        {
-            "text": "ball",
-            "type": "object",
-            "meaning": "A spherical round object used in games and sports"
-        },
-        {
-            "text": "fire",
-            "type": "element",
-            "meaning": "Combustion emitting bright light and intense heat"
-        },
-        {
-            "text": "wind",
-            "type": "nature",
-            "meaning": "The natural movement of air blowing across the land"
-        },
-        {
-            "text": "window",
-            "type": "place",
-            "meaning": "An opening in the wall of a building fitted with glass"
-        },
-        {
-            "text": "wolf",
-            "type": "animal",
-            "meaning": "A wild carnivorous canine living in packs that howls"
-        },
-        {
-            "text": "stone",
-            "type": "nature",
-            "meaning": "Hard solid mineral matter of which rocks are formed"
-        },
-        {
-            "text": "field",
-            "type": "nature",
-            "meaning": "An open area of green land with crops or pastures"
-        },
-        {
-            "text": "rain",
-            "type": "nature",
-            "meaning": "Moisture condensed from the clouds falling in drops"
-        },
-        {
-            "text": "earth",
-            "type": "nature",
-            "meaning": "The planet on which we live; soil and terra firma"
-        },
-        {
-            "text": "night",
-            "type": "time",
-            "meaning": "The period of darkness between sunset and sunrise"
-        },
-        {
-            "text": "star",
-            "type": "cosmos",
-            "meaning": "A luminous celestial point glowing in the night sky"
-        },
-        {
-            "text": "dragon",
-            "type": "fantasy",
-            "meaning": "A mythical winged monster that breathes blazing fire"
-        },
-        {
-            "text": "fox",
-            "type": "animal",
-            "meaning": "A clever mammal with reddish coat and bushy tail"
-        },
-        {
-            "text": "city",
-            "type": "place",
-            "meaning": "A large bustling urban center with streets and buildings"
-        },
-        {
-            "text": "forest",
-            "type": "nature",
-            "meaning": "A large expanse of land covered densely with trees"
-        },
-        {
-            "text": "planet",
-            "type": "cosmos",
-            "meaning": "A celestial body orbiting gracefully around a star"
-        },
-        {
-            "text": "sword",
-            "type": "object",
-            "meaning": "A forged metal weapon with a long gleaming blade"
-        },
-        {
-            "text": "crystal",
-            "type": "object",
-            "meaning": "A precious translucent mineral reflecting pure light"
-        },
-        {
-            "text": "volcano",
-            "type": "nature",
-            "meaning": "A mountain with a crater spewing incandescent lava"
-        },
-        {
-            "text": "ocean",
-            "type": "nature",
-            "meaning": "An immense body of salt water covering the globe"
-        },
-        {
-            "text": "snake",
-            "type": "animal",
-            "meaning": "A long limbless slithering reptile of agility"
-        },
-        {
-            "text": "thunder",
-            "type": "nature",
-            "meaning": "A booming sonic crash echoing after lightning flashes"
-        },
-        {
-            "text": "light",
-            "type": "cosmos",
-            "meaning": "The radiant natural agent that illuminates the universe"
-        },
-        {
-            "text": "horse",
-            "type": "animal",
-            "meaning": "A noble galloping mammal with an elegant flowing mane"
-        },
-        {
-            "text": "cloud",
-            "type": "nature",
-            "meaning": "A floating mass of condensed vapor drifting in the sky"
-        },
-        {
-            "text": "lion",
-            "type": "animal",
-            "meaning": "A majestic feline ruler known as the king of the jungle"
-        },
-        {
-            "text": "lake",
-            "type": "nature",
-            "meaning": "A peaceful body of fresh water surrounded by land"
-        },
-        {
-            "text": "chip",
-            "type": "tech",
-            "meaning": "Silicon integrated circuit executing computer logic instructions"
-        },
-        {
-            "text": "laser",
-            "type": "tech",
-            "meaning": "Coherent amplified beam of light used in precision optical systems"
-        },
-        {
-            "text": "network",
-            "type": "tech",
-            "meaning": "Interconnected digital grid of servers exchanging high-speed packets"
-        },
-        {
-            "text": "data",
-            "type": "tech",
-            "meaning": "Binary units of structured information processed by algorithms"
-        },
-        {
-            "text": "pixel",
-            "type": "tech",
-            "meaning": "Smallest individual addressable color unit forming an image on a digital screen"
-        },
-        {
-            "text": "robot",
-            "type": "tech",
-            "meaning": "Autonomous electro-mechanical automaton programmed to execute tasks"
-        },
-        {
-            "text": "circuit",
-            "type": "tech",
-            "meaning": "Closed conductive loop through which electrical current and signals flow"
-        },
-        {
-            "text": "satellite",
-            "type": "tech",
-            "meaning": "Orbital spacecraft transmitting global data, positioning and communication signals"
-        },
-        {
-            "text": "code",
-            "type": "tech",
-            "meaning": "Structured programming instructions commanding computer processors"
-        },
-        {
-            "text": "sensor",
-            "type": "tech",
-            "meaning": "Electronic transducer detecting physical stimuli such as light or motion"
-        },
-        {
-            "text": "software",
-            "type": "tech",
-            "meaning": "System programs, libraries and applications running on computing hardware"
-        },
-        {
-            "text": "antenna",
-            "type": "tech",
-            "meaning": "Conductive apparatus that transmits and receives electromagnetic waves"
-        },
-        {
             "text": "sun",
             "type": "cosmos",
-            "meaning": "Glowing celestial star illuminating and warming our planetary system"
+            "meaning": "Central star of our solar system providing light, heat and gravitational stability"
         },
         {
             "text": "moon",
             "type": "cosmos",
-            "meaning": "Natural celestial satellite orbiting Earth and shining in the night"
+            "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
         },
         {
-            "text": "sea",
-            "type": "nature",
-            "meaning": "Vast expanse of salt water that borders coasts and islands"
+            "text": "moons",
+            "type": "cosmos",
+            "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+        },
+        {
+            "text": "sky",
+            "type": "cosmos",
+            "meaning": "The celestial vault visible from surface where stars and constellations shine"
+        },
+        {
+            "text": "ray",
+            "type": "phenomenon",
+            "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+        },
+        {
+            "text": "halo",
+            "type": "cosmos",
+            "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+        },
+        {
+            "text": "axis",
+            "type": "cosmos",
+            "meaning": "Imaginary central line around which a planet or celestial body rotates"
+        },
+        {
+            "text": "phase",
+            "type": "phenomenon",
+            "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
         },
         {
             "text": "wave",
-            "type": "nature",
-            "meaning": "Rolling crest of water travelling across the surface of the sea"
-        },
-        {
-            "text": "bird",
-            "type": "animal",
-            "meaning": "Winged creature covered in feathers gliding across open skies"
-        },
-        {
-            "text": "hive",
-            "type": "nature",
-            "meaning": "Natural dwelling of worker bees crafting golden honeycomb"
-        },
-        {
-            "text": "tone",
-            "type": "element",
-            "meaning": "Acoustic vibration carrying melodic pitch and acoustic timbre"
-        },
-        {
-            "text": "rose",
-            "type": "nature",
-            "meaning": "Fragrant blossom of rich velvety petals growing upon garden bushes"
-        },
-        {
-            "text": "duck",
-            "type": "animal",
-            "meaning": "Waterfowl with webbed swimming feet and waterproof plumage"
-        },
-        {
-            "text": "frog",
-            "type": "animal",
-            "meaning": "Amphibian with agile hind legs that leaps across lily pads in ponds"
-        },
-        {
-            "text": "bell",
-            "type": "object",
-            "meaning": "Hollow metallic instrument that chimes resonant tones when struck"
+            "type": "phenomenon",
+            "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
         },
         {
             "text": "ship",
-            "type": "vehicle",
-            "meaning": "Large seafaring vessel designed to navigate oceans and harbors"
+            "type": "tech",
+            "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
         },
         {
-            "text": "vase",
-            "type": "object",
-            "meaning": "Ornamental glazed vessel crafted to hold decorative floral bouquets"
+            "text": "nova",
+            "type": "phenomenon",
+            "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
         },
         {
-            "text": "gold",
-            "type": "element",
-            "meaning": "Radiant precious metal celebrated for enduring value and brilliance"
+            "text": "target",
+            "type": "tech",
+            "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
         },
         {
-            "text": "map",
-            "type": "object",
-            "meaning": "Visual cartographic chart displaying lands, frontiers and routes"
+            "text": "data",
+            "type": "tech",
+            "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
         },
         {
-            "text": "crown",
-            "type": "object",
-            "meaning": "Regal golden headpiece studded with sparkling precious jewels"
-        },
-        {
-            "text": "bridge",
-            "type": "place",
-            "meaning": "Suspended architectural crossing joining two distant banks"
-        },
-        {
-            "text": "canoe",
-            "type": "vehicle",
-            "meaning": "Slender paddle-powered watercraft gliding over tranquil rivers"
-        },
-        {
-            "text": "plant",
-            "type": "nature",
-            "meaning": "Botanical organism absorbing rays of sunlight through green foliage"
-        },
-        {
-            "text": "clock",
-            "type": "object",
-            "meaning": "Mechanical or quartz timepiece recording the steady flow of hours"
-        },
-        {
-            "text": "dream",
-            "type": "feeling",
-            "meaning": "Vivid imaginative visions and stories experienced during slumber"
-        },
-        {
-            "text": "grass",
-            "type": "nature",
-            "meaning": "Vibrant carpet of short green vegetation covering lush hills"
-        },
-        {
-            "text": "verse",
-            "type": "art",
-            "meaning": "Rhythmic line of lyrical poetry composed with metric rhyme"
-        },
-        {
-            "text": "pearl",
-            "type": "object",
-            "meaning": "Luminous iridescent sphere formed within marine mollusk shells"
-        },
-        {
-            "text": "garden",
-            "type": "place",
-            "meaning": "Enclosed landscape cultivated with fragrant flowers and stone paths"
-        },
-        {
-            "text": "temple",
-            "type": "place",
-            "meaning": "Sacred sanctuary built for contemplative silence and inner peace"
-        },
-        {
-            "text": "portal",
-            "type": "fantasy",
-            "meaning": "Ethereal vortex gateway opening transit between separate realms"
-        },
-        {
-            "text": "shield",
-            "type": "object",
-            "meaning": "Stout piece of protective equipment carried to deflect heavy blows"
-        },
-        {
-            "text": "travel",
-            "type": "experience",
-            "meaning": "Exciting expedition undertaken to uncover wonders across the world"
-        },
-        {
-            "text": "beacon",
-            "type": "place",
-            "meaning": "Guiding tower light illuminating safe paths for navigators at sea"
-        },
-        {
-            "text": "forest",
-            "type": "nature",
-            "meaning": "Dense ancient woodland home to towering canopies and wildlife"
-        },
-        {
-            "text": "sphere",
+            "text": "pitch",
             "type": "cosmos",
-            "meaning": "Perfect three-dimensional round orb revolving in space orbit"
+            "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
         },
         {
-            "text": "shadow",
-            "type": "element",
-            "meaning": "Dark silhouette cast upon the floor where light has been blocked"
-        },
-        {
-            "text": "fortress",
-            "type": "place",
-            "meaning": "Massive stone citadel fortified with defensive walls and towers"
-        },
-        {
-            "text": "cluster",
+            "text": "year",
             "type": "cosmos",
-            "meaning": "Gravitationally bound swarm of radiant stars gathered in space"
+            "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
         },
         {
-            "text": "thought",
-            "type": "mind",
-            "meaning": "Mental spark of cognitive reasoning, insight and remembered idea"
+            "text": "vacuum",
+            "type": "cosmos",
+            "meaning": "Space devoid of atmospheric matter where the silent expanse of the cosmos reigns"
+        },
+        {
+            "text": "astro",
+            "type": "cosmos",
+            "meaning": "Any natural celestial body that inhabits the endless cosmic arena"
+        },
+        {
+            "text": "cosmos",
+            "type": "cosmos",
+            "meaning": "The ordered, harmonious, and infinite physical universe in all its vastness"
+        },
+        {
+            "text": "mars",
+            "type": "cosmos",
+            "meaning": "The fourth planet from the sun, famously known across history as the Red Planet"
+        },
+        {
+            "text": "venus",
+            "type": "cosmos",
+            "meaning": "The second planet from the sun, the brightest celestial beacon in night sky"
+        },
+        {
+            "text": "earth",
+            "type": "cosmos",
+            "meaning": "Our blue terrestrial home planet, the only known oasis of living liquid water"
+        },
+        {
+            "text": "solar",
+            "type": "cosmos",
+            "meaning": "Relating to the Sun, its stellar wind, coronal radiation and planetary domain"
+        },
+        {
+            "text": "probe",
+            "type": "tech",
+            "meaning": "Uncrewed scientific spacecraft sent to study uncharted atmospheres and worlds"
+        },
+        {
+            "text": "radar",
+            "type": "tech",
+            "meaning": "Radio-frequency detection system used to map planetary terrain and asteroids"
+        },
+        {
+            "text": "magma",
+            "type": "nature",
+            "meaning": "Extremely hot molten rock beneath the crust of geologically active planets"
+        },
+        {
+            "text": "cloud",
+            "type": "cosmos",
+            "meaning": "Dense interstellar molecular cloud of hydrogen and dust birthing new stars"
+        },
+        {
+            "text": "pluto",
+            "type": "cosmos",
+            "meaning": "Icy dwarf planet situated within the Kuiper Belt at the edge of the solar system"
+        },
+        {
+            "text": "orbit",
+            "type": "cosmos",
+            "meaning": "Curved gravitational path that a celestial body traces around a massive center"
+        },
+        {
+            "text": "comet",
+            "type": "cosmos",
+            "meaning": "Icy celestial traveler that outgasses a radiant glowing tail near stellar heat"
+        },
+        {
+            "text": "pulsar",
+            "type": "cosmos",
+            "meaning": "Rapidly rotating magnetized neutron star sweeping rhythmic beams across space"
+        },
+        {
+            "text": "quasar",
+            "type": "cosmos",
+            "meaning": "Extremely luminous distant active galactic nucleus powered by a supermassive black hole"
+        },
+        {
+            "text": "corona",
+            "type": "cosmos",
+            "meaning": "The outermost, million-degree plasma envelope of the solar atmosphere"
+        },
+        {
+            "text": "meteor",
+            "type": "cosmos",
+            "meaning": "Streak of light produced when a space fragment incinerates in an atmosphere"
+        },
+        {
+            "text": "optics",
+            "type": "tech",
+            "meaning": "The science of light and reflection harnessed by deep space orbital telescopes"
+        },
+        {
+            "text": "space",
+            "type": "cosmos",
+            "meaning": "The boundless three-dimensional expanse where planets, stars, and galaxies drift"
+        },
+        {
+            "text": "aurora",
+            "type": "phenomenon",
+            "meaning": "Ethereal atmospheric light display ignited by solar wind particles hitting magnetosphere"
+        },
+        {
+            "text": "zenith",
+            "type": "cosmos",
+            "meaning": "The imaginary celestial point located directly overhead of an observer"
+        },
+        {
+            "text": "hubble",
+            "type": "tech",
+            "meaning": "Legendary orbital space observatory that revolutionized human understanding of the cosmos"
+        },
+        {
+            "text": "dust",
+            "type": "cosmos",
+            "meaning": "Microscopic mineral grains and cosmic soot dispersed throughout galactic spirals"
+        },
+        {
+            "text": "hole",
+            "type": "cosmos",
+            "meaning": "Extreme region of gravitational curvature collapsing spacetime into a singularity"
+        },
+        {
+            "text": "star",
+            "type": "cosmos",
+            "meaning": "Luminous sphere of incandescent plasma powered by thermonuclear fusion at its core"
+        },
+        {
+            "text": "planet",
+            "type": "cosmos",
+            "meaning": "Major spherical celestial body orbiting a star that has cleared its orbital path"
+        },
+        {
+            "text": "galaxy",
+            "type": "cosmos",
+            "meaning": "Colossal gravitationally bound system of billions of stars, dark matter, and nebulae"
+        },
+        {
+            "text": "galaxies",
+            "type": "cosmos",
+            "meaning": "Billions of cosmic island universes distributed throughout the cosmic web"
         },
         {
             "text": "universe",
             "type": "cosmos",
-            "meaning": "The boundless totality of matter, stars, energy and spacetime"
+            "meaning": "The totality of all physical matter, energy, space, time, and physical laws"
         },
         {
-            "text": "labyrinth",
-            "type": "place",
-            "meaning": "Intricate network of winding corridors challenging explorers"
+            "text": "nebula",
+            "type": "cosmos",
+            "meaning": "Vast interstellar cloud of glowing ionized gas, stellar remnants, and cosmic dust"
         },
         {
-            "text": "butterfly",
-            "type": "animal",
-            "meaning": "Graceful pollinator adorned with kaleidoscope patterned wings"
+            "text": "gravity",
+            "type": "phenomenon",
+            "meaning": "Fundamental attractive force bending spacetime proportional to mass and energy"
         },
         {
-            "text": "lightning",
-            "type": "element",
-            "meaning": "Fierce electrical spark illuminating thunderous clouds in seconds"
+            "text": "supernova",
+            "type": "phenomenon",
+            "meaning": "Colossal explosion of a dying massive star briefly outshining entire galaxies"
         },
         {
-            "text": "hurricane",
-            "type": "nature",
-            "meaning": "Catastrophic swirling ocean storm unleashing torrential rain and gale"
+            "text": "astronaut",
+            "type": "tech",
+            "meaning": "Highly trained spacefarer traveling into orbital and interplanetary missions"
+        },
+        {
+            "text": "astronomy",
+            "type": "science",
+            "meaning": "The scientific discipline studying celestial bodies, physical cosmos, and deep space"
+        },
+        {
+            "text": "exoplanet",
+            "type": "cosmos",
+            "meaning": "A planet orbiting a distant star situated outside our local solar system"
+        },
+        {
+            "text": "exoplanets",
+            "type": "cosmos",
+            "meaning": "Alien worlds revolving around distant stars across the Milky Way galaxy"
+        },
+        {
+            "text": "satellite",
+            "type": "tech",
+            "meaning": "Artificial or natural celestial orbiter circling a planet for research and comms"
         },
         {
             "text": "constellation",
             "type": "cosmos",
-            "meaning": "Celestial formation of stellar lights tracing mythological shapes"
+            "meaning": "Recognizable stellar grouping mapped across the night sky by astronomical chart"
         },
         {
-            "text": "horizon",
-            "type": "nature",
-            "meaning": "Limitless vista line where the earthly curve meets the infinite sky"
+            "text": "telescope",
+            "type": "tech",
+            "meaning": "Optical instrument gathering light and radiation to observe distant celestial bodies"
         },
         {
             "text": "starship",
             "type": "tech",
-            "meaning": "Interstellar exploration cruiser equipped for deep cosmos voyages"
+            "meaning": "Interplanetary spacecraft capable of navigating across vast interstellar gulfs"
         },
         {
-            "text": "technology",
+            "text": "atmosphere",
+            "type": "cosmos",
+            "meaning": "Gaseous envelope retained by gravity surrounding a planet or celestial sphere"
+        },
+        {
+            "text": "magnetosphere",
+            "type": "phenomenon",
+            "meaning": "Magnetic planetary shield deflecting high-energy solar winds and radiation"
+        },
+        {
+            "text": "radiation",
+            "type": "phenomenon",
+            "meaning": "High-energy electromagnetic waves or subatomic particles traversing the cosmos"
+        },
+        {
+            "text": "spectrum",
+            "type": "science",
+            "meaning": "The rainbow dispersion of light revealing temperature and chemical composition"
+        },
+        {
+            "text": "andromeda",
+            "type": "cosmos",
+            "meaning": "The nearest major spiral galaxy heading on a gravitational collision course with ours"
+        },
+        {
+            "text": "heliosphere",
+            "type": "cosmos",
+            "meaning": "Enormous protective bubble carved in interstellar space by outward solar winds"
+        },
+        {
+            "text": "antimatter",
+            "type": "science",
+            "meaning": "Matter composed of antiparticles that violently annihilates on contact with normal matter"
+        },
+        {
+            "text": "singularity",
+            "type": "cosmos",
+            "meaning": "Center of a black hole where gravitational density approaches infinity and physics breaks"
+        },
+        {
+            "text": "multiverse",
+            "type": "cosmos",
+            "meaning": "Theoretical ensemble of parallel universes containing infinite spacetime bubbles"
+        },
+        {
+            "text": "light-year",
+            "type": "science",
+            "meaning": "Astronomical distance traveled by a beam of light in vacuum over one solar year"
+        },
+        {
+            "text": "black-hole",
+            "type": "cosmos",
+            "meaning": "Cosmic region whose gravitational field is so intense that nothing, not even light, escapes"
+        },
+        {
+            "text": "stardust",
+            "type": "cosmos",
+            "meaning": "Supernova ash and heavy elements that seed the formation of rocky worlds and life"
+        },
+        {
+            "text": "dark-matter",
+            "type": "cosmos",
+            "meaning": "Hypothetical invisible substance comprising the majority of matter in the universe"
+        },
+        {
+            "text": "dark-energy",
+            "type": "cosmos",
+            "meaning": "Pervasive cosmic force driving the accelerating expansion of observable spacetime"
+        },
+        {
+            "text": "wormhole",
+            "type": "cosmos",
+            "meaning": "Theoretical topological shortcut connecting disparate regions of spacetime"
+        },
+        {
+            "text": "speed-of-light",
+            "type": "science",
+            "meaning": "Universal velocity constant of 300,000 kilometers per second in cosmic vacuum"
+        },
+        {
+            "text": "space-station",
             "type": "tech",
-            "meaning": "The practical application of scientific knowledge to innovate tools"
+            "meaning": "Habitable artificial orbital satellite where scientists live and conduct zero-g research"
         },
         {
-            "text": "architecture",
-            "type": "art",
-            "meaning": "The disciplined art of designing beautiful and enduring structures"
+            "text": "event-horizon",
+            "type": "cosmos",
+            "meaning": "The point of no return threshold enclosing a black hole beyond which nothing escapes"
         },
         {
-            "text": "velocity",
-            "type": "concept",
-            "meaning": "Rapid measurement of kinetic speed propelled in a set vector"
-        },
-        {
-            "text": "mysterious",
-            "type": "mystery",
-            "meaning": "Fascinating puzzle veiled in secrecy that stirs boundless curiosity"
-        },
-        {
-            "text": "synthesizer",
-            "type": "music",
-            "meaning": "Electronic audio console creating custom soundwaves and harmonic tones"
-        },
-        {
-            "text": "telepathy",
-            "type": "mind",
-            "meaning": "Direct mental transmission of thought and vision across space"
+            "text": "milky-way",
+            "type": "cosmos",
+            "meaning": "Our home barred spiral galaxy holding hundreds of billions of suns and solar systems"
         }
     ],
     "bossWords": {
-        "robot": [
+        "alien_dreadnought": [
             {
-                "text": "chip",
-                "type": "tech",
-                "meaning": "Silicon integrated circuit that executes logic instructions at gigahertz frequencies"
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
             },
             {
-                "text": "laser",
-                "type": "tech",
-                "meaning": "Coherent amplified beam of light used in precision optical scanning and data reading"
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
             },
             {
-                "text": "network",
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "The celestial vault visible from surface where stars and constellations shine"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "Imaginary central line around which a planet or celestial body rotates"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+            },
+            {
+                "text": "ship",
                 "type": "tech",
-                "meaning": "Interconnected digital grid of high-speed servers exchanging packets worldwide"
+                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
             },
             {
                 "text": "data",
                 "type": "tech",
-                "meaning": "Binary units of information processed and analyzed by algorithmic systems"
+                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
             },
             {
-                "text": "pixel",
-                "type": "tech",
-                "meaning": "Smallest addressable color element on a high-definition visual display screen"
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
             },
             {
-                "text": "robot",
-                "type": "tech",
-                "meaning": "Autonomous electro-mechanical automaton programmed to execute complex cyber operations"
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+            }
+        ],
+        "alien_hive": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
             },
             {
-                "text": "circuit",
-                "type": "tech",
-                "meaning": "Closed conductive loop through which electrical current and binary pulses flow"
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
             },
             {
-                "text": "satellite",
-                "type": "tech",
-                "meaning": "Orbital spacecraft transmitting global positioning telemetry and encrypted signals"
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
             },
             {
-                "text": "code",
-                "type": "tech",
-                "meaning": "Structured sequence of algorithmic syntax commanding computer processors"
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "The celestial vault visible from surface where stars and constellations shine"
             },
             {
-                "text": "sensor",
-                "type": "tech",
-                "meaning": "Electronic transducer detecting ambient physical stimuli such as light and temperature"
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
             },
             {
-                "text": "software",
-                "type": "tech",
-                "meaning": "System instructions, runtime libraries and operating systems directing hardware"
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
             },
             {
-                "text": "antenna",
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "Imaginary central line around which a planet or celestial body rotates"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+            },
+            {
+                "text": "ship",
                 "type": "tech",
-                "meaning": "Conductive metallic apparatus radiating and receiving high-frequency radio waves"
+                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+            }
+        ],
+        "alien_psionic": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "The celestial vault visible from surface where stars and constellations shine"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "Imaginary central line around which a planet or celestial body rotates"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+            }
+        ],
+        "alien_warlord": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "The celestial vault visible from surface where stars and constellations shine"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "Imaginary central line around which a planet or celestial body rotates"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+            }
+        ],
+        "alien_darkmatter": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "The celestial vault visible from surface where stars and constellations shine"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "Imaginary central line around which a planet or celestial body rotates"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+            }
+        ],
+        "alien_mothership": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "The celestial vault visible from surface where stars and constellations shine"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "Imaginary central line around which a planet or celestial body rotates"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+            }
+        ],
+        "robot": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "The celestial vault visible from surface where stars and constellations shine"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "Imaginary central line around which a planet or celestial body rotates"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
             }
         ],
         "beast": [
             {
-                "text": "lion",
-                "type": "fauna",
-                "meaning": "Apex predatory cat with a majestic mane reigning over the golden savanna territory"
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
             },
             {
-                "text": "wolf",
-                "type": "fauna",
-                "meaning": "Ferocious wild canine coordinating pack tactics across vast wilderness and howling"
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
             },
             {
-                "text": "tiger",
-                "type": "fauna",
-                "meaning": "Largest solitary wild cat possessing lethal strength and iconic vertical camouflaging stripes"
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
             },
             {
-                "text": "eagle",
-                "type": "fauna",
-                "meaning": "High-altitude raptor soaring with telescopic vision and talons that strike with precision"
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "The celestial vault visible from surface where stars and constellations shine"
             },
             {
-                "text": "pack",
-                "type": "fauna",
-                "meaning": "Organized hunting pride cooperating with disciplined predatory instinct"
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
             },
             {
-                "text": "claws",
-                "type": "fauna",
-                "meaning": "Curved razor-sharp keratin weapons deployed by ferocious carnivores to seize targets"
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
             },
             {
-                "text": "prey",
-                "type": "fauna",
-                "meaning": "Herbivores and quarry pursued in the primordial circle of the wild food chain"
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "Imaginary central line around which a planet or celestial body rotates"
             },
             {
-                "text": "fauna",
-                "type": "fauna",
-                "meaning": "The collective animal kingdom inhabiting a wild natural biome"
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
             },
             {
-                "text": "savanna",
-                "type": "fauna",
-                "meaning": "Sun-drenched tropical grassland ecosystem teeming with roaming herds and predators"
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
             },
             {
-                "text": "panther",
-                "type": "fauna",
-                "meaning": "Stealthy agile melanistic wild feline stalking silently through forest shadows"
+                "text": "ship",
+                "type": "tech",
+                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
             },
             {
-                "text": "falcon",
-                "type": "fauna",
-                "meaning": "Aerodynamic predatory bird stooping at terminal velocity to strike quarry in mid-air"
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
             },
             {
-                "text": "bear",
-                "type": "fauna",
-                "meaning": "Formidable thick-furred omnivorous mammal possessing crushing muscular power"
+                "text": "target",
+                "type": "tech",
+                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
             }
         ],
         "mythology": [
             {
-                "text": "dragon",
-                "type": "myth",
-                "meaning": "Colossal winged mythical reptile breathing incinerating arcane torrents of flame"
-            },
-            {
-                "text": "phoenix",
-                "type": "myth",
-                "meaning": "Radiant legendary solar firebird reincarnating immortal from sacred ashes"
-            },
-            {
-                "text": "hydra",
-                "type": "myth",
-                "meaning": "Mythological multi-headed serpent that regenerates two heads for each one severed"
-            },
-            {
-                "text": "griffin",
-                "type": "myth",
-                "meaning": "Mythic hybrid possessing the muscular body of a lion and eagle wings and head"
-            },
-            {
-                "text": "olympus",
-                "type": "myth",
-                "meaning": "Mountaintop sanctum shrouded in clouds where supreme ancient deities gathered"
-            },
-            {
-                "text": "sphinx",
-                "type": "myth",
-                "meaning": "Winged riddling guardian with a lion body slaying those who fail the trial"
-            },
-            {
-                "text": "oracle",
-                "type": "myth",
-                "meaning": "Sacred prophetic shrine through which the gods whispered unavoidable destinies"
-            },
-            {
-                "text": "chimera",
-                "type": "myth",
-                "meaning": "Fire-breathing chimeric monster fusing the dread parts of lion, goat, and serpent"
-            },
-            {
-                "text": "titan",
-                "type": "myth",
-                "meaning": "Primordial cosmic giant wielding earth-shaking strength before the olympian age"
-            },
-            {
-                "text": "pegasus",
-                "type": "myth",
-                "meaning": "Divine winged stallion soaring freely across starry skies and celestial realms"
-            },
-            {
-                "text": "centaur",
-                "type": "myth",
-                "meaning": "Wise mythic forest dweller combining human intellect with equine power"
-            },
-            {
-                "text": "elysium",
-                "type": "myth",
-                "meaning": "Blessed mythological realm of perpetual spring where heroic souls dwell"
-            }
-        ],
-        "ocean": [
-            {
-                "text": "ocean",
-                "type": "ocean",
-                "meaning": "Vast saltwater expanse blanketing planet Earth and cradling undiscovered depths"
-            },
-            {
-                "text": "shark",
-                "type": "ocean",
-                "meaning": "Streamlined cartilaginous hunter tracking prey through acute electroreception"
-            },
-            {
-                "text": "coral",
-                "type": "ocean",
-                "meaning": "Colonial marine organisms building vibrant calcified barrier reefs beneath waves"
-            },
-            {
-                "text": "abyss",
-                "type": "ocean",
-                "meaning": "Pitch-black ocean zone enduring crushing pressure beyond the reach of sunlight"
-            },
-            {
-                "text": "octopus",
-                "type": "ocean",
-                "meaning": "Eight-armed cephalopod genius displaying instant color-shifting chromatophore camouflage"
-            },
-            {
-                "text": "tsunami",
-                "type": "ocean",
-                "meaning": "Monstrous oceanic surge unleashed across open waters by seafloor seismic displacement"
-            },
-            {
-                "text": "whale",
-                "type": "ocean",
-                "meaning": "Mammoth gentle cetacean transmitting deep acoustic whale songs through ocean basins"
-            },
-            {
-                "text": "trench",
-                "type": "ocean",
-                "meaning": "Deepest geological chasm cut into the ocean crust sheltering extremophile life"
-            },
-            {
-                "text": "tide",
-                "type": "ocean",
-                "meaning": "Rhythmic rise and retreat of sea surfaces influenced by lunar gravitational pull"
-            },
-            {
-                "text": "jellyfish",
-                "type": "ocean",
-                "meaning": "Pulsing translucent gelatinous pelagic creature armed with stinging tentacles"
-            },
-            {
-                "text": "reef",
-                "type": "ocean",
-                "meaning": "Submerged limestone ridge forged by living corals teeming with marine biodiversity"
-            },
-            {
-                "text": "dolphin",
-                "type": "ocean",
-                "meaning": "Playful marine mammal navigating turbulent oceans via supersonic echolocation"
-            }
-        ],
-        "cosmos": [
-            {
-                "text": "star",
+                "text": "sun",
                 "type": "cosmos",
-                "meaning": "Self-luminous stellar ball of plasma sustained by thermonuclear core fusion"
+                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
             },
             {
-                "text": "planet",
+                "text": "moon",
                 "type": "cosmos",
-                "meaning": "Massive spherical world revolving peacefully around its illuminating host star"
+                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
             },
             {
-                "text": "orbit",
+                "text": "moons",
                 "type": "cosmos",
-                "meaning": "Gravitationally locked curved trajectory traced through spacetime coordinates"
+                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
             },
             {
-                "text": "comet",
+                "text": "sky",
                 "type": "cosmos",
-                "meaning": "Primordial cosmic dirty snowball venting glowing tails of ionized gas and vapor"
+                "meaning": "The celestial vault visible from surface where stars and constellations shine"
             },
             {
-                "text": "meteor",
-                "type": "cosmos",
-                "meaning": "Brilliant streak of light ignited by atmospheric friction on incoming space debris"
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
             },
             {
-                "text": "pulsar",
+                "text": "halo",
                 "type": "cosmos",
-                "meaning": "Rapidly rotating magnetized neutron star sweeping radio beacons across the cosmos"
+                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
             },
             {
-                "text": "galaxy",
+                "text": "axis",
                 "type": "cosmos",
-                "meaning": "Immense swirling vortex of hundreds of billions of suns, dark matter, and nebulae"
+                "meaning": "Imaginary central line around which a planet or celestial body rotates"
             },
             {
-                "text": "eclipse",
-                "type": "cosmos",
-                "meaning": "Geometric celestial alignment casting darkness across the face of an orb"
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
             },
             {
-                "text": "gravity",
-                "type": "cosmos",
-                "meaning": "Fundamental universal attraction curving the fabric of space and dictating cosmic motion"
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
             },
             {
-                "text": "nebula",
-                "type": "cosmos",
-                "meaning": "Colossal glowing stellar nursery of ionized hydrogen gas and cosmic dust"
+                "text": "ship",
+                "type": "tech",
+                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
             },
             {
-                "text": "quasar",
-                "type": "cosmos",
-                "meaning": "Hyper-luminous galactic core powered by an accreting supermassive black hole"
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
             },
             {
-                "text": "cosmos",
+                "text": "target",
+                "type": "tech",
+                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+            },
+            {
+                "text": "pitch",
                 "type": "cosmos",
-                "meaning": "The ordered and harmonious universe considered as an integrated physical whole"
+                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
             }
         ],
         "volcano": [
             {
-                "text": "volcano",
-                "type": "volcano",
-                "meaning": "Crustal volcanic rupture venting superheated magma, pyroclasts and sulfurous plumes"
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
             },
             {
-                "text": "magma",
-                "type": "volcano",
-                "meaning": "Subterranean reservoir of molten mineral liquid churning beneath tectonic plates"
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
             },
             {
-                "text": "lava",
-                "type": "volcano",
-                "meaning": "Fiery incandescent liquid rock cascading across slopes and reshaping planetary crust"
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
             },
             {
-                "text": "ash",
-                "type": "volcano",
-                "meaning": "Towering plume of pulverized tephra and glass particles darkening daytime skies"
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "The celestial vault visible from surface where stars and constellations shine"
             },
             {
-                "text": "crater",
-                "type": "volcano",
-                "meaning": "Steep bowl-shaped caldera depression venting intense geothermal fury and eruptions"
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
             },
             {
-                "text": "basalt",
-                "type": "volcano",
-                "meaning": "Dense dark volcanic igneous stone forged through rapid solidification of basaltic lava"
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
             },
             {
-                "text": "forge",
-                "type": "volcano",
-                "meaning": "Subterranean furnace of volcanic temperatures purifying unyielding ores"
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "Imaginary central line around which a planet or celestial body rotates"
             },
             {
-                "text": "geyser",
-                "type": "volcano",
-                "meaning": "Geothermal fissure erupting pressurized boiling water and steam columns into the air"
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
             },
             {
-                "text": "rock",
-                "type": "volcano",
-                "meaning": "Solidified crystalline mineral foundation comprising the continental lithosphere"
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
             },
             {
-                "text": "ember",
-                "type": "volcano",
-                "meaning": "Glowing fragment of heated volcanic rock or coal radiating sustained heat"
+                "text": "ship",
+                "type": "tech",
+                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
             },
             {
-                "text": "caldera",
-                "type": "volcano",
-                "meaning": "Massive circular volcanic depression formed by magma chamber collapse after an eruption"
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
             },
             {
-                "text": "tectonic",
-                "type": "volcano",
-                "meaning": "Crustal plate mechanics generating volcanic fissures, rifts and mountain ranges"
+                "text": "target",
+                "type": "tech",
+                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+            }
+        ],
+        "ocean": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "The celestial vault visible from surface where stars and constellations shine"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "Imaginary central line around which a planet or celestial body rotates"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+            }
+        ],
+        "cosmos": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "The celestial vault visible from surface where stars and constellations shine"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "Imaginary central line around which a planet or celestial body rotates"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
             }
         ]
     },

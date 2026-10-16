@@ -1,5 +1,5 @@
 /* ================================================
-   DIGITINHO — js/spawner.js
+   DIGITHIN GALAXY — js/spawner.js
    Spawning mechanics, item generation, conveyor queue & layout
    ================================================ */
 'use strict';

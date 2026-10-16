@@ -1,5 +1,5 @@
 /* ======================================================
-   DIGITINHO — css/layout.css
+   DIGITHIN GALAXY — css/layout.css
    Structural Screens, HUD, Floating Sidebars & Central Board
    ====================================================== */
 
@@ -766,38 +766,7 @@
 }
 
 #game-column::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
-  background: linear-gradient(to top, rgba(255, 71, 87, 0.12), transparent);
-  pointer-events: none;
-  z-index: 2;
-  transition: bottom 0.25s ease;
-}
-
-#game-column.queue-pos-bottom::after {
-  bottom: 52px;
-}
-#game-column.has-finger-guide::after {
-  bottom: 54px;
-}
-#game-column.has-finger-guide.queue-pos-bottom::after {
-  bottom: 106px;
-}
-#game-column.has-virtual-keyboard::after {
-  bottom: var(--vk-height, 144px);
-}
-#game-column.has-virtual-keyboard.has-mobile-skills::after {
-  bottom: calc(var(--vk-height, 144px) + var(--msb-height, 38px));
-}
-#game-column.has-virtual-keyboard.queue-pos-bottom::after {
-  bottom: calc(var(--vk-height, 144px) + 52px);
-}
-#game-column.has-virtual-keyboard.queue-pos-bottom.has-mobile-skills::after {
-  bottom: calc(var(--vk-height, 144px) + 52px + var(--msb-height, 38px));
+  display: none;
 }
 
 #game-area {
@@ -806,6 +775,161 @@
   overflow: hidden;
   min-height: 0;
   order: 1;
+}
+
+.debris-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 12;
+}
+
+/* ======================================================
+   HORIZONTAL BLACK HOLE ACCRETION VORTEX (EVENT HORIZON MOUTH)
+   ====================================================== */
+.black-hole-vortex {
+  position: absolute;
+  bottom: -15px;
+  left: -2%;
+  right: -2%;
+  width: 104%;
+  height: 125px;
+  pointer-events: none;
+  z-index: 2;
+  overflow: visible;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bh-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* ======================================================
+   CONSTANT LUMINOUS ACCRETION DISK PULSE & RELATIVISTIC GLOW
+   ====================================================== */
+/* Radiant accretion atmosphere pulsing rhythmically */
+.bh-pulsing-glow {
+  transform-origin: 500px 180px;
+  animation: bhAccretionGlowPulse 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes bhAccretionGlowPulse {
+  0% {
+    opacity: 0.58;
+    transform: scale(0.99);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 0.98;
+    transform: scale(1.042);
+  }
+}
+
+/* Outer accretion ring: constantly luminous, colorful and pulsating */
+.bh-disk-outer {
+  transform-origin: 500px 180px;
+  animation: bhDiskOuterPulse 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes bhDiskOuterPulse {
+  0% {
+    stroke-width: 9.5;
+    opacity: 0.90;
+    transform: scale(0.996);
+    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.85)) drop-shadow(0 0 18px rgba(244, 114, 182, 0.65));
+  }
+  50% {
+    stroke-width: 12.5;
+    opacity: 1;
+    transform: scale(1.012);
+    filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.95)) drop-shadow(0 0 28px rgba(251, 191, 36, 0.8));
+  }
+  100% {
+    stroke-width: 14.5;
+    opacity: 1;
+    transform: scale(1.022);
+    filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 36px rgba(244, 114, 182, 0.9));
+  }
+}
+
+/* Inner accretion core line: constant starlight emission */
+.bh-disk-core {
+  animation: bhDiskCorePulse 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes bhDiskCorePulse {
+  0% {
+    stroke-width: 3.2;
+    opacity: 0.90;
+  }
+  100% {
+    stroke-width: 4.8;
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.95));
+  }
+}
+
+/* Front event horizon rim highlight: crisp, pure white relativistic pulse */
+.bh-front-rim {
+  animation: bhRimPulse 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes bhRimPulse {
+  0% {
+    stroke-width: 2.8;
+    opacity: 0.88;
+  }
+  100% {
+    stroke-width: 4.5;
+    opacity: 1;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+  }
+}
+
+/* Relativistic Gravitational Lensing Upper Arc subtle pulse */
+.bh-lensing-arc {
+  animation: bhLensingPulse 3.6s ease-in-out infinite alternate;
+}
+
+@keyframes bhLensingPulse {
+  0% {
+    stroke-width: 5.5;
+    opacity: 0.75;
+  }
+  100% {
+    stroke-width: 7.8;
+    opacity: 0.96;
+  }
+}
+
+/* Relativistic surge burst triggered when an item is swallowed */
+.black-hole-vortex.pulse .bh-pulsing-glow {
+  opacity: 1 !important;
+  transform: scale(1.10) !important;
+  transition: opacity 0.08s ease-out, transform 0.08s ease-out;
+}
+.black-hole-vortex.pulse .bh-disk-outer {
+  stroke-width: 18 !important;
+  opacity: 1 !important;
+  filter: drop-shadow(0 0 28px rgba(255, 255, 255, 1)) drop-shadow(0 0 52px rgba(56, 189, 248, 1)) !important;
+  transition: stroke-width 0.08s ease-out;
+}
+.black-hole-vortex.pulse .bh-front-rim {
+  stroke-width: 6.5 !important;
+  opacity: 1 !important;
+  filter: drop-shadow(0 0 16px rgba(255, 255, 255, 1)) !important;
+  transition: stroke-width 0.08s ease-out;
 }
 
 /* Shield Aura Barrier Effect */

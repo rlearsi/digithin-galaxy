@@ -1,5 +1,5 @@
 /* ======================================================
-   DIGITINHO — css/variables.css
+   DIGITHIN GALAXY — css/variables.css
    Design System Tokens, Themes (Dark/Light) & Core Canvas
    ====================================================== */
 
@@ -17,18 +17,18 @@
 :root {
   --theme: 'dark';
 
-  /* Frosted Glass Surfaces (Translucent glass with vibrant refraction) */
-  --glass-surface: rgba(10, 16, 32, 0.35);
-  --glass-sidebar: rgba(10, 16, 32, 0.30);
-  --glass-column: rgba(7, 12, 26, 0.28);
-  --glass-queue: rgba(10, 16, 32, 0.40);
+  /* Frosted Glass Surfaces (Translucent glass with cosmic refraction) */
+  --glass-surface: rgba(4, 7, 18, 0.45);
+  --glass-sidebar: rgba(4, 7, 18, 0.38);
+  --glass-column: rgba(2, 5, 15, 0.32);
+  --glass-queue: rgba(4, 7, 18, 0.50);
 
   /* Frosted Glass Cards (Luminous Translucent Glass & Zero Borders) */
   --glass-card: rgba(255, 255, 255, 0.16);
   --glass-card-hover: rgba(255, 255, 255, 0.24);
   --glass-card-border: transparent;
   --glass-card-blur: blur(20px) saturate(180%);
-  --glass-sub-card: rgba(0, 0, 0, 0.28);
+  --glass-sub-card: rgba(0, 0, 0, 0.35);
 
   --glass-pill: rgba(255, 255, 255, 0.08);
   --glass-btn-sec: rgba(255, 255, 255, 0.09);
@@ -36,7 +36,7 @@
   --glass-border: transparent;
   --glass-inner-border: transparent;
   --glass-highlight: rgba(255, 255, 255, 0.12);
-  --shadow-glass: 0 16px 40px rgba(0, 0, 0, 0.20);
+  --shadow-glass: 0 16px 40px rgba(0, 0, 0, 0.35);
 
   --modal-bg: var(--glass-surface);
   --pause-backdrop: rgba(0, 0, 0, 0.05);
@@ -188,7 +188,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background: transparent;
+  background: #000000;
   color: var(--t1);
   font-family: var(--font);
   overflow: hidden;

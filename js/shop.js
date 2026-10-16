@@ -1,5 +1,5 @@
 /* ================================================
-   DIGITINHO — js/shop.js
+   DIGITHIN GALAXY — js/shop.js
    Shop mechanics, pricing, inventory, and modal
    ================================================ */
 'use strict';

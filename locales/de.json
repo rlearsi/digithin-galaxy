@@ -1,7 +1,7 @@
 {
     "ui": {
-        "app_title": "Digitinho.",
-        "app_subtitle": "Meistere die Runentastatur, bevor Wörter in den Abgrund fallen",
+        "app_title": "Digitinho Galaxy.",
+        "app_subtitle": "Meistern Sie die kosmische Tastatur, bevor die Wörter vom Schwarzen Loch verschlungen werden",
         "rules_title": "Spielanleitung & Runenregeln",
         "rule_typing": "<strong>Tastatureingabe:</strong> Tippe Buchstaben, Silben und Wörter ein, bevor sie den Boden berühren",
         "rule_wildcard": "<strong>Joker-Wörter:</strong> Zerstören sofort alle Runen auf dem Bildschirm und absorbieren deren Punkte",
@@ -322,42 +322,42 @@
         "boss_enigma_letters": "{count} BUCHSTABEN",
         "boss_enigma_queue": "RÄTSEL {num} VON 3",
         "boss_level_tag": " (St. {level})",
-        "boss_cyber_titan_name": "Cyber-Titan Lexis",
-        "boss_cyber_titan_title": "Autonome Kybernetische Wache",
-        "boss_cyber_titan_scenario": "Kybernetische Metropole",
-        "boss_cyber_titan_scenario_desc": "Megastadt aus leuchtenden Servern, neuronalen Prozessoren und automatisierten Drohnennetzen.",
-        "boss_cyber_titan_badge": "ROBOTER • TECH",
-        "boss_cyber_titan_lore": "Meister der Algorithmen, Rechenlogik und digitalen Netzwerke.",
-        "boss_feral_apex_name": "Rex-Primus, der Urzeit-Apex",
-        "boss_feral_apex_title": "Uralter Spitzenprädator",
-        "boss_feral_apex_scenario": "Urzeitliche Savanne",
-        "boss_feral_apex_scenario_desc": "Weite wilde Ebenen, in denen Urzeitbestien durch reinen Instinkt und Kraft herrschen.",
-        "boss_feral_apex_badge": "FAUNA • BESTIE",
-        "boss_feral_apex_lore": "Herrscher über wilde Herden, rasiermesserscharfe Krallen und Rudeljäger.",
-        "boss_arcane_chimera_name": "Arkane Chimäre von Delphi",
-        "boss_arcane_chimera_title": "Wächter des Heiligen Pantheons",
-        "boss_arcane_chimera_scenario": "Mystischer Tempel von Delphi",
-        "boss_arcane_chimera_scenario_desc": "Uraltes Heiligtum aus monumentalen Säulen, heiligen Orakeln und Fabelwesen.",
-        "boss_arcane_chimera_badge": "MYTHOLOGIE • LEGENDE",
-        "boss_arcane_chimera_lore": "Geschmiedet aus mythologischem Feuer, Sphinx-Rätseln und Hydraköpfen.",
-        "boss_abyssal_leviathan_name": "Tiefsee-Leviathan",
-        "boss_abyssal_leviathan_title": "Monarch der Pelagischen Gräben",
-        "boss_abyssal_leviathan_scenario": "Pelagischer Tiefseegraben",
-        "boss_abyssal_leviathan_scenario_desc": "Erdrückende Tiefsee, in der biolumineszente Wesen durch vollkommene Dunkelheit gleiten.",
-        "boss_abyssal_leviathan_badge": "OZEAN • ABGRUND",
-        "boss_abyssal_leviathan_lore": "Kommandant der Flutwellen, kolossalen Haie und Tiefseegräben.",
-        "boss_cosmic_chronos_name": "Astro-Titan Chronos",
-        "boss_cosmic_chronos_title": "Weber der Galaxien & Nebel",
-        "boss_cosmic_chronos_scenario": "Stellarer Nebel & Kosmische Leere",
-        "boss_cosmic_chronos_scenario_desc": "Unendliche kosmische Leere mit wirbelnden Plasmawolken und Gravitationsbahnen.",
-        "boss_cosmic_chronos_badge": "KOSMOS • WELTRAUM",
-        "boss_cosmic_chronos_lore": "Herrscher thermonuklearer Sternkerne, Pulsare und kosmischer Gravitation.",
-        "boss_magma_vulcanus_name": "Vulcanus, der Magmakoloss",
-        "boss_magma_vulcanus_title": "Herr der Tektonischen Caldera",
-        "boss_magma_vulcanus_scenario": "Vulkanische Caldera & Magmakern",
-        "boss_magma_vulcanus_scenario_desc": "Glühendes unterirdisches Lavameer, Basaltsäulen und rauchende Krater.",
-        "boss_magma_vulcanus_badge": "VULKAN • MAGMA",
-        "boss_magma_vulcanus_lore": "Verkörperung tektonischer Eruptionen, pyroklastischer Ströme und flüssigen Gesteins.",
+        "boss_cyber_titan_name": "Xylarion, der Leeren-Herrscher",
+        "boss_cyber_titan_title": "Kommandant der Alien-Vorhut",
+        "boss_cyber_titan_scenario": "Kuipergürtel (Rand des Sonnensystems)",
+        "boss_cyber_titan_scenario_desc": "Xylarions Dreadnought-Armada hat die Leere durchquert, um das Sonnensystem zu erobern!",
+        "boss_cyber_titan_badge": "ALIEN • DREADNOUGHT",
+        "boss_cyber_titan_lore": "Oberbefehlshaber der Invasionsflotte und Meister stellarer Plasmageschütze.",
+        "boss_feral_apex_name": "Zorkon, Orbit-Eroberer",
+        "boss_feral_apex_title": "Meister des Biomechanischen Schwarms",
+        "boss_feral_apex_scenario": "Neptun-Umlaufbahn",
+        "boss_feral_apex_scenario_desc": "Zorkons bio-organischer Schwarm umzingelt die Gasriesen des Sonnensystems!",
+        "boss_feral_apex_badge": "ALIEN • SCHWARM",
+        "boss_feral_apex_lore": "Befiehlt biomechanische Kolonien, die Sternenflotten verschlingen können.",
+        "boss_arcane_chimera_name": "Vespera, Antimaterie-Herrscherin",
+        "boss_arcane_chimera_title": "Außerirdische Psionik-Herrscherin",
+        "boss_arcane_chimera_scenario": "Saturnringe",
+        "boss_arcane_chimera_scenario_desc": "Vespera setzt Antimaterie-Batterien ein, um die Gravitationsschilde des Sonnensystems zu brechen!",
+        "boss_arcane_chimera_badge": "ALIEN • PSIONIK",
+        "boss_arcane_chimera_lore": "Beherrscht Dunkle Energie und intergalaktische Gedankenstürme.",
+        "boss_abyssal_leviathan_name": "Nebulor, Herold der Dunklen Materie",
+        "boss_abyssal_leviathan_title": "Kosmische Schattenentität",
+        "boss_abyssal_leviathan_scenario": "Jupiter-Umlaufbahn",
+        "boss_abyssal_leviathan_scenario_desc": "Nebulor krümmt Jupiters Magnetosphäre zur Vorbereitung des Angriffs auf die Erde!",
+        "boss_abyssal_leviathan_badge": "ALIEN • SCHATTEN",
+        "boss_abyssal_leviathan_lore": "Manipuliert Raumzeit-Anomalien und Schwerkraftwirbel.",
+        "boss_cosmic_chronos_name": "Xenor, Intergalaktisches Überbewusstsein",
+        "boss_cosmic_chronos_title": "Zentrale Invasionsintelligenz",
+        "boss_cosmic_chronos_scenario": "Mond-Umlaufbahn",
+        "boss_cosmic_chronos_scenario_desc": "Xenors kolossales Mutterschiff geht im Mondorbit für die finale Invasion der Erde in Stellung!",
+        "boss_cosmic_chronos_badge": "ALIEN • MUTTERSCHIFF",
+        "boss_cosmic_chronos_lore": "Das übergeordnete Alien-Bewusstsein, das die Invasion des Sonnensystems lenkt.",
+        "boss_magma_vulcanus_name": "Kragthor, Flottenbrecher",
+        "boss_magma_vulcanus_title": "Kriegstreiber-General der Invasoren",
+        "boss_magma_vulcanus_scenario": "Asteroidengürtel",
+        "boss_magma_vulcanus_scenario_desc": "Kragthors gewaltiges Kriegsschiff zerschmettert Asteroiden, um den Weg zur Erde zu bahnen!",
+        "boss_magma_vulcanus_badge": "ALIEN • KRIEGSFÜRST",
+        "boss_magma_vulcanus_lore": "Schwer gepanzerter Invasor mit verheerenden Antimaterie-Desintegratoren.",
         "btn_continue": "Spiel Fortsetzen",
         "btn_new_game": "Neues Spiel",
         "btn_new_game_desc": "Neu starten mit geteilten Münzen",
@@ -418,28 +418,64 @@
         "privacy_badge_local": "100% Lokale Speicherung",
         "privacy_badge_github": "GitHub Pages Hosting",
         "privacy_badge_lgpd": "LGPD & ANPD Konformität",
-        "privacy_sec_collection_title": "1. Keine Erhebung personenbezogener Daten durch Digitinho",
-        "privacy_sec_collection_desc": "Digitinho ist ein statisches Webspiel, das vollständig im Browser des Spielers ausgeführt wird (clientseitig). Das Projekt betreibt keine eigenen Backend-Server, Remote-Datenbanken, Registrierungsformulare oder Benutzerkonten. Es werden keine personenbezogenen Daten (wie Name, E-Mail, Ausweis oder Telefonnummer) angefordert, erhoben, verarbeitet oder weitergegeben.",
+        "privacy_sec_collection_title": "1. Keine Erhebung personenbezogener Daten durch Digitinho Galaxy",
+        "privacy_sec_collection_desc": "Digitinho Galaxy ist ein statisches Webspiel, das vollständig im Browser des Spielers ausgeführt wird (clientseitig). Das Projekt betreibt keine eigenen Backend-Server, Remote-Datenbanken, Registrierungsformulare oder Benutzerkonten. Es werden keine personenbezogenen Daten (wie Name, E-Mail, Ausweis oder Telefonnummer) angefordert, erhoben, verarbeitet oder weitergegeben.",
         "privacy_sec_storage_title": "2. Lokale Speicherung auf dem Endgerät (HTML5 LocalStorage)",
         "privacy_sec_storage_desc": "Der gesamte Spielfortschritt — Punktestände, Speicherstände, in der Bibliothek freigeschaltete Wörter, Erfolge, Audioeinstellungen, Schwierigkeitsgrad und Farbmodi — wird ausschließlich im lokalen Speicher Ihres Browsers (localStorage) abgelegt. Diese Daten verlassen Ihr Gerät nie und können jederzeit über die Browsereinstellungen oder die Spielstandverwaltung gelöscht werden.",
         "privacy_sec_hosting_title": "3. Hosting-Infrastruktur & Technische Protokolle von GitHub Pages",
-        "privacy_sec_hosting_desc": "Digitinho wird als statische Website auf GitHub Pages gehostet (betrieben von GitHub, Inc. / Microsoft). Beim Aufrufen der Website können die Server von GitHub technische Verbindungsmetadaten wie IP-Adressen, Zugriffszeitpunkte, Browser-Kennungen und URLs protokollieren, um Sicherheit, Systemintegrität und Missbrauchsschutz gemäß der GitHub-Datenschutzerklärung zu gewährleisten. Der Entwickler von Digitinho hat keinen Zugriff auf IP-Rohprotokolle.",
+        "privacy_sec_hosting_desc": "Digitinho Galaxy wird als statische Website auf GitHub Pages gehostet (betrieben von GitHub, Inc. / Microsoft). Beim Aufrufen der Website können die Server von GitHub technische Verbindungsmetadaten wie IP-Adressen, Zugriffszeitpunkte, Browser-Kennungen und URLs protokollieren, um Sicherheit, Systemintegrität und Missbrauchsschutz gemäß der GitHub-Datenschutzerklärung zu gewährleisten. Der Entwickler von Digitinho Galaxy hat keinen Zugriff auf IP-Rohprotokolle.",
         "privacy_sec_cookies_title": "4. Keine Tracking-Cookies oder Analysewerkzeuge Dritter",
         "privacy_sec_cookies_desc": "Das Spiel verwendet keine Werbe-Cookies, Google Analytics, Social-Media-Pixel oder Profiling-Skripte von Drittanbietern. Das Erlebnis dient ausschließlich dem Tipptraining und dem Spielspaß.",
         "privacy_sec_lgpd_title": "5. Einhaltung des brasilianischen Datenschutzgesetzes (LGPD) & ANPD",
         "privacy_sec_lgpd_desc": "Unter Berücksichtigung des brasilianischen Datenschutzgesetzes (LGPD, Gesetz Nr. 13.709/2018) und der Richtlinien der ANPD folgt das Projekt den Grundsätzen der Zweckbindung, Erforderlichkeit, Datenminimierung und Transparenz. Da keine personenbezogenen Daten verarbeitet werden, findet weder ein Verkauf noch eine Weitergabe statt.",
         "privacy_sec_opensource_title": "6. Open Source, Transparenz und Überprüfbarkeit",
-        "privacy_sec_opensource_desc": "Digitinho ist ein Open-Source-Projekt unter der MIT-Lizenz. Der gesamte Quellcode kann öffentlich auf GitHub eingesehen und geprüft werden, um die vollständige Abwesenheit von Trackern, Telemetrie oder Datenübertragungen nachzuweisen.",
+        "privacy_sec_opensource_desc": "Digitinho Galaxy ist ein Open-Source-Projekt unter der MIT-Lizenz. Der gesamte Quellcode kann öffentlich auf GitHub eingesehen und geprüft werden, um die vollständige Abwesenheit von Trackern, Telemetrie oder Datenübertragungen nachzuweisen.",
         "privacy_sec_links_title": "Offizielle Quellen und rechtliche Referenzen",
         "privacy_link_github": "GitHub Pages: Funktionsweise und IP-Protokollierung",
         "privacy_link_anpd": "ANPD: Personenbezogene Daten und Verantwortliche",
         "privacy_link_lgpd": "LGPD — Brasilianisches Datenschutzgesetz (Gesetz Nr. 13.709/2018)",
         "privacy_back_game": "Zurück zum Spiel",
-        "privacy_updated": "Zuletzt aktualisiert: Oktober 2026 • Digitinho Typing Game",
-        "privacy_page_title": "Digitinho — Datenschutzerklärung & Transparenz",
+        "privacy_updated": "Zuletzt aktualisiert: Oktober 2026 • Digitinho Galaxy Space Typing Game",
+        "privacy_page_title": "Digitinho Galaxy — Datenschutzerklärung & Transparenz",
         "privacy_overview_title": "Wichtige Punkte im Überblick",
         "privacy_contact_title": "Fragen & Kontakt",
-        "privacy_contact_desc": "Da es sich um ein clientseitiges Open-Source-Projekt ohne Server oder Datenerfassung handelt, können Fragen oder Anregungen direkt über das GitHub-Repository als Issue eingereicht werden."
+        "privacy_contact_desc": "Da es sich um ein clientseitiges Open-Source-Projekt ohne Server oder Datenerfassung handelt, können Fragen oder Anregungen direkt über das GitHub-Repository als Issue eingereicht werden.",
+        "boss_alien_xylarion_name": "Xylarion, der Leeren-Herrscher",
+        "boss_alien_xylarion_title": "Kommandant der Alien-Vorhut",
+        "boss_alien_xylarion_scenario": "Kuipergürtel (Rand des Sonnensystems)",
+        "boss_alien_xylarion_scenario_desc": "Xylarions Dreadnought-Armada hat die Leere durchquert, um das Sonnensystem zu erobern!",
+        "boss_alien_xylarion_badge": "ALIEN • DREADNOUGHT",
+        "boss_alien_xylarion_lore": "Oberbefehlshaber der Invasionsflotte und Meister stellarer Plasmageschütze.",
+        "boss_alien_zorkon_name": "Zorkon, Orbit-Eroberer",
+        "boss_alien_zorkon_title": "Meister des Biomechanischen Schwarms",
+        "boss_alien_zorkon_scenario": "Neptun-Umlaufbahn",
+        "boss_alien_zorkon_scenario_desc": "Zorkons bio-organischer Schwarm umzingelt die Gasriesen des Sonnensystems!",
+        "boss_alien_zorkon_badge": "ALIEN • SCHWARM",
+        "boss_alien_zorkon_lore": "Befiehlt biomechanische Kolonien, die Sternenflotten verschlingen können.",
+        "boss_alien_vespera_name": "Vespera, Antimaterie-Herrscherin",
+        "boss_alien_vespera_title": "Außerirdische Psionik-Herrscherin",
+        "boss_alien_vespera_scenario": "Saturnringe",
+        "boss_alien_vespera_scenario_desc": "Vespera setzt Antimaterie-Batterien ein, um die Gravitationsschilde des Sonnensystems zu brechen!",
+        "boss_alien_vespera_badge": "ALIEN • PSIONIK",
+        "boss_alien_vespera_lore": "Beherrscht Dunkle Energie und intergalaktische Gedankenstürme.",
+        "boss_alien_kragthor_name": "Kragthor, Flottenbrecher",
+        "boss_alien_kragthor_title": "Kriegstreiber-General der Invasoren",
+        "boss_alien_kragthor_scenario": "Asteroidengürtel",
+        "boss_alien_kragthor_scenario_desc": "Kragthors gewaltiges Kriegsschiff zerschmettert Asteroiden, um den Weg zur Erde zu bahnen!",
+        "boss_alien_kragthor_badge": "ALIEN • KRIEGSFÜRST",
+        "boss_alien_kragthor_lore": "Schwer gepanzerter Invasor mit verheerenden Antimaterie-Desintegratoren.",
+        "boss_alien_nebulor_name": "Nebulor, Herold der Dunklen Materie",
+        "boss_alien_nebulor_title": "Kosmische Schattenentität",
+        "boss_alien_nebulor_scenario": "Jupiter-Umlaufbahn",
+        "boss_alien_nebulor_scenario_desc": "Nebulor krümmt Jupiters Magnetosphäre zur Vorbereitung des Angriffs auf die Erde!",
+        "boss_alien_nebulor_badge": "ALIEN • SCHATTEN",
+        "boss_alien_nebulor_lore": "Manipuliert Raumzeit-Anomalien und Schwerkraftwirbel.",
+        "boss_alien_xenor_name": "Xenor, Intergalaktisches Überbewusstsein",
+        "boss_alien_xenor_title": "Zentrale Invasionsintelligenz",
+        "boss_alien_xenor_scenario": "Mond-Umlaufbahn",
+        "boss_alien_xenor_scenario_desc": "Xenors kolossales Mutterschiff geht im Mondorbit für die finale Invasion der Erde in Stellung!",
+        "boss_alien_xenor_badge": "ALIEN • MUTTERSCHIFF",
+        "boss_alien_xenor_lore": "Das übergeordnete Alien-Bewusstsein, das die Invasion des Sonnensystems lenkt."
     },
     "syllables": [
         "de",
@@ -469,837 +505,1304 @@
     ],
     "words": [
         {
-            "text": "katze",
-            "type": "tier",
-            "meaning": "Sanftes Haustier mit weichem Fell, das gerne schnurrt"
-        },
-        {
-            "text": "haus",
-            "type": "ort",
-            "meaning": "Gebäude, das Menschen als behagliches Heim dient"
-        },
-        {
-            "text": "liebe",
-            "type": "gefuehl",
-            "meaning": "Tiefes Gefühl der Zuneigung, Fürsorge und Verbundenheit"
-        },
-        {
-            "text": "ball",
-            "type": "gegenstand",
-            "meaning": "Runder Spielgegenstand für Sport und Bewegung"
-        },
-        {
-            "text": "feuer",
-            "type": "element",
-            "meaning": "Loderndes Element, das Licht und Wärme spendet"
-        },
-        {
-            "text": "wind",
-            "type": "natur",
-            "meaning": "Spürbare Luftbewegung, die über das Land weht"
-        },
-        {
-            "text": "fenster",
-            "type": "ort",
-            "meaning": "Wandöffnung, die frische Luft und Tageslicht einlässt"
-        },
-        {
-            "text": "wolf",
-            "type": "tier",
-            "meaning": "Wildes Rudeltier, das nachts den Mond anheult"
-        },
-        {
-            "text": "stein",
-            "type": "natur",
-            "meaning": "Hartes, festes Mineralstück aus der Erde"
-        },
-        {
-            "text": "feld",
-            "type": "natur",
-            "meaning": "Offene weite Landschaft mit grünen Wiesen"
-        },
-        {
-            "text": "regen",
-            "type": "natur",
-            "meaning": "Wassertropfen, die aus den Wolken herabfallen"
-        },
-        {
-            "text": "erde",
-            "type": "natur",
-            "meaning": "Fruchtbarer Boden oder unser blauer Heimatplanet"
-        },
-        {
-            "text": "nacht",
-            "type": "zeit",
-            "meaning": "Dunkle Zeitspanne zwischen Sonnenuntergang und Morgen"
-        },
-        {
-            "text": "stern",
-            "type": "kosmos",
-            "meaning": "Funkelnder Himmelskörper am nächtlichen Firmament"
-        },
-        {
-            "text": "drache",
-            "type": "fantasie",
-            "meaning": "Mythisches geflügeltes Wesen, das Feuer speit"
-        },
-        {
-            "text": "fuchs",
-            "type": "tier",
-            "meaning": "Schlauer Waldbewohner mit buschigem rotem Schweif"
-        },
-        {
-            "text": "stadt",
-            "type": "ort",
-            "meaning": "Urbane Siedlung mit Straßen, Türmen und Geschäften"
-        },
-        {
-            "text": "wald",
-            "type": "natur",
-            "meaning": "Großes Gebiet voller hoher Bäume und Waldtiere"
-        },
-        {
-            "text": "planet",
-            "type": "kosmos",
-            "meaning": "Himmelskörper, der um eine leuchtende Sonne kreist"
-        },
-        {
-            "text": "schwert",
-            "type": "gegenstand",
-            "meaning": "Edle Klingenwaffe der ritterlichen Krieger"
-        },
-        {
-            "text": "kristall",
-            "type": "gegenstand",
-            "meaning": "Kostbares, funkelndes und klares Mineral"
-        },
-        {
-            "text": "vulkan",
-            "type": "natur",
-            "meaning": "Berg, aus dem glühende Lava emporsteigt"
-        },
-        {
-            "text": "ozean",
-            "type": "natur",
-            "meaning": "Gewaltiges Weltmeer, das den Globus umspannt"
-        },
-        {
-            "text": "schlange",
-            "type": "tier",
-            "meaning": "Beinloses kriechendes Reptil voller Eleganz"
-        },
-        {
-            "text": "donner",
-            "type": "natur",
-            "meaning": "Mächtiges Grollen am Himmel nach einem Blitz"
-        },
-        {
-            "text": "licht",
-            "type": "kosmos",
-            "meaning": "Helle Strahlung, die die Welt sichtbar macht"
-        },
-        {
-            "text": "pferd",
-            "type": "tier",
-            "meaning": "Anmutiges Huftier mit flatternder Mähne"
-        },
-        {
-            "text": "wolke",
-            "type": "natur",
-            "meaning": "Weiße Wasserdampfmasse, die am Himmel zieht"
-        },
-        {
-            "text": "loewe",
-            "type": "tier",
-            "meaning": "König der Tiere mit prächtiger, wilder Mähne"
-        },
-        {
-            "text": "see",
-            "type": "natur",
-            "meaning": "Ruhiges Binnengewässer umgeben von Natur"
-        },
-        {
-            "text": "chip",
-            "type": "tech",
-            "meaning": "Integrierter Halbleiterschaltkreis für Hochgeschwindigkeitsberechnungen"
-        },
-        {
-            "text": "laser",
-            "type": "tech",
-            "meaning": "Gebündelter kohärenter Lichtstrahl für optische Präzisionssysteme"
-        },
-        {
-            "text": "netz",
-            "type": "tech",
-            "meaning": "Verbundene digitale Serverarchitektur zum weltweiten Austausch von Datenpaketen"
-        },
-        {
-            "text": "daten",
-            "type": "tech",
-            "meaning": "Binäre Informationseinheiten, die von Algorithmen verarbeitet und gespeichert werden"
-        },
-        {
-            "text": "pixel",
-            "type": "tech",
-            "meaning": "Kleinstes adressierbares Farbpixel auf einer digitalen Bildschirmanzeige"
-        },
-        {
-            "text": "roboter",
-            "type": "tech",
-            "meaning": "Autonome programmierbare Maschine zur fehlerfreien Ausführung technischer Befehle"
-        },
-        {
-            "text": "schaltkreis",
-            "type": "tech",
-            "meaning": "Geschlossene Leiterbahn für elektrische Signale und Impulse"
-        },
-        {
-            "text": "satellit",
-            "type": "tech",
-            "meaning": "Orbitaler Raumflugkörper zur weltweiten Übertragung von Funksignalen"
-        },
-        {
-            "text": "code",
-            "type": "tech",
-            "meaning": "Strukturierte logische Anweisungen in einer definierten Programmiersprache"
-        },
-        {
-            "text": "sensor",
-            "type": "tech",
-            "meaning": "Elektronischer Messfühler zur Erfassung physikalischer Umgebungswerte"
-        },
-        {
-            "text": "software",
-            "type": "tech",
-            "meaning": "Gesamtheit der Programme und Betriebssysteme für Rechenanlagen"
-        },
-        {
-            "text": "antenne",
-            "type": "tech",
-            "meaning": "Vorrichtung zum Senden und Empfangen elektromagnetischer Funkwellen"
-        },
-        {
             "text": "sonne",
             "type": "cosmos",
-            "meaning": "Strahlender Zentralstern, der die Planeten wärmt und erhellt"
+            "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
         },
         {
             "text": "mond",
             "type": "cosmos",
-            "meaning": "Natürlicher Himmelskörper, der nachts silbern leuchtet"
+            "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
         },
         {
-            "text": "fluss",
-            "type": "natur",
-            "meaning": "Stetiger Süßwasserlauf, der sich seinen Weg zum Meere bahnt"
+            "text": "monde",
+            "type": "cosmos",
+            "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
         },
         {
-            "text": "meer",
-            "type": "natur",
-            "meaning": "Weite Salzflut, die Küsten und Kontinente umschließt"
+            "text": "himmel",
+            "type": "cosmos",
+            "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
         },
         {
-            "text": "vogel",
-            "type": "tier",
-            "meaning": "Befiedertes Lebewesen, das mit Schwingen durch die Lüfte zieht"
+            "text": "strahl",
+            "type": "phaenomen",
+            "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
         },
         {
-            "text": "honig",
-            "type": "natur",
-            "meaning": "Süßer goldener Nektar, von fleißigen Bienen im Stock geerntet"
+            "text": "halo",
+            "type": "cosmos",
+            "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
         },
         {
-            "text": "klang",
-            "type": "element",
-            "meaning": "Harmonische Schallwelle, die wohltuend an das Ohr dringt"
+            "text": "achse",
+            "type": "cosmos",
+            "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
         },
         {
-            "text": "blume",
-            "type": "natur",
-            "meaning": "Duftende Blüte mit bunten Blättern, die den Garten schmückt"
+            "text": "phase",
+            "type": "phaenomen",
+            "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
         },
         {
-            "text": "ente",
-            "type": "tier",
-            "meaning": "Wasservogel mit Schwimmhäuten und breitem Schnabel auf dem See"
-        },
-        {
-            "text": "frosch",
-            "type": "tier",
-            "meaning": "Flink hüpfende Amphibie mit glatter Haut an Feuchtgebieten"
-        },
-        {
-            "text": "glocke",
-            "type": "gegenstand",
-            "meaning": "Hohles Metallgefäß, das beim Anschlag wohlklingend tönt"
+            "text": "welle",
+            "type": "phaenomen",
+            "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
         },
         {
             "text": "schiff",
-            "type": "fahrzeug",
-            "meaning": "Großes Wasserfahrzeug zur Reise über Meere und Häfen"
+            "type": "tech",
+            "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
         },
         {
-            "text": "vase",
-            "type": "gegenstand",
-            "meaning": "Kunstvolles Ziergefäß aus Ton oder Glas für Blumensträuße"
+            "text": "nova",
+            "type": "phaenomen",
+            "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
         },
         {
-            "text": "gold",
-            "type": "element",
-            "meaning": "Glänzendes Edelmetall von unvergänglichem gelbem Glanz"
+            "text": "ziel",
+            "type": "tech",
+            "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
         },
         {
-            "text": "karte",
-            "type": "gegenstand",
-            "meaning": "Geografische Zeichnung von Ländern, Meeren und Wegen"
+            "text": "daten",
+            "type": "tech",
+            "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
         },
         {
-            "text": "buch",
-            "type": "gegenstand",
-            "meaning": "Gebundenes Schriftwerk voller Weisheit und Abenteuer"
+            "text": "nacht",
+            "type": "cosmos",
+            "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
         },
         {
-            "text": "bruecke",
-            "type": "ort",
-            "meaning": "Kühnes Bauwerk, das zwei getrennte Ufer sicher verbindet"
+            "text": "jahr",
+            "type": "cosmos",
+            "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
         },
         {
-            "text": "boot",
-            "type": "fahrzeug",
-            "meaning": "Wendiges kleines Wasserfahrzeug für Seen und stille Flüsse"
+            "text": "vakuum",
+            "type": "cosmos",
+            "meaning": "Materiefreier Raum, in dem die absolute Stille des Kosmos herrscht"
         },
         {
-            "text": "blatt",
+            "text": "gestirn",
+            "type": "cosmos",
+            "meaning": "Jeder natürliche Himmelskörper in den Weiten des Universums"
+        },
+        {
+            "text": "kosmos",
+            "type": "cosmos",
+            "meaning": "Das geordnete, harmonische und unendliche physikalische Universum"
+        },
+        {
+            "text": "mars",
+            "type": "cosmos",
+            "meaning": "Vierter Planet von der Sonne, historisch als Roter Planet bekannt"
+        },
+        {
+            "text": "venus",
+            "type": "cosmos",
+            "meaning": "Zweiter Planet von der Sonne und hellster Wandelstern am Nachthimmel"
+        },
+        {
+            "text": "erde",
+            "type": "cosmos",
+            "meaning": "Unsere blaue Heimatwelt, die einzige bekannte Oase mit flüssigem Wasser"
+        },
+        {
+            "text": "solar",
+            "type": "cosmos",
+            "meaning": "Die Sonne, ihre Strahlung, Sonnenwinde und ihr System betreffend"
+        },
+        {
+            "text": "sonde",
+            "type": "tech",
+            "meaning": "Unbemanntes Forschungsraumschiff zur Erkundung fremder Atmosphären"
+        },
+        {
+            "text": "radar",
+            "type": "tech",
+            "meaning": "Funkortungssystem zur Kartierung planetarer Oberflächen und Asteroiden"
+        },
+        {
+            "text": "magma",
             "type": "natur",
-            "meaning": "Grüner Pflanzenteil, der das Sonnenlicht in Energie wandelt"
+            "meaning": "Glühend heißes geschmolzenes Gestein im Inneren von Gesteinsplaneten"
         },
         {
-            "text": "schluessel",
-            "type": "gegenstand",
-            "meaning": "Metallwerkzeug zum Schließen und Öffnen schwerer Schlösser"
+            "text": "wolke",
+            "type": "cosmos",
+            "meaning": "Dichte molekulare Gas- und Staubwolke als Geburtsstätte neuer Sonnen"
         },
         {
-            "text": "traum",
-            "type": "gefuehl",
-            "meaning": "Bilderreiches Gedankenwerk des Geistes während des Schlafes"
+            "text": "pluto",
+            "type": "cosmos",
+            "meaning": "Eisiger Zwergplanet im Kuipergürtel am Rande unseres Sonnensystems"
         },
         {
-            "text": "gras",
-            "type": "natur",
-            "meaning": "Frischer grüner Pflanzenteppich auf Almen und Wiesen"
-        },
-        {
-            "text": "vers",
-            "type": "kunst",
-            "meaning": "Rhythmische Zeile eines Gedichts mit klangvollem Reim"
-        },
-        {
-            "text": "krone",
-            "type": "gegenstand",
-            "meaning": "Edler Stirnschmuck herrschender Häupter mit Juwelen"
-        },
-        {
-            "text": "perle",
-            "type": "gegenstand",
-            "meaning": "Schimmerndes Naturjuwel aus dem Inneren der Muschelschale"
-        },
-        {
-            "text": "garten",
-            "type": "ort",
-            "meaning": "Gepflegtes Areal mit Blumenbeeten, Sträuchern und Spazierwegen"
-        },
-        {
-            "text": "tempel",
-            "type": "ort",
-            "meaning": "Weihestätte der Einkehr, Stille und geistigen Sammlung"
-        },
-        {
-            "text": "portal",
-            "type": "fantasie",
-            "meaning": "Magischer Dimensionseingang in ferne Zeiten und Welten"
-        },
-        {
-            "text": "schild",
-            "type": "gegenstand",
-            "meaning": "Rüstungsteil zur Abwehr feindlicher Schläge im Gefecht"
-        },
-        {
-            "text": "reise",
-            "type": "erfahrung",
-            "meaning": "Fahrt in unbekannte Länder zur Erweiterung des Horizonts"
-        },
-        {
-            "text": "pfeil",
-            "type": "gegenstand",
-            "meaning": "Spitze Schusswaffe, die vom Bogen geschwind davonschnellt"
-        },
-        {
-            "text": "hain",
-            "type": "natur",
-            "meaning": "Kleiner lichter Wald mit ehrwürdigen schattigen Bäumen"
+            "text": "orbit",
+            "type": "cosmos",
+            "meaning": "Gravitative Umlaufbahn eines Himmelskörpers um ein Massezentrum"
         },
         {
             "text": "komet",
             "type": "cosmos",
-            "meaning": "Schweifstern aus Eis und Gestein auf ferner Sonnenbahn"
+            "meaning": "Eisiger Himmelskörper, der in Sonnennähe einen leuchtenden Schweif bildet"
         },
         {
-            "text": "burg",
-            "type": "ort",
-            "meaning": "Wehrhafte Festung aus Stein mit Zinnen und tiefem Graben"
-        },
-        {
-            "text": "galaxie",
+            "text": "pulsar",
             "type": "cosmos",
-            "meaning": "Riesiges Sternsystem aus Milliarden Sonnen und Nebeln"
+            "meaning": "Rasch rotierender Neutronenstern, der periodische Strahlungsimpulse aussendet"
         },
         {
-            "text": "gedanke",
-            "type": "geist",
-            "meaning": "Geistiger Funke des Verstandes und der schöpferischen Kraft"
+            "text": "quasar",
+            "type": "cosmos",
+            "meaning": "Extrem leuchtkräftiger aktiver Galaxienkern, angetrieben von supermassereichem Schwarzen Loch"
+        },
+        {
+            "text": "korona",
+            "type": "cosmos",
+            "meaning": "Äußerste, millionengradheiße Atmosphärenschicht der Sonne"
+        },
+        {
+            "text": "meteor",
+            "type": "cosmos",
+            "meaning": "Leuchtspur beim Verglühen eines Partikels in der Planetenatmosphäre"
+        },
+        {
+            "text": "optik",
+            "type": "tech",
+            "meaning": "Wissenschaft des Lichts und der Spiegelsysteme moderner Weltraumteleskope"
         },
         {
             "text": "weltall",
             "type": "cosmos",
-            "meaning": "Das unendliche Gefüge aus Raum, Materie und Zeit"
+            "meaning": "Die unendliche dreidimensionale Weite, in der Galaxien und Sterne treiben"
         },
         {
-            "text": "labyrinth",
-            "type": "ort",
-            "meaning": "Verschlungenes Wegenetz mit trügerischen Abzweigungen"
+            "text": "aurora",
+            "type": "phaenomen",
+            "meaning": "Atmosphärisches Polarlicht durch Wechselwirkung von Sonnenwind und Magnetfeld"
         },
         {
-            "text": "falter",
-            "type": "tier",
-            "meaning": "Zartes Insekt mit farbenfroh gemusterten Schwingen"
+            "text": "zenit",
+            "type": "cosmos",
+            "meaning": "Der Scheitelpunkt der Himmelssphäre direkt über dem Beobachter"
         },
         {
-            "text": "sturm",
-            "type": "natur",
-            "meaning": "Brausendes Unwetter mit stürmischem Wind und Regengüssen"
+            "text": "hubble",
+            "type": "tech",
+            "meaning": "Berühmtes Weltraumteleskop, das die moderne Astronomie revolutionierte"
+        },
+        {
+            "text": "staub",
+            "type": "cosmos",
+            "meaning": "Interstellare Mineralkörnchen in den Spiralarmen von Galaxien"
+        },
+        {
+            "text": "trichter",
+            "type": "cosmos",
+            "meaning": "Extremer Raumzeit-Krümmungstrichter, der in eine Singularität mündet"
+        },
+        {
+            "text": "stern",
+            "type": "cosmos",
+            "meaning": "Gigantischer Plasmaball, angetrieben durch nukleare Fusion im Kern"
+        },
+        {
+            "text": "planet",
+            "type": "cosmos",
+            "meaning": "Massereicher Himmelskörper, der einen Stern umkreist und seine Bahn geräumt hat"
+        },
+        {
+            "text": "galaxie",
+            "type": "cosmos",
+            "meaning": "Gewaltiges Sternensystem aus Milliarden Sonnen, Gas und Dunkler Materie"
+        },
+        {
+            "text": "galaxien",
+            "type": "cosmos",
+            "meaning": "Milliarden von Sterneninseln verteilt über das kosmische Netz des Alls"
+        },
+        {
+            "text": "universum",
+            "type": "cosmos",
+            "meaning": "Die Gesamtheit aller Materie, Energie, Raum, Zeit und Naturgesetze"
+        },
+        {
+            "text": "nebel",
+            "type": "cosmos",
+            "meaning": "Interstellare Wolke aus leuchtendem Gas, Sternenresten und kosmischem Staub"
+        },
+        {
+            "text": "gravitation",
+            "type": "phaenomen",
+            "meaning": "Fundamentale Anziehungskraft zwischen Massen, die die Raumzeit krümmt"
+        },
+        {
+            "text": "supernova",
+            "type": "phaenomen",
+            "meaning": "Katastrophale Explosion eines massereichen Sterns am Ende seiner Entwicklung"
+        },
+        {
+            "text": "astronaut",
+            "type": "tech",
+            "meaning": "Professionell ausgebildeter Raumfahrer auf orbitalen Forschungsmissionen"
+        },
+        {
+            "text": "astronomie",
+            "type": "wissenschaft",
+            "meaning": "Wissenschaftliche Erforschung der Himmelskörper und des Universums"
+        },
+        {
+            "text": "exoplanet",
+            "type": "cosmos",
+            "meaning": "Planet außerhalb unseres Sonnensystems, der eine fremde Sonne umkreist"
+        },
+        {
+            "text": "exoplaneten",
+            "type": "cosmos",
+            "meaning": "Fremde Planetenwelten um ferne Sonnen in unserer Heimatgalaxie"
+        },
+        {
+            "text": "satellit",
+            "type": "tech",
+            "meaning": "Natürlicher oder künstlicher Himmelskörper auf einer Planetenumlaufbahn"
         },
         {
             "text": "sternbild",
             "type": "cosmos",
-            "meaning": "Figürliche Gruppe von Fixsternen am nächtlichen Firmament"
+            "meaning": "Muster aus Sternen an der Himmelskugel, benannt nach Mythologien"
         },
         {
-            "text": "blitz",
-            "type": "element",
-            "meaning": "Zündende Himmelsentladung bei gewittrigem Wetter"
-        },
-        {
-            "text": "horizont",
-            "type": "natur",
-            "meaning": "Scheinbare Grenze, wo Himmel und Erde ineinander übergehen"
+            "text": "teleskop",
+            "type": "tech",
+            "meaning": "Optisches Instrument zum Sammeln von Licht ferner Himmelskörper"
         },
         {
             "text": "raumschiff",
             "type": "tech",
-            "meaning": "Kosmische Erkundungsfähre für Flüge durch Sternensysteme"
+            "meaning": "Sternenschiff konstruiert für interstellare Reisen und Missionen"
         },
         {
-            "text": "technik",
+            "text": "atmosphaere",
+            "type": "cosmos",
+            "meaning": "Gashülle, die durch Gravitation an einen Planeten gebunden ist"
+        },
+        {
+            "text": "magnetosphaere",
+            "type": "phaenomen",
+            "meaning": "Magnetischer Schutzschild gegen tödliche Sonnenwinde und kosmische Strahlung"
+        },
+        {
+            "text": "strahlung",
+            "type": "phaenomen",
+            "meaning": "Elektromagnetische Wellen oder hochenergetische Teilchen im Weltraum"
+        },
+        {
+            "text": "spektrum",
+            "type": "wissenschaft",
+            "meaning": "Zerlegung des Sternenlichts zur Analyse chemischer Zusammensetzungen"
+        },
+        {
+            "text": "andromeda",
+            "type": "cosmos",
+            "meaning": "Die uns am nächsten gelegene große Spiralgalaxie im lokalen Haufen"
+        },
+        {
+            "text": "heliosphaere",
+            "type": "cosmos",
+            "meaning": "Vom Sonnenwind geformte gigantische Schutzblase im interstellaren Raum"
+        },
+        {
+            "text": "antimaterie",
+            "type": "wissenschaft",
+            "meaning": "Materie aus Antiteilchen, die sich bei Kontakt mit Materie zerstrahlt"
+        },
+        {
+            "text": "singularitaet",
+            "type": "cosmos",
+            "meaning": "Zentrum eines Schwarzen Lochs, an dem physikalische Dichte unendlich wird"
+        },
+        {
+            "text": "multiversum",
+            "type": "cosmos",
+            "meaning": "Hypothetische Gesamtheit unendlich vieler koexistierender Parallelwelten"
+        },
+        {
+            "text": "lichtjahr",
+            "type": "wissenschaft",
+            "meaning": "Entfernung, die ein Lichtstrahl im Vakuum während eines Erdjahres zurücklegt"
+        },
+        {
+            "text": "schwarzes-loch",
+            "type": "cosmos",
+            "meaning": "Kosmisches Objekt so gewaltiger Gravitation, dass selbst Licht nicht entkommt"
+        },
+        {
+            "text": "sternenstaub",
+            "type": "cosmos",
+            "meaning": "Asche vergangener Supernovae, aus der neue Welten und Leben entstehen"
+        },
+        {
+            "text": "dunkle-materie",
+            "type": "cosmos",
+            "meaning": "Unsichtbare Materieform, die den Großteil der galaktischen Masse bildet"
+        },
+        {
+            "text": "dunkle-energie",
+            "type": "cosmos",
+            "meaning": "Rätselhafte Kraft, die die beschleunigte Ausdehnung des Raumes antreibt"
+        },
+        {
+            "text": "wurmloch",
+            "type": "cosmos",
+            "meaning": "Theoretische Abkürzung durch die Raumzeit, die entfernte Punkte verbindet"
+        },
+        {
+            "text": "lichtgeschwindigkeit",
+            "type": "wissenschaft",
+            "meaning": "Universelle Geschwindigkeitsgrenze von dreihunderttausend Kilometern pro Sekunde"
+        },
+        {
+            "text": "raumstation",
             "type": "tech",
-            "meaning": "Wissenschaftlich begründete Verfahren zur Arbeitserleichterung"
+            "meaning": "Bewohnbare künstliche Orbitalbasis für Langzeitforschungen im All"
         },
         {
-            "text": "baukunst",
-            "type": "kunst",
-            "meaning": "Hohe Schule der Gestaltung formschöner und dauerhafter Werke"
+            "text": "ereignishorizont",
+            "type": "cosmos",
+            "meaning": "Grenzfläche ohne Wiederkehr, die ein Schwarzes Loch umschließt"
         },
         {
-            "text": "tempo",
-            "type": "konzept",
-            "meaning": "Rasche Fortbewegung und Schnelligkeit im Lauf der Zeit"
-        },
-        {
-            "text": "raetsel",
-            "type": "geheimnis",
-            "meaning": "Geheimnisvolle Begebenheit, die Scharfsinn erfordert"
-        },
-        {
-            "text": "synthesizer",
-            "type": "musik",
-            "meaning": "Klangsynthesegerät zur Erzeugung facettenreicher Tonwellen"
-        },
-        {
-            "text": "telepathie",
-            "type": "geist",
-            "meaning": "Gedankenübertragung ohne Worte von Geist zu Geist"
+            "text": "milchstrasse",
+            "type": "cosmos",
+            "meaning": "Unsere Heimat-Balkenspiralgalaxie mit Hunderten Milliarden Sternensystemen"
         }
     ],
     "bossWords": {
-        "robot": [
+        "alien_dreadnought": [
             {
-                "text": "chip",
-                "type": "tech",
-                "meaning": "Integrierter Halbleiterschaltkreis, der Prozessoroperationen im Nanosekundenbereich ausführt"
+                "text": "sonne",
+                "type": "cosmos",
+                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
             },
             {
-                "text": "laser",
-                "type": "tech",
-                "meaning": "Gebündelter kohärenter Lichtstrahl für präzise optische Abtastung und Datenübertragung"
+                "text": "mond",
+                "type": "cosmos",
+                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
             },
             {
-                "text": "netz",
+                "text": "monde",
+                "type": "cosmos",
+                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+            },
+            {
+                "text": "himmel",
+                "type": "cosmos",
+                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+            },
+            {
+                "text": "strahl",
+                "type": "phaenomen",
+                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+            },
+            {
+                "text": "achse",
+                "type": "cosmos",
+                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+            },
+            {
+                "text": "phase",
+                "type": "phaenomen",
+                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+            },
+            {
+                "text": "welle",
+                "type": "phaenomen",
+                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+            },
+            {
+                "text": "schiff",
                 "type": "tech",
-                "meaning": "Verbundene digitale Serverarchitektur zum weltweiten Austausch von Datenpaketen"
+                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+            },
+            {
+                "text": "nova",
+                "type": "phaenomen",
+                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+            },
+            {
+                "text": "ziel",
+                "type": "tech",
+                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
             },
             {
                 "text": "daten",
                 "type": "tech",
-                "meaning": "Binäre Informationseinheiten, die von Algorithmen verarbeitet und gespeichert werden"
+                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
             },
             {
-                "text": "pixel",
-                "type": "tech",
-                "meaning": "Kleinstes adressierbares Farbpixel auf einer digitalen Bildschirmanzeige"
+                "text": "nacht",
+                "type": "cosmos",
+                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
             },
             {
-                "text": "roboter",
-                "type": "tech",
-                "meaning": "Autonome programmierbare Maschine zur fehlerfreien Ausführung technischer Befehle"
+                "text": "jahr",
+                "type": "cosmos",
+                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+            }
+        ],
+        "alien_hive": [
+            {
+                "text": "sonne",
+                "type": "cosmos",
+                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
             },
             {
-                "text": "schaltkreis",
-                "type": "tech",
-                "meaning": "Geschlossene Leiterbahn für elektrische Signale und binäre Stromimpulse"
+                "text": "mond",
+                "type": "cosmos",
+                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
             },
             {
-                "text": "satellit",
-                "type": "tech",
-                "meaning": "Orbitaler Raumflugkörper zur weltweiten Übertragung verschlüsselter Funksignale"
+                "text": "monde",
+                "type": "cosmos",
+                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
             },
             {
-                "text": "code",
-                "type": "tech",
-                "meaning": "Strukturierte logische Anweisungen in einer definierten Programmiersprache"
+                "text": "himmel",
+                "type": "cosmos",
+                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
             },
             {
-                "text": "sensor",
-                "type": "tech",
-                "meaning": "Elektronischer Messfühler zur Erfassung physikalischer Umgebungswerte"
+                "text": "strahl",
+                "type": "phaenomen",
+                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
             },
             {
-                "text": "software",
-                "type": "tech",
-                "meaning": "Gesamtheit der Programme und Betriebssysteme für Rechenanlagen"
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
             },
             {
-                "text": "antenne",
+                "text": "achse",
+                "type": "cosmos",
+                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+            },
+            {
+                "text": "phase",
+                "type": "phaenomen",
+                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+            },
+            {
+                "text": "welle",
+                "type": "phaenomen",
+                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+            },
+            {
+                "text": "schiff",
                 "type": "tech",
-                "meaning": "Vorrichtung zum Senden und Empfangen hochfrequenter Funkwellen"
+                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+            },
+            {
+                "text": "nova",
+                "type": "phaenomen",
+                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+            },
+            {
+                "text": "ziel",
+                "type": "tech",
+                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+            },
+            {
+                "text": "daten",
+                "type": "tech",
+                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+            },
+            {
+                "text": "nacht",
+                "type": "cosmos",
+                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+            },
+            {
+                "text": "jahr",
+                "type": "cosmos",
+                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+            }
+        ],
+        "alien_psionic": [
+            {
+                "text": "sonne",
+                "type": "cosmos",
+                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+            },
+            {
+                "text": "mond",
+                "type": "cosmos",
+                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+            },
+            {
+                "text": "monde",
+                "type": "cosmos",
+                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+            },
+            {
+                "text": "himmel",
+                "type": "cosmos",
+                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+            },
+            {
+                "text": "strahl",
+                "type": "phaenomen",
+                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+            },
+            {
+                "text": "achse",
+                "type": "cosmos",
+                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+            },
+            {
+                "text": "phase",
+                "type": "phaenomen",
+                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+            },
+            {
+                "text": "welle",
+                "type": "phaenomen",
+                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+            },
+            {
+                "text": "schiff",
+                "type": "tech",
+                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+            },
+            {
+                "text": "nova",
+                "type": "phaenomen",
+                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+            },
+            {
+                "text": "ziel",
+                "type": "tech",
+                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+            },
+            {
+                "text": "daten",
+                "type": "tech",
+                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+            },
+            {
+                "text": "nacht",
+                "type": "cosmos",
+                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+            },
+            {
+                "text": "jahr",
+                "type": "cosmos",
+                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+            }
+        ],
+        "alien_warlord": [
+            {
+                "text": "sonne",
+                "type": "cosmos",
+                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+            },
+            {
+                "text": "mond",
+                "type": "cosmos",
+                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+            },
+            {
+                "text": "monde",
+                "type": "cosmos",
+                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+            },
+            {
+                "text": "himmel",
+                "type": "cosmos",
+                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+            },
+            {
+                "text": "strahl",
+                "type": "phaenomen",
+                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+            },
+            {
+                "text": "achse",
+                "type": "cosmos",
+                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+            },
+            {
+                "text": "phase",
+                "type": "phaenomen",
+                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+            },
+            {
+                "text": "welle",
+                "type": "phaenomen",
+                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+            },
+            {
+                "text": "schiff",
+                "type": "tech",
+                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+            },
+            {
+                "text": "nova",
+                "type": "phaenomen",
+                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+            },
+            {
+                "text": "ziel",
+                "type": "tech",
+                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+            },
+            {
+                "text": "daten",
+                "type": "tech",
+                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+            },
+            {
+                "text": "nacht",
+                "type": "cosmos",
+                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+            },
+            {
+                "text": "jahr",
+                "type": "cosmos",
+                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+            }
+        ],
+        "alien_darkmatter": [
+            {
+                "text": "sonne",
+                "type": "cosmos",
+                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+            },
+            {
+                "text": "mond",
+                "type": "cosmos",
+                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+            },
+            {
+                "text": "monde",
+                "type": "cosmos",
+                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+            },
+            {
+                "text": "himmel",
+                "type": "cosmos",
+                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+            },
+            {
+                "text": "strahl",
+                "type": "phaenomen",
+                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+            },
+            {
+                "text": "achse",
+                "type": "cosmos",
+                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+            },
+            {
+                "text": "phase",
+                "type": "phaenomen",
+                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+            },
+            {
+                "text": "welle",
+                "type": "phaenomen",
+                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+            },
+            {
+                "text": "schiff",
+                "type": "tech",
+                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+            },
+            {
+                "text": "nova",
+                "type": "phaenomen",
+                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+            },
+            {
+                "text": "ziel",
+                "type": "tech",
+                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+            },
+            {
+                "text": "daten",
+                "type": "tech",
+                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+            },
+            {
+                "text": "nacht",
+                "type": "cosmos",
+                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+            },
+            {
+                "text": "jahr",
+                "type": "cosmos",
+                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+            }
+        ],
+        "alien_mothership": [
+            {
+                "text": "sonne",
+                "type": "cosmos",
+                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+            },
+            {
+                "text": "mond",
+                "type": "cosmos",
+                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+            },
+            {
+                "text": "monde",
+                "type": "cosmos",
+                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+            },
+            {
+                "text": "himmel",
+                "type": "cosmos",
+                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+            },
+            {
+                "text": "strahl",
+                "type": "phaenomen",
+                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+            },
+            {
+                "text": "achse",
+                "type": "cosmos",
+                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+            },
+            {
+                "text": "phase",
+                "type": "phaenomen",
+                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+            },
+            {
+                "text": "welle",
+                "type": "phaenomen",
+                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+            },
+            {
+                "text": "schiff",
+                "type": "tech",
+                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+            },
+            {
+                "text": "nova",
+                "type": "phaenomen",
+                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+            },
+            {
+                "text": "ziel",
+                "type": "tech",
+                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+            },
+            {
+                "text": "daten",
+                "type": "tech",
+                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+            },
+            {
+                "text": "nacht",
+                "type": "cosmos",
+                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+            },
+            {
+                "text": "jahr",
+                "type": "cosmos",
+                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+            }
+        ],
+        "robot": [
+            {
+                "text": "sonne",
+                "type": "cosmos",
+                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+            },
+            {
+                "text": "mond",
+                "type": "cosmos",
+                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+            },
+            {
+                "text": "monde",
+                "type": "cosmos",
+                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+            },
+            {
+                "text": "himmel",
+                "type": "cosmos",
+                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+            },
+            {
+                "text": "strahl",
+                "type": "phaenomen",
+                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+            },
+            {
+                "text": "achse",
+                "type": "cosmos",
+                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+            },
+            {
+                "text": "phase",
+                "type": "phaenomen",
+                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+            },
+            {
+                "text": "welle",
+                "type": "phaenomen",
+                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+            },
+            {
+                "text": "schiff",
+                "type": "tech",
+                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+            },
+            {
+                "text": "nova",
+                "type": "phaenomen",
+                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+            },
+            {
+                "text": "ziel",
+                "type": "tech",
+                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+            },
+            {
+                "text": "daten",
+                "type": "tech",
+                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+            },
+            {
+                "text": "nacht",
+                "type": "cosmos",
+                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+            },
+            {
+                "text": "jahr",
+                "type": "cosmos",
+                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
             }
         ],
         "beast": [
             {
-                "text": "loewe",
-                "type": "fauna",
-                "meaning": "Majestätischer Spitzenprädator mit dichter Mähne, der die afrikanische Savanne beherrscht"
+                "text": "sonne",
+                "type": "cosmos",
+                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
             },
             {
-                "text": "wolf",
-                "type": "fauna",
-                "meaning": "Wildes Rudeltier mit ausgeprägtem Jagdinstinkt, das nachts den Mond anheult"
+                "text": "mond",
+                "type": "cosmos",
+                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
             },
             {
-                "text": "tiger",
-                "type": "fauna",
-                "meaning": "Größte gestreifte Raubkatze der Erde mit immenser Sprungkraft und Tarnung"
+                "text": "monde",
+                "type": "cosmos",
+                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
             },
             {
-                "text": "adler",
-                "type": "fauna",
-                "meaning": "König der Lüfte mit messerscharfen Fängen und hochentwickeltem Sehvermögen"
+                "text": "himmel",
+                "type": "cosmos",
+                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
             },
             {
-                "text": "rudel",
-                "type": "fauna",
-                "meaning": "Disziplinierte Jagdgemeinschaft von Beutegreifern in der Wildnis"
+                "text": "strahl",
+                "type": "phaenomen",
+                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
             },
             {
-                "text": "krallen",
-                "type": "fauna",
-                "meaning": "Scharf gekrümmte Hornwaffen der Raubtiere zum Schlagen der Beute"
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
             },
             {
-                "text": "beute",
-                "type": "fauna",
-                "meaning": "Gejagtes Tier im ewigen Kreislauf der unberührten Nahrungskette"
+                "text": "achse",
+                "type": "cosmos",
+                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
             },
             {
-                "text": "fauna",
-                "type": "fauna",
-                "meaning": "Die gesamte artenreiche Tierwelt eines natürlichen Lebensraumes"
+                "text": "phase",
+                "type": "phaenomen",
+                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
             },
             {
-                "text": "savanne",
-                "type": "fauna",
-                "meaning": "Weite tropische Graslandschaft, in der Herden und Raubtiere aufeinandertreffen"
+                "text": "welle",
+                "type": "phaenomen",
+                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
             },
             {
-                "text": "panther",
-                "type": "fauna",
-                "meaning": "Schwarze Großkatze mit lautloser Eleganz und perfekter Nachtjagd"
+                "text": "schiff",
+                "type": "tech",
+                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
             },
             {
-                "text": "falke",
-                "type": "fauna",
-                "meaning": "Schnellster Greifvogel der Welt im atemberaubenden Sturzflug"
+                "text": "nova",
+                "type": "phaenomen",
+                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
             },
             {
-                "text": "baer",
-                "type": "fauna",
-                "meaning": "Mächtiges Wildtier mit enormer Kraft, dickem Pelz und feinem Spürsinn"
+                "text": "ziel",
+                "type": "tech",
+                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+            },
+            {
+                "text": "daten",
+                "type": "tech",
+                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+            },
+            {
+                "text": "nacht",
+                "type": "cosmos",
+                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+            },
+            {
+                "text": "jahr",
+                "type": "cosmos",
+                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
             }
         ],
         "mythology": [
             {
-                "text": "drache",
-                "type": "myth",
-                "meaning": "Gewaltiges geflügeltes Fabelwesen, das verzehrende Flammen speit und Burgen bewacht"
-            },
-            {
-                "text": "phaenix",
-                "type": "myth",
-                "meaning": "Mythischer Feuervogel der Wiedergeburt, der stets verjüngt aus seiner Asche aufsteigt"
-            },
-            {
-                "text": "hydra",
-                "type": "myth",
-                "meaning": "Vielköpfiges Ungeheuer, dem bei jedem Schwerthieb zwei neue Köpfe nachwachsen"
-            },
-            {
-                "text": "greif",
-                "type": "myth",
-                "meaning": "Mächtiges Mischwesen aus Raubkatze und Adler, Sinnbild für Stärke und Wachsamkeit"
-            },
-            {
-                "text": "olymp",
-                "type": "myth",
-                "meaning": "Heiliger Göttersitz in lichten Höhen, von wo aus Zeus das Schicksal lenkte"
-            },
-            {
-                "text": "sphinx",
-                "type": "myth",
-                "meaning": "Geflügelte Hüterin der Geheimnisse, die unlösbare Schicksalsrätsel stellt"
-            },
-            {
-                "text": "orakel",
-                "type": "myth",
-                "meaning": "Heilige Seherstätte, an der Priesterinnen den Willen der Götter verkündeten"
-            },
-            {
-                "text": "chimere",
-                "type": "myth",
-                "meaning": "Feuerspeiendes Fabelungeheuer aus Löwe, Ziege und Schlange"
-            },
-            {
-                "text": "titan",
-                "type": "myth",
-                "meaning": "Urgöttliches Riesengeschlecht mit gewaltigen Urkräften der Schöpfung"
-            },
-            {
-                "text": "pegasus",
-                "type": "myth",
-                "meaning": "Göttliches geflügeltes Ross, das die Wolken durchbricht und Sterne berührt"
-            },
-            {
-                "text": "zentaur",
-                "type": "myth",
-                "meaning": "Weises Mischwesen aus Mensch und Pferd, Hüter uralter Waldmysterien"
-            },
-            {
-                "text": "elysium",
-                "type": "myth",
-                "meaning": "Insel der Seligen im jenseitigen Licht für ruhmreiche antike Helden"
-            }
-        ],
-        "ocean": [
-            {
-                "text": "ozean",
-                "type": "ocean",
-                "meaning": "Gewaltiges Weltmeer voller unerforschter Tiefseegräben und faszinierender Lebensformen"
-            },
-            {
-                "text": "hai",
-                "type": "ocean",
-                "meaning": "Perfekt angepasster Meeresjäger mit empfindlichen Sensoren für schwächste elektrische Reize"
-            },
-            {
-                "text": "koralle",
-                "type": "ocean",
-                "meaning": "Farbprächtige Koloniebildner, die monumentale lebende Riffe im warmen Wasser schaffen"
-            },
-            {
-                "text": "abgrund",
-                "type": "ocean",
-                "meaning": "Lichtlose Tiefseeebene unter gigantischem hydrostatischem Wasserdruck"
-            },
-            {
-                "text": "krake",
-                "type": "ocean",
-                "meaning": "Hochintelligenter Tintenfisch mit acht Fangarmen und meisterhafter Tarnkunst"
-            },
-            {
-                "text": "tsunami",
-                "type": "ocean",
-                "meaning": "Zerstörerische Flutwelle, die durch ein Unterwasserbeben im Ozeanboden erzeugt wird"
-            },
-            {
-                "text": "wal",
-                "type": "ocean",
-                "meaning": "Größtes Säugetier des Planeten, das majestätisch durch die Ozeane zieht"
-            },
-            {
-                "text": "graben",
-                "type": "ocean",
-                "meaning": "Tiefste tektonische Schlucht am Meeresboden fernab jedes Sonnenlichts"
-            },
-            {
-                "text": "flut",
-                "type": "ocean",
-                "meaning": "Ansteigender Wasserstand an Küsten im Rhythmus der Gezeiten"
-            },
-            {
-                "text": "qualle",
-                "type": "ocean",
-                "meaning": "Gallertartiges Schwebetier mit feinen Nesselkapseln in der Meeresströmung"
-            },
-            {
-                "text": "riff",
-                "type": "ocean",
-                "meaning": "Unterseeischer Kalksteinwall von überwältigender Artenvielfalt"
-            },
-            {
-                "text": "delfin",
-                "type": "ocean",
-                "meaning": "Intelligenter Zahnwal mit ausgeprägtem Sozialverhalten und Echoortung"
-            }
-        ],
-        "cosmos": [
-            {
-                "text": "stern",
+                "text": "sonne",
                 "type": "cosmos",
-                "meaning": "Glühender Plasmakörper, der durch kontinuierliche Kernfusion Licht ins All abstrahlt"
+                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
             },
             {
-                "text": "planet",
+                "text": "mond",
                 "type": "cosmos",
-                "meaning": "Kugelförmiger Himmelskörper auf einer stabilen Umlaufbahn um sein Zentralgestirn"
+                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
             },
             {
-                "text": "orbit",
+                "text": "monde",
                 "type": "cosmos",
-                "meaning": "Präzise berechenbare Bahn, auf der ein Satellit oder Planet ein Schwerkraftzentrum umkreist"
+                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
             },
             {
-                "text": "komet",
+                "text": "himmel",
                 "type": "cosmos",
-                "meaning": "Vereister Schweifstern, dessen flüchtige Gase im Sonnenwind leuchtend verdampfen"
+                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
             },
             {
-                "text": "meteor",
-                "type": "cosmos",
-                "meaning": "Aufleuchtende Sternschnuppe beim Eintritt kosmischer Partikel in die Erdatmosphäre"
+                "text": "strahl",
+                "type": "phaenomen",
+                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
             },
             {
-                "text": "pulsar",
+                "text": "halo",
                 "type": "cosmos",
-                "meaning": "Extrem dichter Neutronenstern mit rasender Eigenrotation und gebündelter Strahlung"
+                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
             },
             {
-                "text": "galaxie",
+                "text": "achse",
                 "type": "cosmos",
-                "meaning": "Spiraliges System aus Milliarden Sternen, Dunkler Materie und leuchtendem Gas"
+                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
             },
             {
-                "text": "finsternis",
-                "type": "cosmos",
-                "meaning": "Kosmisches Schattenspiel, wenn sich ein Himmelskörper vor die Lichtquelle schiebt"
+                "text": "phase",
+                "type": "phaenomen",
+                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
             },
             {
-                "text": "gravitation",
-                "type": "cosmos",
-                "meaning": "Fundamentale Anziehungskraft, welche die Raumzeit krümmt und Bahnen festlegt"
+                "text": "welle",
+                "type": "phaenomen",
+                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
             },
             {
-                "text": "nebel",
-                "type": "cosmos",
-                "meaning": "Gewaltige interstellare Gaswolke, in der neue Generationen von Sonnen erstrahlen"
+                "text": "schiff",
+                "type": "tech",
+                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
             },
             {
-                "text": "quasar",
-                "type": "cosmos",
-                "meaning": "Extrem energiereicher aktiver Galaxienkern mit gigantischer Strahlungsleistung"
+                "text": "nova",
+                "type": "phaenomen",
+                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
             },
             {
-                "text": "kosmos",
+                "text": "ziel",
+                "type": "tech",
+                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+            },
+            {
+                "text": "daten",
+                "type": "tech",
+                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+            },
+            {
+                "text": "nacht",
                 "type": "cosmos",
-                "meaning": "Das unendliche Universum in seiner geordneten physikalischen Ganzheit"
+                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+            },
+            {
+                "text": "jahr",
+                "type": "cosmos",
+                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
             }
         ],
         "volcano": [
             {
-                "text": "vulkan",
-                "type": "volcano",
-                "meaning": "Tektonische Öffnung der Erdkruste, durch die glühendes Magma und Gase emporsteigen"
+                "text": "sonne",
+                "type": "cosmos",
+                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
             },
             {
-                "text": "magma",
-                "type": "volcano",
-                "meaning": "Glühend flüssiges Gestein in den Tiefen der irdischen Magmakammer"
+                "text": "mond",
+                "type": "cosmos",
+                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
             },
             {
-                "text": "lava",
-                "type": "volcano",
-                "meaning": "An die Oberfläche ausgetretenes feuriges Gestein, das langsam erstarrt"
+                "text": "monde",
+                "type": "cosmos",
+                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
             },
             {
-                "text": "asche",
-                "type": "volcano",
-                "meaning": "Feinste pyroklastische Partikelwolke, die den Himmel über der Eruption verdunkelt"
+                "text": "himmel",
+                "type": "cosmos",
+                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
             },
             {
-                "text": "krater",
-                "type": "volcano",
-                "meaning": "Trichterförmige Öffnung auf dem Vulkangipfel, aus der Gase und Lava austreten"
+                "text": "strahl",
+                "type": "phaenomen",
+                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
             },
             {
-                "text": "basalt",
-                "type": "volcano",
-                "meaning": "Dunkles, extrem hartes Ergussgestein, das aus abgekühlter Lava entsteht"
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
             },
             {
-                "text": "schmiede",
-                "type": "volcano",
-                "meaning": "Tektonische Ur-Kammer, in der gewaltige Hitze Metalle und Gesteine formt"
+                "text": "achse",
+                "type": "cosmos",
+                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
             },
             {
-                "text": "geysir",
-                "type": "volcano",
-                "meaning": "Geothermale Quelle, die periodisch kochend heiße Wasser- und Dampffontänen ausstößt"
+                "text": "phase",
+                "type": "phaenomen",
+                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
             },
             {
-                "text": "stein",
-                "type": "volcano",
-                "meaning": "Festes mineralisches Fundament, aus dem die tektonischen Platten bestehen"
+                "text": "welle",
+                "type": "phaenomen",
+                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
             },
             {
-                "text": "glut",
-                "type": "volcano",
-                "meaning": "Intensiv glimmender mineralischer Restkörper von unerbittlicher Hitze"
+                "text": "schiff",
+                "type": "tech",
+                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
             },
             {
-                "text": "caldera",
-                "type": "volcano",
-                "meaning": "Monumentaler Einsturzkrater nach der Entleerung gewaltiger Magmakammern"
+                "text": "nova",
+                "type": "phaenomen",
+                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
             },
             {
-                "text": "tektonik",
-                "type": "volcano",
-                "meaning": "Bewegungen und Reibungen der kontinentalen Erdplatten als Ursprung des Vulkanismus"
+                "text": "ziel",
+                "type": "tech",
+                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+            },
+            {
+                "text": "daten",
+                "type": "tech",
+                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+            },
+            {
+                "text": "nacht",
+                "type": "cosmos",
+                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+            },
+            {
+                "text": "jahr",
+                "type": "cosmos",
+                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+            }
+        ],
+        "ocean": [
+            {
+                "text": "sonne",
+                "type": "cosmos",
+                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+            },
+            {
+                "text": "mond",
+                "type": "cosmos",
+                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+            },
+            {
+                "text": "monde",
+                "type": "cosmos",
+                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+            },
+            {
+                "text": "himmel",
+                "type": "cosmos",
+                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+            },
+            {
+                "text": "strahl",
+                "type": "phaenomen",
+                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+            },
+            {
+                "text": "achse",
+                "type": "cosmos",
+                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+            },
+            {
+                "text": "phase",
+                "type": "phaenomen",
+                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+            },
+            {
+                "text": "welle",
+                "type": "phaenomen",
+                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+            },
+            {
+                "text": "schiff",
+                "type": "tech",
+                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+            },
+            {
+                "text": "nova",
+                "type": "phaenomen",
+                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+            },
+            {
+                "text": "ziel",
+                "type": "tech",
+                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+            },
+            {
+                "text": "daten",
+                "type": "tech",
+                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+            },
+            {
+                "text": "nacht",
+                "type": "cosmos",
+                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+            },
+            {
+                "text": "jahr",
+                "type": "cosmos",
+                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+            }
+        ],
+        "cosmos": [
+            {
+                "text": "sonne",
+                "type": "cosmos",
+                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+            },
+            {
+                "text": "mond",
+                "type": "cosmos",
+                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+            },
+            {
+                "text": "monde",
+                "type": "cosmos",
+                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+            },
+            {
+                "text": "himmel",
+                "type": "cosmos",
+                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+            },
+            {
+                "text": "strahl",
+                "type": "phaenomen",
+                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+            },
+            {
+                "text": "achse",
+                "type": "cosmos",
+                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+            },
+            {
+                "text": "phase",
+                "type": "phaenomen",
+                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+            },
+            {
+                "text": "welle",
+                "type": "phaenomen",
+                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+            },
+            {
+                "text": "schiff",
+                "type": "tech",
+                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+            },
+            {
+                "text": "nova",
+                "type": "phaenomen",
+                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+            },
+            {
+                "text": "ziel",
+                "type": "tech",
+                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+            },
+            {
+                "text": "daten",
+                "type": "tech",
+                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+            },
+            {
+                "text": "nacht",
+                "type": "cosmos",
+                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+            },
+            {
+                "text": "jahr",
+                "type": "cosmos",
+                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
             }
         ]
     },

@@ -1,12 +1,29 @@
 /* ================================================
-   DIGITINHO — js/i18n.js
+   DIGITHIN GALAXY — js/i18n.js
    Internationalization (i18n) & Dynamic Language Pack Engine
    Supported: en (Default), pt, fr, de, ja, ko, zh
    Single-file language packs located in: locales/{lang}.json
    ================================================ */
 'use strict';
 
-const APP_VERSION = window.APP_VERSION = '1.6';
+function getInstalledAppVersion() {
+  try {
+    return localStorage.getItem('digithin_galaxy_app_version') || '';
+  } catch (_) {
+    return '';
+  }
+}
+
+function setInstalledAppVersion(ver) {
+  try {
+    if (ver) localStorage.setItem('digithin_galaxy_app_version', String(ver));
+  } catch (_) {}
+}
+
+window.getInstalledAppVersion = getInstalledAppVersion;
+window.setInstalledAppVersion = setInstalledAppVersion;
+window.APP_VERSION = window.APP_VERSION || getInstalledAppVersion();
+
 const SUPPORTED_LANGUAGES = ['en', 'pt', 'fr', 'de', 'ja', 'ko', 'zh'];
 
 // Aggregated dictionaries loaded from locales/{lang}.json
@@ -18,7 +35,7 @@ let isLocaleReady = false;
 
 function detectInitialLanguage() {
   try {
-    const saved = localStorage.getItem('digitinho_language');
+    const saved = localStorage.getItem('digithin_galaxy_language');
     if (saved && SUPPORTED_LANGUAGES.includes(saved)) {
       return saved;
     }
@@ -62,7 +79,8 @@ async function loadLocale(lang) {
   }
 
   try {
-    const response = await fetch(`./locales/${lang}.json?v=${APP_VERSION}`);
+    const vParam = window.APP_VERSION ? `?v=${window.APP_VERSION}` : '';
+    const response = await fetch(`./locales/${lang}.json${vParam}`);
     if (!response.ok) {
       throw new Error(`HTTP ${response.status} loading locales/${lang}.json`);
     }
@@ -97,7 +115,7 @@ async function setLanguage(lang) {
   if (!SUPPORTED_LANGUAGES.includes(lang)) lang = 'en';
   currentLanguage = lang;
   try {
-    localStorage.setItem('digitinho_language', lang);
+    localStorage.setItem('digithin_galaxy_language', lang);
   } catch (_) {}
 
   // Ensure this language pack is loaded
@@ -217,7 +235,8 @@ function applyTranslations() {
   // Sync settings app version
   const versionEl = document.getElementById('settings-app-version');
   if (versionEl) {
-    versionEl.textContent = `v${window.APP_VERSION || '1.5'}`;
+    const currentVer = window.APP_VERSION || (typeof getInstalledAppVersion === 'function' ? getInstalledAppVersion() : '');
+    versionEl.textContent = currentVer ? `v${currentVer}` : '';
   }
 
   const inMatch = typeof isMatchInProgress === 'function' ? isMatchInProgress() : false;

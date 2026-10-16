@@ -1,5 +1,5 @@
 /* ================================================
-   DIGITINHO — js/skills.js
+   DIGITHIN GALAXY — js/skills.js
    Skill actions, activations, timers, bombs & effects
    ================================================ */
 'use strict';
@@ -16,8 +16,12 @@ function wildcardExplode(wildcardItem) {
     totalPts += pts;
     destroyedChars += (other.text?.length || 1);
     other.removing = true;
-    other.el.classList.add('destroying');
-    spawnParticles(other.el, 3);
+    other.el.classList.add('shattered');
+    if (typeof spawnCelestialExplosion === 'function') {
+      spawnCelestialExplosion(other.el, other.text);
+    } else {
+      spawnParticles(other.el, 3);
+    }
     setTimeout(() => other.el?.parentNode?.removeChild(other.el), 280);
   });
 
@@ -116,8 +120,12 @@ function triggerBombAreaExplosion(sourceItem) {
       extraPts += other.type === 'letter' ? 1 : other.type === 'syllable' ? 3 : wordPts(other.text);
       destroyedChars += (other.text?.length || 1);
       other.removing = true;
-      other.el.classList.add('destroying');
-      spawnParticles(other.el, 3);
+      other.el.classList.add('shattered');
+      if (typeof spawnCelestialExplosion === 'function') {
+        spawnCelestialExplosion(other.el, other.text);
+      } else {
+        spawnParticles(other.el, 3);
+      }
       setTimeout(() => other.el?.parentNode?.removeChild(other.el), 260);
     }
   });
@@ -146,9 +154,9 @@ function triggerVortexDevour() {
   // Pick lowest candidate (most urgent)
   const victim = candidates.reduce((lowest, item) => item.y > lowest.y ? item : lowest);
   victim.removing = true;
-  victim.el.classList.add('destroying');
-  spawnParticles(victim.el, 4);
+  victim.el.classList.add('swallowing');
   playSound('skill');
+  setTimeout(() => victim.el?.parentNode?.removeChild(victim.el), 440);
 
   let pts = victim.type === 'letter' ? 1 : victim.type === 'syllable' ? 3 : wordPts(victim.text);
   if (state.activeTimers.haste > 0) pts = Math.floor(pts * 2);

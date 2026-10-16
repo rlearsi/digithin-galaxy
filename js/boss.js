@@ -1,5 +1,5 @@
 /* ================================================
-   DIGITINHO — js/boss.js
+   DIGITHIN GALAXY — js/boss.js
    Boss battles, thematic vocabulary, enigma trial & victory
    ================================================ */
 'use strict';
@@ -80,37 +80,9 @@ function getWordConceptIndex(text) {
 }
 
 function isWordThematicallyRelatedToBoss(wordObj, bossType) {
-  if (!wordObj || !bossType) return false;
-  const currentLang = typeof getLanguage === 'function' ? getLanguage() : 'en';
-  const type = (wordObj.type || '').toLowerCase();
-  const text = (wordObj.text || '').toLowerCase();
-
-  // 1. Direct thematic vocabulary check from BOSS_WORDS_BY_TYPE scoped strictly to active language
-  if (typeof BOSS_WORDS_BY_TYPE !== 'undefined' && BOSS_WORDS_BY_TYPE[bossType]) {
-    const langDicts = BOSS_WORDS_BY_TYPE[bossType];
-    const list = langDicts[currentLang] || langDicts.pt || langDicts.en;
-    if (Array.isArray(list) && list.some(item => item && item.text && item.text.toLowerCase() === text)) {
-      return true;
-    }
-  }
-
-  // 2. Strict semantic type and authentic keywords scoped strictly by boss theme
-  switch (bossType) {
-    case 'robot':
-      return type === 'tech';
-    case 'beast':
-      return type === 'fauna' || type === 'animal' || type === 'tier';
-    case 'mythology':
-      return type === 'myth' || type === 'fantasia' || type === 'fantasie' || type === 'fantasy';
-    case 'ocean':
-      return type === 'ocean';
-    case 'cosmos':
-      return type === 'cosmos' || type === 'kosmos';
-    case 'volcano':
-      return type === 'volcano';
-    default:
-      return false;
-  }
+  if (!wordObj || !wordObj.text || !wordObj.meaning) return false;
+  // All words in Digitinho Galaxy are celestial/cosmic words and qualify for Alien Boss invasion enigmas
+  return true;
 }
 
 /**
@@ -487,7 +459,15 @@ function handleBossLetterTyped(char) {
   if (boxItem.removing) return;
 
   const targetWord = state.bossBattle.currentWord.text.toUpperCase();
-  const nextBuf = state.typedBuffer + char;
+  let effectiveChar = char;
+  const currentLen = state.typedBuffer.length;
+  if (currentLen < targetWord.length) {
+    const expected = targetWord[currentLen];
+    if ((char === ' ' || char === '-') && (expected === '-' || expected === ' ')) {
+      effectiveChar = expected;
+    }
+  }
+  const nextBuf = state.typedBuffer + effectiveChar;
 
   if (targetWord.startsWith(nextBuf)) {
     state.typedBuffer = nextBuf;
@@ -546,16 +526,20 @@ function completeBossMeaning() {
   if (!boxItem) return;
 
   boxItem.removing = true;
-  boxItem.el.classList.add('destroying');
-  spawnParticles(boxItem.el, 16);
+  boxItem.el.classList.add('shattered');
+  if (typeof spawnCelestialExplosion === 'function') {
+    spawnCelestialExplosion(boxItem.el, targetWord);
+  } else {
+    spawnParticles(boxItem.el, 16);
+  }
 
   // Combo progression
   state.combo    = (state.combo || 0) + 1;
   state.maxCombo = Math.max(state.maxCombo, state.combo);
   state.maxComboPhase = Math.max(state.maxComboPhase || 0, state.combo);
   try {
-    const curBest = parseInt(localStorage.getItem('digitinho_best_combo') || '0', 10);
-    if (state.maxCombo > curBest) localStorage.setItem('digitinho_best_combo', String(state.maxCombo));
+    const curBest = parseInt(localStorage.getItem('digithin_galaxy_best_combo') || '0', 10);
+    if (state.maxCombo > curBest) localStorage.setItem('digithin_galaxy_best_combo', String(state.maxCombo));
   } catch (_) {}
   if (state.combo >= 30) unlockAchievement('mestre_combo');
 

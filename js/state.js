@@ -1,5 +1,5 @@
 /* ================================================
-   DIGITINHO — js/state.js
+   DIGITHIN GALAXY — js/state.js
    State management and random generators
    ================================================ */
 'use strict';
@@ -11,7 +11,7 @@ let state = null;
 // ================================================
 function getDifficulty() {
   try {
-    const saved = localStorage.getItem('digitinho_difficulty');
+    const saved = localStorage.getItem('digithin_galaxy_difficulty');
     if (saved && (saved === 'easy' || saved === 'normal' || saved === 'hard')) {
       return saved;
     }
@@ -35,12 +35,12 @@ function isMatchInProgress() {
 
 function setDifficulty(diff) {
   if (isMatchInProgress()) {
-    console.warn('[Digitinho] Cannot change difficulty during an active match.');
+    console.warn('[DigithinGalaxy] Cannot change difficulty during an active match.');
     return;
   }
   const valid = (diff === 'easy' || diff === 'hard') ? diff : 'normal';
   try {
-    localStorage.setItem('digitinho_difficulty', valid);
+    localStorage.setItem('digithin_galaxy_difficulty', valid);
   } catch (_) {}
   if (state) {
     const oldDiff = state.difficulty;
@@ -60,7 +60,7 @@ function setDifficulty(diff) {
 
 function changeDifficulty(diff) {
   if (isMatchInProgress()) {
-    console.warn('[Digitinho] Cannot change difficulty during an active match.');
+    console.warn('[DigithinGalaxy] Cannot change difficulty during an active match.');
     return;
   }
   setDifficulty(diff);
@@ -164,7 +164,7 @@ function formatScore(val) {
 // High score persistence & tracking
 function getHighScore() {
   try {
-    const val = localStorage.getItem('digitinho_highscore');
+    const val = localStorage.getItem('digithin_galaxy_highscore');
     return val ? parseInt(val, 10) || 0 : 0;
   } catch (_) {
     return 0;
@@ -178,7 +178,7 @@ function updateHighScore(score) {
   const best = isNew ? numScore : currentBest;
   if (isNew) {
     try {
-      localStorage.setItem('digitinho_highscore', String(numScore));
+      localStorage.setItem('digithin_galaxy_highscore', String(numScore));
     } catch (_) {}
   }
   return { best, isNew, previous: currentBest };
@@ -208,7 +208,7 @@ function getFlawlessStreakCoins(streak) {
 // ================================================
 function getHighCoins() {
   try {
-    const val = localStorage.getItem('digitinho_highcoins');
+    const val = localStorage.getItem('digithin_galaxy_highcoins');
     return val ? parseInt(val, 10) || 0 : 0;
   } catch (_) {
     return 0;
@@ -222,7 +222,7 @@ function updateHighCoins(coins) {
   const best = isNew ? numCoins : currentBest;
   if (isNew) {
     try {
-      localStorage.setItem('digitinho_highcoins', String(numCoins));
+      localStorage.setItem('digithin_galaxy_highcoins', String(numCoins));
     } catch (_) {}
   }
   return { best, isNew, previous: currentBest };
@@ -230,7 +230,7 @@ function updateHighCoins(coins) {
 
 function getSharedCoins() {
   try {
-    const val = localStorage.getItem('digitinho_shared_coins');
+    const val = localStorage.getItem('digithin_galaxy_shared_coins');
     return val ? parseInt(val, 10) || 0 : 0;
   } catch (_) {
     return 0;
@@ -240,7 +240,7 @@ function getSharedCoins() {
 function setSharedCoins(val) {
   const num = Math.max(0, Math.floor(val || 0));
   try {
-    localStorage.setItem('digitinho_shared_coins', String(num));
+    localStorage.setItem('digithin_galaxy_shared_coins', String(num));
   } catch (_) {}
   return num;
 }
@@ -268,7 +268,7 @@ const MAX_SAVE_SLOTS = 3;
 
 function getActiveSlot() {
   try {
-    const s = parseInt(localStorage.getItem('digitinho_active_slot') || '1', 10);
+    const s = parseInt(localStorage.getItem('digithin_galaxy_active_slot') || '1', 10);
     return (s >= 1 && s <= MAX_SAVE_SLOTS) ? s : 1;
   } catch (_) {
     return 1;
@@ -278,7 +278,7 @@ function getActiveSlot() {
 function setActiveSlot(slotId) {
   const id = (slotId >= 1 && slotId <= MAX_SAVE_SLOTS) ? slotId : 1;
   try {
-    localStorage.setItem('digitinho_active_slot', String(id));
+    localStorage.setItem('digithin_galaxy_active_slot', String(id));
   } catch (_) {}
   return id;
 }
@@ -286,7 +286,7 @@ function setActiveSlot(slotId) {
 function getSaveSlot(slotId) {
   const id = (slotId !== undefined && slotId !== null) ? slotId : getActiveSlot();
   try {
-    const raw = localStorage.getItem(`digitinho_save_slot_${id}`);
+    const raw = localStorage.getItem(`digithin_galaxy_save_slot_${id}`);
     if (!raw) return null;
     const parsed = JSON.parse(raw);
     return (parsed && parsed.phase && !parsed.isFinished) ? parsed : null;
@@ -381,11 +381,11 @@ function saveGameProgress(slotId) {
   };
 
   try {
-    localStorage.setItem(`digitinho_save_slot_${id}`, JSON.stringify(payload));
+    localStorage.setItem(`digithin_galaxy_save_slot_${id}`, JSON.stringify(payload));
     setActiveSlot(id);
     return true;
   } catch (err) {
-    console.warn('[Digitinho] Error saving progress in slot', id, err);
+    console.warn('[DigithinGalaxy] Error saving progress in slot', id, err);
     return false;
   }
 }
@@ -393,7 +393,7 @@ function saveGameProgress(slotId) {
 function deleteSaveSlot(slotId) {
   const id = (slotId !== undefined && slotId !== null) ? slotId : getActiveSlot();
   try {
-    localStorage.removeItem(`digitinho_save_slot_${id}`);
+    localStorage.removeItem(`digithin_galaxy_save_slot_${id}`);
     return true;
   } catch (_) {
     return false;
@@ -461,17 +461,17 @@ function loadSaveDataIntoState(save) {
 // Migração única: saldos antigos por slot -> banco global compartilhado (mantém o maior saldo existente)
 (function migrateSlotCoinsToShared() {
   try {
-    if (localStorage.getItem('digitinho_coins_unified') === '1') return;
+    if (localStorage.getItem('digithin_galaxy_coins_unified') === '1') return;
     let best = getSharedCoins();
     for (let i = 1; i <= MAX_SAVE_SLOTS; i++) {
-      const raw = localStorage.getItem(`digitinho_save_slot_${i}`);
+      const raw = localStorage.getItem(`digithin_galaxy_save_slot_${i}`);
       if (!raw) continue;
       const parsed = JSON.parse(raw);
       const c = Math.max(0, Math.floor(parsed?.coins || 0));
       if (c > best) best = c;
     }
     setSharedCoins(best);
-    localStorage.setItem('digitinho_coins_unified', '1');
+    localStorage.setItem('digithin_galaxy_coins_unified', '1');
     if (state) state.coins = best;
   } catch (_) {}
 })();

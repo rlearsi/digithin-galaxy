@@ -1,5 +1,5 @@
 /* ================================================
-   DIGITINHO — game.js
+   DIGITHIN GALAXY — game.js
    Core gameplay engine, match lifecycle, loop & matching
    ================================================ */
 'use strict';
@@ -505,39 +505,73 @@ function gameLoop(ts) {
       continue;
     }
 
-    // Movement
+    // Black Hole Event Horizon Suction & Gravitational Slowdown & Progressive Spaghettification
+    const h = item.el.offsetHeight || 36;
+    // O buraco negro começa a exercer atração gravitacional e distorção a partir de ~78-80% da altura da tela
+    const suctionStart = boardH * 0.78;
+    const swallowY = boardH - 42;      // Ponto de consumo na singularidade
+
+    // Movimentação com Dilatação Gravitacional do Tempo e Espaguetificação Progressiva
     if (!isFrozen && !trainingHold) {
       const spd = item.baseSpeed || CFG.baseSpeed;
-      item.y += spd * effectiveSpeed * dt;
+      let gravFactor = 1.0;
+      if (item.y + h >= suctionStart) {
+        // Progresso normalizado de entrada no poço gravitacional (0.0 no início dos 80% até 1.0 na boca)
+        const pullProgress = Math.min(1, Math.max(0, (item.y + h - suctionStart) / (swallowY - suctionStart)));
+
+        // A velocidade vai se reduzindo progressivamente até quase parar (cai suavemente até ~0.08x)
+        gravFactor = Math.max(0.08, 1.0 - Math.pow(pullProgress, 0.72) * 0.92);
+
+        // Espaguetificação suave e contínua: começa a esticar a partir de 80% e já fica bem distorcido ao chegar no fundo
+        const sx = 1.0 - (pullProgress * 0.62); // 1.0 -> 0.38 (afinamento horizontal)
+        const sy = 1.0 + (Math.pow(pullProgress, 0.85) * 1.35); // 1.0 -> 2.35 (alongamento vertical)
+        item.el.style.transformOrigin = '50% 85%';
+        item.el.style.transform = `scale(${sx.toFixed(3)}, ${sy.toFixed(3)})`;
+      } else {
+        item.el.style.transform = '';
+      }
+      item.y += spd * effectiveSpeed * gravFactor * dt;
       item.el.style.top = item.y + 'px';
     }
 
-    // Danger cue near bottom
-    const h = item.el.offsetHeight || 36;
+    // Sinalizador de perigo e aura de sucção gravitacional
     const dangerCls = state.gameMode === 'training' ? 'training-near' : 'danger';
-    if (item.y + h >= boardH - 90) {
+    if (item.y + h >= suctionStart + 15) {
       item.el.classList.add(dangerCls);
     } else {
       item.el.classList.remove(dangerCls);
     }
 
-    // Training Mode: lock at the bottom instead of destroying
-    if (state.gameMode === 'training' && item.y >= boardH - 24 - h) {
+    if (item.y + h >= suctionStart) {
+      item.el.classList.add('in-black-hole-pull');
+    } else {
+      item.el.classList.remove('in-black-hole-pull');
+    }
+
+    // Modo Treinamento: trava no fundo sem destruir
+    if (state.gameMode === 'training' && (item.y + h >= boardH - 24)) {
       item.y = boardH - 24 - h;
       item.el.style.top = item.y + 'px';
+      item.el.style.transform = '';
       item.landed = true;
-      item.el.classList.remove('danger');
+      item.el.classList.remove('danger', 'in-black-hole-pull');
       item.el.classList.add('training-landed');
       playSound('fall');
       continue;
     }
 
-    // Fall out of board
-    if (item.y >= boardH - 24) {
+    // Fall into the Black Hole Event Horizon (Gravitational Spaghettification Swallowing)
+    const swallowThreshold = item.isBossMeaning ? (boardH - 35) : (boardH - 45);
+    if (state.gameMode !== 'training' && (item.y + h >= swallowThreshold)) {
       item.removing = true;
-      item.el.classList.add('destroying');
+      item.el.classList.remove('danger', 'in-black-hole-pull', 'typing-target');
+      item.el.classList.add('swallowing');
       playSound('fall');
       loseLife();
+
+      if (typeof window.triggerBlackHolePulse === 'function') {
+        window.triggerBlackHolePulse();
+      }
 
       if (item.isBossMeaning) {
         showFeedback(typeof t === 'function' ? t('fb_boss_enigma_dropped') : '💥 The enigma dropped! The Boss attacked!', 'error');
@@ -553,12 +587,13 @@ function gameLoop(ts) {
           if (state.bossBattle?.active && !state.paused && state.lives > 0) {
             if (typeof spawnBossMeaningBox === 'function') spawnBossMeaningBox();
           }
-        }, 280);
+        }, 440);
       } else {
-        setTimeout(() => item.el?.parentNode?.removeChild(item.el), 260);
+        setTimeout(() => item.el?.parentNode?.removeChild(item.el), 440);
       }
 
       items.splice(i, 1);
+      continue;
     }
   }
 
@@ -590,7 +625,23 @@ function handleLetterTyped(char) {
     return;
   }
 
-  const nextBuf = state.typedBuffer + char;
+  // Normalize space and hyphen interchangeability for compound cosmic terms (e.g. BURACO-NEGRO)
+  let effectiveChar = char;
+  const currentLen = state.typedBuffer.length;
+  const candidates = activeTokens.filter(item => {
+    if (item.text.startsWith(state.typedBuffer)) {
+      const nextChar = item.text[currentLen];
+      if (nextChar === char) return true;
+      if ((char === ' ' || char === '-') && (nextChar === '-' || nextChar === ' ')) return true;
+    }
+    return false;
+  });
+
+  if (candidates.length > 0) {
+    effectiveChar = candidates[0].text[currentLen];
+  }
+
+  const nextBuf = state.typedBuffer + effectiveChar;
 
   const matching = activeTokens.filter(item =>
     item.text.startsWith(nextBuf)
@@ -614,10 +665,11 @@ function handleLetterTyped(char) {
       highlightBuffer();
     }
   } else {
-    // Check if char starts another item
-    const newMatching = activeTokens.filter(item =>
-      item.text.startsWith(char)
-    );
+    // Check if char starts another item (also normalizing space/hyphen)
+    const newMatching = activeTokens.filter(item => {
+      const first = item.text[0];
+      return first === char || ((char === ' ' || char === '-') && (first === '-' || first === ' '));
+    });
 
     if (newMatching.length > 0) {
       state.typedBuffer = char;
@@ -723,8 +775,14 @@ function clearHighlight() {
 
 function completeItem(item) {
   item.removing = true;
-  item.el.classList.add('destroying');
-  spawnParticles(item.el, item.text.length * 2);
+  item.el.style.transform = '';
+  item.el.classList.remove('typing-target');
+  item.el.classList.add('shattered');
+  if (typeof spawnCelestialExplosion === 'function') {
+    spawnCelestialExplosion(item.el, item.text);
+  } else {
+    spawnParticles(item.el, item.text.length * 2);
+  }
 
   // Velocidade NÃO aumenta ao acertar elementos (progressão controlada a cada 5s pelo gameLoop)
 
@@ -744,8 +802,8 @@ function completeItem(item) {
     state.maxCombo = Math.max(state.maxCombo, state.combo);
     state.maxComboPhase = Math.max(state.maxComboPhase || 0, state.combo);
     try {
-      const curBest = parseInt(localStorage.getItem('digitinho_best_combo') || '0', 10);
-      if (state.maxCombo > curBest) localStorage.setItem('digitinho_best_combo', String(state.maxCombo));
+      const curBest = parseInt(localStorage.getItem('digithin_galaxy_best_combo') || '0', 10);
+      if (state.maxCombo > curBest) localStorage.setItem('digithin_galaxy_best_combo', String(state.maxCombo));
     } catch (_) {}
     if (state.combo >= 30) {
       unlockAchievement('mestre_combo');
@@ -810,9 +868,9 @@ function completeItem(item) {
       for (const k in state.wordStats) {
         statsCount += state.wordStats[k].count || 0;
       }
-      const stored = parseInt(localStorage.getItem('digitinho_words_completed') || '0', 10) || 0;
+      const stored = parseInt(localStorage.getItem('digithin_galaxy_words_completed') || '0', 10) || 0;
       const totalWords = Math.max(stored + 1, statsCount);
-      localStorage.setItem('digitinho_words_completed', String(totalWords));
+      localStorage.setItem('digithin_galaxy_words_completed', String(totalWords));
       if (totalWords >= 100) {
         unlockAchievement('mestre_tipo');
       }

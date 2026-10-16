@@ -1,5 +1,5 @@
 /* ================================================
-   DIGITINHO — js/input.js
+   DIGITHIN GALAXY — js/input.js
    Keyboard, touch, hidden input & visibility listeners
    ================================================ */
 'use strict';
@@ -320,8 +320,8 @@ document.addEventListener('keydown', e => {
     return;
   }
 
-  // Letters, accented characters and punctuation (used in Training Mode)
-  if (!/^[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ?!,.:;]$/.test(e.key)) return;
+  // Letters, accented characters, hyphens, spaces and punctuation (used in Training Mode & compound words)
+  if (!/^[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ?!,.:;\- ]$/.test(e.key)) return;
   e.preventDefault();
 
   const vkBtn = document.querySelector(`.vk-key[data-key="${e.key.toUpperCase()}"]`);

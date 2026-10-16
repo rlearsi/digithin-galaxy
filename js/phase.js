@@ -1,5 +1,5 @@
 /* ================================================
-   DIGITINHO — js/phase.js
+   DIGITHIN GALAXY — js/phase.js
    Phase progression, completion modal, ranks & transitions
    ================================================ */
 'use strict';
@@ -177,21 +177,21 @@ function showPhaseModal() {
 
       let isNewRecord = false;
       try {
-        localStorage.setItem(`digitinho_training_world_${worldId}`, 'completed');
-        const prevBestRaw = localStorage.getItem(`digitinho_training_precision_${worldId}`);
+        localStorage.setItem(`digithin_galaxy_training_world_${worldId}`, 'completed');
+        const prevBestRaw = localStorage.getItem(`digithin_galaxy_training_precision_${worldId}`);
         if (prevBestRaw === null) {
           isNewRecord = true;
-          localStorage.setItem(`digitinho_training_precision_${worldId}`, finalPrecNum.toFixed(1));
+          localStorage.setItem(`digithin_galaxy_training_precision_${worldId}`, finalPrecNum.toFixed(1));
         } else {
           const prevBestNum = parseFloat(prevBestRaw);
           if (finalPrecNum > prevBestNum) {
             isNewRecord = true;
-            localStorage.setItem(`digitinho_training_precision_${worldId}`, finalPrecNum.toFixed(1));
+            localStorage.setItem(`digithin_galaxy_training_precision_${worldId}`, finalPrecNum.toFixed(1));
           }
         }
       } catch (_) {}
 
-      const currentRecord = localStorage.getItem(`digitinho_training_precision_${worldId}`) || finalPrecNum.toFixed(1);
+      const currentRecord = localStorage.getItem(`digithin_galaxy_training_precision_${worldId}`) || finalPrecNum.toFixed(1);
 
       $('phase-emoji').innerHTML = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg>`;
       $('modal-phase-h').textContent = typeof t === 'function'

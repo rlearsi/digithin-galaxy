@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digitinho — Typing Game</title>
-  <meta name="description" content="Typing game: letters, syllables and words fall. Buy abilities, use wildcard words, and level up!" />
+  <title>Digitinho Galaxy — Space Typing Game</title>
+  <meta name="description" content="Digitinho Galaxy: an arcade typing game set in outer space. Cosmic vocabulary, event horizon black hole, and alien invader boss battles!" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366F1'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='15' y='22' font-family='sans-serif' font-weight='900' font-size='19' fill='%23FFFFFF' text-anchor='middle'%3ED%3C/text%3E%3Ccircle cx='23' cy='21' r='2.5' fill='%23FBBF24'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/variables.css?v=1.1" />
-  <link rel="stylesheet" href="./css/components.css?v=1.1" />
-  <link rel="stylesheet" href="./css/layout.css?v=1.6" />
-  <link rel="stylesheet" href="./css/gameplay.css?v=1.1" />
-  <link rel="stylesheet" href="./css/modals.css?v=1.6" />
-  <link rel="stylesheet" href="./css/responsive.css?v=1.1" />
+  <link rel="stylesheet" href="./css/variables.css?v=1.0" />
+  <link rel="stylesheet" href="./css/components.css?v=1.0" />
+  <link rel="stylesheet" href="./css/layout.css?v=1.2" />
+  <link rel="stylesheet" href="./css/gameplay.css?v=1.2" />
+  <link rel="stylesheet" href="./css/modals.css?v=1.0" />
+  <link rel="stylesheet" href="./css/responsive.css?v=1.0" />
 </head>
 <body>
   <!-- Ambient Saturated Canvas (vibrant ambient landscape, mesh orbs & topography) -->
@@ -23,7 +23,7 @@
   <!-- ===== APP INITIALIZATION LOADING SCREEN ===== -->
   <div id="app-loading-screen" role="status" aria-live="polite">
     <div class="loading-content-box">
-      <div class="loading-brand-logo"><span class="logo-main">Digitinho</span><span class="logo-dot">.</span></div>
+      <div class="loading-brand-logo"><span class="logo-main">Digitinho Galaxy</span><span class="logo-dot">.</span></div>
       <svg class="loading-spinner-svg" viewBox="0 0 40 40" aria-hidden="true">
         <circle cx="20" cy="20" r="16" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="3"></circle>
         <circle cx="20" cy="20" r="16" fill="none" stroke="url(#spinner-gradient)" stroke-width="3" stroke-dasharray="75 100" stroke-linecap="round"></circle>
@@ -45,7 +45,7 @@
       
       <!-- Brand Header -->
       <div class="start-brand">
-        <div class="start-logo"><span class="logo-main">Digitinho</span><span class="logo-dot">.</span></div>
+        <div class="start-logo"><span class="logo-main">Digitinho Galaxy</span><span class="logo-dot">.</span></div>
         <p class="start-sub" data-i18n="app_subtitle">Master the runic keyboard before words reach the abyss</p>
       </div>
 
@@ -369,6 +369,73 @@
           </div>
         </div>
         <div id="game-area">
+          <!-- Canvas para destroços cósmicos e partículas de explosão caindo até o final da tela -->
+          <canvas id="debris-canvas" class="debris-canvas" aria-hidden="true"></canvas>
+          <!-- Horizontal Black Hole Accretion Vortex (Event Horizon Mouth) -->
+          <div id="black-hole-vortex" class="black-hole-vortex" aria-hidden="true">
+            <svg class="bh-svg" viewBox="0 0 1000 280" preserveAspectRatio="none">
+              <defs>
+                <radialGradient id="bhOuterGlow" cx="50%" cy="58%" r="50%">
+                  <stop offset="0%" stop-color="rgba(6, 182, 212, 0.6)" />
+                  <stop offset="30%" stop-color="rgba(99, 102, 241, 0.45)" />
+                  <stop offset="65%" stop-color="rgba(168, 85, 247, 0.28)" />
+                  <stop offset="100%" stop-color="rgba(0, 0, 0, 0)" />
+                </radialGradient>
+
+                <linearGradient id="bhAccretionDiskGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="rgba(6, 182, 212, 0.35)" />
+                  <stop offset="14%" stop-color="rgba(56, 189, 248, 1)" />
+                  <stop offset="36%" stop-color="rgba(255, 255, 255, 1)" />
+                  <stop offset="54%" stop-color="rgba(244, 114, 182, 1)" />
+                  <stop offset="82%" stop-color="rgba(251, 191, 36, 1)" />
+                  <stop offset="100%" stop-color="rgba(245, 158, 11, 0.35)" />
+                </linearGradient>
+
+                <linearGradient id="bhPhotonRingGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#38BDF8" />
+                  <stop offset="50%" stop-color="#FFFFFF" />
+                  <stop offset="100%" stop-color="#C084FC" />
+                </linearGradient>
+
+                <linearGradient id="bhLensingGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                  <stop offset="0%" stop-color="rgba(56, 189, 248, 0.85)" />
+                  <stop offset="55%" stop-color="rgba(192, 132, 252, 0.65)" />
+                  <stop offset="100%" stop-color="rgba(255, 255, 255, 0)" />
+                </linearGradient>
+
+                <filter id="bhAccretionBlur" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="6" />
+                </filter>
+                <filter id="bhIntenseGlow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- 1. Outer Accretion Atmosphere Glow (Spanning de fora a fora) -->
+              <ellipse cx="500" cy="180" rx="498" ry="95" fill="url(#bhOuterGlow)" />
+              <ellipse class="bh-pulsing-glow" cx="500" cy="180" rx="480" ry="85" fill="url(#bhAccretionDiskGrad)" opacity="0.65" filter="url(#bhAccretionBlur)" />
+
+              <!-- 2. Relativistic Gravitational Lensing Upper Arc -->
+              <path class="bh-lensing-arc" d="M 25 180 Q 500 25 975 180" fill="none" stroke="url(#bhLensingGrad)" stroke-width="6.5" opacity="0.85" />
+
+              <!-- 3. Outer Accretion Ring (The horizontal oval with accretion brightness) -->
+              <ellipse class="bh-disk-outer" cx="500" cy="180" rx="465" ry="76" fill="none" stroke="url(#bhAccretionDiskGrad)" stroke-width="11" filter="url(#bhIntenseGlow)" opacity="0.98" />
+              <ellipse class="bh-disk-core" cx="500" cy="180" rx="455" ry="72" fill="none" stroke="url(#bhAccretionDiskGrad)" stroke-width="3.5" />
+
+              <!-- 4. Inner Photon Sphere Ring -->
+              <ellipse class="bh-photon-sphere" cx="500" cy="180" rx="415" ry="56" fill="none" stroke="url(#bhPhotonRingGrad)" stroke-width="2.5" />
+
+              <!-- 5. Event Horizon / Singularity Core Void (Pitch black horizontal oval) -->
+              <ellipse class="bh-void" cx="500" cy="180" rx="410" ry="54" fill="#000000" />
+
+              <!-- 6. Relativistic Front Rim Highlight -->
+              <path class="bh-front-rim" d="M 85 180 Q 500 238 915 180" fill="none" stroke="#FFFFFF" stroke-width="3.2" opacity="0.95" />
+            </svg>
+          </div>
           <div id="feedback-msg"></div>
         </div>
 
@@ -1109,7 +1176,7 @@
             </svg>
             <h3 class="privacy-card-title" data-i18n="privacy_sec_collection_title">1. Zero Coleta de Dados Pessoais</h3>
           </div>
-          <p class="privacy-card-desc" data-i18n="privacy_sec_collection_desc">O Digitinho é um jogo web estático executado integralmente no navegador do jogador...</p>
+          <p class="privacy-card-desc" data-i18n="privacy_sec_collection_desc">O Digitinho Galaxy é um jogo web estático executado integralmente no navegador do jogador...</p>
         </div>
 
         <div class="privacy-card">
@@ -1134,7 +1201,7 @@
             </svg>
             <h3 class="privacy-card-title" data-i18n="privacy_sec_hosting_title">3. Infraestrutura de Hospedagem e Registros Técnicos do GitHub Pages</h3>
           </div>
-          <p class="privacy-card-desc" data-i18n="privacy_sec_hosting_desc">O Digitinho é hospedado no GitHub Pages. Servidores do GitHub podem registrar IPs técnicos para segurança...</p>
+          <p class="privacy-card-desc" data-i18n="privacy_sec_hosting_desc">O Digitinho Galaxy é hospedado no GitHub Pages. Servidores do GitHub podem registrar IPs técnicos para segurança...</p>
         </div>
 
         <div class="privacy-card">
@@ -1433,7 +1500,7 @@
           <div class="settings-opt-row">
             <span class="settings-opt-label" data-i18n="settings_version">Current Version</span>
             <div class="settings-version-wrap">
-              <span id="settings-app-version" class="settings-opt-badge settings-opt-badge-accent">v1.6</span>
+              <span id="settings-app-version" class="settings-opt-badge settings-opt-badge-accent">v1.0</span>
               <button id="btn-settings-check-update" class="settings-check-update-btn" onclick="checkForAppUpdate(true)" type="button" title="Verificar Atualizações">
                 <svg class="btn-svg-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
@@ -1512,20 +1579,20 @@
   </div>
 
   <!-- Modular Scripts with Cache Busting -->
-  <script src="./js/ambient.js?v=1.1"></script>
-  <script src="./js/audio.js?v=1.1"></script>
-  <script src="./js/i18n.js?v=1.6"></script>
-  <script src="./js/data.js?v=1.4"></script>
-  <script src="./js/state.js?v=1.5"></script>
-  <script src="./js/ui.js?v=1.6"></script>
-  <script src="./js/shop.js?v=1.1"></script>
-  <script src="./js/library.js?v=1.1"></script>
-  <script src="./js/spawner.js?v=1.1"></script>
-  <script src="./js/skills.js?v=1.1"></script>
-  <script src="./js/boss.js?v=1.4"></script>
-  <script src="./js/pause.js?v=1.1"></script>
-  <script src="./js/phase.js?v=1.4"></script>
-  <script src="./game.js?v=1.1"></script>
-  <script src="./js/input.js?v=1.2"></script>
+  <script src="./js/ambient.js?v=1.0"></script>
+  <script src="./js/audio.js?v=1.0"></script>
+  <script src="./js/i18n.js?v=1.1"></script>
+  <script src="./js/data.js?v=1.0"></script>
+  <script src="./js/state.js?v=1.0"></script>
+  <script src="./js/ui.js?v=1.2"></script>
+  <script src="./js/shop.js?v=1.0"></script>
+  <script src="./js/library.js?v=1.0"></script>
+  <script src="./js/spawner.js?v=1.0"></script>
+  <script src="./js/skills.js?v=1.2"></script>
+  <script src="./js/boss.js?v=1.2"></script>
+  <script src="./js/pause.js?v=1.0"></script>
+  <script src="./js/phase.js?v=1.0"></script>
+  <script src="./game.js?v=1.2"></script>
+  <script src="./js/input.js?v=1.0"></script>
 </body>
 </html>

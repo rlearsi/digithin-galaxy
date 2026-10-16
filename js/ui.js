@@ -1,5 +1,5 @@
 /* ================================================
-   DIGITINHO — js/ui.js
+   DIGITHIN GALAXY — js/ui.js
    DOM elements, HUD, particles, queue, and visual effects
    ================================================ */
 'use strict';
@@ -121,7 +121,7 @@ const bossSkillsGrid   = $('boss-skills-grid');
 // THEME MANAGEMENT (Dark / Light)
 // ============================================================
 function initTheme() {
-  const saved = localStorage.getItem('digitinho_theme');
+  const saved = localStorage.getItem('digithin_galaxy_theme');
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   const initial = saved || (prefersDark ? 'dark' : 'dark'); // default modern dark
   setTheme(initial);
@@ -129,7 +129,7 @@ function initTheme() {
 
 function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('digitinho_theme', theme);
+  localStorage.setItem('digithin_galaxy_theme', theme);
   const isDark = theme === 'dark';
   document.querySelectorAll('.theme-switch-btn').forEach(btn => {
     const aria = isDark
@@ -155,7 +155,7 @@ initTheme();
 // QUEUE POSITION MANAGEMENT (Top [default] / Bottom)
 // ============================================================
 function initQueuePosition() {
-  const saved = localStorage.getItem('digitinho_queue_pos');
+  const saved = localStorage.getItem('digithin_galaxy_queue_pos');
   const initial = saved === 'bottom' ? 'bottom' : 'top'; // Top is default
   setQueuePosition(initial);
 }
@@ -171,7 +171,7 @@ function setQueuePosition(pos) {
     gameCol.setAttribute('data-queue-pos', finalPos);
   }
 
-  localStorage.setItem('digitinho_queue_pos', finalPos);
+  localStorage.setItem('digithin_galaxy_queue_pos', finalPos);
 
   if (typeof updateSettingsUI === 'function') {
     updateSettingsUI();
@@ -179,7 +179,7 @@ function setQueuePosition(pos) {
 }
 
 function toggleQueuePosition() {
-  const current = localStorage.getItem('digitinho_queue_pos') === 'bottom' ? 'bottom' : 'top';
+  const current = localStorage.getItem('digithin_galaxy_queue_pos') === 'bottom' ? 'bottom' : 'top';
   const next = current === 'top' ? 'bottom' : 'top';
   setQueuePosition(next);
 }
@@ -220,7 +220,7 @@ function updateSettingsUI() {
       : (typeof t === 'function' ? t('settings_theme_light') : 'Light');
     settingsThemeVal.innerHTML = `${iconSvg} <span>${label}</span>`;
   }
-  const isTop = (localStorage.getItem('digitinho_queue_pos') || 'top') !== 'bottom';
+  const isTop = (localStorage.getItem('digithin_galaxy_queue_pos') || 'top') !== 'bottom';
   const settingsQueueVal = $('settings-queue-val');
   if (settingsQueueVal) {
     const iconSvg = isTop
@@ -259,14 +259,14 @@ function updateSettingsUI() {
 }
 
 function isBossBattlesEnabled() {
-  const saved = localStorage.getItem('digitinho_boss_enabled');
+  const saved = localStorage.getItem('digithin_galaxy_boss_enabled');
   return saved === null ? true : saved === 'true';
 }
 
 function toggleBossBattlesSetting() {
   const current = isBossBattlesEnabled();
   const next = !current;
-  localStorage.setItem('digitinho_boss_enabled', String(next));
+  localStorage.setItem('digithin_galaxy_boss_enabled', String(next));
   updateBossBattlesUI();
   return next;
 }
@@ -294,7 +294,7 @@ function updateBossBattlesUI() {
 // ============================================================
 function getFingerGuideSetting() {
   try {
-    const saved = localStorage.getItem('digitinho_finger_guide');
+    const saved = localStorage.getItem('digithin_galaxy_finger_guide');
     if (saved && (saved === 'always' || saved === 'off' || saved === 'training')) {
       return saved;
     }
@@ -305,7 +305,7 @@ function getFingerGuideSetting() {
 function changeFingerGuideSetting(mode) {
   const valid = (mode === 'always' || mode === 'off') ? mode : 'training';
   try {
-    localStorage.setItem('digitinho_finger_guide', valid);
+    localStorage.setItem('digithin_galaxy_finger_guide', valid);
   } catch (_) {}
   if (typeof updateFingerGuideVisibility === 'function') {
     updateFingerGuideVisibility();
@@ -837,9 +837,18 @@ document.body.appendChild(slowRing);
 
 // Clear falling item area
 function clearArea() {
-  if (gameArea)   gameArea.innerHTML = '';
-  if (feedbackEl) gameArea.appendChild(feedbackEl);
-  if (state)      state.activeItems = [];
+  if (gameArea) {
+    const tokens = gameArea.querySelectorAll('.falling-item, .token, .bomb-ring, .laser-particle, .boss-meaning-box');
+    tokens.forEach(t => t.remove());
+  }
+  if (feedbackEl && gameArea && !gameArea.contains(feedbackEl)) {
+    gameArea.appendChild(feedbackEl);
+  }
+  const bh = document.getElementById('black-hole-vortex');
+  if (bh && gameArea && !gameArea.contains(bh)) {
+    gameArea.appendChild(bh);
+  }
+  if (state) state.activeItems = [];
 }
 
 // Global PPM (Words Per Minute / Palavras por Minuto) Calculator
@@ -1069,8 +1078,8 @@ function updateHUD() {
       state.currentWpm = wpm;
       wpmDisplay.textContent = `${wpm}`;
       try {
-        const curBest = parseInt(localStorage.getItem('digitinho_best_wpm') || '0', 10);
-        if (wpm > curBest) localStorage.setItem('digitinho_best_wpm', String(wpm));
+        const curBest = parseInt(localStorage.getItem('digithin_galaxy_best_wpm') || '0', 10);
+        if (wpm > curBest) localStorage.setItem('digithin_galaxy_best_wpm', String(wpm));
       } catch (_) {}
       if (wpm >= 60) unlockAchievement('dedo_veloz');
     } else {
@@ -1593,7 +1602,7 @@ function showFeedback(msg, type) {
     type === 'special' ? 'fb-special' : 'fb-error';
 }
 
-// Particle explosion
+// Particle explosion (fallback)
 function spawnParticles(el, pts) {
   const r    = el.getBoundingClientRect();
   const cx   = r.left + r.width  / 2;
@@ -1610,6 +1619,252 @@ function spawnParticles(el, pts) {
     p.style.cssText = `width:${sz}px;height:${sz}px;background:${pick(cols)};left:${cx}px;top:${cy}px;--tx:${Math.cos(angle) * dist}px;--ty:${Math.sin(angle) * dist}px;`;
     document.body.appendChild(p);
     setTimeout(() => p.remove(), 600);
+  }
+}
+
+// ============================================================
+// REALISTIC CELESTIAL DEBRIS ENGINE (CANVAS 60FPS PHYSICS)
+// Destroços cósmicos caindo fluidamente até o final da tela,
+// desfazendo-se e soltando faíscas estelares durante a descida
+// ============================================================
+let debrisParticles = [];
+let microSparks = [];
+let debrisCanvas = null;
+let debrisCtx = null;
+let debrisRafId = null;
+let lastDebrisTime = 0;
+
+function initDebrisCanvas() {
+  debrisCanvas = document.getElementById('debris-canvas');
+  if (debrisCanvas) {
+    debrisCtx = debrisCanvas.getContext('2d');
+  }
+}
+
+function syncDebrisCanvasSize() {
+  if (!debrisCanvas) initDebrisCanvas();
+  if (!debrisCanvas) return false;
+  const gameAreaEl = document.getElementById('game-area');
+  if (!gameAreaEl) return false;
+  const w = gameAreaEl.clientWidth || 300;
+  const h = gameAreaEl.clientHeight || 600;
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const targetW = Math.floor(w * dpr);
+  const targetH = Math.floor(h * dpr);
+  if (debrisCanvas.width !== targetW || debrisCanvas.height !== targetH) {
+    debrisCanvas.width = targetW;
+    debrisCanvas.height = targetH;
+    debrisCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  return true;
+}
+
+function spawnCelestialExplosion(el, text) {
+  if (!el) return;
+  const gameAreaEl = document.getElementById('game-area');
+  if (!gameAreaEl) return;
+  if (!syncDebrisCanvasSize()) return;
+
+  const gRect = gameAreaEl.getBoundingClientRect();
+  const r = el.getBoundingClientRect();
+
+  // Origem relativa ao tabuleiro (#game-area)
+  const cx = (r.left + r.width / 2) - gRect.left;
+  const cy = (r.top + r.height / 2) - gRect.top;
+
+  const len = typeof text === 'string' ? text.length : (el.textContent?.trim()?.length || 4);
+  const count = Math.min(48, Math.max(26, Math.floor(len * 4.6)));
+
+  const colors = [
+    '#38BDF8', // Celestial Cyan
+    '#60A5FA', // Astral Blue
+    '#F472B6', // Nebula Pink
+    '#C084FC', // Cosmic Violet
+    '#FBBF24', // Starlight Gold
+    '#34D399', // Aurora Emerald
+    '#FFFFFF', // Pure Starlight White
+    '#FB923C'  // Stellar Amber
+  ];
+
+  const shapes = ['shard', 'rect', 'diamond', 'chip', 'orb'];
+
+  for (let i = 0; i < count; i++) {
+    const shape = shapes[Math.floor(Math.random() * shapes.length)];
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    const sz = shape === 'orb' ? (3.5 + Math.random() * 3.5) : (4.5 + Math.random() * 5.5);
+
+    // Dispersão inicial ao longo da largura da palavra
+    const xOffset = (Math.random() - 0.5) * (r.width * 0.9);
+    const startX = cx + xOffset;
+    const startY = cy + (Math.random() - 0.5) * 14;
+
+    // Explosão em arco: impulso inicial para cima e para os lados (-150 a -30 graus)
+    const angle = -Math.PI / 2 + (Math.random() - 0.5) * 2.2;
+    const speed = 70 + Math.random() * 160;
+    const vx = Math.cos(angle) * speed;
+    const vy = Math.sin(angle) * speed * 0.75 - 35;
+
+    debrisParticles.push({
+      x: startX,
+      y: startY,
+      startY: startY,
+      vx,
+      vy,
+      gravity: 540 + Math.random() * 320, // Gravidade constante que puxa até o fundo da tela
+      color,
+      size: sz,
+      aspect: 1.2 + Math.random() * 1.6,
+      shape,
+      rot: Math.random() * Math.PI * 2,
+      vRot: (Math.random() - 0.5) * 14,
+      pitch: Math.random() * Math.PI * 2,
+      vPitch: (Math.random() - 0.5) * 16,
+      alpha: 1.0,
+      sparkTimer: Math.random() * 0.05
+    });
+  }
+
+  // Anel de faíscas cósmicas no centro da detonação
+  for (let s = 0; s < 14; s++) {
+    const sparkAngle = Math.random() * Math.PI * 2;
+    const sparkSpd = 50 + Math.random() * 130;
+    microSparks.push({
+      x: cx,
+      y: cy,
+      vx: Math.cos(sparkAngle) * sparkSpd,
+      vy: Math.sin(sparkAngle) * sparkSpd,
+      size: 2.0 + Math.random() * 2.5,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      alpha: 1.0,
+      decay: 2.6 + Math.random() * 2.4
+    });
+  }
+
+  if (!debrisRafId) {
+    lastDebrisTime = performance.now();
+    debrisRafId = requestAnimationFrame(runDebrisLoop);
+  }
+}
+
+function runDebrisLoop(timestamp) {
+  if (!lastDebrisTime) lastDebrisTime = timestamp;
+  const dt = Math.min((timestamp - lastDebrisTime) / 1000, 0.05);
+  lastDebrisTime = timestamp;
+
+  const gameAreaEl = document.getElementById('game-area');
+  if (!gameAreaEl || !debrisCtx) {
+    debrisRafId = null;
+    return;
+  }
+
+  const w = gameAreaEl.clientWidth || 300;
+  const h = gameAreaEl.clientHeight || 600;
+
+  debrisCtx.clearRect(0, 0, w, h);
+
+  // Atualização & Renderização dos Destroços Celestes (caindo até o final da tela)
+  for (let i = debrisParticles.length - 1; i >= 0; i--) {
+    const p = debrisParticles[i];
+
+    // Física Contínua 60 FPS (sem travamentos nem paradas)
+    p.vy += p.gravity * dt;
+    p.x += p.vx * dt;
+    p.y += p.vy * dt;
+    p.vx *= (1 - 0.30 * dt); // Suave resistência do ar
+    p.rot += p.vRot * dt;
+    p.pitch += p.vPitch * dt;
+
+    // Distância de descida percorrida até o fundo da tela
+    const totalDescent = Math.max(100, h - p.startY);
+    const descentProgress = Math.max(0, (p.y - p.startY) / totalDescent);
+
+    // Desfazendo-se continuamente enquanto vai descendo
+    // Permanece brilhante no topo e vai sumindo de forma suave até o fundo
+    p.alpha = Math.max(0, 1.0 - Math.pow(descentProgress, 1.35));
+
+    // Desfazendo-se: Solta micro-faíscas/poeira estelar durante a queda
+    p.sparkTimer += dt;
+    if (p.sparkTimer > 0.038 && p.alpha > 0.12 && Math.random() < 0.65) {
+      p.sparkTimer = 0;
+      microSparks.push({
+        x: p.x + (Math.random() - 0.5) * 4,
+        y: p.y + (Math.random() - 0.5) * 4,
+        vx: (Math.random() - 0.5) * 20,
+        vy: 20 + Math.random() * 45,
+        size: 1.5 + Math.random() * 2.2,
+        color: p.color,
+        alpha: p.alpha * 0.9,
+        decay: 1.8 + Math.random() * 2.2
+      });
+    }
+
+    // Encolhimento sutil conforme se desfaz
+    const currentSize = Math.max(1.5, p.size * (1 - descentProgress * 0.40));
+
+    // Desenha fragmento com rotação e tombo 3D fluido
+    debrisCtx.save();
+    debrisCtx.translate(p.x, p.y);
+    debrisCtx.rotate(p.rot);
+    debrisCtx.scale(1, Math.cos(p.pitch)); // Efeito 3D de flip/tombo
+    debrisCtx.globalAlpha = p.alpha;
+    debrisCtx.fillStyle = p.color;
+
+    if (p.shape === 'rect' || p.shape === 'shard') {
+      debrisCtx.fillRect(-currentSize / 2, -(currentSize * p.aspect) / 2, currentSize, currentSize * p.aspect);
+    } else if (p.shape === 'diamond') {
+      debrisCtx.beginPath();
+      debrisCtx.moveTo(0, -currentSize * 1.2);
+      debrisCtx.lineTo(currentSize * 0.8, 0);
+      debrisCtx.lineTo(0, currentSize * 1.2);
+      debrisCtx.lineTo(-currentSize * 0.8, 0);
+      debrisCtx.closePath();
+      debrisCtx.fill();
+    } else if (p.shape === 'chip') {
+      debrisCtx.beginPath();
+      debrisCtx.moveTo(-currentSize / 2, currentSize / 2);
+      debrisCtx.lineTo(0, -currentSize * 0.9);
+      debrisCtx.lineTo(currentSize / 2, currentSize * 0.7);
+      debrisCtx.closePath();
+      debrisCtx.fill();
+    } else {
+      debrisCtx.beginPath();
+      debrisCtx.arc(0, 0, currentSize * 0.55, 0, Math.PI * 2);
+      debrisCtx.fill();
+    }
+    debrisCtx.restore();
+
+    // Remove apenas após alcançar o final da tela (#game-area) ou sumir completamente
+    if (p.y >= h + 20 || p.alpha <= 0.01) {
+      debrisParticles.splice(i, 1);
+    }
+  }
+
+  // Atualização & Renderização das Micro-Faíscas (poeira estelar)
+  for (let s = microSparks.length - 1; s >= 0; s--) {
+    const sp = microSparks[s];
+    if (sp.vx) sp.x += sp.vx * dt;
+    sp.y += sp.vy * dt;
+    sp.alpha -= sp.decay * dt;
+
+    if (sp.alpha <= 0 || sp.y >= h + 20) {
+      microSparks.splice(s, 1);
+      continue;
+    }
+
+    debrisCtx.save();
+    debrisCtx.globalAlpha = Math.max(0, sp.alpha);
+    debrisCtx.fillStyle = sp.color;
+    debrisCtx.fillRect(sp.x - sp.size / 2, sp.y - sp.size / 2, sp.size, sp.size);
+    debrisCtx.restore();
+  }
+
+  // Mantém loop ativo enquanto houver partículas caindo
+  if (debrisParticles.length > 0 || microSparks.length > 0) {
+    debrisRafId = requestAnimationFrame(runDebrisLoop);
+  } else {
+    debrisCtx.clearRect(0, 0, w, h);
+    debrisRafId = null;
+    lastDebrisTime = 0;
   }
 }
 
@@ -1880,12 +2135,12 @@ function showAchievementToast(ach) {
 function unlockAchievement(id) {
   let saved = {};
   try {
-    saved = JSON.parse(localStorage.getItem('digitinho_achievements') || '{}');
+    saved = JSON.parse(localStorage.getItem('digithin_galaxy_achievements') || '{}');
   } catch (_) {}
   if (saved[id]) return;
   saved[id] = Date.now();
   try {
-    localStorage.setItem('digitinho_achievements', JSON.stringify(saved));
+    localStorage.setItem('digithin_galaxy_achievements', JSON.stringify(saved));
   } catch (_) {}
   const def = (typeof ACHIEVEMENTS !== 'undefined' ? ACHIEVEMENTS : []).find(a => a.id === id);
   if (def) showAchievementToast(def);
@@ -1956,11 +2211,11 @@ function renderConquistasModal() {
 
   let saved = {};
   try {
-    saved = JSON.parse(localStorage.getItem('digitinho_achievements') || '{}');
+    saved = JSON.parse(localStorage.getItem('digithin_galaxy_achievements') || '{}');
   } catch (_) {}
 
-  const bestWpm    = Math.max(state.currentWpm || 0, parseInt(localStorage.getItem('digitinho_best_wpm') || '0', 10));
-  const bestCombo  = Math.max(state.maxCombo || 0, parseInt(localStorage.getItem('digitinho_best_combo') || '0', 10));
+  const bestWpm    = Math.max(state.currentWpm || 0, parseInt(localStorage.getItem('digithin_galaxy_best_wpm') || '0', 10));
+  const bestCombo  = Math.max(state.maxCombo || 0, parseInt(localStorage.getItem('digithin_galaxy_best_combo') || '0', 10));
   const wordsCount = state.unlockedWords ? state.unlockedWords.length : 0;
 
   const total = (typeof ACHIEVEMENTS !== 'undefined') ? ACHIEVEMENTS.length : 6;
@@ -1998,7 +2253,7 @@ function renderConquistasModal() {
     } else if (ach.id === 'mestre_tipo') {
       let curWords = 0;
       try {
-        curWords = parseInt(localStorage.getItem('digitinho_words_completed') || '0', 10);
+        curWords = parseInt(localStorage.getItem('digithin_galaxy_words_completed') || '0', 10);
       } catch (_) {}
       curVal = Math.min(target, curWords);
       const unitTxt = typeof t === 'function' ? t('ach_unit_words') : 'words';
@@ -2074,8 +2329,8 @@ function renderTrainingWorlds() {
     let isCompleted = false;
     let bestAcc = null;
     try {
-      isCompleted = localStorage.getItem(`digitinho_training_world_${w.id}`) === 'completed';
-      const savedPrec = localStorage.getItem(`digitinho_training_precision_${w.id}`);
+      isCompleted = localStorage.getItem(`digithin_galaxy_training_world_${w.id}`) === 'completed';
+      const savedPrec = localStorage.getItem(`digithin_galaxy_training_precision_${w.id}`);
       if (savedPrec !== null) {
         bestAcc = parseFloat(savedPrec).toFixed(1);
       } else if (isCompleted) {
@@ -2228,302 +2483,221 @@ if (typeof applyMobileInputRestrictions === 'function') applyMobileInputRestrict
 // BOSS BATTLE UI RENDERING (MONSTER / ROBOT WITH LIVES: |||)
 // ============================================================
 function getBossSpriteSvg(boss) {
-  const type = boss?.type || 'robot';
+  const type = boss?.type || 'alien_dreadnought';
   const primaryColor = boss?.color || '#06B6D4';
 
-  if (type === 'robot') {
-    // 1. Cyber Robot: Antennas, scanning laser visor, metallic plates, chest reactor
+  if (type === 'alien_dreadnought' || type === 'robot') {
+    // 1. Alien Dreadnought Commander: Xylarion (Cyan #06B6D4)
     return `
       <svg class="boss-svg-char" viewBox="0 0 80 80" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="robotMetal" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#475569" />
-            <stop offset="50%" stop-color="#1E293B" />
-            <stop offset="100%" stop-color="#0F172A" />
+          <linearGradient id="alienDreadMetal" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#334155" />
+            <stop offset="50%" stop-color="#0F172A" />
+            <stop offset="100%" stop-color="#020617" />
           </linearGradient>
-          <linearGradient id="robotVisor" x1="0" y1="0" x2="1" y2="0">
+          <linearGradient id="alienCyanPlasma" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stop-color="#06B6D4" />
             <stop offset="50%" stop-color="#38BDF8" />
             <stop offset="100%" stop-color="#06B6D4" />
           </linearGradient>
-          <filter id="laserGlow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="2" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-        </defs>
-        <!-- Antenna with blinking red warning orb -->
-        <line x1="40" y1="12" x2="40" y2="4" stroke="${primaryColor}" stroke-width="2.5" stroke-linecap="round"/>
-        <circle cx="40" cy="3" r="3" fill="#EF4444" filter="url(#laserGlow)" class="boss-antenna-light" />
-        
-        <line x1="26" y1="16" x2="20" y2="9" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="19" cy="8" r="2" fill="${primaryColor}" />
-        <line x1="54" y1="16" x2="60" y2="9" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="61" cy="8" r="2" fill="${primaryColor}" />
-
-        <!-- Ears / Sensors -->
-        <rect x="15" y="24" width="6" height="14" rx="2" fill="#334155" stroke="${primaryColor}" stroke-width="1.2" />
-        <rect x="59" y="24" width="6" height="14" rx="2" fill="#334155" stroke="${primaryColor}" stroke-width="1.2" />
-
-        <!-- Head Chassis -->
-        <rect x="20" y="14" width="40" height="34" rx="8" fill="url(#robotMetal)" stroke="${primaryColor}" stroke-width="2" />
-        
-        <!-- Glowing Cyber Visor with scanning laser beam -->
-        <rect x="25" y="24" width="30" height="10" rx="4" fill="#030712" stroke="#0284C7" stroke-width="1" />
-        <rect x="26" y="25.5" width="28" height="7" rx="3" fill="url(#robotVisor)" filter="url(#laserGlow)" opacity="0.9" />
-        <line x1="26" y1="29" x2="54" y2="29" stroke="#FFFFFF" stroke-width="1.2" class="boss-scan-line" />
-
-        <!-- Vocoder grille -->
-        <line x1="30" y1="40" x2="50" y2="40" stroke="${primaryColor}" stroke-width="1.5" stroke-linecap="round" />
-        <line x1="33" y1="43" x2="47" y2="43" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round" />
-
-        <!-- Neck & Torso Plate -->
-        <path d="M 28 48 L 52 48 L 56 66 L 24 66 Z" fill="url(#robotMetal)" stroke="${primaryColor}" stroke-width="1.8" />
-        <!-- Glowing Core Reactor -->
-        <circle cx="40" cy="57" r="5" fill="#EF4444" filter="url(#laserGlow)" class="boss-core-pulse" />
-        <circle cx="40" cy="57" r="2" fill="#FFFFFF" />
-
-        <!-- Shoulder armor pads -->
-        <polygon points="22,48 10,54 18,66 26,60" fill="#334155" stroke="${primaryColor}" stroke-width="1.5" />
-        <polygon points="58,48 70,54 62,66 54,60" fill="#334155" stroke="${primaryColor}" stroke-width="1.5" />
-
-        <!-- Hover Plasma Thrusters -->
-        <ellipse cx="32" cy="68" rx="4" ry="2" fill="#38BDF8" opacity="0.8" />
-        <ellipse cx="48" cy="68" rx="4" ry="2" fill="#38BDF8" opacity="0.8" />
-      </svg>
-    `;
-  } else if (type === 'beast') {
-    // 2. Feral Apex: Golden mane, predator eyes, fangs, feral ears and tribal markings
-    return `
-      <svg class="boss-svg-char" viewBox="0 0 80 80" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="beastMane" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#D97706" />
-            <stop offset="50%" stop-color="#B45309" />
-            <stop offset="100%" stop-color="#78350F" />
-          </linearGradient>
-          <linearGradient id="beastFur" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#FBBF24" />
-            <stop offset="100%" stop-color="#D97706" />
-          </linearGradient>
-          <filter id="beastGlow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="2" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-        </defs>
-        <!-- Flaring Mane Back -->
-        <path d="M 12 28 Q 6 12 24 10 Q 40 2 56 10 Q 74 12 68 28 Q 78 46 66 64 Q 40 76 14 64 Q 2 46 12 28 Z" fill="url(#beastMane)" stroke="#F59E0B" stroke-width="1.5" />
-
-        <!-- Pointed Predator Ears -->
-        <polygon points="22,18 14,4 32,14" fill="#78350F" stroke="#F59E0B" stroke-width="1.5" />
-        <polygon points="58,18 66,4 48,14" fill="#78350F" stroke="#F59E0B" stroke-width="1.5" />
-        <polygon points="23,16 18,8 29,14" fill="#FBBF24" />
-        <polygon points="57,16 62,8 51,14" fill="#FBBF24" />
-
-        <!-- Lion / Wolf Face Structure -->
-        <polygon points="24,20 56,20 62,40 50,54 30,54 18,40" fill="url(#beastFur)" stroke="#F59E0B" stroke-width="1.8" />
-        
-        <!-- Feral Brow & Markings -->
-        <path d="M 28 22 L 40 32 L 52 22" stroke="#78350F" stroke-width="2" stroke-linecap="round" fill="none" />
-        <line x1="40" y1="18" x2="40" y2="30" stroke="#78350F" stroke-width="2" stroke-linecap="round" />
-
-        <!-- Piercing Golden Eyes with Slit Pupils -->
-        <ellipse cx="30" cy="32" rx="5" ry="3.5" fill="#FEF08A" filter="url(#beastGlow)" />
-        <ellipse cx="50" cy="32" rx="5" ry="3.5" fill="#FEF08A" filter="url(#beastGlow)" />
-        <ellipse cx="30" cy="32" rx="1.8" ry="3" fill="#000000" />
-        <ellipse cx="50" cy="32" rx="1.8" ry="3" fill="#000000" />
-
-        <!-- Snout & Predator Fangs -->
-        <polygon points="36,40 44,40 40,46" fill="#78350F" />
-        <path d="M 33 46 Q 40 50 47 46" stroke="#451A03" stroke-width="2" fill="none" stroke-linecap="round" />
-        <polygon points="33,47 36,47 34.5,53" fill="#FFFFFF" />
-        <polygon points="44,47 47,47 45.5,53" fill="#FFFFFF" />
-
-        <!-- Muscular Chest Plate & Claws Clasp -->
-        <path d="M 26 54 L 54 54 L 60 70 L 20 70 Z" fill="url(#beastMane)" stroke="#F59E0B" stroke-width="1.6" />
-        <circle cx="40" cy="62" r="4.5" fill="#F59E0B" filter="url(#beastGlow)" />
-        <circle cx="40" cy="62" r="2" fill="#FFFFFF" />
-      </svg>
-    `;
-  } else if (type === 'mythology') {
-    // 3. Arcane Chimera / Dragon: Sweeping horns, mystic third eye, crest spikes, arcane wings
-    return `
-      <svg class="boss-svg-char" viewBox="0 0 80 80" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="mythSkin" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#6B21A8" />
-            <stop offset="50%" stop-color="#4C1D95" />
-            <stop offset="100%" stop-color="#2E1065" />
-          </linearGradient>
-          <filter id="mythGlow" x="-20%" y="-20%" width="140%" height="140%">
+          <filter id="alienGlow" x="-25%" y="-25%" width="150%" height="150%">
             <feGaussianBlur stdDeviation="2.5" result="blur" />
             <feComposite in="SourceGraphic" in2="blur" operator="over" />
           </filter>
         </defs>
-        <!-- Magnificent Dragon / Chimera Horns -->
-        <path d="M 24 20 Q 12 4 4 8 Q 12 18 20 25 Z" fill="#C084FC" stroke="#A855F7" stroke-width="1.8" />
-        <path d="M 56 20 Q 68 4 76 8 Q 68 18 60 25 Z" fill="#C084FC" stroke="#A855F7" stroke-width="1.8" />
-
-        <!-- Crest Spikes -->
-        <polygon points="34,14 40,2 46,14" fill="#A855F7" stroke="#E9D5FF" stroke-width="1" />
-        <polygon points="24,18 28,8 34,16" fill="#7E22CE" />
-        <polygon points="56,18 52,8 46,16" fill="#7E22CE" />
-
-        <!-- Face Mask -->
-        <polygon points="22,18 58,18 64,36 52,52 28,52 16,36" fill="url(#mythSkin)" stroke="#A855F7" stroke-width="2" />
-
-        <!-- Arcane Third Eye Rune in Forehead -->
-        <circle cx="40" cy="22" r="3.5" fill="#E879F9" filter="url(#mythGlow)" />
-        <circle cx="40" cy="22" r="1.5" fill="#FFFFFF" />
-
-        <!-- Glowing Mystic Eyes -->
-        <polygon points="25,32 35,32 33,37 25,36" fill="#F472B6" filter="url(#mythGlow)" />
-        <polygon points="55,32 45,32 47,37 55,36" fill="#F472B6" filter="url(#mythGlow)" />
-        <circle cx="30" cy="34" r="1.2" fill="#FFFFFF" />
-        <circle cx="50" cy="34" r="1.2" fill="#FFFFFF" />
-
-        <!-- Dragon Snout & Mystic Breath Grille -->
-        <path d="M 32 42 L 36 46 L 40 42 L 44 46 L 48 42" stroke="#E879F9" stroke-width="1.8" stroke-linecap="round" fill="none" />
-
-        <!-- Neck Plate & Sigil -->
-        <path d="M 28 52 L 52 52 L 58 68 L 22 68 Z" fill="url(#mythSkin)" stroke="#A855F7" stroke-width="1.8" />
-        <polygon points="40,56 46,62 40,68 34,62" fill="#C084FC" filter="url(#mythGlow)" />
-        <polygon points="40,58 44,62 40,66 36,62" fill="#FFFFFF" />
+        <polygon points="10,24 2,42 18,38 24,28" fill="#1E293B" stroke="${primaryColor}" stroke-width="1.4" />
+        <polygon points="70,24 78,42 62,38 56,28" fill="#1E293B" stroke="${primaryColor}" stroke-width="1.4" />
+        <line x1="6" y1="40" x2="16" y2="38" stroke="#38BDF8" stroke-width="2" filter="url(#alienGlow)" />
+        <line x1="74" y1="40" x2="64" y2="38" stroke="#38BDF8" stroke-width="2" filter="url(#alienGlow)" />
+        <line x1="32" y1="14" x2="22" y2="4" stroke="${primaryColor}" stroke-width="2" stroke-linecap="round" />
+        <circle cx="21" cy="3" r="2.5" fill="#38BDF8" filter="url(#alienGlow)" />
+        <line x1="48" y1="14" x2="58" y2="4" stroke="${primaryColor}" stroke-width="2" stroke-linecap="round" />
+        <circle cx="59" cy="3" r="2.5" fill="#38BDF8" filter="url(#alienGlow)" />
+        <polygon points="40,8 60,20 54,48 40,56 26,48 20,20" fill="url(#alienDreadMetal)" stroke="${primaryColor}" stroke-width="2" />
+        <ellipse cx="40" cy="24" rx="7" ry="4" fill="#030712" stroke="#0284C7" stroke-width="1" />
+        <ellipse cx="40" cy="24" rx="5" ry="2.5" fill="url(#alienCyanPlasma)" filter="url(#alienGlow)" />
+        <circle cx="40" cy="24" r="1.5" fill="#FFFFFF" />
+        <polygon points="27,32 35,30 33,36 26,35" fill="#38BDF8" filter="url(#alienGlow)" />
+        <polygon points="53,32 45,30 47,36 54,35" fill="#38BDF8" filter="url(#alienGlow)" />
+        <path d="M 32 44 L 40 50 L 48 44" stroke="${primaryColor}" stroke-width="2" fill="none" stroke-linecap="round" />
+        <path d="M 28 54 L 52 54 L 58 70 L 22 70 Z" fill="url(#alienDreadMetal)" stroke="${primaryColor}" stroke-width="1.8" />
+        <circle cx="40" cy="62" r="6" fill="#0284C7" />
+        <circle cx="40" cy="62" r="4.5" fill="#38BDF8" filter="url(#alienGlow)" />
+        <circle cx="40" cy="62" r="1.8" fill="#FFFFFF" />
+        <ellipse cx="32" cy="72" rx="4" ry="2" fill="#38BDF8" opacity="0.9" filter="url(#alienGlow)" />
+        <ellipse cx="48" cy="72" rx="4" ry="2" fill="#38BDF8" opacity="0.9" filter="url(#alienGlow)" />
       </svg>
     `;
-  } else if (type === 'ocean') {
-    // 4. Abyssal Leviathan: Crown fins, glowing tentacles, sapphire eyes, deep pelagic gills
+  } else if (type === 'alien_hive' || type === 'beast') {
+    // 2. Alien Hive Conqueror: Zorkon (Toxic Emerald #10B981)
     return `
       <svg class="boss-svg-char" viewBox="0 0 80 80" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="oceanSkin" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#0284C7" />
-            <stop offset="50%" stop-color="#0369A1" />
-            <stop offset="100%" stop-color="#082F49" />
+          <linearGradient id="alienHiveSkin" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#064E3B" />
+            <stop offset="50%" stop-color="#022C22" />
+            <stop offset="100%" stop-color="#011812" />
           </linearGradient>
-          <filter id="oceanGlow" x="-20%" y="-20%" width="140%" height="140%">
+          <filter id="hiveGlow" x="-25%" y="-25%" width="150%" height="150%">
             <feGaussianBlur stdDeviation="2.5" result="blur" />
             <feComposite in="SourceGraphic" in2="blur" operator="over" />
           </filter>
         </defs>
-        <!-- Dorsal Fin Crown -->
-        <polygon points="40,2 48,16 32,16" fill="#38BDF8" filter="url(#oceanGlow)" />
-        <polygon points="28,8 34,18 24,18" fill="#0284C7" />
-        <polygon points="52,8 46,18 56,18" fill="#0284C7" />
-
-        <!-- Arching Bioluminescent Tentacles -->
-        <path d="M 16 36 Q 4 48 8 62 Q 14 66 18 54" stroke="#38BDF8" stroke-width="2.5" fill="none" stroke-linecap="round" filter="url(#oceanGlow)" />
-        <path d="M 64 36 Q 76 48 72 62 Q 66 66 62 54" stroke="#38BDF8" stroke-width="2.5" fill="none" stroke-linecap="round" filter="url(#oceanGlow)" />
-
-        <!-- Abyssal Head / Shell -->
-        <ellipse cx="40" cy="32" rx="22" ry="18" fill="url(#oceanSkin)" stroke="#38BDF8" stroke-width="2" />
-
-        <!-- Glowing Oceanic Eyes -->
-        <ellipse cx="29" cy="30" rx="4.5" ry="3.5" fill="#00F5FF" filter="url(#oceanGlow)" />
-        <ellipse cx="51" cy="30" rx="4.5" ry="3.5" fill="#00F5FF" filter="url(#oceanGlow)" />
-        <circle cx="29" cy="30" r="1.5" fill="#FFFFFF" />
-        <circle cx="51" cy="30" r="1.5" fill="#FFFFFF" />
-
-        <!-- Bioluminescent Barbel Orbs -->
-        <circle cx="20" cy="40" r="2" fill="#38BDF8" filter="url(#oceanGlow)" />
-        <circle cx="60" cy="40" r="2" fill="#38BDF8" filter="url(#oceanGlow)" />
-
-        <!-- Pelagic Siphon / Gill Vents -->
-        <path d="M 34 38 Q 40 43 46 38" stroke="#38BDF8" stroke-width="1.8" fill="none" stroke-linecap="round" />
-        <path d="M 36 42 Q 40 46 44 42" stroke="#0EA5E9" stroke-width="1.5" fill="none" stroke-linecap="round" />
-
-        <!-- Abyssal Water Vortex Core -->
-        <path d="M 30 50 L 50 50 L 56 68 L 24 68 Z" fill="url(#oceanSkin)" stroke="#38BDF8" stroke-width="1.8" />
-        <circle cx="40" cy="59" r="5" fill="#00F5FF" filter="url(#oceanGlow)" />
+        <path d="M 18 32 Q 8 46 14 62 Q 22 58 24 46" fill="#065F46" stroke="#10B981" stroke-width="1.5" />
+        <path d="M 62 32 Q 72 46 66 62 Q 58 58 56 46" fill="#065F46" stroke="#10B981" stroke-width="1.5" />
+        <path d="M 28 14 Q 18 2 12 6 Q 16 16 26 18" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+        <path d="M 52 14 Q 62 2 68 6 Q 64 16 54 18" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+        <ellipse cx="40" cy="28" rx="20" ry="18" fill="url(#alienHiveSkin)" stroke="#10B981" stroke-width="2" />
+        <ellipse cx="30" cy="24" rx="4.5" ry="3.5" fill="#34D399" filter="url(#hiveGlow)" />
+        <ellipse cx="50" cy="24" rx="4.5" ry="3.5" fill="#34D399" filter="url(#hiveGlow)" />
+        <circle cx="30" cy="24" r="1.5" fill="#FFFFFF" />
+        <circle cx="50" cy="24" r="1.5" fill="#FFFFFF" />
+        <circle cx="24" cy="31" r="2.5" fill="#10B981" filter="url(#hiveGlow)" />
+        <circle cx="56" cy="31" r="2.5" fill="#10B981" filter="url(#hiveGlow)" />
+        <polygon points="34,36 40,42 46,36 40,39" fill="#34D399" filter="url(#hiveGlow)" />
+        <polygon points="33,40 37,40 35,46" fill="#FFFFFF" />
+        <polygon points="43,40 47,40 45,46" fill="#FFFFFF" />
+        <path d="M 26 50 L 54 50 L 60 68 L 20 68 Z" fill="url(#alienHiveSkin)" stroke="#10B981" stroke-width="1.8" />
+        <circle cx="40" cy="59" r="6" fill="#047857" />
+        <circle cx="40" cy="59" r="4.5" fill="#34D399" filter="url(#hiveGlow)" />
         <circle cx="40" cy="59" r="2" fill="#FFFFFF" />
       </svg>
     `;
-  } else if (type === 'cosmos') {
-    // 5. Astro-Titan Chronos: Orbital rings, stellar coronal spikes, pulsar core, starlight crest
+  } else if (type === 'alien_psionic' || type === 'mythology') {
+    // 3. Alien Psionic Empress: Vespera (Plasma Violet #A855F7)
     return `
       <svg class="boss-svg-char" viewBox="0 0 80 80" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="cosmosSkin" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#4F46E5" />
-            <stop offset="50%" stop-color="#3730A3" />
-            <stop offset="100%" stop-color="#1E1B4B" />
+          <linearGradient id="psionicSkin" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#581C87" />
+            <stop offset="50%" stop-color="#3B0764" />
+            <stop offset="100%" stop-color="#1E0338" />
           </linearGradient>
-          <filter id="cosmosGlow" x="-25%" y="-25%" width="150%" height="150%">
+          <filter id="psionicGlow" x="-25%" y="-25%" width="150%" height="150%">
             <feGaussianBlur stdDeviation="3" result="blur" />
             <feComposite in="SourceGraphic" in2="blur" operator="over" />
           </filter>
         </defs>
-        <!-- Orbital Gyro Rings -->
-        <ellipse cx="40" cy="38" rx="36" ry="10" fill="none" stroke="#818CF8" stroke-width="1.8" transform="rotate(-15 40 38)" opacity="0.85" filter="url(#cosmosGlow)" />
-        <ellipse cx="40" cy="38" rx="36" ry="10" fill="none" stroke="#C7D2FE" stroke-width="1" transform="rotate(-15 40 38)" stroke-dasharray="4 2" />
-
-        <!-- Stellar Coronal Halo Spikes -->
-        <line x1="40" y1="2" x2="40" y2="10" stroke="#A5B4FC" stroke-width="2.5" stroke-linecap="round" filter="url(#cosmosGlow)" />
-        <line x1="16" y1="12" x2="22" y2="18" stroke="#818CF8" stroke-width="2" stroke-linecap="round" />
-        <line x1="64" y1="12" x2="58" y2="18" stroke="#818CF8" stroke-width="2" stroke-linecap="round" />
-
-        <!-- Celestial Spherical Helm -->
-        <circle cx="40" cy="34" r="18" fill="url(#cosmosSkin)" stroke="#818CF8" stroke-width="2" />
-
-        <!-- Galactic Nebula Visor / Cosmic Eyes -->
-        <ellipse cx="32" cy="32" rx="4" ry="2.5" fill="#F472B6" filter="url(#cosmosGlow)" />
-        <ellipse cx="48" cy="32" rx="4" ry="2.5" fill="#F472B6" filter="url(#cosmosGlow)" />
-        <circle cx="32" cy="32" r="1.2" fill="#FFFFFF" />
-        <circle cx="48" cy="32" r="1.2" fill="#FFFFFF" />
-
-        <!-- Constellation Nodes on Forehead -->
-        <circle cx="40" cy="24" r="1.5" fill="#FFFFFF" />
-        <circle cx="35" cy="26" r="1" fill="#A5B4FC" />
-        <circle cx="45" cy="26" r="1" fill="#A5B4FC" />
-        <line x1="35" y1="26" x2="40" y2="24" stroke="#818CF8" stroke-width="0.8" />
-        <line x1="45" y1="26" x2="40" y2="24" stroke="#818CF8" stroke-width="0.8" />
-
-        <!-- Pulsar Core Reactor -->
-        <path d="M 30 52 L 50 52 L 56 68 L 24 68 Z" fill="url(#cosmosSkin)" stroke="#818CF8" stroke-width="1.8" />
-        <circle cx="40" cy="60" r="5" fill="#818CF8" filter="url(#cosmosGlow)" />
-        <polygon points="40,55 44,60 40,65 36,60" fill="#FFFFFF" />
+        <circle cx="12" cy="18" r="3.5" fill="#C084FC" filter="url(#psionicGlow)" />
+        <circle cx="12" cy="18" r="1.5" fill="#FFFFFF" />
+        <circle cx="68" cy="18" r="3.5" fill="#C084FC" filter="url(#psionicGlow)" />
+        <circle cx="68" cy="18" r="1.5" fill="#FFFFFF" />
+        <circle cx="40" cy="4" r="3.8" fill="#F472B6" filter="url(#psionicGlow)" />
+        <circle cx="40" cy="4" r="1.6" fill="#FFFFFF" />
+        <path d="M 26 22 Q 14 6 6 10 Q 14 22 22 28 Z" fill="#7E22CE" stroke="#A855F7" stroke-width="1.6" />
+        <path d="M 54 22 Q 66 6 74 10 Q 66 22 58 28 Z" fill="#7E22CE" stroke="#A855F7" stroke-width="1.6" />
+        <polygon points="24,18 56,18 62,38 48,52 32,52 18,38" fill="url(#psionicSkin)" stroke="#A855F7" stroke-width="2" />
+        <ellipse cx="40" cy="22" rx="4.5" ry="3.5" fill="#E879F9" filter="url(#psionicGlow)" />
+        <circle cx="40" cy="22" r="1.5" fill="#FFFFFF" />
+        <polygon points="26,32 36,32 34,37 26,36" fill="#F472B6" filter="url(#psionicGlow)" />
+        <polygon points="54,32 44,32 46,37 54,36" fill="#F472B6" filter="url(#psionicGlow)" />
+        <circle cx="31" cy="34" r="1.2" fill="#FFFFFF" />
+        <circle cx="49" cy="34" r="1.2" fill="#FFFFFF" />
+        <path d="M 28 52 L 52 52 L 58 68 L 22 68 Z" fill="url(#psionicSkin)" stroke="#A855F7" stroke-width="1.8" />
+        <polygon points="40,56 47,63 40,70 33,63" fill="#C084FC" filter="url(#psionicGlow)" />
+        <polygon points="40,58 44,63 40,68 36,63" fill="#FFFFFF" />
       </svg>
     `;
-  } else {
-    // 6. Volcano / Magma Colossus: Obsidian horns, glowing lava cracks, smoldering core
+  } else if (type === 'alien_warlord' || type === 'volcano') {
+    // 4. Alien Warlord Fleet Breaker: Kragthor (Crimson #EF4444)
     return `
       <svg class="boss-svg-char" viewBox="0 0 80 80" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="lavaMetal" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#450A0A" />
-            <stop offset="50%" stop-color="#1C1917" />
-            <stop offset="100%" stop-color="#0C0A09" />
+          <linearGradient id="warlordArmor" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#7F1D1D" />
+            <stop offset="50%" stop-color="#450A0A" />
+            <stop offset="100%" stop-color="#1F0404" />
           </linearGradient>
-          <filter id="lavaGlow" x="-20%" y="-20%" width="140%" height="140%">
+          <filter id="warlordGlow" x="-25%" y="-25%" width="150%" height="150%">
             <feGaussianBlur stdDeviation="2.5" result="blur" />
             <feComposite in="SourceGraphic" in2="blur" operator="over" />
           </filter>
         </defs>
-        <!-- Jagged Obsidian Horns -->
-        <polygon points="24,18 10,2 18,22" fill="#7F1D1D" stroke="#EF4444" stroke-width="1.6" />
-        <polygon points="56,18 70,2 62,22" fill="#7F1D1D" stroke="#EF4444" stroke-width="1.6" />
-        <polygon points="34,14 40,4 46,14" fill="#B91C1C" stroke="#F97316" stroke-width="1.2" />
-
-        <!-- Rugged Rock Face -->
-        <polygon points="20,18 60,18 66,38 54,52 26,52 14,38" fill="url(#lavaMetal)" stroke="#EF4444" stroke-width="2" />
-
-        <!-- Glowing Magma Fissures / Cracks -->
-        <path d="M 28 22 L 34 28 L 30 36 L 40 42 L 50 36 L 46 28 L 52 22" stroke="#F97316" stroke-width="1.6" fill="none" stroke-linecap="round" filter="url(#lavaGlow)" />
-        
-        <!-- Incandescent Eyes of Fire -->
-        <polygon points="25,30 35,31 33,35 25,34" fill="#FACC15" filter="url(#lavaGlow)" />
-        <polygon points="55,30 45,31 47,35 55,34" fill="#FACC15" filter="url(#lavaGlow)" />
-        <circle cx="30" cy="32.5" r="1.2" fill="#FFFFFF" />
-        <circle cx="50" cy="32.5" r="1.2" fill="#FFFFFF" />
-
-        <!-- Molten Core -->
-        <path d="M 26 52 L 54 52 L 60 70 L 20 70 Z" fill="url(#lavaMetal)" stroke="#EF4444" stroke-width="1.8" />
-        <circle cx="40" cy="61" r="5.5" fill="#EF4444" filter="url(#lavaGlow)" />
-        <circle cx="40" cy="61" r="3" fill="#FACC15" />
-        <circle cx="40" cy="61" r="1.2" fill="#FFFFFF" />
+        <polygon points="18,34 4,28 10,48 24,44" fill="#991B1B" stroke="#EF4444" stroke-width="1.6" />
+        <polygon points="62,34 76,28 70,48 56,44" fill="#991B1B" stroke="#EF4444" stroke-width="1.6" />
+        <polygon points="12,28 2,16 16,24" fill="#B91C1C" />
+        <polygon points="68,28 78,16 64,24" fill="#B91C1C" />
+        <polygon points="40,6 60,18 56,46 40,54 24,46 20,18" fill="url(#warlordArmor)" stroke="#EF4444" stroke-width="2" />
+        <path d="M 26 22 L 40 28 L 54 22" stroke="#EF4444" stroke-width="2.5" fill="none" stroke-linecap="round" />
+        <polygon points="26,30 37,30 35,35 25,33" fill="#F87171" filter="url(#warlordGlow)" />
+        <polygon points="54,30 43,30 45,35 55,33" fill="#F87171" filter="url(#warlordGlow)" />
+        <circle cx="31" cy="32" r="1.2" fill="#FFFFFF" />
+        <circle cx="49" cy="32" r="1.2" fill="#FFFFFF" />
+        <line x1="32" y1="42" x2="48" y2="42" stroke="#EF4444" stroke-width="2" stroke-linecap="round" />
+        <line x1="35" y1="46" x2="45" y2="46" stroke="#F87171" stroke-width="1.6" stroke-linecap="round" />
+        <path d="M 26 54 L 54 54 L 62 70 L 18 70 Z" fill="url(#warlordArmor)" stroke="#EF4444" stroke-width="1.8" />
+        <circle cx="40" cy="62" r="6" fill="#7F1D1D" />
+        <circle cx="40" cy="62" r="4.5" fill="#EF4444" filter="url(#warlordGlow)" />
+        <circle cx="40" cy="62" r="2" fill="#FDE047" />
+      </svg>
+    `;
+  } else if (type === 'alien_darkmatter' || type === 'ocean') {
+    // 5. Alien Dark Matter Herald: Nebulor (Cosmic Indigo #6366F1)
+    return `
+      <svg class="boss-svg-char" viewBox="0 0 80 80" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="darkmatterSkin" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#312E81" />
+            <stop offset="50%" stop-color="#1E1B4B" />
+            <stop offset="100%" stop-color="#0F0C29" />
+          </linearGradient>
+          <filter id="darkmatterGlow" x="-25%" y="-25%" width="150%" height="150%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+          </filter>
+        </defs>
+        <ellipse cx="40" cy="36" rx="34" ry="12" fill="none" stroke="#818CF8" stroke-width="1.6" transform="rotate(-12 40 36)" opacity="0.8" filter="url(#darkmatterGlow)" />
+        <line x1="40" y1="2" x2="40" y2="12" stroke="#A5B4FC" stroke-width="2.2" stroke-linecap="round" filter="url(#darkmatterGlow)" />
+        <circle cx="40" cy="2" r="2" fill="#FFFFFF" />
+        <line x1="18" y1="12" x2="26" y2="18" stroke="#818CF8" stroke-width="1.8" stroke-linecap="round" />
+        <circle cx="17" cy="11" r="1.5" fill="#C7D2FE" />
+        <line x1="62" y1="12" x2="54" y2="18" stroke="#818CF8" stroke-width="1.8" stroke-linecap="round" />
+        <circle cx="63" cy="11" r="1.5" fill="#C7D2FE" />
+        <circle cx="40" cy="34" r="18" fill="url(#darkmatterSkin)" stroke="#818CF8" stroke-width="2" />
+        <ellipse cx="32" cy="32" rx="4.5" ry="3" fill="#A5B4FC" filter="url(#darkmatterGlow)" />
+        <ellipse cx="48" cy="32" rx="4.5" ry="3" fill="#A5B4FC" filter="url(#darkmatterGlow)" />
+        <circle cx="32" cy="32" r="1.5" fill="#000000" />
+        <circle cx="48" cy="32" r="1.5" fill="#000000" />
+        <path d="M 28 50 L 52 50 L 56 68 L 24 68 Z" fill="url(#darkmatterSkin)" stroke="#818CF8" stroke-width="1.8" />
+        <circle cx="40" cy="59" r="6" fill="#000000" stroke="#818CF8" stroke-width="1.5" filter="url(#darkmatterGlow)" />
+        <circle cx="40" cy="59" r="2" fill="#FFFFFF" />
+      </svg>
+    `;
+  } else {
+    // 6. Alien Intergalactic Mothership Mind: Xenor (Solar Amber #F59E0B)
+    return `
+      <svg class="boss-svg-char" viewBox="0 0 80 80" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="mothershipGold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#D97706" />
+            <stop offset="50%" stop-color="#92400E" />
+            <stop offset="100%" stop-color="#451A03" />
+          </linearGradient>
+          <filter id="solarGlow" x="-25%" y="-25%" width="150%" height="150%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+          </filter>
+        </defs>
+        <ellipse cx="40" cy="38" rx="35" ry="9" fill="none" stroke="#FBBF24" stroke-width="2" transform="rotate(-18 40 38)" opacity="0.9" filter="url(#solarGlow)" />
+        <ellipse cx="40" cy="38" rx="35" ry="9" fill="none" stroke="#FEF08A" stroke-width="1" transform="rotate(-18 40 38)" stroke-dasharray="4 2" />
+        <line x1="40" y1="2" x2="40" y2="10" stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round" filter="url(#solarGlow)" />
+        <line x1="22" y1="8" x2="28" y2="16" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" />
+        <line x1="58" y1="8" x2="52" y2="16" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" />
+        <circle cx="40" cy="32" r="19" fill="url(#mothershipGold)" stroke="#FBBF24" stroke-width="2" />
+        <circle cx="40" cy="32" r="8" fill="#451A03" stroke="#FBBF24" stroke-width="1.5" />
+        <circle cx="40" cy="32" r="5.5" fill="#FEF08A" filter="url(#solarGlow)" />
+        <circle cx="40" cy="32" r="2.5" fill="#F59E0B" />
+        <circle cx="40" cy="32" r="1" fill="#FFFFFF" />
+        <path d="M 28 50 L 52 50 L 58 68 L 22 68 Z" fill="url(#mothershipGold)" stroke="#FBBF24" stroke-width="1.8" />
+        <circle cx="40" cy="59" r="6" fill="#F59E0B" filter="url(#solarGlow)" />
+        <circle cx="40" cy="59" r="3" fill="#FEF08A" />
+        <circle cx="40" cy="59" r="1.2" fill="#FFFFFF" />
       </svg>
     `;
   }
 }
+
 
 function renderBossHud(boss, remainingLives = 3, maxLives = 3) {
   if (!bossHud) return;
@@ -3008,7 +3182,8 @@ function deleteSlot(slotId) {
 // APP UPDATE ENGINE & CACHE REFRESH (v1.6)
 // ============================================================
 function isNewerVersion(remote, current) {
-  if (!remote || !current) return false;
+  if (!remote) return false;
+  if (!current) return true;
   if (remote === current) return false;
   const rParts = String(remote).split('.').map(n => parseInt(n, 10) || 0);
   const cParts = String(current).split('.').map(n => parseInt(n, 10) || 0);
@@ -3052,7 +3227,7 @@ async function checkForAppUpdate(interactive = false) {
     }
     const data = await res.json();
     const remoteVer = data && data.version ? String(data.version) : null;
-    const currentVer = String(window.APP_VERSION || '1.6');
+    const currentVer = String(window.APP_VERSION || (typeof getInstalledAppVersion === 'function' ? getInstalledAppVersion() : ''));
 
     if (remoteVer && isNewerVersion(remoteVer, currentVer)) {
       window.AVAILABLE_UPDATE_VERSION = remoteVer;
@@ -3063,6 +3238,12 @@ async function checkForAppUpdate(interactive = false) {
         statusBtn.onclick = applyAppUpdate;
       }
     } else {
+      if (remoteVer && !window.APP_VERSION) {
+        window.APP_VERSION = remoteVer;
+        if (typeof setInstalledAppVersion === 'function') {
+          setInstalledAppVersion(remoteVer);
+        }
+      }
       if (interactive && statusLbl) {
         statusLbl.textContent = typeof t === 'function' ? t('settings_update_latest') : 'Atualizado';
         setTimeout(() => {
@@ -3101,7 +3282,14 @@ async function applyAppUpdate() {
     try { playSound('level_up'); } catch (_) {}
   }
 
-  // 1. Purge CacheStorage (Service Worker / PWA caches)
+  // 1. Record the newly acknowledged version
+  const targetVer = window.AVAILABLE_UPDATE_VERSION;
+  if (targetVer && typeof setInstalledAppVersion === 'function') {
+    setInstalledAppVersion(targetVer);
+    window.APP_VERSION = targetVer;
+  }
+
+  // 2. Purge CacheStorage (Service Worker / PWA caches)
   if ('caches' in window) {
     try {
       const keys = await caches.keys();

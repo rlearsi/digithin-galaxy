@@ -1,7 +1,7 @@
 {
     "ui": {
-        "app_title": "Digitinho.",
-        "app_subtitle": "言葉が深淵に落ちる前にルーンキーボードをマスターしよう",
+        "app_title": "Digitinho Galaxy.",
+        "app_subtitle": "言葉がブラックホールに飲み込まれる前に、星空のキーボードをマスターしよう",
         "rules_title": "遊び方とルーンのルール",
         "rule_typing": "<strong>キーボード入力：</strong>文字、音節、単語が画面の底に落ちる前に入力します",
         "rule_wildcard": "<strong>ワイルドカード単語：</strong>画面上のすべてのルーンを瞬時に破壊しポイントを獲得",
@@ -322,42 +322,42 @@
         "boss_enigma_letters": "{count}文字",
         "boss_enigma_queue": "謎解き {num} / 3",
         "boss_level_tag": " (Lv. {level})",
-        "boss_cyber_titan_name": "サイバータイタン・レキシス",
-        "boss_cyber_titan_title": "自律型サイバーセンチネル",
-        "boss_cyber_titan_scenario": "サイバネティック・メトロポリス",
-        "boss_cyber_titan_scenario_desc": "輝くサーバー、ニューラルプロセッサ、自律型ドローンが巡る未来都市。",
-        "boss_cyber_titan_badge": "ロボット • テック",
-        "boss_cyber_titan_lore": "アルゴリズム、計算論理、デジタルネットワークの支配者。",
-        "boss_feral_apex_name": "レックス・プリマス：野生の頂点",
-        "boss_feral_apex_title": "サバンナの太古の捕食者",
-        "boss_feral_apex_scenario": "原始のサバンナ",
-        "boss_feral_apex_scenario_desc": "野性の獣たちが本能と力で支配する広大な荒野。",
-        "boss_feral_apex_badge": "野生 • 猛獣",
-        "boss_feral_apex_lore": "野生の群れ、鋭い爪、連携する狩人たちの王。",
-        "boss_arcane_chimera_name": "デルポイの秘術キマイラ",
-        "boss_arcane_chimera_title": "神聖なる神殿の守護者",
-        "boss_arcane_chimera_scenario": "デルポイの神秘神殿",
-        "boss_arcane_chimera_scenario_desc": "壮大な石柱、神聖な神託、伝説の怪獣が集う古代の聖域。",
-        "boss_arcane_chimera_badge": "神話 • 伝説",
-        "boss_arcane_chimera_lore": "神話の炎、スフィンクスの謎、ヒュドラの首から生まれた存在。",
-        "boss_abyssal_leviathan_name": "深淵のリヴァイアサン",
-        "boss_abyssal_leviathan_title": "遠洋海溝の君主",
-        "boss_abyssal_leviathan_scenario": "深海海溝",
-        "boss_abyssal_leviathan_scenario_desc": "発光生物たちが完全な暗闇を泳ぐ、水圧のすさまじい深海。",
-        "boss_abyssal_leviathan_badge": "海洋 • 深淵",
-        "boss_abyssal_leviathan_lore": "大津波、巨大人喰い鮫、底知れぬ海溝の支配者。",
-        "boss_cosmic_chronos_name": "アストロタイタン・クロノス",
-        "boss_cosmic_chronos_title": "銀河と星雲を織る者",
-        "boss_cosmic_chronos_scenario": "星雲と宇宙の虚空",
-        "boss_cosmic_chronos_scenario_desc": "電離プラズマ雲と重力軌道が渦巻く無限の宇宙空間。",
-        "boss_cosmic_chronos_badge": "宇宙 • 空間",
-        "boss_cosmic_chronos_lore": "熱核融合の核、パルサー、宇宙重力を統べる者。",
-        "boss_magma_vulcanus_name": "マグマの巨神ヴルカヌス",
-        "boss_magma_vulcanus_title": "プレートカルデラの主",
-        "boss_magma_vulcanus_scenario": "火山カルデラとマグマ核",
-        "boss_magma_vulcanus_scenario_desc": "白熱の溶岩、玄武岩の柱、煙を上げる火口が広がる地下世界。",
-        "boss_magma_vulcanus_badge": "火山 • マグマ",
-        "boss_magma_vulcanus_lore": "プレート噴火、火砕流、溶岩流の化身。",
+        "boss_cyber_titan_name": "虚空の覇者 サイラリオン",
+        "boss_cyber_titan_title": "エイリアン先鋒司令官",
+        "boss_cyber_titan_scenario": "カイパーベルト（太陽系の境界）",
+        "boss_cyber_titan_scenario_desc": "サイラリオン率いる超弩級戦艦艦隊が太陽系への侵略を開始した！",
+        "boss_cyber_titan_badge": "エイリアン • ドレッドノート",
+        "boss_cyber_titan_lore": "星間侵略艦隊の総司令官であり、高出力プラズマ兵器の使い手。",
+        "boss_feral_apex_name": "軌道の征服者 ゾルコン",
+        "boss_feral_apex_title": "生体機械群の群れ主",
+        "boss_feral_apex_scenario": "海王星軌道",
+        "boss_feral_apex_scenario_desc": "ゾルコンの有機生体群が太陽系の巨大ガス惑星を包囲した！",
+        "boss_feral_apex_badge": "エイリアン • スウォーム",
+        "boss_feral_apex_lore": "宇宙艦隊をも貪り尽くす生体機械のハイブマインドを統括する。",
+        "boss_arcane_chimera_name": "反物質の女帝 ヴェスペラ",
+        "boss_arcane_chimera_title": "銀河サイキック主権者",
+        "boss_arcane_chimera_scenario": "土星の輪",
+        "boss_arcane_chimera_scenario_desc": "ヴェスペラは反物質砲を起動し、太陽系の重力障壁を打ち破ろうとしている！",
+        "boss_arcane_chimera_badge": "エイリアン • サイキック",
+        "boss_arcane_chimera_lore": "ダークエネルギーと銀河規模の精神嵐を自在に操る。",
+        "boss_abyssal_leviathan_name": "暗黒物質の先駆者 ネビュラー",
+        "boss_abyssal_leviathan_title": "宇宙影の支配体",
+        "boss_abyssal_leviathan_scenario": "木星軌道",
+        "boss_abyssal_leviathan_scenario_desc": "ネビュラーは木星の磁気圏を歪め、地球への直接攻撃態勢を整えている！",
+        "boss_abyssal_leviathan_badge": "エイリアン • シャドウ",
+        "boss_abyssal_leviathan_lore": "時空の歪みと特異点重力を意のままに操る異形体。",
+        "boss_cosmic_chronos_name": "銀河最高知性 ゼノア",
+        "boss_cosmic_chronos_title": "侵略中枢マザーブレイン",
+        "boss_cosmic_chronos_scenario": "地球・月周回軌道",
+        "boss_cosmic_chronos_scenario_desc": "ゼノアの超巨大母艦が月軌道に現れ、地球侵略の最終段階に入った！",
+        "boss_cosmic_chronos_badge": "エイリアン • マザーシップ",
+        "boss_cosmic_chronos_lore": "太陽系侵略計画を全統括するエイリアンの最高意志中枢。",
+        "boss_magma_vulcanus_name": "艦隊ブレイカー クラグソール",
+        "boss_magma_vulcanus_title": "エイリアン闘争大将軍",
+        "boss_magma_vulcanus_scenario": "小惑星帯",
+        "boss_magma_vulcanus_scenario_desc": "クラグソールの重装甲艦が小惑星を粉砕し、地球への侵略航路を切り開く！",
+        "boss_magma_vulcanus_badge": "エイリアン • ウォーロード",
+        "boss_magma_vulcanus_lore": "反物質破壊兵器を装備した冷徹な重装甲侵略戦士。",
         "btn_continue": "ゲームを再開",
         "btn_new_game": "新しいゲーム",
         "btn_new_game_desc": "共有コインで最初から開始",
@@ -418,28 +418,64 @@
         "privacy_badge_local": "100% ローカル保存",
         "privacy_badge_github": "GitHub Pages ホスティング",
         "privacy_badge_lgpd": "LGPD & ANPD 準拠",
-        "privacy_sec_collection_title": "1. Digitinhoによる個人データ収集ゼロ",
-        "privacy_sec_collection_desc": "Digitinhoは、プレイヤーのブラウザ内で完全に動作する静的クライアントサイドWebゲームです。独自のバックエンドサーバー、リモートデータベース、登録フォーム、ユーザーアカウントシステムはありません。氏名、メールアドレスなどの個人情報を要求、収集、処理、販売することは一切ありません。",
+        "privacy_sec_collection_title": "1. Digitinho Galaxyによる個人データ収集ゼロ",
+        "privacy_sec_collection_desc": "Digitinho Galaxyは、プレイヤーのブラウザ内で完全に動作する静的クライアントサイドWebゲームです。独自のバックエンドサーバー、リモートデータベース、登録フォーム、ユーザーアカウントシステムはありません。氏名、メールアドレスなどの個人情報を要求、収集、処理、販売することは一切ありません。",
         "privacy_sec_storage_title": "2. 端末上のローカル保存 (HTML5 LocalStorage)",
         "privacy_sec_storage_desc": "スコア、セーブスロット、図鑑の単語、実績、サウンド設定、難易度、テーマなどのゲーム進行状況は、すべてお使いのブラウザのローカルストレージ（localStorage）にのみ保存されます。これらのデータが外部に送信されることはなく、ブラウザの設定やゲーム内のスロット管理からいつでも消去できます。",
         "privacy_sec_hosting_title": "3. ホスティングインフラとGitHub Pagesの技術ログ",
-        "privacy_sec_hosting_desc": "Digitinhoは、GitHub Pages（GitHub, Inc. / Microsoft運営）上に静的サイトとしてホストされています。アクセス時、GitHubのサーバーはセキュリティ、インフラ保守、不正防止を目的として、GitHubのプライバシーポリシーに従いIPアドレスなどの技術的な接続ログを自動記録する場合があります。Digitinhoの開発者がこれら未加工のIPログにアクセスしたり、個人を特定することはありません。",
+        "privacy_sec_hosting_desc": "Digitinho Galaxyは、GitHub Pages（GitHub, Inc. / Microsoft運営）上に静的サイトとしてホストされています。アクセス時、GitHubのサーバーはセキュリティ、インフラ保守、不正防止を目的として、GitHubのプライバシーポリシーに従いIPアドレスなどの技術的な接続ログを自動記録する場合があります。Digitinho Galaxyの開発者がこれら未加工のIPログにアクセスしたり、個人を特定することはありません。",
         "privacy_sec_cookies_title": "4. トラッキングCookieやサードパーティ解析ツールの不使用",
         "privacy_sec_cookies_desc": "当ゲームでは、広告Cookie、Google Analytics、ソーシャルメディアのトラッカー、行動分析スクリプトは一切使用していません。タイピングの練習とアーケード体験に100%特化しています。",
         "privacy_sec_lgpd_title": "5. ブラジル一般データ保護法（LGPD）およびANPD指針の遵守",
         "privacy_sec_lgpd_desc": "ブラジルの一般データ保護法（LGPD・連邦法第13.709/2018号）および国家データ保護機関（ANPD）のガイドラインに従い、本プロジェクトはデータの最小化と透明性の原則を遵守しています。開発者が個人データを収集・処理することはないため、第三者への販売や提供も行われません。",
         "privacy_sec_opensource_title": "6. オープンソースと透明性の検証",
-        "privacy_sec_opensource_desc": "DigitinhoはMITライセンスの下で公開されているオープンソースプロジェクトです。誰でもGitHub上で全ソースコードを検査・検証し、隠れたトラッカーや遠隔データ収集が存在しないことを確認できます。",
+        "privacy_sec_opensource_desc": "Digitinho GalaxyはMITライセンスの下で公開されているオープンソースプロジェクトです。誰でもGitHub上で全ソースコードを検査・検証し、隠れたトラッカーや遠隔データ収集が存在しないことを確認できます。",
         "privacy_sec_links_title": "公式リファレンスおよび規制情報",
         "privacy_link_github": "GitHub Pages：機能とIPログについて",
         "privacy_link_anpd": "ANPD：個人データの概念とデータ処理主体",
         "privacy_link_lgpd": "LGPD — ブラジル一般データ保護法（連邦法第13.709/2018号）",
         "privacy_back_game": "ゲームに戻る",
-        "privacy_updated": "最終更新：2026年10月 • Digitinho タイピングゲーム",
-        "privacy_page_title": "Digitinho — プライバシーポリシーと透明性",
+        "privacy_updated": "最終更新：2026年10月 • Digitinho Galaxy タイピングゲーム",
+        "privacy_page_title": "Digitinho Galaxy — プライバシーポリシーと透明性",
         "privacy_overview_title": "主なポイントの要約",
         "privacy_contact_title": "お問い合わせと質問",
-        "privacy_contact_desc": "当ゲームはサーバーやデータ収集を持たないクライアントサイドのオープンソースプロジェクトであるため、ご質問やご提案はGitHubリポジトリのIssueよりお寄せください。"
+        "privacy_contact_desc": "当ゲームはサーバーやデータ収集を持たないクライアントサイドのオープンソースプロジェクトであるため、ご質問やご提案はGitHubリポジトリのIssueよりお寄せください。",
+        "boss_alien_xylarion_name": "虚空の覇者 サイラリオン",
+        "boss_alien_xylarion_title": "エイリアン先鋒司令官",
+        "boss_alien_xylarion_scenario": "カイパーベルト（太陽系の境界）",
+        "boss_alien_xylarion_scenario_desc": "サイラリオン率いる超弩級戦艦艦隊が太陽系への侵略を開始した！",
+        "boss_alien_xylarion_badge": "エイリアン • ドレッドノート",
+        "boss_alien_xylarion_lore": "星間侵略艦隊の総司令官であり、高出力プラズマ兵器の使い手。",
+        "boss_alien_zorkon_name": "軌道の征服者 ゾルコン",
+        "boss_alien_zorkon_title": "生体機械群の群れ主",
+        "boss_alien_zorkon_scenario": "海王星軌道",
+        "boss_alien_zorkon_scenario_desc": "ゾルコンの有機生体群が太陽系の巨大ガス惑星を包囲した！",
+        "boss_alien_zorkon_badge": "エイリアン • スウォーム",
+        "boss_alien_zorkon_lore": "宇宙艦隊をも貪り尽くす生体機械のハイブマインドを統括する。",
+        "boss_alien_vespera_name": "反物質の女帝 ヴェスペラ",
+        "boss_alien_vespera_title": "銀河サイキック主権者",
+        "boss_alien_vespera_scenario": "土星の輪",
+        "boss_alien_vespera_scenario_desc": "ヴェスペラは反物質砲を起動し、太陽系の重力障壁を打ち破ろうとしている！",
+        "boss_alien_vespera_badge": "エイリアン • サイキック",
+        "boss_alien_vespera_lore": "ダークエネルギーと銀河規模の精神嵐を自在に操る。",
+        "boss_alien_kragthor_name": "艦隊ブレイカー クラグソール",
+        "boss_alien_kragthor_title": "エイリアン闘争大将軍",
+        "boss_alien_kragthor_scenario": "小惑星帯",
+        "boss_alien_kragthor_scenario_desc": "クラグソールの重装甲艦が小惑星を粉砕し、地球への侵略航路を切り開く！",
+        "boss_alien_kragthor_badge": "エイリアン • ウォーロード",
+        "boss_alien_kragthor_lore": "反物質破壊兵器を装備した冷徹な重装甲侵略戦士。",
+        "boss_alien_nebulor_name": "暗黒物質の先駆者 ネビュラー",
+        "boss_alien_nebulor_title": "宇宙影の支配体",
+        "boss_alien_nebulor_scenario": "木星軌道",
+        "boss_alien_nebulor_scenario_desc": "ネビュラーは木星の磁気圏を歪め、地球への直接攻撃態勢を整えている！",
+        "boss_alien_nebulor_badge": "エイリアン • シャドウ",
+        "boss_alien_nebulor_lore": "時空の歪みと特異点重力を意のままに操る異形体。",
+        "boss_alien_xenor_name": "銀河最高知性 ゼノア",
+        "boss_alien_xenor_title": "侵略中枢マザーブレイン",
+        "boss_alien_xenor_scenario": "地球・月周回軌道",
+        "boss_alien_xenor_scenario_desc": "ゼノアの超巨大母艦が月軌道に現れ、地球侵略の最終段階に入った！",
+        "boss_alien_xenor_badge": "エイリアン • マザーシップ",
+        "boss_alien_xenor_lore": "太陽系侵略計画を全統括するエイリアンの最高意志中枢。"
     },
     "syllables": [
         "ka",
@@ -485,837 +521,1304 @@
     ],
     "words": [
         {
-            "text": "neko",
-            "type": "animal",
-            "meaning": "猫：愛らしく喉を鳴らす身軽な生き物"
-        },
-        {
-            "text": "ie",
-            "type": "place",
-            "meaning": "家：家族が安らぎ暮らすあたたかな場所"
-        },
-        {
-            "text": "ai",
-            "type": "feeling",
-            "meaning": "愛：深く人を想い慈しむ心"
-        },
-        {
-            "text": "tama",
-            "type": "object",
-            "meaning": "玉・球：スポーツや遊びで転がす丸いもの"
-        },
-        {
-            "text": "hi",
-            "type": "element",
-            "meaning": "火：光と熱を放ち燃え盛るエレメント"
-        },
-        {
-            "text": "kaze",
-            "type": "nature",
-            "meaning": "風：大地を通り抜けて吹き抜ける空気の流れ"
-        },
-        {
-            "text": "mado",
-            "type": "place",
-            "meaning": "窓：光と澄んだ風を部屋に招き入れる開口部"
-        },
-        {
-            "text": "ookami",
-            "type": "animal",
-            "meaning": "狼：月に吠える誇り高き群れのハンター"
-        },
-        {
-            "text": "ishi",
-            "type": "nature",
-            "meaning": "石：大地が育んだ硬く揺るぎない鉱物"
-        },
-        {
-            "text": "hatake",
-            "type": "nature",
-            "meaning": "畑・野：青々とした草や作物が広がる大地"
-        },
-        {
-            "text": "ame",
-            "type": "nature",
-            "meaning": "雨：空の雲から降り注ぐ恵みの雫"
-        },
-        {
-            "text": "tsuchi",
-            "type": "nature",
-            "meaning": "土・地球：生命を育む母なる大地"
-        },
-        {
-            "text": "yoru",
-            "type": "time",
-            "meaning": "夜：日没から夜明けまでの静寂の時間"
-        },
-        {
-            "text": "hoshi",
+            "text": "sun",
             "type": "cosmos",
-            "meaning": "星：夜空にきらめく無数の光の点"
+            "meaning": "宇宙・天体関連概念: sun"
         },
         {
-            "text": "ryu",
-            "type": "fantasy",
-            "meaning": "竜：天を駆け炎を放つ伝説の聖獣"
-        },
-        {
-            "text": "kitsune",
-            "type": "animal",
-            "meaning": "狐：豊かな尾を持つ聡明な森の獣"
-        },
-        {
-            "text": "machi",
-            "type": "place",
-            "meaning": "街：賑わいと人々の活気があふれる都市"
-        },
-        {
-            "text": "mori",
-            "type": "nature",
-            "meaning": "森：深い緑と生き物たちが息づく木々の世界"
-        },
-        {
-            "text": "hoshi",
+            "text": "moon",
             "type": "cosmos",
-            "meaning": "惑星：恒星の周りを静かに公転する天体"
+            "meaning": "宇宙・天体関連概念: moon"
         },
         {
-            "text": "tsurugi",
-            "type": "object",
-            "meaning": "剣：研ぎ澄まされた鋭い白銀の刃"
-        },
-        {
-            "text": "suisho",
-            "type": "object",
-            "meaning": "水晶：純粋な輝きを宿す透明な結晶"
-        },
-        {
-            "text": "kazan",
-            "type": "nature",
-            "meaning": "火山：灼熱のマグマを吹き上げる雄大な山"
-        },
-        {
-            "text": "umi",
-            "type": "nature",
-            "meaning": "海：地球の広がりを包み込む壮大な青"
-        },
-        {
-            "text": "hebi",
-            "type": "animal",
-            "meaning": "蛇：滑らかに地を這う神秘的な生き物"
-        },
-        {
-            "text": "kaminari",
-            "type": "nature",
-            "meaning": "雷：光の閃光とともに轟く天の轟音"
-        },
-        {
-            "text": "hikari",
+            "text": "moons",
             "type": "cosmos",
-            "meaning": "光：世界を照らし闇を払う希望の輝き"
+            "meaning": "宇宙・天体関連概念: moons"
         },
         {
-            "text": "uma",
-            "type": "animal",
-            "meaning": "馬：風のように大地を駆ける優美な駿馬"
-        },
-        {
-            "text": "kumo",
-            "type": "nature",
-            "meaning": "雲：青空にゆったりと浮かぶ白いかたまり"
-        },
-        {
-            "text": "shishi",
-            "type": "animal",
-            "meaning": "獅子：百獣の王と称される威風堂々の猛獣"
-        },
-        {
-            "text": "mizuumi",
-            "type": "nature",
-            "meaning": "湖：山々に囲まれた澄んだ静かな水面"
-        },
-        {
-            "text": "kairo",
-            "type": "tech",
-            "meaning": "回路：電子やバイナリ信号が流れる高密度のプリント基板"
-        },
-        {
-            "text": "reza",
-            "type": "tech",
-            "meaning": "レーザー：光学的スキャンや通信を行う指向性の高い干渉光"
-        },
-        {
-            "text": "nettowaku",
-            "type": "tech",
-            "meaning": "ネットワーク：世界中の端末とサーバを結ぶ高速通信網"
-        },
-        {
-            "text": "deta",
-            "type": "tech",
-            "meaning": "データ：アルゴリズムによって高速処理されるバイナリ情報"
-        },
-        {
-            "text": "pikuseru",
-            "type": "tech",
-            "meaning": "画素：画面を構成する最小単位の微小な色要素"
-        },
-        {
-            "text": "robotto",
-            "type": "tech",
-            "meaning": "ロボット：複雑な作業を自律的にこなすプログラマブル機械"
-        },
-        {
-            "text": "denshi",
-            "type": "tech",
-            "meaning": "電子：回路内を移動して信号と電力を運ぶ素粒子"
-        },
-        {
-            "text": "eisei",
-            "type": "tech",
-            "meaning": "人工衛星：地球周回軌道から通信や観測を行う宇宙機"
-        },
-        {
-            "text": "kodo",
-            "type": "tech",
-            "meaning": "コード：プロセッサを駆動するプログラム命令の構文"
-        },
-        {
-            "text": "sensa",
-            "type": "tech",
-            "meaning": "センサー：光や熱などの物理的変化を検出する電子素子"
-        },
-        {
-            "text": "sofuto",
-            "type": "tech",
-            "meaning": "ソフトウェア：ハードウェアに命令を与えるプログラム群"
-        },
-        {
-            "text": "antena",
-            "type": "tech",
-            "meaning": "アンテナ：電磁波を高精度に送受信する通信装置"
-        },
-        {
-            "text": "taiyou",
+            "text": "sky",
             "type": "cosmos",
-            "meaning": "太陽：地球を温め光を注ぐ太陽系の恒星"
+            "meaning": "宇宙・天体関連概念: sky"
         },
         {
-            "text": "tsuki",
+            "text": "ray",
+            "type": "phenomenon",
+            "meaning": "宇宙・天体関連概念: ray"
+        },
+        {
+            "text": "halo",
             "type": "cosmos",
-            "meaning": "月：夜空に静かに浮かび銀色に輝く衛星"
+            "meaning": "宇宙・天体関連概念: halo"
         },
         {
-            "text": "kawa",
-            "type": "nature",
-            "meaning": "川：山から海へと絶え間なく流れる清流"
-        },
-        {
-            "text": "umi",
-            "type": "nature",
-            "meaning": "海：地球の表面を広く覆う広大な塩水域"
-        },
-        {
-            "text": "tori",
-            "type": "animal",
-            "meaning": "鳥：翼を広げて大空を自由に舞う羽毛の生き物"
-        },
-        {
-            "text": "hachi",
-            "type": "nature",
-            "meaning": "蜂：花々を飛び交い甘い黄金の蜜を集める昆虫"
-        },
-        {
-            "text": "oto",
-            "type": "element",
-            "meaning": "音：空気を伝わり耳で感知される音響の振動"
-        },
-        {
-            "text": "hana",
-            "type": "nature",
-            "meaning": "花：色鮮やかで甘い香りを放つ植物の開花部位"
-        },
-        {
-            "text": "kamo",
-            "type": "animal",
-            "meaning": "鴨：水辺を泳ぎ水草を食べる平らなくちばしの水鳥"
-        },
-        {
-            "text": "kaeru",
-            "type": "animal",
-            "meaning": "蛙：水辺で高く跳びはねる緑の肌の両生類"
-        },
-        {
-            "text": "kane",
-            "type": "object",
-            "meaning": "鐘：打つと澄んだ余韻が遠くまで響き渡る金属器"
-        },
-        {
-            "text": "fune",
-            "type": "vehicle",
-            "meaning": "船：海や湖を渡り人々や荷を運ぶ乗り物"
-        },
-        {
-            "text": "kabin",
-            "type": "object",
-            "meaning": "花瓶：摘み取った草花を飾るための美しい器"
-        },
-        {
-            "text": "kin",
-            "type": "element",
-            "meaning": "金：永遠の輝きと高い価値を持つ黄金の貴金属"
-        },
-        {
-            "text": "chizu",
-            "type": "object",
-            "meaning": "地図：陸や海や道を俯瞰して描いた案内図"
-        },
-        {
-            "text": "hon",
-            "type": "object",
-            "meaning": "本：文字や挿絵で知識や物語を伝える綴じ物"
-        },
-        {
-            "text": "hashi",
-            "type": "place",
-            "meaning": "橋：川や谷を越えて両岸をつなぐ建造物"
-        },
-        {
-            "text": "boto",
-            "type": "vehicle",
-            "meaning": "舟：櫂で漕ぎ水面を静かに進む小さな小舟"
-        },
-        {
-            "text": "ha",
-            "type": "nature",
-            "meaning": "葉：日光を受けて光合成を行う植物の緑の葉"
-        },
-        {
-            "text": "kagi",
-            "type": "object",
-            "meaning": "鍵：扉や錠前を開け閉めするための金属具"
-        },
-        {
-            "text": "yume",
-            "type": "feeling",
-            "meaning": "夢：眠りの中で心が見る幻想的な情景"
-        },
-        {
-            "text": "kusa",
-            "type": "nature",
-            "meaning": "草：大地を青々と覆い爽やかに茂る植物"
-        },
-        {
-            "text": "uta",
-            "type": "art",
-            "meaning": "歌：リズムと調べに乗せて心をつづる言葉"
-        },
-        {
-            "text": "kanmuri",
-            "type": "object",
-            "meaning": "冠：王や女王の頭上を飾る宝石入りの金冠"
-        },
-        {
-            "text": "shinju",
-            "type": "object",
-            "meaning": "真珠：貝の体内で育まれる気品ある虹色の玉"
-        },
-        {
-            "text": "niwa",
-            "type": "place",
-            "meaning": "庭：草木や花が美しく整えられた憩いの空間"
-        },
-        {
-            "text": "tera",
-            "type": "place",
-            "meaning": "寺：静寂の中で祈りと修行が行われる聖堂"
-        },
-        {
-            "text": "tobira",
-            "type": "fantasy",
-            "meaning": "扉：異なる世界や次元へと通じる不思議な門"
-        },
-        {
-            "text": "tate",
-            "type": "object",
-            "meaning": "盾：敵の攻撃を防ぎ身を守るための防具"
-        },
-        {
-            "text": "tabi",
-            "type": "experience",
-            "meaning": "旅：見知らぬ土地を巡り見聞を広げる冒険"
-        },
-        {
-            "text": "ya",
-            "type": "object",
-            "meaning": "矢：弓から放たれて標的へと飛ぶ鋭い矢羽"
-        },
-        {
-            "text": "mori",
-            "type": "nature",
-            "meaning": "森：多くの木々が生い茂り野鳥がさえずる林"
-        },
-        {
-            "text": "suisei",
+            "text": "axis",
             "type": "cosmos",
-            "meaning": "彗星：氷と塵でできた長い光の尾を引く天体"
+            "meaning": "宇宙・天体関連概念: axis"
         },
         {
-            "text": "shiro",
-            "type": "place",
-            "meaning": "城：石垣と天守を備えた堂々たる要塞"
+            "text": "phase",
+            "type": "phenomenon",
+            "meaning": "宇宙・天体関連概念: phase"
         },
         {
-            "text": "ginga",
-            "type": "cosmos",
-            "meaning": "銀河：無数の星々と星雲が渦を巻く大宇宙の群れ"
+            "text": "wave",
+            "type": "phenomenon",
+            "meaning": "宇宙・天体関連概念: wave"
         },
         {
-            "text": "kioku",
-            "type": "mind",
-            "meaning": "記憶：経験した出来事や知識を心にとどめる力"
-        },
-        {
-            "text": "uchuu",
-            "type": "cosmos",
-            "meaning": "宇宙：時間と空間、物質とエネルギーの無限の広がり"
-        },
-        {
-            "text": "meiro",
-            "type": "place",
-            "meaning": "迷路：入り組んだ通路で行く手を惑わす仕掛け"
-        },
-        {
-            "text": "chou",
-            "type": "animal",
-            "meaning": "蝶：羽に美しい紋様を持ちひらひらと舞う昆虫"
-        },
-        {
-            "text": "arashi",
-            "type": "nature",
-            "meaning": "嵐：強い風と激しい雨が吹き荒れる気象現象"
-        },
-        {
-            "text": "seiza",
-            "type": "cosmos",
-            "meaning": "星座：夜空の星々を結んで神話を描いた図形"
-        },
-        {
-            "text": "inazuma",
-            "type": "element",
-            "meaning": "稲妻：雷雲から大地へと一瞬で閃く光の放電"
-        },
-        {
-            "text": "chiheisen",
-            "type": "nature",
-            "meaning": "地平線：大地と天空が遠くで交わるように見える境界"
-        },
-        {
-            "text": "uchusen",
+            "text": "ship",
             "type": "tech",
-            "meaning": "宇宙船：星々の海を航行するために作られた探査船"
+            "meaning": "宇宙・天体関連概念: ship"
         },
         {
-            "text": "gijutsu",
+            "text": "nova",
+            "type": "phenomenon",
+            "meaning": "宇宙・天体関連概念: nova"
+        },
+        {
+            "text": "target",
             "type": "tech",
-            "meaning": "技術：人々の暮らしを豊かにする科学の応用力"
+            "meaning": "宇宙・天体関連概念: target"
         },
         {
-            "text": "kenchiku",
-            "type": "art",
-            "meaning": "建築：美と実用性を兼ね備えた建物を設計する術"
+            "text": "data",
+            "type": "tech",
+            "meaning": "宇宙・天体関連概念: data"
         },
         {
-            "text": "sokudo",
-            "type": "concept",
-            "meaning": "速度：単位時間あたりに進む動きの速さ"
+            "text": "pitch",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: pitch"
         },
         {
-            "text": "nazo",
-            "type": "mystery",
-            "meaning": "謎：好奇心をかき立てる不可思議な秘密"
+            "text": "year",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: year"
         },
         {
-            "text": "shinse",
-            "type": "music",
-            "meaning": "シンセ：多彩な波形から新しい音色を創る電子楽器"
+            "text": "vacuum",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: vacuum"
         },
         {
-            "text": "telepasi",
-            "type": "mind",
-            "meaning": "テレパシー：言葉を使わずに心と心を通わせる能力"
+            "text": "astro",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: astro"
+        },
+        {
+            "text": "cosmos",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: cosmos"
+        },
+        {
+            "text": "mars",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: mars"
+        },
+        {
+            "text": "venus",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: venus"
+        },
+        {
+            "text": "earth",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: earth"
+        },
+        {
+            "text": "solar",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: solar"
+        },
+        {
+            "text": "probe",
+            "type": "tech",
+            "meaning": "宇宙・天体関連概念: probe"
+        },
+        {
+            "text": "radar",
+            "type": "tech",
+            "meaning": "宇宙・天体関連概念: radar"
+        },
+        {
+            "text": "magma",
+            "type": "nature",
+            "meaning": "宇宙・天体関連概念: magma"
+        },
+        {
+            "text": "cloud",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: cloud"
+        },
+        {
+            "text": "pluto",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: pluto"
+        },
+        {
+            "text": "orbit",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: orbit"
+        },
+        {
+            "text": "comet",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: comet"
+        },
+        {
+            "text": "pulsar",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: pulsar"
+        },
+        {
+            "text": "quasar",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: quasar"
+        },
+        {
+            "text": "corona",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: corona"
+        },
+        {
+            "text": "meteor",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: meteor"
+        },
+        {
+            "text": "optics",
+            "type": "tech",
+            "meaning": "宇宙・天体関連概念: optics"
+        },
+        {
+            "text": "space",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: space"
+        },
+        {
+            "text": "aurora",
+            "type": "phenomenon",
+            "meaning": "宇宙・天体関連概念: aurora"
+        },
+        {
+            "text": "zenith",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: zenith"
+        },
+        {
+            "text": "hubble",
+            "type": "tech",
+            "meaning": "宇宙・天体関連概念: hubble"
+        },
+        {
+            "text": "dust",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: dust"
+        },
+        {
+            "text": "hole",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: hole"
+        },
+        {
+            "text": "star",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: star"
+        },
+        {
+            "text": "planet",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: planet"
+        },
+        {
+            "text": "galaxy",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: galaxy"
+        },
+        {
+            "text": "galaxies",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: galaxies"
+        },
+        {
+            "text": "universe",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: universe"
+        },
+        {
+            "text": "nebula",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: nebula"
+        },
+        {
+            "text": "gravity",
+            "type": "phenomenon",
+            "meaning": "宇宙・天体関連概念: gravity"
+        },
+        {
+            "text": "supernova",
+            "type": "phenomenon",
+            "meaning": "宇宙・天体関連概念: supernova"
+        },
+        {
+            "text": "astronaut",
+            "type": "tech",
+            "meaning": "宇宙・天体関連概念: astronaut"
+        },
+        {
+            "text": "astronomy",
+            "type": "science",
+            "meaning": "宇宙・天体関連概念: astronomy"
+        },
+        {
+            "text": "exoplanet",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: exoplanet"
+        },
+        {
+            "text": "exoplanets",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: exoplanets"
+        },
+        {
+            "text": "satellite",
+            "type": "tech",
+            "meaning": "宇宙・天体関連概念: satellite"
+        },
+        {
+            "text": "constellation",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: constellation"
+        },
+        {
+            "text": "telescope",
+            "type": "tech",
+            "meaning": "宇宙・天体関連概念: telescope"
+        },
+        {
+            "text": "starship",
+            "type": "tech",
+            "meaning": "宇宙・天体関連概念: starship"
+        },
+        {
+            "text": "atmosphere",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: atmosphere"
+        },
+        {
+            "text": "magnetosphere",
+            "type": "phenomenon",
+            "meaning": "宇宙・天体関連概念: magnetosphere"
+        },
+        {
+            "text": "radiation",
+            "type": "phenomenon",
+            "meaning": "宇宙・天体関連概念: radiation"
+        },
+        {
+            "text": "spectrum",
+            "type": "science",
+            "meaning": "宇宙・天体関連概念: spectrum"
+        },
+        {
+            "text": "andromeda",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: andromeda"
+        },
+        {
+            "text": "heliosphere",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: heliosphere"
+        },
+        {
+            "text": "antimatter",
+            "type": "science",
+            "meaning": "宇宙・天体関連概念: antimatter"
+        },
+        {
+            "text": "singularity",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: singularity"
+        },
+        {
+            "text": "multiverse",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: multiverse"
+        },
+        {
+            "text": "light-year",
+            "type": "science",
+            "meaning": "宇宙・天体関連概念: light-year"
+        },
+        {
+            "text": "black-hole",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: black-hole"
+        },
+        {
+            "text": "stardust",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: stardust"
+        },
+        {
+            "text": "dark-matter",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: dark-matter"
+        },
+        {
+            "text": "dark-energy",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: dark-energy"
+        },
+        {
+            "text": "wormhole",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: wormhole"
+        },
+        {
+            "text": "speed-of-light",
+            "type": "science",
+            "meaning": "宇宙・天体関連概念: speed-of-light"
+        },
+        {
+            "text": "space-station",
+            "type": "tech",
+            "meaning": "宇宙・天体関連概念: space-station"
+        },
+        {
+            "text": "event-horizon",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: event-horizon"
+        },
+        {
+            "text": "milky-way",
+            "type": "cosmos",
+            "meaning": "宇宙・天体関連概念: milky-way"
         }
     ],
     "bossWords": {
+        "alien_dreadnought": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: year"
+            }
+        ],
+        "alien_hive": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: year"
+            }
+        ],
+        "alien_psionic": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: year"
+            }
+        ],
+        "alien_warlord": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: year"
+            }
+        ],
+        "alien_darkmatter": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: year"
+            }
+        ],
+        "alien_mothership": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: year"
+            }
+        ],
         "robot": [
             {
-                "text": "kairo",
-                "type": "tech",
-                "meaning": "回路：電子やバイナリ信号が流れる高密度のプリント基板"
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sun"
             },
             {
-                "text": "reza",
-                "type": "tech",
-                "meaning": "レーザー：光学的スキャンや通信を行う指向性の高い干渉光"
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moon"
             },
             {
-                "text": "nettowaku",
-                "type": "tech",
-                "meaning": "ネットワーク：世界中の端末とサーバを結ぶ高速通信網"
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moons"
             },
             {
-                "text": "deta",
-                "type": "tech",
-                "meaning": "データ：アルゴリズムによって高速処理されるバイナリ情報"
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sky"
             },
             {
-                "text": "pikuseru",
-                "type": "tech",
-                "meaning": "画素：画面を構成する最小単位の微小な色要素"
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: ray"
             },
             {
-                "text": "robotto",
-                "type": "tech",
-                "meaning": "ロボット：複雑な作業を自律的にこなすプログラマブル機械"
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: halo"
             },
             {
-                "text": "denshi",
-                "type": "tech",
-                "meaning": "電子：回路内を移動して信号と電力を運ぶ素粒子"
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: axis"
             },
             {
-                "text": "eisei",
-                "type": "tech",
-                "meaning": "人工衛星：地球周回軌道から通信や観測を行う宇宙機"
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: phase"
             },
             {
-                "text": "kodo",
-                "type": "tech",
-                "meaning": "コード：プロセッサを駆動するプログラム命令の構文"
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: wave"
             },
             {
-                "text": "sensa",
+                "text": "ship",
                 "type": "tech",
-                "meaning": "センサー：光や熱などの物理的変化を検出する電子素子"
+                "meaning": "宇宙・天体関連概念: ship"
             },
             {
-                "text": "sofuto",
-                "type": "tech",
-                "meaning": "ソフトウェア：ハードウェアに命令を与えるプログラム群"
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: nova"
             },
             {
-                "text": "antena",
+                "text": "target",
                 "type": "tech",
-                "meaning": "アンテナ：電磁波を高精度に送受信する通信装置"
+                "meaning": "宇宙・天体関連概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: year"
             }
         ],
         "beast": [
             {
-                "text": "shishi",
-                "type": "fauna",
-                "meaning": "百獣の王：堂々たるたてがみと圧倒的な狩りの力を持つ大型肉食獣"
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sun"
             },
             {
-                "text": "ookami",
-                "type": "fauna",
-                "meaning": "狼：群れを統率して荒野を駆け、月に遠吠えを響かせる狩人"
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moon"
             },
             {
-                "text": "tora",
-                "type": "fauna",
-                "meaning": "虎：強靭な筋肉と見事な縞模様を持つ孤独な森の猛獣"
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moons"
             },
             {
-                "text": "washi",
-                "type": "fauna",
-                "meaning": "鷲：上空から獲物を見失わず鋭い爪で急降下する空の覇者"
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sky"
             },
             {
-                "text": "mure",
-                "type": "fauna",
-                "meaning": "群れ：厳格な序列を守り連携して獲物を追いつめる捕食者集団"
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: ray"
             },
             {
-                "text": "tsume",
-                "type": "fauna",
-                "meaning": "鉤爪：獲物を確実に捕獲し引き裂く鋭利な天然の武器"
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: halo"
             },
             {
-                "text": "emono",
-                "type": "fauna",
-                "meaning": "獲物：自然界の食物連鎖の中で命を賭して逃走する野生動物"
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: axis"
             },
             {
-                "text": "kemono",
-                "type": "fauna",
-                "meaning": "獣：過酷な大自然を本能と生命力で生き抜く強き生き物"
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: phase"
             },
             {
-                "text": "panza",
-                "type": "fauna",
-                "meaning": "豹：しなやかな体躯で木々を渡り歩く俊敏なハンター"
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: wave"
             },
             {
-                "text": "hayabusa",
-                "type": "fauna",
-                "meaning": "隼：猛烈な速度の急降下で空中戦を制する俊足の猛禽"
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: ship"
             },
             {
-                "text": "kuma",
-                "type": "fauna",
-                "meaning": "熊：強烈な腕力と厚い毛皮で大自然に君臨する大巨獣"
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: nova"
             },
             {
-                "text": "yajuu",
-                "type": "fauna",
-                "meaning": "野獣：牙と爪を研ぎ澄まし原始の掟に従う荒ぶる獣"
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: year"
             }
         ],
         "mythology": [
             {
-                "text": "ryu",
-                "type": "myth",
-                "meaning": "竜・龍：天を駆け灼熱の炎や雷を操る神聖にして強大な伝説の獣"
-            },
-            {
-                "text": "fushichou",
-                "type": "myth",
-                "meaning": "不死鳥：自らを炎で焼き、その灰の中から永遠に蘇る霊鳥"
-            },
-            {
-                "text": "hidora",
-                "type": "myth",
-                "meaning": "ヒドラ：首を切り落とすたびに二本の新首が生え出る多頭の大蛇"
-            },
-            {
-                "text": "gurifon",
-                "type": "myth",
-                "meaning": "グリフォン：黄金の翼と鋭い嘴、獅子の肉体を持つ天空の守護聖獣"
-            },
-            {
-                "text": "orinpusu",
-                "type": "myth",
-                "meaning": "オリュンポス：雲海の上にそびえ立つ神々の聖なる都"
-            },
-            {
-                "text": "sufinkusu",
-                "type": "myth",
-                "meaning": "スフィンクス：旅人に死の謎解きを課す有翼の人面獅子"
-            },
-            {
-                "text": "shinwa",
-                "type": "myth",
-                "meaning": "神話：神々と英雄たちが世界の創世と運命を紡いだ古代の物語"
-            },
-            {
-                "text": "kimera",
-                "type": "myth",
-                "meaning": "キメラ：獅子と山羊と蛇の異形が合体し火焔を噴き散らす魔獣"
-            },
-            {
-                "text": "kyojin",
-                "type": "myth",
-                "meaning": "巨人・ティタン：オリュンポスの神々に先立ち天地を支えた原初の神族"
-            },
-            {
-                "text": "pegasasu",
-                "type": "myth",
-                "meaning": "ペガサス：純白の翼で大空を駆け抜ける神聖なる天馬"
-            },
-            {
-                "text": "kentaorosu",
-                "type": "myth",
-                "meaning": "ケンタウロス：人間の知性と駿馬の疾走力を併せ持つ森の賢者"
-            },
-            {
-                "text": "kamigami",
-                "type": "myth",
-                "meaning": "神々：天界の神殿に集い、人々の祈りと運命を司る至高の存在"
-            }
-        ],
-        "ocean": [
-            {
-                "text": "kaiyou",
-                "type": "ocean",
-                "meaning": "海洋：地球の大部分を包み込み、未知の深海を抱く広大なる塩水の海"
-            },
-            {
-                "text": "same",
-                "type": "ocean",
-                "meaning": "鮫：微弱な生体電気を感じ取り獲物を追う流線型の捕食者"
-            },
-            {
-                "text": "sango",
-                "type": "ocean",
-                "meaning": "珊瑚：海底に色鮮やかな巨大礁を築き上げる海洋生態系の揺りかご"
-            },
-            {
-                "text": "shinkai",
-                "type": "ocean",
-                "meaning": "深海：太陽の光が届かず、超高圧と暗黒が支配する神秘の世界"
-            },
-            {
-                "text": "tako",
-                "type": "ocean",
-                "meaning": "蛸：八本の腕と高度な知性を持ち、瞬時に体色を変える軟体動物"
-            },
-            {
-                "text": "tsunami",
-                "type": "ocean",
-                "meaning": "津波：海底地震によって発生し沿岸へ押し寄せる巨大な波"
-            },
-            {
-                "text": "kujira",
-                "type": "ocean",
-                "meaning": "鯨：深海に響く歌声で仲間と交信する地球上最大の海洋哺乳類"
-            },
-            {
-                "text": "kaikou",
-                "type": "ocean",
-                "meaning": "海溝：プレートが沈み込み地球で最も深い谷を形成する暗黒の裂け目"
-            },
-            {
-                "text": "shio",
-                "type": "ocean",
-                "meaning": "潮汐：月の引力によって規則正しく満ち引きを繰り返す海水の潮流"
-            },
-            {
-                "text": "kurage",
-                "type": "ocean",
-                "meaning": "海月：傘を拍動させながら青い海を漂う半透明の刺胞動物"
-            },
-            {
-                "text": "shou",
-                "type": "ocean",
-                "meaning": "環礁：無数の珊瑚が何世代も積み重なって築き上げた海の城壁"
-            },
-            {
-                "text": "iruka",
-                "type": "ocean",
-                "meaning": "海豚：超音波クリックで仲間と語り合う人懐っこい海の俊足"
-            }
-        ],
-        "cosmos": [
-            {
-                "text": "hoshi",
+                "text": "sun",
                 "type": "cosmos",
-                "meaning": "恒星：自らの核融合反応によって輝き、熱と光を放つ星"
+                "meaning": "宇宙・天体関連概念: sun"
             },
             {
-                "text": "wakusei",
+                "text": "moon",
                 "type": "cosmos",
-                "meaning": "惑星：恒星の周囲を一定の周期で静かに周回する球状の天体"
+                "meaning": "宇宙・天体関連概念: moon"
             },
             {
-                "text": "kidou",
+                "text": "moons",
                 "type": "cosmos",
-                "meaning": "軌道：重力に引かれながら天体が時空に描く永遠の運行曲線"
+                "meaning": "宇宙・天体関連概念: moons"
             },
             {
-                "text": "suisei",
+                "text": "sky",
                 "type": "cosmos",
-                "meaning": "彗星：氷と塵からなり、太陽に近づくと美しい尾を引く旅人"
+                "meaning": "宇宙・天体関連概念: sky"
             },
             {
-                "text": "ryuusei",
-                "type": "cosmos",
-                "meaning": "流星：宇宙の微粒子が大気に突入して眩く一筋の軌跡を刻む光"
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: ray"
             },
             {
-                "text": "parusa",
+                "text": "halo",
                 "type": "cosmos",
-                "meaning": "パルサー：超高密度で規則的な電波パルスを放射する自転中性子星"
+                "meaning": "宇宙・天体関連概念: halo"
             },
             {
-                "text": "ginga",
+                "text": "axis",
                 "type": "cosmos",
-                "meaning": "銀河：数千億の星々や星雲が重力によって渦を巻く巨大な星の島"
+                "meaning": "宇宙・天体関連概念: axis"
             },
             {
-                "text": "nisshoku",
-                "type": "cosmos",
-                "meaning": "日食：月が太陽を覆い隠し地上に一時的な黄昏をもたらす神秘の天体現象"
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: phase"
             },
             {
-                "text": "chuuryoku",
-                "type": "cosmos",
-                "meaning": "重力：星々を引き寄せ、宇宙の構造と時間を形作る根源的な力"
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: wave"
             },
             {
-                "text": "seiun",
-                "type": "cosmos",
-                "meaning": "星雲：宇宙空間に漂う巨大なガスと塵の雲で、星々が産声をあげる母胎"
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: ship"
             },
             {
-                "text": "kuwasa",
-                "type": "cosmos",
-                "meaning": "クエーサー：超巨大ブラックホールを動力源とする宇宙最強クラスの超高輝度天体"
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: nova"
             },
             {
-                "text": "uchu",
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: data"
+            },
+            {
+                "text": "pitch",
                 "type": "cosmos",
-                "meaning": "宇宙：無数の星々と銀河、無限の広がりを持つ星間空間"
+                "meaning": "宇宙・天体関連概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: year"
             }
         ],
         "volcano": [
             {
-                "text": "kazan",
-                "type": "volcano",
-                "meaning": "火山：地下深部からマグマやガスが噴出する大地の開口部"
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sun"
             },
             {
-                "text": "maguma",
-                "type": "volcano",
-                "meaning": "マグマ：地下深くで超高温によりドロドロに溶けた岩石流体"
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moon"
             },
             {
-                "text": "yougan",
-                "type": "volcano",
-                "meaning": "溶岩：火口から地表へあふれ出し、大地を焼き尽くす灼熱の流体"
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moons"
             },
             {
-                "text": "hai",
-                "type": "volcano",
-                "meaning": "火山灰：噴火に伴い空高く吹き上げられ空を覆う微細な岩石粉末"
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sky"
             },
             {
-                "text": "kakou",
-                "type": "volcano",
-                "meaning": "火口：煮えたぎるマグマと噴煙を噴き上げる火山の頂上開口部"
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: ray"
             },
             {
-                "text": "genbuan",
-                "type": "volcano",
-                "meaning": "玄武岩：流出した溶岩が急速に冷え固まってできる極めて硬質な黒色火成岩"
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: halo"
             },
             {
-                "text": "kaji",
-                "type": "volcano",
-                "meaning": "鍛冶場：地球深部の大熱量によって鉱物や金属を鍛え上げる地底の坩堝"
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: axis"
             },
             {
-                "text": "kanketsusen",
-                "type": "volcano",
-                "meaning": "間欠泉：地下の地熱で沸騰した熱水と水蒸気を天高く噴き上げる天然の泉"
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: phase"
             },
             {
-                "text": "iwa",
-                "type": "volcano",
-                "meaning": "岩石：冷え固まった溶岩が気の遠くなる時間を経て生み出す頑強な鉱物"
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: wave"
             },
             {
-                "text": "honoo",
-                "type": "volcano",
-                "meaning": "焔：マグマの熱気とガスが激しく燃え盛る大地を焦がす炎"
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: ship"
             },
             {
-                "text": "karudera",
-                "type": "volcano",
-                "meaning": "カルデラ：大噴火後にマグマ溜まりが陥没して形成される雄大なすり鉢状の地形"
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: nova"
             },
             {
-                "text": "purēto",
-                "type": "volcano",
-                "meaning": "プレート：地球表面を覆い、衝突と沈み込みによって火山活動を生み出す巨大岩盤"
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: year"
+            }
+        ],
+        "ocean": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: year"
+            }
+        ],
+        "cosmos": [
+            {
+                "text": "sun",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sun"
+            },
+            {
+                "text": "moon",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moon"
+            },
+            {
+                "text": "moons",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: moons"
+            },
+            {
+                "text": "sky",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: sky"
+            },
+            {
+                "text": "ray",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: ray"
+            },
+            {
+                "text": "halo",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: halo"
+            },
+            {
+                "text": "axis",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: axis"
+            },
+            {
+                "text": "phase",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: phase"
+            },
+            {
+                "text": "wave",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: wave"
+            },
+            {
+                "text": "ship",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: ship"
+            },
+            {
+                "text": "nova",
+                "type": "phenomenon",
+                "meaning": "宇宙・天体関連概念: nova"
+            },
+            {
+                "text": "target",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: target"
+            },
+            {
+                "text": "data",
+                "type": "tech",
+                "meaning": "宇宙・天体関連概念: data"
+            },
+            {
+                "text": "pitch",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: pitch"
+            },
+            {
+                "text": "year",
+                "type": "cosmos",
+                "meaning": "宇宙・天体関連概念: year"
             }
         ]
     },

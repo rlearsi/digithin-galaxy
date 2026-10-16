@@ -1,5 +1,5 @@
 /* ================================================
-   DIGITINHO — js/library.js
+   DIGITHIN GALAXY — js/library.js
    Word library (bestiary) modal & stats
    ================================================ */
 'use strict';

@@ -1,5 +1,5 @@
 /* ================================================
-   DIGITINHO — js/data.js
+   DIGITHIN GALAXY — js/data.js
    Game configuration, pools, and definitions
    ================================================ */
 'use strict';
@@ -374,88 +374,88 @@ const BossPrototype = {
 
 const BOSS_DEFS = [
   {
-    id: 'cyber_titan',
-    type: 'robot',
-    icon: '🤖',
+    id: 'alien_xylarion',
+    type: 'alien_dreadnought',
+    icon: '🛸',
     color: '#06B6D4',
     lives: 3,
     maxLives: 3,
-    nameKey: 'boss_cyber_titan_name',
-    titleKey: 'boss_cyber_titan_title',
-    scenarioKey: 'boss_cyber_titan_scenario',
-    scenarioDescKey: 'boss_cyber_titan_scenario_desc',
-    badgeKey: 'boss_cyber_titan_badge',
-    loreKey: 'boss_cyber_titan_lore'
+    nameKey: 'boss_alien_xylarion_name',
+    titleKey: 'boss_alien_xylarion_title',
+    scenarioKey: 'boss_alien_xylarion_scenario',
+    scenarioDescKey: 'boss_alien_xylarion_scenario_desc',
+    badgeKey: 'boss_alien_xylarion_badge',
+    loreKey: 'boss_alien_xylarion_lore'
   },
   {
-    id: 'feral_apex',
-    type: 'beast',
-    icon: '🦁',
-    color: '#F59E0B',
+    id: 'alien_zorkon',
+    type: 'alien_hive',
+    icon: '👾',
+    color: '#10B981',
     lives: 3,
     maxLives: 3,
-    nameKey: 'boss_feral_apex_name',
-    titleKey: 'boss_feral_apex_title',
-    scenarioKey: 'boss_feral_apex_scenario',
-    scenarioDescKey: 'boss_feral_apex_scenario_desc',
-    badgeKey: 'boss_feral_apex_badge',
-    loreKey: 'boss_feral_apex_lore'
+    nameKey: 'boss_alien_zorkon_name',
+    titleKey: 'boss_alien_zorkon_title',
+    scenarioKey: 'boss_alien_zorkon_scenario',
+    scenarioDescKey: 'boss_alien_zorkon_scenario_desc',
+    badgeKey: 'boss_alien_zorkon_badge',
+    loreKey: 'boss_alien_zorkon_lore'
   },
   {
-    id: 'arcane_chimera',
-    type: 'mythology',
-    icon: '🐲',
+    id: 'alien_vespera',
+    type: 'alien_psionic',
+    icon: '🔮',
     color: '#A855F7',
     lives: 3,
     maxLives: 3,
-    nameKey: 'boss_arcane_chimera_name',
-    titleKey: 'boss_arcane_chimera_title',
-    scenarioKey: 'boss_arcane_chimera_scenario',
-    scenarioDescKey: 'boss_arcane_chimera_scenario_desc',
-    badgeKey: 'boss_arcane_chimera_badge',
-    loreKey: 'boss_arcane_chimera_lore'
+    nameKey: 'boss_alien_vespera_name',
+    titleKey: 'boss_alien_vespera_title',
+    scenarioKey: 'boss_alien_vespera_scenario',
+    scenarioDescKey: 'boss_alien_vespera_scenario_desc',
+    badgeKey: 'boss_alien_vespera_badge',
+    loreKey: 'boss_alien_vespera_lore'
   },
   {
-    id: 'abyssal_leviathan',
-    type: 'ocean',
-    icon: '🐙',
-    color: '#0EA5E9',
+    id: 'alien_kragthor',
+    type: 'alien_warlord',
+    icon: '⚔️',
+    color: '#EF4444',
     lives: 3,
     maxLives: 3,
-    nameKey: 'boss_abyssal_leviathan_name',
-    titleKey: 'boss_abyssal_leviathan_title',
-    scenarioKey: 'boss_abyssal_leviathan_scenario',
-    scenarioDescKey: 'boss_abyssal_leviathan_scenario_desc',
-    badgeKey: 'boss_abyssal_leviathan_badge',
-    loreKey: 'boss_abyssal_leviathan_lore'
+    nameKey: 'boss_alien_kragthor_name',
+    titleKey: 'boss_alien_kragthor_title',
+    scenarioKey: 'boss_alien_kragthor_scenario',
+    scenarioDescKey: 'boss_alien_kragthor_scenario_desc',
+    badgeKey: 'boss_alien_kragthor_badge',
+    loreKey: 'boss_alien_kragthor_lore'
   },
   {
-    id: 'cosmic_chronos',
-    type: 'cosmos',
+    id: 'alien_nebulor',
+    type: 'alien_darkmatter',
     icon: '🌌',
     color: '#6366F1',
     lives: 3,
     maxLives: 3,
-    nameKey: 'boss_cosmic_chronos_name',
-    titleKey: 'boss_cosmic_chronos_title',
-    scenarioKey: 'boss_cosmic_chronos_scenario',
-    scenarioDescKey: 'boss_cosmic_chronos_scenario_desc',
-    badgeKey: 'boss_cosmic_chronos_badge',
-    loreKey: 'boss_cosmic_chronos_lore'
+    nameKey: 'boss_alien_nebulor_name',
+    titleKey: 'boss_alien_nebulor_title',
+    scenarioKey: 'boss_alien_nebulor_scenario',
+    scenarioDescKey: 'boss_alien_nebulor_scenario_desc',
+    badgeKey: 'boss_alien_nebulor_badge',
+    loreKey: 'boss_alien_nebulor_lore'
   },
   {
-    id: 'magma_vulcanus',
-    type: 'volcano',
-    icon: '🌋',
-    color: '#EF4444',
+    id: 'alien_xenor',
+    type: 'alien_mothership',
+    icon: '👑',
+    color: '#F59E0B',
     lives: 3,
     maxLives: 3,
-    nameKey: 'boss_magma_vulcanus_name',
-    titleKey: 'boss_magma_vulcanus_title',
-    scenarioKey: 'boss_magma_vulcanus_scenario',
-    scenarioDescKey: 'boss_magma_vulcanus_scenario_desc',
-    badgeKey: 'boss_magma_vulcanus_badge',
-    loreKey: 'boss_magma_vulcanus_lore'
+    nameKey: 'boss_alien_xenor_name',
+    titleKey: 'boss_alien_xenor_title',
+    scenarioKey: 'boss_alien_xenor_scenario',
+    scenarioDescKey: 'boss_alien_xenor_scenario_desc',
+    badgeKey: 'boss_alien_xenor_badge',
+    loreKey: 'boss_alien_xenor_lore'
   }
 ];
 
@@ -480,18 +480,17 @@ function getRandomBoss(level = 1, excludeTypes = []) {
 }
 
 function getBossByType(bossType, level = 1) {
-  const base = BOSS_DEFS.find(b => b.type === bossType) || BOSS_DEFS[0];
+  const base = BOSS_DEFS.find(b => b.type === bossType || b.id === bossType) || BOSS_DEFS[0];
   return createBossInstance(base, level);
 }
 
 // ------------------------------------------------
 // DETERMINISTIC BOSS SCHEDULE
-// A boss appears every BOSS_PHASE_INTERVAL phases (8, 16, 24, ...) following a fixed order.
-// Each cycle guarantees at least BOSS_WORDS_PER_CYCLE words of the cycle's boss (see js/boss.js).
+// An Alien Boss appears every BOSS_PHASE_INTERVAL phases (8, 16, 24, ...) following a fixed fleet invasion order.
 // ------------------------------------------------
 const BOSS_PHASE_INTERVAL = 8;
 const BOSS_WORDS_PER_CYCLE = 3;
-const BOSS_ORDER = ['robot', 'beast', 'mythology', 'ocean', 'cosmos', 'volcano'];
+const BOSS_ORDER = ['alien_dreadnought', 'alien_hive', 'alien_psionic', 'alien_warlord', 'alien_darkmatter', 'alien_mothership'];
 
 // 1-based cycle number of a phase (phases 1-8 = cycle 1, 9-16 = cycle 2, ...)
 function getBossCycleNumber(phase) {
