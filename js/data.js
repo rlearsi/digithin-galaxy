@@ -27,6 +27,8 @@ const CFG = {
   wildcardChance: 0.04,  // Chance of spawning a wildcard word
   shopEvery: 3,     // Shop appears every N completed phases
   shopPriceFactor: 1.45,  // Exponential price escalation
+  shopRerollPrice: 25,    // Preço por reroll de ofertas na loja
+  wordsPerCoinFarm: 10,   // A cada 10 palavras completadas ganha +1 moeda farmada
   queueSize: 6,     // Items previewed in the bottom queue
   phaseBaseCoins: 5,        // Moedas base ao concluir uma fase
   phaseCoinIncrement: 1,    // Acréscimo de +1 moeda a cada nova fase concluída
@@ -672,6 +674,22 @@ const SKILLS_CONFIG = {
     color: '#A855F7',
     category: 'skill',
     onActivate: () => {},
+    onExpire: () => {}
+  },
+  autodestroy: {
+    id: 'autodestroy',
+    icon: '⚡',
+    nameKey: 'skill_name_autodestroy',
+    descKey: 'skill_desc_autodestroy',
+    get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
+    get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
+    duration: 60000,
+    basePrice: 300,
+    color: '#F59E0B',
+    category: 'skill',
+    onActivate: (st) => {
+      st.autodestroyAccum = 0;
+    },
     onExpire: () => {}
   }
 };

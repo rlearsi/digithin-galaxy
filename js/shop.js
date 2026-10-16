@@ -287,6 +287,28 @@ function renderShopItems() {
   });
 }
 
+function updateShopRerollBtn() {
+  const btn = document.getElementById('btn-shop-reroll');
+  if (!btn) return;
+  const curCoins = (typeof getSharedCoins === 'function') ? getSharedCoins() : (state?.coins || 0);
+  const cost = (typeof CFG !== 'undefined' && CFG.shopRerollPrice !== undefined) ? CFG.shopRerollPrice : 25;
+  const tpl = (typeof t === 'function') ? t('shop_reroll_cost') : '{cost}';
+  const costText = tpl.replace('{cost}', cost);
+  
+  const costBadge = btn.querySelector('.shop-reroll-cost-badge');
+  if (costBadge) {
+    costBadge.innerHTML = `<svg class="shop-reroll-coin-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:-1px;margin-right:3px"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 9v6"/></svg>${costText}`;
+  }
+  
+  if (curCoins < cost) {
+    btn.classList.add('no-pts');
+    btn.setAttribute('disabled', 'true');
+  } else {
+    btn.classList.remove('no-pts');
+    btn.removeAttribute('disabled');
+  }
+}
+
 function updateShopBalanceDisplay() {
   const shopBal = $('shop-balance');
   if (shopBal) {
@@ -296,6 +318,7 @@ function updateShopBalanceDisplay() {
   if (balLbl && typeof t === 'function') {
     balLbl.textContent = t('shop_coins');
   }
+  updateShopRerollBtn();
 }
 
 function renderShopModal() {
@@ -306,57 +329,125 @@ function renderShopModal() {
   }
 }
 
+function rerollShopItems() {
+  const cost = (typeof CFG !== 'undefined' && CFG.shopRerollPrice !== undefined) ? CFG.shopRerollPrice : 25;
+  const curCoins = (typeof getSharedCoins === 'function') ? getSharedCoins() : (state?.coins || 0);
+  if (curCoins < cost) {
+    if (typeof playSound === 'function') playSound('error');
+    const msg = typeof t === 'function' ? t('shop_insufficient_coins') : 'Not enough coins!';
+    showShopFeedback(msg, 'warning');
+    return false;
+  }
+
+  if (typeof deductSharedCoins === 'function') {
+    deductSharedCoins(cost);
+  }
+  if (state) {
+    state.coins = (typeof getSharedCoins === 'function') ? getSharedCoins() : Math.max(0, state.coins - cost);
+    state.currentShopItems = shuffle(SKILLS_ALL).slice(0, 3);
+    state.selectedShopIndex = -1;
+  }
+
+  if (typeof playSound === 'function') playSound('click');
+  renderShopItems();
+  updateShopBalanceDisplay();
+  updateShopSelectionVisual();
+  const rerollLabel = typeof t === 'function' ? t('shop_btn_reroll') : 'Offers rerolled!';
+  showShopFeedback(rerollLabel, 'success');
+  return true;
+}
+
+function openShopFromMenu() {
+  if (typeof closeSkillsInventory === 'function') closeSkillsInventory();
+  if (typeof closeSettings === 'function') closeSettings();
+  if (!state) state = defaultState();
+  state._openedFromMenu = true;
+  state.coins = (typeof getSharedCoins === 'function') ? getSharedCoins() : (state.coins || 0);
+
+  if (!Array.isArray(state.currentShopItems) || state.currentShopItems.length === 0) {
+    state.currentShopItems = shuffle(SKILLS_ALL).slice(0, 3);
+  }
+
+  state.selectedShopIndex = -1;
+  cancelShopExitConfirm();
+  renderShopItems();
+  updateShopSelectionVisual();
+  updateShopBalanceDisplay();
+  if (modalShop) modalShop.classList.remove('hidden');
+  if (typeof playSound === 'function') playSound('click');
+}
+
 function buyShopItem(skillId, price) {
-  if ((state.coins || 0) < price) {
+  const curCoins = (typeof getSharedCoins === 'function') ? getSharedCoins() : (state?.coins || 0);
+  if (curCoins < price) {
     if (typeof playSound === 'function') playSound('error');
     const msg = typeof t === 'function' ? t('shop_insufficient_coins') : 'Not enough coins!';
     showShopFeedback(msg, 'warning');
     return;
   }
-  state.coins -= price;
+
   if (typeof deductSharedCoins === 'function') deductSharedCoins(price);
-  state.shopPurchaseCount++;
-  state.currentShopPurchases = (state.currentShopPurchases || 0) + 1;
-  state.selectedShopIndex = -1;
+  if (state) {
+    state.coins = (typeof getSharedCoins === 'function') ? getSharedCoins() : Math.max(0, (state.coins || 0) - price);
+    state.shopPurchaseCount = (state.shopPurchaseCount || 0) + 1;
+    state.currentShopPurchases = (state.currentShopPurchases || 0) + 1;
+    state.selectedShopIndex = -1;
+  }
   playSound('buy');
 
   if (skillId === 'extralife') {
-    state.lives    = Math.min(state.lives + 1, 6);
-    state.maxLives = Math.max(state.maxLives, state.lives);
+    if (state) {
+      state.lives    = Math.min((state.lives || 3) + 1, 6);
+      state.maxLives = Math.max(state.maxLives || 3, state.lives);
+    }
     showShopFeedback(typeof t === 'function' ? t('fb_permanent_life') : '+1 Permanent Life!', 'success');
   } else if (skillId === 'continue') {
-    state.continues = (state.continues || 0) + 1;
+    if (state) {
+      state.continues = (state.continues || 0) + 1;
+    }
     showShopFeedback(typeof t === 'function' ? t('fb_continue_obtained') : '+1 Continue token obtained!', 'success');
   } else if (skillId === 'wordpack') {
     // Unlock 3 random locked words from pool
-    const unlockedTexts = new Set(state.unlockedWords.map(w => w.text.toLowerCase()));
+    const unlockedTexts = new Set(((state?.unlockedWords) || []).map(w => (w.text || '').toLowerCase()));
     const eligiblePool  = (typeof getWordPoolForDifficulty === 'function')
-      ? getWordPoolForDifficulty(WORD_POOL, state.difficulty)
+      ? getWordPoolForDifficulty(WORD_POOL, state?.difficulty)
       : WORD_POOL;
-    const lockedPool    = eligiblePool.filter(w => !unlockedTexts.has(w.text.toLowerCase()));
+    const lockedPool    = eligiblePool.filter(w => !unlockedTexts.has((w.text || '').toLowerCase()));
     const picked        = shuffle(lockedPool).slice(0, 3);
 
     if (picked.length > 0) {
-      picked.forEach(w => state.unlockedWords.push({ ...w, phase: state.phase }));
+      picked.forEach(w => {
+        if (state) state.unlockedWords.push({ ...w, phase: state.phase || 1 });
+        if (typeof addPermanentUnlockedWord === 'function') {
+          addPermanentUnlockedWord(w);
+        }
+      });
       const names = picked.map(w => w.text.toUpperCase()).join(', ');
       const unlLabel = typeof t === 'function' ? t('library_unlocked') : 'Unlocked';
       showShopFeedback(`${unlLabel}: ${names}!`, 'success');
       playSound('skill');
-      if (state.unlockedWords.length >= eligiblePool.length) {
+      if (state && state.unlockedWords.length >= eligiblePool.length) {
         if (typeof unlockAchievement === 'function') unlockAchievement('colecionador');
       }
     } else {
       showShopFeedback(typeof t === 'function' ? t('shop_all_words_unlocked') : 'All words have already been discovered!', 'success');
     }
   } else {
-    // Regular skill item
-    const slot = state.skillSlots.find(s => s.id === skillId);
-    if (slot) {
-      slot.count++;
-    } else if (state.skillSlots.length < 8) {
-      state.skillSlots.push({ id: skillId, count: 1 });
-    } else {
-      state.skillSlots[state.skillSlots.length - 1] = { id: skillId, count: 1 };
+    // Regular skill item: adiciona permanentemente ao inventário
+    if (typeof addPermanentSkill === 'function') {
+      addPermanentSkill(skillId, 1);
+    }
+
+    if (state) {
+      const slot = state.skillSlots.find(s => s.id === skillId);
+      if (slot) {
+        slot.count++;
+        slot.permanentCount = (slot.permanentCount || 0) + 1;
+      } else if (state.skillSlots.length < 8) {
+        state.skillSlots.push({ id: skillId, count: 1, permanentCount: 1, droppedCount: 0 });
+      } else {
+        state.skillSlots[state.skillSlots.length - 1] = { id: skillId, count: 1, permanentCount: 1, droppedCount: 0 };
+      }
     }
     const def = (typeof SKILLS_CONFIG !== 'undefined' && SKILLS_CONFIG[skillId]) || SKILLS_ALL.find(s => s.id === skillId);
     const locDef = def ? getLocalizedItem(def) : null;
@@ -366,21 +457,33 @@ function buyShopItem(skillId, price) {
   updateShopBalanceDisplay();
   renderShopItems();
   updateShopSelectionVisual();
-  updateHUD();
+  if (typeof updateHUD === 'function') updateHUD();
   if (typeof saveGameProgress === 'function') saveGameProgress();
 }
 
 function closeShop() {
   cancelShopExitConfirm();
-  state.selectedShopIndex = -1;
+  if (state) state.selectedShopIndex = -1;
   updateShopSelectionVisual();
   const fbEl = $('shop-feedback-msg');
   if (fbEl) fbEl.classList.add('hidden');
   const card = document.querySelector('.shop-balance-card');
   if (card) card.classList.remove('sbc-shake');
   if (shopFeedbackTimer) clearTimeout(shopFeedbackTimer);
-  modalShop.classList.add('hidden');
-  state.phaseComplete = false;
-  beginPhase();
+  if (modalShop) modalShop.classList.add('hidden');
+
+  if (state && state._openedFromMenu) {
+    state._openedFromMenu = false;
+    return;
+  }
+
+  if (state && isMatchInProgress()) {
+    state.paused = false;
+    state.phaseComplete = false;
+    state.lastTs = null;
+    state.rafId = requestAnimationFrame(gameLoop);
+    scheduleSpawn();
+    if (typeof focusGameInput === 'function') focusGameInput();
+  }
 }
 

@@ -47,8 +47,9 @@ function gainSkill(skillId) {
   const slot = state.skillSlots.find(s => s.id === skillId);
   if (slot) {
     slot.count++;
+    slot.droppedCount = (slot.droppedCount || 0) + 1;
   } else if (state.skillSlots.length < 8) {
-    state.skillSlots.push({ id: skillId, count: 1 });
+    state.skillSlots.push({ id: skillId, count: 1, droppedCount: 1, permanentCount: 0 });
   }
   const def = (typeof SKILLS_CONFIG !== 'undefined' && SKILLS_CONFIG[skillId]) || SKILLS_ALL.find(s => s.id === skillId);
   const skillName = (typeof t === 'function' && t(`skill_name_${skillId}`) !== `skill_name_${skillId}`)
@@ -66,6 +67,19 @@ function activateSkill(idx) {
 
   slot.count--;
   const skillId = slot.id;
+
+  // Consome primeiro os drops da sessão; se não houver drops, consome do permanente
+  if ((slot.droppedCount || 0) > 0) {
+    slot.droppedCount--;
+  } else {
+    if (typeof deductPermanentSkill === 'function') {
+      deductPermanentSkill(skillId, 1);
+    }
+    if ((slot.permanentCount || 0) > 0) {
+      slot.permanentCount--;
+    }
+  }
+
   const def = (typeof SKILLS_CONFIG !== 'undefined' && SKILLS_CONFIG[skillId]) || SKILLS_ALL.find(s => s.id === skillId);
   const dur = (def && def.duration) ? def.duration : 10000;
 
@@ -86,6 +100,71 @@ function activateSkill(idx) {
     : (def?.activateMsg || `⚡ ${def?.name || skillId} (${durSec}s)!`);
 
   showFeedback(msg, 'special');
+  updateHUD();
+}
+
+// Nova habilidade Eco Cósmico (autodestroy): a cada 5s destrói palavras aprendidas
+function triggerAutodestroyLearnedWord() {
+  if (!state || state.paused || (state.activeTimers?.autodestroy || 0) <= 0) return;
+
+  const learnedTexts = new Set((state.unlockedWords || []).map(w => (w.text || '').toUpperCase()));
+  if (state.wordStats) {
+    Object.keys(state.wordStats).forEach(k => {
+      if ((state.wordStats[k]?.count || 0) > 0) {
+        learnedTexts.add(k.toUpperCase());
+      }
+    });
+  }
+
+  const candidates = state.activeItems.filter(item =>
+    !item.removing &&
+    item.type === 'word' &&
+    learnedTexts.has((item.text || '').toUpperCase())
+  );
+
+  if (candidates.length === 0) return;
+
+  // Escolhe a palavra aprendida mais urgente (mais próxima do fundo)
+  const victim = candidates.reduce((lowest, item) => item.y > lowest.y ? item : lowest);
+  victim.removing = true;
+  victim.el.classList.add('shattered');
+  playSound('skill');
+
+  if (typeof spawnCelestialExplosion === 'function') {
+    spawnCelestialExplosion(victim.el, victim.text);
+  } else {
+    spawnParticles(victim.el, victim.text.length * 2);
+  }
+
+  let pts = wordPts(victim.text);
+  if (state.activeTimers?.haste > 0) pts = Math.floor(pts * 2);
+
+  state.phasePts += pts;
+  state.totalScore = (state.totalScore || 0) + pts;
+
+  // Farm de moedas: a cada 10 palavras completadas ganha 1 moeda
+  state.wordsDestroyedForCoin = (state.wordsDestroyedForCoin || 0) + 1;
+  state.totalWordsCompletedMatch = (state.totalWordsCompletedMatch || 0) + 1;
+  if (state.wordsDestroyedForCoin >= 10) {
+    state.wordsDestroyedForCoin = 0;
+    if (typeof addSharedCoins === 'function') addSharedCoins(1);
+    state.coins = (typeof getSharedCoins === 'function') ? getSharedCoins() : (state.coins || 0) + 1;
+    state.totalCoinsEarned = (state.totalCoinsEarned || 0) + 1;
+    if (typeof playSound === 'function') playSound('buy');
+    const coinMsg = typeof t === 'function' ? t('fb_coin_farmed') : '+1 Coin farmed! 🪙';
+    showFeedback(coinMsg, 'success');
+  }
+
+  const shatterMsg = typeof t === 'function'
+    ? t('fb_autodestroy_shattered', { word: victim.text, pts })
+    : `⚡ Auto-shattered: ${victim.text}! +${pts}`;
+  showFeedback(shatterMsg, 'special');
+
+  setTimeout(() => {
+    victim.el?.parentNode?.removeChild(victim.el);
+    state.activeItems = state.activeItems.filter(i => i.id !== victim.id);
+  }, 240);
+
   updateHUD();
 }
 

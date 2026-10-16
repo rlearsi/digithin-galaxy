@@ -175,15 +175,8 @@ function unlockBossCycleWords(phase) {
 }
 
 function canTriggerBossBattle() {
-  if (state.gameMode === 'training' || state.gameMode === 'zen') return false;
-  if (typeof isBossBattlesEnabled === 'function' && !isBossBattlesEnabled()) return false;
-  // O boss aparece SEMPRE a cada 8 fases (8, 16, 24...), em ordem fixa de chefões
-  if (!isBossPhase(state.phase)) return false;
-
-  // Chefão determinístico do ciclo; o pool de significados é garantido em getBossWordPool()
-  state.pendingBoss = createBossForPhase(state.phase);
-  state.pendingBossPhase = state.phase;
-  return true;
+  // Roguelike arcade infinito: sem chefões
+  return false;
 }
 
 function beginBossPhase() {

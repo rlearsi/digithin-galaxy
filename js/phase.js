@@ -88,14 +88,15 @@ function beginPhase() {
 
 function checkPhaseComplete() {
   if (state.phaseComplete || state.paused || state.bossBattle?.active) return;
+  // Partida infinita: apenas o Modo Treinamento possui conclusão didática de lições
+  if (state.gameMode !== 'training') return;
+
   if (state.progress >= phaseGoal()) {
     state.phaseComplete = true;
     state.paused        = true;
     cancelAnimationFrame(state.rafId);
     clearTimeout(state.spawnTimer);
-    // Requisito 4: Fase concluída, velocidade volta ao padrão inicial da dificuldade
-    const diffCfg = typeof getDifficultyConfig === 'function' ? getDifficultyConfig() : { initialSpeed: 1.0 };
-    state.speedMultiplier = state.gameMode === 'training' ? (state.phase === 3 ? 1.1 : 1.0) : diffCfg.initialSpeed;
+    state.speedMultiplier = state.phase === 3 ? 1.1 : 1.0;
     state.speedAccum = 0;
     updateHUD();
     showPhaseModal();

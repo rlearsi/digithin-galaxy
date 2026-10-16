@@ -9,10 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/variables.css?v=1.0" />
+  <link rel="stylesheet" href="./css/variables.css?v=1.3" />
   <link rel="stylesheet" href="./css/components.css?v=1.0" />
-  <link rel="stylesheet" href="./css/layout.css?v=1.0" />
-  <link rel="stylesheet" href="./css/modals.css?v=1.0" />
+  <link rel="stylesheet" href="./css/layout.css?v=1.3" />
+  <link rel="stylesheet" href="./css/modals.css?v=1.3" />
   <link rel="stylesheet" href="./css/responsive.css?v=1.0" />
   <style>
     html.privacy-html,
@@ -327,27 +327,16 @@
   <script src="./js/ambient.js?v=1.0"></script>
   <script src="./js/i18n.js?v=1.1"></script>
   <script>
-    // Theme Management for standalone privacy page
+    // Theme Management for standalone privacy page (Dark Mode Only)
     function initTheme() {
-      const saved = localStorage.getItem('digithin_galaxy_theme');
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const initial = saved || (prefersDark ? 'dark' : 'dark');
-      setTheme(initial);
+      setTheme('dark');
     }
 
     function setTheme(theme) {
-      document.documentElement.setAttribute('data-theme', theme);
-      localStorage.setItem('digithin_galaxy_theme', theme);
-      const isDark = theme === 'dark';
-      document.querySelectorAll('.theme-switch-btn').forEach(btn => {
-        btn.classList.toggle('is-dark', isDark);
-      });
-    }
-
-    function toggleTheme() {
-      const current = document.documentElement.getAttribute('data-theme') || 'dark';
-      const next = current === 'dark' ? 'light' : 'dark';
-      setTheme(next);
+      document.documentElement.setAttribute('data-theme', 'dark');
+      try {
+        localStorage.setItem('digithin_galaxy_theme', 'dark');
+      } catch (_) {}
     }
 
     initTheme();

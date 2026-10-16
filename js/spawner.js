@@ -5,21 +5,32 @@
 'use strict';
 
 function decideSpawnType() {
-  const p = state.phase;
-  // Requirement 7: Early phases are fast — NO complete words in phase 1 and 2!
-  if (p === 1) {
-    return 'letter'; // Phase 1: fast single letters
-  }
-  if (p === 2) {
-    return Math.random() < 0.5 ? 'syllable' : 'letter'; // Phase 2: snappy 1-2 char letters/syllables
+  if (state.gameMode === 'training') {
+    return 'letter';
   }
 
-  // Phase 3+: full words unlocked, syllables, and letters
-  const wordW = Math.min(0.48, 0.20 + (p - 3) * 0.05);
-  const sylW  = Math.min(0.38, 0.25 + (p - 3) * 0.02);
+  state.spawnedItemsCount = (state.spawnedItemsCount || 0) + 1;
+  const count = state.spawnedItemsCount;
+  const letterLimit = state.initialLettersTarget || 10; // 8 a 12 letras
+
+  // 1. Início: exibe de 8 a 12 letras
+  if (count <= letterLimit) {
+    return 'letter';
+  }
+
+  // 2. Depois: começa a intercalar com sílabas até 20 vocábulos
+  if (count <= 20) {
+    return Math.random() < 0.50 ? 'syllable' : 'letter';
+  }
+
+  // 3. Após 20 vocábulos: começa a exibir palavras completas, intercalando com algumas letras e sílabas
   const r = Math.random();
-  if (r < wordW && state.unlockedWords.length > 0) return 'word';
-  if (r < wordW + sylW) return 'syllable';
+  if (r < 0.55 && state.unlockedWords && state.unlockedWords.length > 0) {
+    return 'word';
+  }
+  if (r < 0.80) {
+    return 'syllable';
+  }
   return 'letter';
 }
 
@@ -56,8 +67,8 @@ function genQueueItem() {
   } else if (type === 'syllable') {
     text = pick(ALL_SYLLABLES).toUpperCase();
   } else {
-    // Phase 3+ only: Wildcard words & regular words
-    if (state.phase >= 3 && state.unlockedWords.length >= 3 && Math.random() < CFG.wildcardChance) {
+    // Após 20 vocábulos: palavras raras / wildcard e palavras regulares
+    if (state.spawnedItemsCount > 20 && state.unlockedWords.length >= 3 && Math.random() < CFG.wildcardChance) {
       return { text: pick(WILDCARD_WORDS), type: 'wildcard', skill: null };
     }
     if (state.unlockedWords.length === 0) {

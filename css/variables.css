@@ -20,7 +20,7 @@
   /* Frosted Glass Surfaces (Translucent glass with cosmic refraction) */
   --glass-surface: rgba(4, 7, 18, 0.45);
   --glass-sidebar: rgba(4, 7, 18, 0.38);
-  --glass-column: rgba(2, 5, 15, 0.32);
+  --glass-column: rgba(2, 5, 15, 0.04);
   --glass-queue: rgba(4, 7, 18, 0.50);
 
   /* Frosted Glass Cards (Luminous Translucent Glass & Zero Borders) */
@@ -115,7 +115,7 @@
   /* Glass Surfaces (Light Mode Translucent Frosted Crystal) */
   --glass-surface: rgba(255, 255, 255, 0.42);
   --glass-sidebar: rgba(255, 255, 255, 0.38);
-  --glass-column: rgba(255, 255, 255, 0.28);
+  --glass-column: rgba(255, 255, 255, 0.08);
   --glass-queue: rgba(255, 255, 255, 0.48);
 
   /* Frosted Glass Cards (Modo Claro) */

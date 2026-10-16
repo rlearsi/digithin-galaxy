@@ -118,38 +118,128 @@ const modalBossReward  = $('modal-boss-reward');
 const bossSkillsGrid   = $('boss-skills-grid');
 
 // ============================================================
-// THEME MANAGEMENT (Dark / Light)
+// THEME MANAGEMENT (Foco 100% no Universo e Tema Escuro)
 // ============================================================
 function initTheme() {
-  const saved = localStorage.getItem('digithin_galaxy_theme');
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const initial = saved || (prefersDark ? 'dark' : 'dark'); // default modern dark
-  setTheme(initial);
+  document.documentElement.setAttribute('data-theme', 'dark');
+  try {
+    localStorage.setItem('digithin_galaxy_theme', 'dark');
+  } catch (_) {}
 }
 
-function setTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('digithin_galaxy_theme', theme);
-  const isDark = theme === 'dark';
-  document.querySelectorAll('.theme-switch-btn').forEach(btn => {
-    const aria = isDark
-      ? (typeof t === 'function' ? t('theme_switch_to_light') : 'Switch to light theme')
-      : (typeof t === 'function' ? t('theme_switch_to_dark') : 'Switch to dark theme');
-    btn.setAttribute('aria-label', aria);
-    btn.classList.toggle('is-dark', isDark);
-  });
-  if (typeof updateSettingsUI === 'function') {
-    updateSettingsUI();
-  }
+function setTheme() {
+  document.documentElement.setAttribute('data-theme', 'dark');
+  try {
+    localStorage.setItem('digithin_galaxy_theme', 'dark');
+  } catch (_) {}
 }
 
 function toggleTheme() {
-  const current = document.documentElement.getAttribute('data-theme') || 'dark';
-  const next = current === 'dark' ? 'light' : 'dark';
-  setTheme(next);
+  // Tema fixado no universo e modo escuro
+  setTheme();
 }
 
 initTheme();
+
+// ============================================================
+// MODAL: ARSENAL DE HABILIDADES (Permanent Skills Inventory)
+// ============================================================
+let skillsInventoryOpenedFromPause = false;
+
+function openSkillsInventory() {
+  const pauseOverlay = $('pause-overlay');
+  if (pauseOverlay && !pauseOverlay.classList.contains('hidden')) {
+    skillsInventoryOpenedFromPause = true;
+    pauseOverlay.classList.add('hidden');
+  } else {
+    skillsInventoryOpenedFromPause = false;
+  }
+
+  if (typeof closeSettings === 'function') closeSettings();
+  if (typeof closeBiblioteca === 'function') closeBiblioteca();
+  if (typeof closeConquistas === 'function') closeConquistas();
+
+  renderSkillsInventoryModal();
+  const modal = $('modal-skills-inventory');
+  if (modal) modal.classList.remove('hidden');
+  if (typeof playSound === 'function') playSound('click');
+}
+
+function closeSkillsInventory() {
+  const modal = $('modal-skills-inventory');
+  if (modal) modal.classList.add('hidden');
+
+  if (skillsInventoryOpenedFromPause) {
+    skillsInventoryOpenedFromPause = false;
+    const pauseOverlay = $('pause-overlay');
+    if (pauseOverlay) pauseOverlay.classList.remove('hidden');
+  }
+}
+
+function renderSkillsInventoryModal() {
+  const grid = $('skills-inventory-grid');
+  if (!grid) return;
+  grid.innerHTML = '';
+
+  const permSkills = typeof getPermanentSkills === 'function' ? getPermanentSkills() : [];
+  if (permSkills.length === 0) {
+    const emptyCard = document.createElement('div');
+    emptyCard.className = 'skills-empty-card';
+    const emptyTxt = typeof t === 'function' ? t('skills_inventory_empty') : 'No skills acquired yet. Visit the Cosmic Shop to stock your arsenal!';
+    const shopBtnTxt = typeof t === 'function' ? t('btn_shop') : 'Cosmic Shop';
+    emptyCard.innerHTML = `
+      <div class="skills-empty-icon">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+        </svg>
+      </div>
+      <p class="skills-empty-text">${emptyTxt}</p>
+      <button class="btn-primary" onclick="closeSkillsInventory(); openShopFromMenu();">
+        <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="8" cy="21" r="1"/>
+          <circle cx="19" cy="21" r="1"/>
+          <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+        </svg>
+        <span>${shopBtnTxt}</span>
+      </button>
+    `;
+    grid.appendChild(emptyCard);
+    return;
+  }
+
+  permSkills.forEach(slot => {
+    const def = (typeof SKILLS_CONFIG !== 'undefined' && SKILLS_CONFIG[slot.id]) || (typeof SKILLS_ALL !== 'undefined' ? SKILLS_ALL.find(s => s.id === slot.id) : null);
+    if (!def) return;
+    const loc = typeof getLocalizedItem === 'function' ? getLocalizedItem(def) : { name: def.name, desc: def.desc };
+    const durSec = Math.round((def.duration || 10000) / 1000);
+    const stockTxt = typeof t === 'function' ? t('skills_inventory_stock', { count: slot.count }) : `×${slot.count}`;
+
+    const card = document.createElement('div');
+    card.className = 'skills-inventory-card';
+    card.innerHTML = `
+      <div class="skills-card-icon" style="--item-clr: ${def.color || 'var(--accent-primary)'}">
+        <span>${def.icon || '⚡'}</span>
+      </div>
+      <div class="skills-card-body">
+        <div class="skills-card-header">
+          <h4 class="skills-card-name">${loc.name}</h4>
+          <span class="skills-card-badge">${stockTxt}</span>
+        </div>
+        <p class="skills-card-desc">${loc.desc}</p>
+        <div class="skills-card-footer">
+          <span class="skills-card-duration">
+            <svg class="rule-svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            ${durSec}s
+          </span>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
 
 // ============================================================
 // QUEUE POSITION MANAGEMENT (Top [default] / Bottom)
@@ -1051,19 +1141,22 @@ function updateHUD() {
   if (hmsCoins) hmsCoins.textContent = coinsStr;
   if (typeof updateShopBalanceDisplay === 'function') updateShopBalanceDisplay();
 
-  if (phaseNumEl) {
-    if (state.bossBattle && state.bossBattle.active) {
-      const bossLbl = typeof t === 'function' ? t('boss_default_name').toUpperCase() : 'BOSS';
-      phaseNumEl.textContent = `⚔️ ${bossLbl} ${state.phase}`;
-    } else if (state.gameMode === 'timeattack') {
-      phaseNumEl.textContent = `⏱️ ${state.timeAttackSecs}s`;
-    } else if (state.gameMode === 'zen') {
-      phaseNumEl.textContent = `ZEN ${state.phase}`;
-    } else if (state.gameMode === 'training') {
+  const phaseTag = document.querySelector('.phase-tag');
+  if (phaseTag) {
+    if (state.gameMode === 'training') {
+      phaseTag.style.display = '';
       const lessonLbl = typeof t === 'function' ? t('hud_training_lesson').toUpperCase() : 'LESSON';
-      phaseNumEl.textContent = `M${state.trainingWorld || 1} • ${lessonLbl} ${state.phase} / 3`;
+      if (phaseNumEl) phaseNumEl.textContent = `M${state.trainingWorld || 1} • ${lessonLbl} ${state.phase} / 3`;
+    } else if (state.gameMode === 'timeattack') {
+      phaseTag.style.display = '';
+      if (phaseNumEl) phaseNumEl.textContent = `⏱️ ${state.timeAttackSecs}s`;
+    } else if (state.gameMode === 'zen') {
+      phaseTag.style.display = '';
+      if (phaseNumEl) phaseNumEl.textContent = `ZEN`;
     } else {
-      phaseNumEl.textContent = state.phase;
+      // Modo clássico/arcade: oculta a tag de fase
+      phaseTag.style.display = 'none';
+      if (phaseNumEl) phaseNumEl.textContent = '';
     }
   }
 
@@ -1108,27 +1201,25 @@ function updateHUD() {
     gameCol.classList.toggle('fury-mode', comboVal >= 15);
   }
 
-  if (state.bossBattle && state.bossBattle.active) {
-    const boss = state.bossBattle.boss || { lives: 3 };
-    const currentLives = boss.lives || 0;
-    const maxLives = 3;
-    const bossHpPct = Math.max(0, Math.min(100, (currentLives / maxLives) * 100));
-    if (progressFill) progressFill.style.width = bossHpPct + '%';
-    const bossHpLbl = typeof t === 'function' ? t('hud_boss_hp') : 'BOSS HP';
-    if (progressText) progressText.textContent = `${bossHpLbl}: ${currentLives} / ${maxLives}`;
-  } else {
+  if (state.gameMode === 'training') {
     const goal = phaseGoal();
     const pct  = Math.min(100, Math.max(0, (state.progress / goal) * 100));
     if (progressFill) progressFill.style.width = pct + '%';
     if (progressText) {
-      if (state.gameMode === 'training') {
-        const lesson = state.phase || 1;
-        const lessonName = typeof t === 'function' ? t(`training_lesson_${lesson}_name`) : (lesson === 1 ? 'Home Keys' : lesson === 2 ? 'Alternation' : 'Final Challenge');
-        const lessonLbl = typeof t === 'function' ? t('hud_training_lesson') : 'Lesson';
-        progressText.textContent = `${state.progress} / ${goal} • ${lessonLbl} ${lesson}/3: ${lessonName}`;
-      } else {
-        progressText.textContent = `${state.progress} / ${goal}`;
-      }
+      const lesson = state.phase || 1;
+      const lessonName = typeof t === 'function' ? t(`training_lesson_${lesson}_name`) : (lesson === 1 ? 'Home Keys' : lesson === 2 ? 'Alternation' : 'Final Challenge');
+      const lessonLbl = typeof t === 'function' ? t('hud_training_lesson') : 'Lesson';
+      progressText.textContent = `${state.progress} / ${goal} • ${lessonLbl} ${lesson}/3: ${lessonName}`;
+    }
+  } else {
+    // Farm de moedas no modo arcade: 10 palavras completadas = +1 moeda
+    const currentWords = state.wordsDestroyedForCoin || 0;
+    const targetWords = 10;
+    const pct = Math.min(100, Math.max(0, (currentWords / targetWords) * 100));
+    if (progressFill) progressFill.style.width = pct + '%';
+    if (progressText) {
+      // Texto de progresso removido no modo arcade a pedido do usuário
+      progressText.textContent = '';
     }
   }
 
@@ -3012,24 +3103,17 @@ function closeBossRewardModal() {
 // SAVE SLOTS & START SCREEN PROFILE UI
 // ============================================================
 function updateStartScreenUI() {
-  const hasSaves = typeof getAllSaveSlots === 'function'
-    ? getAllSaveSlots().some(s => !!s.data)
-    : false;
-
   const btnStart = $('btn-start');
   const btnContinue = $('btn-continue');
 
-  if (hasSaves) {
-    if (btnStart) btnStart.classList.add('hidden');
-    if (btnContinue) btnContinue.classList.remove('hidden');
-  } else {
-    if (btnStart) btnStart.classList.remove('hidden');
-    if (btnContinue) btnContinue.classList.add('hidden');
-  }
+  if (btnStart) btnStart.classList.remove('hidden');
+  if (btnContinue) btnContinue.classList.add('hidden');
 
-  const modalSlots = $('modal-slots');
-  if (modalSlots && !modalSlots.classList.contains('hidden')) {
-    renderSlotsModal();
+  const startRecordVal = $('start-record-val');
+  if (startRecordVal) {
+    const best = typeof getHighScore === 'function' ? getHighScore() : 0;
+    const formatted = typeof formatScore === 'function' ? formatScore(best) : String(best).padStart(10, '0');
+    startRecordVal.textContent = formatted;
   }
 
   if (window.AVAILABLE_UPDATE_VERSION && typeof showUpdateNotification === 'function') {

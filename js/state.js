@@ -70,24 +70,53 @@ function defaultState() {
   const diffKey = getDifficulty();
   const diffCfg = getDifficultyConfig(diffKey);
   const sharedCoins = (typeof getSharedCoins === 'function') ? getSharedCoins() : 0;
+  const permSkills = (typeof getPermanentSkills === 'function') ? getPermanentSkills() : [];
+  const permWords = (typeof getPermanentUnlockedWords === 'function') ? getPermanentUnlockedWords() : [];
+  const permStats = (typeof getPermanentWordStats === 'function') ? getPermanentWordStats() : {};
+
+  // Clone permanent skills into match slots
+  const initialSkillSlots = permSkills.map(s => ({
+    id: s.id,
+    count: s.count,
+    isPermanent: true,
+    permanentCount: s.count,
+    droppedCount: 0
+  }));
+
+  // Initial unlocked words fallback: se estiver vazio, carrega palavras da dificuldade
+  let initialWords = [...permWords];
+  if (initialWords.length === 0 && typeof WORD_POOL !== 'undefined' && WORD_POOL.length > 0) {
+    const basePool = (typeof getWordPoolForDifficulty === 'function')
+      ? getWordPoolForDifficulty(WORD_POOL, diffKey)
+      : WORD_POOL;
+    initialWords = basePool.slice(0, 10);
+    if (typeof savePermanentUnlockedWords === 'function') {
+      savePermanentUnlockedWords(initialWords);
+    }
+  }
+
   return {
     difficulty:        diffKey,
     phase:             1,
-    phasePts:          0,       // Points accumulated in the current phase
-    totalScore:        0,       // Banked points from previous phases (run score)
+    phasePts:          0,       // Points accumulated in the current run
+    totalScore:        0,       // Banked points (run score)
     coins:             sharedCoins, // Player starts with shared coins bank across matches
     totalCoinsEarned:  0,       // Total coins accumulated across this run
-    flawlessStreak:    0,       // Consecutive phases completed without errors
-    errorsPhase:       0,       // Errors made in the current phase
-    totalErrors:       0,       // Total errors made in this run
+    flawlessStreak:    0,
+    errorsPhase:       0,
+    totalErrors:       0,
     lives:             diffCfg.startLives,
     maxLives:          diffCfg.startLives,
     progress:          0,
+    wordsDestroyedForCoin: 0,   // A cada 10 palavras completadas ganha 1 moeda farmada
+    totalWordsCompletedMatch: 0,
+    spawnedItemsCount: 0,       // Contador de itens gerados na corrida para progressão letra->sílaba->palavra
+    initialLettersTarget: Math.floor(Math.random() * 5) + 8, // 8 a 12 letras antes de intercalar sílabas
     hitsPhase:         0,
     totalHits:         0,
-    currentAccuracy:   0,       // Real-time accuracy % for the current phase/match
-    speedMultiplier:   diffCfg.initialSpeed,     // Resets to initial speed each phase
-    speedAccum:        0,                        // Accumulator for 5s progressive speed increment
+    currentAccuracy:   0,
+    speedMultiplier:   diffCfg.initialSpeed,
+    speedAccum:        0,
     typedBuffer:       '',
     activeItems:       [],
     spawnQueue:        [],
@@ -98,11 +127,12 @@ function defaultState() {
     escPaused:         false,
     libPaused:         false,
     phaseComplete:     false,
-    unlockedWords:     [],      // Words unlocked by player
-    wordStats:         {},      // { [text]: { count: N } }
-    skillSlots:        [],      // [{ id, count }] up to 4 distinct skill types
-    activeTimers:      {},      // { freezer: ms, bomb: ms, shield: ms, vortex: ms, slowdown: ms, haste: ms }
-    vortexAccum:       0,       // Tracks 2-second interval for vortex effect
+    unlockedWords:     initialWords,
+    wordStats:         { ...permStats },
+    skillSlots:        initialSkillSlots,
+    activeTimers:      {},
+    vortexAccum:       0,
+    autodestroyAccum:  0,
     shopPurchaseCount: 0,
     currentShopPurchases: 0,
     selectedShopIndex: -1,
@@ -111,19 +141,19 @@ function defaultState() {
     currentBossRewardSkills: [],
     onPickBossReward:        null,
     idCounter:         0,
-    combo:             0,       // Consecutive correct hits streak
-    maxCombo:          0,       // Best streak in the match
-    maxComboPhase:     0,       // Best streak in current phase
-    continues:         0,       // Available continues purchased from shop
-    gameMode:          'classic', // 'classic' | 'zen' | 'timeattack' | 'training'
+    combo:             0,
+    maxCombo:          0,
+    maxComboPhase:     0,
+    continues:         0,
+    gameMode:          'classic',
     timeAttackSecs:    60,
-    trainingWorld:     1,       // 1 (Home Row), 2 (Top Row), 3 (Bottom Row), 4 (Accents & Punctuation)
+    trainingWorld:     1,
     trainingLesson:    1,
-    startTime:         null,    // Timestamp when phase/run started
-    charsTyped:        0,       // Total characters correctly typed
-    defeatedBossTypes: [],      // Boss types defeated during this run for randomized variety
-    pendingBoss:       null,    // Randomly selected candidate boss for the upcoming boss phase
-    pendingBossPhase:  null,    // Phase number for which pendingBoss was selected
+    startTime:         null,
+    charsTyped:        0,
+    defeatedBossTypes: [],
+    pendingBoss:       null,
+    pendingBossPhase:  null,
     bossBattle: {
       active:          false,
       boss:            null,
@@ -141,11 +171,9 @@ function defaultState() {
 
 state = defaultState();
 
-// Check if a phase is a Boss Battle (every 8 phases: 8, 16, 24, ...)
-function isBossPhase(phase) {
-  const p = parseInt(phase, 10) || 0;
-  const interval = (typeof BOSS_PHASE_INTERVAL !== 'undefined') ? BOSS_PHASE_INTERVAL : 8;
-  return p > 0 && p % interval === 0;
+// Sem batalhas de chefões na fase infinita
+function isBossPhase() {
+  return false;
 }
 
 // Random helpers
@@ -262,42 +290,129 @@ function deductSharedCoins(amount) {
 }
 
 // ================================================
-// SAVE SLOTS PROGRESS MANAGEMENT
+// PERMANENT SKILLS ARSENAL (Purchased in Shop)
+// ================================================
+function getPermanentSkills() {
+  try {
+    const raw = localStorage.getItem('digithin_galaxy_permanent_skills');
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (_) {
+    return [];
+  }
+}
+
+function savePermanentSkills(skills) {
+  try {
+    const valid = Array.isArray(skills) ? skills.filter(s => s && s.id && s.count > 0) : [];
+    localStorage.setItem('digithin_galaxy_permanent_skills', JSON.stringify(valid));
+  } catch (_) {}
+}
+
+function addPermanentSkill(skillId, count = 1) {
+  if (!skillId) return getPermanentSkills();
+  const current = getPermanentSkills();
+  const existing = current.find(s => s.id === skillId);
+  if (existing) {
+    existing.count = (existing.count || 0) + count;
+  } else {
+    current.push({ id: skillId, count });
+  }
+  savePermanentSkills(current);
+  return current;
+}
+
+function deductPermanentSkill(skillId, count = 1) {
+  if (!skillId) return getPermanentSkills();
+  const current = getPermanentSkills();
+  const existing = current.find(s => s.id === skillId);
+  if (existing) {
+    existing.count = Math.max(0, (existing.count || 0) - count);
+    if (existing.count <= 0) {
+      const idx = current.indexOf(existing);
+      current.splice(idx, 1);
+    }
+    savePermanentSkills(current);
+  }
+  return current;
+}
+
+function getPermanentSkillCount(skillId) {
+  const current = getPermanentSkills();
+  const existing = current.find(s => s.id === skillId);
+  return existing ? (existing.count || 0) : 0;
+}
+
+// ================================================
+// PERMANENT VOCABULARY LIBRARY (Learned Words)
+// ================================================
+function getPermanentUnlockedWords() {
+  try {
+    const raw = localStorage.getItem('digithin_galaxy_unlocked_words');
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (_) {
+    return [];
+  }
+}
+
+function savePermanentUnlockedWords(words) {
+  try {
+    if (!Array.isArray(words)) return;
+    localStorage.setItem('digithin_galaxy_unlocked_words', JSON.stringify(words));
+  } catch (_) {}
+}
+
+function addPermanentUnlockedWord(wordObj) {
+  if (!wordObj || !wordObj.text) return;
+  const current = getPermanentUnlockedWords();
+  const lower = wordObj.text.toLowerCase();
+  if (!current.some(w => (w.text || '').toLowerCase() === lower)) {
+    current.push(wordObj);
+    savePermanentUnlockedWords(current);
+  }
+}
+
+function getPermanentWordStats() {
+  try {
+    const raw = localStorage.getItem('digithin_galaxy_word_stats');
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    return (parsed && typeof parsed === 'object') ? parsed : {};
+  } catch (_) {
+    return {};
+  }
+}
+
+function savePermanentWordStats(stats) {
+  try {
+    if (!stats || typeof stats !== 'object') return;
+    localStorage.setItem('digithin_galaxy_word_stats', JSON.stringify(stats));
+  } catch (_) {}
+}
+
+// ================================================
+// ARCADE DIRECT START (Slots removed)
 // ================================================
 const MAX_SAVE_SLOTS = 3;
 
 function getActiveSlot() {
-  try {
-    const s = parseInt(localStorage.getItem('digithin_galaxy_active_slot') || '1', 10);
-    return (s >= 1 && s <= MAX_SAVE_SLOTS) ? s : 1;
-  } catch (_) {
-    return 1;
-  }
+  return 1;
 }
 
-function setActiveSlot(slotId) {
-  const id = (slotId >= 1 && slotId <= MAX_SAVE_SLOTS) ? slotId : 1;
-  try {
-    localStorage.setItem('digithin_galaxy_active_slot', String(id));
-  } catch (_) {}
-  return id;
+function setActiveSlot() {
+  return 1;
 }
 
-function getSaveSlot(slotId) {
-  const id = (slotId !== undefined && slotId !== null) ? slotId : getActiveSlot();
-  try {
-    const raw = localStorage.getItem(`digithin_galaxy_save_slot_${id}`);
-    if (!raw) return null;
-    const parsed = JSON.parse(raw);
-    return (parsed && parsed.phase && !parsed.isFinished) ? parsed : null;
-  } catch (_) {
-    return null;
-  }
+function getSaveSlot() {
+  return null;
 }
 
-function hasActiveSave(slotId) {
-  const save = getSaveSlot(slotId);
-  return !!(save && save.phase && !save.isFinished);
+function hasActiveSave() {
+  // Roguelike arcade: sem salvamento no meio da partida. Jogador entra direto!
+  return false;
 }
 
 function getAllSaveSlots() {
@@ -326,68 +441,18 @@ function getLatestSaveSlot() {
   return latest;
 }
 
-function saveGameProgress(slotId) {
+function saveGameProgress() {
   if (!state) return false;
-  // Slots de salvamento operam exclusivamente no modo clássico
-  if (state.gameMode !== 'classic') return false;
-  // If lives are depleted, match is finished — do not record as active in-flight save
-  if (state.lives <= 0) return false;
-
-  const id = (slotId !== undefined && slotId !== null) ? slotId : getActiveSlot();
-  const payload = {
-    slotId: id,
-    version: 1,
-    savedAt: Date.now(),
-    isFinished: false,
-    gameMode: state.gameMode || 'classic',
-    difficulty: state.difficulty || 'normal',
-    phase: state.phase || 1,
-    phasePts: state.phasePts || 0,
-    totalScore: state.totalScore || 0,
-    speedMultiplier: (typeof state.speedMultiplier === 'number' && !isNaN(state.speedMultiplier))
-      ? Number(state.speedMultiplier.toFixed(2))
-      : 1.0,
-    coins: getSharedCoins(), // Moedas são compartilhadas entre todos os slots (banco global)
-    totalCoinsEarned: state.totalCoinsEarned || 0,
-    lives: state.lives,
-    maxLives: state.maxLives,
-    flawlessStreak: state.flawlessStreak || 0,
-    totalErrors: state.totalErrors || 0,
-    totalHits: state.totalHits || 0,
-    currentAccuracy: state.currentAccuracy || 0,
-    maxCombo: state.maxCombo || 0,
-    continues: state.continues || 0,
-    trainingWorld: state.trainingWorld || 1,
-    trainingLesson: state.trainingLesson || 1,
-    saveLanguage: (typeof getLanguage === 'function') ? getLanguage() : 'en',
-    unlockedWords: (state.unlockedWords || []).map(w => {
-      const concept = (w.conceptIndex !== undefined && w.conceptIndex !== null && w.conceptIndex >= 0)
-        ? { index: w.conceptIndex, category: w.conceptCategory || 'normal', bossType: w.bossType }
-        : (typeof findWordConcept === 'function' ? findWordConcept(w.text) : null);
-      return {
-        text: w.text,
-        meaning: w.meaning || '',
-        category: w.category || '',
-        phase: w.phase || 1,
-        conceptIndex: concept ? concept.index : undefined,
-        conceptCategory: concept ? concept.category : 'normal',
-        bossType: concept ? concept.bossType : undefined
-      };
-    }),
-    wordStats: state.wordStats ? { ...state.wordStats } : {},
-    skillSlots: (state.skillSlots || []).map(s => ({ id: s.id, count: s.count })),
-    defeatedBossTypes: Array.isArray(state.defeatedBossTypes) ? [...state.defeatedBossTypes] : [],
-    charsTyped: state.charsTyped || 0
-  };
-
-  try {
-    localStorage.setItem(`digithin_galaxy_save_slot_${id}`, JSON.stringify(payload));
-    setActiveSlot(id);
-    return true;
-  } catch (err) {
-    console.warn('[DigithinGalaxy] Error saving progress in slot', id, err);
-    return false;
+  if (state.coins !== undefined) {
+    setSharedCoins(state.coins);
   }
+  if (Array.isArray(state.unlockedWords)) {
+    savePermanentUnlockedWords(state.unlockedWords);
+  }
+  if (state.wordStats) {
+    savePermanentWordStats(state.wordStats);
+  }
+  return true;
 }
 
 function deleteSaveSlot(slotId) {

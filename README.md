@@ -1,6 +1,6 @@
 # 🌌 Digithin Galaxy — Jogo de Digitação Arcade Espacial
 
-[![Versão](https://img.shields.io/badge/versão-v1.2-6366F1?style=for-the-badge&logo=gamepad)](https://github.com/rlearsi/digithin-galaxy)
+[![Versão](https://img.shields.io/badge/versão-v1.3-6366F1?style=for-the-badge&logo=gamepad)](https://github.com/rlearsi/digithin-galaxy)
 [![Status](https://img.shields.io/badge/status-estável-10B981?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 [![Licença](https://img.shields.io/badge/licença-MIT-38BDF8?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 
@@ -257,6 +257,20 @@ python3 -m http.server 8000
 ---
 
 ## 10. Histórico de Versões (Changelog)
+
+### 🚀 v1.3 — Modo Roguelike Arcade Infinito, Arsenal Permanente, Nova Habilidade "Eco Cósmico" & Farm de Moedas
+- **Transformação em Corrida Infinita Arcade Roguelike**: Eliminação de transições de fases fixas. A partida agora é uma jornada ininterrupta onde termos cósmicos caem sem parar, com aumento contínuo de velocidade a cada 5s até o limite estipulado (+2.0x). A partida termina exclusivamente por esgotamento de vidas do jogador ou pausa.
+- **Arsenal e Habilidades Permanentes**: Habilidades adquiridas na Loja Cósmica passam a ser salvas de forma perpétua no inventário (`digithin_galaxy_permanent_skills`) e são preservadas entre partidas. Habilidades dropadas durante o jogo são consumidas primeiro e descartadas ao fim da corrida.
+- **Loja Cósmica no Menu Principal & Mecânica de Reroll**: A Loja Cósmica agora pode ser aberta a partir do menu inicial. O jogador pode rolar novas ofertas por 25 moedas (`CFG.shopRerollPrice`), reembaralhando 3 cartas aleatórias.
+- **Entrada Direta sem Slots de Salvamento**: Acesso direto à partida clicando em "Jogar", sem telas intermediárias de slots. Moedas, recordes e vocabulário desbloqueado são mantidos centralmente.
+- **Nova Habilidade Cósmica: "Eco Cósmico" (`autodestroy`)**: Habilidade lendária (preço: 300 moedas, duração: 60s) que busca automaticamente palavras já aprendidas pelo jogador e as desintegra a cada 5 segundos em partículas celestes, gerando pontos e acelerando o farm de moedas.
+- **Farm Contínuo de Moedas durante o Jogo**: Como não há mais bônus de fase, o jogador recebe +1 moeda a cada 10 palavras completadas (`CFG.wordsPerCoinFarm`), com medidor visual dinâmico integrado ao HUD.
+- **Progressão Didática Inicial na Partida Arcade**: Aquecimento inteligente com 8 a 12 letras isoladas no início da corrida, seguido de intercalação com sílabas cósmicas até 20 vocábulos e liberação gradual de palavras completas (55%), sílabas (25%) e letras (20%) após o 20º vocábulo.
+- **HUD Minimalista e Limpo no Modo Arcade**: Remoção de textos redundantes no topo da tela ("FASE ARCADE INFINITO" e "Próxima Moeda"), preservando a barra sutil de progresso para a moeda farmada a cada 10 palavras completadas.
+- **Diálogo de Saída Conciso & Direto**: Modal de retorno ao menu inicial simplificado com aviso direto de que as moedas ganhas serão mantidas, mas habilidades dropadas durante a partida serão perdidas.
+- **Correção do Banner de Recorde no Menu Principal**: Eliminação de duplicações e placeholders `{score}`, formatando perfeitamente o recorde atual do jogador.
+- **Redesign Símétrico e Moderno da Loja Cósmica**: Grid com botões "Comprar" alinhados com largura e altura uniformes, botões de rodapé ("Sortear Ofertas" e "Fechar") com altura idêntica de 48px, 100% sem bordas (`border: none !important`), badges monetários com ícones vetoriais SVG e sem opacidade reduzida em textos.
+- **Cache-Busting Cirúrgico por Arquivo (`?v=1.3`)**: Atualização cirúrgica em `index.html` e `privacy.html` exclusivamente nos arquivos modificados nesta versão (`css/variables.css`, `css/layout.css`, `css/modals.css`, `js/data.js`, `js/state.js`, `js/ui.js`, `js/shop.js`, `js/spawner.js`, `js/skills.js`, `js/boss.js`, `js/phase.js`, `game.js`).
 
 ### 🚀 v1.2 — Iluminação Constante do Disco de Acreção, Espaguetificação Gravitacional & Destruição Cósmica em Confete
 - **Disco de Acreção com Brilho Constante & Pulsação Contínua**: O disco de acreção horizontal e a atmosfera do buraco negro agora contam com iluminação vibrante permanente (`#38BDF8`, `#FFFFFF`, `#F472B6`, `#FBBF24`), acompanhados de pulso rítmico harmônico contínuo em CSS3 sem depender exclusivamente do gatilho de palavras tragadas.

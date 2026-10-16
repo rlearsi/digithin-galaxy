@@ -7,16 +7,13 @@
 // ============================================================
 // 1. GAME LIFECYCLE
 // ============================================================
-function startGame(mode = 'classic', slotId = null) {
+function startGame(mode = 'classic') {
   if (typeof isLocaleReady !== 'undefined' && !isLocaleReady) return;
   if (typeof closeSettings === 'function') closeSettings();
+  if (typeof closeSkillsInventory === 'function') closeSkillsInventory();
   if (typeof closeSlotsModal === 'function') closeSlotsModal();
   const pauseOverlay = $('pause-overlay');
   if (pauseOverlay) pauseOverlay.classList.add('hidden');
-
-  if (slotId !== null && slotId !== undefined) {
-    if (typeof setActiveSlot === 'function') setActiveSlot(slotId);
-  }
 
   if (typeof resetHUDScore === 'function') resetHUDScore();
   state = defaultState();
@@ -51,70 +48,12 @@ function startGame(mode = 'classic', slotId = null) {
   if (typeof saveGameProgress === 'function') saveGameProgress();
 }
 
-function resumeSavedGame(slotId = null) {
-  if (typeof isLocaleReady !== 'undefined' && !isLocaleReady) return;
-  const targetId = (slotId !== undefined && slotId !== null)
-    ? slotId
-    : (typeof getLatestSaveSlot === 'function' ? (getLatestSaveSlot()?.slotId || getActiveSlot()) : getActiveSlot());
-  const save = typeof getSaveSlot === 'function' ? getSaveSlot(targetId) : null;
-  if (!save) {
-    startGame('classic', targetId);
-    return;
-  }
-  if (typeof closeSettings === 'function') closeSettings();
-  if (typeof closeSlotsModal === 'function') closeSlotsModal();
-  const pauseOverlay = $('pause-overlay');
-  if (pauseOverlay) pauseOverlay.classList.add('hidden');
-  if (typeof resetHUDScore === 'function') resetHUDScore();
-
-  if (typeof setActiveSlot === 'function') setActiveSlot(targetId);
-  if (typeof loadSaveDataIntoState === 'function') {
-    loadSaveDataIntoState(save);
-  }
-
-  screenStart.classList.remove('active');
-  screenGame.classList.add('active');
-  if (typeof updateVirtualKeyboardVisibility === 'function') updateVirtualKeyboardVisibility();
-  if (typeof updateFingerGuideVisibility === 'function') updateFingerGuideVisibility();
-  if (typeof focusGameInput === 'function') {
-    focusGameInput();
-  } else {
-    hiddenInput?.focus();
-  }
-  refillQueue();
-  updateHUD();
-  beginPhase();
-
-  const phaseNum = state.phase || 1;
-  const msg = typeof t === 'function' ? t('fb_game_resumed', { phase: phaseNum }) : `Partida retomada! Fase ${phaseNum}`;
-  showFeedback(msg, 'special');
-  if (typeof playSound === 'function') playSound('phaseStart');
+function resumeSavedGame() {
+  startGame('classic');
 }
 
-function promptOrStartNewGame(slotId = null) {
-  if (slotId !== null && slotId !== undefined) {
-    startGame('classic', slotId);
-    return;
-  }
-  const activeId = typeof getActiveSlot === 'function' ? getActiveSlot() : 1;
-  const hasActive = typeof hasActiveSave === 'function' ? hasActiveSave(activeId) : false;
-  if (!hasActive) {
-    startGame('classic', activeId);
-    return;
-  }
-  if (typeof getAllSaveSlots === 'function') {
-    const slots = getAllSaveSlots();
-    const emptySlot = slots.find(s => !s.data);
-    if (emptySlot) {
-      startGame('classic', emptySlot.slotId);
-      return;
-    }
-  }
-  if (typeof openSlotsModal === 'function') {
-    openSlotsModal();
-  } else {
-    startGame('classic', activeId);
-  }
+function promptOrStartNewGame() {
+  startGame('classic');
 }
 
 function startTrainingWorld(worldId = 1) {
@@ -299,6 +238,17 @@ function gameOver() {
   if (typeof clearActiveSlotRun === 'function') clearActiveSlotRun();
   if (typeof updateStartScreenUI === 'function') updateStartScreenUI();
 
+  // Requisito 7: jogador mantém moedas ganhas e habilidades compradas na loja
+  // (perde apenas as habilidades dropadas temporariamente durante a partida)
+  if (Array.isArray(state.skillSlots)) {
+    const permanentLeft = state.skillSlots
+      .filter(s => (s.permanentCount || 0) > 0)
+      .map(s => ({ id: s.id, count: s.permanentCount }));
+    if (typeof savePermanentSkills === 'function') {
+      savePermanentSkills(permanentLeft);
+    }
+  }
+
   // Calculate overall match accuracy
   const totalHits = state.totalHits || 0;
   const totalErrors = state.totalErrors || 0;
@@ -412,6 +362,15 @@ function gameLoop(ts) {
     if (state.vortexAccum >= 2.0) {
       state.vortexAccum -= 2.0;
       if (typeof triggerVortexDevour === 'function') triggerVortexDevour();
+    }
+  }
+
+  // Autodestroy skill: a cada 5 segundos destrói palavras aprendidas
+  if ((state.activeTimers?.autodestroy || 0) > 0) {
+    state.autodestroyAccum = (state.autodestroyAccum || 0) + dt;
+    if (state.autodestroyAccum >= 5.0) {
+      state.autodestroyAccum -= 5.0;
+      if (typeof triggerAutodestroyLearnedWord === 'function') triggerAutodestroyLearnedWord();
     }
   }
 
@@ -840,9 +799,13 @@ function completeItem(item) {
   state.phasePts += pts;
   state.totalScore = (state.totalScore || 0) + pts;
 
-  // A barra de progresso cresce pela quantidade de letras da palavra/sílaba completada
-  const charsCompleted = (item.text || '').length || 1;
-  state.progress = Math.min(phaseGoal(), (state.progress || 0) + charsCompleted);
+  // A barra de progresso no modo arcade representa o farm de moedas (10 palavras = 1 moeda)
+  if (state.gameMode === 'training') {
+    const charsCompleted = (item.text || '').length || 1;
+    state.progress = Math.min(phaseGoal(), (state.progress || 0) + charsCompleted);
+  } else {
+    state.progress = state.wordsDestroyedForCoin || 0;
+  }
   updateHUD();
 
   if (progressFill) {
@@ -856,11 +819,36 @@ function completeItem(item) {
 
   showFeedback(comboMult > 1 ? `+${pts} (${comboMult}× Combo!)` : `+${pts}`, 'success');
 
-  // Track discovered word stats
+  // Track discovered word stats & farm coins every 10 words
   if (item.type === 'word') {
     const key = item.text.toLowerCase();
     if (!state.wordStats[key]) state.wordStats[key] = { count: 0 };
     state.wordStats[key].count++;
+
+    // Salva na biblioteca cósmica permanente
+    if (typeof addPermanentUnlockedWord === 'function') {
+      addPermanentUnlockedWord({ text: item.text, meaning: item.meaning || '', phase: 1 });
+    }
+    if (typeof savePermanentWordStats === 'function') {
+      savePermanentWordStats(state.wordStats);
+    }
+
+    // Requisito 10: a cada 10 palavras destruídas o jogador recebe +1 moeda
+    if (state.gameMode !== 'training') {
+      state.wordsDestroyedForCoin = (state.wordsDestroyedForCoin || 0) + 1;
+      state.totalWordsCompletedMatch = (state.totalWordsCompletedMatch || 0) + 1;
+      state.progress = state.wordsDestroyedForCoin;
+      if (state.wordsDestroyedForCoin >= 10) {
+        state.wordsDestroyedForCoin = 0;
+        state.progress = 0;
+        if (typeof addSharedCoins === 'function') addSharedCoins(1);
+        state.coins = (typeof getSharedCoins === 'function') ? getSharedCoins() : (state.coins || 0) + 1;
+        state.totalCoinsEarned = (state.totalCoinsEarned || 0) + 1;
+        if (typeof playSound === 'function') playSound('buy');
+        const coinMsg = typeof t === 'function' ? t('fb_coin_farmed') : '+1 Coin farmed! 🪙';
+        showFeedback(coinMsg, 'success');
+      }
+    }
 
     // Track total words completed for achievement 'mestre_tipo' (100 Palavras Completas)
     try {
