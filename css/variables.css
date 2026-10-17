@@ -73,24 +73,19 @@
   --accent-amber: #FFA502;
   /* Saturated Sunny Amber */
 
-  /* Vocábulos: Progressão por Temperatura de Cor (Fria -> Temperada -> Quente -> Incandescente) */
-  --tile-letter-bg: #2563EB;
-  /* ❄️ Frio: Azul Real (Letra) */
+  /* Vocábulos: 100% Base Unificada Limpa (Padrão de Excelência Game UX) */
+  --tile-base-bg: #2563EB;
+  --tile-letter-bg: var(--tile-base-bg);
   --tile-letter-txt: #FFFFFF;
-  --tile-syl-bg: #059669;
-  /* 🌿 Temperado: Verde Esmeralda (Sílaba) */
+  --tile-syl-bg: var(--tile-base-bg);
   --tile-syl-txt: #FFFFFF;
-  --tile-word-bg: #D97706;
-  /* ☀️ Quente: Âmbar Dourado Solar (Palavra Inteira) */
+  --tile-word-bg: var(--tile-base-bg);
   --tile-word-txt: #FFFFFF;
   --tile-magic-bg: #D946EF;
-  /* ⚡ Incandescente: Magenta Radiante Plasma (Palavra com Habilidade) */
   --tile-magic-txt: #FFFFFF;
   --tile-wild-bg: #8B5CF6;
-  /* 💥 Violeta Cósmico (Wildcard) */
   --tile-wild-txt: #FFFFFF;
   --tile-danger-bg: #DC2626;
-  /* 🚨 Perigo Fundo da Tela: Vermelho Alerta Vivo */
 
   /* Shadows & Elevations */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.22);
@@ -159,12 +154,13 @@
   --accent-pink: #DB2777;
   --accent-amber: #D97706;
 
-  /* Vocábulos: Progressão por Temperatura de Cor */
-  --tile-letter-bg: #2563EB;
+  /* Vocábulos: 100% Base Unificada Limpa */
+  --tile-base-bg: #2563EB;
+  --tile-letter-bg: var(--tile-base-bg);
   --tile-letter-txt: #FFFFFF;
-  --tile-syl-bg: #059669;
+  --tile-syl-bg: var(--tile-base-bg);
   --tile-syl-txt: #FFFFFF;
-  --tile-word-bg: #D97706;
+  --tile-word-bg: var(--tile-base-bg);
   --tile-word-txt: #FFFFFF;
   --tile-magic-bg: #C026D3;
   --tile-magic-txt: #FFFFFF;

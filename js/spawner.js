@@ -81,10 +81,9 @@ function genQueueItem() {
     const eligibleWords = state.unlockedWords.filter(w => (w.text || '').length <= maxLen);
     const candidatePool = eligibleWords.length > 0 ? eligibleWords : state.unlockedWords;
     text = pick(candidatePool).text.toUpperCase();
-    // Rare chance to contain skill
+    // Rare chance to contain bonus XP surge
     if (Math.random() < CFG.wordSkillChance) {
-      const avail = SKILLS_ALL.filter(s => !s.isItem && s.id !== 'extralife');
-      if (avail.length > 0) skill = pick(avail);
+      skill = { id: 'bonus_xp', name: '+25 XP' };
     }
   }
   return { text, type, skill };
@@ -99,15 +98,16 @@ function refillQueue() {
 function scheduleSpawn() {
   if (state.paused || state.phaseComplete || (state.bossBattle && state.bossBattle.active)) return;
   let multVal  = state.speedMultiplier || 1.0;
-  if ((state.activeTimers?.haste || 0) > 0) {
-    multVal += (typeof CFG !== 'undefined' && CFG.hasteSpeedBonus) ? CFG.hasteSpeedBonus : 0.5;
-  }
   if ((state.activeTimers?.slowdown || 0) > 0) {
-    multVal *= 0.4;
+    multVal *= 0.5; // Reduz velocidade em 50%
   }
-  let base       = Math.max(CFG.spawnMin, CFG.spawnBase / multVal);
-  if ((state.activeTimers?.dilation || 0) > 0) {
-    base *= 1.8; // Dilates spacing between runics
+  let base = Math.max(CFG.spawnMin, CFG.spawnBase / multVal);
+
+  // Espaçamento (dilation): passiva contínua da run (aumenta espaçamento em até 2, 3, 4 ou 5)
+  const dilationLevel = state.runPerks?.dilation || 0;
+  if (dilationLevel >= 1) {
+    const spacingMult = Math.min(5, 1 + dilationLevel);
+    base *= spacingMult;
   }
   const interval = base + (Math.random() - 0.5) * CFG.spawnVariance;
   state.spawnTimer = setTimeout(() => {
@@ -159,6 +159,14 @@ function spawnItem() {
     const b = document.createElement('div');
     b.className   = 'wildcard-badge';
     b.textContent = '💥';
+    el.appendChild(b);
+  }
+  if (next.type === 'word' && typeof isWordNewInRun === 'function' && isWordNewInRun(next.text)) {
+    const b = document.createElement('div');
+    b.className   = 'new-word-badge';
+    b.title       = typeof t === 'function' ? t('badge_new_word') : 'Nova palavra na partida';
+    const label   = typeof t === 'function' ? t('badge_new_label') : 'NOVO';
+    b.innerHTML   = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg><span>' + label + '</span>';
     el.appendChild(b);
   }
 

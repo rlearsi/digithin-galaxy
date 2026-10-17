@@ -555,8 +555,9 @@ const SKILLS_CONFIG = {
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
     get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
     duration: 10000,
-    basePrice: 300,
+    interval: 120000, // 2 minutes
     color: '#06B6D4',
+    type: 'periodic',
     category: 'skill',
     onActivate: (st) => {
       st.activeItems.forEach(i => i.el?.classList.add('frozen'));
@@ -572,12 +573,15 @@ const SKILLS_CONFIG = {
     descKey: 'skill_desc_bomb',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
     get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
-    duration: 10000,
-    basePrice: 450,
+    duration: 2500,
+    interval: 90000, // 1.5 minutes
     color: '#FF4757',
+    type: 'periodic',
     category: 'skill',
     onActivate: () => {
-      if (typeof playSound === 'function') playSound('bomb');
+      if (typeof triggerScreenBombExplosion === 'function') {
+        triggerScreenBombExplosion();
+      }
     },
     onExpire: () => {}
   },
@@ -589,8 +593,9 @@ const SKILLS_CONFIG = {
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
     get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
     duration: 10000,
-    basePrice: 390,
+    interval: 120000, // 2 minutes
     color: '#10B981',
+    type: 'periodic',
     category: 'skill',
     onActivate: () => {},
     onExpire: () => {}
@@ -602,12 +607,15 @@ const SKILLS_CONFIG = {
     descKey: 'skill_desc_vortex',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
     get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
-    duration: 10000,
-    basePrice: 420,
+    duration: 3000,
+    interval: 180000, // 3 minutes
     color: '#8B5CF6',
+    type: 'periodic',
     category: 'skill',
-    onActivate: (st) => {
-      st.vortexAccum = 0;
+    onActivate: () => {
+      if (typeof triggerVortexScreenSuck === 'function') {
+        triggerVortexScreenSuck();
+      }
     },
     onExpire: () => {}
   },
@@ -619,8 +627,9 @@ const SKILLS_CONFIG = {
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
     get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
     duration: 15000,
-    basePrice: 240,
+    interval: 60000, // 1 minute
     color: '#3B82F6',
+    type: 'periodic',
     category: 'skill',
     onActivate: () => {
       const ring = typeof slowRing !== 'undefined' ? slowRing : document.getElementById('slow-ring');
@@ -638,28 +647,13 @@ const SKILLS_CONFIG = {
     descKey: 'skill_desc_haste',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
     get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
-    duration: 15000,
-    basePrice: 240,
-    speedBonus: 0.5,
+    duration: 10000,
+    interval: 30000, // 30s
+    speedBonus: 0, // No speed increase as requested!
     color: '#FF9F1A',
+    type: 'periodic',
     category: 'skill',
     onActivate: () => {},
-    onExpire: () => {}
-  },
-  speedlock: {
-    id: 'speedlock',
-    icon: '🔒',
-    nameKey: 'skill_name_speedlock',
-    descKey: 'skill_desc_speedlock',
-    get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
-    get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
-    duration: 60000,
-    basePrice: 540,
-    color: '#38BDF8',
-    category: 'skill',
-    onActivate: (st) => {
-      st.speedMultiplier = 1.0;
-    },
     onExpire: () => {}
   },
   dilation: {
@@ -668,10 +662,14 @@ const SKILLS_CONFIG = {
     nameKey: 'skill_name_dilation',
     descKey: 'skill_desc_dilation',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
-    get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
-    duration: 45000,
-    basePrice: 480,
+    get desc() {
+      const lvl = (typeof state !== 'undefined' && state?.runPerks?.dilation) ? state.runPerks.dilation : 1;
+      const maxMultiplier = Math.min(5, 1 + lvl);
+      return (typeof t === 'function') ? t(this.descKey, { max: maxMultiplier }) : `Spacing up to ${maxMultiplier}`;
+    },
+    maxLevel: 4, // Level 1 -> up to 2x, Level 2 -> up to 3x, Level 3 -> up to 4x, Level 4 -> up to 5x
     color: '#A855F7',
+    type: 'passive',
     category: 'skill',
     onActivate: () => {},
     onExpire: () => {}
@@ -683,9 +681,10 @@ const SKILLS_CONFIG = {
     descKey: 'skill_desc_autodestroy',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
     get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
-    duration: 60000,
-    basePrice: 300,
+    duration: 10000,
+    interval: 60000, // 1 minute
     color: '#F59E0B',
+    type: 'periodic',
     category: 'skill',
     onActivate: (st) => {
       st.autodestroyAccum = 0;
@@ -694,51 +693,43 @@ const SKILLS_CONFIG = {
   }
 };
 
-// 2. SHOP ITEMS (Immediate consumables / special non-slot items)
-// Names and descriptions live in locale files: skill_name_{id} / skill_desc_{id}
-const SHOP_ITEMS_CONFIG = {
-  continue: {
-    id: 'continue',
-    icon: '🪙',
-    nameKey: 'skill_name_continue',
-    descKey: 'skill_desc_continue',
-    get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
-    get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
-    basePrice: 900,
-    color: '#EAB308',
-    isItem: true,
-    category: 'item'
-  },
-  wordpack: {
-    id: 'wordpack',
-    icon: '📦',
-    nameKey: 'skill_name_wordpack',
-    descKey: 'skill_desc_wordpack',
-    get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
-    get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
-    basePrice: 330,
-    color: '#EC4899',
-    isItem: true,
-    category: 'item'
-  },
+// 2. BOSS SPECIAL REWARDS (Choose 1 among 3 upon defeating a boss)
+const BOSS_REWARDS_CONFIG = {
   extralife: {
     id: 'extralife',
     icon: '❤️',
-    nameKey: 'skill_name_extralife',
-    descKey: 'skill_desc_extralife',
-    get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
-    get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
-    basePrice: 600,
+    nameKey: 'boss_reward_extralife',
+    descKey: 'boss_reward_extralife_desc',
+    get name() { return (typeof t === 'function') ? t(this.nameKey) : '+1 Life'; },
+    get desc() { return (typeof t === 'function') ? t(this.descKey) : 'Recovers or adds 1 life for the current run'; },
     color: '#EF4444',
-    isItem: true,
-    category: 'item'
+    category: 'boss_reward'
+  },
+  continue: {
+    id: 'continue',
+    icon: '🪙',
+    nameKey: 'boss_reward_continue',
+    descKey: 'boss_reward_continue_desc',
+    get name() { return (typeof t === 'function') ? t(this.nameKey) : 'Continue Token'; },
+    get desc() { return (typeof t === 'function') ? t(this.descKey) : 'Allows instant revival if all lives are lost'; },
+    color: '#EAB308',
+    category: 'boss_reward'
+  },
+  coins_100: {
+    id: 'coins_100',
+    icon: '💰',
+    nameKey: 'boss_reward_coins_100',
+    descKey: 'boss_reward_coins_100_desc',
+    get name() { return (typeof t === 'function') ? t(this.nameKey) : '+100 Coins'; },
+    get desc() { return (typeof t === 'function') ? t(this.descKey) : 'Receive +100 cosmic coins directly into your bank'; },
+    color: '#10B981',
+    category: 'boss_reward'
   }
 };
 
-
 const SKILLS_LIST = Object.values(SKILLS_CONFIG);
-const SHOP_ITEMS_LIST = Object.values(SHOP_ITEMS_CONFIG);
-const SKILLS_ALL = [...SKILLS_LIST, ...SHOP_ITEMS_LIST];
+const BOSS_REWARDS_LIST = Object.values(BOSS_REWARDS_CONFIG);
+const SKILLS_ALL = [...SKILLS_LIST];
 
 // All 6 Achievements (including the new Typography Master!)
 const ACHIEVEMENTS = [

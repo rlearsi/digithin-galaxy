@@ -17,22 +17,22 @@ function startGame(mode = 'classic') {
 
   if (typeof resetHUDScore === 'function') resetHUDScore();
   state = defaultState();
-  state.gameMode  = mode;
+  state.gameMode = mode;
   state.startTime = Date.now();
 
   const diffCfg = typeof getDifficultyConfig === 'function' ? getDifficultyConfig() : { startLives: 3, initialSpeed: 1.0 };
   if (mode === 'zen' || mode === 'training') {
-    state.lives    = 999;
+    state.lives = 999;
     state.maxLives = 999;
   } else {
-    state.lives    = diffCfg.startLives;
+    state.lives = diffCfg.startLives;
     state.maxLives = diffCfg.startLives;
   }
   if (mode === 'timeattack') {
     state.timeAttackSecs = 60;
   }
   state.speedMultiplier = diffCfg.initialSpeed;
-  state.speedAccum      = 0;
+  state.speedAccum = 0;
   screenStart.classList.remove('active');
   screenGame.classList.add('active');
   if (typeof updateVirtualKeyboardVisibility === 'function') updateVirtualKeyboardVisibility();
@@ -159,6 +159,7 @@ function goToMainMenu() {
   if (typeof updateFingerGuideVisibility === 'function') updateFingerGuideVisibility();
 
   if (typeof updateStartScreenUI === 'function') updateStartScreenUI();
+  if (typeof checkForAppUpdate === 'function') checkForAppUpdate();
   if (typeof playSound === 'function') playSound('click');
 }
 
@@ -237,6 +238,7 @@ function gameOver() {
   if (typeof updateHighCoins === 'function') updateHighCoins(sessionCoins);
   if (typeof clearActiveSlotRun === 'function') clearActiveSlotRun();
   if (typeof updateStartScreenUI === 'function') updateStartScreenUI();
+  if (typeof checkForAppUpdate === 'function') checkForAppUpdate();
 
   // Requisito 7: jogador mantém moedas ganhas e habilidades compradas na loja
   // (perde apenas as habilidades dropadas temporariamente durante a partida)
@@ -269,13 +271,13 @@ function gameOver() {
     }
   }
 
-  if ($('go-hits'))   $('go-hits').textContent   = totalHits;
+  if ($('go-hits')) $('go-hits').textContent = totalHits;
   if ($('go-errors')) $('go-errors').textContent = totalErrors;
-  if ($('go-phase'))  $('go-phase').textContent  = state.phase || 1;
-  if ($('go-words'))  $('go-words').textContent  = `${(state.unlockedWords || []).length} / ${(typeof WORD_POOL !== 'undefined' ? WORD_POOL.length : 42)}`;
+  if ($('go-phase')) $('go-phase').textContent = state.phase || 1;
+  if ($('go-words')) $('go-words').textContent = `${(state.unlockedWords || []).length} / ${(typeof WORD_POOL !== 'undefined' ? WORD_POOL.length : 42)}`;
 
   const btnContinue = $('btn-go-continue');
-  const countEl     = $('go-continue-count');
+  const countEl = $('go-continue-count');
   if (btnContinue && countEl) {
     if (state.continues > 0) {
       countEl.textContent = state.continues;
@@ -287,7 +289,7 @@ function gameOver() {
 
   // Decoupled Record Badge & Match Score handling
   const newRecordTag = $('go-new-record-tag');
-  const goScoreEl    = $('go-score');
+  const goScoreEl = $('go-score');
 
   if (newRecordTag) {
     newRecordTag.classList.add('hidden');
@@ -322,12 +324,12 @@ function useContinue() {
   state.continues--;
   playSound('continue');
   const diffCfg = typeof getDifficultyConfig === 'function' ? getDifficultyConfig() : { startLives: 3, initialSpeed: 1.0 };
-  state.lives           = diffCfg.startLives;
-  state.progress        = 0;
+  state.lives = diffCfg.startLives;
+  state.progress = 0;
   state.speedMultiplier = diffCfg.initialSpeed;
-  state.speedAccum      = 0;
+  state.speedAccum = 0;
   state.activeItems.forEach(i => i.el?.parentNode?.removeChild(i.el));
-  state.activeItems     = [];
+  state.activeItems = [];
   modalGameover.classList.add('hidden');
   showFeedback(typeof t === 'function' ? t('fb_continue_used') : '🪙 Continue used! Resuming phase...', 'special');
   beginPhase();
@@ -343,40 +345,9 @@ function gameLoop(ts) {
   const dt = Math.min((ts - state.lastTs) / 1000, 0.1);
   state.lastTs = ts;
 
-  // Tick active skill timers
-  let timersChanged = false;
-  for (const skillId in state.activeTimers) {
-    if (state.activeTimers[skillId] > 0) {
-      state.activeTimers[skillId] -= dt * 1000;
-      timersChanged = true;
-      if (state.activeTimers[skillId] <= 0) {
-        state.activeTimers[skillId] = 0;
-        if (typeof onSkillExpired === 'function') onSkillExpired(skillId);
-      }
-    }
-  }
-
-  // Vortex skill: devours 1 non-targeted token every 2 seconds
-  if ((state.activeTimers?.vortex || 0) > 0) {
-    state.vortexAccum = (state.vortexAccum || 0) + dt;
-    if (state.vortexAccum >= 2.0) {
-      state.vortexAccum -= 2.0;
-      if (typeof triggerVortexDevour === 'function') triggerVortexDevour();
-    }
-  }
-
-  // Autodestroy skill: a cada 5 segundos destrói palavras aprendidas
-  if ((state.activeTimers?.autodestroy || 0) > 0) {
-    state.autodestroyAccum = (state.autodestroyAccum || 0) + dt;
-    if (state.autodestroyAccum >= 5.0) {
-      state.autodestroyAccum -= 5.0;
-      if (typeof triggerAutodestroyLearnedWord === 'function') triggerAutodestroyLearnedWord();
-    }
-  }
-
-  // Speedlock active: clamp speedMultiplier to 1.0
-  if ((state.activeTimers?.speedlock || 0) > 0) {
-    state.speedMultiplier = 1.0;
+  // Update periodic skills and queue
+  if (typeof updatePeriodicSkills === 'function') {
+    updatePeriodicSkills(dt);
   }
 
   // Time Attack mode timer countdown
@@ -394,42 +365,33 @@ function gameLoop(ts) {
     }
   }
 
-  if (timersChanged && typeof renderSkills === 'function') renderSkills();
-
   // Progressive speed increase: a cada 5 segundos aumenta +0.01x (limite até velocidade inicial + 2.0x)
   if (state.gameMode !== 'training' && (!state.bossBattle || !state.bossBattle.active)) {
     state.speedAccum = (state.speedAccum || 0) + dt;
     const interval = (typeof CFG !== 'undefined' && CFG.speedTimerInterval) ? CFG.speedTimerInterval : 5.0;
     if (state.speedAccum >= interval) {
       state.speedAccum -= interval;
-      if ((state.activeTimers?.speedlock || 0) <= 0) {
-        const diffCfg = typeof getDifficultyConfig === 'function' ? getDifficultyConfig() : { initialSpeed: 1.0 };
-        const baseSpeed = (typeof diffCfg.initialSpeed === 'number') ? diffCfg.initialSpeed : 1.0;
-        const maxAllowed = Math.round((baseSpeed + ((typeof CFG !== 'undefined' && CFG.speedMaxIncrease) ? CFG.speedMaxIncrease : 2.0)) * 100) / 100;
-        const curSpeed = (typeof state.speedMultiplier === 'number') ? state.speedMultiplier : baseSpeed;
-        const step = (typeof CFG !== 'undefined' && CFG.speedTimerIncrement) ? CFG.speedTimerIncrement : 0.01;
-        if (curSpeed < maxAllowed) {
-          state.speedMultiplier = Math.min(maxAllowed, Math.round((curSpeed + step) * 100) / 100);
-          updateHUD();
-        }
+      const diffCfg = typeof getDifficultyConfig === 'function' ? getDifficultyConfig() : { initialSpeed: 1.0 };
+      const baseSpeed = (typeof diffCfg.initialSpeed === 'number') ? diffCfg.initialSpeed : 1.0;
+      const maxAllowed = Math.round((baseSpeed + ((typeof CFG !== 'undefined' && CFG.speedMaxIncrease) ? CFG.speedMaxIncrease : 2.0)) * 100) / 100;
+      const curSpeed = (typeof state.speedMultiplier === 'number') ? state.speedMultiplier : baseSpeed;
+      const step = (typeof CFG !== 'undefined' && CFG.speedTimerIncrement) ? CFG.speedTimerIncrement : 0.01;
+      if (curSpeed < maxAllowed) {
+        state.speedMultiplier = Math.min(maxAllowed, Math.round((curSpeed + step) * 100) / 100);
+        updateHUD();
       }
     }
   }
 
   // Multipliers & effective speed
-  const isFrozen = (state.activeTimers.freezer || 0) > 0;
+  const isFrozen = (state.activeTimers?.freezer || 0) > 0;
   let effectiveSpeed = state.speedMultiplier || 1.0;
   if (state.bossBattle && state.bossBattle.active) {
-    // Regra 1: Velocidade padrão dos significados que caem nos chefões é 0.5x para qualquer dificuldade.
-    // Mesmo que o jogador erre, a velocidade é fixa em 0.5x.
     state.speedMultiplier = 0.5;
     effectiveSpeed = 0.5;
   } else {
-    if ((state.activeTimers.haste || 0) > 0) {
-      effectiveSpeed += (typeof CFG !== 'undefined' && CFG.hasteSpeedBonus) ? CFG.hasteSpeedBonus : 0.5;
-    }
-    if ((state.activeTimers.slowdown || 0) > 0) {
-      effectiveSpeed *= 0.4;
+    if ((state.activeTimers?.slowdown || 0) > 0) {
+      effectiveSpeed *= 0.5; // Reduz velocidade de queda em 50%
     }
   }
 
@@ -437,7 +399,7 @@ function gameLoop(ts) {
   if (typeof checkFreezerAutoCancel === 'function') checkFreezerAutoCancel();
 
   const boardH = gameArea.clientHeight || 500;
-  const items  = state.activeItems;
+  const items = state.activeItems;
 
   // Boss Battle safety: strictly no loose runics or words during boss confrontations
   if (state.bossBattle && state.bossBattle.active) {
@@ -690,28 +652,59 @@ function handleLetterTyped(char) {
   }
 }
 
+function attachItemBadges(item) {
+  if (!item || !item.el) return;
+  // Previne duplicação removendo badges existentes antes de recolocá-los
+  item.el.querySelectorAll('.skill-badge, .wildcard-badge, .eco-target-badge, .new-word-badge').forEach(el => el.remove());
+
+  if (item.skill) {
+    const b = document.createElement('div');
+    b.className = 'skill-badge'; b.textContent = '⚡';
+    item.el.appendChild(b);
+  }
+  if (item.type === 'wildcard') {
+    const b = document.createElement('div');
+    b.className = 'wildcard-badge'; b.textContent = '💥';
+    item.el.appendChild(b);
+  }
+  if (item.el.classList.contains('eco-target')) {
+    const b = document.createElement('div');
+    b.className = 'eco-target-badge';
+    b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="22"/></svg>';
+    b.title = typeof t === 'function' ? t('skill_name_autodestroy') : 'Eco Target';
+    item.el.appendChild(b);
+  }
+  // Micro-badge de Palavra Nova na Partida (Game UX: Padrão da Indústria)
+  if (item.type === 'word' && typeof isWordNewInRun === 'function' && isWordNewInRun(item.text)) {
+    const b = document.createElement('div');
+    b.className = 'new-word-badge';
+    b.title = typeof t === 'function' ? t('badge_new_word') : 'Nova palavra na partida';
+    const label = typeof t === 'function' ? t('badge_new_label') : 'NOVO';
+    b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg><span>' + label + '</span>';
+    item.el.appendChild(b);
+  }
+}
+
 function highlightBuffer() {
   state.activeItems.forEach(item => {
     if (item.removing) return;
     if (item.text.startsWith(state.typedBuffer)) {
       item.el.classList.add('typing-target');
+      if (item.el.classList.contains('eco-target')) {
+        item.el.classList.remove('eco-target');
+        item.el.querySelector('.eco-target-badge')?.remove();
+      }
       const matched = state.typedBuffer;
-      const rest    = item.text.slice(matched.length);
+      const rest = item.text.slice(matched.length);
       item.el.innerHTML = `<span class="m">${matched}</span>${rest}`;
-      if (item.skill) {
-        const b = document.createElement('div');
-        b.className = 'skill-badge'; b.textContent = '⚡';
-        item.el.appendChild(b);
-      }
-      if (item.type === 'wildcard') {
-        const b = document.createElement('div');
-        b.className = 'wildcard-badge'; b.textContent = '💥';
-        item.el.appendChild(b);
-      }
+      attachItemBadges(item);
     } else {
       item.el.classList.remove('typing-target');
     }
   });
+  if (typeof updateEcoTargetingIndicator === 'function') {
+    updateEcoTargetingIndicator();
+  }
 }
 
 function clearHighlight() {
@@ -719,17 +712,11 @@ function clearHighlight() {
     if (item.removing) return;
     item.el.classList.remove('typing-target');
     item.el.textContent = item.text;
-    if (item.skill) {
-      const b = document.createElement('div');
-      b.className = 'skill-badge'; b.textContent = '⚡';
-      item.el.appendChild(b);
-    }
-    if (item.type === 'wildcard') {
-      const b = document.createElement('div');
-      b.className = 'wildcard-badge'; b.textContent = '💥';
-      item.el.appendChild(b);
-    }
+    attachItemBadges(item);
   });
+  if (typeof updateEcoTargetingIndicator === 'function') {
+    updateEcoTargetingIndicator();
+  }
 }
 
 function completeItem(item) {
@@ -763,7 +750,7 @@ function completeItem(item) {
     try {
       const curBest = parseInt(localStorage.getItem('digithin_galaxy_best_combo') || '0', 10);
       if (state.maxCombo > curBest) localStorage.setItem('digithin_galaxy_best_combo', String(state.maxCombo));
-    } catch (_) {}
+    } catch (_) { }
     if (state.combo >= 30) {
       unlockAchievement('mestre_combo');
     }
@@ -781,30 +768,36 @@ function completeItem(item) {
   // Multiplier calculation (estilo Tetris: combo escala o multiplicador de pontos):
   const isFury = (state.combo || 0) >= 15;
   let comboMult = 1;
-  if (state.combo >= 15)      comboMult = 4;
+  if (state.combo >= 15) comboMult = 4;
   else if (state.combo >= 10) comboMult = 3;
-  else if (state.combo >= 5)  comboMult = 2;
-  else if (state.combo >= 2)  comboMult = 1.5;
+  else if (state.combo >= 5) comboMult = 2;
+  else if (state.combo >= 2) comboMult = 1.5;
 
   // In Modo Fúria, point multiplier doubles:
   if (isFury) {
     comboMult *= 2;
   }
 
-  // Points & Progress
+  // Points & XP
   let basePts = item.type === 'letter' ? 1 : item.type === 'syllable' ? 3 : wordPts(item.text);
-  if (state.activeTimers.haste > 0) basePts = Math.floor(basePts * 2);
+  if ((state.activeTimers?.haste || 0) > 0) basePts = Math.floor(basePts * 2);
 
   const pts = basePts * comboMult;
   state.phasePts += pts;
   state.totalScore = (state.totalScore || 0) + pts;
 
-  // A barra de progresso no modo arcade representa o farm de moedas (10 palavras = 1 moeda)
+  // XP progression
   if (state.gameMode === 'training') {
     const charsCompleted = (item.text || '').length || 1;
     state.progress = Math.min(phaseGoal(), (state.progress || 0) + charsCompleted);
   } else {
-    state.progress = state.wordsDestroyedForCoin || 0;
+    const charLen = (item.text || '').length || 1;
+    const baseXp = item.type === 'letter' ? 1 : item.type === 'syllable' ? 3 : Math.max(5, charLen * 2);
+    const bonusXp = (item.skill?.id === 'bonus_xp') ? 25 : 0;
+    if (typeof addPlayerXp === 'function') {
+      addPlayerXp(baseXp + bonusXp);
+    }
+    state.progress = state.currentXp || 0;
   }
   updateHUD();
 
@@ -813,15 +806,29 @@ function completeItem(item) {
     setTimeout(() => progressFill.classList.remove('hit-flash'), 220);
   }
 
-  if (item.type === 'letter')        playSound('hit');
+  if (item.type === 'letter') playSound('hit');
   else if (item.type === 'syllable') playSound('syllable');
-  else                               playSound('word');
+  else playSound('word');
 
   showFeedback(comboMult > 1 ? `+${pts} (${comboMult}× Combo!)` : `+${pts}`, 'success');
 
   // Track discovered word stats & farm coins every 10 words
   if (item.type === 'word') {
     const key = item.text.toLowerCase();
+    if (!state.runWordsLearned) state.runWordsLearned = new Set();
+    state.runWordsLearned.add(key);
+
+    // Remove micro-badge de palavra nova de quaisquer outras instâncias ativas desse termo
+    state.activeItems.forEach(otherItem => {
+      if (otherItem.type === 'word' && (otherItem.text || '').toLowerCase() === key) {
+        otherItem.el.querySelector('.new-word-badge')?.remove();
+      }
+    });
+    // Atualiza a esteira de fila de próximos vocábulos
+    if (typeof renderQueue === 'function') {
+      renderQueue();
+    }
+
     if (!state.wordStats[key]) state.wordStats[key] = { count: 0 };
     state.wordStats[key].count++;
 
@@ -862,7 +869,7 @@ function completeItem(item) {
       if (totalWords >= 100) {
         unlockAchievement('mestre_tipo');
       }
-    } catch (_) {}
+    } catch (_) { }
   }
 
   // Attached skill

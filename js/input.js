@@ -158,6 +158,45 @@ document.addEventListener('keydown', e => {
     return;
   }
 
+  // If Level Up modal is open, handle keyboard navigation and confirm
+  const modalLevelUpEl = $('modal-levelup');
+  const isLevelUpModalOpen = modalLevelUpEl && !modalLevelUpEl.classList.contains('hidden');
+  if (isLevelUpModalOpen) {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      if (typeof navigateLevelUp === 'function') navigateLevelUp('next');
+      return;
+    }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (typeof navigateLevelUp === 'function') navigateLevelUp('prev');
+      return;
+    }
+    if (e.key === '1' || e.code === 'Digit1' || e.code === 'Numpad1') {
+      e.preventDefault();
+      if (typeof pickLevelUpSkillByIndex === 'function') pickLevelUpSkillByIndex(0);
+      return;
+    }
+    if (e.key === '2' || e.code === 'Digit2' || e.code === 'Numpad2') {
+      e.preventDefault();
+      if (typeof pickLevelUpSkillByIndex === 'function') pickLevelUpSkillByIndex(1);
+      return;
+    }
+    if (e.key === '3' || e.code === 'Digit3' || e.code === 'Numpad3') {
+      e.preventDefault();
+      if (typeof pickLevelUpSkillByIndex === 'function') pickLevelUpSkillByIndex(2);
+      return;
+    }
+    if (e.key === 'Enter' || e.code === 'Enter' || e.code === 'NumpadEnter' || e.key === ' ' || e.code === 'Space') {
+      e.preventDefault();
+      if (typeof pickSelectedLevelUpSkill === 'function') pickSelectedLevelUpSkill();
+      return;
+    }
+
+    e.preventDefault();
+    return;
+  }
+
   // If Boss Battle Reward modal is open, handle keyboard navigation and confirm
   const modalBossRewardEl = $('modal-boss-reward');
   const isBossRewardModalOpen = (typeof isBossRewardOpen === 'function') ? isBossRewardOpen() : (modalBossRewardEl && !modalBossRewardEl.classList.contains('hidden'));
@@ -279,24 +318,6 @@ document.addEventListener('keydown', e => {
   }
 
   if (state.paused || state.phaseComplete) return;
-
-  // Number keys 1–8 activate respective skill slot
-  if (/^[1-8]$/.test(e.key)) {
-    const idx = parseInt(e.key, 10) - 1;
-    if (state.skillSlots[idx]) {
-      e.preventDefault();
-      const pills = document.querySelectorAll('.skill-pill');
-      if (pills[idx]) {
-        const kb = pills[idx].querySelector('.sp-key-badge');
-        if (kb) {
-          kb.classList.add('sp-key-pressed');
-          setTimeout(() => kb.classList.remove('sp-key-pressed'), 160);
-        }
-      }
-      activateSkill(idx);
-      return;
-    }
-  }
 
   // Backspace clears buffer (or last char during boss battle)
   if (e.key === 'Backspace') {

@@ -85,35 +85,22 @@ function isWordThematicallyRelatedToBoss(wordObj, bossType) {
   return true;
 }
 
-/**
- * Returns the thematic word pool for a boss type (words of that theme the player has unlocked/learned).
- * GUARANTEE: the pool always has at least BOSS_WORDS_PER_CYCLE words. If the player does not have enough,
- * the missing ones are taken from the boss vocabulary of the active language and unlocked on the spot.
- */
 function getBossWordPool(bossType) {
+  const lang = typeof getLanguage === 'function' ? getLanguage() : 'en';
+  const basePool = (typeof WORD_POOLS !== 'undefined' && WORD_POOLS[lang])
+    ? WORD_POOLS[lang]
+    : (typeof WORD_POOL !== 'undefined' ? WORD_POOL : []);
   const map = new Map();
-  const add = w => {
-    if (w && w.text && w.meaning && isWordThematicallyRelatedToBoss(w, bossType)) {
-      map.set(w.text.toLowerCase(), w);
-    }
-  };
-  (state.unlockedWords || []).forEach(add);
-  getLearnedWords().forEach(add);
-
-  if (map.size < BOSS_WORDS_PER_CYCLE) {
-    const candidates = getBossWordCandidates(bossType);
-    shuffle(candidates).forEach(w => {
-      if (map.size >= BOSS_WORDS_PER_CYCLE) return;
-      const key = w.text.toLowerCase();
-      if (map.has(key)) return;
-      const word = { ...w, phase: state.phase };
-      map.set(key, word);
-      if (!state.unlockedWords.find(u => u.text.toLowerCase() === key)) {
-        state.unlockedWords.push(word);
-      }
-    });
-  }
-  return Array.from(map.values());
+  basePool.forEach(w => {
+    if (w && w.text && w.meaning) map.set(w.text.toLowerCase(), w);
+  });
+  (state.unlockedWords || []).forEach(w => {
+    if (w && w.text && w.meaning) map.set(w.text.toLowerCase(), w);
+  });
+  getLearnedWords().forEach(w => {
+    if (w && w.text && w.meaning) map.set(w.text.toLowerCase(), w);
+  });
+  return shuffle(Array.from(map.values()));
 }
 
 /**
@@ -175,8 +162,21 @@ function unlockBossCycleWords(phase) {
 }
 
 function canTriggerBossBattle() {
-  // Roguelike arcade infinito: sem chefões
-  return false;
+  if (!state || state.gameMode === 'training') return false;
+  try {
+    const bossSetting = localStorage.getItem('digithin_galaxy_boss_battles');
+    if (bossSetting === 'off') return false;
+  } catch (_) {}
+
+  if (state.pendingBoss && state.pendingBossPhase === state.phase) return true;
+
+  // Boss aparece de forma aleatória a cada intervalo de 8 fases
+  const p = state.phase || 1;
+  return (p >= 8 && p % 8 === 0);
+}
+
+function getBossForPhase(phase) {
+  return getRandomBoss(1);
 }
 
 function beginBossPhase() {
@@ -189,7 +189,7 @@ function beginBossPhase() {
   stray?.forEach(el => el.parentNode?.removeChild(el));
   state.activeItems = [];
 
-  // Chefão determinístico da fase (ordem fixa). Instância criada via protótipo para manter os getters (nome, cenário...)
+  // Chefão sorteado aleatoriamente
   const candidateBoss = (state.pendingBoss && state.pendingBossPhase === state.phase)
     ? state.pendingBoss
     : getBossForPhase(state.phase);
@@ -649,58 +649,37 @@ function defeatBoss() {
   state.pendingBoss = null;
   state.pendingBossPhase = null;
 
-  // Ao vencer o boss, jogador pode escolher entre 3 habilidades aleatórias
-  const rewardPool = shuffle(SKILLS_ALL).slice(0, 3);
+  // Ao vencer o boss, jogador escolhe entre as 3 recompensas exclusivas de boss
+  const rewardPool = [
+    BOSS_REWARDS_CONFIG.extralife,
+    BOSS_REWARDS_CONFIG.continue,
+    BOSS_REWARDS_CONFIG.coins_100
+  ];
 
   setTimeout(() => {
-    showBossRewardModal(rewardPool, (chosenSkill) => {
+    showBossRewardModal(rewardPool, (chosenReward) => {
       stopConfetti();
-      grantRewardSkill(chosenSkill);
+      grantBossReward(chosenReward);
       continueAfterBossVictory();
     });
   }, 650);
 }
 
-function grantRewardSkill(skill) {
-  if (skill.id === 'extralife') {
+function grantBossReward(reward) {
+  if (reward.id === 'extralife') {
     state.lives = Math.min(state.lives + 1, 6);
     state.maxLives = Math.max(state.maxLives, state.lives);
-    showFeedback(typeof t === 'function' ? t('fb_permanent_life') : '+1 Permanent Life!', 'special');
-  } else if (skill.id === 'continue') {
+    showFeedback(typeof t === 'function' ? t('boss_reward_extralife') + '!' : '+1 Life!', 'special');
+  } else if (reward.id === 'continue') {
     state.continues = (state.continues || 0) + 1;
-    showFeedback(typeof t === 'function' ? t('fb_continue_obtained') : '🪙 +1 Continue token obtained!', 'special');
-  } else if (skill.id === 'wordpack') {
-    const unlockedTexts = new Set(state.unlockedWords.map(w => w.text.toLowerCase()));
-    const eligiblePool  = (typeof getWordPoolForDifficulty === 'function')
-      ? getWordPoolForDifficulty(WORD_POOL, state.difficulty)
-      : WORD_POOL;
-    const lockedPool    = eligiblePool.filter(w => !unlockedTexts.has(w.text.toLowerCase()));
-    const picked        = shuffle(lockedPool).slice(0, 3);
-    if (picked.length > 0) {
-      picked.forEach(w => state.unlockedWords.push({ ...w, phase: state.phase }));
-      const names = picked.map(w => w.text.toUpperCase()).join(', ');
-      const unlLabel = typeof t === 'function' ? t('library_unlocked') : 'Unlocked';
-      showFeedback(`📦 ${unlLabel}: ${names}!`, 'special');
-      if (state.unlockedWords.length >= eligiblePool.length) {
-        if (typeof unlockAchievement === 'function') unlockAchievement('colecionador');
-      }
-    }
-  } else {
-    const slot = state.skillSlots.find(s => s.id === skill.id);
-    if (slot) {
-      slot.count++;
-    } else if (state.skillSlots.length < 8) {
-      state.skillSlots.push({ id: skill.id, count: 1 });
-    } else {
-      state.skillSlots[state.skillSlots.length - 1] = { id: skill.id, count: 1 };
-    }
-    const skillName = (typeof t === 'function' && t(`skill_name_${skill.id}`) !== `skill_name_${skill.id}`)
-      ? t(`skill_name_${skill.id}`)
-      : (skill.name || '');
-    const rewardMsg = typeof t === 'function' ? t('fb_reward_granted', { reward: skillName }) : `Reward granted: ${skillName}!`;
-    showFeedback(rewardMsg, 'special');
+    showFeedback(typeof t === 'function' ? t('boss_reward_continue') + '!' : '+1 Continue!', 'special');
+  } else if (reward.id === 'coins_100') {
+    state.coins = (state.coins || 0) + 100;
+    state.totalCoinsEarned = (state.totalCoinsEarned || 0) + 100;
+    if (typeof addSharedCoins === 'function') addSharedCoins(100);
+    showFeedback(typeof t === 'function' ? '+100 ' + t('hud_coins') + '! 🪙' : '+100 Coins!', 'special');
   }
-  playSound('skill');
+  if (typeof playSound === 'function') playSound('buy');
   updateHUD();
 }
 
@@ -710,16 +689,8 @@ function continueAfterBossVictory() {
   state.pendingBossPhase = null;
   state.phaseComplete = false;
   state.paused = true;
-  const completedPhase = state.phase;
   state.phase++;
-
-  // A 1ª loja aparece após a fase 5. Depois, de 3 em 3 fases (5, 8, 11, 14…)
-  const isShopPhase = completedPhase === 5 || (completedPhase > 5 && (completedPhase - 5) % 3 === 0);
-  if (isShopPhase) {
-    showShop();
-  } else {
-    beginPhase();
-  }
+  beginPhase();
 }
 
 let currentBossTestIndex = 0;

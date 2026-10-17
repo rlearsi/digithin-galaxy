@@ -1703,6 +1703,174 @@
 }
 
 /* ======================================================
+   LEVEL UP MODAL (3 RANDOM PERKS SELECTION)
+   Strictly adheres to .agents/rules/translucent-overlays.md
+   ====================================================== */
+.modal-levelup-box {
+  max-width: 560px;
+  width: 94%;
+  padding: 34px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.levelup-badge-glow {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(16, 185, 129, 0.25));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.35);
+  animation: rewardPulse 2s infinite alternate ease-in-out;
+}
+
+.levelup-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #60A5FA, #34D399, #F59E0B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.levelup-sub {
+  font-size: 0.88rem;
+  color: var(--t2);
+  margin-top: -2px;
+}
+
+.levelup-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+  margin: 16px 0 8px;
+  padding-top: 8px;
+}
+
+@media (max-width: 560px) {
+  .levelup-skills-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+.levelup-skill-card {
+  background: var(--glass-card);
+  backdrop-filter: var(--glass-card-blur);
+  -webkit-backdrop-filter: var(--glass-card-blur);
+  border-radius: 16px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.22s ease, filter 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: visible;
+}
+
+.levelup-skill-card:hover {
+  background: var(--glass-card-hover);
+  box-shadow: 0 0 22px rgba(59, 130, 246, 0.28);
+  filter: brightness(1.08);
+}
+
+.levelup-skill-card.levelup-skill-card-selected {
+  border: none !important;
+  outline: none !important;
+  transform: none !important;
+  box-shadow: 0 0 32px rgba(59, 130, 246, 0.58), 0 0 14px rgba(16, 185, 129, 0.40), inset 0 0 16px rgba(255, 255, 255, 0.16) !important;
+  filter: brightness(1.18) !important;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.32), rgba(16, 185, 129, 0.22)), var(--glass-card) !important;
+}
+
+.levelup-skill-card.levelup-skill-card-selected:hover {
+  filter: brightness(1.22) !important;
+  box-shadow: 0 0 36px rgba(59, 130, 246, 0.65), 0 0 16px rgba(16, 185, 129, 0.45), inset 0 0 18px rgba(255, 255, 255, 0.18) !important;
+}
+
+.levelup-skill-card.levelup-skill-card-selected .levelup-skill-pick-btn {
+  filter: brightness(1.18) !important;
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.6) !important;
+}
+
+.levelup-card-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.25);
+  color: #93C5FD;
+}
+
+.levelup-card-badge-up {
+  background: rgba(16, 185, 129, 0.25);
+  color: #6EE7B7;
+}
+
+.levelup-skill-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background: var(--glass-sub-card);
+  border: none;
+}
+
+.levelup-skill-name {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: var(--t1);
+  line-height: 1.2;
+}
+
+.levelup-skill-desc {
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: #F8FAFC;
+  line-height: 1.4;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  flex: 1;
+}
+
+.levelup-skill-pick-btn {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, #3B82F6, #10B981);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: filter 0.15s ease, background 0.15s ease;
+  margin-top: auto;
+}
+
+.levelup-skill-pick-btn:hover {
+  filter: brightness(1.15);
+  transform: none;
+}
+
+/* ======================================================
    BOSS REWARD MODAL (3 RANDOM SKILLS SELECTION)
    Strictly adheres to .agents/rules/translucent-overlays.md
    ====================================================== */

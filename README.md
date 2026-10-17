@@ -1,10 +1,10 @@
 # 🌌 Digithin Galaxy — Jogo de Digitação Arcade Espacial
 
-[![Versão](https://img.shields.io/badge/versão-v1.3-6366F1?style=for-the-badge&logo=gamepad)](https://github.com/rlearsi/digithin-galaxy)
+[![Versão](https://img.shields.io/badge/versão-v1.6.2-6366F1?style=for-the-badge&logo=gamepad)](https://github.com/rlearsi/digithin-galaxy)
 [![Status](https://img.shields.io/badge/status-estável-10B981?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 [![Licença](https://img.shields.io/badge/licença-MIT-38BDF8?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 
-> **Digithin Galaxy** é um jogo de digitação arcade moderno, dinâmico e polido ambientado no espaço sideral profundo, construído em **HTML5**, **CSS3 Vanilla** e **JavaScript modular**. Palavras, termos astronômicos e corpos celestes caem em direção a um buraco negro ao fundo; o jogador digita velozmente antes que as palavras sejam engolidas pelo horizonte de eventos, acumulando pontos, avançando de fase e enfrentando 6 Comandantes Invasores Alienígenas que ameaçam invadir o Sistema Solar.
+> **Digithin Galaxy** é um jogo de digitação arcade espacial moderno e roguelike, desenvolvido em **HTML5**, **CSS3 Vanilla** e **JavaScript modular**. Palavras, termos astronômicos e corpos celestes caem pela coluna central em direção a um buraco negro; o jogador digita velozmente antes que sejam tragados pelo horizonte de eventos, acumulando XP, subindo de nível com escolhas de habilidades roguelike e enfrentando 6 Comandantes Alienígenas que ameaçam o Sistema Solar.
 
 ---
 
@@ -12,20 +12,20 @@
 - [1. Visão Geral](#1-visão-geral)
 - [2. Estrutura e Arquitetura do Projeto](#2-estrutura-e-arquitetura-do-projeto)
 - [3. Mecânicas do Jogo (Gameplay)](#3-mecânicas-do-jogo-gameplay)
-  - [3.1 Os Tokens Cósmicos & Buraco Negro](#31-os-tokens-cósmicos--buraco-negro)
-  - [3.2 Sistema de Fases e Progressão](#32-sistema-de-fases-e-progressão)
-  - [3.3 Sistema de Pontuação Dupla e Penalidades](#33-sistema-de-pontuação-dupla-e-penalidades)
-  - [3.4 Vida e Condição de Derrota](#34-vida-e-condição-de-derrota)
-  - [3.5 Sistema de Combo & Modo Fúria](#35-sistema-de-combo--modo-fúria)
-  - [3.6 Modos de Jogo Disponíveis](#36-modos-de-jogo-disponíveis)
-  - [3.7 Batalhas Contra Comandantes Alienígenas](#37-batalhas-contra-comandantes-alienígenas)
-- [4. Sistema de Habilidades](#4-sistema-de-habilidades)
-- [5. Loja de Habilidades e Economia](#5-loja-de-habilidades-e-economia)
-- [6. Biblioteca Cósmica (Bestiário)](#6-biblioteca-cósmica-bestiário)
+  - [3.1 Vocábulos Cósmicos & Buraco Negro](#31-vocábulos-cósmicos--buraco-negro)
+  - [3.2 Smart Targeting do Eco Cósmico & Buffer Lock](#32-smart-targeting-do-eco-cósmico--buffer-lock)
+  - [3.3 Sistema de XP e Level-Up Roguelike](#33-sistema-de-xp-e-level-up-roguelike)
+  - [3.4 Vidas, Buraco Negro & Espaguetificação](#34-vidas-buraco-negro--espaguetificação)
+  - [3.5 Multiplicadores de Combo e Modo Fúria](#35-multiplicadores-de-combo-e-modo-fúria)
+  - [3.6 Batalhas Contra Comandantes Alienígenas](#36-batalhas-contra-comandantes-alienígenas)
+  - [3.7 Modos de Jogo Disponíveis](#37-modos-de-jogo-disponíveis)
+- [4. Habilidades Roguelike Periódicas](#4-habilidades-roguelike-periódicas)
+- [5. Guia Visual de Digitação (Finger Guide)](#5-guia-visual-de-digitação-finger-guide)
+- [6. Biblioteca Cósmica (Bestiário Astronômico)](#6-biblioteca-cósmica-bestiário-astronômico)
 - [7. Design, UI e Experiência do Jogador](#7-design-ui-e-experiência-do-jogador)
 - [8. Controles e Atalhos de Teclado](#8-controles-e-atalhos-de-teclado)
 - [9. Como Executar](#9-como-executar)
-- [10. Histórico de Versões (Changelog)](#10-histórico-de-versões-changelog)
+- [10. Histórico de Versões](#10-histórico-de-versões)
 
 ---
 
@@ -34,186 +34,173 @@
 O projeto foi projetado com forte ênfase na estética espacial arcade moderna, feedback sonoro dinâmico via síntese em tempo real com **Web Audio API** (sem arquivos externos de áudio) e jogabilidade responsiva.
 
 - **Stack 100% Nativa:** HTML5 semântico, CSS3 Moderno (CSS Grid, Flexbox, Glassmorphism translúcido) e JavaScript Vanilla.
-- **Zero Dependências:** Funciona imediatamente tanto no protocolo `file:///` direto no navegador quanto em servidores locais (Apache / LAMPP / Live Server).
-- **Design Espacial Arcade:** Fundo cósmico com 200 estrelas cintilantes, estrelas cadentes, buraco negro estelar estilizado com photon sphere e disco de acreção, coluna de jogo centralizada e efeitos de espaguetificação sonora e visual ao engolir termos não digitados.
-- **Isolamento de Armazenamento Local:** Todas as chaves utilizam o prefixo `digithin_galaxy_` no `localStorage`, garantindo total independência de moedas, slots salvos e recordes em relação a outros projetos no mesmo domínio local.
+- **Zero Dependências:** Funciona imediatamente no navegador via protocolo local `file:///` ou servidores locais (Apache / LAMPP / Live Server).
+- **Design Espacial Arcade:** Fundo cósmico com 200 estrelas cintilantes, estrelas cadentes, buraco negro estelar estilizado com photon sphere e disco de acreção luminoso, coluna central em vidro fosco translúcido e animação de espaguetificação gravitacional.
+- **Isolamento de Armazenamento Local:** Todas as chaves utilizam o prefixo `digithin_galaxy_` no `localStorage`, garantindo total independência de recordes, conquistas, configurações e progresso em relação a outros projetos no mesmo domínio local.
 
 ---
 
 ## 2. Estrutura e Arquitetura do Projeto
 
-A base de código é completamente desacoplada em módulos de responsabilidade única dentro das pastas `css/` e `js/`:
+A base de código é completamente modular, dividida em arquivos de responsabilidade única dentro de `css/` e `js/`:
 
 ```
 digithin-galaxy/
-├── index.html            # Estrutura do jogo, HUD, modais e scripts
+├── index.html            # Estrutura do jogo, HUD, modais translúcidos e esteira cósmica
 ├── privacy.html          # Política de Privacidade & Transparência (LGPD, GitHub Pages)
-├── style.css             # Agregador mestre (@import) dos submódulos de estilo
-├── game.js               # Orquestrador central: ciclo de jogo, loop RAF e matching de digitação
-├── ChangeLog.md          # Histórico detalhado de alterações do Digithin Galaxy
-├── README.md             # Esta documentação completa do projeto
-├── TRANSLATING.md        # Guia para tradutores e localização i18n
-├── AGENTS.md             # Regras de design, glassmorphism e diretrizes técnicas
-├── version.json          # Arquivo de versão remota para detecção de atualizações
+├── style.css             # Agregador mestre de estilos
+├── game.js               # Orquestrador central: loop RAF, matching de digitação e colisões
+├── ChangeLog.md          # Registro oficial e detalhado de todas as versões do projeto
+├── README.md             # Documentação do jogo e guia de uso
+├── TRANSLATING.md        # Guia para localização e tradução i18n
+├── AGENTS.md             # Diretrizes de design, vidro translúcido e regras técnicas
+├── version.json          # Fonte da verdade de versão para detecção de atualizações
 ├── css/
-│   ├── variables.css     # Design tokens, paleta estelar, temas e superfícies translúcidas
-│   ├── components.css    # Botões, interruptor de tema, badges de velocidade e tags
-│   ├── layout.css        # Telas, HUD, colunas flutuantes em vidro e tabuleiro
-│   ├── gameplay.css      # Tokens espaciais flutuantes, animação de buraco negro, auras
-│   ├── modals.css        # Modais translúcidos de pausa, vitória de fase, loja, biblioteca e game over
-│   └── responsive.css    # Media queries e adaptações para viewports menores
-├── locales/              # Pacotes de idiomas (en, pt, fr, de, ja, ko, zh)
+│   ├── variables.css     # Design tokens, paleta cósmica unificada e superfícies glass
+│   ├── components.css    # Botões aeroespaciais, tags, barras de progresso e badges
+│   ├── layout.css        # Telas, HUD, colunas em vidro e posicionamento de elementos
+│   ├── gameplay.css      # Vocábulos flutuantes, buraco negro, mira cósmica e efeitos
+│   ├── modals.css        # Modais de Level-Up, pausa, biblioteca, chefão e game over
+│   └── responsive.css    # Adaptações e media queries para diferentes resoluções
+├── locales/              # Pacotes de tradução em 7 idiomas (en, pt, fr, de, ja, ko, zh)
 └── js/
     ├── ambient.js        # Canvas de campo estelar 2D, estrelas cintilantes e buraco negro
-    ├── audio.js          # Síntese Web Audio API (hit, word, sucção de buraco negro, erro, vida)
-    ├── i18n.js           # Sistema de internacionalização (i18n) e carregador JSON multilíngue
-    ├── data.js           # Constantes (CFG), dicionário cósmico (75 palavras), habilidades e chefões
-    ├── state.js          # Definição do estado global e persistência no localStorage (digithin_galaxy_*)
-    ├── ui.js             # Atualizações de HUD, modais translúcidos, fila e partículas
-    ├── shop.js           # Mecânica da loja espacial, navegação por teclado e inventário
-    ├── library.js        # Biblioteca Cósmica de termos descobertos e contadores de frequência
-    ├── spawner.js        # Motor de geração de tokens cósmicos, esteira de fila e espaçamento
-    ├── skills.js         # Acionamento de habilidades ativas (congelamento, bomba, vórtex, escudo)
-    ├── boss.js           # Batalhas contra os 6 Comandantes Alienígenas, enigmas cósmicos e recompensas
-    ├── pause.js          # Controle de pausa/retomada, contagem 3-2-1 e modais de saída
-    ├── phase.js          # Progressão de fases, tela de vitória, resumo didático e recordes
-    └── input.js          # Captura e roteamento de teclado, suporte a espaço/hífen e auto-pausa
+    ├── audio.js          # Síntese Web Audio API (digitação, sucção, acertos, level-up)
+    ├── i18n.js           # Mecanismo de internacionalização e carregador de pacotes JSON
+    ├── data.js           # Constantes (CFG), vocabulário cósmico (75 palavras) e chefões
+    ├── state.js          # Estado global da corrida e persistência local (digithin_galaxy_*)
+    ├── ui.js             # Atualizações de HUD, notificações, partículas e modais
+    ├── shop.js           # Mecânica de ofertas e inventário de habilidades
+    ├── library.js        # Biblioteca Cósmica e estatísticas de vocabulário
+    ├── spawner.js        # Motor de geração de vocábulos cósmicos e esteira de fila
+    ├── skills.js         # Habilidades roguelike periódicas e mira inteligente do Eco Cósmico
+    ├── boss.js           # Batalhas contra os 6 Comandantes Alienígenas e enigmas cósmicos
+    ├── pause.js          # Controle de pausa/retomada com contagem 3-2-1
+    ├── phase.js          # Resumo de partidas, pontuação e recordes
+    └── input.js          # Captura de teclado, buffer de digitação e auto-pausa
 ```
 
 ---
 
 ## 3. Mecânicas do Jogo (Gameplay)
 
-### 3.1 Os Tokens Cósmicos & Buraco Negro
-Os itens que caem do topo da tela em direção ao buraco negro são denominados **Tokens Cósmicos**. Suas cores de fundo seguem uma ordem térmica intuitiva:
+### 3.1 Vocábulos Cósmicos & Buraco Negro
+Os elementos que caem do topo da tela em direção ao buraco negro são denominados **Vocábulos Cósmicos**. O jogo adota o padrão de Game UX *"Cor é Mecânica, Não Tipologia"*: todos os vocábulos comuns compartilham uma base visual serena e unificada, destacando apenas mecânicas especiais:
 
-| Tipo de Token | Temperatura / Nível | Exemplo | Pontuação Base | Visual e Estilo |
-|---|---|---|---|---|
-| **Letra** | ❄️ **Fria (Gélida)** | `A`, `B`, `K` | **1 ponto** | Círculo azul espacial (`#2563EB`) de 44px com texto branco |
-| **Sílaba** | 🌿 **Temperada (Fresca)** | `CA`, `SOL`, `LUA` | **3 pontos** | Pílula verde esmeralda (`#059669`) |
-| **Palavra Cósmica** | ☀️ **Quente (Solar)** | `ORBITA`, `PULSAR` | **3 pts × letras** | Pílula âmbar dourado (`#D97706`) |
-| **Palavra com Habilidade** | ⚡ **Incandescente (Plasma)** | `ESTRELA ⚡` | Pontuação da palavra + **Habilidade** | Pílula magenta radiante (`#D946EF`), aura estelar e badge `⚡` |
-| **Palavra Coringa** | 💥 **Supernova / Caos** | `BURACO`, `NOVA` | **10 pts base + Pontos da tela toda** | Pílula violeta (`#8B5CF6`) e badge `💥` |
-| **🚨 Tragada Estelar** | 🔥 **Singularidade Gravitacional** | Qualquer palavra no horizonte de eventos | — | Animação de estiramento gravitacional (`swallowIntoBlackHole`), pulso relativístico e perda de 1 vida |
+| Tipo de Vocábulo | Visual / Identificador | XP Concedido | Descrição |
+|---|---|:---:|---|
+| **Letra Isolada** | Círculo Azul Cósmico (`#2563EB`) | **+8 XP** | Vocábulo de aquecimento e memória muscular. |
+| **Sílaba Cósmica** | Pílula Azul Cósmico (`#2563EB`) | **+16 XP** | Transição motora entre teclas individuais e termos complexos. |
+| **Palavra Nova na Run** | Pílula Azul + Micro-badge `NOVO` | **+30 XP** | Termo virgem na partida. Requer digitação manual do jogador para ser dominado. |
+| **Palavra Já Aprendida** | Pílula Azul Cósmico limpa | **+30 XP** | Termo já dominado na run; elegível para destruição pelo Eco Cósmico. |
+| **Vocábulo com Habilidade** | Badge `⚡` anexado | **+30 XP** + Habilidade | Concede um drop temporário de habilidade ao ser digitado. |
+| **Palavra Coringa** | Badge `💥` anexado | **+50 XP** + Limpeza de Tela | Provoca detonação cósmica que varre os termos ativos em tela. |
+| **Desafio do Chefão** | Caixa de enigma translúcida | **+150 XP** + Recompensa | Dica científica para enfraquecer o Comandante Invasor. |
 
-> **Suporte Fluido a Espaço e Hífen:** Para termos compostos espaciais (`buraco-negro`, `poeira-estelar`, `velocidade-da-luz`), o jogador pode pressionar indistintamente a barra de **Espaço** ou a tecla **- (Hífen)**, digitando com naturalidade e velocidade contínua.
-
----
-
-### 3.2 Sistema de Fases e Progressão
-A barra de progresso no centro do HUD avança conforme os tokens cósmicos são digitados com sucesso. Ao atingir a meta da fase:
-- O jogo é pausado imediatamente com chuva festiva de partículas estelares e áudio de celebração.
-- O modal de fase completa exibe o resumo financeiro de pontos e moedas e desbloqueia **3 palavras aleatórias** para o acervo cósmico do jogador.
-- Ao iniciar uma nova fase:
-  - **A velocidade adicional acumulada é reiniciada para 1.0×** (`baseSpeed`).
-  - **O contador de combo e o Modo Fúria são reiniciados para 0×**.
-
-#### Metas de Cada Fase:
-- **Fase 1:** **10 pontos**
-- **Fase 2:** **20 pontos**
-- **Fase 3:** **30 pontos**
-- **Fase 4:** **40 pontos**
-- **Fase 5:** **50 pontos**
-- **Fase 6 em diante:** **Progressão linear (+10 pontos a cada nova fase)**: $\text{Meta} = \text{Fase} \times 10$
+> **Alternância Fluida entre Espaço e Hífen:** Em termos compostos (`buraco-negro`, `poeira-estelar`, `velocidade-da-luz`), o jogador pode digitar indiferentemente a barra de **Espaço** ou a tecla **- (Hífen)** sem travar a digitação.
 
 ---
 
-### 3.3 Sistema de Pontuação Dupla e Penalidades
-
-1. **Pontos da Fase (`FASE`):** Pontos ganhos na fase atual através de digitação, palavras completas e explosões.
-2. **Pontos Totais Acumulados (`TOTAL`):** Saldo bancado definitivo usado como moeda na Loja Espacial, formatado com 10 dígitos (ex.: `0000098120`).
-3. **Penalidade por Erro de Digitação:**
-   - **Trava de Proteção (Campo Vazio):** Caso não haja nenhum token ativo na coluna no momento da digitação, nenhuma penalidade é aplicada.
-   - **Punição Condicional:** Se houver palavras em tela e o jogador errar uma tecla, reduz-se a barra de progresso, a velocidade sobe suavemente (+0.1×) e o erro é contabilizado para apuração no fim da fase.
-
----
-
-### 3.4 Vida e Condição de Derrota
-- O jogador inicia a partida com **3 vidas** (❤️ ❤️ ❤️).
-- Se uma palavra atinge o horizonte de eventos do buraco negro (exceto com **Imunidade** ativa), ela é espaguetificada e o jogador perde 1 vida.
-- Quando as vidas chegam a zero, surge a tela de **Game Over**. Com **Fichas Continue**, é possível reviver imediatamente na mesma fase.
+### 3.2 Distinção de Palavras Novas & Smart Targeting do Eco Cósmico
+O jogo mantém transparência absoluta de gameplay sem poluir a visão do jogador:
+- **Micro-badge de Palavra Nova (`.new-word-badge`):** Palavras ainda não dominadas na partida atual recebem uma pequena insígnia âmbar no canto superior esquerdo com ícone em SVG limpo (`NOVO` / `NEW`). Ao digitá-la pela primeira vez, o badge desaparece de todas as instâncias da palavra na tela e na esteira de próximos.
+- **Eco Cósmico e Prioridade de Digitação:** O Eco Cósmico opera **exclusivamente sobre palavras já aprendidas** (sem o badge `NOVO`). Portanto, o jogador sabe que palavras com a insígnia `NOVO` devem ser digitadas manualmente, enquanto as palavras sem insígnia podem ser aniquiladas pela habilidade.
+- **Indicador de Mira em Tempo Real (`.eco-target`):** Quando o Eco Cósmico está em ação, a palavra exata escolhida para a próxima explosão recebe um retículo astronômico em SVG e pulso dinâmico.
+- **Proteção Buffer Lock:** Se o jogador já iniciou a digitação de qualquer palavra (letras acertadas no buffer), o Eco Cósmico é **bloqueado de mira-la ou destruí-la**, redirecionando a mira para outro termo livre.
 
 ---
 
-### 3.5 Sistema de Combo & Modo Fúria
-- **Sequência de Acertos:** Cada palavra completada sem erros incrementa o contador de combo:
-  - **1 a 4 acertos:** Multiplicador normal ($1\times$).
-  - **5 a 9 acertos:** Multiplicador dobrado ($2\times$).
-  - **10 a 14 acertos:** Multiplicador triplo ($3\times$).
-  - **15+ acertos — MODO FÚRIA:** Multiplicador quádruplo ($4\times$) que **dobra novamente** no modo fúria (totalizando até **$8\times$ pontos**!).
+### 3.3 Sistema de XP e Level-Up Roguelike
+Durante a corrida arcade, cada vocábulo digitado alimenta a barra contínua de experiência (**XP**) no topo da tela:
+1. **Acúmulo de XP:** A barra superior preenche-se em direção à meta do nível atual (`state.currentXp / state.xpRequired`).
+2. **Subida de Nível (Level-Up):** Ao atingir o total necessário, o jogo pausa e exibe o modal de subida de nível com **3 cartas de habilidades aleatórias**.
+3. **Seleção Tática:** O jogador escolhe 1 carta utilizando o mouse ou as teclas <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, Setas e <kbd>Enter</kbd>.
+4. **Perks Ativos da Run:** A habilidade escolhida permanece ativa por toda a corrida, operando em ciclos periódicos até o final da partida.
 
 ---
 
-### 3.6 Modos de Jogo Disponíveis
-1. **Modo Clássico:** A experiência arcade espacial completa com vidas, fases progressivas, loja e chefões alienígenas a cada 8 fases.
-2. **Modo Treinamento por Linhas do Teclado:** 4 Mundos estruturados pedagogicamente (Linha Base, Superior, Inferior e Acentos) com lições de fixação motora e recorde de precisão.
-3. **Modo Zen (Treino Livre):** Sem perda de vidas, ideal para praticar vocabulário cósmico e velocidade sem risco de Game Over.
-4. **Modo Contra o Relógio (Time Attack 60s):** Corrida eletrizante de 60 segundos com cronômetro regressivo e pontuação máxima.
+### 3.4 Vidas, Buraco Negro & Espaguetificação
+- O jogador inicia com **3 vidas** (❤️ ❤️ ❤️).
+- A partir de ~80% da altura da tela, os vocábulos não digitados são capturados pelo campo gravitacional, sofrendo espaguetificação progressiva (`scaleX: 0.38`, `scaleY: 2.35`) e dilatação temporal.
+- Ao cruzar o horizonte de eventos, o vocábulo é tragado na singularidade com colapso sonoro e o jogador perde 1 vida (a menos que esteja sob efeito do **Escudo de Plasma**).
+- Com zero vidas, a partida é encerrada com a tela de **Game Over**. Fichas de Continue permitem reviver imediatamente na corrida.
 
 ---
 
-### 3.7 Batalhas Contra Comandantes Alienígenas
-A cada **8 fases** (fases 8, 16, 24, 32, 40, 48…), a coluna cósmica é invadida por um dos **6 Comandantes Invasores Alienígenas** em ordem fixa:
-
-| Fase | Comandante Invasor | Arquétipo / Cor | Ameaça Alienígena | Universo dos Enigmas |
-|:---:|:---|:---:|:---|:---|
-| **8** | **Xylarion** | `xylarion` (Cyan `#06B6D4`) | Arauto da Vanguarda Alienígena | Sondas orbitais, radares, naves batedoras e vácuo. |
-| **16** | **Zorkon** | `zorkon` (Emerald `#10B981`) | Mestre do Enxame Biomecânico | Colmeias cósmicas, bio-drones e matéria adaptativa. |
-| **24** | **Vespera** | `vespera` (Violet `#A855F7`) | Soberana Psiônica Extraterrestre | Ondas de choque mentais, hiperspaço e aurora boreal cósmica. |
-| **32** | **Kragthor** | `kragthor` (Crimson `#EF4444`) | General Belicista Alienígena | Frotas de batalha, canhões estelares e supernovas destrutivas. |
-| **40** | **Nebulor** | `nebulor` (Indigo `#6366F1`) | Entidade Cósmica Invasora | Vórtices de matéria escura, quasars e lente gravitacional. |
-| **48** | **Xenor** | `xenor` (Amber `#F59E0B`) | Consciência Central da Invasão | Núcleo de singularidade, velocidade da luz e buraco de minhoca. |
-
-#### Dinâmica do Duelo:
-1. **Entrada do Comandante:** O invasor alienígena surge no topo com avatar vetorial SVG inline e medidor arcade de **Pontos de Vida: `|||`**.
-2. **Caixa de Enigma Gravitacional:** Uma caixa translúcida em vidro fosco desce contendo a dica científica e o número de letras da palavra secreta.
-3. **Impacto Devastador:** Digite a palavra antes que a caixa encoste no horizonte de eventos para causar dano crítico no invasor.
-4. **Recompensa de Vitória:** Ao derrotar o Comandante, o jogador escolhe 1 entre 3 habilidades especiais gratuitas.
+### 3.5 Multiplicadores de Combo e Modo Fúria
+Digitações consecutivas sem erros ativam o multiplicador de pontuação:
+- **1 a 4 acertos:** Multiplicador normal ($1\times$).
+- **5 a 9 acertos:** Multiplicador dobrado ($2\times$).
+- **10 a 14 acertos:** Multiplicador triplo ($3\times$).
+- **15+ acertos — MODO FÚRIA:** Multiplicador máximo que atinge até **$8\times$ pontos** totais!
 
 ---
 
-## 4. Sistema de Habilidades
+### 3.6 Batalhas Contra Comandantes Alienígenas
+Durante a jornada arcade, o Sistema Solar é invadido esporadicamente por um dos **6 Comandantes Invasores Alienígenas**:
 
-As habilidades podem ser acumuladas no HUD e acionadas por teclado (<kbd>1</kbd>–<kbd>8</kbd>) ou clique:
+| Comandante Invasor | Arquétipo Visual | Ameaça Alienígena | Domínio de Enigmas |
+|:---|:---:|:---|:---|
+| **Xylarion** | Cyan (`#06B6D4`) | Vanguarda Alienígena | Radares orbitais, sondas, naves batedoras e vácuo. |
+| **Zorkon** | Emerald (`#10B981`) | Enxame Biomecânico | Colmeias cósmicas, bio-drones e matéria adaptativa. |
+| **Vespera** | Violet (`#A855F7`) | Soberana Psiônica | Ondas psíquicas, hiperspaço e tempestades estelares. |
+| **Kragthor** | Crimson (`#EF4444`) | General Belicista | Frotas de guerra, canhões estelares e supernovas. |
+| **Nebulor** | Indigo (`#6366F1`) | Entidade Cósmica | Vórtices de matéria escura, quasars e lentes relativísticas. |
+| **Xenor** | Amber (`#F59E0B`) | Consciência Central | Singularidades, velocidade da luz e buracos de minhoca. |
 
-| Ícone | Habilidade | Duração | Descrição do Efeito |
-|:---:|:---|:---:|:---|
-| ❄️ | **Freezer** | 10s | Congela todos os tokens na tela impedindo sua descida em direção ao buraco negro. |
-| 💣 | **Bomba** | 10s | Cada palavra digitada gera uma onda de choque que destrói palavras próximas e absorve seus pontos. |
-| 🛡️ | **Imunidade** | 10s | Cria uma barreira estelar: palavras engolidas não tiram vidas e erros não quebram combo. |
-| 🌀 | **Vórtice** | 10s | Consome automaticamente 1 palavra urgente a cada 2s concedendo seus pontos integrais. |
-| ⏱️ | **Slowdown** | 15s | Reduz a velocidade de descida de todos os tokens pela metade (50%). |
-| ⚡ | **Haste** | 15s | Aumenta a velocidade em +0.5 e **dobra todos os pontos recebidos (2×)**. |
-| 🔒 | **Trava Velocidade** | 60s | Trava a velocidade da esteira em 1.0× por 1 minuto. |
-| 🌌 | **Espaçamento** | 45s | Amplia a distância vertical e intervalo entre novas palavras geradas. |
-
----
-
-## 5. Loja de Habilidades e Economia
-
-A **Loja Espacial** abre após a **fase 5** e a cada 3 fases subsequentes (5, 8, 11, 14...):
-- **Moeda de Compra:** Pontos Totais bancados (`totalScore`).
-- **Oferta Rotativa:** 3 itens sorteados aleatoriamente a cada abertura.
-- **Inflação Exponencial:** A cada compra, os itens subsequentes sofrem reajuste de preço escalonado.
+- O Comandante lança enigmas astronômicos em caixas de vidro fosco. Digite a resposta correta antes que ela toque o buraco negro para causar dano crítico no invasor.
+- Ao derrotá-lo, o jogador escolhe uma grande recompensa: `+1 Vida`, `+1 Ficha Continue` ou `+100 Moedas`.
 
 ---
 
-## 6. Biblioteca Cósmica (Bestiário)
+### 3.7 Modos de Jogo Disponíveis
+1. **Modo Arcade Roguelike:** A jornada estelar principal com progressão infinita de XP, cartas de Level-Up, aceleração contínua e chefões alienígenas.
+2. **Modo Treinamento por Linhas do Teclado:** 4 Mundos pedagógicos (Linha Base, Linha Superior, Linha Inferior e Acentos) com progressão didática dedo-a-dedo.
+3. **Modo Zen (Treino Livre):** Modo descontraído sem perda de vidas, ideal para treinar velocidade e vocabulário sem risco de derrota.
+4. **Modo Contra o Relógio (Time Attack 60s):** Desafio frenético de 1 minuto em busca do recorde máximo de palavras e WPM.
 
-A **Biblioteca Cósmica** cataloga todos os **75 termos espaciais e astrofísicos** do jogo (divididos em Fáceis, Normais e Difíceis):
-- **Descoberta Gradual:** Palavras são catalogadas conforme o jogador avança de fase ou abre Pacotes Misteriosos na loja.
-- **Significado Científico:** Cada vocábulo desbloqueado exibe sua definição astronômica e contador de digitações concluídas.
-- **Pausa Automática:** Abrir a biblioteca durante a partida pausa o jogo com restauração suave ao retornar.
+---
+
+## 4. Habilidades Roguelike Periódicas
+
+As habilidades obtidas no Level-Up atuam automaticamente ao longo da partida, gerenciadas pelo painel lateral direito ("Perks da Run") com recargas automáticas e fila de ativação inteligente:
+
+| Habilidade | Tipo | Ciclo / Duração | Efeito em Jogo |
+|:---|:---:|:---:|:---|
+| **Dilação Espacial** | Passiva Permanente | Efeito Contínuo | Amplia o espaçamento e intervalo entre novos vocábulos gerados (2x a 5x). |
+| **Bomba Estelar** | Ativa Periódica | A cada 90s | Onda de choque estelar que desintegra todos os vocábulos na tela. |
+| **Escudo de Plasma** | Ativa Periódica | 10s a cada 120s | Imunidade absoluta: vocábulos caídos não removem vidas e erros não quebram o combo. |
+| **Criostase Sideral** | Ativa Periódica | 10s a cada 120s | Paralisa todos os vocábulos na esteira, suspendendo a queda em direção ao buraco negro. |
+| **Vórtice Cósmico** | Ativa Periódica | A cada 180s | Abre uma singularidade gravitacional central que suga todos os termos ativos da tela. |
+| **Desaceleração** | Ativa Periódica | 15s a cada 60s | Reduz a velocidade de descida dos vocábulos em 50%. |
+| **Eco Cósmico** | Ativa Periódica | 10s a cada 60s | Aniquila automaticamente termos aprendidos com mira inteligente (`.eco-target`) e buffer lock. |
+| **Pontos em Dobro** | Ativa Periódica | 10s a cada 30s | Dobra toda a pontuação recebida por digitação durante sua vigência (2x). |
+
+---
+
+## 5. Guia Visual de Digitação (Finger Guide)
+
+O jogo inclui um mini-mapa ergonômico posicionado na base da tela (`finger-guide`), ativado por padrão:
+- Exibe o mapa completo de dedos e mãos em posição de repouso (Home Row: `ASDF` e `JKLÇ`).
+- Destaca em tempo real o dedo correto a ser utilizado para a próxima tecla da palavra em digitação.
+- Oculta-se automaticamente caso o Teclado Virtual touch esteja ativo em dispositivos móveis, evitando qualquer sobreposição visual.
+
+---
+
+## 6. Biblioteca Cósmica (Bestiário Astronômico)
+
+A **Biblioteca Cósmica** cataloga todos os **75 termos astrofísicos** do jogo, divididos por complexidade (Fácil, Normal e Difícil):
+- **Significado Científico:** Cada vocábulo desbloqueado exibe sua definição astronômica real e contador de vezes digitado.
+- **Pausa Automática:** Abrir a biblioteca durante uma partida pausa o jogo com segurança.
 
 ---
 
 ## 7. Design, UI e Experiência do Jogador
 
-- **Vidro Fosco Translúcido (Glassmorphism):** Superfícies translúcidas em `backdrop-filter: blur(24px) saturate(200%)`, 100% sem bordas (`border: none !important`) e sem sombras opacas pesadas.
-- **Cenário Dinâmico:** Fundo cósmico com estrelas cintilantes e buraco negro estelar 2D de alta performance visual.
-- **Zero Salto no Hover:** Proibição de deslocamento vertical (`transform: none !important`), com feedback exclusivamente por luminosidade e tom de cor.
-- **Ícones Vetoriais em SVG Inline:** 100% de ícones em SVG limpo (sem emojis de sistema operacional em interfaces).
-- **Internacionalização Obrigatória (i18n):** Suporte nativo completo a 7 idiomas (`en`, `pt`, `fr`, `de`, `ja`, `ko`, `zh`).
+- **Vidro Fosco Translúcido (Glassmorphism):** Superfícies aeroespaciais com refração calibrada (`backdrop-filter: blur(24px) saturate(200%)`), 100% sem bordas (`border: none !important`) e contraste otimizado.
+- **Estabilidade no Cursor:** Zero efeito de salto no hover (`transform: none !important`); o feedback interativo ocorre exclusivamente por tom de cor e luminosidade mais clara.
+- **Ícones Vetoriais Modernos em SVG:** 100% de ícones em SVG inline com traçado limpo, eliminando emojis nativos do sistema operacional em interfaces.
+- **Internacionalização Completa (7 Idiomas):** Suporte nativo em `pt`, `en`, `fr`, `de`, `ja`, `ko`, `zh` para todas as palavras, diálogos de chefões e opções de interface.
 
 ---
 
@@ -221,19 +208,19 @@ A **Biblioteca Cósmica** cataloga todos os **75 termos espaciais e astrofísico
 
 | Tecla / Ação | Função |
 |:---:|:---|
-| <kbd>A</kbd> – <kbd>Z</kbd> | Digitação direta das palavras cósmicas em queda |
-| <kbd>Espaço</kbd> ou <kbd>-</kbd> | Alternância fluida para termos compostos espaciais (`buraco-negro`, `velocidade-da-luz`) |
-| <kbd>Backspace</kbd> | Limpa o buffer de digitação atual e cancela a mira |
-| <kbd>ESC</kbd> | Pausa ou retoma o jogo imediatamente |
-| <kbd>Enter</kbd> | Confirma ações em modais, avança de fase e reinicia partidas |
-| <kbd>1</kbd> – <kbd>8</kbd> | Ativa a habilidade estelar do respectivo Slot 1 a 8 |
-| **Clique do Mouse** | Clica diretamente no card da habilidade na lista lateral para ativá-la |
+| <kbd>A</kbd> – <kbd>Z</kbd> | Digitação direta dos vocábulos em queda |
+| <kbd>Espaço</kbd> ou <kbd>-</kbd> | Digitação contínua de termos compostos espaciais (`buraco-negro`, `materia-escura`) |
+| <kbd>Backspace</kbd> | Limpa o buffer de digitação e cancela a mira no vocábulo atual |
+| <kbd>ESC</kbd> | Pausa ou retoma o jogo imediatamente com contagem suave |
+| <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd> | Escolha direta de cartas no modal de Level-Up |
+| <kbd>Setas</kbd> + <kbd>Enter</kbd> | Navegação e confirmação em modais e diálogos |
+| **Clique do Mouse** | Seleção de cartas, botões de ação e interação nos menus |
 
 ---
 
 ## 9. Como Executar
 
-O projeto é completamente estático e autônomo, não necessitando de `npm`, compilações ou bundlers.
+O projeto é estático e autônomo, não dependendo de `npm`, build tools ou bundlers externos.
 
 ### Opção 1: Diretamente no Navegador
 Abra o arquivo `index.html` em qualquer navegador moderno:
@@ -248,7 +235,7 @@ Caso utilize LAMPP/XAMPP:
 ```
 http://localhost/digithin-galaxy/
 ```
-Ou utilizando o servidor embutido do Python na pasta do projeto:
+Ou utilizando o servidor local integrado do Python:
 ```bash
 python3 -m http.server 8000
 # Acesse no navegador: http://localhost:8000
@@ -256,49 +243,6 @@ python3 -m http.server 8000
 
 ---
 
-## 10. Histórico de Versões (Changelog)
+## 10. Histórico de Versões
 
-### 🚀 v1.3 — Modo Roguelike Arcade Infinito, Arsenal Permanente, Nova Habilidade "Eco Cósmico" & Farm de Moedas
-- **Transformação em Corrida Infinita Arcade Roguelike**: Eliminação de transições de fases fixas. A partida agora é uma jornada ininterrupta onde termos cósmicos caem sem parar, com aumento contínuo de velocidade a cada 5s até o limite estipulado (+2.0x). A partida termina exclusivamente por esgotamento de vidas do jogador ou pausa.
-- **Arsenal e Habilidades Permanentes**: Habilidades adquiridas na Loja Cósmica passam a ser salvas de forma perpétua no inventário (`digithin_galaxy_permanent_skills`) e são preservadas entre partidas. Habilidades dropadas durante o jogo são consumidas primeiro e descartadas ao fim da corrida.
-- **Loja Cósmica no Menu Principal & Mecânica de Reroll**: A Loja Cósmica agora pode ser aberta a partir do menu inicial. O jogador pode rolar novas ofertas por 25 moedas (`CFG.shopRerollPrice`), reembaralhando 3 cartas aleatórias.
-- **Entrada Direta sem Slots de Salvamento**: Acesso direto à partida clicando em "Jogar", sem telas intermediárias de slots. Moedas, recordes e vocabulário desbloqueado são mantidos centralmente.
-- **Nova Habilidade Cósmica: "Eco Cósmico" (`autodestroy`)**: Habilidade lendária (preço: 300 moedas, duração: 60s) que busca automaticamente palavras já aprendidas pelo jogador e as desintegra a cada 5 segundos em partículas celestes, gerando pontos e acelerando o farm de moedas.
-- **Farm Contínuo de Moedas durante o Jogo**: Como não há mais bônus de fase, o jogador recebe +1 moeda a cada 10 palavras completadas (`CFG.wordsPerCoinFarm`), com medidor visual dinâmico integrado ao HUD.
-- **Progressão Didática Inicial na Partida Arcade**: Aquecimento inteligente com 8 a 12 letras isoladas no início da corrida, seguido de intercalação com sílabas cósmicas até 20 vocábulos e liberação gradual de palavras completas (55%), sílabas (25%) e letras (20%) após o 20º vocábulo.
-- **HUD Minimalista e Limpo no Modo Arcade**: Remoção de textos redundantes no topo da tela ("FASE ARCADE INFINITO" e "Próxima Moeda"), preservando a barra sutil de progresso para a moeda farmada a cada 10 palavras completadas.
-- **Diálogo de Saída Conciso & Direto**: Modal de retorno ao menu inicial simplificado com aviso direto de que as moedas ganhas serão mantidas, mas habilidades dropadas durante a partida serão perdidas.
-- **Correção do Banner de Recorde no Menu Principal**: Eliminação de duplicações e placeholders `{score}`, formatando perfeitamente o recorde atual do jogador.
-- **Redesign Símétrico e Moderno da Loja Cósmica**: Grid com botões "Comprar" alinhados com largura e altura uniformes, botões de rodapé ("Sortear Ofertas" e "Fechar") com altura idêntica de 48px, 100% sem bordas (`border: none !important`), badges monetários com ícones vetoriais SVG e sem opacidade reduzida em textos.
-- **Cache-Busting Cirúrgico por Arquivo (`?v=1.3`)**: Atualização cirúrgica em `index.html` e `privacy.html` exclusivamente nos arquivos modificados nesta versão (`css/variables.css`, `css/layout.css`, `css/modals.css`, `js/data.js`, `js/state.js`, `js/ui.js`, `js/shop.js`, `js/spawner.js`, `js/skills.js`, `js/boss.js`, `js/phase.js`, `game.js`).
-
-### 🚀 v1.2 — Iluminação Constante do Disco de Acreção, Espaguetificação Gravitacional & Destruição Cósmica em Confete
-- **Disco de Acreção com Brilho Constante & Pulsação Contínua**: O disco de acreção horizontal e a atmosfera do buraco negro agora contam com iluminação vibrante permanente (`#38BDF8`, `#FFFFFF`, `#F472B6`, `#FBBF24`), acompanhados de pulso rítmico harmônico contínuo em CSS3 sem depender exclusivamente do gatilho de palavras tragadas.
-- **Espaguetificação Gravitacional Progressiva no Buraco Negro (Início a 80% da Tela)**: A partir de ~78-80% da altura da coluna, o vocábulo é capturado pelo campo de atração gravitacional e começa a se esticar suave e progressivamente (`scaleX: 1.0 → 0.38` e `scaleY: 1.0 → 2.35`), desacelerando continuamente até quase parar (~0.08x) por dilatação temporal gravitacional, chegando ao horizonte de eventos já intensamente distorcido antes de sofrer a tragada na singularidade (`swallowIntoBlackHole`).
-- **Destruição Cósmica Fluida via Motor 2D em Canvas (Queda Contínua até o Final da Tela)**: Motor dedicado em Canvas 2D (`#debris-canvas`) a 60 FPS com física newtoniana contínua (sem paradas no ar). Os destroços e confetes cósmicos explodem em arco e caem ininterruptamente percorrendo toda a coluna até o fundo da tela rodopiando em 3D, soltando cauda de micro-faíscas/poeira estelar cintilante e se desfazendo suavemente durante a descida.
-- **Cache-Busting Cirúrgico por Arquivo (`?v=1.2`)**: Atualização cirúrgica em `index.html` apenas nos arquivos modificados nesta versão (`css/layout.css`, `css/gameplay.css`, `js/ui.js`, `js/skills.js`, `js/boss.js`, `game.js`).
-
-### 🚀 v1.1 — Isolamento de Armazenamento Local, Refatoração Cósmica & Detecção de Atualizações
-- **Isolamento Completo de Armazenamento (`digithin_galaxy_*`)**: Migração de 100% das chaves de persistência do `localStorage` para o namespace exclusivo `digithin_galaxy_*`, assegurando independência absoluta de moedas compartilhadas, slots de salvamento, recordes e preferências em relação a outros projetos locais rodando no mesmo domínio (`http://localhost/`).
-- **Sincronização Visual e Documental**: Atualização integral de `AGENTS.md`, `TRANSLATING.md` e `README.md` com os 6 Comandantes Invasores Alienígenas e catálogo astronômico. Padronização de cabeçalhos de todos os arquivos CSS e JS para Digithin Galaxy.
-- **Sistema Dinâmico de Notificação de Atualização**: Validação e ativação do fluxo de detecção de novas versões em tempo real (`#btn-update-available`), permitindo atualização instantânea de cache com feedback visual ao jogador sempre que ele entra no jogo.
-- **Unificação da Versão em Tempo de Execução (`version.json` como Fonte Única)**: Eliminação de todas as strings estáticas hardcoded de versão dos scripts JavaScript (`js/i18n.js` e `js/ui.js`), sincronizando dinamicamente a versão instalada no cliente com o `version.json` do servidor.
-
-### 🚀 v1.0 — Lançamento Oficial do Digithin Galaxy (Tema Espacial, Buraco Negro & Invasores Alienígenas)
-- **Tema Cósmico & Espaço Sideral**: Fundo preto sideral com 200 estrelas cintilantes estelares (multi-espectrais) e passagem esporádica de estrelas cadentes via 2D Canvas de alto desempenho e baixíssimo consumo de hardware.
-- **Buraco Negro Central & Horizonte de Eventos**: Renderização sutil, estilizada e não-realista de um buraco negro ao fundo da coluna de jogo, acompanhado de disco de acreção, anel de fótons e lente gravitacional relativística.
-- **Tragada Estelar & Espaguetificação**: Quando palavras atingem a base da coluna cósmica sem serem digitadas, são tragadas pelo horizonte de eventos com efeito visual de estiramento gravitacional (*spaghettification*), pulso no buraco negro e colapso sonoro via Web Audio API.
-- **Dicionário Estritamente Espacial (75 Termos)**: Vocabulário calibrado por dificuldade focado em astrofísica, exploração espacial e corpos celestes (`planeta`, `estrela`, `sol`, `poeira-estelar`, `velocidade-da-luz`, `materia-escura`, `galaxias`, `luas`, `exoplanetas`, `buraco-negro`, `buraco-de-minhoca`, `vacuo`, `estacao-espacial`, `astronauta`, `astronomia`...).
-- **Suporte Fluido a Espaço e Hífen**: Termos compostos espaciais permitem alternância transparente entre a tecla Espaço e o Hífen, permitindo digitação natural sem travar o buffer.
-- **6 Chefões Comandantes Alienígenas**: Batalhas épicas a cada 8 fases contra comandantes invasores que ameaçam invadir o Sistema Solar:
-  * `Xylarion`: Comandante da Vanguarda Alienígena (Cyan `#06B6D4`).
-  * `Zorkon`: Mestre do Enxame Biomecânico (Emerald `#10B981`).
-  * `Vespera`: Soberana Psiônica Extraterrestre (Violet `#A855F7`).
-  * `Kragthor`: General Belicista Alienígena (Crimson `#EF4444`).
-  * `Nebulor`: Entidade Cósmica Invasora (Indigo `#6366F1`).
-  * `Xenor`: Consciência Central da Invasão (Amber `#F59E0B`).
-- **Sprites Vetoriais Modernos em SVG Inline**: 6 designs vetoriais exclusivos para os chefões alienígenas, com traçado limpo, glow translúcido e zero emojis do sistema operacional (Regra 11 de `AGENTS.md`).
-- **Isolamento de Armazenamento Local (`digithin_galaxy_`)**: Migração completa das chaves de persistência do `localStorage` para `digithin_galaxy_*`, assegurando independência absoluta de moedas, slots salvos e preferências em relação a outros projetos locais.
-- **Design Glassmorphism Translúcido Calibrado**: Superfícies de vidro fosco translúcido (*glassmorphism*), 100% sem bordas (`border: none !important`), sem saltos no hover (`transform: none !important`).
-- **Internacionalização Completa (7 Idiomas)**: Suporte nativo em `pt`, `en`, `fr`, `de`, `ja`, `ko`, `zh` para todas as 75 palavras espaciais, significados cósmicos e diálogos dos chefões alienígenas.
-- **Versionamento Base 1.0**: Padronização de todas as folhas de estilo (`./css/*.css?v=1.0`), scripts (`./js/*.js?v=1.0`), `game.js?v=1.0` e pacotes i18n (`./locales/*.json?v=1.0`).
+O registro cronológico completo de novidades, refatorações, notas de lançamento e correções de cada versão do Digithin Galaxy está documentado detalhadamente em **[ChangeLog.md](ChangeLog.md)**.

@@ -389,11 +389,11 @@ function getFingerGuideSetting() {
       return saved;
     }
   } catch (_) {}
-  return 'training'; // Ativado por padrão no modo treinamento
+  return 'always'; // Ativado por padrão (Sempre Ativo)
 }
 
 function changeFingerGuideSetting(mode) {
-  const valid = (mode === 'always' || mode === 'off') ? mode : 'training';
+  const valid = (mode === 'training' || mode === 'off') ? mode : 'always';
   try {
     localStorage.setItem('digithin_galaxy_finger_guide', valid);
   } catch (_) {}
@@ -1212,29 +1212,37 @@ function updateHUD() {
       progressText.textContent = `${state.progress} / ${goal} • ${lessonLbl} ${lesson}/3: ${lessonName}`;
     }
   } else {
-    // Farm de moedas no modo arcade: 10 palavras completadas = +1 moeda
-    const currentWords = state.wordsDestroyedForCoin || 0;
-    const targetWords = 10;
-    const pct = Math.min(100, Math.max(0, (currentWords / targetWords) * 100));
+    // Sistema de XP e Level: barra no topo representa o XP ganho
+    const curXp = state.currentXp || 0;
+    const reqXp = state.xpRequired || 50;
+    const pct = Math.min(100, Math.max(0, (curXp / reqXp) * 100));
     if (progressFill) progressFill.style.width = pct + '%';
     if (progressText) {
-      // Texto de progresso removido no modo arcade a pedido do usuário
-      progressText.textContent = '';
+      progressText.textContent = `${curXp} / ${reqXp} XP`;
+    }
+    const phaseNumEl = $('phase-num');
+    const phaseTagLbl = document.getElementById('hud-level-tag-label');
+    if (phaseTagLbl) {
+      phaseTagLbl.textContent = typeof t === 'function' ? t('hud_level') : 'LEVEL';
+    }
+    if (phaseNumEl) {
+      phaseNumEl.textContent = state.level || 1;
     }
   }
 
   let mult = state.speedMultiplier || 1.0;
-  if ((state.activeTimers?.haste || 0) > 0) {
-    mult += (typeof CFG !== 'undefined' && CFG.hasteSpeedBonus) ? CFG.hasteSpeedBonus : 0.5;
-  }
   if ((state.activeTimers?.slowdown || 0) > 0) {
-    mult *= 0.4;
+    mult *= 0.5;
   }
   mult = Math.round(mult * 100) / 100;
   const sx = (Math.abs(Math.round(mult * 100) - Math.round(mult * 10) * 10) > 0)
     ? mult.toFixed(2)
     : mult.toFixed(1);
   if (speedDisplay) speedDisplay.textContent = sx + '×';
+
+  if (typeof renderRunPerks === 'function') {
+    renderRunPerks();
+  }
 
   // Shield aura visual update
   const aura = $('shield-aura');
@@ -1344,11 +1352,77 @@ function getSkillSvgIcon(skillId) {
       return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`;
     case 'speedlock':
       return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
-    case 'dilation':
-      return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9" stroke-dasharray="3 3"/></svg>`;
+    case 'autodestroy':
+      return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-2 2.5h3L11 8"/><circle cx="12" cy="14" r="7"/><path d="m10 14 4 4m0-4-4 4"/></svg>`;
+    case 'extralife':
+      return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>`;
+    case 'continue':
+      return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="m10 15 5-3-5-3v6z"/></svg>`;
+    case 'coins_100':
+      return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 9v6"/></svg>`;
     default:
       return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
   }
+}
+
+// Render active run perks in the sidebar
+function renderRunPerks() {
+  const container = document.getElementById('run-perks-container');
+  if (!container) return;
+
+  const perks = state.runPerks || {};
+  const perkIds = Object.keys(perks);
+
+  if (perkIds.length === 0) {
+    const emptyHint = typeof t === 'function' ? t('hud_perks_empty') : 'Nenhuma habilidade adquirida ainda.<br/>Suba de nível para desbloquear!';
+    container.innerHTML = `<div class="empty-hint">${emptyHint}</div>`;
+    return;
+  }
+
+  container.innerHTML = '';
+  perkIds.forEach(id => {
+    const def = SKILLS_CONFIG[id];
+    if (!def) return;
+    const lvl = perks[id];
+    const sName = (typeof t === 'function' && t('skill_name_' + id) !== ('skill_name_' + id))
+      ? t('skill_name_' + id)
+      : (def.name || id);
+
+    const isActive = (state.activeTimers && (state.activeTimers[id] || 0) > 0);
+    const isQueued = (state.skillQueue && state.skillQueue.includes(id));
+    const timerSec = isActive ? Math.ceil(state.activeTimers[id] / 1000) : 0;
+    const cdSec = Math.max(0, Math.ceil((state.skillCooldowns?.[id] || 0) / 1000));
+
+    const card = document.createElement('div');
+    card.className = 'run-perk-card' + (isActive ? ' perk-active' : isQueued ? ' perk-queued' : '');
+    card.style.setProperty('--perk-clr', def.color || 'var(--accent-primary)');
+
+    let statusText = '';
+    if (def.type === 'passive') {
+      const maxMult = Math.min(5, 1 + lvl);
+      statusText = `<span class="perk-status-badge perk-status-passive">+${maxMult}×</span>`;
+    } else if (isActive) {
+      statusText = `<span class="perk-status-badge perk-status-running">🔥 ${timerSec}s</span>`;
+    } else if (isQueued) {
+      statusText = `<span class="perk-status-badge perk-status-queued">⏳ Fila</span>`;
+    } else {
+      statusText = `<span class="perk-status-badge perk-status-cd">⏱️ ${cdSec}s</span>`;
+    }
+
+    card.innerHTML = `
+      <div class="perk-card-left">
+        <span class="perk-card-icon" style="color:${def.color || 'var(--accent-primary)'}">${getSkillSvgIcon(id)}</span>
+        <div class="perk-card-info">
+          <span class="perk-card-name">${sName}</span>
+          <span class="perk-card-lvl">Nv. ${lvl}</span>
+        </div>
+      </div>
+      <div class="perk-card-right">
+        ${statusText}
+      </div>
+    `;
+    container.appendChild(card);
+  });
 }
 
 // Render skill slots cleanly (Desktop Sidebar & Mobile Quick-Cast Bar)
@@ -1625,6 +1699,9 @@ function renderQueue() {
     const el = document.createElement('div');
     let cls = `qi ${qi.type}`;
     if (qi.skill) cls += ' has-skill-q';
+    if (qi.type === 'word' && typeof isWordNewInRun === 'function' && isWordNewInRun(qi.text)) {
+      cls += ' qi-new-word';
+    }
     el.className = cls;
     el.textContent = qi.text;
     queueItemsEl.appendChild(el);
@@ -1671,6 +1748,9 @@ function animateQueueShift() {
         const newEl = document.createElement('div');
         let cls = `qi ${qi.type} qi-entering`;
         if (qi.skill) cls += ' has-skill-q';
+        if (qi.type === 'word' && typeof isWordNewInRun === 'function' && isWordNewInRun(qi.text)) {
+          cls += ' qi-new-word';
+        }
         newEl.className = cls;
         newEl.textContent = qi.text;
         queueItemsEl.appendChild(newEl);
@@ -3048,7 +3128,13 @@ function showBossRewardModal(skills, onPick) {
   }
 
   skills.forEach((skill, index) => {
-    const loc = (typeof getLocalizedItem === 'function') ? getLocalizedItem(skill) : { name: skill.name, desc: skill.desc };
+    const sName = (typeof t === 'function' && skill.nameKey && t(skill.nameKey) !== skill.nameKey)
+      ? t(skill.nameKey)
+      : (skill.name || '');
+    const sDesc = (typeof t === 'function' && skill.descKey && t(skill.descKey) !== skill.descKey)
+      ? t(skill.descKey)
+      : (skill.desc || '');
+
     const pickTxt = typeof t === 'function' && t('boss_btn_pick') ? t('boss_btn_pick') : 'Obtain';
     const card = document.createElement('div');
     const isSelected = (index === state.selectedBossRewardIndex);
@@ -3057,10 +3143,10 @@ function showBossRewardModal(skills, onPick) {
     card.innerHTML = `
       <kbd class="card-key-hint" aria-hidden="true">${index + 1}</kbd>
       <div class="boss-skill-icon-wrap" style="--item-clr: ${skill.color || 'var(--accent-primary)'}">
-        <span>${skill.icon}</span>
+        <span>${getSkillSvgIcon(skill.id) || skill.icon}</span>
       </div>
-      <div class="boss-skill-name">${loc.name || skill.name}</div>
-      <div class="boss-skill-desc">${loc.desc || skill.desc}</div>
+      <div class="boss-skill-name">${sName}</div>
+      <div class="boss-skill-desc">${sDesc}</div>
       <button class="boss-skill-pick-btn" type="button">${pickTxt}</button>
     `;
     card.addEventListener('mouseenter', () => {
@@ -3084,6 +3170,138 @@ function showBossRewardModal(skills, onPick) {
 
   modalBossReward.classList.remove('hidden');
 }
+
+// ============================================================
+// LEVEL UP MODAL UI & SELECTION LOGIC
+// ============================================================
+function showLevelUpModal(choices, onPick) {
+  const modal = document.getElementById('modal-levelup');
+  const grid = document.getElementById('levelup-skills-grid');
+  const subEl = document.getElementById('levelup-sub-text');
+  if (!modal || !grid) return;
+
+  grid.innerHTML = '';
+  state.levelUpChoices = choices;
+  state.onPickLevelUp = onPick;
+  state.selectedLevelUpIndex = 0;
+
+  if (subEl) {
+    subEl.textContent = typeof t === 'function' ? t('levelup_sub', { level: state.level }) : `You reached Level ${state.level}!`;
+  }
+
+  choices.forEach((skill, index) => {
+    const curLevel = state.runPerks?.[skill.id] || 0;
+    const isUpgrade = curLevel > 0;
+    const nextLevel = curLevel + 1;
+
+    const sName = (typeof t === 'function' && t('skill_name_' + skill.id) !== ('skill_name_' + skill.id))
+      ? t('skill_name_' + skill.id)
+      : (skill.name || skill.id);
+
+    let sDesc = '';
+    if (skill.id === 'dilation') {
+      const maxMultiplier = Math.min(5, 1 + nextLevel);
+      sDesc = typeof t === 'function' ? t(skill.descKey, { max: maxMultiplier }) : `Spacing up to ${maxMultiplier}`;
+    } else {
+      sDesc = (typeof t === 'function' && t(skill.descKey) !== skill.descKey)
+        ? t(skill.descKey)
+        : (skill.desc || '');
+    }
+
+    const card = document.createElement('div');
+    const isSelected = (index === state.selectedLevelUpIndex);
+    card.className = 'levelup-skill-card' + (isSelected ? ' levelup-skill-card-selected' : '');
+    card.setAttribute('data-choice-index', String(index));
+    card.style.setProperty('--item-clr', skill.color || 'var(--accent-primary)');
+
+    const pickTxt = typeof t === 'function' && t('levelup_btn_pick') ? t('levelup_btn_pick') : 'Choose';
+    const tagTxt = isUpgrade ? `Nv. ${nextLevel} (Upgrade)` : 'NOVA';
+
+    card.innerHTML = `
+      <kbd class="card-key-hint" aria-hidden="true">${index + 1}</kbd>
+      <div class="levelup-card-badge">${tagTxt}</div>
+      <div class="levelup-skill-icon-wrap" style="--item-clr: ${skill.color || 'var(--accent-primary)'}">
+        <span>${getSkillSvgIcon(skill.id) || skill.icon}</span>
+      </div>
+      <div class="levelup-skill-name">${sName}</div>
+      <div class="levelup-skill-desc">${sDesc}</div>
+      <button class="levelup-skill-pick-btn" type="button">${pickTxt}</button>
+    `;
+
+    card.addEventListener('mouseenter', () => {
+      state.selectedLevelUpIndex = index;
+      updateLevelUpSelectionVisual();
+    });
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.levelup-skill-pick-btn')) return;
+      selectLevelUpIndex(index);
+    });
+    const btn = card.querySelector('.levelup-skill-pick-btn');
+    if (btn) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeLevelUpModal();
+        if (typeof onPick === 'function') onPick(skill);
+      });
+    }
+    grid.appendChild(card);
+  });
+
+  modal.classList.remove('hidden');
+}
+
+function selectLevelUpIndex(index) {
+  state.selectedLevelUpIndex = index;
+  updateLevelUpSelectionVisual();
+  const choice = state.levelUpChoices?.[index];
+  if (choice && typeof state.onPickLevelUp === 'function') {
+    const cb = state.onPickLevelUp;
+    closeLevelUpModal();
+    cb(choice);
+  }
+}
+
+function pickLevelUpSkillByIndex(index) {
+  selectLevelUpIndex(index);
+}
+
+function pickSelectedLevelUpSkill() {
+  const idx = state.selectedLevelUpIndex || 0;
+  selectLevelUpIndex(idx);
+}
+
+function navigateLevelUp(dir) {
+  if (!state.levelUpChoices || state.levelUpChoices.length === 0) return;
+  const count = state.levelUpChoices.length;
+  if (dir === 'next') {
+    state.selectedLevelUpIndex = (state.selectedLevelUpIndex + 1) % count;
+  } else {
+    state.selectedLevelUpIndex = (state.selectedLevelUpIndex - 1 + count) % count;
+  }
+  updateLevelUpSelectionVisual();
+}
+
+function updateLevelUpSelectionVisual() {
+  const cards = document.querySelectorAll('.levelup-skill-card');
+  cards.forEach((c, idx) => {
+    c.classList.toggle('levelup-skill-card-selected', idx === state.selectedLevelUpIndex);
+  });
+}
+
+function closeLevelUpModal() {
+  const modal = document.getElementById('modal-levelup');
+  if (modal) modal.classList.add('hidden');
+  state.levelUpChoices = null;
+  state.onPickLevelUp = null;
+  state.selectedLevelUpIndex = 0;
+}
+
+window.showLevelUpModal = showLevelUpModal;
+window.closeLevelUpModal = closeLevelUpModal;
+window.pickLevelUpSkillByIndex = pickLevelUpSkillByIndex;
+window.pickSelectedLevelUpSkill = pickSelectedLevelUpSkill;
+window.navigateLevelUp = navigateLevelUp;
+window.renderRunPerks = renderRunPerks;
 
 function closeBossRewardModal() {
   if (state._coinAnimTimers && Array.isArray(state._coinAnimTimers)) {

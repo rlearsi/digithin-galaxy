@@ -66,22 +66,17 @@ function changeDifficulty(diff) {
   setDifficulty(diff);
 }
 
+function getRequiredXpForLevel(lvl) {
+  const l = Math.max(1, parseInt(lvl, 10) || 1);
+  return Math.round(35 + Math.pow(l, 1.55) * 15);
+}
+
 function defaultState() {
   const diffKey = getDifficulty();
   const diffCfg = getDifficultyConfig(diffKey);
   const sharedCoins = (typeof getSharedCoins === 'function') ? getSharedCoins() : 0;
-  const permSkills = (typeof getPermanentSkills === 'function') ? getPermanentSkills() : [];
   const permWords = (typeof getPermanentUnlockedWords === 'function') ? getPermanentUnlockedWords() : [];
   const permStats = (typeof getPermanentWordStats === 'function') ? getPermanentWordStats() : {};
-
-  // Clone permanent skills into match slots
-  const initialSkillSlots = permSkills.map(s => ({
-    id: s.id,
-    count: s.count,
-    isPermanent: true,
-    permanentCount: s.count,
-    droppedCount: 0
-  }));
 
   // Initial unlocked words fallback: se estiver vazio, carrega palavras da dificuldade
   let initialWords = [...permWords];
@@ -98,6 +93,16 @@ function defaultState() {
   return {
     difficulty:        diffKey,
     phase:             1,
+    level:             1,
+    currentXp:         0,
+    xpRequired:        getRequiredXpForLevel(1),
+    runPerks:          {},      // { [skillId]: level } - Roguelike perks for this run
+    skillQueue:        [],      // FIFO queue when multiple periodic skills trigger
+    activeSkill:       null,    // Current periodic skill running its active effect
+    skillCooldowns:    {},      // { [skillId]: msRemaining }
+    levelUpChoices:    [],
+    selectedLevelUpIndex: 0,
+    onPickLevelUp:     null,
     phasePts:          0,       // Points accumulated in the current run
     totalScore:        0,       // Banked points (run score)
     coins:             sharedCoins, // Player starts with shared coins bank across matches
@@ -108,7 +113,7 @@ function defaultState() {
     lives:             diffCfg.startLives,
     maxLives:          diffCfg.startLives,
     progress:          0,
-    wordsDestroyedForCoin: 0,   // A cada 10 palavras completadas ganha 1 moeda farmada
+    wordsDestroyedForCoin: 0,
     totalWordsCompletedMatch: 0,
     spawnedItemsCount: 0,       // Contador de itens gerados na corrida para progressão letra->sílaba->palavra
     initialLettersTarget: Math.floor(Math.random() * 5) + 8, // 8 a 12 letras antes de intercalar sílabas
@@ -129,7 +134,8 @@ function defaultState() {
     phaseComplete:     false,
     unlockedWords:     initialWords,
     wordStats:         { ...permStats },
-    skillSlots:        initialSkillSlots,
+    runWordsLearned:   new Set(), // Palavras completadas nesta run (utilizado para Palavra Nova vs Aprendida e Eco Cósmico)
+    skillSlots:        [],
     activeTimers:      {},
     vortexAccum:       0,
     autodestroyAccum:  0,
@@ -509,6 +515,7 @@ function loadSaveDataIntoState(save) {
   }
 
   state.skillSlots = Array.isArray(save.skillSlots) ? [...save.skillSlots] : [];
+  state.runWordsLearned = new Set(Array.isArray(save.runWordsLearned) ? save.runWordsLearned : []);
   state.defeatedBossTypes = Array.isArray(save.defeatedBossTypes) ? [...save.defeatedBossTypes] : [];
   state.charsTyped = save.charsTyped || 0;
   state.startTime = Date.now();
@@ -540,3 +547,15 @@ function loadSaveDataIntoState(save) {
     if (state) state.coins = best;
   } catch (_) {}
 })();
+
+function isWordNewInRun(wordText) {
+  if (!state || state.gameMode === 'training') return false;
+  if (!wordText) return false;
+  const key = String(wordText).trim().toLowerCase();
+  if (!state.runWordsLearned) state.runWordsLearned = new Set();
+  return !state.runWordsLearned.has(key);
+}
+
+if (typeof window !== 'undefined') {
+  window.isWordNewInRun = isWordNewInRun;
+}

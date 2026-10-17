@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digitinho Galaxy — Space Typing Game</title>
-  <meta name="description" content="Digitinho Galaxy: an arcade typing game set in outer space. Cosmic vocabulary, event horizon black hole, and alien invader boss battles!" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366F1'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='15' y='22' font-family='sans-serif' font-weight='900' font-size='19' fill='%23FFFFFF' text-anchor='middle'%3ED%3C/text%3E%3Ccircle cx='23' cy='21' r='2.5' fill='%23FBBF24'/%3E%3C/svg%3E" />
+  <meta name="description"
+    content="Digitinho Galaxy: an arcade typing game set in outer space. Cosmic vocabulary, event horizon black hole, and alien invader boss battles!" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366F1'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='15' y='22' font-family='sans-serif' font-weight='900' font-size='19' fill='%23FFFFFF' text-anchor='middle'%3ED%3C/text%3E%3Ccircle cx='23' cy='21' r='2.5' fill='%23FBBF24'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/variables.css?v=1.3" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/variables.css?v=1.6.1" />
   <link rel="stylesheet" href="./css/components.css?v=1.0" />
-  <link rel="stylesheet" href="./css/layout.css?v=1.3" />
-  <link rel="stylesheet" href="./css/gameplay.css?v=1.2" />
-  <link rel="stylesheet" href="./css/modals.css?v=1.3" />
+  <link rel="stylesheet" href="./css/layout.css?v=1.4" />
+  <link rel="stylesheet" href="./css/gameplay.css?v=1.6.2" />
+  <link rel="stylesheet" href="./css/modals.css?v=1.4" />
   <link rel="stylesheet" href="./css/responsive.css?v=1.0" />
 </head>
+
 <body>
   <!-- Ambient Saturated Canvas (vibrant ambient landscape, mesh orbs & topography) -->
   <canvas id="ambient-canvas" aria-hidden="true"></canvas>
@@ -23,14 +29,16 @@
   <!-- ===== APP INITIALIZATION LOADING SCREEN ===== -->
   <div id="app-loading-screen" role="status" aria-live="polite">
     <div class="loading-content-box">
-      <div class="loading-brand-logo"><span class="logo-main">Digitinho Galaxy</span><span class="logo-dot">.</span></div>
+      <div class="loading-brand-logo"><span class="logo-main">Digitinho Galaxy</span><span class="logo-dot">.</span>
+      </div>
       <svg class="loading-spinner-svg" viewBox="0 0 40 40" aria-hidden="true">
         <circle cx="20" cy="20" r="16" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="3"></circle>
-        <circle cx="20" cy="20" r="16" fill="none" stroke="url(#spinner-gradient)" stroke-width="3" stroke-dasharray="75 100" stroke-linecap="round"></circle>
+        <circle cx="20" cy="20" r="16" fill="none" stroke="url(#spinner-gradient)" stroke-width="3"
+          stroke-dasharray="75 100" stroke-linecap="round"></circle>
         <defs>
           <linearGradient id="spinner-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#6366F1"/>
-            <stop offset="100%" stop-color="#38BDF8"/>
+            <stop offset="0%" stop-color="#6366F1" />
+            <stop offset="100%" stop-color="#38BDF8" />
           </linearGradient>
         </defs>
       </svg>
@@ -42,7 +50,7 @@
   <div id="screen-start" class="screen active">
     <div id="bg-deco" aria-hidden="true"></div>
     <div class="start-wrap">
-      
+
       <!-- Brand Header -->
       <div class="start-brand">
         <div class="start-logo"><span class="logo-main">Digitinho Galaxy</span><span class="logo-dot">.</span></div>
@@ -50,36 +58,41 @@
       </div>
 
       <!-- Dynamic Update Available Banner / Button (Hidden by default) -->
-      <button id="btn-update-available" class="btn-update-available hidden" onclick="applyAppUpdate()" type="button" aria-live="polite">
+      <button id="btn-update-available" class="btn-update-available hidden" onclick="applyAppUpdate()" type="button"
+        aria-live="polite">
         <div class="update-btn-left">
           <span class="update-icon-wrap" aria-hidden="true">
-            <svg class="btn-svg-icon update-svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-              <polyline points="7 10 12 15 17 10"/>
-              <line x1="12" y1="15" x2="12" y2="3"/>
+            <svg class="btn-svg-icon update-svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
             </svg>
           </span>
           <div class="update-text-col">
             <span class="update-btn-title" data-i18n="update_available_title">Uma nova atualização disponível!</span>
-            <span class="update-btn-sub" id="update-btn-version-desc" data-i18n="update_available_sub">Clique para atualizar o cache e carregar a versão mais recente</span>
+            <span class="update-btn-sub" id="update-btn-version-desc" data-i18n="update_available_sub">Clique para
+              atualizar o cache e carregar a versão mais recente</span>
           </div>
         </div>
         <div class="update-btn-action-badge">
           <span class="update-action-label" data-i18n="update_btn_action">Atualizar</span>
-          <svg class="btn-svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
+          <svg class="btn-svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </div>
       </button>
 
       <!-- Arcade High Score Banner -->
       <div id="start-record-banner" class="start-record-banner" title="Record">
-        <svg class="record-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-          <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-          <path d="M4 22h16"/>
-          <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34"/>
-          <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+        <svg class="record-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+          <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+          <path d="M4 22h16" />
+          <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34" />
+          <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
         </svg>
         <span class="start-record-label" data-i18n="start_record_label">RECORDE:</span>
         <span id="start-record-val" class="start-record-val">0000000000</span>
@@ -90,7 +103,7 @@
         <button id="btn-start" class="hero-start-btn" onclick="startGame('classic')">
           <span class="hero-play-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-              <polygon points="5 3 19 12 5 21 5 3"/>
+              <polygon points="5 3 19 12 5 21 5 3" />
             </svg>
           </span>
           <span class="hero-start-text" id="hero-start-text" data-i18n="btn_start">Jogar</span>
@@ -101,12 +114,13 @@
       <div class="start-modes-section">
         <div class="start-section-tag" data-i18n="start_game_modes">GAME MODES</div>
         <div class="start-modes-grid">
-          
+
           <button id="btn-training" class="mode-card" onclick="openTrainingModal()">
             <div class="mode-card-icon mode-icon-purple">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
               </svg>
             </div>
             <div class="mode-card-info">
@@ -117,11 +131,12 @@
 
           <button class="mode-card" onclick="startGame('zen')">
             <div class="mode-card-icon mode-icon-cyan">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 2a10 10 0 0 0 0 20"/>
-                <circle cx="12" cy="7" r="1.5" fill="currentColor"/>
-                <circle cx="12" cy="17" r="1.5" fill="currentColor"/>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a10 10 0 0 0 0 20" />
+                <circle cx="12" cy="7" r="1.5" fill="currentColor" />
+                <circle cx="12" cy="17" r="1.5" fill="currentColor" />
               </svg>
             </div>
             <div class="mode-card-info">
@@ -132,9 +147,10 @@
 
           <button class="mode-card" onclick="startGame('timeattack')">
             <div class="mode-card-icon mode-icon-amber">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
               </svg>
             </div>
             <div class="mode-card-info">
@@ -148,56 +164,45 @@
 
       <!-- Quick Tools System Bar -->
       <div class="start-system-bar">
-        <button class="system-bar-btn" onclick="openShopFromMenu()" title="Cosmic Shop">
-          <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="8" cy="21" r="1"/>
-            <circle cx="19" cy="21" r="1"/>
-            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
-          </svg>
-          <span data-i18n="btn_shop">Loja</span>
-        </button>
-
-        <button class="system-bar-btn" onclick="openSkillsInventory()" title="Skills Inventory">
-          <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-          </svg>
-          <span data-i18n="btn_skills_inventory">Arsenal</span>
-        </button>
-
         <button class="system-bar-btn" onclick="showBiblioteca()" title="Library">
-          <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
-            <path d="M6 6h10"/>
-            <path d="M6 10h10"/>
-            <path d="M4 19.5a2.5 2.5 0 0 1 2.5-2.5H20"/>
+          <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
+            <path d="M6 6h10" />
+            <path d="M6 10h10" />
+            <path d="M4 19.5a2.5 2.5 0 0 1 2.5-2.5H20" />
           </svg>
           <span data-i18n="btn_library">Library</span>
         </button>
 
         <button class="system-bar-btn" onclick="showConquistas()" title="Achievements">
-          <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-            <path d="M4 22h16"/>
-            <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34"/>
-            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+          <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+            <path d="M4 22h16" />
+            <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34" />
+            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
           </svg>
           <span data-i18n="btn_achievements">Achievements</span>
         </button>
 
         <button class="system-bar-btn" onclick="openRulesModal()" title="How to Play">
-          <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
           </svg>
           <span data-i18n="btn_rules">How to Play</span>
         </button>
 
         <button class="system-bar-btn" onclick="openSettings(true)" title="Settings">
-          <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
-            <circle cx="12" cy="12" r="3"/>
+          <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+            <circle cx="12" cy="12" r="3" />
           </svg>
           <span data-i18n="btn_settings">Settings</span>
         </button>
@@ -206,9 +211,10 @@
       <!-- Start Screen Subtle Footer Links -->
       <div class="start-footer-links">
         <button class="start-footer-link-btn" onclick="openPrivacyModal()" type="button" title="Privacy Policy">
-          <svg class="btn-svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            <path d="m9 12 2 2 4-4"/>
+          <svg class="btn-svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="m9 12 2 2 4-4" />
           </svg>
           <span data-i18n="footer_privacy">Privacy Policy</span>
         </button>
@@ -226,21 +232,23 @@
       <div id="hud-mobile-stats" class="hud-mobile-stats">
         <div class="hms-left-group">
           <div class="hms-item hms-score" title="Total Score">
-            <svg class="hms-svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-              <path d="M4 22h16"/>
-              <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
-              <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
-              <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
+            <svg class="hms-svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+              <path d="M4 22h16" />
+              <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+              <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+              <path d="M18 2H6v7a6 6 0 0 0 12 0V2z" />
             </svg>
             <span id="hms-score-val" class="hms-val">0</span>
           </div>
           <div class="hms-item hms-coins" title="Coins">
-            <svg class="hms-svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color:#FBBF24">
-              <circle cx="12" cy="12" r="9"/>
-              <circle cx="12" cy="12" r="5"/>
-              <path d="M12 9v6"/>
+            <svg class="hms-svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color:#FBBF24">
+              <circle cx="12" cy="12" r="9" />
+              <circle cx="12" cy="12" r="5" />
+              <path d="M12 9v6" />
             </svg>
             <span id="hms-coins-val" class="hms-val text-amber">0</span>
           </div>
@@ -249,11 +257,15 @@
       </div>
 
       <div class="hud-center-block">
-        <div class="phase-tag"><span data-i18n="hud_phase">PHASE</span> <span id="phase-num">1</span></div>
-        <div id="progress-wrap"><div id="progress-fill"></div></div>
+        <div class="phase-tag"><span id="hud-level-tag-label" data-i18n="hud_level">LEVEL</span> <span
+            id="phase-num">1</span></div>
+        <div id="progress-wrap">
+          <div id="progress-fill"></div>
+        </div>
         <div class="hud-progress-info">
           <span id="progress-text"></span>
-          <span id="zen-fixed-badge" class="zen-fixed-badge hidden" data-i18n="hud_zen_badge">Zen Mode: no lives lost</span>
+          <span id="zen-fixed-badge" class="zen-fixed-badge hidden" data-i18n="hud_zen_badge">Zen Mode: no lives
+            lost</span>
         </div>
       </div>
     </div>
@@ -283,13 +295,14 @@
             <div class="stat-hero-header">
               <span class="stat-hero-lbl" data-i18n="hud_total_score">TOTAL SCORE</span>
               <span class="stat-hero-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-                  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-                  <path d="M4 22h16"/>
-                  <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
-                  <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
-                  <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                  <path d="M4 22h16" />
+                  <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                  <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                  <path d="M18 2H6v7a6 6 0 0 0 12 0V2z" />
                 </svg>
               </span>
             </div>
@@ -303,10 +316,11 @@
             <div class="stat-hero-header">
               <span class="stat-hero-lbl" data-i18n="hud_coins">COINS</span>
               <span class="stat-hero-icon" style="color:#FBBF24">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="9"/>
-                  <circle cx="12" cy="12" r="5"/>
-                  <path d="M12 9v6"/>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <circle cx="12" cy="12" r="5" />
+                  <path d="M12 9v6" />
                 </svg>
               </span>
             </div>
@@ -438,23 +452,29 @@
 
               <!-- 1. Outer Accretion Atmosphere Glow (Spanning de fora a fora) -->
               <ellipse cx="500" cy="180" rx="498" ry="95" fill="url(#bhOuterGlow)" />
-              <ellipse class="bh-pulsing-glow" cx="500" cy="180" rx="480" ry="85" fill="url(#bhAccretionDiskGrad)" opacity="0.65" filter="url(#bhAccretionBlur)" />
+              <ellipse class="bh-pulsing-glow" cx="500" cy="180" rx="480" ry="85" fill="url(#bhAccretionDiskGrad)"
+                opacity="0.65" filter="url(#bhAccretionBlur)" />
 
               <!-- 2. Relativistic Gravitational Lensing Upper Arc -->
-              <path class="bh-lensing-arc" d="M 25 180 Q 500 25 975 180" fill="none" stroke="url(#bhLensingGrad)" stroke-width="6.5" opacity="0.85" />
+              <path class="bh-lensing-arc" d="M 25 180 Q 500 25 975 180" fill="none" stroke="url(#bhLensingGrad)"
+                stroke-width="6.5" opacity="0.85" />
 
               <!-- 3. Outer Accretion Ring (The horizontal oval with accretion brightness) -->
-              <ellipse class="bh-disk-outer" cx="500" cy="180" rx="465" ry="76" fill="none" stroke="url(#bhAccretionDiskGrad)" stroke-width="11" filter="url(#bhIntenseGlow)" opacity="0.98" />
-              <ellipse class="bh-disk-core" cx="500" cy="180" rx="455" ry="72" fill="none" stroke="url(#bhAccretionDiskGrad)" stroke-width="3.5" />
+              <ellipse class="bh-disk-outer" cx="500" cy="180" rx="465" ry="76" fill="none"
+                stroke="url(#bhAccretionDiskGrad)" stroke-width="11" filter="url(#bhIntenseGlow)" opacity="0.98" />
+              <ellipse class="bh-disk-core" cx="500" cy="180" rx="455" ry="72" fill="none"
+                stroke="url(#bhAccretionDiskGrad)" stroke-width="3.5" />
 
               <!-- 4. Inner Photon Sphere Ring -->
-              <ellipse class="bh-photon-sphere" cx="500" cy="180" rx="415" ry="56" fill="none" stroke="url(#bhPhotonRingGrad)" stroke-width="2.5" />
+              <ellipse class="bh-photon-sphere" cx="500" cy="180" rx="415" ry="56" fill="none"
+                stroke="url(#bhPhotonRingGrad)" stroke-width="2.5" />
 
               <!-- 5. Event Horizon / Singularity Core Void (Pitch black horizontal oval) -->
               <ellipse class="bh-void" cx="500" cy="180" rx="410" ry="54" fill="#000000" />
 
               <!-- 6. Relativistic Front Rim Highlight -->
-              <path class="bh-front-rim" d="M 85 180 Q 500 238 915 180" fill="none" stroke="#FFFFFF" stroke-width="3.2" opacity="0.95" />
+              <path class="bh-front-rim" d="M 85 180 Q 500 238 915 180" fill="none" stroke="#FFFFFF" stroke-width="3.2"
+                opacity="0.95" />
             </svg>
           </div>
           <div id="feedback-msg"></div>
@@ -477,21 +497,25 @@
         <div id="finger-guide" class="finger-guide hidden">
           <div class="fg-hands-container">
             <svg class="fg-hand-svg fg-hand-l" viewBox="0 0 92 84" aria-label="Left Hand">
-              <path class="fg-palm" d="M 10 50 C 9 60, 14 74, 22 78 C 32 80, 46 80, 54 78 C 63 74, 70 65, 70 58 C 70 52, 66 48, 62 46 L 14 46 C 12 48, 10 50, 10 50 Z" />
+              <path class="fg-palm"
+                d="M 10 50 C 9 60, 14 74, 22 78 C 32 80, 46 80, 54 78 C 63 74, 70 65, 70 58 C 70 52, 66 48, 62 46 L 14 46 C 12 48, 10 50, 10 50 Z" />
               <rect id="fg-finger-l-pinky" class="fg-finger" x="10" y="26" width="10" height="34" rx="5" />
               <rect id="fg-finger-l-ring" class="fg-finger" x="23" y="14" width="10" height="46" rx="5" />
               <rect id="fg-finger-l-middle" class="fg-finger" x="36" y="8" width="10" height="52" rx="5" />
               <rect id="fg-finger-l-index" class="fg-finger" x="49" y="14" width="10" height="46" rx="5" />
-              <rect id="fg-finger-l-thumb" class="fg-finger" x="58" y="44" width="11" height="26" rx="5.5" transform="rotate(36 63 57)" />
+              <rect id="fg-finger-l-thumb" class="fg-finger" x="58" y="44" width="11" height="26" rx="5.5"
+                transform="rotate(36 63 57)" />
             </svg>
             <svg class="fg-hand-svg fg-hand-r" viewBox="0 0 92 84" aria-label="Right Hand">
               <g transform="translate(92, 0) scale(-1, 1)">
-                <path class="fg-palm" d="M 10 50 C 9 60, 14 74, 22 78 C 32 80, 46 80, 54 78 C 63 74, 70 65, 70 58 C 70 52, 66 48, 62 46 L 14 46 C 12 48, 10 50, 10 50 Z" />
+                <path class="fg-palm"
+                  d="M 10 50 C 9 60, 14 74, 22 78 C 32 80, 46 80, 54 78 C 63 74, 70 65, 70 58 C 70 52, 66 48, 62 46 L 14 46 C 12 48, 10 50, 10 50 Z" />
                 <rect id="fg-finger-r-pinky" class="fg-finger" x="10" y="26" width="10" height="34" rx="5" />
                 <rect id="fg-finger-r-ring" class="fg-finger" x="23" y="14" width="10" height="46" rx="5" />
                 <rect id="fg-finger-r-middle" class="fg-finger" x="36" y="8" width="10" height="52" rx="5" />
                 <rect id="fg-finger-r-index" class="fg-finger" x="49" y="14" width="10" height="46" rx="5" />
-                <rect id="fg-finger-r-thumb" class="fg-finger" x="58" y="44" width="11" height="26" rx="5.5" transform="rotate(36 63 57)" />
+                <rect id="fg-finger-r-thumb" class="fg-finger" x="58" y="44" width="11" height="26" rx="5.5"
+                  transform="rotate(36 63 57)" />
               </g>
             </svg>
           </div>
@@ -541,34 +565,34 @@
             <button type="button" class="vk-key" data-key="B">B</button>
             <button type="button" class="vk-key" data-key="N">N</button>
             <button type="button" class="vk-key" data-key="M">M</button>
-            <button type="button" class="vk-key vk-key-backspace" data-key="BACKSPACE" aria-label="Backspace" title="Backspace">
-              <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
-                <line x1="18" y1="9" x2="12" y2="15"/>
-                <line x1="12" y1="9" x2="18" y2="15"/>
+            <button type="button" class="vk-key vk-key-backspace" data-key="BACKSPACE" aria-label="Backspace"
+              title="Backspace">
+              <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" />
+                <line x1="18" y1="9" x2="12" y2="15" />
+                <line x1="12" y1="9" x2="18" y2="15" />
               </svg>
             </button>
           </div>
         </div>
       </div>
 
-      <!-- RIGHT SIDEBAR: Skills -->
+      <!-- RIGHT SIDEBAR: Run Perks -->
       <div id="side-right">
         <div class="side-card flex-grow">
-          <div class="side-title" data-i18n="hud_spells">SKILLS</div>
-          <div id="skills-container">
-            <div class="empty-hint" data-i18n="hud_spells_hint">Buy in shop<br/>or complete words <strong>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-              </svg>
-            </strong></div>
+          <div class="side-title" data-i18n="hud_run_perks">HABILIDADES ATIVAS</div>
+          <div id="run-perks-container" class="run-perks-container">
+            <div class="empty-hint" data-i18n="hud_perks_empty">Nenhuma habilidade adquirida ainda.<br />Suba de nível
+              para desbloquear!</div>
           </div>
         </div>
       </div>
 
     </div>
 
-    <input id="hidden-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="-1" aria-hidden="true" inputmode="none" readonly disabled />
+    <input id="hidden-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+      tabindex="-1" aria-hidden="true" inputmode="none" readonly disabled />
 
     <!-- Pause overlay (frosted glass over game screen) -->
     <div id="pause-overlay" class="hidden">
@@ -577,8 +601,8 @@
         <div id="pause-main-view" class="pause-view">
           <div class="pause-icon-badge">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-              <rect x="5" y="4" width="4.5" height="16" rx="1.5"/>
-              <rect x="14.5" y="4" width="4.5" height="16" rx="1.5"/>
+              <rect x="5" y="4" width="4.5" height="16" rx="1.5" />
+              <rect x="14.5" y="4" width="4.5" height="16" rx="1.5" />
             </svg>
           </div>
           <h2 data-i18n="pause_title">Game Paused</h2>
@@ -586,47 +610,54 @@
           <div class="pause-actions">
             <button id="btn-pause-resume" class="btn-primary" onclick="togglePause()">
               <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 4.5v15a1 1 0 0 0 1.54.84l12-7.5a1 1 0 0 0 0-1.68l-12-7.5A1 1 0 0 0 7 4.5z"/>
+                <path d="M7 4.5v15a1 1 0 0 0 1.54.84l12-7.5a1 1 0 0 0 0-1.68l-12-7.5A1 1 0 0 0 7 4.5z" />
               </svg>
               <span data-i18n="pause_resume">Continuar</span>
             </button>
             <button class="btn-secondary" onclick="showBiblioteca()">
-              <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
-                <path d="M6 6h10"/>
-                <path d="M6 10h10"/>
-                <path d="M4 19.5a2.5 2.5 0 0 1 2.5-2.5H20"/>
+              <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
+                <path d="M6 6h10" />
+                <path d="M6 10h10" />
+                <path d="M4 19.5a2.5 2.5 0 0 1 2.5-2.5H20" />
               </svg>
               <span data-i18n="pause_library">Biblioteca</span>
             </button>
             <button class="btn-secondary" onclick="showConquistas()">
-              <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-                <path d="M4 22h16"/>
-                <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34"/>
-                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+              <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                <path d="M4 22h16" />
+                <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34" />
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
               </svg>
               <span data-i18n="pause_achievements">Conquistas</span>
             </button>
             <button class="btn-secondary" onclick="openSettings()">
-              <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
-                <circle cx="12" cy="12" r="3"/>
+              <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+                <circle cx="12" cy="12" r="3" />
               </svg>
               <span data-i18n="pause_settings">Configurações</span>
             </button>
-            <button id="btn-pause-back-training" class="btn-secondary hidden" style="display: none;" onclick="exitTrainingToMenu()">
-              <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            <button id="btn-pause-back-training" class="btn-secondary hidden" style="display: none;"
+              onclick="exitTrainingToMenu()">
+              <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
               </svg>
               <span data-i18n="pause_training_menu">Voltar ao Menu de Treino</span>
             </button>
             <button class="btn-secondary" onclick="confirmGoToMainMenu()">
-              <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                <polyline points="9 22 9 12 15 12 15 22"/>
+              <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
               </svg>
               <span data-i18n="pause_main_menu">Voltar pro Menu Principal</span>
             </button>
@@ -636,27 +667,30 @@
         <!-- In-game Confirmation Dialog when clicking Return to Main Menu -->
         <div id="pause-confirm-view" class="pause-view hidden">
           <div class="pause-confirm-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
-              <line x1="12" y1="9" x2="12" y2="13"/>
-              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+              <line x1="12" y1="9" x2="12" y2="13" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
             </svg>
           </div>
           <h2 class="pause-confirm-title" data-i18n="confirm_exit_title">Return to Main Menu?</h2>
-          <p class="pause-confirm-desc" data-i18n="confirm_exit_to_menu">Are you sure you want to quit the current game and return to the Main Menu? All progress in this phase will be lost.</p>
+          <p class="pause-confirm-desc" data-i18n="confirm_exit_to_menu">Are you sure you want to quit the current game
+            and return to the Main Menu? All progress in this phase will be lost.</p>
 
           <div class="pause-actions">
             <button class="btn-secondary" onclick="cancelExitConfirm()" style="width: 100%;">
               <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 4.5v15a1 1 0 0 0 1.54.84l12-7.5a1 1 0 0 0 0-1.68l-12-7.5A1 1 0 0 0 7 4.5z"/>
+                <path d="M7 4.5v15a1 1 0 0 0 1.54.84l12-7.5a1 1 0 0 0 0-1.68l-12-7.5A1 1 0 0 0 7 4.5z" />
               </svg>
               <span data-i18n="confirm_exit_cancel">Continuar Jogando</span>
             </button>
             <button class="btn-danger-confirm" onclick="executeExitToMainMenu()">
-              <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-                <polyline points="16 17 21 12 16 7"/>
-                <line x1="21" y1="12" x2="9" y2="12"/>
+              <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                <polyline points="16 17 21 12 16 7" />
+                <line x1="21" y1="12" x2="9" y2="12" />
               </svg>
               <span data-i18n="confirm_exit_confirm">Sim, Voltar ao Menu</span>
             </button>
@@ -681,10 +715,11 @@
       <!-- Main Phase Complete View -->
       <div id="phase-main-view">
         <div class="modal-emoji" id="phase-emoji">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <circle cx="12" cy="12" r="6"/>
-            <circle cx="12" cy="12" r="2"/>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <circle cx="12" cy="12" r="6" />
+            <circle cx="12" cy="12" r="2" />
           </svg>
         </div>
         <div id="phase-rank-wrap" class="phase-rank-wrap">
@@ -701,10 +736,12 @@
           <button id="btn-next-phase" class="btn-primary" onclick="continueToNextPhase()">
             <span data-i18n="modal_btn_next_phase">Next Phase →</span>
           </button>
-          <button id="btn-phase-back-training" class="btn-secondary hidden" style="display: none;" onclick="exitTrainingToMenu()">
-            <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          <button id="btn-phase-back-training" class="btn-secondary hidden" style="display: none;"
+            onclick="exitTrainingToMenu()">
+            <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+              <path d="M6 12v5c3 3 9 3 12 0v-5" />
             </svg>
             <span data-i18n="modal_btn_back_training">Back to Training Menu</span>
           </button>
@@ -714,27 +751,30 @@
       <!-- Phase Exit Confirmation View (Matches Imagem 3) -->
       <div id="phase-confirm-view" class="pause-view hidden">
         <div class="pause-confirm-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
-            <line x1="12" y1="9" x2="12" y2="13"/>
-            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+            <line x1="12" y1="9" x2="12" y2="13" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
           </svg>
         </div>
         <h2 class="pause-confirm-title" data-i18n="confirm_exit_title">Return to Main Menu?</h2>
-        <p class="pause-confirm-desc" data-i18n="confirm_exit_to_menu">Are you sure you want to quit the current game and return to the Main Menu? All progress in this phase will be lost.</p>
+        <p class="pause-confirm-desc" data-i18n="confirm_exit_to_menu">Are you sure you want to quit the current game
+          and return to the Main Menu? All progress in this phase will be lost.</p>
 
         <div class="pause-actions">
           <button class="btn-secondary" onclick="cancelPhaseExitConfirm()" style="width: 100%;">
             <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M7 4.5v15a1 1 0 0 0 1.54.84l12-7.5a1 1 0 0 0 0-1.68l-12-7.5A1 1 0 0 0 7 4.5z"/>
+              <path d="M7 4.5v15a1 1 0 0 0 1.54.84l12-7.5a1 1 0 0 0 0-1.68l-12-7.5A1 1 0 0 0 7 4.5z" />
             </svg>
             <span data-i18n="confirm_exit_cancel">Continuar Jogando</span>
           </button>
           <button class="btn-danger-confirm" onclick="executePhaseExitToMainMenu()">
-            <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-              <polyline points="16 17 21 12 16 7"/>
-              <line x1="21" y1="12" x2="9" y2="12"/>
+            <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
             </svg>
             <span data-i18n="confirm_exit_confirm">Sim, Voltar ao Menu</span>
           </button>
@@ -750,10 +790,11 @@
       <div id="shop-main-view">
         <div class="modal-head-simple">
           <div class="modal-head-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="8" cy="21" r="1"/>
-              <circle cx="19" cy="21" r="1"/>
-              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8" cy="21" r="1" />
+              <circle cx="19" cy="21" r="1" />
+              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
             </svg>
           </div>
           <div>
@@ -764,25 +805,29 @@
         <div class="shop-balance-card">
           <div id="shop-feedback-msg" class="shop-feedback-msg hidden" aria-live="polite">
             <span class="shop-feedback-icon">
-              <svg class="sfb-icon-warn" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="12" y1="8" x2="12" y2="12"/>
-                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              <svg class="sfb-icon-warn" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
               </svg>
-              <svg class="sfb-icon-success hidden" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="9 12 12 15 17 9"/>
+              <svg class="sfb-icon-success hidden" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="9 12 12 15 17 9" />
               </svg>
             </span>
             <span class="shop-feedback-text"></span>
           </div>
           <div class="shop-balance-wrap">
-            <span class="sbc-lbl" id="shop-balance-lbl" data-i18n="shop_coins" style="font-size:0.88rem;color:var(--t2);font-weight:700">Your Coins:</span>
+            <span class="sbc-lbl" id="shop-balance-lbl" data-i18n="shop_coins"
+              style="font-size:0.88rem;color:var(--t2);font-weight:700">Your Coins:</span>
             <span class="sbc-icon" style="color:#FBBF24">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9"/>
-                <circle cx="12" cy="12" r="5"/>
-                <path d="M12 9v6"/>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <circle cx="12" cy="12" r="5" />
+                <path d="M12 9v6" />
               </svg>
             </span>
             <strong id="shop-balance" class="sbc-val">0</strong>
@@ -791,16 +836,18 @@
         <div id="shop-items-grid"></div>
         <div class="shop-footer-actions">
           <button id="btn-shop-reroll" class="btn-secondary btn-shop-reroll" onclick="rerollShopItems()">
-            <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+            <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2" />
             </svg>
             <span data-i18n="shop_btn_reroll">Rolar Novas Ofertas</span>
             <span class="shop-reroll-cost-badge">25</span>
           </button>
           <button class="btn-primary btn-shop-close" onclick="closeShop()">
-            <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"/>
-              <line x1="6" y1="6" x2="18" y2="18"/>
+            <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
             <span data-i18n="btn_close">Fechar</span>
           </button>
@@ -810,26 +857,29 @@
       <!-- Shop Exit Confirmation View (Matches Imagem 3) -->
       <div id="shop-confirm-view" class="pause-view hidden">
         <div class="pause-confirm-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
-            <line x1="12" y1="9" x2="12" y2="13"/>
-            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+            <line x1="12" y1="9" x2="12" y2="13" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
           </svg>
         </div>
         <h2 class="pause-confirm-title" data-i18n="shop_confirm_exit_title">Leave the Shop?</h2>
-        <p id="shop-confirm-desc" class="pause-confirm-desc" data-i18n="shop_confirm_exit_desc">Are you sure you want to leave the shop?</p>
+        <p id="shop-confirm-desc" class="pause-confirm-desc" data-i18n="shop_confirm_exit_desc">Are you sure you want to
+          leave the shop?</p>
         <div class="pause-actions">
           <button class="btn-secondary" onclick="cancelShopExitConfirm()" style="width: 100%;">
             <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M7 4.5v15a1 1 0 0 0 1.54.84l12-7.5a1 1 0 0 0 0-1.68l-12-7.5A1 1 0 0 0 7 4.5z"/>
+              <path d="M7 4.5v15a1 1 0 0 0 1.54.84l12-7.5a1 1 0 0 0 0-1.68l-12-7.5A1 1 0 0 0 7 4.5z" />
             </svg>
             <span data-i18n="shop_confirm_stay">Stay in Shop</span>
           </button>
           <button class="btn-danger-confirm" onclick="confirmShopExit()" style="width: 100%;">
-            <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-              <polyline points="16 17 21 12 16 7"/>
-              <line x1="21" y1="12" x2="9" y2="12"/>
+            <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
             </svg>
             <span data-i18n="shop_confirm_leave">Return to Main Menu</span>
           </button>
@@ -844,12 +894,13 @@
       <!-- Header -->
       <div class="go-badge-glow">
         <span class="go-skull-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="9" cy="12" r="1"/>
-            <circle cx="15" cy="12" r="1"/>
-            <path d="M8 20v2h8v-2"/>
-            <path d="m12.5 17-.5-1-.5 1h1z"/>
-            <path d="M16 20a2 2 0 0 0 1.56-3.25 8 8 0 1 0-11.12 0A2 2 0 0 0 8 20"/>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="12" r="1" />
+            <circle cx="15" cy="12" r="1" />
+            <path d="M8 20v2h8v-2" />
+            <path d="m12.5 17-.5-1-.5 1h1z" />
+            <path d="M16 20a2 2 0 0 0 1.56-3.25 8 8 0 1 0-11.12 0A2 2 0 0 0 8 20" />
           </svg>
         </span>
       </div>
@@ -862,12 +913,13 @@
         <div class="go-summary-line go-score-line">
           <div class="go-line-left">
             <span class="go-line-icon text-amber">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-                <path d="M4 22h16"/>
-                <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34"/>
-                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                <path d="M4 22h16" />
+                <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34" />
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
               </svg>
             </span>
             <span class="go-line-lbl" data-i18n="go_score">Pontuação da Partida</span>
@@ -876,7 +928,8 @@
           <!-- Decoupled New Record Stamp Badge (100% independente do fluxo da linha, estilo selo rotacionado) -->
           <div id="go-new-record-tag" class="go-new-record-seal hidden">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
             </svg>
             <span data-i18n="go_new_record_tag">NOVO RECORDE!</span>
           </div>
@@ -886,10 +939,11 @@
         <div class="go-summary-line">
           <div class="go-line-left">
             <span class="go-line-icon text-emerald">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <circle cx="12" cy="12" r="6"/>
-                <circle cx="12" cy="12" r="2"/>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="6" />
+                <circle cx="12" cy="12" r="2" />
               </svg>
             </span>
             <span class="go-line-lbl" data-i18n="go_avg_accuracy">Precisão</span>
@@ -901,10 +955,11 @@
         <div class="go-summary-line">
           <div class="go-line-left">
             <span class="go-line-icon text-amber">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9"/>
-                <circle cx="12" cy="12" r="5"/>
-                <path d="M12 9v6"/>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <circle cx="12" cy="12" r="5" />
+                <path d="M12 9v6" />
               </svg>
             </span>
             <span class="go-line-lbl" data-i18n="go_coins_earned">Moedas Totais Recebidas</span>
@@ -916,9 +971,10 @@
         <div class="go-summary-line">
           <div class="go-line-left">
             <span class="go-line-icon text-indigo">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
-                <line x1="4" y1="22" x2="4" y2="15"/>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                <line x1="4" y1="22" x2="4" y2="15" />
               </svg>
             </span>
             <span class="go-line-lbl" data-i18n="go_phase_reached">Fase Alcançada</span>
@@ -930,8 +986,9 @@
         <div class="go-summary-line">
           <div class="go-line-left">
             <span class="go-line-icon text-cyan">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"/>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
               </svg>
             </span>
             <span class="go-line-lbl" data-i18n="go_hits_errors">Acertos / Erros</span>
@@ -945,11 +1002,12 @@
         <div class="go-summary-line">
           <div class="go-line-left">
             <span class="go-line-icon text-purple">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
-                <path d="M6 6h10"/>
-                <path d="M6 10h10"/>
-                <path d="M4 19.5a2.5 2.5 0 0 1 2.5-2.5H20"/>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
+                <path d="M6 6h10" />
+                <path d="M6 10h10" />
+                <path d="M4 19.5a2.5 2.5 0 0 1 2.5-2.5H20" />
               </svg>
             </span>
             <span class="go-line-lbl" data-i18n="go_discovered_words">Palavras Descobertas</span>
@@ -961,44 +1019,49 @@
       <!-- Action Buttons -->
       <div class="go-actions">
         <button id="btn-go-continue" class="btn-go-continue hidden" onclick="useContinue()">
-          <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="9"/>
-            <circle cx="12" cy="12" r="5"/>
-            <path d="M12 9v6"/>
+          <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9" />
+            <circle cx="12" cy="12" r="5" />
+            <path d="M12 9v6" />
           </svg>
           <span data-i18n="go_use_continue">Usar Continue</span> (<strong id="go-continue-count">0</strong>)
         </button>
         <button id="btn-go-restart" class="btn-go-primary" onclick="restartGame()">
-          <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
-            <path d="M3 3v5h5"/>
+          <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+            <path d="M3 3v5h5" />
           </svg>
           <span data-i18n="go_play_again">Jogar Novamente</span>
         </button>
         <div class="go-secondary-row">
           <button class="btn-go-secondary" onclick="goToMainMenu()">
-            <svg class="btn-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-              <polyline points="9 22 9 12 15 12 15 22"/>
+            <svg class="btn-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
             </svg>
             <span data-i18n="go_main_menu">Menu Principal</span>
           </button>
           <button class="btn-go-secondary" onclick="showBiblioteca()">
-            <svg class="btn-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
-              <path d="M6 6h10"/>
-              <path d="M6 10h10"/>
-              <path d="M4 19.5a2.5 2.5 0 0 1 2.5-2.5H20"/>
+            <svg class="btn-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
+              <path d="M6 6h10" />
+              <path d="M6 10h10" />
+              <path d="M4 19.5a2.5 2.5 0 0 1 2.5-2.5H20" />
             </svg>
             <span data-i18n="pause_library">Biblioteca</span>
           </button>
           <button class="btn-go-secondary" onclick="showConquistas()">
-            <svg class="btn-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-              <path d="M4 22h16"/>
-              <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34"/>
-              <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+            <svg class="btn-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+              <path d="M4 22h16" />
+              <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34" />
+              <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
             </svg>
             <span data-i18n="pause_achievements">Conquistas</span>
           </button>
@@ -1013,11 +1076,12 @@
       <div class="modal-lib-head">
         <div class="modal-lib-title-row">
           <div class="modal-head-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
-              <path d="M6 6h10"/>
-              <path d="M6 10h10"/>
-              <path d="M4 19.5a2.5 2.5 0 0 1 2.5-2.5H20"/>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
+              <path d="M6 6h10" />
+              <path d="M6 10h10" />
+              <path d="M4 19.5a2.5 2.5 0 0 1 2.5-2.5H20" />
             </svg>
           </div>
           <div>
@@ -1029,8 +1093,9 @@
       </div>
       <div id="lib-words-grid" class="lib-words-grid"></div>
       <button class="btn-secondary" onclick="closeBiblioteca()">
-        <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="m15 18-6-6 6-6"/>
+        <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6" />
         </svg>
         <span data-i18n="btn_back_to_game">Back to Game</span>
       </button>
@@ -1043,12 +1108,13 @@
       <div class="modal-lib-head">
         <div class="modal-lib-title-row">
           <div class="modal-head-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-              <path d="M4 22h16"/>
-              <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34"/>
-              <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+              <path d="M4 22h16" />
+              <path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34" />
+              <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
             </svg>
           </div>
           <div>
@@ -1060,8 +1126,9 @@
       </div>
       <div id="achievements-grid" class="achievements-grid"></div>
       <button class="btn-secondary" onclick="closeConquistas()">
-        <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="m15 18-6-6 6-6"/>
+        <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6" />
         </svg>
         <span data-i18n="btn_back_to_game">Back to Game</span>
       </button>
@@ -1074,10 +1141,11 @@
       <div class="modal-lib-head">
         <div class="modal-lib-title-row">
           <div class="modal-head-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
             </svg>
           </div>
           <div>
@@ -1090,47 +1158,59 @@
 
       <div class="rules-card">
         <div class="rule-row">
-          <svg class="rule-svg-icon rule-icon-cyan" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="4" width="20" height="16" rx="2" ry="2"/>
-            <line x1="6" y1="8" x2="6" y2="8"/>
-            <line x1="10" y1="8" x2="10" y2="8"/>
-            <line x1="14" y1="8" x2="14" y2="8"/>
-            <line x1="18" y1="8" x2="18" y2="8"/>
-            <line x1="6" y1="12" x2="6" y2="12"/>
-            <line x1="10" y1="12" x2="10" y2="12"/>
-            <line x1="14" y1="12" x2="14" y2="12"/>
-            <line x1="18" y1="12" x2="18" y2="12"/>
-            <line x1="7" y1="16" x2="17" y2="16"/>
+          <svg class="rule-svg-icon rule-icon-cyan" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2" ry="2" />
+            <line x1="6" y1="8" x2="6" y2="8" />
+            <line x1="10" y1="8" x2="10" y2="8" />
+            <line x1="14" y1="8" x2="14" y2="8" />
+            <line x1="18" y1="8" x2="18" y2="8" />
+            <line x1="6" y1="12" x2="6" y2="12" />
+            <line x1="10" y1="12" x2="10" y2="12" />
+            <line x1="14" y1="12" x2="14" y2="12" />
+            <line x1="18" y1="12" x2="18" y2="12" />
+            <line x1="7" y1="16" x2="17" y2="16" />
           </svg>
-          <span data-i18n="rule_typing"><strong>Keyboard Typing:</strong> Type letters, syllables and words before they hit the bottom of the screen</span>
+          <span data-i18n="rule_typing"><strong>Keyboard Typing:</strong> Type letters, syllables and words before they
+            hit the bottom of the screen</span>
         </div>
         <div class="rule-row">
-          <svg class="rule-svg-icon rule-icon-coral" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-            <polygon points="12 8 13.5 10.5 16 12 13.5 13.5 12 16 10.5 13.5 8 12 10.5 10.5 12 8"/>
+          <svg class="rule-svg-icon rule-icon-coral" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+            <polygon points="12 8 13.5 10.5 16 12 13.5 13.5 12 16 10.5 13.5 8 12 10.5 10.5 12 8" />
           </svg>
-          <span data-i18n="rule_wildcard"><strong>Wildcard Words:</strong> Instantly destroy all runics on screen simultaneously and absorb all their points</span>
+          <span data-i18n="rule_wildcard"><strong>Wildcard Words:</strong> Instantly destroy all runics on screen
+            simultaneously and absorb all their points</span>
         </div>
         <div class="rule-row">
-          <svg class="rule-svg-icon rule-icon-purple" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="7" height="7" rx="1.5"/>
-            <rect x="14" y="3" width="7" height="7" rx="1.5"/>
-            <rect x="3" y="14" width="7" height="7" rx="1.5"/>
-            <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+          <svg class="rule-svg-icon rule-icon-purple" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1.5" />
+            <rect x="14" y="3" width="7" height="7" rx="1.5" />
+            <rect x="3" y="14" width="7" height="7" rx="1.5" />
+            <rect x="14" y="14" width="7" height="7" rx="1.5" />
           </svg>
-          <span data-i18n="rule_spells"><strong>Keys 1–8 (or click):</strong> Activate slow motion, freeze, spacing, shield and power spells</span>
+          <span data-i18n="rule_spells"><strong>Keys 1–8 (or click):</strong> Activate slow motion, freeze, spacing,
+            shield and power spells</span>
         </div>
         <div class="rule-row">
-          <svg class="rule-svg-icon rule-icon-amber" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          <svg class="rule-svg-icon rule-icon-amber" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
           </svg>
-          <span data-i18n="rule_combo"><strong>Combos & Fury Mode:</strong> Error-free streaks multiply your score up to 8×</span>
+          <span data-i18n="rule_combo"><strong>Combos & Fury Mode:</strong> Error-free streaks multiply your score up to
+            8×</span>
         </div>
         <div class="rule-row">
-          <svg class="rule-svg-icon rule-icon-rose" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          <svg class="rule-svg-icon rule-icon-rose" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
           </svg>
-          <span data-i18n="rule_danger"><strong>Lives & Danger:</strong> Runics at the bottom flash red and cost 1 life if dropped (3 lives in Classic)</span>
+          <span data-i18n="rule_danger"><strong>Lives & Danger:</strong> Runics at the bottom flash red and cost 1 life
+            if dropped (3 lives in Classic)</span>
         </div>
       </div>
 
@@ -1146,14 +1226,16 @@
       <div class="modal-lib-head">
         <div class="modal-lib-title-row">
           <div class="modal-head-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              <path d="m9 12 2 2 4-4"/>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="m9 12 2 2 4-4" />
             </svg>
           </div>
           <div>
             <h2 class="modal-title" data-i18n="privacy_title">Privacy Policy &amp; Transparency</h2>
-            <p class="modal-sub" data-i18n="privacy_sub">Data handling, browser local storage, and GitHub Pages infrastructure</p>
+            <p class="modal-sub" data-i18n="privacy_sub">Data handling, browser local storage, and GitHub Pages
+              infrastructure</p>
           </div>
         </div>
         <button class="modal-close" onclick="closePrivacyModal()">✕</button>
@@ -1162,34 +1244,38 @@
       <!-- Quick Trust Badges -->
       <div class="privacy-badges-grid">
         <div class="privacy-badge">
-          <svg class="privacy-badge-icon rule-icon-cyan" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <line x1="17" y1="8" x2="23" y2="14"/>
-            <line x1="23" y1="8" x2="17" y2="14"/>
+          <svg class="privacy-badge-icon rule-icon-cyan" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <line x1="17" y1="8" x2="23" y2="14" />
+            <line x1="23" y1="8" x2="17" y2="14" />
           </svg>
           <span data-i18n="privacy_badge_nocollect">Zero Data Collection</span>
         </div>
         <div class="privacy-badge">
-          <svg class="privacy-badge-icon rule-icon-coral" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <ellipse cx="12" cy="5" rx="9" ry="3"/>
-            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
-            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+          <svg class="privacy-badge-icon rule-icon-coral" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="5" rx="9" ry="3" />
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
           </svg>
           <span data-i18n="privacy_badge_local">100% Local Storage</span>
         </div>
         <div class="privacy-badge">
-          <svg class="privacy-badge-icon rule-icon-purple" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
-            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
-            <line x1="6" y1="6" x2="6.01" y2="6"/>
-            <line x1="6" y1="18" x2="6.01" y2="18"/>
+          <svg class="privacy-badge-icon rule-icon-purple" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+            <line x1="6" y1="6" x2="6.01" y2="6" />
+            <line x1="6" y1="18" x2="6.01" y2="18" />
           </svg>
           <span data-i18n="privacy_badge_github">GitHub Pages Hosting</span>
         </div>
         <div class="privacy-badge">
-          <svg class="privacy-badge-icon rule-icon-amber" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <svg class="privacy-badge-icon rule-icon-amber" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
           </svg>
           <span data-i18n="privacy_badge_lgpd">LGPD &amp; ANPD Compliance</span>
         </div>
@@ -1199,107 +1285,132 @@
       <div class="privacy-cards-list">
         <div class="privacy-card">
           <div class="privacy-card-header">
-            <svg class="rule-svg-icon rule-icon-cyan" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-              <circle cx="12" cy="7" r="4"/>
-              <line x1="18" y1="8" x2="23" y2="13"/>
-              <line x1="23" y1="8" x2="18" y2="13"/>
+            <svg class="rule-svg-icon rule-icon-cyan" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+              <line x1="18" y1="8" x2="23" y2="13" />
+              <line x1="23" y1="8" x2="18" y2="13" />
             </svg>
-            <h3 class="privacy-card-title" data-i18n="privacy_sec_collection_title">1. Zero Coleta de Dados Pessoais</h3>
+            <h3 class="privacy-card-title" data-i18n="privacy_sec_collection_title">1. Zero Coleta de Dados Pessoais
+            </h3>
           </div>
-          <p class="privacy-card-desc" data-i18n="privacy_sec_collection_desc">O Digitinho Galaxy é um jogo web estático executado integralmente no navegador do jogador...</p>
+          <p class="privacy-card-desc" data-i18n="privacy_sec_collection_desc">O Digitinho Galaxy é um jogo web estático
+            executado integralmente no navegador do jogador...</p>
         </div>
 
         <div class="privacy-card">
           <div class="privacy-card-header">
-            <svg class="rule-svg-icon rule-icon-coral" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <ellipse cx="12" cy="5" rx="9" ry="3"/>
-              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
-              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            <svg class="rule-svg-icon rule-icon-coral" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3" />
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
             </svg>
-            <h3 class="privacy-card-title" data-i18n="privacy_sec_storage_title">2. Armazenamento Local no Dispositivo (HTML5 LocalStorage)</h3>
+            <h3 class="privacy-card-title" data-i18n="privacy_sec_storage_title">2. Armazenamento Local no Dispositivo
+              (HTML5 LocalStorage)</h3>
           </div>
-          <p class="privacy-card-desc" data-i18n="privacy_sec_storage_desc">Todo o progresso do jogo é armazenado exclusivamente no seu navegador...</p>
+          <p class="privacy-card-desc" data-i18n="privacy_sec_storage_desc">Todo o progresso do jogo é armazenado
+            exclusivamente no seu navegador...</p>
         </div>
 
         <div class="privacy-card">
           <div class="privacy-card-header">
-            <svg class="rule-svg-icon rule-icon-purple" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
-              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
-              <line x1="6" y1="6" x2="6.01" y2="6"/>
-              <line x1="6" y1="18" x2="6.01" y2="18"/>
+            <svg class="rule-svg-icon rule-icon-purple" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+              <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+              <line x1="6" y1="6" x2="6.01" y2="6" />
+              <line x1="6" y1="18" x2="6.01" y2="18" />
             </svg>
-            <h3 class="privacy-card-title" data-i18n="privacy_sec_hosting_title">3. Infraestrutura de Hospedagem e Registros Técnicos do GitHub Pages</h3>
+            <h3 class="privacy-card-title" data-i18n="privacy_sec_hosting_title">3. Infraestrutura de Hospedagem e
+              Registros Técnicos do GitHub Pages</h3>
           </div>
-          <p class="privacy-card-desc" data-i18n="privacy_sec_hosting_desc">O Digitinho Galaxy é hospedado no GitHub Pages. Servidores do GitHub podem registrar IPs técnicos para segurança...</p>
+          <p class="privacy-card-desc" data-i18n="privacy_sec_hosting_desc">O Digitinho Galaxy é hospedado no GitHub
+            Pages. Servidores do GitHub podem registrar IPs técnicos para segurança...</p>
         </div>
 
         <div class="privacy-card">
           <div class="privacy-card-header">
-            <svg class="rule-svg-icon rule-icon-amber" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+            <svg class="rule-svg-icon rule-icon-amber" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
             </svg>
-            <h3 class="privacy-card-title" data-i18n="privacy_sec_cookies_title">4. Zero Cookies de Rastreamento ou Analítica de Terceiros</h3>
+            <h3 class="privacy-card-title" data-i18n="privacy_sec_cookies_title">4. Zero Cookies de Rastreamento ou
+              Analítica de Terceiros</h3>
           </div>
-          <p class="privacy-card-desc" data-i18n="privacy_sec_cookies_desc">O jogo não utiliza cookies de publicidade, Google Analytics ou rastreadores...</p>
+          <p class="privacy-card-desc" data-i18n="privacy_sec_cookies_desc">O jogo não utiliza cookies de publicidade,
+            Google Analytics ou rastreadores...</p>
         </div>
 
         <div class="privacy-card">
           <div class="privacy-card-header">
-            <svg class="rule-svg-icon rule-icon-rose" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              <path d="m9 12 2 2 4-4"/>
+            <svg class="rule-svg-icon rule-icon-rose" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="m9 12 2 2 4-4" />
             </svg>
-            <h3 class="privacy-card-title" data-i18n="privacy_sec_lgpd_title">5. Conformidade com a LGPD e Diretrizes da ANPD</h3>
+            <h3 class="privacy-card-title" data-i18n="privacy_sec_lgpd_title">5. Conformidade com a LGPD e Diretrizes da
+              ANPD</h3>
           </div>
-          <p class="privacy-card-desc" data-i18n="privacy_sec_lgpd_desc">O projeto segue os princípios de minimização e necessidade da LGPD (Lei nº 13.709/2018)...</p>
+          <p class="privacy-card-desc" data-i18n="privacy_sec_lgpd_desc">O projeto segue os princípios de minimização e
+            necessidade da LGPD (Lei nº 13.709/2018)...</p>
         </div>
 
         <div class="privacy-card">
           <div class="privacy-card-header">
-            <svg class="rule-svg-icon rule-icon-cyan" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="16 18 22 12 16 6"/>
-              <polyline points="8 6 2 12 8 18"/>
+            <svg class="rule-svg-icon rule-icon-cyan" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
             </svg>
-            <h3 class="privacy-card-title" data-i18n="privacy_sec_opensource_title">6. Código Aberto, Transparência e Auditoria</h3>
+            <h3 class="privacy-card-title" data-i18n="privacy_sec_opensource_title">6. Código Aberto, Transparência e
+              Auditoria</h3>
           </div>
-          <p class="privacy-card-desc" data-i18n="privacy_sec_opensource_desc">O código é aberto sob licença MIT, permitindo auditoria completa da ausência de coleta...</p>
+          <p class="privacy-card-desc" data-i18n="privacy_sec_opensource_desc">O código é aberto sob licença MIT,
+            permitindo auditoria completa da ausência de coleta...</p>
         </div>
       </div>
 
       <!-- Regulatory & Official Source Links -->
       <div class="privacy-links-section">
         <div class="privacy-links-header">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
           </svg>
           <span data-i18n="privacy_sec_links_title">Fontes Oficiais e Referências Normativas</span>
         </div>
         <div class="privacy-links-grid">
-          <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noopener noreferrer" class="privacy-link-item">
-            <svg class="btn-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-              <polyline points="15 3 21 3 21 9"/>
-              <line x1="10" y1="14" x2="21" y2="3"/>
+          <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages"
+            target="_blank" rel="noopener noreferrer" class="privacy-link-item">
+            <svg class="btn-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
             </svg>
             <span data-i18n="privacy_link_github">GitHub Pages: Funcionamento e Registro de IPs</span>
           </a>
-          <a href="https://www.gov.br/anpd/pt-br/assuntos/titular-de-dados" target="_blank" rel="noopener noreferrer" class="privacy-link-item">
-            <svg class="btn-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-              <polyline points="15 3 21 3 21 9"/>
-              <line x1="10" y1="14" x2="21" y2="3"/>
+          <a href="https://www.gov.br/anpd/pt-br/assuntos/titular-de-dados" target="_blank" rel="noopener noreferrer"
+            class="privacy-link-item">
+            <svg class="btn-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
             </svg>
             <span data-i18n="privacy_link_anpd">ANPD: Conceito de Dado Pessoal e Agentes de Tratamento</span>
           </a>
-          <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer" class="privacy-link-item">
-            <svg class="btn-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-              <polyline points="15 3 21 3 21 9"/>
-              <line x1="10" y1="14" x2="21" y2="3"/>
+          <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank"
+            rel="noopener noreferrer" class="privacy-link-item">
+            <svg class="btn-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
             </svg>
             <span data-i18n="privacy_link_lgpd">LGPD — Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</span>
           </a>
@@ -1308,10 +1419,11 @@
 
       <div class="modal-privacy-footer">
         <a href="./privacy.html" target="_blank" rel="noopener noreferrer" class="btn-secondary privacy-open-page-btn">
-          <svg class="btn-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-            <polyline points="15 3 21 3 21 9"/>
-            <line x1="10" y1="14" x2="21" y2="3"/>
+          <svg class="btn-svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
           </svg>
           <span data-i18n="privacy_btn_open_page">Abrir Página Completa</span>
         </a>
@@ -1328,9 +1440,10 @@
       <div class="modal-lib-head">
         <div class="modal-lib-title-row">
           <div class="modal-head-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+              <path d="M6 12v5c3 3 9 3 12 0v-5" />
             </svg>
           </div>
           <div>
@@ -1341,18 +1454,22 @@
       </div>
       <div class="training-notice-card">
         <span class="tnc-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 18h6"/>
-            <path d="M10 22h4"/>
-            <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18h6" />
+            <path d="M10 22h4" />
+            <path
+              d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" />
           </svg>
         </span>
-        <span class="tnc-text" data-i18n="training_notice">In this practice mode you <strong>do not lose lives</strong>. Typo errors and fallen runics lower your <strong>Accuracy %</strong> and <strong>WPM</strong>.</span>
+        <span class="tnc-text" data-i18n="training_notice">In this practice mode you <strong>do not lose lives</strong>.
+          Typo errors and fallen runics lower your <strong>Accuracy %</strong> and <strong>WPM</strong>.</span>
       </div>
       <div id="training-worlds-grid" class="training-worlds-grid"></div>
       <button class="btn-secondary" onclick="closeTrainingModal()">
-        <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="m15 18-6-6 6-6"/>
+        <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6" />
         </svg>
         <span data-i18n="training_btn_back">Back</span>
       </button>
@@ -1365,13 +1482,15 @@
       <div class="modal-lib-head">
         <div class="modal-lib-title-row">
           <div class="modal-head-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
             </svg>
           </div>
           <div>
             <h2 data-i18n="skills_inventory_title">Arsenal de Habilidades</h2>
-            <p class="modal-sub" data-i18n="skills_inventory_sub">Habilidades permanentes adquiridas para suas jornadas cósmicas</p>
+            <p class="modal-sub" data-i18n="skills_inventory_sub">Habilidades permanentes adquiridas para suas jornadas
+              cósmicas</p>
           </div>
         </div>
       </div>
@@ -1381,9 +1500,10 @@
 
       <div class="modal-rules-footer">
         <button class="btn-secondary" onclick="closeSkillsInventory()">
-          <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"/>
-            <line x1="6" y1="6" x2="18" y2="18"/>
+          <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
           <span data-i18n="btn_close">Fechar</span>
         </button>
@@ -1397,9 +1517,11 @@
       <div class="modal-lib-head">
         <div class="modal-lib-title-row">
           <div class="modal-head-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
-              <circle cx="12" cy="12" r="3"/>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+              <circle cx="12" cy="12" r="3" />
             </svg>
           </div>
           <div>
@@ -1413,10 +1535,11 @@
         <!-- Grupo 1: Geral & Interface -->
         <div class="settings-group-card">
           <div class="settings-group-header">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
             </svg>
             <span data-i18n="settings_cat_general">General &amp; Interface</span>
           </div>
@@ -1448,7 +1571,8 @@
           <!-- Setting: Sound SFX -->
           <div class="settings-opt-row">
             <span class="settings-opt-label" data-i18n="settings_sound">Sound Effects</span>
-            <button id="settings-sound-btn" class="settings-opt-toggle" onclick="toggleSound()" type="button" title="Toggle sound effects">
+            <button id="settings-sound-btn" class="settings-opt-toggle" onclick="toggleSound()" type="button"
+              title="Toggle sound effects">
               <span id="settings-sound-val">On</span>
             </button>
           </div>
@@ -1456,7 +1580,8 @@
           <!-- Setting: Queue position -->
           <div class="settings-opt-row">
             <span class="settings-opt-label" data-i18n="settings_queue">Queue Position</span>
-            <button id="settings-queue-btn" class="settings-opt-toggle" onclick="toggleQueuePosition()" type="button" title="Change word conveyor position">
+            <button id="settings-queue-btn" class="settings-opt-toggle" onclick="toggleQueuePosition()" type="button"
+              title="Change word conveyor position">
               <span id="settings-queue-val">Top</span>
             </button>
           </div>
@@ -1465,35 +1590,24 @@
           <!-- Setting: Visual Finger Guide -->
           <div class="settings-opt-row">
             <span class="settings-opt-label" data-i18n="settings_finger_guide">Visual Finger Guide</span>
-            <select id="settings-finger-guide-select" class="settings-opt-select" onchange="changeFingerGuideSetting(this.value)">
-              <option value="training" data-i18n="settings_finger_guide_training">Training Only (Default)</option>
-              <option value="always" data-i18n="settings_finger_guide_always">Always Active</option>
+            <select id="settings-finger-guide-select" class="settings-opt-select"
+              onchange="changeFingerGuideSetting(this.value)">
+              <option value="always" data-i18n="settings_finger_guide_always">Always Active (Default)</option>
+              <option value="training" data-i18n="settings_finger_guide_training">Training Only</option>
               <option value="off" data-i18n="settings_finger_guide_off">Disabled</option>
             </select>
-          </div>
-
-
-          <!-- Setting: Privacy Policy -->
-          <div class="settings-opt-row">
-            <span class="settings-opt-label" data-i18n="settings_privacy">Privacy &amp; Data</span>
-            <button class="settings-opt-action-btn" onclick="openPrivacyModal()" type="button" title="View Privacy Policy">
-              <svg class="btn-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                <path d="m9 12 2 2 4-4"/>
-              </svg>
-              <span data-i18n="settings_view_privacy">View Policy</span>
-            </button>
           </div>
         </div>
 
         <!-- Grupo 2: Batalhas de Chefão -->
         <div class="settings-group-card">
           <div class="settings-group-header">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14.5 17.5 3 6V3h3l11.5 11.5"/>
-              <path d="m13 19 6-6"/>
-              <path d="m16 16 4 4"/>
-              <path d="m19 21 2-2"/>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.5 17.5 3 6V3h3l11.5 11.5" />
+              <path d="m13 19 6-6" />
+              <path d="m16 16 4 4" />
+              <path d="m19 21 2-2" />
             </svg>
             <span data-i18n="settings_cat_boss">Boss Battles</span>
           </div>
@@ -1501,7 +1615,8 @@
           <!-- Setting: Boss Battles Toggle -->
           <div class="settings-opt-row">
             <span class="settings-opt-label" data-i18n="settings_boss">Boss Battles</span>
-            <button id="settings-boss-btn" class="settings-opt-toggle" onclick="toggleBossBattlesSetting()" type="button" title="Enable or disable boss battles every 8 phases">
+            <button id="settings-boss-btn" class="settings-opt-toggle" onclick="toggleBossBattlesSetting()"
+              type="button" title="Enable or disable boss battles every 8 phases">
               <span id="settings-boss-val">Every 10 Phases (Active)</span>
             </button>
           </div>
@@ -1510,12 +1625,27 @@
         <!-- Grupo 3: Sobre o App -->
         <div class="settings-group-card">
           <div class="settings-group-header">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 16v-4"/>
-              <path d="M12 8h.01"/>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 16v-4" />
+              <path d="M12 8h.01" />
             </svg>
             <span data-i18n="settings_cat_about">About App</span>
+          </div>
+
+          <!-- Setting: Privacy Policy (Moved into Sobre o App) -->
+          <div class="settings-opt-row">
+            <span class="settings-opt-label" data-i18n="settings_privacy">Privacy &amp; Data</span>
+            <button class="settings-opt-action-btn" onclick="openPrivacyModal()" type="button"
+              title="View Privacy Policy">
+              <svg class="btn-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <span data-i18n="settings_view_privacy">View Policy</span>
+            </button>
           </div>
 
           <!-- Setting: Current Version -->
@@ -1523,9 +1653,11 @@
             <span class="settings-opt-label" data-i18n="settings_version">Current Version</span>
             <div class="settings-version-wrap">
               <span id="settings-app-version" class="settings-opt-badge settings-opt-badge-accent">v1.0</span>
-              <button id="btn-settings-check-update" class="settings-check-update-btn" onclick="checkForAppUpdate(true)" type="button" title="Verificar Atualizações">
-                <svg class="btn-svg-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+              <button id="btn-settings-check-update" class="settings-check-update-btn" onclick="checkForAppUpdate(true)"
+                type="button" title="Verificar Atualizações">
+                <svg class="btn-svg-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
                 </svg>
                 <span id="settings-update-status-label" data-i18n="settings_btn_check_update">Verificar</span>
               </button>
@@ -1535,9 +1667,12 @@
           <!-- Setting: Author -->
           <div class="settings-opt-row">
             <span class="settings-opt-label" data-i18n="settings_author">Author</span>
-            <a href="https://github.com/rlearsi" target="_blank" rel="noopener noreferrer" class="settings-opt-badge settings-opt-link" title="GitHub - Rlearsi">
-              <svg class="btn-svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            <a href="https://github.com/rlearsi" target="_blank" rel="noopener noreferrer"
+              class="settings-opt-badge settings-opt-link" title="GitHub - Rlearsi">
+              <svg class="btn-svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
               </svg>
               <span>Rlearsi</span>
             </a>
@@ -1546,34 +1681,55 @@
       </div>
 
       <button class="btn-secondary" style="width: 100%; margin-top: 14px;" onclick="closeSettings()">
-        <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="m15 18-6-6 6-6"/>
+        <svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6" />
         </svg>
         <span data-i18n="settings_btn_back">Back</span>
       </button>
     </div>
   </div>
 
-  <!-- ===== MODAL: Boss Battle Reward (Choose 1 of 3 skills) ===== -->
+  <!-- ===== MODAL: Level Up Reward (Choose 1 of 3 abilities) ===== -->
+  <div id="modal-levelup" class="modal hidden">
+    <div class="modal-box modal-levelup-box">
+      <div class="levelup-badge-glow">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round" class="levelup-svg-head-icon" style="color:#60A5FA;">
+          <polygon
+            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+        </svg>
+      </div>
+      <h2 class="levelup-title" data-i18n="levelup_title">LEVEL UP!</h2>
+      <p class="levelup-sub" data-i18n="levelup_sub">Choose 1 ability to upgrade your run:</p>
+      <div id="levelup-skills-grid" class="levelup-skills-grid"></div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL: Boss Battle Reward (Choose 1 of 3 special rewards) ===== -->
   <div id="modal-boss-reward" class="modal hidden">
     <div class="modal-box modal-boss-box">
       <div class="boss-reward-badge-glow">
-        <span class="boss-reward-crown">👑</span>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round" class="boss-reward-head-icon" style="color:#FBBF24;">
+          <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5v-2z" />
+        </svg>
       </div>
       <h2 class="boss-reward-title" data-i18n="boss_defeated_title">BOSS DEFEATED!</h2>
       <div id="boss-coins-container" class="boss-coins-container modal-stats-group modal-stats-group-coins">
         <div class="modal-stats-group-title coins-title">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="group-svg-icon" style="color:#FBBF24">
-            <circle cx="12" cy="12" r="9"/>
-            <circle cx="12" cy="12" r="5"/>
-            <path d="M12 9v6"/>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" class="group-svg-icon" style="color:#FBBF24">
+            <circle cx="12" cy="12" r="9" />
+            <circle cx="12" cy="12" r="5" />
+            <path d="M12 9v6" />
           </svg>
           <span data-i18n="modal_section_coins">Coins Earned</span>
         </div>
         <div id="boss-coins-rows-list"></div>
       </div>
       <p class="boss-reward-sub" data-i18n="boss_defeated_sub">You masterfully solved all runic trials.</p>
-      <div class="boss-reward-prompt" data-i18n="boss_defeated_prompt">Choose 1 permanent bonus skill for upcoming phases:</div>
+      <div class="boss-reward-prompt" data-i18n="boss_defeated_prompt">Choose 1 special boss reward:</div>
       <div id="boss-skills-grid" class="boss-skills-grid"></div>
     </div>
   </div>
@@ -1584,13 +1740,14 @@
   <!-- Achievement Toast Notification -->
   <div id="achievement-toast" class="achievement-toast hidden">
     <div class="at-icon" id="at-icon">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-        <path d="M4 22h16"/>
-        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
-        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
-        <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+        <path d="M4 22h16" />
+        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+        <path d="M18 2H6v7a6 6 0 0 0 12 0V2z" />
       </svg>
     </div>
     <div class="at-content">
@@ -1604,17 +1761,18 @@
   <script src="./js/ambient.js?v=1.0"></script>
   <script src="./js/audio.js?v=1.0"></script>
   <script src="./js/i18n.js?v=1.1"></script>
-  <script src="./js/data.js?v=1.3"></script>
-  <script src="./js/state.js?v=1.3"></script>
-  <script src="./js/ui.js?v=1.3"></script>
+  <script src="./js/data.js?v=1.4"></script>
+  <script src="./js/state.js?v=1.4"></script>
+  <script src="./js/ui.js?v=1.6.2"></script>
   <script src="./js/shop.js?v=1.3"></script>
   <script src="./js/library.js?v=1.0"></script>
-  <script src="./js/spawner.js?v=1.3"></script>
-  <script src="./js/skills.js?v=1.3"></script>
-  <script src="./js/boss.js?v=1.3"></script>
+  <script src="./js/spawner.js?v=1.6.2"></script>
+  <script src="./js/skills.js?v=1.6.1"></script>
+  <script src="./js/boss.js?v=1.4"></script>
   <script src="./js/pause.js?v=1.0"></script>
   <script src="./js/phase.js?v=1.3"></script>
-  <script src="./game.js?v=1.3"></script>
-  <script src="./js/input.js?v=1.0"></script>
+  <script src="./game.js?v=1.6.2"></script>
+  <script src="./js/input.js?v=1.4"></script>
 </body>
+
 </html>
