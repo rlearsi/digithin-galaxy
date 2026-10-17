@@ -22,11 +22,15 @@ function startGame(mode = 'classic') {
 
   const diffCfg = typeof getDifficultyConfig === 'function' ? getDifficultyConfig() : { startLives: 3, initialSpeed: 1.0 };
   if (mode === 'zen' || mode === 'training') {
+    state.shields = 999;
+    state.maxShields = 999;
     state.lives = 999;
     state.maxLives = 999;
   } else {
-    state.lives = diffCfg.startLives;
-    state.maxLives = diffCfg.startLives;
+    state.shields = diffCfg.startLives || 3;
+    state.maxShields = diffCfg.startLives || 3;
+    state.lives = state.shields;
+    state.maxLives = state.maxShields;
   }
   if (mode === 'timeattack') {
     state.timeAttackSecs = 60;
@@ -166,8 +170,8 @@ function goToMainMenu() {
 // ============================================================
 // 2. HEALTH & GAME OVER
 // ============================================================
-function loseLife() {
-  // Shield immunity protects lives
+function loseShield() {
+  // Shield immunity protects shields
   if ((state.activeTimers?.shield || 0) > 0) {
     playSound('skill');
     const msg = typeof t === 'function' ? t('fb_shield_blocked') : '🛡️ Dano bloqueado pela Imunidade!';
@@ -175,7 +179,7 @@ function loseLife() {
     return;
   }
 
-  // Training Mode: No life loss! Only accuracy and PPM reduction
+  // Training Mode: No shield loss! Only accuracy and PPM reduction
   if (state.gameMode === 'training') {
     state.errorsPhase++;
     state.totalErrors++;
@@ -186,7 +190,7 @@ function loseLife() {
     return;
   }
 
-  // Zen Mode: No life loss (silent and clean, info is permanently displayed on HUD)
+  // Zen Mode: No shield loss (silent and clean, info is permanently displayed on HUD)
   if (state.gameMode === 'zen') {
     playSound('fall');
     state.combo = 0;
@@ -194,15 +198,27 @@ function loseLife() {
     return;
   }
 
-  // Combo breaks on life loss
+  // Combo breaks on shield loss
   if (state.combo > 0) {
     state.combo = 0;
     showFeedback(typeof t === 'function' ? t('fb_combo_broken') : 'Combo broken!', 'error');
   }
 
-  state.lives--;
+  state.shields = Math.max(0, (state.shields !== undefined ? state.shields : (state.lives || 3)) - 1);
+  state.lives = state.shields;
   playSound('life');
-  showFeedback(typeof t === 'function' ? t('fb_runic_dropped') : '💔 Runic dropped!', 'error');
+  showFeedback(typeof t === 'function' ? t('fb_runic_dropped') : '🛡️ Runic dropped! Shield damaged!', 'error');
+
+  // Trigger shield damage flash on Earth shield barrier
+  const shieldEl = document.getElementById('earth-shield-barrier');
+  if (shieldEl) {
+    shieldEl.classList.remove('damaged');
+    void shieldEl.offsetWidth;
+    shieldEl.classList.add('damaged');
+    setTimeout(() => {
+      if (shieldEl) shieldEl.classList.remove('damaged');
+    }, 550);
+  }
 
   // Flash border
   document.body.style.animation = 'screenShake .28s ease';
@@ -210,10 +226,11 @@ function loseLife() {
 
   updateHUD();
 
-  if (state.lives <= 0) {
+  if (state.shields <= 0) {
     gameOver();
   }
 }
+const loseLife = loseShield;
 
 function gameOver() {
   state.paused = true;
@@ -324,7 +341,10 @@ function useContinue() {
   state.continues--;
   playSound('continue');
   const diffCfg = typeof getDifficultyConfig === 'function' ? getDifficultyConfig() : { startLives: 3, initialSpeed: 1.0 };
-  state.lives = diffCfg.startLives;
+  state.shields = diffCfg.startLives || 3;
+  state.maxShields = diffCfg.startLives || 3;
+  state.lives = state.shields;
+  state.maxLives = state.maxShields;
   state.progress = 0;
   state.speedMultiplier = diffCfg.initialSpeed;
   state.speedAccum = 0;

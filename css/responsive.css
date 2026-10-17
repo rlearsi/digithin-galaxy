@@ -87,13 +87,24 @@
     user-select: none;
     -webkit-user-select: none;
   }
-  .hud-mobile-lives .heart-icon {
+  .hud-mobile-lives .heart-icon,
+  .hud-mobile-lives .shield-hud-icon {
     line-height: 1;
     transition: opacity 0.2s ease, filter 0.2s ease;
   }
-  .hud-mobile-lives .heart-icon.lost {
+  .hud-mobile-lives .heart-icon.lost,
+  .hud-mobile-lives .shield-hud-icon.lost {
     opacity: 0.25;
     filter: grayscale(1);
+  }
+  .hud-mobile-lives .shield-hud-svg {
+    width: 16px;
+    height: 16px;
+  }
+  .earth-globe-sphere {
+    width: min(780px, 160vw);
+    height: min(780px, 160vw);
+    margin-left: calc(-1 * min(780px, 160vw) / 2);
   }
   .mobile-skills-bar {
     display: flex;

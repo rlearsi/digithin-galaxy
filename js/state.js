@@ -48,9 +48,11 @@ function setDifficulty(diff) {
     const cfg = getDifficultyConfig(valid);
     if (state.gameMode === 'classic' || state.gameMode === 'timeattack') {
       const oldCfg = getDifficultyConfig(oldDiff);
-      if (state.lives === (oldCfg?.startLives || 3)) {
+      if (state.shields === (oldCfg?.startLives || 3) || state.lives === (oldCfg?.startLives || 3)) {
+        state.shields = cfg.startLives;
         state.lives = cfg.startLives;
       }
+      state.maxShields = cfg.startLives;
       state.maxLives = cfg.startLives;
     }
   }
@@ -110,8 +112,10 @@ function defaultState() {
     flawlessStreak:    0,
     errorsPhase:       0,
     totalErrors:       0,
-    lives:             diffCfg.startLives,
-    maxLives:          diffCfg.startLives,
+    shields:           diffCfg.startLives || 3,
+    maxShields:        diffCfg.startLives || 3,
+    lives:             diffCfg.startLives || 3,
+    maxLives:          diffCfg.startLives || 3,
     progress:          0,
     wordsDestroyedForCoin: 0,
     totalWordsCompletedMatch: 0,
@@ -487,8 +491,10 @@ function loadSaveDataIntoState(save) {
   // Moedas compartilhadas: o saldo vem sempre do banco global, nunca do slot
   state.coins = getSharedCoins();
   state.totalCoinsEarned = save.totalCoinsEarned || 0;
-  state.lives = (save.lives !== undefined) ? save.lives : 3;
-  state.maxLives = save.maxLives || 3;
+  state.shields = (save.shields !== undefined) ? save.shields : ((save.lives !== undefined) ? save.lives : 3);
+  state.maxShields = save.maxShields || save.maxLives || 3;
+  state.lives = state.shields;
+  state.maxLives = state.maxShields;
   state.flawlessStreak = save.flawlessStreak || 0;
   state.totalErrors = save.totalErrors || 0;
   state.totalHits = save.totalHits || 0;

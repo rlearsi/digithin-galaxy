@@ -1270,13 +1270,13 @@ function updateHUD() {
     }
   }
 
-  // Render lives (hearts)
+  // Render shields (vector SVG shields, 100% no emojis)
   if (livesRow) {
     livesRow.innerHTML = '';
     const livesLbl = $('hud-lives-lbl');
     const livesCountText = $('lives-count-text');
     if (state.gameMode === 'zen') {
-      const zenPill = typeof t === 'function' ? t('hud_zen_pill') : 'No lives lost';
+      const zenPill = typeof t === 'function' ? t('hud_zen_pill') : 'Unlimited shields';
       const zenTitle = typeof t === 'function' ? t('hud_zen_pill_title') : '';
       livesRow.innerHTML = `<span class="zen-lives-pill" title="${zenTitle}">${zenPill}</span>`;
       if (livesLbl) livesLbl.textContent = typeof t === 'function' ? t('hud_zen_lbl') : 'ZEN MODE';
@@ -1295,23 +1295,30 @@ function updateHUD() {
         livesCountText.className = 'stat-lives-count';
       }
     } else {
-      if (livesLbl) livesLbl.textContent = typeof t === 'function' ? t('hud_lives') : 'LIVES';
-      const max = Math.min(10, state.maxLives || CFG.startLives);
-      const cur = Math.max(0, state.lives);
+      if (livesLbl) livesLbl.textContent = typeof t === 'function' ? (t('hud_shields') || t('hud_lives')) : 'SHIELDS';
+      const max = Math.min(10, state.maxShields || state.maxLives || CFG.startLives || 3);
+      const cur = Math.max(0, state.shields !== undefined ? state.shields : (state.lives !== undefined ? state.lives : 3));
       if (livesCountText) {
         livesCountText.textContent = `${cur} / ${max}`;
         livesCountText.className = 'stat-lives-count' + (cur <= 1 ? ' danger' : cur === 2 ? ' warn' : '');
       }
       for (let i = 0; i < max; i++) {
+        const isLost = i >= cur;
         const s = document.createElement('span');
-        s.className = 'heart-icon' + (i >= cur ? ' lost' : '');
-        s.textContent = i < cur ? '❤️' : '🤍';
+        s.className = 'shield-hud-icon' + (isLost ? ' lost' : '');
+        s.setAttribute('title', isLost ? 'Shield Offline' : 'Shield Active');
+        s.innerHTML = `<svg class="shield-hud-svg" width="20" height="20" viewBox="0 0 24 24" fill="${isLost ? 'none' : 'currentColor'}" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`;
         livesRow.appendChild(s);
       }
     }
     const mobileLives = $('hud-mobile-lives');
     if (mobileLives) {
       mobileLives.innerHTML = livesRow.innerHTML;
+    }
+    const earthShield = document.getElementById('earth-shield-barrier');
+    if (earthShield) {
+      const curShields = (state.gameMode === 'zen' || state.gameMode === 'training') ? 3 : (state.shields !== undefined ? state.shields : (state.lives || 3));
+      earthShield.classList.toggle('depleted', curShields <= 0);
     }
   }
 
@@ -1357,7 +1364,7 @@ function getSkillSvgIcon(skillId) {
     case 'autodestroy':
       return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-2 2.5h3L11 8"/><circle cx="12" cy="14" r="7"/><path d="m10 14 4 4m0-4-4 4"/></svg>`;
     case 'extralife':
-      return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>`;
+      return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`;
     case 'continue':
       return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="m10 15 5-3-5-3v6z"/></svg>`;
     case 'coins_100':
@@ -3428,10 +3435,10 @@ function renderSlotsModal() {
 
       const scoreStr = Number(slot.data.totalScore || 0).toLocaleString();
       const phaseNum = slot.data.phase || 1;
-      const livesNum = slot.data.lives || 3;
+      const shieldsNum = slot.data.shields !== undefined ? slot.data.shields : (slot.data.lives || 3);
       const phaseLbl = typeof t === 'function' ? t('hud_phase') : 'FASE';
       const scoreLbl = typeof t === 'function' ? t('modal_stat_score') : 'PONTOS';
-      const livesLbl = typeof t === 'function' ? t('hud_lives') : 'VIDAS';
+      const shieldsLbl = typeof t === 'function' ? (t('hud_shields') || t('hud_lives')) : 'ESCUDOS';
       const dateStr = slot.data.savedAt
         ? new Date(slot.data.savedAt).toLocaleDateString(typeof getLanguage === 'function' ? getLanguage() : undefined, {
             day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'
@@ -3457,11 +3464,11 @@ function renderSlotsModal() {
             <span class="slot-stat-val text-cyan">${phaseNum}</span>
           </div>
           <div class="slot-stat-row">
-            <span class="slot-stat-lbl">${livesLbl}</span>
-            <span class="slot-stat-val text-rose" style="display:inline-flex;align-items:center;justify-content:center;gap:3px;">
-              ${livesNum}
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#F43F5E" stroke="#F43F5E" stroke-width="1.5">
-                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+            <span class="slot-stat-lbl">${shieldsLbl}</span>
+            <span class="slot-stat-val text-cyan" style="display:inline-flex;align-items:center;justify-content:center;gap:3px;">
+              ${shieldsNum}
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#38BDF8" stroke="#38BDF8" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
               </svg>
             </span>
           </div>

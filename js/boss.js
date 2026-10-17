@@ -667,9 +667,11 @@ function defeatBoss() {
 
 function grantBossReward(reward) {
   if (reward.id === 'extralife') {
-    state.lives = Math.min(state.lives + 1, 6);
-    state.maxLives = Math.max(state.maxLives, state.lives);
-    showFeedback(typeof t === 'function' ? t('boss_reward_extralife') + '!' : '+1 Life!', 'special');
+    state.shields = Math.min((state.shields || state.lives || 3) + 1, 6);
+    state.maxShields = Math.max(state.maxShields || 3, state.shields);
+    state.lives = state.shields;
+    state.maxLives = state.maxShields;
+    showFeedback(typeof t === 'function' ? t('boss_reward_extralife') + '!' : '+1 Shield!', 'special');
   } else if (reward.id === 'continue') {
     state.continues = (state.continues || 0) + 1;
     showFeedback(typeof t === 'function' ? t('boss_reward_continue') + '!' : '+1 Continue!', 'special');

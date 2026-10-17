@@ -1,6 +1,6 @@
 # 🌌 Digithin Galaxy — Jogo de Digitação Arcade Espacial
 
-[![Versão](https://img.shields.io/badge/versão-v1.7-6366F1?style=for-the-badge&logo=gamepad)](https://github.com/rlearsi/digithin-galaxy)
+[![Versão](https://img.shields.io/badge/versão-v1.8-6366F1?style=for-the-badge&logo=gamepad)](https://github.com/rlearsi/digithin-galaxy)
 [![Status](https://img.shields.io/badge/status-estável-10B981?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 [![Licença](https://img.shields.io/badge/licença-MIT-38BDF8?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 
@@ -12,10 +12,10 @@
 - [1. Visão Geral](#1-visão-geral)
 - [2. Estrutura e Arquitetura do Projeto](#2-estrutura-e-arquitetura-do-projeto)
 - [3. Mecânicas do Jogo (Gameplay)](#3-mecânicas-do-jogo-gameplay)
-  - [3.1 Vocábulos Cósmicos & Buraco Negro](#31-vocábulos-cósmicos--buraco-negro)
+  - [3.1 Vocábulos Cósmicos & Horizonte da Terra](#31-vocábulos-cósmicos--horizonte-da-terra)
   - [3.2 Smart Targeting do Eco Cósmico & Buffer Lock](#32-smart-targeting-do-eco-cósmico--buffer-lock)
   - [3.3 Sistema de XP e Level-Up Roguelike](#33-sistema-de-xp-e-level-up-roguelike)
-  - [3.4 Vidas, Buraco Negro & Espaguetificação](#34-vidas-buraco-negro--espaguetificação)
+  - [3.4 Escudos da Terra, Horizonte Planetário & Queda de Destroços](#34-escudos-da-terra-horizonte-planetário--queda-de-destroços)
   - [3.5 Multiplicadores de Combo e Modo Fúria](#35-multiplicadores-de-combo-e-modo-fúria)
   - [3.6 Batalhas Contra Comandantes Alienígenas](#36-batalhas-contra-comandantes-alienígenas)
   - [3.7 Modos de Jogo Disponíveis](#37-modos-de-jogo-disponíveis)
@@ -119,11 +119,11 @@ Durante a corrida arcade, cada vocábulo digitado alimenta a barra contínua de 
 
 ---
 
-### 3.4 Vidas, Buraco Negro & Espaguetificação
-- O jogador inicia com **3 vidas** (❤️ ❤️ ❤️).
-- A partir de ~80% da altura da tela, os vocábulos não digitados são capturados pelo campo gravitacional, sofrendo espaguetificação progressiva (`scaleX: 0.38`, `scaleY: 2.35`) e dilatação temporal.
-- Ao cruzar o horizonte de eventos, o vocábulo é tragado na singularidade com colapso sonoro e o jogador perde 1 vida (a menos que esteja sob efeito do **Escudo de Plasma**).
-- Com zero vidas, a partida é encerrada com a tela de **Game Over**. Fichas de Continue permitem reviver imediatamente na corrida.
+### 3.4 Escudos da Terra, Horizonte Planetário & Queda de Destroços
+- O jogador inicia com **3 escudos** (🛡️ 🛡️ 🛡️).
+- A partir de ~80% da altura da tela, os vocábulos não digitados entram em trajetória atmosférica perigosa, atingindo a barreira defensiva externa da Terra.
+- Ao colidir com a camada atmosférica, o impacto abala as defesas planetárias e o jogador perde 1 escudo (a menos que esteja protegido pelo **Escudo de Plasma**).
+- Com zero escudos, a partida é encerrada com a tela de **Game Over**. Fichas de Continue restauram integralmente os 3 escudos e permitem retomar a partida imediatamente.
 
 ---
 
@@ -149,14 +149,14 @@ Durante a jornada arcade, o Sistema Solar é invadido esporadicamente por um dos
 | **Xenor** | Amber (`#F59E0B`) | Consciência Central | Singularidades, velocidade da luz e buracos de minhoca. |
 
 - O Comandante lança enigmas astronômicos em caixas de vidro fosco. Digite a resposta correta antes que ela toque o buraco negro para causar dano crítico no invasor.
-- Ao derrotá-lo, o jogador escolhe uma grande recompensa: `+1 Vida`, `+1 Ficha Continue` ou `+100 Moedas`.
+- Ao derrotá-lo, o jogador escolhe uma grande recompensa: `+1 Escudo`, `+1 Ficha Continue` ou `+100 Moedas`.
 
 ---
 
 ### 3.7 Modos de Jogo Disponíveis
 1. **Modo Arcade Roguelike:** A jornada estelar principal com progressão infinita de XP, cartas de Level-Up, aceleração contínua e chefões alienígenas.
 2. **Modo Treinamento por Linhas do Teclado:** 4 Mundos pedagógicos (Linha Base, Linha Superior, Linha Inferior e Acentos) com progressão didática dedo-a-dedo.
-3. **Modo Zen (Treino Livre):** Modo descontraído sem perda de vidas, ideal para treinar velocidade e vocabulário sem risco de derrota.
+3. **Modo Zen (Treino Livre):** Modo descontraído com escudos ilimitados, ideal para treinar velocidade e vocabulário sem risco de derrota.
 4. **Modo Contra o Relógio (Time Attack 60s):** Desafio frenético de 1 minuto em busca do recorde máximo de palavras e WPM.
 
 ---
@@ -169,7 +169,7 @@ As habilidades obtidas no Level-Up atuam automaticamente ao longo da partida, ge
 |:---|:---:|:---:|:---|
 | **Dilação Espacial** | Passiva Permanente | Efeito Contínuo | Amplia o espaçamento e intervalo entre novos vocábulos gerados (2x a 5x). |
 | **Bomba Estelar** | Ativa Periódica | A cada 90s | Onda de choque estelar que desintegra todos os vocábulos na tela. |
-| **Escudo de Plasma** | Ativa Periódica | 10s a cada 120s | Imunidade absoluta: vocábulos caídos não removem vidas e erros não quebram o combo. |
+| **Escudo de Plasma** | Ativa Periódica | 10s a cada 120s | Imunidade absoluta: vocábulos caídos não removem escudos e erros não quebram o combo. |
 | **Criostase Sideral** | Ativa Periódica | 10s a cada 120s | Paralisa todos os vocábulos na esteira, suspendendo a queda em direção ao buraco negro. |
 | **Vórtice Cósmico** | Ativa Periódica | A cada 180s | Abre uma singularidade gravitacional central que suga todos os termos ativos da tela. |
 | **Desaceleração** | Ativa Periódica | 15s a cada 60s | Reduz a velocidade de descida dos vocábulos em 50%. |

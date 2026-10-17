@@ -705,12 +705,12 @@ const SKILLS_CONFIG = {
 const BOSS_REWARDS_CONFIG = {
   extralife: {
     id: 'extralife',
-    icon: '❤️',
+    icon: '🛡️',
     nameKey: 'boss_reward_extralife',
     descKey: 'boss_reward_extralife_desc',
-    get name() { return (typeof t === 'function') ? t(this.nameKey) : '+1 Life'; },
-    get desc() { return (typeof t === 'function') ? t(this.descKey) : 'Recovers or adds 1 life for the current run'; },
-    color: '#EF4444',
+    get name() { return (typeof t === 'function') ? t(this.nameKey) : '+1 Shield'; },
+    get desc() { return (typeof t === 'function') ? t(this.descKey) : 'Recovers or adds 1 shield for the current run'; },
+    color: '#0EA5E9',
     category: 'boss_reward'
   },
   continue: {

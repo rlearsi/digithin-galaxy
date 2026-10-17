@@ -16,10 +16,10 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="./css/variables.css?v=1.6.1" />
   <link rel="stylesheet" href="./css/components.css?v=1.0" />
-  <link rel="stylesheet" href="./css/layout.css?v=1.7" />
+  <link rel="stylesheet" href="./css/layout.css?v=1.8" />
   <link rel="stylesheet" href="./css/gameplay.css?v=1.7" />
   <link rel="stylesheet" href="./css/modals.css?v=1.7" />
-  <link rel="stylesheet" href="./css/responsive.css?v=1.0" />
+  <link rel="stylesheet" href="./css/responsive.css?v=1.8" />
 </head>
 
 <body>
@@ -141,7 +141,7 @@
             </div>
             <div class="mode-card-info">
               <span class="mode-card-title" data-i18n="btn_zen_short">Zen Mode</span>
-              <span class="mode-card-desc" data-i18n="btn_zen_desc">No lives lost</span>
+              <span class="mode-card-desc" data-i18n="btn_zen_desc">Unlimited shields</span>
             </div>
           </button>
 
@@ -264,8 +264,7 @@
         </div>
         <div class="hud-progress-info">
           <span id="progress-text"></span>
-          <span id="zen-fixed-badge" class="zen-fixed-badge hidden" data-i18n="hud_zen_badge">Zen Mode: no lives
-            lost</span>
+          <span id="zen-fixed-badge" class="zen-fixed-badge hidden" data-i18n="hud_zen_badge">Zen Mode: unlimited shields</span>
         </div>
       </div>
     </div>
@@ -281,13 +280,13 @@
             <span class="speed-badge" id="speed-display">1.0×</span>
           </div>
 
-          <!-- VIDAS DO JOGADOR EM DESTAQUE -->
+          <!-- ESCUDOS DA TERRA EM DESTAQUE -->
           <div class="stat-hero-lives">
             <div class="stat-hero-header">
-              <span class="stat-hero-lbl" id="hud-lives-lbl" data-i18n="hud_lives">LIVES</span>
+              <span class="stat-hero-lbl" id="hud-lives-lbl" data-i18n="hud_shields">SHIELDS</span>
               <span class="stat-lives-count" id="lives-count-text">3 / 3</span>
             </div>
-            <div id="lives-row" class="stat-hero-hearts"></div>
+            <div id="lives-row" class="stat-hero-hearts stat-hero-shields"></div>
           </div>
 
           <!-- PONTUAÇÃO TOTAL EM DESTAQUE (10 CASAS) -->
@@ -410,8 +409,16 @@
           <!-- Planet Earth Horizon Defense Rim (Protects Earth from celestial debris) -->
           <div id="earth-horizon" class="earth-horizon" aria-hidden="true">
             <div class="earth-atmosphere-glow" aria-hidden="true"></div>
+            <!-- Concentric Planetary Defense Shield Line (Arc with subtle pulsing glow) -->
+            <div id="earth-shield-barrier" class="earth-shield-barrier" aria-hidden="true">
+              <svg class="earth-shield-svg" viewBox="0 0 1000 120" preserveAspectRatio="none">
+                <path class="earth-shield-path" d="M -20,118 Q 500,10 1020,118" />
+              </svg>
+            </div>
             <div class="earth-horizon-wrap" aria-hidden="true">
-              <img class="earth-horizon-img" src="./assets/earth_horizon.webp" alt="Planet Earth Horizon" loading="eager" />
+              <div class="earth-globe-sphere" id="earth-globe-sphere">
+                <img class="earth-globe-img" src="./assets/earth_cartoon_globe.webp" alt="Planet Earth Horizon" loading="eager" />
+              </div>
               <div class="earth-limb-glow" aria-hidden="true"></div>
             </div>
             <div class="earth-impact-shield" aria-hidden="true"></div>
@@ -1143,13 +1150,12 @@
             8×</span>
         </div>
         <div class="rule-row">
-          <svg class="rule-svg-icon rule-icon-rose" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          <svg class="rule-svg-icon rule-icon-cyan" width="20" height="20" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path
-              d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
           </svg>
-          <span data-i18n="rule_danger"><strong>Lives & Danger:</strong> Runics at the bottom flash red and cost 1 life
-            if dropped (3 lives in Classic)</span>
+          <span data-i18n="rule_danger"><strong>Shields & Danger:</strong> Runics at the bottom flash red and damage 1 shield
+            if dropped (3 shields in Classic)</span>
         </div>
       </div>
 
@@ -1401,7 +1407,7 @@
               d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" />
           </svg>
         </span>
-        <span class="tnc-text" data-i18n="training_notice">In this practice mode you <strong>do not lose lives</strong>.
+        <span class="tnc-text" data-i18n="training_notice">In this practice mode you <strong>do not lose shields</strong>.
           Typo errors and fallen runics lower your <strong>Accuracy %</strong> and <strong>WPM</strong>.</span>
       </div>
       <div id="training-worlds-grid" class="training-worlds-grid"></div>
@@ -1697,20 +1703,20 @@
   </div>
 
   <!-- Modular Scripts with Cache Busting -->
-  <script src="./js/ambient.js?v=1.7"></script>
+  <script src="./js/ambient.js?v=1.8"></script>
   <script src="./js/audio.js?v=1.0"></script>
   <script src="./js/i18n.js?v=1.1"></script>
-  <script src="./js/data.js?v=1.7"></script>
-  <script src="./js/state.js?v=1.4"></script>
-  <script src="./js/ui.js?v=1.7"></script>
-  <script src="./js/shop.js?v=1.3"></script>
+  <script src="./js/data.js?v=1.8"></script>
+  <script src="./js/state.js?v=1.8"></script>
+  <script src="./js/ui.js?v=1.8"></script>
+  <script src="./js/shop.js?v=1.8"></script>
   <script src="./js/library.js?v=1.0"></script>
   <script src="./js/spawner.js?v=1.6.2"></script>
   <script src="./js/skills.js?v=1.6.1"></script>
-  <script src="./js/boss.js?v=1.4"></script>
+  <script src="./js/boss.js?v=1.8"></script>
   <script src="./js/pause.js?v=1.0"></script>
   <script src="./js/phase.js?v=1.3"></script>
-  <script src="./game.js?v=1.6.2"></script>
+  <script src="./game.js?v=1.8"></script>
   <script src="./js/input.js?v=1.4"></script>
 </body>
 

@@ -33,6 +33,15 @@
         earth.classList.remove('pulse');
       }, 420);
     }
+    const shield = document.getElementById('earth-shield-barrier');
+    if (shield) {
+      shield.classList.remove('damaged');
+      void shield.offsetWidth;
+      shield.classList.add('damaged');
+      setTimeout(() => {
+        shield.classList.remove('damaged');
+      }, 550);
+    }
   };
 
   // Pre-allocated star collection

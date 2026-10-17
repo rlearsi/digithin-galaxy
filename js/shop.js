@@ -397,10 +397,12 @@ function buyShopItem(skillId, price) {
 
   if (skillId === 'extralife') {
     if (state) {
-      state.lives    = Math.min((state.lives || 3) + 1, 6);
-      state.maxLives = Math.max(state.maxLives || 3, state.lives);
+      state.shields  = Math.min((state.shields || state.lives || 3) + 1, 6);
+      state.maxShields = Math.max(state.maxShields || 3, state.shields);
+      state.lives    = state.shields;
+      state.maxLives = state.maxShields;
     }
-    showShopFeedback(typeof t === 'function' ? t('fb_permanent_life') : '+1 Permanent Life!', 'success');
+    showShopFeedback(typeof t === 'function' ? (t('fb_permanent_life') || '+1 Permanent Shield!') : '+1 Permanent Shield!', 'success');
   } else if (skillId === 'continue') {
     if (state) {
       state.continues = (state.continues || 0) + 1;
