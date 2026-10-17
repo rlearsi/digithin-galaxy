@@ -1,2026 +1,2031 @@
 {
-    "ui": {
-        "app_title": "Digitinho Galaxy.",
-        "app_subtitle": "Domine o teclado estelar antes que as palavras sejam engolidas pelo buraco negro",
-        "rules_title": "Como Jogar & Regras Rúnicas",
-        "rule_typing": "<strong>Digitação no Teclado:</strong> Digite letras, sílabas e palavras antes que atinjam o fundo da tela",
-        "rule_wildcard": "<strong>Palavras Coringa:</strong> Destroem todos os rúnicos na tela simultaneamente e absorvem todos os seus pontos",
-        "rule_spells": "<strong>Teclas 1–8 (ou clique):</strong> Ativam habilidades de desaceleração, congelar, espaçamento, escudo e poder",
-        "rule_combo": "<strong>Combos & Modo Fúria:</strong> Sequências de acertos sem erros multiplicam sua pontuação em até 8×",
-        "rule_danger": "<strong>Vidas & Perigo:</strong> Rúnicos no fundo piscam em alerta vermelho e custam 1 vida ao cair (3 vidas no Clássico)",
-        "btn_start": "Jogar",
-        "btn_training": "Modo Treinamento (Linhas do Teclado)",
-        "btn_zen": "Modo Zen (Sem Vidas)",
-        "btn_timeattack": "Contra o Tempo (60s)",
-        "btn_library": "Biblioteca",
-        "btn_achievements": "Conquistas",
-        "btn_settings": "Configurações",
-        "btn_shop": "Loja Cósmica",
-        "btn_skills_inventory": "Habilidades",
-        "skills_inventory_title": "Arsenal Cósmico",
-        "skills_inventory_sub": "Suas habilidades permanentes adquiridas na Loja",
-        "skills_inventory_empty": "Nenhuma habilidade adquirida ainda. Visite a Loja Cósmica para reforçar seu arsenal!",
-        "skills_inventory_stock": "Em estoque: ×{count}",
-        "start_record_label": "RECORDE:",
-        "start_high_score": "RECORDE: {score}",
-        "shop_btn_reroll": "Sortear Ofertas",
-        "shop_reroll_cost": "{cost}",
-        "hud_infinite_mode": "ARCADE INFINITO",
-        "hud_coin_farm_progress": "Próxima Moeda: {current} / {target} palavras",
-        "badge_new_label": "NOVO",
-        "badge_new_word": "Nova palavra na partida",
-        "fb_coin_farmed": "+1 Moeda Cósmica farmada!",
-        "start_game_modes": "Modos de Jogo",
-        "btn_classic_short": "Clássico",
-        "btn_training_short": "Treinamento",
-        "btn_training_desc": "Linhas do teclado",
-        "btn_zen_short": "Modo Zen",
-        "btn_zen_desc": "Sem perda de vidas",
-        "btn_timeattack_short": "Contra o Tempo",
-        "btn_timeattack_desc": "Corrida de 60s",
-        "btn_rules": "Como Jogar",
-        "btn_close_rules": "Entendi",
-        "hud_phase": "FASE",
-        "hud_zen_badge": "Modo Zen: sem perda de vidas",
-        "hud_training_badge": "Modo Treinamento: sem perda de vidas",
-        "hud_training_lesson": "Lição",
-        "hud_zen_lbl": "MODO ZEN",
-        "hud_training_lbl": "TREINO",
-        "hud_free": "Livre",
-        "hud_zen_pill": "Sem perda de vidas",
-        "hud_zen_pill_title": "No Modo Zen você pratica livremente sem perda de vidas",
-        "hud_training_pill_title": "No Modo Treinamento você desenvolve precisão e memória muscular sem perder vidas",
-        "hud_lives": "VIDAS",
-        "hud_accuracy": "PRECISÃO",
-        "hud_wpm": "PPM",
-        "hud_combo": "COMBO",
-        "hud_upcoming": "PRÓXIMOS",
-        "hud_new_word_badge": "Palavra Inédita",
-        "hud_spells": "HABILIDADES",
-        "hud_active": "ATIVO",
-        "hud_sec": "s",
-        "pause_title": "Jogo Pausado",
-        "pause_hint": "Pressione <kbd>ESC</kbd> para continuar",
-        "pause_resume": "Continuar",
-        "pause_library": "Biblioteca",
-        "pause_achievements": "Conquistas",
-        "pause_settings": "Configurações",
-        "pause_training_menu": "Voltar ao Menu de Treino",
-        "pause_main_menu": "Voltar pro Menu Principal",
-        "confirm_exit_to_menu": "As moedas ganhas serão mantidas, mas as habilidades recebidas durante a partida serão perdidas.",
-        "confirm_exit_title": "Voltar ao Menu Principal?",
-        "confirm_exit_cancel": "Continuar Jogando",
-        "confirm_exit_confirm": "Sim, Voltar ao Menu",
-        "countdown_hint": "Prepare os dedos!",
-        "countdown_go": "VAI!",
-        "modal_performance": "DESEMPENHO",
-        "modal_phase_complete": "Fase {phase} Completa!",
-        "modal_press_continue": "Pressione ENTER ou Espaço para continuar",
-        "modal_btn_continue": "Continuar ➔",
-        "modal_btn_shop": "Ir para a Loja",
-        "modal_stat_score": "Pontos",
-        "modal_stat_accuracy": "Precisão",
-        "modal_stat_wpm": "PPM",
-        "modal_stat_combo": "Maior Combo",
-        "modal_stat_discovered": "Novas Palavras Descobertas",
-        "go_title": "Fim de Jogo",
-        "go_sub": "Sua jornada rúnica chegou ao fim",
-        "go_score": "Pontuação da Partida",
-        "go_best_score": "Recorde",
-        "go_new_record_tag": "NOVO RECORDE!",
-        "go_final_score": "Pontuação Final",
-        "go_phase_reached": "Fase Alcançada",
-        "go_best_combo": "Maior Combo",
-        "go_avg_accuracy": "Precisão",
-        "go_coins_earned": "Moedas Totais Recebidas",
-        "go_hits_errors": "Acertos / Erros",
-        "go_discovered_words": "Palavras Descobertas",
-        "go_use_continue": "Usar Continue ({n})",
-        "go_revive_continue": "Reviver & Continuar ({n})",
-        "go_play_again": "Jogar Novamente",
-        "go_main_menu": "Menu Principal",
-        "victory_title": "Vitória Épica!",
-        "victory_desc": "Parabéns, você dominou com maestria o teclado rúnico!",
-        "victory_play_again": "Jogar Novamente",
-        "shop_title": "Loja de Habilidades",
-        "shop_sub": "Adquira habilidades permanentes para suas jornadas cósmicas",
-        "shop_points": "Seus Pontos:",
-        "shop_coins": "Suas Moedas:",
-        "shop_btn_buy": "Comprar",
-        "shop_btn_owned": "Comprado",
-        "shop_available": "Disponível",
-        "shop_btn_close": "Fechar",
-        "shop_confirm_exit_title": "Sair da Loja?",
-        "shop_confirm_exit_desc": "Tem certeza que deseja sair da loja?",
-        "shop_confirm_stay": "Continuar na Loja",
-        "shop_confirm_leave": "Voltar ao Menu Principal",
-        "shop_insufficient_pts": "Pontos insuficientes!",
-        "shop_insufficient_coins": "Moedas insuficientes!",
-        "skill_name_freezer": "Congelar",
-        "skill_desc_freezer": "Congela todos os rúnicos na esteira por 10s a cada 2 minutos",
-        "skill_name_bomb": "Bomba",
-        "skill_desc_bomb": "Detona uma explosão cósmica na tela a cada 90s destruindo rúnicos em área",
-        "skill_name_shield": "Imunidade",
-        "skill_desc_shield": "Protege contra rúnicos caídos e erros de digitação por 10s a cada 2 minutos",
-        "skill_name_vortex": "Vórtice",
-        "skill_desc_vortex": "Um buraco se abre no centro da tela e suga todos os rúnicos na tela a cada 3 minutos",
-        "skill_name_slowdown": "Desaceleração",
-        "skill_desc_slowdown": "Reduz a velocidade de queda dos rúnicos em 50% por 15s a cada 1 minuto",
-        "skill_name_haste": "Pontos em Dobro",
-        "skill_desc_haste": "Duplica o ganho de pontos por 10s a cada 30s",
-        "skill_name_dilation": "Espaçamento",
-        "skill_desc_dilation": "Aumenta o espaçamento e intervalo entre rúnicos em até {max}",
-        "skill_name_autodestroy": "Eco Cósmico",
-        "skill_desc_autodestroy": "Destrói automaticamente palavras já aprendidas naquela run a cada 1 minuto por 10s",
-        "boss_reward_extralife": "+1 Vida",
-        "boss_reward_extralife_desc": "Recupera ou adiciona 1 vida para a partida atual",
-        "boss_reward_continue": "Ficha Continue",
-        "boss_reward_continue_desc": "Permite reviver imediatamente caso perca todas as vidas",
-        "boss_reward_coins_100": "+100 Moedas",
-        "boss_reward_coins_100_desc": "Receba +100 moedas cósmicas instantâneas no seu banco",
-        "hud_level": "NÍVEL",
-        "hud_run_perks": "HABILIDADES ATIVAS",
-        "hud_perks_empty": "Nenhuma habilidade adquirida ainda.<br/>Suba de nível para desbloquear!",
-        "levelup_title": "SUBIDA DE NÍVEL!",
-        "levelup_sub": "Você evoluiu para o Nível {level}!",
-        "levelup_prompt": "Escolha 1 habilidade para ativar nesta corrida:",
-        "levelup_btn_pick": "Escolher",
-        "fb_dilation_upgraded": "Espaçamento aprimorado para até {max}!",
-        "lib_title": "Biblioteca de Rúnicos",
-        "lib_sub": "Coleção de vocábulos descobertos",
-        "lib_discovered": "Palavras Descobertas",
-        "lib_locked": "Bloqueada",
-        "lib_typed": "digitada {count}×",
-        "lib_not_typed": "ainda não digitada",
-        "lib_btn_close": "Fechar",
-        "ach_title": "Conquistas & Selos",
-        "ach_sub": "Suas marcas de velocidade, precisão e maestria",
-        "ach_counter": "{unlocked} / {total} Conquistadas",
-        "ach_btn_close": "Fechar",
-        "ach_status_unlocked": "✓ Conquistado",
-        "ach_status_locked": "Bloqueado",
-        "ach_goal_reached": "Meta atingida",
-        "ach_unit_words": "palavras",
-        "ach_unit_streak": "acertos",
-        "ach_unit_combo": "combo",
-        "ach_dedo_veloz_name": "Dedo Veloz",
-        "ach_dedo_veloz_desc": "Alcance 60 PPM.",
-        "ach_cirurgico_name": "Cirúrgico",
-        "ach_cirurgico_desc": "Conclua qualquer fase com 100% de precisão.",
-        "ach_colecionador_name": "Colecionador",
-        "ach_colecionador_desc": "Desbloqueie todas as palavras na Biblioteca.",
-        "ach_mestre_combo_name": "Mestre do Combo",
-        "ach_mestre_combo_desc": "Alcance 30 acertos consecutivos.",
-        "ach_modo_furia_name": "Modo Fúria",
-        "ach_modo_furia_desc": "Ative o Modo Fúria com 15 acertos em sequência.",
-        "ach_mestre_tipo_name": "Mestre da Tipografia",
-        "ach_mestre_tipo_desc": "100 Palavras Completas.",
-        "settings_title": "Configurações",
-        "settings_sub": "Ajustes da partida e interface",
-        "settings_sound": "Efeitos Sonoros",
-        "settings_sound_on": "Ligado",
-        "settings_sound_off": "Mudo",
-        "settings_queue": "Posição da Fila",
-        "settings_queue_top": "Topo",
-        "settings_queue_bottom": "Base",
-        "settings_theme": "Tema da Interface",
-        "settings_theme_dark": "Escuro",
-        "settings_theme_light": "Claro",
-        "settings_boss": "Batalhas de Chefão",
-        "settings_boss_on": "A cada 8 Fases (Ativo)",
-        "settings_boss_off": "Desativado",
-        "settings_test_boss": "Testar Batalha",
-        "settings_face_boss": "Enfrentar Chefão",
-        "settings_lang": "Idioma",
-        "settings_difficulty": "Dificuldade",
-        "settings_diff_locked_match": "Não é possível alterar a dificuldade durante uma partida",
-        "diff_easy": "Fácil",
-        "diff_normal": "Médio",
-        "diff_hard": "Difícil",
-        "diff_desc_easy": "0.5× de velocidade • Sem aceleração por erro • Sem perda de progresso • 5 vidas",
-        "diff_desc_normal": "1.0× de velocidade • Sem aceleração por erro • Perda de progresso normal • 3 vidas",
-        "diff_desc_hard": "1.5× de velocidade • +0.05× por erro • Perda de progresso normal • 3 vidas",
-        "settings_cat_general": "Geral & Interface",
-        "settings_cat_boss": "Batalhas de Chefão",
-        "settings_cat_about": "Sobre o App",
-        "settings_version": "Versão Atual",
-        "settings_author": "Autor",
-        "settings_btn_check_update": "Verificar",
-        "settings_update_latest": "Atualizado",
-        "update_available_title": "Uma nova atualização disponível!",
-        "update_available_sub": "Clique para atualizar o cache e carregar a versão mais recente",
-        "update_btn_action": "Atualizar",
-        "update_applying": "Atualizando...",
-        "settings_btn_back": "Voltar",
-        "training_title": "Treinamento: Linhas do Teclado",
-        "training_sub": "Desenvolva memória muscular sem olhar para as teclas",
-        "training_notice": "Neste modo didático você <strong>não perde vidas</strong>. Erros e rúnicos caídos reduzem sua taxa de <strong>Precisão %</strong> e <strong>PPM</strong>.",
-        "training_btn_back": "Voltar",
-        "training_btn_start": "Começar Treino (3 Lições) →",
-        "training_btn_again": "Treinar Novamente",
-        "training_completed": "Concluído (Maestria)",
-        "training_pending": "3 Lições",
-        "training_record_acc": "Recorde: {acc}% Precisão",
-        "boss_defeated_title": "CHEFÃO DERROTADO!",
-        "boss_defeated_sub": "Você decifrou com maestria os 3 enigmas rúnicos.",
-        "boss_defeated_prompt": "Escolha 1 habilidade arcana como recompensa:",
-        "boss_btn_pick": "Obter",
-        "boss_pick_skill": "Obter",
-        "boss_default_name": "Chefão",
-        "fb_combo_broken": "Combo Quebrado!",
-        "fb_fury_activated": "MODO FÚRIA ATIVADO! PONTOS EM DOBRO!",
-        "fb_bomb_activated": "BOMBA ATIVADA (10s)!",
-        "fb_bomb_expired": "Bomba expirou",
-        "fb_bomb_explosion": "Explosão ({lines} linhas)! +{pts}",
-        "fb_freezer_activated": "CONGELAMENTO ATIVADO (10s)!",
-        "fb_freezer_expired": "Descongelado!",
-        "fb_shield_activated": "IMUNIDADE ATIVA (10s)!",
-        "fb_shield_expired": "Imunidade expirou",
-        "fb_shield_blocked": "Dano bloqueado pela Imunidade!",
-        "fb_shield_error_protected": "Erro protegido pela Imunidade!",
-        "fb_vortex_activated": "VÓRTICE ATIVO (10s)!",
-        "fb_vortex_expired": "Vórtice expirou",
-        "fb_slowdown_activated": "DESACELERAÇÃO ATIVADA (15s)!",
-        "fb_slowdown_expired": "Desaceleração encerrou",
-        "fb_slow_activated": "DESACELERAÇÃO ATIVADA (15s)!",
-        "fb_slow_expired": "Desaceleração encerrou",
-        "fb_haste_activated": "PONTOS EM DOBRO ATIVADO (15s)!",
-        "fb_haste_expired": "Pontos em dobro expirou",
-        "fb_dilation_activated": "ESPAÇAMENTO AUMENTADO (45s)!",
-        "fb_dilation_expired": "Espaçamento encerrou",
-        "fb_speedlock_activated": "VELOCIDADE TRAVADA EM 1.0× (60s)!",
-        "fb_speedlock_expired": "Trava de velocidade encerrou",
-        "fb_autodestroy_activated": "ECO CÓSMICO ATIVADO (60s)!",
-        "fb_autodestroy_expired": "Eco cósmico expirou",
-        "fb_autodestroy_shattered": "⚡ Auto-destruído: {word}! +{pts}",
-        "fb_wildcard": "CORINGA! Todos os rúnicos absorvidos! +{pts}",
-        "fb_life_recovered": "+1 Vida Recuperada!",
-        "fb_perfect": "PERFEITO!",
-        "hud_performance": "PAINEL DE DESEMPENHO",
-        "hud_total_score": "PONTOS TOTAIS",
-        "hud_hits": "ACERTOS",
-        "hud_errors": "ERROS",
-        "hud_discovered_words": "PALAVRAS DESCOBERTAS",
-        "hud_view_all": "Ver todas",
-        "hud_spells_hint": "Compre na loja<br/>ou complete palavras",
-        "hud_activate_kb": "ATIVAR (TECLADO)",
-        "hud_key_label": "Tecla",
-        "hud_max_phase": "FASE MÁXIMA",
-        "modal_unlocked_words": "Palavras desbloqueadas",
-        "modal_btn_next_phase": "Próxima Fase →",
-        "modal_btn_back_training": "Voltar ao Menu de Treino",
-        "shop_note": "O preço aumenta a cada compra",
-        "shop_btn_continue": "Continuar Jogando",
-        "btn_back_to_game": "Voltar ao Jogo",
-        "app_loading": "Carregando dados rúnicos...",
-        "fb_runic_dropped_zen": "⚠️ Rúnico caiu (- precisão)",
-        "fb_runic_dropped": "💔 Rúnico caiu!",
-        "fb_time_up": "⏱️ Tempo Esgotado!",
-        "fb_boss_enigma_dropped": "💥 O enigma caiu! O Chefão atacou!",
-        "fb_ice_cleared": "❄️ Tela limpa — gelo desligado!",
-        "fb_error_letter": "❌ Letra errada!",
-        "fb_error": "❌ Erro",
-        "fb_wildcard_clean": "💥 CORINGA! LIMPEZA TOTAL!",
-        "fb_training_completed": "🎉 Parabéns! Você concluiu todos os mundos de treino!",
-        "fb_continue_used": "🪙 Continue usado! Continuando fase...",
-        "fb_permanent_life": "+1 Vida permanente!",
-        "fb_continue_obtained": "🪙 +1 Ficha Continue obtida!",
-        "shop_all_words_unlocked": "Todas as palavras já foram descobertas!",
-        "hud_skills_empty_hint": "Compre na loja<br/>ou complete palavras <strong>⚡</strong>",
-        "training_lesson_1_title": "Lição 1: Reconhecimento de Teclas",
-        "training_lesson_2_title": "Lição 2: Alternância de Dedos",
-        "training_lesson_3_title": "Lição 3: Desafio de Maestria",
-        "training_lesson_1_name": "Teclas Base",
-        "training_lesson_2_name": "Alternância",
-        "training_lesson_3_name": "Desafio Final",
-        "training_next_obj_2": "Próximo objetivo: Combinar teclas em pequenas palavras e alternância entre as mãos.",
-        "training_next_obj_3": "Próximo objetivo: Desafio final de fluidez e maestria com vocábulos completos!",
-        "training_new_record": "NOVO RECORDE!",
-        "training_world_mastered": "MUNDO DOMINADO",
-        "training_mastery_completed": "{world} — Maestria Concluída!",
-        "training_lesson_completed": "{world} — {lesson} Concluída!",
-        "training_rank_s": "PRECISÃO CIRÚRGICA",
-        "training_rank_a": "EXCELENTE FLUIDEZ",
-        "training_rank_b": "BOM CONTROLE",
-        "training_rank_c": "PRATICAR MAIS",
-        "training_stat_world_progress": "Progresso do Mundo",
-        "training_stat_lesson_done": "Lição {lesson} de 3 Concluída",
-        "training_stat_accuracy_rate": "Taxa de Precisão",
-        "training_stat_status": "Status do Treinamento",
-        "training_stat_completed": "100% Concluído (3/3 Lições)",
-        "training_stat_keys": "Teclas Dominadas",
-        "training_stat_accuracy": "Precisão Desta Partida",
-        "training_stat_best_record": "Melhor Recorde (Precisão)",
-        "training_stat_speed": "Velocidade Real (PPM)",
-        "training_stat_hits_errors": "Acertos / Erros",
-        "training_hits_errs_val": "{hits} acertos / {errors} erros",
-        "training_btn_next_world": "Avançar para o {world} →",
-        "training_btn_finish_all": "Concluir Todos os Treinos! →",
-        "training_btn_next_lesson": "Avançar para Lição {lesson} ({runics} rúnicos) →",
-        "fb_boss_defeated": "{boss} DERROTADO! +350 MOEDAS!",
-        "modal_phase_pts": "Pontos Conquistados na Fase",
-        "modal_acc_bonus": "Bônus de Precisão ({acc}%)",
-        "modal_penalty": "Erros (penalidade)",
-        "modal_net_pts": "Soma Adicionada",
-        "modal_total_pts": "Pontuação Total",
-        "modal_combo_bonus": "Bônus de Combo Máximo ({combo}×)",
-        "modal_phase_total_pts": "Pontos Totais Recebidos",
-        "modal_section_score": "Resumo da Pontuação",
-        "modal_section_coins": "Moedas Conquistadas",
-        "modal_coins_completion": "Fase Concluída",
-        "modal_boss_bonus": "Bônus do Chefão",
-        "modal_coins_precision": "Bônus de Precisão 100%",
-        "modal_coins_streak": "Sequência Sem Falhas ({streak} fases)",
-        "modal_coins_phase_total": "Total de Moedas na Fase",
-        "modal_coins_balance": "Saldo Total de Moedas",
-        "hud_coins": "MOEDAS",
-        "hud_boss_hp": "VIDA DO CHEFE",
-        "fb_skill_acquired": "⚡ Habilidade: {skill}!",
-        "fb_vortex_devour": "🌀 Vórtice devorou {text}! +{pts}",
-        "fb_enigma_solved": "💥 ENIGMA DECIFRADO! -1 PONTO DE VIDA! (+{pts}pts)",
-        "fb_reward_granted": "Recompensa concedida: {reward}!",
-        "queue_top": "Topo",
-        "queue_bottom": "Base",
-        "queue_toggle_to_bottom": "Fila no Topo (clique para mover para a base)",
-        "queue_toggle_to_top": "Fila na Base (clique para mover para o topo)",
-        "theme_switch_to_light": "Mudar para tema claro",
-        "theme_switch_to_dark": "Mudar para tema escuro",
-        "boss_enigma_badge": "📜 ENIGMA {num} DE {total} • {scenario}",
-        "boss_enigma_letters": "{count} LETRAS",
-        "boss_enigma_queue": "ENIGMA {num} DE 3",
-        "boss_level_tag": " (Nv. {level})",
-        "boss_cyber_titan_name": "Xylarion, o Soberano do Vácuo",
-        "boss_cyber_titan_title": "Comandante da Vanguarda Alienígena",
-        "boss_cyber_titan_scenario": "Cinturão de Kuiper (Entrada do Sistema Solar)",
-        "boss_cyber_titan_scenario_desc": "A armada alienígena de Xylarion cruzou os confins do espaço para invadir o Sistema Solar!",
-        "boss_cyber_titan_badge": "ALIENÍGENA • DREADNOUGHT",
-        "boss_cyber_titan_lore": "Comandante supremo da vanguarda invasora, mestre dos canhões de plasma estelar.",
-        "boss_feral_apex_name": "Zorkon, o Conquistador de Órbitas",
-        "boss_feral_apex_title": "Mestre do Enxame Biomecânico",
-        "boss_feral_apex_scenario": "Órbita de Netuno",
-        "boss_feral_apex_scenario_desc": "As naves bio-orgânicas de Zorkon cercam os gigantes gasosos do Sistema Solar!",
-        "boss_feral_apex_badge": "ALIENÍGENA • ENXAME",
-        "boss_feral_apex_lore": "Comanda colmeias biomecânicas alienígenas capazes de devorar frotas espaciais.",
-        "boss_arcane_chimera_name": "Véspera, a Imperatriz de Antimatéria",
-        "boss_arcane_chimera_title": "Soberana Psiônica Extraterrestre",
-        "boss_arcane_chimera_scenario": "Anéis de Saturno",
-        "boss_arcane_chimera_scenario_desc": "Véspera utiliza canhões de antimatéria para romper o campo gravitacional do Sistema Solar!",
-        "boss_arcane_chimera_badge": "ALIENÍGENA • PSIÔNICA",
-        "boss_arcane_chimera_lore": "Manipula energia escura e tempestades psiônicas intergalácticas.",
-        "boss_abyssal_leviathan_name": "Nebulor, o Arauto da Matéria Escura",
-        "boss_abyssal_leviathan_title": "Entidade Cósmica Invasora",
-        "boss_abyssal_leviathan_scenario": "Órbita de Júpiter",
-        "boss_abyssal_leviathan_scenario_desc": "Nebulor distorce a magnetosfera de Júpiter preparando o ataque ao planeta Terra!",
-        "boss_abyssal_leviathan_badge": "ALIENÍGENA • SOMBRA",
-        "boss_abyssal_leviathan_lore": "Manipula anomalias gravitacionais e dobras no tecido do espaço-tempo.",
-        "boss_cosmic_chronos_name": "Xenor, a Mente Suprema Intergaláctica",
-        "boss_cosmic_chronos_title": "Consciência Central da Invasão",
-        "boss_cosmic_chronos_scenario": "Órbita Lunar Terrestre",
-        "boss_cosmic_chronos_scenario_desc": "A colossal nave-mãe alienígena de Xenor se posiciona para a invasão final da Terra!",
-        "boss_cosmic_chronos_badge": "ALIENÍGENA • NAVE-MÃE",
-        "boss_cosmic_chronos_lore": "O cérebro alienígena supremo que orquestra a grande invasão do Sistema Solar.",
-        "boss_magma_vulcanus_name": "Kragthor, o Destruidor de Frotas",
-        "boss_magma_vulcanus_title": "General Belicista Alienígena",
-        "boss_magma_vulcanus_scenario": "Cinturão de Asteroides",
-        "boss_magma_vulcanus_scenario_desc": "O encouraçado colossal de Kragthor bombardeia asteroides para abrir caminho até a Terra!",
-        "boss_magma_vulcanus_badge": "ALIENÍGENA • BELICISTA",
-        "boss_magma_vulcanus_lore": "Guerreiro blindado invasor, impiedoso com armas pesadas de desintegração cósmica.",
-        "btn_continue": "Continuar Jogando",
-        "btn_new_game": "Novo Jogo",
-        "btn_new_game_desc": "Comece do zero com moedas compartilhadas",
-        "btn_save_slots": "Slots de Salvamento",
-        "slots_title": "Slots de Salvamento",
-        "slots_sub": "Gerencie seu progresso ou comece um novo jogo",
-        "lbl_highscore": "RECORDE",
-        "lbl_shared_coins": "MOEDAS",
-        "lbl_highcoins": "MAX MOEDAS",
-        "slot_number": "Slot {slot}",
-        "slot_in_progress": "Em Andamento",
-        "slot_empty": "Vazio",
-        "slot_empty_desc": "Nenhuma partida salva. Comece do zero com suas moedas compartilhadas!",
-        "slot_btn_continue": "Continuar",
-        "slot_btn_new": "Novo Jogo",
-        "slot_btn_delete": "Excluir",
-        "slot_confirm_overwrite": "Sobrescrever o Slot {slot} e iniciar um novo jogo? O progresso existente neste slot será substituído.",
-        "slot_confirm_delete": "Tem certeza que deseja excluir a partida salva no Slot {slot}?",
-        "fb_game_saved": "Progresso da partida salvo!",
-        "fb_game_resumed": "Partida retomada da Fase {phase}!",
-        "slots_shared_wallet": "Banco de Moedas Compartilhadas",
-        "slots_close": "Fechar",
-        "slot_phase_score": "Fase {phase} • {score} pts",
-        "slot_date_fmt": "Salvo: {date}",
-        "confirm_new_game_title": "Iniciar Novo Jogo?",
-        "confirm_new_game_desc": "Você possui uma partida salva em andamento. Iniciar um novo jogo irá sobrescrever o Slot {slot}. Suas moedas compartilhadas continuarão disponíveis!",
-        "settings_finger_guide": "Guia Visual de Dedos",
-        "settings_finger_guide_always": "Sempre Ativo (Padrão)",
-        "settings_finger_guide_training": "Modo Treino",
-        "settings_finger_guide_off": "Desativado",
-        "vk_space": "ESPAÇO",
-        "finger_guide_title": "Guia de Dedos",
-        "finger_ready": "Posição de Repouso",
-        "finger_space_bar": "Espaço",
-        "hand_left": "Mão Esquerda",
-        "hand_right": "Mão Direita",
-        "hand_both": "Ambas as Mãos",
-        "finger_l_pinky": "Mindinho Esquerdo",
-        "finger_l_ring": "Anelar Esquerdo",
-        "finger_l_middle": "Médio Esquerdo",
-        "finger_l_index": "Indicador Esquerdo",
-        "finger_l_thumb": "Polegar Esquerdo",
-        "finger_r_thumb": "Polegar Direito",
-        "finger_r_index": "Indicador Direito",
-        "finger_r_middle": "Médio Direito",
-        "finger_r_ring": "Anelar Direito",
-        "finger_r_pinky": "Mindinho Direito",
-        "finger_thumb": "Polegar",
-        "footer_privacy": "Política de Privacidade",
-        "btn_privacy": "Privacidade",
-        "settings_privacy": "Privacidade e Dados",
-        "settings_view_privacy": "Ver Política",
-        "privacy_title": "Política de Privacidade & Transparência",
-        "privacy_sub": "Tratamento de dados, armazenamento local no navegador e infraestrutura do GitHub Pages",
-        "privacy_btn_open_page": "Abrir Página Completa",
-        "btn_close_privacy": "Entendido",
-        "privacy_badge_nocollect": "Zero Coleta de Dados",
-        "privacy_badge_local": "100% Armazenamento Local",
-        "privacy_badge_github": "Hospedagem GitHub Pages",
-        "privacy_badge_lgpd": "Conformidade LGPD & ANPD",
-        "privacy_sec_collection_title": "1. Zero Coleta de Dados Pessoais pelo Digitinho Galaxy",
-        "privacy_sec_collection_desc": "O Digitinho Galaxy é um jogo web estático executado integralmente no navegador do jogador (client-side). O projeto não possui servidores de backend próprios, banco de dados remoto, formulários de cadastro ou sistema de contas de usuário. Nenhum dado pessoal (como nome, e-mail, documento ou telefone) é solicitado, coletado, processado ou comercializado pelo desenvolvedor.",
-        "privacy_sec_storage_title": "2. Armazenamento Local no Dispositivo (HTML5 LocalStorage)",
-        "privacy_sec_storage_desc": "Todo o progresso do jogo — incluindo pontuação, slots de salvamento, palavras desbloqueadas na Biblioteca, conquistas obtidas, preferências sonoras, dificuldade e tema visual — é armazenado exclusivamente no armazenamento local do seu próprio navegador (localStorage). Essas informações jamais saem do seu aparelho e podem ser apagadas permanentemente a qualquer momento limpando os dados do navegador ou excluindo slots no próprio jogo.",
-        "privacy_sec_hosting_title": "3. Infraestrutura de Hospedagem e Registros Técnicos do GitHub Pages",
-        "privacy_sec_hosting_desc": "O Digitinho Galaxy é hospedado como um site estático na infraestrutura do GitHub Pages (operada pela GitHub, Inc. / Microsoft). Ao acessar a página, os servidores do GitHub podem processar e registrar automaticamente metadados técnicos de conexão — tais como endereço IP, data/hora da requisição, navegador (user-agent) e URL solicitada — para fins estritos de segurança, manutenção de infraestrutura e prevenção de abusos, em conformidade com a Declaração de Privacidade do GitHub. O desenvolvedor do Digitinho Galaxy não tem acesso a registros brutos de IPs nem utiliza esses dados para identificar ou rastrear jogadores.",
-        "privacy_sec_cookies_title": "4. Zero Cookies de Rastreamento ou Analítica de Terceiros",
-        "privacy_sec_cookies_desc": "O jogo não utiliza cookies de publicidade, Google Analytics, pixels de redes sociais ou ferramentas de telemetria e perfilamento comportamental de terceiros. A experiência é 100% voltada ao treino de digitação e diversão arcade.",
-        "privacy_sec_lgpd_title": "5. Conformidade com a LGPD (Lei nº 13.709/2018) e Diretrizes da ANPD",
-        "privacy_sec_lgpd_desc": "Em observância à Lei Geral de Proteção de Dados Pessoais do Brasil (Lei nº 13.709/2018 - LGPD) e às orientações da Autoridade Nacional de Proteção de Dados (ANPD), o projeto adota estritamente os princípios de finalidade, necessidade, não discriminação e minimização de dados. Como o desenvolvedor não realiza tratamento de dados pessoais dos jogadores, nenhuma informação pessoal é comercializada, compartilhada ou transferida a terceiros.",
-        "privacy_sec_opensource_title": "6. Código Aberto, Transparência e Auditoria",
-        "privacy_sec_opensource_desc": "O Digitinho Galaxy é um projeto de código aberto disponibilizado sob a Licença MIT. Qualquer pessoa pode inspecionar, auditar e verificar o código-fonte integral no GitHub para atestar a ausência total de rastreadores ocultos, telemetria ou coleta remota de dados.",
-        "privacy_sec_links_title": "Fontes Oficiais e Referências Normativas",
-        "privacy_link_github": "GitHub Pages: Funcionamento e Registro de IPs",
-        "privacy_link_anpd": "ANPD: Conceito de Dado Pessoal e Agentes de Tratamento",
-        "privacy_link_lgpd": "LGPD — Lei Geral de Proteção de Dados (Lei nº 13.709/2018)",
-        "privacy_back_game": "Voltar ao Jogo",
-        "privacy_updated": "Última atualização: Outubro de 2026 • Digitinho Galaxy Space Typing Game",
-        "privacy_page_title": "Digitinho Galaxy — Política de Privacidade & Transparência",
-        "privacy_overview_title": "Resumo em Destaque",
-        "privacy_contact_title": "Dúvidas e Contato",
-        "privacy_contact_desc": "Como este é um projeto de código aberto sem servidores ou coleta de dados, dúvidas ou sugestões podem ser encaminhadas diretamente através do repositório no GitHub abrindo uma Issue.",
-        "boss_alien_xylarion_name": "Xylarion, o Soberano do Vácuo",
-        "boss_alien_xylarion_title": "Comandante da Vanguarda Alienígena",
-        "boss_alien_xylarion_scenario": "Cinturão de Kuiper (Entrada do Sistema Solar)",
-        "boss_alien_xylarion_scenario_desc": "A armada alienígena de Xylarion cruzou os confins do espaço para invadir o Sistema Solar!",
-        "boss_alien_xylarion_badge": "ALIENÍGENA • DREADNOUGHT",
-        "boss_alien_xylarion_lore": "Comandante supremo da vanguarda invasora, mestre dos canhões de plasma estelar.",
-        "boss_alien_zorkon_name": "Zorkon, o Conquistador de Órbitas",
-        "boss_alien_zorkon_title": "Mestre do Enxame Biomecânico",
-        "boss_alien_zorkon_scenario": "Órbita de Netuno",
-        "boss_alien_zorkon_scenario_desc": "As naves bio-orgânicas de Zorkon cercam os gigantes gasosos do Sistema Solar!",
-        "boss_alien_zorkon_badge": "ALIENÍGENA • ENXAME",
-        "boss_alien_zorkon_lore": "Comanda colmeias biomecânicas alienígenas capazes de devorar frotas espaciais.",
-        "boss_alien_vespera_name": "Véspera, a Imperatriz de Antimatéria",
-        "boss_alien_vespera_title": "Soberana Psiônica Extraterrestre",
-        "boss_alien_vespera_scenario": "Anéis de Saturno",
-        "boss_alien_vespera_scenario_desc": "Véspera utiliza canhões de antimatéria para romper o campo gravitacional do Sistema Solar!",
-        "boss_alien_vespera_badge": "ALIENÍGENA • PSIÔNICA",
-        "boss_alien_vespera_lore": "Manipula energia escura e tempestades psiônicas intergalácticas.",
-        "boss_alien_kragthor_name": "Kragthor, o Destruidor de Frotas",
-        "boss_alien_kragthor_title": "General Belicista Alienígena",
-        "boss_alien_kragthor_scenario": "Cinturão de Asteroides",
-        "boss_alien_kragthor_scenario_desc": "O encouraçado colossal de Kragthor bombardeia asteroides para abrir caminho até a Terra!",
-        "boss_alien_kragthor_badge": "ALIENÍGENA • BELICISTA",
-        "boss_alien_kragthor_lore": "Guerreiro blindado invasor, impiedoso com armas pesadas de desintegração cósmica.",
-        "boss_alien_nebulor_name": "Nebulor, o Arauto da Matéria Escura",
-        "boss_alien_nebulor_title": "Entidade Cósmica Invasora",
-        "boss_alien_nebulor_scenario": "Órbita de Júpiter",
-        "boss_alien_nebulor_scenario_desc": "Nebulor distorce a magnetosfera de Júpiter preparando o ataque ao planeta Terra!",
-        "boss_alien_nebulor_badge": "ALIENÍGENA • SOMBRA",
-        "boss_alien_nebulor_lore": "Manipula anomalias gravitacionais e dobras no tecido do espaço-tempo.",
-        "boss_alien_xenor_name": "Xenor, a Mente Suprema Intergaláctica",
-        "boss_alien_xenor_title": "Consciência Central da Invasão",
-        "boss_alien_xenor_scenario": "Órbita Lunar Terrestre",
-        "boss_alien_xenor_scenario_desc": "A colossal nave-mãe alienígena de Xenor se posiciona para a invasão final da Terra!",
-        "boss_alien_xenor_badge": "ALIENÍGENA • NAVE-MÃE",
-        "boss_alien_xenor_lore": "O cérebro alienígena supremo que orquestra a grande invasão do Sistema Solar."
+  "ui": {
+    "app_title": "Digitinho Galaxy.",
+    "app_subtitle": "Domine o teclado estelar e proteja a Terra antes que os corpos celestes atinjam a atmosfera",
+    "rules_title": "Como Jogar & Regras Rúnicas",
+    "rule_typing": "<strong>Digitação no Teclado:</strong> Digite letras, sílabas e palavras antes que atinjam o fundo da tela",
+    "rule_wildcard": "<strong>Palavras Coringa:</strong> Destroem todos os rúnicos na tela simultaneamente e absorvem todos os seus pontos",
+    "rule_spells": "<strong>Teclas 1–8 (ou clique):</strong> Ativam habilidades de desaceleração, congelar, espaçamento, escudo e poder",
+    "rule_combo": "<strong>Combos & Modo Fúria:</strong> Sequências de acertos sem erros multiplicam sua pontuação em até 8×",
+    "rule_danger": "<strong>Vidas & Perigo:</strong> Rúnicos no fundo piscam em alerta vermelho e custam 1 vida ao cair (3 vidas no Clássico)",
+    "btn_start": "Jogar",
+    "btn_training": "Modo Treinamento (Linhas do Teclado)",
+    "btn_zen": "Modo Zen (Sem Vidas)",
+    "btn_timeattack": "Contra o Tempo (60s)",
+    "btn_library": "Biblioteca",
+    "btn_achievements": "Conquistas",
+    "btn_settings": "Configurações",
+    "btn_shop": "Loja Cósmica",
+    "btn_skills_inventory": "Habilidades",
+    "skills_inventory_title": "Arsenal Cósmico",
+    "skills_inventory_sub": "Suas habilidades permanentes adquiridas na Loja",
+    "skills_inventory_empty": "Nenhuma habilidade adquirida ainda. Visite a Loja Cósmica para reforçar seu arsenal!",
+    "skills_inventory_stock": "Em estoque: ×{count}",
+    "start_record_label": "RECORDE:",
+    "start_high_score": "RECORDE: {score}",
+    "shop_btn_reroll": "Sortear Ofertas",
+    "shop_reroll_cost": "{cost}",
+    "hud_infinite_mode": "ARCADE INFINITO",
+    "hud_coin_farm_progress": "Próxima Moeda: {current} / {target} palavras",
+    "badge_new_label": "NOVO",
+    "badge_new_word": "Nova palavra na partida",
+    "fb_coin_farmed": "+1 Moeda Cósmica farmada!",
+    "start_game_modes": "Modos de Jogo",
+    "btn_classic_short": "Clássico",
+    "btn_training_short": "Treinamento",
+    "btn_training_desc": "Linhas do teclado",
+    "btn_zen_short": "Modo Zen",
+    "btn_zen_desc": "Sem perda de vidas",
+    "btn_timeattack_short": "Contra o Tempo",
+    "btn_timeattack_desc": "Corrida de 60s",
+    "btn_rules": "Como Jogar",
+    "btn_close_rules": "Entendi",
+    "hud_phase": "FASE",
+    "hud_zen_badge": "Modo Zen: sem perda de vidas",
+    "hud_training_badge": "Modo Treinamento: sem perda de vidas",
+    "hud_training_lesson": "Lição",
+    "hud_zen_lbl": "MODO ZEN",
+    "hud_training_lbl": "TREINO",
+    "hud_free": "Livre",
+    "hud_zen_pill": "Sem perda de vidas",
+    "hud_zen_pill_title": "No Modo Zen você pratica livremente sem perda de vidas",
+    "hud_training_pill_title": "No Modo Treinamento você desenvolve precisão e memória muscular sem perder vidas",
+    "hud_lives": "VIDAS",
+    "hud_accuracy": "PRECISÃO",
+    "hud_wpm": "PPM",
+    "hud_combo": "COMBO",
+    "hud_upcoming": "PRÓXIMOS",
+    "hud_new_word_badge": "Palavra Inédita",
+    "hud_spells": "HABILIDADES",
+    "hud_active": "ATIVO",
+    "hud_sec": "s",
+    "pause_title": "Jogo Pausado",
+    "pause_hint": "Pressione <kbd>ESC</kbd> para continuar",
+    "pause_resume": "Continuar",
+    "pause_library": "Biblioteca",
+    "pause_achievements": "Conquistas",
+    "pause_settings": "Configurações",
+    "pause_training_menu": "Voltar ao Menu de Treino",
+    "pause_main_menu": "Voltar pro Menu Principal",
+    "confirm_exit_to_menu": "As moedas ganhas serão mantidas, mas as habilidades recebidas durante a partida serão perdidas.",
+    "confirm_exit_title": "Voltar ao Menu Principal?",
+    "confirm_exit_cancel": "Continuar Jogando",
+    "confirm_exit_confirm": "Sim, Voltar ao Menu",
+    "countdown_hint": "Prepare os dedos!",
+    "countdown_go": "VAI!",
+    "modal_performance": "DESEMPENHO",
+    "modal_phase_complete": "Fase {phase} Completa!",
+    "modal_press_continue": "Pressione ENTER ou Espaço para continuar",
+    "modal_btn_continue": "Continuar ➔",
+    "modal_btn_shop": "Ir para a Loja",
+    "modal_stat_score": "Pontos",
+    "modal_stat_accuracy": "Precisão",
+    "modal_stat_wpm": "PPM",
+    "modal_stat_combo": "Maior Combo",
+    "modal_stat_discovered": "Novas Palavras Descobertas",
+    "go_title": "Fim de Jogo",
+    "go_sub": "Sua jornada rúnica chegou ao fim",
+    "go_score": "Pontuação da Partida",
+    "go_best_score": "Recorde",
+    "go_new_record_tag": "NOVO RECORDE!",
+    "go_final_score": "Pontuação Final",
+    "go_phase_reached": "Fase Alcançada",
+    "go_best_combo": "Maior Combo",
+    "go_avg_accuracy": "Precisão",
+    "go_coins_earned": "Moedas Totais Recebidas",
+    "go_hits_errors": "Acertos / Erros",
+    "go_discovered_words": "Palavras Descobertas",
+    "go_use_continue": "Usar Continue ({n})",
+    "go_revive_continue": "Reviver & Continuar ({n})",
+    "go_play_again": "Jogar Novamente",
+    "go_main_menu": "Menu Principal",
+    "victory_title": "Vitória Épica!",
+    "victory_desc": "Parabéns, você dominou com maestria o teclado rúnico!",
+    "victory_play_again": "Jogar Novamente",
+    "shop_title": "Loja de Habilidades",
+    "shop_sub": "Adquira habilidades permanentes para suas jornadas cósmicas",
+    "shop_points": "Seus Pontos:",
+    "shop_coins": "Suas Moedas:",
+    "shop_btn_buy": "Comprar",
+    "shop_btn_owned": "Comprado",
+    "shop_available": "Disponível",
+    "shop_btn_close": "Fechar",
+    "shop_confirm_exit_title": "Sair da Loja?",
+    "shop_confirm_exit_desc": "Tem certeza que deseja sair da loja?",
+    "shop_confirm_stay": "Continuar na Loja",
+    "shop_confirm_leave": "Voltar ao Menu Principal",
+    "shop_insufficient_pts": "Pontos insuficientes!",
+    "shop_insufficient_coins": "Moedas insuficientes!",
+    "skill_name_freezer": "Congelar",
+    "skill_desc_freezer": "Congela todos os rúnicos na esteira por 10s a cada 2 minutos",
+    "skill_name_bomb": "Bomba",
+    "skill_desc_bomb": "Detona uma explosão cósmica na tela a cada 90s destruindo rúnicos em área",
+    "skill_name_shield": "Imunidade",
+    "skill_desc_shield": "Protege contra rúnicos caídos e erros de digitação por 10s a cada 2 minutos",
+    "skill_name_vortex": "Vórtice",
+    "skill_desc_vortex": "Um buraco se abre no centro da tela e suga todos os rúnicos na tela a cada 3 minutos",
+    "skill_name_slowdown": "Desaceleração",
+    "skill_desc_slowdown": "Reduz a velocidade de queda dos rúnicos em 50% por 15s a cada 1 minuto",
+    "skill_name_haste": "Pontos em Dobro",
+    "skill_desc_haste": "Duplica o ganho de pontos por 10s a cada 30s",
+    "skill_name_dilation": "Espaçamento",
+    "skill_desc_dilation": "Aumenta o espaçamento e intervalo entre rúnicos em até {max}",
+    "skill_name_autodestroy": "Eco Cósmico",
+    "skill_desc_autodestroy": "Destrói automaticamente palavras já aprendidas naquela run a cada 1 minuto por 10s",
+    "boss_reward_extralife": "+1 Vida",
+    "boss_reward_extralife_desc": "Recupera ou adiciona 1 vida para a partida atual",
+    "boss_reward_continue": "Ficha Continue",
+    "boss_reward_continue_desc": "Permite reviver imediatamente caso perca todas as vidas",
+    "boss_reward_coins_100": "+100 Moedas",
+    "boss_reward_coins_100_desc": "Receba +100 moedas cósmicas instantâneas no seu banco",
+    "hud_level": "NÍVEL",
+    "hud_run_perks": "HABILIDADES ATIVAS",
+    "hud_perks_empty": "Nenhuma habilidade adquirida ainda.<br/>Suba de nível para desbloquear!",
+    "levelup_title": "SUBIDA DE NÍVEL!",
+    "levelup_sub": "Você evoluiu para o Nível {level}!",
+    "levelup_prompt": "Escolha 1 habilidade para ativar nesta corrida:",
+    "levelup_btn_pick": "Escolher",
+    "fb_dilation_upgraded": "Espaçamento aprimorado para até {max}!",
+    "lib_title": "Biblioteca de Rúnicos",
+    "lib_sub": "Coleção de vocábulos descobertos",
+    "lib_discovered": "Palavras Descobertas",
+    "lib_locked": "Bloqueada",
+    "lib_typed": "digitada {count}×",
+    "lib_not_typed": "ainda não digitada",
+    "lib_btn_close": "Fechar",
+    "ach_title": "Conquistas & Selos",
+    "ach_sub": "Suas marcas de velocidade, precisão e maestria",
+    "ach_counter": "{unlocked} / {total} Conquistadas",
+    "ach_btn_close": "Fechar",
+    "ach_status_unlocked": "✓ Conquistado",
+    "ach_status_locked": "Bloqueado",
+    "ach_goal_reached": "Meta atingida",
+    "ach_unit_words": "palavras",
+    "ach_unit_streak": "acertos",
+    "ach_unit_combo": "combo",
+    "ach_dedo_veloz_name": "Dedo Veloz",
+    "ach_dedo_veloz_desc": "Alcance 60 PPM.",
+    "ach_cirurgico_name": "Cirúrgico",
+    "ach_cirurgico_desc": "Conclua qualquer fase com 100% de precisão.",
+    "ach_colecionador_name": "Colecionador",
+    "ach_colecionador_desc": "Desbloqueie todas as palavras na Biblioteca.",
+    "ach_mestre_combo_name": "Mestre do Combo",
+    "ach_mestre_combo_desc": "Alcance 30 acertos consecutivos.",
+    "ach_modo_furia_name": "Modo Fúria",
+    "ach_modo_furia_desc": "Ative o Modo Fúria com 15 acertos em sequência.",
+    "ach_mestre_tipo_name": "Mestre da Tipografia",
+    "ach_mestre_tipo_desc": "100 Palavras Completas.",
+    "settings_title": "Configurações",
+    "settings_sub": "Ajustes da partida e interface",
+    "settings_sound": "Efeitos Sonoros",
+    "settings_sound_on": "Ligado",
+    "settings_sound_off": "Mudo",
+    "settings_queue": "Posição da Fila",
+    "settings_queue_top": "Topo",
+    "settings_queue_bottom": "Base",
+    "settings_theme": "Tema da Interface",
+    "settings_theme_dark": "Escuro",
+    "settings_theme_light": "Claro",
+    "settings_boss": "Batalhas de Chefão",
+    "settings_boss_on": "A cada 8 Fases (Ativo)",
+    "settings_boss_off": "Desativado",
+    "settings_test_boss": "Testar Batalha",
+    "settings_face_boss": "Enfrentar Chefão",
+    "settings_lang": "Idioma",
+    "settings_difficulty": "Dificuldade",
+    "settings_diff_locked_match": "Não é possível alterar a dificuldade durante uma partida",
+    "diff_easy": "Fácil",
+    "diff_normal": "Médio",
+    "diff_hard": "Difícil",
+    "diff_desc_easy": "0.5× de velocidade • Sem aceleração por erro • Sem perda de progresso • 5 vidas",
+    "diff_desc_normal": "1.0× de velocidade • Sem aceleração por erro • Perda de progresso normal • 3 vidas",
+    "diff_desc_hard": "1.5× de velocidade • +0.05× por erro • Perda de progresso normal • 3 vidas",
+    "settings_cat_general": "Geral & Interface",
+    "settings_cat_boss": "Batalhas de Chefão",
+    "settings_cat_about": "Sobre o App",
+    "settings_version": "Versão Atual",
+    "settings_author": "Autor",
+    "settings_btn_check_update": "Verificar",
+    "settings_update_latest": "Atualizado",
+    "update_available_title": "Uma nova atualização disponível!",
+    "update_available_sub": "Clique para atualizar o cache e carregar a versão mais recente",
+    "update_btn_action": "Atualizar",
+    "update_applying": "Atualizando...",
+    "settings_btn_back": "Voltar",
+    "training_title": "Treinamento: Linhas do Teclado",
+    "training_sub": "Desenvolva memória muscular sem olhar para as teclas",
+    "training_notice": "Neste modo didático você <strong>não perde vidas</strong>. Erros e rúnicos caídos reduzem sua taxa de <strong>Precisão %</strong> e <strong>PPM</strong>.",
+    "training_btn_back": "Voltar",
+    "training_btn_start": "Começar Treino (3 Lições) →",
+    "training_btn_again": "Treinar Novamente",
+    "training_completed": "Concluído (Maestria)",
+    "training_pending": "3 Lições",
+    "training_record_acc": "Recorde: {acc}% Precisão",
+    "boss_defeated_title": "CHEFÃO DERROTADO!",
+    "boss_defeated_sub": "Você decifrou com maestria os 3 enigmas rúnicos.",
+    "boss_defeated_prompt": "Escolha 1 habilidade arcana como recompensa:",
+    "boss_btn_pick": "Obter",
+    "boss_pick_skill": "Obter",
+    "boss_default_name": "Chefão",
+    "fb_combo_broken": "Combo Quebrado!",
+    "fb_fury_activated": "MODO FÚRIA ATIVADO! PONTOS EM DOBRO!",
+    "fb_bomb_activated": "BOMBA ATIVADA (10s)!",
+    "fb_bomb_expired": "Bomba expirou",
+    "fb_bomb_explosion": "Explosão ({lines} linhas)! +{pts}",
+    "fb_freezer_activated": "CONGELAMENTO ATIVADO (10s)!",
+    "fb_freezer_expired": "Descongelado!",
+    "fb_shield_activated": "IMUNIDADE ATIVA (10s)!",
+    "fb_shield_expired": "Imunidade expirou",
+    "fb_shield_blocked": "Dano bloqueado pela Imunidade!",
+    "fb_shield_error_protected": "Erro protegido pela Imunidade!",
+    "fb_vortex_activated": "VÓRTICE ATIVO (10s)!",
+    "fb_vortex_expired": "Vórtice expirou",
+    "fb_slowdown_activated": "DESACELERAÇÃO ATIVADA (15s)!",
+    "fb_slowdown_expired": "Desaceleração encerrou",
+    "fb_slow_activated": "DESACELERAÇÃO ATIVADA (15s)!",
+    "fb_slow_expired": "Desaceleração encerrou",
+    "fb_haste_activated": "PONTOS EM DOBRO ATIVADO (15s)!",
+    "fb_haste_expired": "Pontos em dobro expirou",
+    "fb_dilation_activated": "ESPAÇAMENTO AUMENTADO (45s)!",
+    "fb_dilation_expired": "Espaçamento encerrou",
+    "fb_speedlock_activated": "VELOCIDADE TRAVADA EM 1.0× (60s)!",
+    "fb_speedlock_expired": "Trava de velocidade encerrou",
+    "fb_autodestroy_activated": "ECO CÓSMICO ATIVADO (60s)!",
+    "fb_autodestroy_expired": "Eco cósmico expirou",
+    "fb_autodestroy_shattered": "⚡ Auto-destruído: {word}! +{pts}",
+    "fb_wildcard": "CORINGA! Todos os rúnicos absorvidos! +{pts}",
+    "fb_life_recovered": "+1 Vida Recuperada!",
+    "fb_perfect": "PERFEITO!",
+    "hud_performance": "PAINEL DE DESEMPENHO",
+    "hud_total_score": "PONTOS TOTAIS",
+    "hud_hits": "ACERTOS",
+    "hud_errors": "ERROS",
+    "hud_discovered_words": "PALAVRAS DESCOBERTAS",
+    "hud_view_all": "Ver todas",
+    "hud_spells_hint": "Compre na loja<br/>ou complete palavras",
+    "hud_activate_kb": "ATIVAR (TECLADO)",
+    "hud_key_label": "Tecla",
+    "hud_max_phase": "FASE MÁXIMA",
+    "modal_unlocked_words": "Palavras desbloqueadas",
+    "modal_btn_next_phase": "Próxima Fase →",
+    "modal_btn_back_training": "Voltar ao Menu de Treino",
+    "shop_note": "O preço aumenta a cada compra",
+    "shop_btn_continue": "Continuar Jogando",
+    "btn_back_to_game": "Voltar ao Jogo",
+    "app_loading": "Carregando dados rúnicos...",
+    "fb_runic_dropped_zen": "⚠️ Rúnico caiu (- precisão)",
+    "fb_runic_dropped": "💔 Rúnico caiu!",
+    "fb_time_up": "⏱️ Tempo Esgotado!",
+    "fb_boss_enigma_dropped": "💥 O enigma caiu! O Chefão atacou!",
+    "fb_ice_cleared": "❄️ Tela limpa — gelo desligado!",
+    "fb_error_letter": "❌ Letra errada!",
+    "fb_error": "❌ Erro",
+    "fb_wildcard_clean": "💥 CORINGA! LIMPEZA TOTAL!",
+    "fb_training_completed": "🎉 Parabéns! Você concluiu todos os mundos de treino!",
+    "fb_continue_used": "🪙 Continue usado! Continuando fase...",
+    "fb_permanent_life": "+1 Vida permanente!",
+    "fb_continue_obtained": "🪙 +1 Ficha Continue obtida!",
+    "shop_all_words_unlocked": "Todas as palavras já foram descobertas!",
+    "hud_skills_empty_hint": "Compre na loja<br/>ou complete palavras <strong>⚡</strong>",
+    "training_lesson_1_title": "Lição 1: Reconhecimento de Teclas",
+    "training_lesson_2_title": "Lição 2: Alternância de Dedos",
+    "training_lesson_3_title": "Lição 3: Desafio de Maestria",
+    "training_lesson_1_name": "Teclas Base",
+    "training_lesson_2_name": "Alternância",
+    "training_lesson_3_name": "Desafio Final",
+    "training_next_obj_2": "Próximo objetivo: Combinar teclas em pequenas palavras e alternância entre as mãos.",
+    "training_next_obj_3": "Próximo objetivo: Desafio final de fluidez e maestria com vocábulos completos!",
+    "training_new_record": "NOVO RECORDE!",
+    "training_world_mastered": "MUNDO DOMINADO",
+    "training_mastery_completed": "{world} — Maestria Concluída!",
+    "training_lesson_completed": "{world} — {lesson} Concluída!",
+    "training_rank_s": "PRECISÃO CIRÚRGICA",
+    "training_rank_a": "EXCELENTE FLUIDEZ",
+    "training_rank_b": "BOM CONTROLE",
+    "training_rank_c": "PRATICAR MAIS",
+    "training_stat_world_progress": "Progresso do Mundo",
+    "training_stat_lesson_done": "Lição {lesson} de 3 Concluída",
+    "training_stat_accuracy_rate": "Taxa de Precisão",
+    "training_stat_status": "Status do Treinamento",
+    "training_stat_completed": "100% Concluído (3/3 Lições)",
+    "training_stat_keys": "Teclas Dominadas",
+    "training_stat_accuracy": "Precisão Desta Partida",
+    "training_stat_best_record": "Melhor Recorde (Precisão)",
+    "training_stat_speed": "Velocidade Real (PPM)",
+    "training_stat_hits_errors": "Acertos / Erros",
+    "training_hits_errs_val": "{hits} acertos / {errors} erros",
+    "training_btn_next_world": "Avançar para o {world} →",
+    "training_btn_finish_all": "Concluir Todos os Treinos! →",
+    "training_btn_next_lesson": "Avançar para Lição {lesson} ({runics} rúnicos) →",
+    "fb_boss_defeated": "{boss} DERROTADO! +350 MOEDAS!",
+    "modal_phase_pts": "Pontos Conquistados na Fase",
+    "modal_acc_bonus": "Bônus de Precisão ({acc}%)",
+    "modal_penalty": "Erros (penalidade)",
+    "modal_net_pts": "Soma Adicionada",
+    "modal_total_pts": "Pontuação Total",
+    "modal_combo_bonus": "Bônus de Combo Máximo ({combo}×)",
+    "modal_phase_total_pts": "Pontos Totais Recebidos",
+    "modal_section_score": "Resumo da Pontuação",
+    "modal_section_coins": "Moedas Conquistadas",
+    "modal_coins_completion": "Fase Concluída",
+    "modal_boss_bonus": "Bônus do Chefão",
+    "modal_coins_precision": "Bônus de Precisão 100%",
+    "modal_coins_streak": "Sequência Sem Falhas ({streak} fases)",
+    "modal_coins_phase_total": "Total de Moedas na Fase",
+    "modal_coins_balance": "Saldo Total de Moedas",
+    "hud_coins": "MOEDAS",
+    "hud_boss_hp": "VIDA DO CHEFE",
+    "fb_skill_acquired": "⚡ Habilidade: {skill}!",
+    "fb_vortex_devour": "🌀 Vórtice devorou {text}! +{pts}",
+    "fb_enigma_solved": "💥 ENIGMA DECIFRADO! -1 PONTO DE VIDA! (+{pts}pts)",
+    "fb_reward_granted": "Recompensa concedida: {reward}!",
+    "queue_top": "Topo",
+    "queue_bottom": "Base",
+    "queue_toggle_to_bottom": "Fila no Topo (clique para mover para a base)",
+    "queue_toggle_to_top": "Fila na Base (clique para mover para o topo)",
+    "theme_switch_to_light": "Mudar para tema claro",
+    "theme_switch_to_dark": "Mudar para tema escuro",
+    "boss_enigma_badge": "📜 ENIGMA {num} DE {total} • {scenario}",
+    "boss_enigma_letters": "{count} LETRAS",
+    "boss_enigma_queue": "ENIGMA {num} DE 3",
+    "boss_level_tag": " (Nv. {level})",
+    "boss_cyber_titan_name": "Xylarion, o Soberano do Vácuo",
+    "boss_cyber_titan_title": "Comandante da Vanguarda Alienígena",
+    "boss_cyber_titan_scenario": "Cinturão de Kuiper (Entrada do Sistema Solar)",
+    "boss_cyber_titan_scenario_desc": "A armada alienígena de Xylarion cruzou os confins do espaço para invadir o Sistema Solar!",
+    "boss_cyber_titan_badge": "ALIENÍGENA • DREADNOUGHT",
+    "boss_cyber_titan_lore": "Comandante supremo da vanguarda invasora, mestre dos canhões de plasma estelar.",
+    "boss_feral_apex_name": "Zorkon, o Conquistador de Órbitas",
+    "boss_feral_apex_title": "Mestre do Enxame Biomecânico",
+    "boss_feral_apex_scenario": "Órbita de Netuno",
+    "boss_feral_apex_scenario_desc": "As naves bio-orgânicas de Zorkon cercam os gigantes gasosos do Sistema Solar!",
+    "boss_feral_apex_badge": "ALIENÍGENA • ENXAME",
+    "boss_feral_apex_lore": "Comanda colmeias biomecânicas alienígenas capazes de devorar frotas espaciais.",
+    "boss_arcane_chimera_name": "Véspera, a Imperatriz de Antimatéria",
+    "boss_arcane_chimera_title": "Soberana Psiônica Extraterrestre",
+    "boss_arcane_chimera_scenario": "Anéis de Saturno",
+    "boss_arcane_chimera_scenario_desc": "Véspera utiliza canhões de antimatéria para romper o campo gravitacional do Sistema Solar!",
+    "boss_arcane_chimera_badge": "ALIENÍGENA • PSIÔNICA",
+    "boss_arcane_chimera_lore": "Manipula energia escura e tempestades psiônicas intergalácticas.",
+    "boss_abyssal_leviathan_name": "Nebulor, o Arauto da Matéria Escura",
+    "boss_abyssal_leviathan_title": "Entidade Cósmica Invasora",
+    "boss_abyssal_leviathan_scenario": "Órbita de Júpiter",
+    "boss_abyssal_leviathan_scenario_desc": "Nebulor distorce a magnetosfera de Júpiter preparando o ataque ao planeta Terra!",
+    "boss_abyssal_leviathan_badge": "ALIENÍGENA • SOMBRA",
+    "boss_abyssal_leviathan_lore": "Manipula anomalias gravitacionais e dobras no tecido do espaço-tempo.",
+    "boss_cosmic_chronos_name": "Xenor, a Mente Suprema Intergaláctica",
+    "boss_cosmic_chronos_title": "Consciência Central da Invasão",
+    "boss_cosmic_chronos_scenario": "Órbita Lunar Terrestre",
+    "boss_cosmic_chronos_scenario_desc": "A colossal nave-mãe alienígena de Xenor se posiciona para a invasão final da Terra!",
+    "boss_cosmic_chronos_badge": "ALIENÍGENA • NAVE-MÃE",
+    "boss_cosmic_chronos_lore": "O cérebro alienígena supremo que orquestra a grande invasão do Sistema Solar.",
+    "boss_magma_vulcanus_name": "Kragthor, o Destruidor de Frotas",
+    "boss_magma_vulcanus_title": "General Belicista Alienígena",
+    "boss_magma_vulcanus_scenario": "Cinturão de Asteroides",
+    "boss_magma_vulcanus_scenario_desc": "O encouraçado colossal de Kragthor bombardeia asteroides para abrir caminho até a Terra!",
+    "boss_magma_vulcanus_badge": "ALIENÍGENA • BELICISTA",
+    "boss_magma_vulcanus_lore": "Guerreiro blindado invasor, impiedoso com armas pesadas de desintegração cósmica.",
+    "btn_continue": "Continuar Jogando",
+    "btn_new_game": "Novo Jogo",
+    "btn_new_game_desc": "Comece do zero com moedas compartilhadas",
+    "btn_save_slots": "Slots de Salvamento",
+    "slots_title": "Slots de Salvamento",
+    "slots_sub": "Gerencie seu progresso ou comece um novo jogo",
+    "lbl_highscore": "RECORDE",
+    "lbl_shared_coins": "MOEDAS",
+    "lbl_highcoins": "MAX MOEDAS",
+    "slot_number": "Slot {slot}",
+    "slot_in_progress": "Em Andamento",
+    "slot_empty": "Vazio",
+    "slot_empty_desc": "Nenhuma partida salva. Comece do zero com suas moedas compartilhadas!",
+    "slot_btn_continue": "Continuar",
+    "slot_btn_new": "Novo Jogo",
+    "slot_btn_delete": "Excluir",
+    "slot_confirm_overwrite": "Sobrescrever o Slot {slot} e iniciar um novo jogo? O progresso existente neste slot será substituído.",
+    "slot_confirm_delete": "Tem certeza que deseja excluir a partida salva no Slot {slot}?",
+    "fb_game_saved": "Progresso da partida salvo!",
+    "fb_game_resumed": "Partida retomada da Fase {phase}!",
+    "slots_shared_wallet": "Banco de Moedas Compartilhadas",
+    "slots_close": "Fechar",
+    "slot_phase_score": "Fase {phase} • {score} pts",
+    "slot_date_fmt": "Salvo: {date}",
+    "confirm_new_game_title": "Iniciar Novo Jogo?",
+    "confirm_new_game_desc": "Você possui uma partida salva em andamento. Iniciar um novo jogo irá sobrescrever o Slot {slot}. Suas moedas compartilhadas continuarão disponíveis!",
+    "settings_finger_guide": "Guia Visual de Dedos",
+    "settings_finger_guide_always": "Sempre Ativo (Padrão)",
+    "settings_finger_guide_training": "Modo Treino",
+    "settings_finger_guide_off": "Desativado",
+    "vk_space": "ESPAÇO",
+    "finger_guide_title": "Guia de Dedos",
+    "finger_ready": "Posição de Repouso",
+    "finger_space_bar": "Espaço",
+    "hand_left": "Mão Esquerda",
+    "hand_right": "Mão Direita",
+    "hand_both": "Ambas as Mãos",
+    "finger_l_pinky": "Mindinho Esquerdo",
+    "finger_l_ring": "Anelar Esquerdo",
+    "finger_l_middle": "Médio Esquerdo",
+    "finger_l_index": "Indicador Esquerdo",
+    "finger_l_thumb": "Polegar Esquerdo",
+    "finger_r_thumb": "Polegar Direito",
+    "finger_r_index": "Indicador Direito",
+    "finger_r_middle": "Médio Direito",
+    "finger_r_ring": "Anelar Direito",
+    "finger_r_pinky": "Mindinho Direito",
+    "finger_thumb": "Polegar",
+    "footer_privacy": "Política de Privacidade",
+    "btn_privacy": "Privacidade",
+    "settings_privacy": "Privacidade e Dados",
+    "settings_view_privacy": "Ver Política",
+    "privacy_title": "Política de Privacidade & Transparência",
+    "privacy_sub": "Tratamento de dados, armazenamento local no navegador e infraestrutura do GitHub Pages",
+    "privacy_btn_open_page": "Abrir Página Completa",
+    "btn_close_privacy": "Entendido",
+    "privacy_badge_nocollect": "Zero Coleta de Dados",
+    "privacy_badge_local": "100% Armazenamento Local",
+    "privacy_badge_github": "Hospedagem GitHub Pages",
+    "privacy_badge_lgpd": "Conformidade LGPD & ANPD",
+    "privacy_sec_collection_title": "1. Zero Coleta de Dados Pessoais pelo Digitinho Galaxy",
+    "privacy_sec_collection_desc": "O Digitinho Galaxy é um jogo web estático executado integralmente no navegador do jogador (client-side). O projeto não possui servidores de backend próprios, banco de dados remoto, formulários de cadastro ou sistema de contas de usuário. Nenhum dado pessoal (como nome, e-mail, documento ou telefone) é solicitado, coletado, processado ou comercializado pelo desenvolvedor.",
+    "privacy_sec_storage_title": "2. Armazenamento Local no Dispositivo (HTML5 LocalStorage)",
+    "privacy_sec_storage_desc": "Todo o progresso do jogo — incluindo pontuação, slots de salvamento, palavras desbloqueadas na Biblioteca, conquistas obtidas, preferências sonoras, dificuldade e tema visual — é armazenado exclusivamente no armazenamento local do seu próprio navegador (localStorage). Essas informações jamais saem do seu aparelho e podem ser apagadas permanentemente a qualquer momento limpando os dados do navegador ou excluindo slots no próprio jogo.",
+    "privacy_sec_hosting_title": "3. Infraestrutura de Hospedagem e Registros Técnicos do GitHub Pages",
+    "privacy_sec_hosting_desc": "O Digitinho Galaxy é hospedado como um site estático na infraestrutura do GitHub Pages (operada pela GitHub, Inc. / Microsoft). Ao acessar a página, os servidores do GitHub podem processar e registrar automaticamente metadados técnicos de conexão — tais como endereço IP, data/hora da requisição, navegador (user-agent) e URL solicitada — para fins estritos de segurança, manutenção de infraestrutura e prevenção de abusos, em conformidade com a Declaração de Privacidade do GitHub. O desenvolvedor do Digitinho Galaxy não tem acesso a registros brutos de IPs nem utiliza esses dados para identificar ou rastrear jogadores.",
+    "privacy_sec_cookies_title": "4. Zero Cookies de Rastreamento ou Analítica de Terceiros",
+    "privacy_sec_cookies_desc": "O jogo não utiliza cookies de publicidade, Google Analytics, pixels de redes sociais ou ferramentas de telemetria e perfilamento comportamental de terceiros. A experiência é 100% voltada ao treino de digitação e diversão arcade.",
+    "privacy_sec_lgpd_title": "5. Conformidade com a LGPD (Lei nº 13.709/2018) e Diretrizes da ANPD",
+    "privacy_sec_lgpd_desc": "Em observância à Lei Geral de Proteção de Dados Pessoais do Brasil (Lei nº 13.709/2018 - LGPD) e às orientações da Autoridade Nacional de Proteção de Dados (ANPD), o projeto adota estritamente os princípios de finalidade, necessidade, não discriminação e minimização de dados. Como o desenvolvedor não realiza tratamento de dados pessoais dos jogadores, nenhuma informação pessoal é comercializada, compartilhada ou transferida a terceiros.",
+    "privacy_sec_opensource_title": "6. Código Aberto, Transparência e Auditoria",
+    "privacy_sec_opensource_desc": "O Digitinho Galaxy é um projeto de código aberto disponibilizado sob a Licença MIT. Qualquer pessoa pode inspecionar, auditar e verificar o código-fonte integral no GitHub para atestar a ausência total de rastreadores ocultos, telemetria ou coleta remota de dados.",
+    "privacy_sec_links_title": "Fontes Oficiais e Referências Normativas",
+    "privacy_link_github": "GitHub Pages: Funcionamento e Registro de IPs",
+    "privacy_link_anpd": "ANPD: Conceito de Dado Pessoal e Agentes de Tratamento",
+    "privacy_link_lgpd": "LGPD — Lei Geral de Proteção de Dados (Lei nº 13.709/2018)",
+    "privacy_back_game": "Voltar ao Jogo",
+    "privacy_updated": "Última atualização: Outubro de 2026 • Digitinho Galaxy Space Typing Game",
+    "privacy_page_title": "Digitinho Galaxy — Política de Privacidade & Transparência",
+    "privacy_overview_title": "Resumo em Destaque",
+    "privacy_contact_title": "Dúvidas e Contato",
+    "privacy_contact_desc": "Como este é um projeto de código aberto sem servidores ou coleta de dados, dúvidas ou sugestões podem ser encaminhadas diretamente através do repositório no GitHub abrindo uma Issue.",
+    "boss_alien_xylarion_name": "Xylarion, o Soberano do Vácuo",
+    "boss_alien_xylarion_title": "Comandante da Vanguarda Alienígena",
+    "boss_alien_xylarion_scenario": "Cinturão de Kuiper (Entrada do Sistema Solar)",
+    "boss_alien_xylarion_scenario_desc": "A armada alienígena de Xylarion cruzou os confins do espaço para invadir o Sistema Solar!",
+    "boss_alien_xylarion_badge": "ALIENÍGENA • DREADNOUGHT",
+    "boss_alien_xylarion_lore": "Comandante supremo da vanguarda invasora, mestre dos canhões de plasma estelar.",
+    "boss_alien_zorkon_name": "Zorkon, o Conquistador de Órbitas",
+    "boss_alien_zorkon_title": "Mestre do Enxame Biomecânico",
+    "boss_alien_zorkon_scenario": "Órbita de Netuno",
+    "boss_alien_zorkon_scenario_desc": "As naves bio-orgânicas de Zorkon cercam os gigantes gasosos do Sistema Solar!",
+    "boss_alien_zorkon_badge": "ALIENÍGENA • ENXAME",
+    "boss_alien_zorkon_lore": "Comanda colmeias biomecânicas alienígenas capazes de devorar frotas espaciais.",
+    "boss_alien_vespera_name": "Véspera, a Imperatriz de Antimatéria",
+    "boss_alien_vespera_title": "Soberana Psiônica Extraterrestre",
+    "boss_alien_vespera_scenario": "Anéis de Saturno",
+    "boss_alien_vespera_scenario_desc": "Véspera utiliza canhões de antimatéria para romper o campo gravitacional do Sistema Solar!",
+    "boss_alien_vespera_badge": "ALIENÍGENA • PSIÔNICA",
+    "boss_alien_vespera_lore": "Manipula energia escura e tempestades psiônicas intergalácticas.",
+    "boss_alien_kragthor_name": "Kragthor, o Destruidor de Frotas",
+    "boss_alien_kragthor_title": "General Belicista Alienígena",
+    "boss_alien_kragthor_scenario": "Cinturão de Asteroides",
+    "boss_alien_kragthor_scenario_desc": "O encouraçado colossal de Kragthor bombardeia asteroides para abrir caminho até a Terra!",
+    "boss_alien_kragthor_badge": "ALIENÍGENA • BELICISTA",
+    "boss_alien_kragthor_lore": "Guerreiro blindado invasor, impiedoso com armas pesadas de desintegração cósmica.",
+    "boss_alien_nebulor_name": "Nebulor, o Arauto da Matéria Escura",
+    "boss_alien_nebulor_title": "Entidade Cósmica Invasora",
+    "boss_alien_nebulor_scenario": "Órbita de Júpiter",
+    "boss_alien_nebulor_scenario_desc": "Nebulor distorce a magnetosfera de Júpiter preparando o ataque ao planeta Terra!",
+    "boss_alien_nebulor_badge": "ALIENÍGENA • SOMBRA",
+    "boss_alien_nebulor_lore": "Manipula anomalias gravitacionais e dobras no tecido do espaço-tempo.",
+    "boss_alien_xenor_name": "Xenor, a Mente Suprema Intergaláctica",
+    "boss_alien_xenor_title": "Consciência Central da Invasão",
+    "boss_alien_xenor_scenario": "Órbita Lunar Terrestre",
+    "boss_alien_xenor_scenario_desc": "A colossal nave-mãe alienígena de Xenor se posiciona para a invasão final da Terra!",
+    "boss_alien_xenor_badge": "ALIENÍGENA • NAVE-MÃE",
+    "boss_alien_xenor_lore": "O cérebro alienígena supremo que orquestra a grande invasão do Sistema Solar.",
+    "hud_perk_passive": "Passiva",
+    "hud_perk_active_label": "Ativa",
+    "hud_perk_recharging": "Recarga",
+    "hud_perk_queue": "Fila",
+    "hud_perk_lvl": "Nv. {lvl}"
+  },
+  "syllables": [
+    "ca",
+    "de",
+    "ma",
+    "re",
+    "la",
+    "sa",
+    "fi",
+    "no",
+    "pe",
+    "to",
+    "me",
+    "bi",
+    "ro",
+    "tu",
+    "vi",
+    "ge",
+    "lo",
+    "pa",
+    "su",
+    "ta",
+    "mi",
+    "na",
+    "co",
+    "ba",
+    "do",
+    "fe",
+    "li",
+    "ni",
+    "po",
+    "ra",
+    "si",
+    "va",
+    "ze",
+    "bu",
+    "di",
+    "pra",
+    "bra",
+    "fra",
+    "gra",
+    "tra",
+    "cra",
+    "fle",
+    "gre",
+    "pro",
+    "clo"
+  ],
+  "words": [
+    {
+      "text": "sol",
+      "type": "cosmos",
+      "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
     },
-    "syllables": [
-        "ca",
-        "de",
-        "ma",
-        "re",
-        "la",
-        "sa",
-        "fi",
-        "no",
-        "pe",
-        "to",
-        "me",
-        "bi",
-        "ro",
-        "tu",
-        "vi",
-        "ge",
-        "lo",
-        "pa",
-        "su",
-        "ta",
-        "mi",
-        "na",
-        "co",
-        "ba",
-        "do",
-        "fe",
-        "li",
-        "ni",
-        "po",
-        "ra",
-        "si",
-        "va",
-        "ze",
-        "bu",
-        "di",
-        "pra",
-        "bra",
-        "fra",
-        "gra",
-        "tra",
-        "cra",
-        "fle",
-        "gre",
-        "pro",
-        "clo"
-    ],
-    "words": [
-        {
-            "text": "sol",
-            "type": "cosmos",
-            "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
-        },
-        {
-            "text": "lua",
-            "type": "cosmos",
-            "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
-        },
-        {
-            "text": "luas",
-            "type": "cosmos",
-            "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
-        },
-        {
-            "text": "ceu",
-            "type": "cosmos",
-            "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
-        },
-        {
-            "text": "raio",
-            "type": "fenomeno",
-            "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
-        },
-        {
-            "text": "halo",
-            "type": "cosmos",
-            "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
-        },
-        {
-            "text": "eixo",
-            "type": "cosmos",
-            "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
-        },
-        {
-            "text": "fase",
-            "type": "fenomeno",
-            "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
-        },
-        {
-            "text": "onda",
-            "type": "fenomeno",
-            "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
-        },
-        {
-            "text": "nave",
-            "type": "tech",
-            "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
-        },
-        {
-            "text": "nova",
-            "type": "fenomeno",
-            "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
-        },
-        {
-            "text": "alvo",
-            "type": "tech",
-            "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
-        },
-        {
-            "text": "dado",
-            "type": "tech",
-            "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
-        },
-        {
-            "text": "breu",
-            "type": "cosmos",
-            "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
-        },
-        {
-            "text": "ano",
-            "type": "cosmos",
-            "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
-        },
-        {
-            "text": "vacuo",
-            "type": "cosmos",
-            "meaning": "Espaço desprovido de matéria ou ar onde reina a calmaria do cosmos"
-        },
-        {
-            "text": "astro",
-            "type": "cosmos",
-            "meaning": "Qualquer corpo celeste natural que habita o espaço cósmico infinito"
-        },
-        {
-            "text": "cosmo",
-            "type": "cosmos",
-            "meaning": "O universo ordenado, harmonioso e infinito em toda a sua vastidão física"
-        },
-        {
-            "text": "marte",
-            "type": "cosmos",
-            "meaning": "O quarto planeta a contar do sol, também conhecido como o Planeta Vermelho"
-        },
-        {
-            "text": "venus",
-            "type": "cosmos",
-            "meaning": "O segundo planeta do sistema solar, o astro mais brilhante do céu noturno"
-        },
-        {
-            "text": "terra",
-            "type": "cosmos",
-            "meaning": "Nosso planeta rochoso azul, único mundo conhecido com vida e oceanos líquidos"
-        },
-        {
-            "text": "solar",
-            "type": "cosmos",
-            "meaning": "Relativo ao Sol, à sua radiação térmica, vento solar e influência cósmica"
-        },
-        {
-            "text": "sonda",
-            "type": "tech",
-            "meaning": "Aeronave não tripulada lançada para explorar atmosferas e superfícies celestes"
-        },
-        {
-            "text": "radar",
-            "type": "tech",
-            "meaning": "Sistema de rastreamento por radiofrequência para mapear corpos no espaço"
-        },
-        {
-            "text": "magma",
-            "type": "natureza",
-            "meaning": "Rocha fundida em altíssima temperatura presente no manto de planetas rochosos"
-        },
-        {
-            "text": "nuvem",
-            "type": "cosmos",
-            "meaning": "Nuvem molecular densa de hidrogênio e poeira onde se formam novos astros"
-        },
-        {
-            "text": "plutao",
-            "type": "cosmos",
-            "meaning": "Planeta anão gelado localizado no Cinturão de Kuiper nos confins do sistema"
-        },
-        {
-            "text": "orbita",
-            "type": "cosmos",
-            "meaning": "Trajetória curva regular que um corpo celeste percorre ao redor de outro"
-        },
-        {
-            "text": "cometa",
-            "type": "cosmos",
-            "meaning": "Corpo celeste gelado que, ao se aproximar do Sol, desenvolve uma cauda brilhante"
-        },
-        {
-            "text": "pulsar",
-            "type": "cosmos",
-            "meaning": "Estrela de nêutrons magnética de rotação ultrarrápida que emite feixes regulares"
-        },
-        {
-            "text": "quasar",
-            "type": "cosmos",
-            "meaning": "Núcleo galáctico hiperluminoso e distante alimentado por buraco negro supermassivo"
-        },
-        {
-            "text": "corona",
-            "type": "cosmos",
-            "meaning": "Camada mais externa e rarefeita da atmosfera solar com milhões de graus"
-        },
-        {
-            "text": "meteoro",
-            "type": "cosmos",
-            "meaning": "Rastro luminoso produzido pelo atrito de um fragmento espacial na atmosfera"
-        },
-        {
-            "text": "optica",
-            "type": "tech",
-            "meaning": "Ciência da luz aplicada aos espelhos e lentes de telescópios espaciais"
-        },
-        {
-            "text": "espaco",
-            "type": "cosmos",
-            "meaning": "A imensa extensão tridimensional onde orbitam estrelas, planetas e galáxias"
-        },
-        {
-            "text": "aurora",
-            "type": "fenomeno",
-            "meaning": "Fenômeno luminoso na atmosfera polar causado pela interação do vento solar"
-        },
-        {
-            "text": "zenite",
-            "type": "cosmos",
-            "meaning": "Ponto imaginário na esfera celeste localizado exatamente acima do observador"
-        },
-        {
-            "text": "hubble",
-            "type": "tech",
-            "meaning": "Famoso telescópio espacial orbital que revolucionou a astronomia moderna"
-        },
-        {
-            "text": "poeira",
-            "type": "cosmos",
-            "meaning": "Micropartículas minerais interestelares dispersas pelos braços das galáxias"
-        },
-        {
-            "text": "buraco",
-            "type": "cosmos",
-            "meaning": "Região de distorção gravitacional extrema no continuum do espaço-tempo"
-        },
-        {
-            "text": "estrela",
-            "type": "cosmos",
-            "meaning": "Esfera colossal de plasma sustentada por reações de fusão nuclear em seu núcleo"
-        },
-        {
-            "text": "planeta",
-            "type": "cosmos",
-            "meaning": "Corpo celeste esférico que orbita uma estrela e limpou sua órbita de detritos"
-        },
-        {
-            "text": "galaxia",
-            "type": "cosmos",
-            "meaning": "Sistema astronômico massivo composto por bilhões de estrelas, gás e poeira"
-        },
-        {
-            "text": "galaxias",
-            "type": "cosmos",
-            "meaning": "Milhões de ilhas estelares gravitacionais espalhadas pela teia do universo"
-        },
-        {
-            "text": "universo",
-            "type": "cosmos",
-            "meaning": "A totalidade de toda a matéria, energia, espaço, tempo e leis cósmicas existentes"
-        },
-        {
-            "text": "nebulosa",
-            "type": "cosmos",
-            "meaning": "Imensa nuvem interestelar de gás e plasma iluminada por estrelas jovens"
-        },
-        {
-            "text": "gravidade",
-            "type": "fenomeno",
-            "meaning": "Força fundamental de atração mútua entre todos os corpos que possuem massa"
-        },
-        {
-            "text": "supernova",
-            "type": "fenomeno",
-            "meaning": "Explosão cataclísmica de uma estrela massiva ao final de sua evolução estelar"
-        },
-        {
-            "text": "astronauta",
-            "type": "tech",
-            "meaning": "Pessoa treinada profissionalmente para viajar e trabalhar no espaço sideral"
-        },
-        {
-            "text": "astronomia",
-            "type": "ciencia",
-            "meaning": "Ciência que estuda os corpos celestes, movimentos, evolução e o universo"
-        },
-        {
-            "text": "exoplaneta",
-            "type": "cosmos",
-            "meaning": "Planeta que orbita uma estrela fora do nosso sistema solar planetário"
-        },
-        {
-            "text": "exoplanetas",
-            "type": "cosmos",
-            "meaning": "Mundos extrassolares orbitando sóis distantes em outras regiões da galáxia"
-        },
-        {
-            "text": "satelite",
-            "type": "tech",
-            "meaning": "Corpo natural ou artificial que orbita ao redor de um planeta ou estrela"
-        },
-        {
-            "text": "constelacao",
-            "type": "cosmos",
-            "meaning": "Agrupamento aparente de estrelas que formam desenhos na abóbada celeste"
-        },
-        {
-            "text": "telescopio",
-            "type": "tech",
-            "meaning": "Instrumento óptico fundamental para observar e analisar corpos astronômicos"
-        },
-        {
-            "text": "astronave",
-            "type": "tech",
-            "meaning": "Nave espacial interplanetária projetada para navegar em missões distantes"
-        },
-        {
-            "text": "atmosfera",
-            "type": "cosmos",
-            "meaning": "Camada de gases que envolve um corpo celeste retida por sua gravidade"
-        },
-        {
-            "text": "magnetosfera",
-            "type": "fenomeno",
-            "meaning": "Escudo magnético que defende um planeta contra a radiação do vento solar"
-        },
-        {
-            "text": "radiacao",
-            "type": "fenomeno",
-            "meaning": "Energia propagada pelo espaço na forma de ondas ou partículas subatômicas"
-        },
-        {
-            "text": "espectro",
-            "type": "ciencia",
-            "meaning": "Decomposição da luz em seus diferentes comprimentos de onda e frequências"
-        },
-        {
-            "text": "andromeda",
-            "type": "cosmos",
-            "meaning": "A galáxia espiral gigante mais próxima de nossa própria Via Láctea"
-        },
-        {
-            "text": "heliosfera",
-            "type": "cosmos",
-            "meaning": "Vasta bolha no espaço inflada pelo vento solar além da órbita dos planetas"
-        },
-        {
-            "text": "antimateria",
-            "type": "ciencia",
-            "meaning": "Matéria composta por antipartículas que se aniquilam ao tocar matéria comum"
-        },
-        {
-            "text": "singularidade",
-            "type": "cosmos",
-            "meaning": "Ponto de densidade infinita no coração de um buraco negro onde a física colapsa"
-        },
-        {
-            "text": "multiverso",
-            "type": "cosmos",
-            "meaning": "Hipótese cosmológica de múltiplos universos coexistindo em dimensões paralelas"
-        },
-        {
-            "text": "ano-luz",
-            "type": "ciencia",
-            "meaning": "Distância colossal percorrida por um fóton de luz no vácuo durante um ano terrestre"
-        },
-        {
-            "text": "buraco-negro",
-            "type": "cosmos",
-            "meaning": "Região cósmica com gravidade tão avassaladora que nem a própria luz consegue escapar"
-        },
-        {
-            "text": "poeira-estelar",
-            "type": "cosmos",
-            "meaning": "Detritos e cinzas de supernovas que semeiam a matéria de novos mundos e luas"
-        },
-        {
-            "text": "materia-escura",
-            "type": "cosmos",
-            "meaning": "Forma invisível de matéria cósmica que compõe a maior parte da massa galáctica"
-        },
-        {
-            "text": "energia-escura",
-            "type": "cosmos",
-            "meaning": "Força misteriosa e onipresente que acelera a expansão do universo observável"
-        },
-        {
-            "text": "buraco-de-minhoca",
-            "type": "cosmos",
-            "meaning": "Atalho teórico no tecido do espaço-tempo conectando dois pontos distantes"
-        },
-        {
-            "text": "velocidade-da-luz",
-            "type": "ciencia",
-            "meaning": "O limite cósmico de velocidade no vácuo de trezentos mil quilômetros por segundo"
-        },
-        {
-            "text": "estacao-espacial",
-            "type": "tech",
-            "meaning": "Base orbital habitável no vácuo onde cientistas realizam pesquisas cósmicas"
-        },
-        {
-            "text": "horizonte-de-eventos",
-            "type": "cosmos",
-            "meaning": "A fronteira limite de não retorno ao redor de um buraco negro no espaço"
-        },
-        {
-            "text": "via-lactea",
-            "type": "cosmos",
-            "meaning": "Nossa galáxia espiral natal contendo centenas de bilhões de estrelas e planetas"
-        }
-    ],
-    "bossWords": {
-        "alien_dreadnought": [
-            {
-                "text": "sol",
-                "type": "cosmos",
-                "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
-            },
-            {
-                "text": "lua",
-                "type": "cosmos",
-                "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
-            },
-            {
-                "text": "luas",
-                "type": "cosmos",
-                "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
-            },
-            {
-                "text": "ceu",
-                "type": "cosmos",
-                "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
-            },
-            {
-                "text": "raio",
-                "type": "fenomeno",
-                "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
-            },
-            {
-                "text": "eixo",
-                "type": "cosmos",
-                "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
-            },
-            {
-                "text": "fase",
-                "type": "fenomeno",
-                "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
-            },
-            {
-                "text": "onda",
-                "type": "fenomeno",
-                "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
-            },
-            {
-                "text": "nave",
-                "type": "tech",
-                "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
-            },
-            {
-                "text": "nova",
-                "type": "fenomeno",
-                "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
-            },
-            {
-                "text": "alvo",
-                "type": "tech",
-                "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
-            },
-            {
-                "text": "dado",
-                "type": "tech",
-                "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
-            },
-            {
-                "text": "breu",
-                "type": "cosmos",
-                "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
-            },
-            {
-                "text": "ano",
-                "type": "cosmos",
-                "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
-            }
-        ],
-        "alien_hive": [
-            {
-                "text": "sol",
-                "type": "cosmos",
-                "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
-            },
-            {
-                "text": "lua",
-                "type": "cosmos",
-                "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
-            },
-            {
-                "text": "luas",
-                "type": "cosmos",
-                "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
-            },
-            {
-                "text": "ceu",
-                "type": "cosmos",
-                "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
-            },
-            {
-                "text": "raio",
-                "type": "fenomeno",
-                "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
-            },
-            {
-                "text": "eixo",
-                "type": "cosmos",
-                "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
-            },
-            {
-                "text": "fase",
-                "type": "fenomeno",
-                "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
-            },
-            {
-                "text": "onda",
-                "type": "fenomeno",
-                "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
-            },
-            {
-                "text": "nave",
-                "type": "tech",
-                "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
-            },
-            {
-                "text": "nova",
-                "type": "fenomeno",
-                "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
-            },
-            {
-                "text": "alvo",
-                "type": "tech",
-                "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
-            },
-            {
-                "text": "dado",
-                "type": "tech",
-                "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
-            },
-            {
-                "text": "breu",
-                "type": "cosmos",
-                "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
-            },
-            {
-                "text": "ano",
-                "type": "cosmos",
-                "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
-            }
-        ],
-        "alien_psionic": [
-            {
-                "text": "sol",
-                "type": "cosmos",
-                "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
-            },
-            {
-                "text": "lua",
-                "type": "cosmos",
-                "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
-            },
-            {
-                "text": "luas",
-                "type": "cosmos",
-                "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
-            },
-            {
-                "text": "ceu",
-                "type": "cosmos",
-                "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
-            },
-            {
-                "text": "raio",
-                "type": "fenomeno",
-                "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
-            },
-            {
-                "text": "eixo",
-                "type": "cosmos",
-                "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
-            },
-            {
-                "text": "fase",
-                "type": "fenomeno",
-                "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
-            },
-            {
-                "text": "onda",
-                "type": "fenomeno",
-                "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
-            },
-            {
-                "text": "nave",
-                "type": "tech",
-                "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
-            },
-            {
-                "text": "nova",
-                "type": "fenomeno",
-                "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
-            },
-            {
-                "text": "alvo",
-                "type": "tech",
-                "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
-            },
-            {
-                "text": "dado",
-                "type": "tech",
-                "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
-            },
-            {
-                "text": "breu",
-                "type": "cosmos",
-                "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
-            },
-            {
-                "text": "ano",
-                "type": "cosmos",
-                "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
-            }
-        ],
-        "alien_warlord": [
-            {
-                "text": "sol",
-                "type": "cosmos",
-                "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
-            },
-            {
-                "text": "lua",
-                "type": "cosmos",
-                "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
-            },
-            {
-                "text": "luas",
-                "type": "cosmos",
-                "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
-            },
-            {
-                "text": "ceu",
-                "type": "cosmos",
-                "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
-            },
-            {
-                "text": "raio",
-                "type": "fenomeno",
-                "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
-            },
-            {
-                "text": "eixo",
-                "type": "cosmos",
-                "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
-            },
-            {
-                "text": "fase",
-                "type": "fenomeno",
-                "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
-            },
-            {
-                "text": "onda",
-                "type": "fenomeno",
-                "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
-            },
-            {
-                "text": "nave",
-                "type": "tech",
-                "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
-            },
-            {
-                "text": "nova",
-                "type": "fenomeno",
-                "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
-            },
-            {
-                "text": "alvo",
-                "type": "tech",
-                "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
-            },
-            {
-                "text": "dado",
-                "type": "tech",
-                "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
-            },
-            {
-                "text": "breu",
-                "type": "cosmos",
-                "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
-            },
-            {
-                "text": "ano",
-                "type": "cosmos",
-                "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
-            }
-        ],
-        "alien_darkmatter": [
-            {
-                "text": "sol",
-                "type": "cosmos",
-                "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
-            },
-            {
-                "text": "lua",
-                "type": "cosmos",
-                "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
-            },
-            {
-                "text": "luas",
-                "type": "cosmos",
-                "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
-            },
-            {
-                "text": "ceu",
-                "type": "cosmos",
-                "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
-            },
-            {
-                "text": "raio",
-                "type": "fenomeno",
-                "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
-            },
-            {
-                "text": "eixo",
-                "type": "cosmos",
-                "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
-            },
-            {
-                "text": "fase",
-                "type": "fenomeno",
-                "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
-            },
-            {
-                "text": "onda",
-                "type": "fenomeno",
-                "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
-            },
-            {
-                "text": "nave",
-                "type": "tech",
-                "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
-            },
-            {
-                "text": "nova",
-                "type": "fenomeno",
-                "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
-            },
-            {
-                "text": "alvo",
-                "type": "tech",
-                "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
-            },
-            {
-                "text": "dado",
-                "type": "tech",
-                "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
-            },
-            {
-                "text": "breu",
-                "type": "cosmos",
-                "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
-            },
-            {
-                "text": "ano",
-                "type": "cosmos",
-                "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
-            }
-        ],
-        "alien_mothership": [
-            {
-                "text": "sol",
-                "type": "cosmos",
-                "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
-            },
-            {
-                "text": "lua",
-                "type": "cosmos",
-                "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
-            },
-            {
-                "text": "luas",
-                "type": "cosmos",
-                "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
-            },
-            {
-                "text": "ceu",
-                "type": "cosmos",
-                "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
-            },
-            {
-                "text": "raio",
-                "type": "fenomeno",
-                "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
-            },
-            {
-                "text": "eixo",
-                "type": "cosmos",
-                "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
-            },
-            {
-                "text": "fase",
-                "type": "fenomeno",
-                "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
-            },
-            {
-                "text": "onda",
-                "type": "fenomeno",
-                "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
-            },
-            {
-                "text": "nave",
-                "type": "tech",
-                "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
-            },
-            {
-                "text": "nova",
-                "type": "fenomeno",
-                "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
-            },
-            {
-                "text": "alvo",
-                "type": "tech",
-                "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
-            },
-            {
-                "text": "dado",
-                "type": "tech",
-                "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
-            },
-            {
-                "text": "breu",
-                "type": "cosmos",
-                "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
-            },
-            {
-                "text": "ano",
-                "type": "cosmos",
-                "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
-            }
-        ],
-        "robot": [
-            {
-                "text": "sol",
-                "type": "cosmos",
-                "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
-            },
-            {
-                "text": "lua",
-                "type": "cosmos",
-                "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
-            },
-            {
-                "text": "luas",
-                "type": "cosmos",
-                "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
-            },
-            {
-                "text": "ceu",
-                "type": "cosmos",
-                "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
-            },
-            {
-                "text": "raio",
-                "type": "fenomeno",
-                "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
-            },
-            {
-                "text": "eixo",
-                "type": "cosmos",
-                "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
-            },
-            {
-                "text": "fase",
-                "type": "fenomeno",
-                "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
-            },
-            {
-                "text": "onda",
-                "type": "fenomeno",
-                "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
-            },
-            {
-                "text": "nave",
-                "type": "tech",
-                "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
-            },
-            {
-                "text": "nova",
-                "type": "fenomeno",
-                "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
-            },
-            {
-                "text": "alvo",
-                "type": "tech",
-                "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
-            },
-            {
-                "text": "dado",
-                "type": "tech",
-                "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
-            },
-            {
-                "text": "breu",
-                "type": "cosmos",
-                "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
-            },
-            {
-                "text": "ano",
-                "type": "cosmos",
-                "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
-            }
-        ],
-        "beast": [
-            {
-                "text": "sol",
-                "type": "cosmos",
-                "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
-            },
-            {
-                "text": "lua",
-                "type": "cosmos",
-                "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
-            },
-            {
-                "text": "luas",
-                "type": "cosmos",
-                "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
-            },
-            {
-                "text": "ceu",
-                "type": "cosmos",
-                "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
-            },
-            {
-                "text": "raio",
-                "type": "fenomeno",
-                "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
-            },
-            {
-                "text": "eixo",
-                "type": "cosmos",
-                "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
-            },
-            {
-                "text": "fase",
-                "type": "fenomeno",
-                "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
-            },
-            {
-                "text": "onda",
-                "type": "fenomeno",
-                "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
-            },
-            {
-                "text": "nave",
-                "type": "tech",
-                "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
-            },
-            {
-                "text": "nova",
-                "type": "fenomeno",
-                "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
-            },
-            {
-                "text": "alvo",
-                "type": "tech",
-                "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
-            },
-            {
-                "text": "dado",
-                "type": "tech",
-                "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
-            },
-            {
-                "text": "breu",
-                "type": "cosmos",
-                "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
-            },
-            {
-                "text": "ano",
-                "type": "cosmos",
-                "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
-            }
-        ],
-        "mythology": [
-            {
-                "text": "sol",
-                "type": "cosmos",
-                "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
-            },
-            {
-                "text": "lua",
-                "type": "cosmos",
-                "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
-            },
-            {
-                "text": "luas",
-                "type": "cosmos",
-                "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
-            },
-            {
-                "text": "ceu",
-                "type": "cosmos",
-                "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
-            },
-            {
-                "text": "raio",
-                "type": "fenomeno",
-                "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
-            },
-            {
-                "text": "eixo",
-                "type": "cosmos",
-                "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
-            },
-            {
-                "text": "fase",
-                "type": "fenomeno",
-                "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
-            },
-            {
-                "text": "onda",
-                "type": "fenomeno",
-                "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
-            },
-            {
-                "text": "nave",
-                "type": "tech",
-                "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
-            },
-            {
-                "text": "nova",
-                "type": "fenomeno",
-                "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
-            },
-            {
-                "text": "alvo",
-                "type": "tech",
-                "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
-            },
-            {
-                "text": "dado",
-                "type": "tech",
-                "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
-            },
-            {
-                "text": "breu",
-                "type": "cosmos",
-                "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
-            },
-            {
-                "text": "ano",
-                "type": "cosmos",
-                "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
-            }
-        ],
-        "volcano": [
-            {
-                "text": "sol",
-                "type": "cosmos",
-                "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
-            },
-            {
-                "text": "lua",
-                "type": "cosmos",
-                "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
-            },
-            {
-                "text": "luas",
-                "type": "cosmos",
-                "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
-            },
-            {
-                "text": "ceu",
-                "type": "cosmos",
-                "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
-            },
-            {
-                "text": "raio",
-                "type": "fenomeno",
-                "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
-            },
-            {
-                "text": "eixo",
-                "type": "cosmos",
-                "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
-            },
-            {
-                "text": "fase",
-                "type": "fenomeno",
-                "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
-            },
-            {
-                "text": "onda",
-                "type": "fenomeno",
-                "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
-            },
-            {
-                "text": "nave",
-                "type": "tech",
-                "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
-            },
-            {
-                "text": "nova",
-                "type": "fenomeno",
-                "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
-            },
-            {
-                "text": "alvo",
-                "type": "tech",
-                "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
-            },
-            {
-                "text": "dado",
-                "type": "tech",
-                "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
-            },
-            {
-                "text": "breu",
-                "type": "cosmos",
-                "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
-            },
-            {
-                "text": "ano",
-                "type": "cosmos",
-                "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
-            }
-        ],
-        "ocean": [
-            {
-                "text": "sol",
-                "type": "cosmos",
-                "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
-            },
-            {
-                "text": "lua",
-                "type": "cosmos",
-                "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
-            },
-            {
-                "text": "luas",
-                "type": "cosmos",
-                "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
-            },
-            {
-                "text": "ceu",
-                "type": "cosmos",
-                "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
-            },
-            {
-                "text": "raio",
-                "type": "fenomeno",
-                "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
-            },
-            {
-                "text": "eixo",
-                "type": "cosmos",
-                "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
-            },
-            {
-                "text": "fase",
-                "type": "fenomeno",
-                "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
-            },
-            {
-                "text": "onda",
-                "type": "fenomeno",
-                "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
-            },
-            {
-                "text": "nave",
-                "type": "tech",
-                "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
-            },
-            {
-                "text": "nova",
-                "type": "fenomeno",
-                "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
-            },
-            {
-                "text": "alvo",
-                "type": "tech",
-                "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
-            },
-            {
-                "text": "dado",
-                "type": "tech",
-                "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
-            },
-            {
-                "text": "breu",
-                "type": "cosmos",
-                "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
-            },
-            {
-                "text": "ano",
-                "type": "cosmos",
-                "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
-            }
-        ],
-        "cosmos": [
-            {
-                "text": "sol",
-                "type": "cosmos",
-                "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
-            },
-            {
-                "text": "lua",
-                "type": "cosmos",
-                "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
-            },
-            {
-                "text": "luas",
-                "type": "cosmos",
-                "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
-            },
-            {
-                "text": "ceu",
-                "type": "cosmos",
-                "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
-            },
-            {
-                "text": "raio",
-                "type": "fenomeno",
-                "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
-            },
-            {
-                "text": "eixo",
-                "type": "cosmos",
-                "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
-            },
-            {
-                "text": "fase",
-                "type": "fenomeno",
-                "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
-            },
-            {
-                "text": "onda",
-                "type": "fenomeno",
-                "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
-            },
-            {
-                "text": "nave",
-                "type": "tech",
-                "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
-            },
-            {
-                "text": "nova",
-                "type": "fenomeno",
-                "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
-            },
-            {
-                "text": "alvo",
-                "type": "tech",
-                "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
-            },
-            {
-                "text": "dado",
-                "type": "tech",
-                "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
-            },
-            {
-                "text": "breu",
-                "type": "cosmos",
-                "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
-            },
-            {
-                "text": "ano",
-                "type": "cosmos",
-                "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
-            }
-        ]
+    {
+      "text": "lua",
+      "type": "cosmos",
+      "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
     },
-    "trainingWorlds": {
-        "1": {
-            "id": 1,
-            "name": "Mundo 1: Linha Base",
-            "subtitle": "Linha central (A S D F G H J K L Ç)",
-            "desc": "Memória muscular da linha central de repouso dos dedos (mão esquerda ASDF, mão direita JKLÇ).",
-            "icon": "🖐️",
-            "color": "#38BDF8",
-            "chars": [
-                "A",
-                "S",
-                "D",
-                "F",
-                "G",
-                "H",
-                "J",
-                "K",
-                "L",
-                "Ç"
-            ],
-            "words": [
-                "AS",
-                "DA",
-                "FA",
-                "LA",
-                "JA",
-                "HA",
-                "FADA",
-                "GALA",
-                "SALA",
-                "FALA",
-                "ALFA",
-                "HAJA",
-                "DADA",
-                "FALAS",
-                "SALAS",
-                "ADAGA",
-                "ALFAMA",
-                "CASAL"
-            ]
-        },
-        "2": {
-            "id": 2,
-            "name": "Mundo 2: Linha Superior",
-            "subtitle": "Linha superior (Q W E R T Y U I O P)",
-            "desc": "Extensão para a linha superior treinando o alcance com indicadores, médios e anelares.",
-            "icon": "⬆️",
-            "color": "#F59E0B",
-            "chars": [
-                "Q",
-                "W",
-                "E",
-                "R",
-                "T",
-                "Y",
-                "U",
-                "I",
-                "O",
-                "P"
-            ],
-            "words": [
-                "RE",
-                "TO",
-                "PO",
-                "WE",
-                "QUI",
-                "TRE",
-                "PATO",
-                "ROTO",
-                "TOPO",
-                "PERA",
-                "REDE",
-                "POTE",
-                "QUERO",
-                "PORTA",
-                "TERRA",
-                "PIPO",
-                "TIPO",
-                "ROUPA",
-                "TORRE",
-                "PRATO"
-            ]
-        },
-        "3": {
-            "id": 3,
-            "name": "Mundo 3: Linha Inferior",
-            "subtitle": "Linha inferior (Z X C V B N M)",
-            "desc": "Alcance para a linha inferior com agilidade e coordenação motora fina.",
-            "icon": "⬇️",
-            "color": "#10B981",
-            "chars": [
-                "Z",
-                "X",
-                "C",
-                "V",
-                "B",
-                "N",
-                "M"
-            ],
-            "words": [
-                "ZA",
-                "CA",
-                "VA",
-                "BA",
-                "NA",
-                "MA",
-                "BOM",
-                "VEM",
-                "NOZ",
-                "VEZ",
-                "BOLA",
-                "MESA",
-                "ZEBRA",
-                "NAVIO",
-                "CAMINHO",
-                "ZONA",
-                "VOZ",
-                "BARCO",
-                "NUVEM",
-                "VENTO"
-            ]
-        },
-        "4": {
-            "id": 4,
-            "name": "Mundo 4: Acentos & Pontuações",
-            "subtitle": "Acentos e pontuações (Á Ê Õ ? ! , .)",
-            "desc": "Domínio de teclas de acentuação gráfica, interrogação, exclamação e pontuações essenciais.",
-            "icon": "✨",
-            "color": "#EC4899",
-            "chars": [
-                "Á",
-                "É",
-                "Í",
-                "Ó",
-                "Ú",
-                "Â",
-                "Ê",
-                "Ô",
-                "Ã",
-                "Õ",
-                "Ç",
-                "?",
-                "!",
-                ",",
-                "."
-            ],
-            "words": [
-                "Á",
-                "É",
-                "Í",
-                "Ó",
-                "Ú",
-                "NÃO",
-                "SIM!",
-                "OLÁ",
-                "VOVÔ",
-                "MAÇÃ",
-                "ATENÇÃO",
-                "VOCÊ?",
-                "BOM!",
-                "POR QUÊ?",
-                "JÁ",
-                "ATÉ",
-                "CAFÉ",
-                "PAPAI!",
-                "QUEM?"
-            ]
-        }
+    {
+      "text": "luas",
+      "type": "cosmos",
+      "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
+    },
+    {
+      "text": "ceu",
+      "type": "cosmos",
+      "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
+    },
+    {
+      "text": "raio",
+      "type": "fenomeno",
+      "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
+    },
+    {
+      "text": "halo",
+      "type": "cosmos",
+      "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
+    },
+    {
+      "text": "eixo",
+      "type": "cosmos",
+      "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
+    },
+    {
+      "text": "fase",
+      "type": "fenomeno",
+      "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
+    },
+    {
+      "text": "onda",
+      "type": "fenomeno",
+      "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
+    },
+    {
+      "text": "nave",
+      "type": "tech",
+      "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
+    },
+    {
+      "text": "nova",
+      "type": "fenomeno",
+      "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
+    },
+    {
+      "text": "alvo",
+      "type": "tech",
+      "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
+    },
+    {
+      "text": "dado",
+      "type": "tech",
+      "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
+    },
+    {
+      "text": "breu",
+      "type": "cosmos",
+      "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
+    },
+    {
+      "text": "ano",
+      "type": "cosmos",
+      "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
+    },
+    {
+      "text": "vacuo",
+      "type": "cosmos",
+      "meaning": "Espaço desprovido de matéria ou ar onde reina a calmaria do cosmos"
+    },
+    {
+      "text": "astro",
+      "type": "cosmos",
+      "meaning": "Qualquer corpo celeste natural que habita o espaço cósmico infinito"
+    },
+    {
+      "text": "cosmo",
+      "type": "cosmos",
+      "meaning": "O universo ordenado, harmonioso e infinito em toda a sua vastidão física"
+    },
+    {
+      "text": "marte",
+      "type": "cosmos",
+      "meaning": "O quarto planeta a contar do sol, também conhecido como o Planeta Vermelho"
+    },
+    {
+      "text": "venus",
+      "type": "cosmos",
+      "meaning": "O segundo planeta do sistema solar, o astro mais brilhante do céu noturno"
+    },
+    {
+      "text": "terra",
+      "type": "cosmos",
+      "meaning": "Nosso planeta rochoso azul, único mundo conhecido com vida e oceanos líquidos"
+    },
+    {
+      "text": "solar",
+      "type": "cosmos",
+      "meaning": "Relativo ao Sol, à sua radiação térmica, vento solar e influência cósmica"
+    },
+    {
+      "text": "sonda",
+      "type": "tech",
+      "meaning": "Aeronave não tripulada lançada para explorar atmosferas e superfícies celestes"
+    },
+    {
+      "text": "radar",
+      "type": "tech",
+      "meaning": "Sistema de rastreamento por radiofrequência para mapear corpos no espaço"
+    },
+    {
+      "text": "magma",
+      "type": "natureza",
+      "meaning": "Rocha fundida em altíssima temperatura presente no manto de planetas rochosos"
+    },
+    {
+      "text": "nuvem",
+      "type": "cosmos",
+      "meaning": "Nuvem molecular densa de hidrogênio e poeira onde se formam novos astros"
+    },
+    {
+      "text": "plutao",
+      "type": "cosmos",
+      "meaning": "Planeta anão gelado localizado no Cinturão de Kuiper nos confins do sistema"
+    },
+    {
+      "text": "orbita",
+      "type": "cosmos",
+      "meaning": "Trajetória curva regular que um corpo celeste percorre ao redor de outro"
+    },
+    {
+      "text": "cometa",
+      "type": "cosmos",
+      "meaning": "Corpo celeste gelado que, ao se aproximar do Sol, desenvolve uma cauda brilhante"
+    },
+    {
+      "text": "pulsar",
+      "type": "cosmos",
+      "meaning": "Estrela de nêutrons magnética de rotação ultrarrápida que emite feixes regulares"
+    },
+    {
+      "text": "quasar",
+      "type": "cosmos",
+      "meaning": "Núcleo galáctico hiperluminoso e distante alimentado por buraco negro supermassivo"
+    },
+    {
+      "text": "corona",
+      "type": "cosmos",
+      "meaning": "Camada mais externa e rarefeita da atmosfera solar com milhões de graus"
+    },
+    {
+      "text": "meteoro",
+      "type": "cosmos",
+      "meaning": "Rastro luminoso produzido pelo atrito de um fragmento espacial na atmosfera"
+    },
+    {
+      "text": "optica",
+      "type": "tech",
+      "meaning": "Ciência da luz aplicada aos espelhos e lentes de telescópios espaciais"
+    },
+    {
+      "text": "espaco",
+      "type": "cosmos",
+      "meaning": "A imensa extensão tridimensional onde orbitam estrelas, planetas e galáxias"
+    },
+    {
+      "text": "aurora",
+      "type": "fenomeno",
+      "meaning": "Fenômeno luminoso na atmosfera polar causado pela interação do vento solar"
+    },
+    {
+      "text": "zenite",
+      "type": "cosmos",
+      "meaning": "Ponto imaginário na esfera celeste localizado exatamente acima do observador"
+    },
+    {
+      "text": "hubble",
+      "type": "tech",
+      "meaning": "Famoso telescópio espacial orbital que revolucionou a astronomia moderna"
+    },
+    {
+      "text": "poeira",
+      "type": "cosmos",
+      "meaning": "Micropartículas minerais interestelares dispersas pelos braços das galáxias"
+    },
+    {
+      "text": "buraco",
+      "type": "cosmos",
+      "meaning": "Região de distorção gravitacional extrema no continuum do espaço-tempo"
+    },
+    {
+      "text": "estrela",
+      "type": "cosmos",
+      "meaning": "Esfera colossal de plasma sustentada por reações de fusão nuclear em seu núcleo"
+    },
+    {
+      "text": "planeta",
+      "type": "cosmos",
+      "meaning": "Corpo celeste esférico que orbita uma estrela e limpou sua órbita de detritos"
+    },
+    {
+      "text": "galaxia",
+      "type": "cosmos",
+      "meaning": "Sistema astronômico massivo composto por bilhões de estrelas, gás e poeira"
+    },
+    {
+      "text": "galaxias",
+      "type": "cosmos",
+      "meaning": "Milhões de ilhas estelares gravitacionais espalhadas pela teia do universo"
+    },
+    {
+      "text": "universo",
+      "type": "cosmos",
+      "meaning": "A totalidade de toda a matéria, energia, espaço, tempo e leis cósmicas existentes"
+    },
+    {
+      "text": "nebulosa",
+      "type": "cosmos",
+      "meaning": "Imensa nuvem interestelar de gás e plasma iluminada por estrelas jovens"
+    },
+    {
+      "text": "gravidade",
+      "type": "fenomeno",
+      "meaning": "Força fundamental de atração mútua entre todos os corpos que possuem massa"
+    },
+    {
+      "text": "supernova",
+      "type": "fenomeno",
+      "meaning": "Explosão cataclísmica de uma estrela massiva ao final de sua evolução estelar"
+    },
+    {
+      "text": "astronauta",
+      "type": "tech",
+      "meaning": "Pessoa treinada profissionalmente para viajar e trabalhar no espaço sideral"
+    },
+    {
+      "text": "astronomia",
+      "type": "ciencia",
+      "meaning": "Ciência que estuda os corpos celestes, movimentos, evolução e o universo"
+    },
+    {
+      "text": "exoplaneta",
+      "type": "cosmos",
+      "meaning": "Planeta que orbita uma estrela fora do nosso sistema solar planetário"
+    },
+    {
+      "text": "exoplanetas",
+      "type": "cosmos",
+      "meaning": "Mundos extrassolares orbitando sóis distantes em outras regiões da galáxia"
+    },
+    {
+      "text": "satelite",
+      "type": "tech",
+      "meaning": "Corpo natural ou artificial que orbita ao redor de um planeta ou estrela"
+    },
+    {
+      "text": "constelacao",
+      "type": "cosmos",
+      "meaning": "Agrupamento aparente de estrelas que formam desenhos na abóbada celeste"
+    },
+    {
+      "text": "telescopio",
+      "type": "tech",
+      "meaning": "Instrumento óptico fundamental para observar e analisar corpos astronômicos"
+    },
+    {
+      "text": "astronave",
+      "type": "tech",
+      "meaning": "Nave espacial interplanetária projetada para navegar em missões distantes"
+    },
+    {
+      "text": "atmosfera",
+      "type": "cosmos",
+      "meaning": "Camada de gases que envolve um corpo celeste retida por sua gravidade"
+    },
+    {
+      "text": "magnetosfera",
+      "type": "fenomeno",
+      "meaning": "Escudo magnético que defende um planeta contra a radiação do vento solar"
+    },
+    {
+      "text": "radiacao",
+      "type": "fenomeno",
+      "meaning": "Energia propagada pelo espaço na forma de ondas ou partículas subatômicas"
+    },
+    {
+      "text": "espectro",
+      "type": "ciencia",
+      "meaning": "Decomposição da luz em seus diferentes comprimentos de onda e frequências"
+    },
+    {
+      "text": "andromeda",
+      "type": "cosmos",
+      "meaning": "A galáxia espiral gigante mais próxima de nossa própria Via Láctea"
+    },
+    {
+      "text": "heliosfera",
+      "type": "cosmos",
+      "meaning": "Vasta bolha no espaço inflada pelo vento solar além da órbita dos planetas"
+    },
+    {
+      "text": "antimateria",
+      "type": "ciencia",
+      "meaning": "Matéria composta por antipartículas que se aniquilam ao tocar matéria comum"
+    },
+    {
+      "text": "singularidade",
+      "type": "cosmos",
+      "meaning": "Ponto de densidade infinita no coração de um buraco negro onde a física colapsa"
+    },
+    {
+      "text": "multiverso",
+      "type": "cosmos",
+      "meaning": "Hipótese cosmológica de múltiplos universos coexistindo em dimensões paralelas"
+    },
+    {
+      "text": "ano-luz",
+      "type": "ciencia",
+      "meaning": "Distância colossal percorrida por um fóton de luz no vácuo durante um ano terrestre"
+    },
+    {
+      "text": "buraco-negro",
+      "type": "cosmos",
+      "meaning": "Região cósmica com gravidade tão avassaladora que nem a própria luz consegue escapar"
+    },
+    {
+      "text": "poeira-estelar",
+      "type": "cosmos",
+      "meaning": "Detritos e cinzas de supernovas que semeiam a matéria de novos mundos e luas"
+    },
+    {
+      "text": "materia-escura",
+      "type": "cosmos",
+      "meaning": "Forma invisível de matéria cósmica que compõe a maior parte da massa galáctica"
+    },
+    {
+      "text": "energia-escura",
+      "type": "cosmos",
+      "meaning": "Força misteriosa e onipresente que acelera a expansão do universo observável"
+    },
+    {
+      "text": "buraco-de-minhoca",
+      "type": "cosmos",
+      "meaning": "Atalho teórico no tecido do espaço-tempo conectando dois pontos distantes"
+    },
+    {
+      "text": "velocidade-da-luz",
+      "type": "ciencia",
+      "meaning": "O limite cósmico de velocidade no vácuo de trezentos mil quilômetros por segundo"
+    },
+    {
+      "text": "estacao-espacial",
+      "type": "tech",
+      "meaning": "Base orbital habitável no vácuo onde cientistas realizam pesquisas cósmicas"
+    },
+    {
+      "text": "horizonte-de-eventos",
+      "type": "cosmos",
+      "meaning": "A fronteira limite de não retorno ao redor de um buraco negro no espaço"
+    },
+    {
+      "text": "via-lactea",
+      "type": "cosmos",
+      "meaning": "Nossa galáxia espiral natal contendo centenas de bilhões de estrelas e planetas"
     }
+  ],
+  "bossWords": {
+    "alien_dreadnought": [
+      {
+        "text": "sol",
+        "type": "cosmos",
+        "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
+      },
+      {
+        "text": "lua",
+        "type": "cosmos",
+        "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
+      },
+      {
+        "text": "luas",
+        "type": "cosmos",
+        "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
+      },
+      {
+        "text": "ceu",
+        "type": "cosmos",
+        "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
+      },
+      {
+        "text": "raio",
+        "type": "fenomeno",
+        "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
+      },
+      {
+        "text": "eixo",
+        "type": "cosmos",
+        "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
+      },
+      {
+        "text": "fase",
+        "type": "fenomeno",
+        "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
+      },
+      {
+        "text": "onda",
+        "type": "fenomeno",
+        "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
+      },
+      {
+        "text": "nave",
+        "type": "tech",
+        "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
+      },
+      {
+        "text": "nova",
+        "type": "fenomeno",
+        "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
+      },
+      {
+        "text": "alvo",
+        "type": "tech",
+        "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
+      },
+      {
+        "text": "dado",
+        "type": "tech",
+        "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
+      },
+      {
+        "text": "breu",
+        "type": "cosmos",
+        "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
+      },
+      {
+        "text": "ano",
+        "type": "cosmos",
+        "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
+      }
+    ],
+    "alien_hive": [
+      {
+        "text": "sol",
+        "type": "cosmos",
+        "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
+      },
+      {
+        "text": "lua",
+        "type": "cosmos",
+        "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
+      },
+      {
+        "text": "luas",
+        "type": "cosmos",
+        "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
+      },
+      {
+        "text": "ceu",
+        "type": "cosmos",
+        "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
+      },
+      {
+        "text": "raio",
+        "type": "fenomeno",
+        "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
+      },
+      {
+        "text": "eixo",
+        "type": "cosmos",
+        "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
+      },
+      {
+        "text": "fase",
+        "type": "fenomeno",
+        "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
+      },
+      {
+        "text": "onda",
+        "type": "fenomeno",
+        "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
+      },
+      {
+        "text": "nave",
+        "type": "tech",
+        "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
+      },
+      {
+        "text": "nova",
+        "type": "fenomeno",
+        "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
+      },
+      {
+        "text": "alvo",
+        "type": "tech",
+        "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
+      },
+      {
+        "text": "dado",
+        "type": "tech",
+        "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
+      },
+      {
+        "text": "breu",
+        "type": "cosmos",
+        "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
+      },
+      {
+        "text": "ano",
+        "type": "cosmos",
+        "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
+      }
+    ],
+    "alien_psionic": [
+      {
+        "text": "sol",
+        "type": "cosmos",
+        "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
+      },
+      {
+        "text": "lua",
+        "type": "cosmos",
+        "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
+      },
+      {
+        "text": "luas",
+        "type": "cosmos",
+        "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
+      },
+      {
+        "text": "ceu",
+        "type": "cosmos",
+        "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
+      },
+      {
+        "text": "raio",
+        "type": "fenomeno",
+        "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
+      },
+      {
+        "text": "eixo",
+        "type": "cosmos",
+        "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
+      },
+      {
+        "text": "fase",
+        "type": "fenomeno",
+        "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
+      },
+      {
+        "text": "onda",
+        "type": "fenomeno",
+        "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
+      },
+      {
+        "text": "nave",
+        "type": "tech",
+        "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
+      },
+      {
+        "text": "nova",
+        "type": "fenomeno",
+        "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
+      },
+      {
+        "text": "alvo",
+        "type": "tech",
+        "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
+      },
+      {
+        "text": "dado",
+        "type": "tech",
+        "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
+      },
+      {
+        "text": "breu",
+        "type": "cosmos",
+        "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
+      },
+      {
+        "text": "ano",
+        "type": "cosmos",
+        "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
+      }
+    ],
+    "alien_warlord": [
+      {
+        "text": "sol",
+        "type": "cosmos",
+        "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
+      },
+      {
+        "text": "lua",
+        "type": "cosmos",
+        "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
+      },
+      {
+        "text": "luas",
+        "type": "cosmos",
+        "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
+      },
+      {
+        "text": "ceu",
+        "type": "cosmos",
+        "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
+      },
+      {
+        "text": "raio",
+        "type": "fenomeno",
+        "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
+      },
+      {
+        "text": "eixo",
+        "type": "cosmos",
+        "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
+      },
+      {
+        "text": "fase",
+        "type": "fenomeno",
+        "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
+      },
+      {
+        "text": "onda",
+        "type": "fenomeno",
+        "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
+      },
+      {
+        "text": "nave",
+        "type": "tech",
+        "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
+      },
+      {
+        "text": "nova",
+        "type": "fenomeno",
+        "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
+      },
+      {
+        "text": "alvo",
+        "type": "tech",
+        "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
+      },
+      {
+        "text": "dado",
+        "type": "tech",
+        "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
+      },
+      {
+        "text": "breu",
+        "type": "cosmos",
+        "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
+      },
+      {
+        "text": "ano",
+        "type": "cosmos",
+        "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
+      }
+    ],
+    "alien_darkmatter": [
+      {
+        "text": "sol",
+        "type": "cosmos",
+        "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
+      },
+      {
+        "text": "lua",
+        "type": "cosmos",
+        "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
+      },
+      {
+        "text": "luas",
+        "type": "cosmos",
+        "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
+      },
+      {
+        "text": "ceu",
+        "type": "cosmos",
+        "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
+      },
+      {
+        "text": "raio",
+        "type": "fenomeno",
+        "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
+      },
+      {
+        "text": "eixo",
+        "type": "cosmos",
+        "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
+      },
+      {
+        "text": "fase",
+        "type": "fenomeno",
+        "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
+      },
+      {
+        "text": "onda",
+        "type": "fenomeno",
+        "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
+      },
+      {
+        "text": "nave",
+        "type": "tech",
+        "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
+      },
+      {
+        "text": "nova",
+        "type": "fenomeno",
+        "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
+      },
+      {
+        "text": "alvo",
+        "type": "tech",
+        "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
+      },
+      {
+        "text": "dado",
+        "type": "tech",
+        "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
+      },
+      {
+        "text": "breu",
+        "type": "cosmos",
+        "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
+      },
+      {
+        "text": "ano",
+        "type": "cosmos",
+        "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
+      }
+    ],
+    "alien_mothership": [
+      {
+        "text": "sol",
+        "type": "cosmos",
+        "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
+      },
+      {
+        "text": "lua",
+        "type": "cosmos",
+        "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
+      },
+      {
+        "text": "luas",
+        "type": "cosmos",
+        "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
+      },
+      {
+        "text": "ceu",
+        "type": "cosmos",
+        "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
+      },
+      {
+        "text": "raio",
+        "type": "fenomeno",
+        "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
+      },
+      {
+        "text": "eixo",
+        "type": "cosmos",
+        "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
+      },
+      {
+        "text": "fase",
+        "type": "fenomeno",
+        "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
+      },
+      {
+        "text": "onda",
+        "type": "fenomeno",
+        "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
+      },
+      {
+        "text": "nave",
+        "type": "tech",
+        "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
+      },
+      {
+        "text": "nova",
+        "type": "fenomeno",
+        "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
+      },
+      {
+        "text": "alvo",
+        "type": "tech",
+        "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
+      },
+      {
+        "text": "dado",
+        "type": "tech",
+        "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
+      },
+      {
+        "text": "breu",
+        "type": "cosmos",
+        "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
+      },
+      {
+        "text": "ano",
+        "type": "cosmos",
+        "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
+      }
+    ],
+    "robot": [
+      {
+        "text": "sol",
+        "type": "cosmos",
+        "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
+      },
+      {
+        "text": "lua",
+        "type": "cosmos",
+        "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
+      },
+      {
+        "text": "luas",
+        "type": "cosmos",
+        "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
+      },
+      {
+        "text": "ceu",
+        "type": "cosmos",
+        "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
+      },
+      {
+        "text": "raio",
+        "type": "fenomeno",
+        "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
+      },
+      {
+        "text": "eixo",
+        "type": "cosmos",
+        "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
+      },
+      {
+        "text": "fase",
+        "type": "fenomeno",
+        "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
+      },
+      {
+        "text": "onda",
+        "type": "fenomeno",
+        "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
+      },
+      {
+        "text": "nave",
+        "type": "tech",
+        "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
+      },
+      {
+        "text": "nova",
+        "type": "fenomeno",
+        "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
+      },
+      {
+        "text": "alvo",
+        "type": "tech",
+        "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
+      },
+      {
+        "text": "dado",
+        "type": "tech",
+        "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
+      },
+      {
+        "text": "breu",
+        "type": "cosmos",
+        "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
+      },
+      {
+        "text": "ano",
+        "type": "cosmos",
+        "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
+      }
+    ],
+    "beast": [
+      {
+        "text": "sol",
+        "type": "cosmos",
+        "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
+      },
+      {
+        "text": "lua",
+        "type": "cosmos",
+        "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
+      },
+      {
+        "text": "luas",
+        "type": "cosmos",
+        "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
+      },
+      {
+        "text": "ceu",
+        "type": "cosmos",
+        "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
+      },
+      {
+        "text": "raio",
+        "type": "fenomeno",
+        "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
+      },
+      {
+        "text": "eixo",
+        "type": "cosmos",
+        "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
+      },
+      {
+        "text": "fase",
+        "type": "fenomeno",
+        "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
+      },
+      {
+        "text": "onda",
+        "type": "fenomeno",
+        "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
+      },
+      {
+        "text": "nave",
+        "type": "tech",
+        "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
+      },
+      {
+        "text": "nova",
+        "type": "fenomeno",
+        "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
+      },
+      {
+        "text": "alvo",
+        "type": "tech",
+        "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
+      },
+      {
+        "text": "dado",
+        "type": "tech",
+        "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
+      },
+      {
+        "text": "breu",
+        "type": "cosmos",
+        "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
+      },
+      {
+        "text": "ano",
+        "type": "cosmos",
+        "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
+      }
+    ],
+    "mythology": [
+      {
+        "text": "sol",
+        "type": "cosmos",
+        "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
+      },
+      {
+        "text": "lua",
+        "type": "cosmos",
+        "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
+      },
+      {
+        "text": "luas",
+        "type": "cosmos",
+        "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
+      },
+      {
+        "text": "ceu",
+        "type": "cosmos",
+        "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
+      },
+      {
+        "text": "raio",
+        "type": "fenomeno",
+        "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
+      },
+      {
+        "text": "eixo",
+        "type": "cosmos",
+        "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
+      },
+      {
+        "text": "fase",
+        "type": "fenomeno",
+        "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
+      },
+      {
+        "text": "onda",
+        "type": "fenomeno",
+        "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
+      },
+      {
+        "text": "nave",
+        "type": "tech",
+        "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
+      },
+      {
+        "text": "nova",
+        "type": "fenomeno",
+        "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
+      },
+      {
+        "text": "alvo",
+        "type": "tech",
+        "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
+      },
+      {
+        "text": "dado",
+        "type": "tech",
+        "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
+      },
+      {
+        "text": "breu",
+        "type": "cosmos",
+        "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
+      },
+      {
+        "text": "ano",
+        "type": "cosmos",
+        "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
+      }
+    ],
+    "volcano": [
+      {
+        "text": "sol",
+        "type": "cosmos",
+        "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
+      },
+      {
+        "text": "lua",
+        "type": "cosmos",
+        "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
+      },
+      {
+        "text": "luas",
+        "type": "cosmos",
+        "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
+      },
+      {
+        "text": "ceu",
+        "type": "cosmos",
+        "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
+      },
+      {
+        "text": "raio",
+        "type": "fenomeno",
+        "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
+      },
+      {
+        "text": "eixo",
+        "type": "cosmos",
+        "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
+      },
+      {
+        "text": "fase",
+        "type": "fenomeno",
+        "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
+      },
+      {
+        "text": "onda",
+        "type": "fenomeno",
+        "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
+      },
+      {
+        "text": "nave",
+        "type": "tech",
+        "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
+      },
+      {
+        "text": "nova",
+        "type": "fenomeno",
+        "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
+      },
+      {
+        "text": "alvo",
+        "type": "tech",
+        "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
+      },
+      {
+        "text": "dado",
+        "type": "tech",
+        "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
+      },
+      {
+        "text": "breu",
+        "type": "cosmos",
+        "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
+      },
+      {
+        "text": "ano",
+        "type": "cosmos",
+        "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
+      }
+    ],
+    "ocean": [
+      {
+        "text": "sol",
+        "type": "cosmos",
+        "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
+      },
+      {
+        "text": "lua",
+        "type": "cosmos",
+        "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
+      },
+      {
+        "text": "luas",
+        "type": "cosmos",
+        "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
+      },
+      {
+        "text": "ceu",
+        "type": "cosmos",
+        "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
+      },
+      {
+        "text": "raio",
+        "type": "fenomeno",
+        "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
+      },
+      {
+        "text": "eixo",
+        "type": "cosmos",
+        "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
+      },
+      {
+        "text": "fase",
+        "type": "fenomeno",
+        "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
+      },
+      {
+        "text": "onda",
+        "type": "fenomeno",
+        "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
+      },
+      {
+        "text": "nave",
+        "type": "tech",
+        "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
+      },
+      {
+        "text": "nova",
+        "type": "fenomeno",
+        "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
+      },
+      {
+        "text": "alvo",
+        "type": "tech",
+        "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
+      },
+      {
+        "text": "dado",
+        "type": "tech",
+        "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
+      },
+      {
+        "text": "breu",
+        "type": "cosmos",
+        "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
+      },
+      {
+        "text": "ano",
+        "type": "cosmos",
+        "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
+      }
+    ],
+    "cosmos": [
+      {
+        "text": "sol",
+        "type": "cosmos",
+        "meaning": "Estrela central do nosso sistema solar que provê luz, calor e energia gravitacional"
+      },
+      {
+        "text": "lua",
+        "type": "cosmos",
+        "meaning": "Satélite natural que orbita a Terra e influencia as marés oceânicas"
+      },
+      {
+        "text": "luas",
+        "type": "cosmos",
+        "meaning": "Satélites naturais rochosos ou de gelo que orbitam planetas e asteroides"
+      },
+      {
+        "text": "ceu",
+        "type": "cosmos",
+        "meaning": "Abóbada celeste visível da superfície onde vemos estrelas e constelações"
+      },
+      {
+        "text": "raio",
+        "type": "fenomeno",
+        "meaning": "Emissão concentrada de energia eletromagnética ou feixe luminoso estelar"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Anel luminoso difuso de gás e estrelas ao redor de corpos celestes e galáxias"
+      },
+      {
+        "text": "eixo",
+        "type": "cosmos",
+        "meaning": "Linha imaginária ao redor da qual um planeta ou astro realiza sua rotação"
+      },
+      {
+        "text": "fase",
+        "type": "fenomeno",
+        "meaning": "Aspecto aparente da porção iluminada de uma lua ou planeta vista da Terra"
+      },
+      {
+        "text": "onda",
+        "type": "fenomeno",
+        "meaning": "Propagação ondulatória de energia como ondas gravitacionais no tecido cósmico"
+      },
+      {
+        "text": "nave",
+        "type": "tech",
+        "meaning": "Veículo de exploração aeroespacial tripulado ou autônomo entre planetas"
+      },
+      {
+        "text": "nova",
+        "type": "fenomeno",
+        "meaning": "Explosão estelar termonuclear brilhante que aumenta subitamente de luminosidade"
+      },
+      {
+        "text": "alvo",
+        "type": "tech",
+        "meaning": "Destino orbital ou astro selecionado para navegação e sondas de exploração"
+      },
+      {
+        "text": "dado",
+        "type": "tech",
+        "meaning": "Informações de telemetria científica coletadas por satélites e radiotelescópios"
+      },
+      {
+        "text": "breu",
+        "type": "cosmos",
+        "meaning": "A escuridão profunda e sem reflexo dos abismos interestelares distantes"
+      },
+      {
+        "text": "ano",
+        "type": "cosmos",
+        "meaning": "Tempo que um planeta leva para completar uma translação completa em sua órbita"
+      }
+    ]
+  },
+  "trainingWorlds": {
+    "1": {
+      "id": 1,
+      "name": "Mundo 1: Linha Base",
+      "subtitle": "Linha central (A S D F G H J K L Ç)",
+      "desc": "Memória muscular da linha central de repouso dos dedos (mão esquerda ASDF, mão direita JKLÇ).",
+      "icon": "🖐️",
+      "color": "#38BDF8",
+      "chars": [
+        "A",
+        "S",
+        "D",
+        "F",
+        "G",
+        "H",
+        "J",
+        "K",
+        "L",
+        "Ç"
+      ],
+      "words": [
+        "AS",
+        "DA",
+        "FA",
+        "LA",
+        "JA",
+        "HA",
+        "FADA",
+        "GALA",
+        "SALA",
+        "FALA",
+        "ALFA",
+        "HAJA",
+        "DADA",
+        "FALAS",
+        "SALAS",
+        "ADAGA",
+        "ALFAMA",
+        "CASAL"
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "Mundo 2: Linha Superior",
+      "subtitle": "Linha superior (Q W E R T Y U I O P)",
+      "desc": "Extensão para a linha superior treinando o alcance com indicadores, médios e anelares.",
+      "icon": "⬆️",
+      "color": "#F59E0B",
+      "chars": [
+        "Q",
+        "W",
+        "E",
+        "R",
+        "T",
+        "Y",
+        "U",
+        "I",
+        "O",
+        "P"
+      ],
+      "words": [
+        "RE",
+        "TO",
+        "PO",
+        "WE",
+        "QUI",
+        "TRE",
+        "PATO",
+        "ROTO",
+        "TOPO",
+        "PERA",
+        "REDE",
+        "POTE",
+        "QUERO",
+        "PORTA",
+        "TERRA",
+        "PIPO",
+        "TIPO",
+        "ROUPA",
+        "TORRE",
+        "PRATO"
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "Mundo 3: Linha Inferior",
+      "subtitle": "Linha inferior (Z X C V B N M)",
+      "desc": "Alcance para a linha inferior com agilidade e coordenação motora fina.",
+      "icon": "⬇️",
+      "color": "#10B981",
+      "chars": [
+        "Z",
+        "X",
+        "C",
+        "V",
+        "B",
+        "N",
+        "M"
+      ],
+      "words": [
+        "ZA",
+        "CA",
+        "VA",
+        "BA",
+        "NA",
+        "MA",
+        "BOM",
+        "VEM",
+        "NOZ",
+        "VEZ",
+        "BOLA",
+        "MESA",
+        "ZEBRA",
+        "NAVIO",
+        "CAMINHO",
+        "ZONA",
+        "VOZ",
+        "BARCO",
+        "NUVEM",
+        "VENTO"
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "Mundo 4: Acentos & Pontuações",
+      "subtitle": "Acentos e pontuações (Á Ê Õ ? ! , .)",
+      "desc": "Domínio de teclas de acentuação gráfica, interrogação, exclamação e pontuações essenciais.",
+      "icon": "✨",
+      "color": "#EC4899",
+      "chars": [
+        "Á",
+        "É",
+        "Í",
+        "Ó",
+        "Ú",
+        "Â",
+        "Ê",
+        "Ô",
+        "Ã",
+        "Õ",
+        "Ç",
+        "?",
+        "!",
+        ",",
+        "."
+      ],
+      "words": [
+        "Á",
+        "É",
+        "Í",
+        "Ó",
+        "Ú",
+        "NÃO",
+        "SIM!",
+        "OLÁ",
+        "VOVÔ",
+        "MAÇÃ",
+        "ATENÇÃO",
+        "VOCÊ?",
+        "BOM!",
+        "POR QUÊ?",
+        "JÁ",
+        "ATÉ",
+        "CAFÉ",
+        "PAPAI!",
+        "QUEM?"
+      ]
+    }
+  }
 }

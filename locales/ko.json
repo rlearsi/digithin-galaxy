@@ -1,1843 +1,1848 @@
 {
-    "ui": {
-        "app_title": "Digitinho Galaxy.",
-        "app_subtitle": "단어가 블랙홀에 삼켜지기 전에 우주 키보드를 마스터하세요",
-        "rules_title": "게임 방법 & 룬 규칙",
-        "rule_typing": "<strong>키보드 타이핑:</strong> 글자, 음절, 단어가 화면 바닥에 닿기 전에 입력하세요",
-        "rule_wildcard": "<strong>와일드카드 단어:</strong> 화면의 모든 룬을 한 번에 파괴하고 점수를 흡수합니다",
-        "rule_spells": "<strong>숫자키 1~8 (또는 클릭):</strong> 슬로우, 빙결, 간격 확장, 쉴드 및 파워 마법 발동",
-        "rule_combo": "<strong>콤보 & 퓨리 모드:</strong> 실수 없는 연속 입력 시 점수가 최대 8배까지 증가합니다",
-        "rule_danger": "<strong>생명 & 위험:</strong> 바닥에 근접한 룬은 빨간색으로 깜빡이며 낙하 시 생명을 잃습니다",
-        "btn_start": "플레이",
-        "btn_training": "트레이닝 모드 (키보드 열)",
-        "btn_zen": "젠 모드 (무한 생명)",
-        "btn_timeattack": "타임어택 (60초)",
-        "btn_library": "라이브러리",
-        "btn_achievements": "업적",
-        "btn_settings": "설정",
-        "btn_shop": "코스믹 숍",
-        "btn_skills_inventory": "스킬",
-        "skills_inventory_title": "코스믹 아스널",
-        "skills_inventory_sub": "상점에서 구매한 영구 스킬 목록",
-        "skills_inventory_empty": "아직 보유한 스킬이 없습니다. 코스믹 숍에서 무기를 장착하세요!",
-        "skills_inventory_stock": "보유 수량: ×{count}",
-        "start_record_label": "기록:",
-        "start_high_score": "최고 기록: {score}",
-        "shop_btn_reroll": "다시 뽑기",
-        "shop_reroll_cost": "{cost}",
-        "hud_infinite_mode": "인피니트 아케이드",
-        "hud_coin_farm_progress": "다음 코인까지: {current} / {target} 단어",
-        "badge_new_label": "신규",
-        "badge_new_word": "이번 게임의 새로운 단어",
-        "fb_coin_farmed": "+1 코스믹 코인 파밍 성공!",
-        "start_game_modes": "게임 모드",
-        "btn_classic_short": "클래식",
-        "btn_training_short": "트레이닝",
-        "btn_training_desc": "키보드 열 연습",
-        "btn_zen_short": "젠 모드",
-        "btn_zen_desc": "생명 감소 없음",
-        "btn_timeattack_short": "타임어택",
-        "btn_timeattack_desc": "60초 질주",
-        "btn_rules": "게임 방법",
-        "btn_close_rules": "확인",
-        "hud_phase": "단계",
-        "hud_zen_badge": "젠 모드: 생명 감소 없음",
-        "hud_training_badge": "트레이닝 모드: 생명 감소 없음",
-        "hud_training_lesson": "레슨",
-        "hud_zen_lbl": "젠 모드",
-        "hud_training_lbl": "트레이닝",
-        "hud_free": "자유",
-        "hud_zen_pill": "생명 감소 없음",
-        "hud_zen_pill_title": "젠 모드에서는 생명을 잃지 않고 자유롭게 연습할 수 있습니다",
-        "hud_training_pill_title": "트레이닝 모드에서는 생명을 잃지 않고 정확도와 근육 기억을 기를 수 있습니다",
-        "hud_lives": "생명",
-        "hud_accuracy": "정확도",
-        "hud_wpm": "타수",
-        "hud_combo": "콤보",
-        "hud_upcoming": "다음 단어",
-        "hud_new_word_badge": "새로운 단어",
-        "hud_spells": "스킬",
-        "hud_active": "활성",
-        "hud_sec": "초",
-        "pause_title": "게임 일시정지",
-        "pause_hint": "<kbd>ESC</kbd>를 눌러 계속",
-        "pause_resume": "계속하기",
-        "pause_library": "라이브러리",
-        "pause_achievements": "업적",
-        "pause_settings": "설정",
-        "pause_training_menu": "훈련 메뉴로 돌아가기",
-        "pause_main_menu": "메인 메뉴로 돌아가기",
-        "confirm_exit_to_menu": "획득한 코인은 유지되지만, 이번 경기 중 획득한 스킬은 사라집니다.",
-        "confirm_exit_title": "메인 메뉴로 돌아가시겠습니까?",
-        "confirm_exit_cancel": "계속 플레이",
-        "confirm_exit_confirm": "예, 메뉴로 돌아가기",
-        "countdown_hint": "손가락을 준비하세요!",
-        "countdown_go": "출발!",
-        "modal_performance": "성과",
-        "modal_phase_complete": "스테이지 {phase} 완료!",
-        "modal_press_continue": "ENTER 또는 스페이스를 눌러 계속",
-        "modal_btn_continue": "계속하기 ➔",
-        "modal_btn_shop": "상점으로",
-        "modal_stat_score": "점수",
-        "modal_stat_accuracy": "정확도",
-        "modal_stat_wpm": "타수",
-        "modal_stat_combo": "최대 콤보",
-        "modal_stat_discovered": "새로 발견한 단어",
-        "go_title": "게임 오버",
-        "go_sub": "당신의 룬 여정이 끝났습니다",
-        "go_score": "매치 점수",
-        "go_best_score": "최고 기록",
-        "go_new_record_tag": "신기록!",
-        "go_final_score": "최종 점수",
-        "go_phase_reached": "도달 스테이지",
-        "go_best_combo": "최고 콤보",
-        "go_avg_accuracy": "정확도",
-        "go_coins_earned": "총 획득 코인",
-        "go_hits_errors": "적중 / 오류",
-        "go_discovered_words": "발견한 단어",
-        "go_use_continue": "컨티뉴 사용 ({n})",
-        "go_revive_continue": "부활하여 계속 ({n})",
-        "go_play_again": "다시 플레이",
-        "go_main_menu": "메인 메뉴",
-        "victory_title": "위대한 승리!",
-        "victory_desc": "축하합니다! 룬 키보드를 완벽하게 마스터하셨습니다!",
-        "victory_play_again": "다시 시작",
-        "shop_title": "스킬 상점",
-        "shop_sub": "우주 여정을 위한 영구 스킬을 획득하세요",
-        "shop_points": "보유 포인트:",
-        "shop_coins": "보유 코인:",
-        "shop_btn_buy": "구매",
-        "shop_btn_owned": "보유중",
-        "shop_available": "구매 가능",
-        "shop_btn_close": "닫기",
-        "shop_confirm_exit_title": "상점을 나가시겠습니까?",
-        "shop_confirm_exit_desc": "정말 상점을 나가시겠습니까?",
-        "shop_confirm_stay": "상점에 머무르기",
-        "shop_confirm_leave": "메인 메뉴로 돌아가기",
-        "shop_insufficient_pts": "포인트가 부족합니다!",
-        "shop_insufficient_coins": "코인이 부족합니다!",
-        "skill_name_freezer": "빙결",
-        "skill_desc_freezer": "2분마다 10초 동안 트랙 위의 모든 룬을 얼립니다",
-        "skill_name_bomb": "폭탄",
-        "skill_desc_bomb": "90초마다 화면 내 룬을 파괴하는 우주 폭발을 일으킵니다",
-        "skill_name_shield": "룬 쉴드",
-        "skill_desc_shield": "2분마다 10초 동안 룬 낙하 및 오타 페널티를 방어합니다",
-        "skill_name_vortex": "소용돌이",
-        "skill_desc_vortex": "3분마다 중앙에 소용돌이가 열려 화면의 모든 룬을 빨아들입니다",
-        "skill_name_slowdown": "슬로우 모션",
-        "skill_desc_slowdown": "1분마다 15초 동안 룬 낙하 속도를 50% 감소시킵니다",
-        "skill_name_haste": "더블 포인트",
-        "skill_desc_haste": "30초마다 10초 동안 획득 점수가 2배가 됩니다",
-        "skill_name_dilation": "간격 확장",
-        "skill_desc_dilation": "룬의 출현 간격과 거리를 최대 {max}배까지 넓힙니다",
-        "skill_name_autodestroy": "코스믹 에코",
-        "skill_desc_autodestroy": "1분마다 10초 동안 이번 런에서 학습한 단어를 자동 파괴합니다",
-        "boss_reward_extralife": "+1 생명",
-        "boss_reward_extralife_desc": "현재 런의 생명을 1개 회복하거나 추가합니다",
-        "boss_reward_continue": "이어하기 토큰",
-        "boss_reward_continue_desc": "모든 생명을 잃었을 때 즉시 부활할 수 있습니다",
-        "boss_reward_coins_100": "+100 코인",
-        "boss_reward_coins_100_desc": "금고에 우주 코인 +100개를 즉시 획득합니다",
-        "hud_level": "레벨",
-        "hud_run_perks": "활성 능력",
-        "hud_perks_empty": "아직 획득한 능력이 없습니다.<br/>레벨업하여 해금하세요!",
-        "levelup_title": "레벨 업!",
-        "levelup_sub": "레벨 {level}에 도달했습니다!",
-        "levelup_prompt": "이번 런에서 활성화할 능력 1개를 선택하세요:",
-        "levelup_btn_pick": "선택",
-        "fb_dilation_upgraded": "간격 확장이 최대 {max}배로 강화되었습니다!",
-        "lib_title": "룬 라이브러리",
-        "lib_sub": "발견한 단어 모음집",
-        "lib_discovered": "발견한 단어",
-        "lib_locked": "잠김",
-        "lib_typed": "입력됨 {count}회",
-        "lib_not_typed": "미입력",
-        "lib_btn_close": "닫기",
-        "ach_title": "업적 & 휘장",
-        "ach_sub": "타이핑 속도와 정확도 기록",
-        "ach_counter": "{unlocked} / {total} 달성",
-        "ach_btn_close": "닫기",
-        "ach_status_unlocked": "✓ 달성됨",
-        "ach_status_locked": "잠김",
-        "ach_goal_reached": "목표 달성",
-        "ach_unit_words": "단어",
-        "ach_unit_streak": "회",
-        "ach_unit_combo": "콤보",
-        "ach_dedo_veloz_name": "날렵한 손가락",
-        "ach_dedo_veloz_desc": "60 WPM에 도달하세요.",
-        "ach_cirurgico_name": "외과의사",
-        "ach_cirurgico_desc": "100% 정확도로 단계를 완료하세요.",
-        "ach_colecionador_name": "수집가",
-        "ach_colecionador_desc": "라이브러리의 모든 단어를 해금하세요.",
-        "ach_mestre_combo_name": "콤보 마스터",
-        "ach_mestre_combo_desc": "30연속 적중을 달성하세요.",
-        "ach_modo_furia_name": "퓨리 모드",
-        "ach_modo_furia_desc": "15연속 적중으로 퓨리 모드를 발동하세요.",
-        "ach_mestre_tipo_name": "타이핑 마스터",
-        "ach_mestre_tipo_desc": "단어 100개를 완전히 완성하세요.",
-        "settings_title": "설정",
-        "settings_sub": "게임 및 인터페이스 조정",
-        "settings_sound": "효과음",
-        "settings_sound_on": "켜짐",
-        "settings_sound_off": "음소거",
-        "settings_queue": "대기열 위치",
-        "settings_queue_top": "상단",
-        "settings_queue_bottom": "하단",
-        "settings_theme": "인터페이스 테마",
-        "settings_theme_dark": "다크",
-        "settings_theme_light": "라이트",
-        "settings_boss": "보스전",
-        "settings_boss_on": "8단계마다 (활성)",
-        "settings_boss_off": "비활성",
-        "settings_test_boss": "보스전 테스트",
-        "settings_face_boss": "보스와 대결",
-        "settings_lang": "언어",
-        "settings_difficulty": "난이도",
-        "settings_diff_locked_match": "게임 진행 중에는 난이도를 변경할 수 없습니다",
-        "diff_easy": "쉬움",
-        "diff_normal": "보통",
-        "diff_hard": "어려움",
-        "diff_desc_easy": "초기 속도 0.5배 • 오타 가속 없음 • 게이지 감소 없음 • 라이프 5개",
-        "diff_desc_normal": "초기 속도 1.0배 • 오타 가속 없음 • 일반 게이지 감소 • 라이프 3개",
-        "diff_desc_hard": "초기 속도 1.5배 • 오타 시 +0.05배 가속 • 일반 게이지 감소 • 라이프 3개",
-        "settings_cat_general": "일반 및 인터페이스",
-        "settings_cat_boss": "보스 전투",
-        "settings_cat_about": "앱 정보",
-        "settings_version": "현재 버전",
-        "settings_author": "제작자",
-        "settings_btn_check_update": "확인",
-        "settings_update_latest": "최신 상태",
-        "update_available_title": "새로운 업데이트를 사용할 수 있습니다!",
-        "update_available_sub": "캐시를 지우고 최신 버전을 불러오려면 클릭하세요",
-        "update_btn_action": "업데이트",
-        "update_applying": "업데이트 중...",
-        "settings_btn_back": "뒤로가기",
-        "training_title": "트레이닝: 키보드 열",
-        "training_sub": "자판을 보지 않고 근육 기억을 키우세요",
-        "training_notice": "이 연습 모드에서는 <strong>생명을 잃지 않습니다</strong>. 오타 발생 시 <strong>정확도 %</strong>와 <strong>타수</strong>가 감소합니다.",
-        "training_btn_back": "뒤로가기",
-        "training_btn_start": "훈련 시작 (3레슨) →",
-        "training_btn_again": "다시 훈련",
-        "training_completed": "완료 (숙련)",
-        "training_pending": "3레슨",
-        "training_record_acc": "최고 기록: {acc}% 정확도",
-        "boss_defeated_title": "보스 격파!",
-        "boss_defeated_sub": "룬의 시련을 훌륭하게 통과했습니다.",
-        "boss_defeated_prompt": "영구 보너스 스킬을 1개 선택하세요:",
-        "boss_btn_pick": "획득",
-        "boss_pick_skill": "획득",
-        "boss_default_name": "보스",
-        "fb_combo_broken": "콤보 종료!",
-        "fb_fury_activated": "퓨리 모드 발동! 점수 2배!",
-        "fb_bomb_activated": "폭탄 발동 (10초)!",
-        "fb_bomb_expired": "폭탄 종료",
-        "fb_bomb_explosion": "대폭발 ({lines}줄 파괴)! +{pts}",
-        "fb_freezer_activated": "빙결 발동 (10초)!",
-        "fb_freezer_expired": "빙결 종료",
-        "fb_shield_activated": "룬 쉴드 발동 (10초)!",
-        "fb_shield_expired": "쉴드 종료",
-        "fb_shield_blocked": "룬 쉴드가 피해를 막았습니다!",
-        "fb_shield_error_protected": "쉴드가 입력 실수를 보호했습니다!",
-        "fb_vortex_activated": "소용돌이 발동 (10초)!",
-        "fb_vortex_expired": "소용돌이 종료",
-        "fb_slowdown_activated": "슬로우 발동 (15초)!",
-        "fb_slowdown_expired": "슬로우 종료",
-        "fb_slow_activated": "슬로우 발동 (15초)!",
-        "fb_slow_expired": "슬로우 종료",
-        "fb_haste_activated": "점수 2배 발동 (15초)!",
-        "fb_haste_expired": "점수 2배 종료",
-        "fb_dilation_activated": "간격 확장 (45초)!",
-        "fb_dilation_expired": "간격 확장 종료",
-        "fb_speedlock_activated": "속도 고정 (1.0x / 60초)!",
-        "fb_speedlock_expired": "속도 고정 종료",
-        "fb_autodestroy_activated": "코스믹 오토 클리어 활성화 (60초)!",
-        "fb_autodestroy_expired": "코스믹 오토 클리어 종료",
-        "fb_autodestroy_shattered": "⚡ 자동 파괴: {word}! +{pts}",
-        "fb_wildcard": "와일드카드! 모든 룬 흡수! +{pts}",
-        "fb_life_recovered": "생명 +1 회복!",
-        "fb_perfect": "완벽!",
-        "hud_performance": "성능 대시보드",
-        "hud_total_score": "총 점수",
-        "hud_hits": "적중",
-        "hud_errors": "오류",
-        "hud_discovered_words": "발견된 단어",
-        "hud_view_all": "모두 보기",
-        "hud_spells_hint": "상점에서 구매<br/>또는 단어 완성",
-        "hud_activate_kb": "발동 (키보드)",
-        "hud_key_label": "키",
-        "hud_max_phase": "최고 단계",
-        "modal_unlocked_words": "잠금 해제된 단어",
-        "modal_btn_next_phase": "다음 단계 →",
-        "modal_btn_back_training": "훈련 메뉴로 돌아가기",
-        "shop_note": "구매할 때마다 가격이 상승합니다",
-        "shop_btn_continue": "계속 플레이",
-        "btn_back_to_game": "게임으로 돌아가기",
-        "app_loading": "룬 데이터 로딩 중...",
-        "fb_runic_dropped_zen": "⚠️ 룬이 떨어졌습니다 (-정확도)",
-        "fb_runic_dropped": "💔 룬이 떨어졌습니다!",
-        "fb_time_up": "⏱️ 시간 종료!",
-        "fb_boss_enigma_dropped": "💥 수수께끼가 떨어졌습니다! 보스가 공격했습니다!",
-        "fb_ice_cleared": "❄️ 화면 클리어 — 빙결 해제!",
-        "fb_error_letter": "❌ 잘못된 글자입니다!",
-        "fb_error": "❌ 오류",
-        "fb_wildcard_clean": "💥 와일드카드! 전체 클리어!",
-        "fb_training_completed": "🎉 축하합니다! 모든 트레이닝 월드를 완료했습니다!",
-        "fb_continue_used": "🪙 컨티뉴 사용! 페이즈 재개 중...",
-        "fb_permanent_life": "+1 영구 생명 증가!",
-        "fb_continue_obtained": "🪙 +1 컨티뉴 토큰 획득!",
-        "shop_all_words_unlocked": "모든 단어가 이미 발견되었습니다!",
-        "hud_skills_empty_hint": "상점에서 구매<br/>또는 단어 완성 <strong>⚡</strong>",
-        "training_lesson_1_title": "레슨 1: 키 인식",
-        "training_lesson_2_title": "레슨 2: 손가락 교대",
-        "training_lesson_3_title": "레슨 3: 마스터리 챌린지",
-        "training_lesson_1_name": "기본 키",
-        "training_lesson_2_name": "교대",
-        "training_lesson_3_name": "최종 도전",
-        "training_next_obj_2": "다음 목표: 키를 조합하여 짧은 단어를 만들고 양손을 교대로 사용합니다.",
-        "training_next_obj_3": "다음 목표: 완전한 단어로 유창성과 숙련도를 테스트하는 최종 도전!",
-        "training_new_record": "신기록 달성!",
-        "training_world_mastered": "월드 정복",
-        "training_mastery_completed": "{world} — 마스터 완료!",
-        "training_lesson_completed": "{world} — {lesson} 완료!",
-        "training_rank_s": "완벽한 정밀도",
-        "training_rank_a": "뛰어난 유창성",
-        "training_rank_b": "양호한 제어",
-        "training_rank_c": "연습 필요",
-        "training_stat_world_progress": "월드 진행도",
-        "training_stat_lesson_done": "레슨 {lesson}/3 완료",
-        "training_stat_accuracy_rate": "정확도 비율",
-        "training_stat_status": "트레이닝 현황",
-        "training_stat_completed": "100% 완료 (3/3 레슨)",
-        "training_stat_keys": "마스터한 키",
-        "training_stat_accuracy": "이번 게임 정확도",
-        "training_stat_best_record": "최고 기록 (정확도)",
-        "training_stat_speed": "실제 속도 (WPM)",
-        "training_stat_hits_errors": "성공 / 오류",
-        "training_hits_errs_val": "{hits}회 성공 / {errors}회 오류",
-        "training_btn_next_world": "{world}(으)로 이동 →",
-        "training_btn_finish_all": "모든 트레이닝 완료! →",
-        "training_btn_next_lesson": "레슨 {lesson}(으)로 이동 (룬 {runics}개) →",
-        "fb_boss_defeated": "{boss} 처치! +350 코인!",
-        "modal_phase_pts": "페이즈 획득 점수",
-        "modal_acc_bonus": "정확도 보너스 ({acc}%)",
-        "modal_penalty": "오류 (페널티)",
-        "modal_net_pts": "순 추가 점수",
-        "modal_total_pts": "총 점수",
-        "modal_combo_bonus": "최대 콤보 보너스 ({combo}×)",
-        "modal_phase_total_pts": "총 획득 점수",
-        "modal_section_score": "점수 요약",
-        "modal_section_coins": "획득 코인",
-        "modal_coins_completion": "스테이지 완료",
-        "modal_boss_bonus": "보스 보너스",
-        "modal_coins_precision": "100% 정확도 보너스",
-        "modal_coins_streak": "무실수 연속 완료 ({streak} 페이즈)",
-        "modal_coins_phase_total": "획득 코인 합계",
-        "modal_coins_balance": "보유 코인 잔액",
-        "hud_coins": "코인",
-        "hud_boss_hp": "보스 HP",
-        "fb_skill_acquired": "⚡ 스킬: {skill}!",
-        "fb_vortex_devour": "🌀 소용돌이가 {text} 을(를) 삼켰습니다! +{pts}",
-        "fb_enigma_solved": "💥 수수께끼 해결! 보스 HP -1! (+{pts}점)",
-        "fb_reward_granted": "보상 획득: {reward}!",
-        "queue_top": "상단",
-        "queue_bottom": "하단",
-        "queue_toggle_to_bottom": "상단 대기열 (클릭하여 하단으로 이동)",
-        "queue_toggle_to_top": "하단 대기열 (클릭하여 상단으로 이동)",
-        "theme_switch_to_light": "밝은 테마로 전환",
-        "theme_switch_to_dark": "어두운 테마로 전환",
-        "boss_enigma_badge": "📜 수수께끼 {num} / {total} • {scenario}",
-        "boss_enigma_letters": "{count}글자",
-        "boss_enigma_queue": "수수께끼 {num} / 3",
-        "boss_level_tag": " (Lv. {level})",
-        "boss_cyber_titan_name": "허공의 지배자 자이라리온",
-        "boss_cyber_titan_title": "외계 선봉 사령관",
-        "boss_cyber_titan_scenario": "카이퍼 벨트 (태양계 경계)",
-        "boss_cyber_titan_scenario_desc": "자이라리온의 외계 드레드노트 함대가 태양계를 침공하기 위해 진입했습니다!",
-        "boss_cyber_titan_badge": "외계인 • 드레드노트",
-        "boss_cyber_titan_lore": "침공 함대의 총사령관이자 스텔라 플라즈마 병기의 지배자.",
-        "boss_feral_apex_name": "궤도의 정복자 조르콘",
-        "boss_feral_apex_title": "생체기계 군집 군주",
-        "boss_feral_apex_scenario": "해왕성 궤도",
-        "boss_feral_apex_scenario_desc": "조르콘의 유기 생체 군집선이 태양계의 가스 행성들을 포위했습니다!",
-        "boss_feral_apex_badge": "외계인 • 하이브",
-        "boss_feral_apex_lore": "우주 함대마저 삼켜버리는 생체 기계 군집 의식을 통제합니다.",
-        "boss_arcane_chimera_name": "반물질의 여제 베스페라",
-        "boss_arcane_chimera_title": "외계 사이오닉 지배자",
-        "boss_arcane_chimera_scenario": "토성의 고리",
-        "boss_arcane_chimera_scenario_desc": "베스페라가 반물질 포격을 가해 태양계의 중력 방벽을 파괴하려 합니다!",
-        "boss_arcane_chimera_badge": "외계인 • 사이오닉",
-        "boss_arcane_chimera_lore": "암흑 에너지와 은하계 사이오닉 폭풍을 자유자재로 다룹니다.",
-        "boss_abyssal_leviathan_name": "암흑물질의 전령 네뷸러",
-        "boss_abyssal_leviathan_title": "우주 그림자 실체",
-        "boss_abyssal_leviathan_scenario": "목성 궤도",
-        "boss_abyssal_leviathan_scenario_desc": "네뷸러가 목성의 자기장을 왜곡하며 지구 최종 공격을 준비하고 있습니다!",
-        "boss_abyssal_leviathan_badge": "외계인 • 섀도우",
-        "boss_abyssal_leviathan_lore": "시공간 변칙과 특이점 중력을 조종하는 우주적 존재.",
-        "boss_cosmic_chronos_name": "은하 최고 지성 제노아",
-        "boss_cosmic_chronos_title": "침공 중추 오버마인드",
-        "boss_cosmic_chronos_scenario": "지구 달 궤도",
-        "boss_cosmic_chronos_scenario_desc": "제노아의 거대한 외계 모선이 달 궤도에 자리잡고 지구 최종 침공을 시작했습니다!",
-        "boss_cosmic_chronos_badge": "외계인 • 모선",
-        "boss_cosmic_chronos_lore": "태양계 침공을 총괄하는 외계 최고 지성 중추.",
-        "boss_magma_vulcanus_name": "함대 파괴자 크라그토르",
-        "boss_magma_vulcanus_title": "외계 군벌 장군",
-        "boss_magma_vulcanus_scenario": "소행성대",
-        "boss_magma_vulcanus_scenario_desc": "크라그토르의 거대 장갑전함이 소행성을 부수며 지구로 향하는 길을 뚫고 있습니다!",
-        "boss_magma_vulcanus_badge": "외계인 • 워로드",
-        "boss_magma_vulcanus_lore": "반물질 분해 병기를 장착한 중장갑 외계 침략 전사.",
-        "btn_continue": "게임 이어하기",
-        "btn_new_game": "새 게임",
-        "btn_new_game_desc": "공유 코인으로 처음부터 시작",
-        "btn_save_slots": "저장 슬롯",
-        "slots_title": "저장 슬롯",
-        "slots_sub": "진행 상황을 관리하거나 새 게임을 시작하세요",
-        "lbl_highscore": "최고 점수",
-        "lbl_shared_coins": "코인",
-        "lbl_highcoins": "최다 코인",
-        "slot_number": "슬롯 {slot}",
-        "slot_in_progress": "진행 중",
-        "slot_empty": "비어 있음",
-        "slot_empty_desc": "저장된 게임이 없습니다. 공유 코인으로 새로 시작하세요!",
-        "slot_btn_continue": "이어하기",
-        "slot_btn_new": "새 게임",
-        "slot_btn_delete": "삭제",
-        "slot_confirm_overwrite": "슬롯 {slot}을(를) 덮어쓰고 새 게임을 시작하시겠습니까? 기존 진행 상황이 대체됩니다.",
-        "slot_confirm_delete": "슬롯 {slot}의 저장된 게임을 삭제하시겠습니까?",
-        "fb_game_saved": "게임 진행 상황이 저장되었습니다!",
-        "fb_game_resumed": "페이즈 {phase}부터 게임이 재개되었습니다!",
-        "slots_shared_wallet": "공유 코인 보관소",
-        "slots_close": "닫기",
-        "slot_phase_score": "페이즈 {phase} • {score}점",
-        "slot_date_fmt": "저장: {date}",
-        "confirm_new_game_title": "새 게임을 시작하시겠습니까?",
-        "confirm_new_game_desc": "진행 중인 저장 게임이 있습니다. 새 게임을 시작하면 슬롯 {slot}을(를) 덮어씁니다. 공유 코인은 계속 사용할 수 있습니다!",
-        "settings_finger_guide": "손가락 시각 가이드",
-        "settings_finger_guide_always": "항상 활성화 (기본값)",
-        "settings_finger_guide_training": "연습 전용",
-        "settings_finger_guide_off": "비활성화",
-        "vk_space": "스페이스",
-        "finger_guide_title": "손가락 가이드",
-        "finger_ready": "기본 자리",
-        "finger_space_bar": "스페이스",
-        "hand_left": "왼손",
-        "hand_right": "오른손",
-        "hand_both": "양손",
-        "finger_l_pinky": "왼손 새끼손가락",
-        "finger_l_ring": "왼손 약지",
-        "finger_l_middle": "왼손 중지",
-        "finger_l_index": "왼손 검지",
-        "finger_l_thumb": "왼손 엄지",
-        "finger_r_thumb": "오른손 엄지",
-        "finger_r_index": "오른손 검지",
-        "finger_r_middle": "오른손 중지",
-        "finger_r_ring": "오른손 약지",
-        "finger_r_pinky": "오른손 새끼손가락",
-        "finger_thumb": "엄지손가락",
-        "footer_privacy": "개인정보 처리방침",
-        "btn_privacy": "개인정보",
-        "settings_privacy": "개인정보 및 데이터",
-        "settings_view_privacy": "정책 보기",
-        "privacy_title": "개인정보 처리방침 및 투명성",
-        "privacy_sub": "데이터 처리, 브라우저 로컬 저장소 및 GitHub Pages 인프라 안내",
-        "privacy_btn_open_page": "전체 페이지 열기",
-        "btn_close_privacy": "확인",
-        "privacy_badge_nocollect": "데이터 수집 없음",
-        "privacy_badge_local": "100% 로컬 저장",
-        "privacy_badge_github": "GitHub Pages 호스팅",
-        "privacy_badge_lgpd": "LGPD 및 ANPD 준수",
-        "privacy_sec_collection_title": "1. Digitinho Galaxy의 개인정보 수집 없음",
-        "privacy_sec_collection_desc": "Digitinho Galaxy는 플레이어의 브라우저에서 전적으로 실행되는 정적 클라이언트 측 웹 게임입니다. 자체 백엔드 서버, 원격 데이터베이스, 가입 양식 또는 사용자 계정 시스템이 없습니다. 이름, 이메일, 문서 번호, 전화번호 등 어떠한 개인정보도 요구, 수집, 처리 또는 판매하지 않습니다.",
-        "privacy_sec_storage_title": "2. 기기 내 로컬 저장소 (HTML5 LocalStorage)",
-        "privacy_sec_storage_desc": "점수, 세이브 슬롯, 단어 도감, 달성 업적, 사운드 설정, 난이도 및 인터페이스 테마를 포함한 모든 게임 진행 상황은 이용자 브라우저의 로컬 저장소(localStorage)에만 보관됩니다. 이 정보는 기기 외부로 전송되지 않으며, 브라우저 설정이나 게임 내 세이브 슬롯 관리에서 언제든지 영구 삭제할 수 있습니다.",
-        "privacy_sec_hosting_title": "3. 호스팅 인프라 및 GitHub Pages 기술 로그",
-        "privacy_sec_hosting_desc": "Digitinho Galaxy는 GitHub Pages(GitHub, Inc. / Microsoft 운영)에 정적 웹사이트로 호스팅됩니다. 접속 시 GitHub 서버는 GitHub 개인정보 처리방침에 따라 보안, 인프라 보호 및 어뷰징 방지를 위해 IP 주소, 요청 시간, 브라우저 식별자(user-agent) 등의 기술적 연결 로그를 기록할 수 있습니다. Digitinho Galaxy 개발자는 원시 IP 로그에 접근할 수 없으며 이를 통해 이용자를 식별하거나 추적하지 않습니다.",
-        "privacy_sec_cookies_title": "4. 추적 쿠키 및 타사 분석 도구 미사용",
-        "privacy_sec_cookies_desc": "본 게임은 광고 쿠키, Google Analytics, 소셜 미디어 트래커 또는 타사 프로파일링 스크립트를 사용하지 않습니다. 타이핑 연습과 아케이드 게임 본연의 재미에 100% 집중되어 있습니다.",
-        "privacy_sec_lgpd_title": "5. 브라질 개인정보보호법(LGPD) 및 ANPD 지침 준수",
-        "privacy_sec_lgpd_desc": "브라질 일반개인정보보호법(LGPD, 법률 제13.709/2018호) 및 국가데이터보호청(ANPD) 지침에 따라 본 프로젝트는 목적 한정, 필요성 및 데이터 최소화 원칙을 엄격히 준수합니다. 개발자가 이용자의 개인정보를 처리하지 않으므로 개인정보의 판매, 공유 또는 제3자 이전은 전혀 발생하지 않습니다.",
-        "privacy_sec_opensource_title": "6. 오픈소스 및 투명성 검증",
-        "privacy_sec_opensource_desc": "Digitinho Galaxy는 MIT 라이선스에 따라 배포되는 오픈소스 프로젝트입니다. 누구나 GitHub에서 전체 소스코드를 열람하고 감사하여 숨겨진 트래커, 텔레메트리 또는 원격 데이터 수집이 전혀 없음을 직접 검증할 수 있습니다.",
-        "privacy_sec_links_title": "공식 출처 및 규제 법령 참조",
-        "privacy_link_github": "GitHub Pages: 작동 방식 및 IP 로깅 안내",
-        "privacy_link_anpd": "ANPD: 개인정보 개념 및 처리 주체 안내",
-        "privacy_link_lgpd": "LGPD — 브라질 일반개인정보보호법 (법률 제13.709/2018호)",
-        "privacy_back_game": "게임으로 돌아가기",
-        "privacy_updated": "최종 업데이트: 2026년 10월 • Digitinho Galaxy 타이핑 게임",
-        "privacy_page_title": "Digitinho Galaxy — 개인정보 처리방침 및 투명성",
-        "privacy_overview_title": "핵심 요약",
-        "privacy_contact_title": "문의 및 피드백",
-        "privacy_contact_desc": "본 프로젝트는 서버나 데이터 수집이 없는 클라이언트 측 오픈소스 프로젝트이므로 문의나 제안은 GitHub 저장소의 Issue를 통해 제출하실 수 있습니다.",
-        "boss_alien_xylarion_name": "허공의 지배자 자이라리온",
-        "boss_alien_xylarion_title": "외계 선봉 사령관",
-        "boss_alien_xylarion_scenario": "카이퍼 벨트 (태양계 경계)",
-        "boss_alien_xylarion_scenario_desc": "자이라리온의 외계 드레드노트 함대가 태양계를 침공하기 위해 진입했습니다!",
-        "boss_alien_xylarion_badge": "외계인 • 드레드노트",
-        "boss_alien_xylarion_lore": "침공 함대의 총사령관이자 스텔라 플라즈마 병기의 지배자.",
-        "boss_alien_zorkon_name": "궤도의 정복자 조르콘",
-        "boss_alien_zorkon_title": "생체기계 군집 군주",
-        "boss_alien_zorkon_scenario": "해왕성 궤도",
-        "boss_alien_zorkon_scenario_desc": "조르콘의 유기 생체 군집선이 태양계의 가스 행성들을 포위했습니다!",
-        "boss_alien_zorkon_badge": "외계인 • 하이브",
-        "boss_alien_zorkon_lore": "우주 함대마저 삼켜버리는 생체 기계 군집 의식을 통제합니다.",
-        "boss_alien_vespera_name": "반물질의 여제 베스페라",
-        "boss_alien_vespera_title": "외계 사이오닉 지배자",
-        "boss_alien_vespera_scenario": "토성의 고리",
-        "boss_alien_vespera_scenario_desc": "베스페라가 반물질 포격을 가해 태양계의 중력 방벽을 파괴하려 합니다!",
-        "boss_alien_vespera_badge": "외계인 • 사이오닉",
-        "boss_alien_vespera_lore": "암흑 에너지와 은하계 사이오닉 폭풍을 자유자재로 다룹니다.",
-        "boss_alien_kragthor_name": "함대 파괴자 크라그토르",
-        "boss_alien_kragthor_title": "외계 군벌 장군",
-        "boss_alien_kragthor_scenario": "소행성대",
-        "boss_alien_kragthor_scenario_desc": "크라그토르의 거대 장갑전함이 소행성을 부수며 지구로 향하는 길을 뚫고 있습니다!",
-        "boss_alien_kragthor_badge": "외계인 • 워로드",
-        "boss_alien_kragthor_lore": "반물질 분해 병기를 장착한 중장갑 외계 침략 전사.",
-        "boss_alien_nebulor_name": "암흑물질의 전령 네뷸러",
-        "boss_alien_nebulor_title": "우주 그림자 실체",
-        "boss_alien_nebulor_scenario": "목성 궤도",
-        "boss_alien_nebulor_scenario_desc": "네뷸러가 목성의 자기장을 왜곡하며 지구 최종 공격을 준비하고 있습니다!",
-        "boss_alien_nebulor_badge": "외계인 • 섀도우",
-        "boss_alien_nebulor_lore": "시공간 변칙과 특이점 중력을 조종하는 우주적 존재.",
-        "boss_alien_xenor_name": "은하 최고 지성 제노아",
-        "boss_alien_xenor_title": "침공 중추 오버마인드",
-        "boss_alien_xenor_scenario": "지구 달 궤도",
-        "boss_alien_xenor_scenario_desc": "제노아의 거대한 외계 모선이 달 궤도에 자리잡고 지구 최종 침공을 시작했습니다!",
-        "boss_alien_xenor_badge": "외계인 • 모선",
-        "boss_alien_xenor_lore": "태양계 침공을 총괄하는 외계 최고 지성 중추."
+  "ui": {
+    "app_title": "Digitinho Galaxy.",
+    "app_subtitle": "우주 키보드를 마스터하고 우주 잔해로부터 지구를 지키세요",
+    "rules_title": "게임 방법 & 룬 규칙",
+    "rule_typing": "<strong>키보드 타이핑:</strong> 글자, 음절, 단어가 화면 바닥에 닿기 전에 입력하세요",
+    "rule_wildcard": "<strong>와일드카드 단어:</strong> 화면의 모든 룬을 한 번에 파괴하고 점수를 흡수합니다",
+    "rule_spells": "<strong>숫자키 1~8 (또는 클릭):</strong> 슬로우, 빙결, 간격 확장, 쉴드 및 파워 마법 발동",
+    "rule_combo": "<strong>콤보 & 퓨리 모드:</strong> 실수 없는 연속 입력 시 점수가 최대 8배까지 증가합니다",
+    "rule_danger": "<strong>생명 & 위험:</strong> 바닥에 근접한 룬은 빨간색으로 깜빡이며 낙하 시 생명을 잃습니다",
+    "btn_start": "플레이",
+    "btn_training": "트레이닝 모드 (키보드 열)",
+    "btn_zen": "젠 모드 (무한 생명)",
+    "btn_timeattack": "타임어택 (60초)",
+    "btn_library": "라이브러리",
+    "btn_achievements": "업적",
+    "btn_settings": "설정",
+    "btn_shop": "코스믹 숍",
+    "btn_skills_inventory": "스킬",
+    "skills_inventory_title": "코스믹 아스널",
+    "skills_inventory_sub": "상점에서 구매한 영구 스킬 목록",
+    "skills_inventory_empty": "아직 보유한 스킬이 없습니다. 코스믹 숍에서 무기를 장착하세요!",
+    "skills_inventory_stock": "보유 수량: ×{count}",
+    "start_record_label": "기록:",
+    "start_high_score": "최고 기록: {score}",
+    "shop_btn_reroll": "다시 뽑기",
+    "shop_reroll_cost": "{cost}",
+    "hud_infinite_mode": "인피니트 아케이드",
+    "hud_coin_farm_progress": "다음 코인까지: {current} / {target} 단어",
+    "badge_new_label": "신규",
+    "badge_new_word": "이번 게임의 새로운 단어",
+    "fb_coin_farmed": "+1 코스믹 코인 파밍 성공!",
+    "start_game_modes": "게임 모드",
+    "btn_classic_short": "클래식",
+    "btn_training_short": "트레이닝",
+    "btn_training_desc": "키보드 열 연습",
+    "btn_zen_short": "젠 모드",
+    "btn_zen_desc": "생명 감소 없음",
+    "btn_timeattack_short": "타임어택",
+    "btn_timeattack_desc": "60초 질주",
+    "btn_rules": "게임 방법",
+    "btn_close_rules": "확인",
+    "hud_phase": "단계",
+    "hud_zen_badge": "젠 모드: 생명 감소 없음",
+    "hud_training_badge": "트레이닝 모드: 생명 감소 없음",
+    "hud_training_lesson": "레슨",
+    "hud_zen_lbl": "젠 모드",
+    "hud_training_lbl": "트레이닝",
+    "hud_free": "자유",
+    "hud_zen_pill": "생명 감소 없음",
+    "hud_zen_pill_title": "젠 모드에서는 생명을 잃지 않고 자유롭게 연습할 수 있습니다",
+    "hud_training_pill_title": "트레이닝 모드에서는 생명을 잃지 않고 정확도와 근육 기억을 기를 수 있습니다",
+    "hud_lives": "생명",
+    "hud_accuracy": "정확도",
+    "hud_wpm": "타수",
+    "hud_combo": "콤보",
+    "hud_upcoming": "다음 단어",
+    "hud_new_word_badge": "새로운 단어",
+    "hud_spells": "스킬",
+    "hud_active": "활성",
+    "hud_sec": "초",
+    "pause_title": "게임 일시정지",
+    "pause_hint": "<kbd>ESC</kbd>를 눌러 계속",
+    "pause_resume": "계속하기",
+    "pause_library": "라이브러리",
+    "pause_achievements": "업적",
+    "pause_settings": "설정",
+    "pause_training_menu": "훈련 메뉴로 돌아가기",
+    "pause_main_menu": "메인 메뉴로 돌아가기",
+    "confirm_exit_to_menu": "획득한 코인은 유지되지만, 이번 경기 중 획득한 스킬은 사라집니다.",
+    "confirm_exit_title": "메인 메뉴로 돌아가시겠습니까?",
+    "confirm_exit_cancel": "계속 플레이",
+    "confirm_exit_confirm": "예, 메뉴로 돌아가기",
+    "countdown_hint": "손가락을 준비하세요!",
+    "countdown_go": "출발!",
+    "modal_performance": "성과",
+    "modal_phase_complete": "스테이지 {phase} 완료!",
+    "modal_press_continue": "ENTER 또는 스페이스를 눌러 계속",
+    "modal_btn_continue": "계속하기 ➔",
+    "modal_btn_shop": "상점으로",
+    "modal_stat_score": "점수",
+    "modal_stat_accuracy": "정확도",
+    "modal_stat_wpm": "타수",
+    "modal_stat_combo": "최대 콤보",
+    "modal_stat_discovered": "새로 발견한 단어",
+    "go_title": "게임 오버",
+    "go_sub": "당신의 룬 여정이 끝났습니다",
+    "go_score": "매치 점수",
+    "go_best_score": "최고 기록",
+    "go_new_record_tag": "신기록!",
+    "go_final_score": "최종 점수",
+    "go_phase_reached": "도달 스테이지",
+    "go_best_combo": "최고 콤보",
+    "go_avg_accuracy": "정확도",
+    "go_coins_earned": "총 획득 코인",
+    "go_hits_errors": "적중 / 오류",
+    "go_discovered_words": "발견한 단어",
+    "go_use_continue": "컨티뉴 사용 ({n})",
+    "go_revive_continue": "부활하여 계속 ({n})",
+    "go_play_again": "다시 플레이",
+    "go_main_menu": "메인 메뉴",
+    "victory_title": "위대한 승리!",
+    "victory_desc": "축하합니다! 룬 키보드를 완벽하게 마스터하셨습니다!",
+    "victory_play_again": "다시 시작",
+    "shop_title": "스킬 상점",
+    "shop_sub": "우주 여정을 위한 영구 스킬을 획득하세요",
+    "shop_points": "보유 포인트:",
+    "shop_coins": "보유 코인:",
+    "shop_btn_buy": "구매",
+    "shop_btn_owned": "보유중",
+    "shop_available": "구매 가능",
+    "shop_btn_close": "닫기",
+    "shop_confirm_exit_title": "상점을 나가시겠습니까?",
+    "shop_confirm_exit_desc": "정말 상점을 나가시겠습니까?",
+    "shop_confirm_stay": "상점에 머무르기",
+    "shop_confirm_leave": "메인 메뉴로 돌아가기",
+    "shop_insufficient_pts": "포인트가 부족합니다!",
+    "shop_insufficient_coins": "코인이 부족합니다!",
+    "skill_name_freezer": "빙결",
+    "skill_desc_freezer": "2분마다 10초 동안 트랙 위의 모든 룬을 얼립니다",
+    "skill_name_bomb": "폭탄",
+    "skill_desc_bomb": "90초마다 화면 내 룬을 파괴하는 우주 폭발을 일으킵니다",
+    "skill_name_shield": "룬 쉴드",
+    "skill_desc_shield": "2분마다 10초 동안 룬 낙하 및 오타 페널티를 방어합니다",
+    "skill_name_vortex": "소용돌이",
+    "skill_desc_vortex": "3분마다 중앙에 소용돌이가 열려 화면의 모든 룬을 빨아들입니다",
+    "skill_name_slowdown": "슬로우 모션",
+    "skill_desc_slowdown": "1분마다 15초 동안 룬 낙하 속도를 50% 감소시킵니다",
+    "skill_name_haste": "더블 포인트",
+    "skill_desc_haste": "30초마다 10초 동안 획득 점수가 2배가 됩니다",
+    "skill_name_dilation": "간격 확장",
+    "skill_desc_dilation": "룬의 출현 간격과 거리를 최대 {max}배까지 넓힙니다",
+    "skill_name_autodestroy": "코스믹 에코",
+    "skill_desc_autodestroy": "1분마다 10초 동안 이번 런에서 학습한 단어를 자동 파괴합니다",
+    "boss_reward_extralife": "+1 생명",
+    "boss_reward_extralife_desc": "현재 런의 생명을 1개 회복하거나 추가합니다",
+    "boss_reward_continue": "이어하기 토큰",
+    "boss_reward_continue_desc": "모든 생명을 잃었을 때 즉시 부활할 수 있습니다",
+    "boss_reward_coins_100": "+100 코인",
+    "boss_reward_coins_100_desc": "금고에 우주 코인 +100개를 즉시 획득합니다",
+    "hud_level": "레벨",
+    "hud_run_perks": "활성 능력",
+    "hud_perks_empty": "아직 획득한 능력이 없습니다.<br/>레벨업하여 해금하세요!",
+    "levelup_title": "레벨 업!",
+    "levelup_sub": "레벨 {level}에 도달했습니다!",
+    "levelup_prompt": "이번 런에서 활성화할 능력 1개를 선택하세요:",
+    "levelup_btn_pick": "선택",
+    "fb_dilation_upgraded": "간격 확장이 최대 {max}배로 강화되었습니다!",
+    "lib_title": "룬 라이브러리",
+    "lib_sub": "발견한 단어 모음집",
+    "lib_discovered": "발견한 단어",
+    "lib_locked": "잠김",
+    "lib_typed": "입력됨 {count}회",
+    "lib_not_typed": "미입력",
+    "lib_btn_close": "닫기",
+    "ach_title": "업적 & 휘장",
+    "ach_sub": "타이핑 속도와 정확도 기록",
+    "ach_counter": "{unlocked} / {total} 달성",
+    "ach_btn_close": "닫기",
+    "ach_status_unlocked": "✓ 달성됨",
+    "ach_status_locked": "잠김",
+    "ach_goal_reached": "목표 달성",
+    "ach_unit_words": "단어",
+    "ach_unit_streak": "회",
+    "ach_unit_combo": "콤보",
+    "ach_dedo_veloz_name": "날렵한 손가락",
+    "ach_dedo_veloz_desc": "60 WPM에 도달하세요.",
+    "ach_cirurgico_name": "외과의사",
+    "ach_cirurgico_desc": "100% 정확도로 단계를 완료하세요.",
+    "ach_colecionador_name": "수집가",
+    "ach_colecionador_desc": "라이브러리의 모든 단어를 해금하세요.",
+    "ach_mestre_combo_name": "콤보 마스터",
+    "ach_mestre_combo_desc": "30연속 적중을 달성하세요.",
+    "ach_modo_furia_name": "퓨리 모드",
+    "ach_modo_furia_desc": "15연속 적중으로 퓨리 모드를 발동하세요.",
+    "ach_mestre_tipo_name": "타이핑 마스터",
+    "ach_mestre_tipo_desc": "단어 100개를 완전히 완성하세요.",
+    "settings_title": "설정",
+    "settings_sub": "게임 및 인터페이스 조정",
+    "settings_sound": "효과음",
+    "settings_sound_on": "켜짐",
+    "settings_sound_off": "음소거",
+    "settings_queue": "대기열 위치",
+    "settings_queue_top": "상단",
+    "settings_queue_bottom": "하단",
+    "settings_theme": "인터페이스 테마",
+    "settings_theme_dark": "다크",
+    "settings_theme_light": "라이트",
+    "settings_boss": "보스전",
+    "settings_boss_on": "8단계마다 (활성)",
+    "settings_boss_off": "비활성",
+    "settings_test_boss": "보스전 테스트",
+    "settings_face_boss": "보스와 대결",
+    "settings_lang": "언어",
+    "settings_difficulty": "난이도",
+    "settings_diff_locked_match": "게임 진행 중에는 난이도를 변경할 수 없습니다",
+    "diff_easy": "쉬움",
+    "diff_normal": "보통",
+    "diff_hard": "어려움",
+    "diff_desc_easy": "초기 속도 0.5배 • 오타 가속 없음 • 게이지 감소 없음 • 라이프 5개",
+    "diff_desc_normal": "초기 속도 1.0배 • 오타 가속 없음 • 일반 게이지 감소 • 라이프 3개",
+    "diff_desc_hard": "초기 속도 1.5배 • 오타 시 +0.05배 가속 • 일반 게이지 감소 • 라이프 3개",
+    "settings_cat_general": "일반 및 인터페이스",
+    "settings_cat_boss": "보스 전투",
+    "settings_cat_about": "앱 정보",
+    "settings_version": "현재 버전",
+    "settings_author": "제작자",
+    "settings_btn_check_update": "확인",
+    "settings_update_latest": "최신 상태",
+    "update_available_title": "새로운 업데이트를 사용할 수 있습니다!",
+    "update_available_sub": "캐시를 지우고 최신 버전을 불러오려면 클릭하세요",
+    "update_btn_action": "업데이트",
+    "update_applying": "업데이트 중...",
+    "settings_btn_back": "뒤로가기",
+    "training_title": "트레이닝: 키보드 열",
+    "training_sub": "자판을 보지 않고 근육 기억을 키우세요",
+    "training_notice": "이 연습 모드에서는 <strong>생명을 잃지 않습니다</strong>. 오타 발생 시 <strong>정확도 %</strong>와 <strong>타수</strong>가 감소합니다.",
+    "training_btn_back": "뒤로가기",
+    "training_btn_start": "훈련 시작 (3레슨) →",
+    "training_btn_again": "다시 훈련",
+    "training_completed": "완료 (숙련)",
+    "training_pending": "3레슨",
+    "training_record_acc": "최고 기록: {acc}% 정확도",
+    "boss_defeated_title": "보스 격파!",
+    "boss_defeated_sub": "룬의 시련을 훌륭하게 통과했습니다.",
+    "boss_defeated_prompt": "영구 보너스 스킬을 1개 선택하세요:",
+    "boss_btn_pick": "획득",
+    "boss_pick_skill": "획득",
+    "boss_default_name": "보스",
+    "fb_combo_broken": "콤보 종료!",
+    "fb_fury_activated": "퓨리 모드 발동! 점수 2배!",
+    "fb_bomb_activated": "폭탄 발동 (10초)!",
+    "fb_bomb_expired": "폭탄 종료",
+    "fb_bomb_explosion": "대폭발 ({lines}줄 파괴)! +{pts}",
+    "fb_freezer_activated": "빙결 발동 (10초)!",
+    "fb_freezer_expired": "빙결 종료",
+    "fb_shield_activated": "룬 쉴드 발동 (10초)!",
+    "fb_shield_expired": "쉴드 종료",
+    "fb_shield_blocked": "룬 쉴드가 피해를 막았습니다!",
+    "fb_shield_error_protected": "쉴드가 입력 실수를 보호했습니다!",
+    "fb_vortex_activated": "소용돌이 발동 (10초)!",
+    "fb_vortex_expired": "소용돌이 종료",
+    "fb_slowdown_activated": "슬로우 발동 (15초)!",
+    "fb_slowdown_expired": "슬로우 종료",
+    "fb_slow_activated": "슬로우 발동 (15초)!",
+    "fb_slow_expired": "슬로우 종료",
+    "fb_haste_activated": "점수 2배 발동 (15초)!",
+    "fb_haste_expired": "점수 2배 종료",
+    "fb_dilation_activated": "간격 확장 (45초)!",
+    "fb_dilation_expired": "간격 확장 종료",
+    "fb_speedlock_activated": "속도 고정 (1.0x / 60초)!",
+    "fb_speedlock_expired": "속도 고정 종료",
+    "fb_autodestroy_activated": "코스믹 오토 클리어 활성화 (60초)!",
+    "fb_autodestroy_expired": "코스믹 오토 클리어 종료",
+    "fb_autodestroy_shattered": "⚡ 자동 파괴: {word}! +{pts}",
+    "fb_wildcard": "와일드카드! 모든 룬 흡수! +{pts}",
+    "fb_life_recovered": "생명 +1 회복!",
+    "fb_perfect": "완벽!",
+    "hud_performance": "성능 대시보드",
+    "hud_total_score": "총 점수",
+    "hud_hits": "적중",
+    "hud_errors": "오류",
+    "hud_discovered_words": "발견된 단어",
+    "hud_view_all": "모두 보기",
+    "hud_spells_hint": "상점에서 구매<br/>또는 단어 완성",
+    "hud_activate_kb": "발동 (키보드)",
+    "hud_key_label": "키",
+    "hud_max_phase": "최고 단계",
+    "modal_unlocked_words": "잠금 해제된 단어",
+    "modal_btn_next_phase": "다음 단계 →",
+    "modal_btn_back_training": "훈련 메뉴로 돌아가기",
+    "shop_note": "구매할 때마다 가격이 상승합니다",
+    "shop_btn_continue": "계속 플레이",
+    "btn_back_to_game": "게임으로 돌아가기",
+    "app_loading": "룬 데이터 로딩 중...",
+    "fb_runic_dropped_zen": "⚠️ 룬이 떨어졌습니다 (-정확도)",
+    "fb_runic_dropped": "💔 룬이 떨어졌습니다!",
+    "fb_time_up": "⏱️ 시간 종료!",
+    "fb_boss_enigma_dropped": "💥 수수께끼가 떨어졌습니다! 보스가 공격했습니다!",
+    "fb_ice_cleared": "❄️ 화면 클리어 — 빙결 해제!",
+    "fb_error_letter": "❌ 잘못된 글자입니다!",
+    "fb_error": "❌ 오류",
+    "fb_wildcard_clean": "💥 와일드카드! 전체 클리어!",
+    "fb_training_completed": "🎉 축하합니다! 모든 트레이닝 월드를 완료했습니다!",
+    "fb_continue_used": "🪙 컨티뉴 사용! 페이즈 재개 중...",
+    "fb_permanent_life": "+1 영구 생명 증가!",
+    "fb_continue_obtained": "🪙 +1 컨티뉴 토큰 획득!",
+    "shop_all_words_unlocked": "모든 단어가 이미 발견되었습니다!",
+    "hud_skills_empty_hint": "상점에서 구매<br/>또는 단어 완성 <strong>⚡</strong>",
+    "training_lesson_1_title": "레슨 1: 키 인식",
+    "training_lesson_2_title": "레슨 2: 손가락 교대",
+    "training_lesson_3_title": "레슨 3: 마스터리 챌린지",
+    "training_lesson_1_name": "기본 키",
+    "training_lesson_2_name": "교대",
+    "training_lesson_3_name": "최종 도전",
+    "training_next_obj_2": "다음 목표: 키를 조합하여 짧은 단어를 만들고 양손을 교대로 사용합니다.",
+    "training_next_obj_3": "다음 목표: 완전한 단어로 유창성과 숙련도를 테스트하는 최종 도전!",
+    "training_new_record": "신기록 달성!",
+    "training_world_mastered": "월드 정복",
+    "training_mastery_completed": "{world} — 마스터 완료!",
+    "training_lesson_completed": "{world} — {lesson} 완료!",
+    "training_rank_s": "완벽한 정밀도",
+    "training_rank_a": "뛰어난 유창성",
+    "training_rank_b": "양호한 제어",
+    "training_rank_c": "연습 필요",
+    "training_stat_world_progress": "월드 진행도",
+    "training_stat_lesson_done": "레슨 {lesson}/3 완료",
+    "training_stat_accuracy_rate": "정확도 비율",
+    "training_stat_status": "트레이닝 현황",
+    "training_stat_completed": "100% 완료 (3/3 레슨)",
+    "training_stat_keys": "마스터한 키",
+    "training_stat_accuracy": "이번 게임 정확도",
+    "training_stat_best_record": "최고 기록 (정확도)",
+    "training_stat_speed": "실제 속도 (WPM)",
+    "training_stat_hits_errors": "성공 / 오류",
+    "training_hits_errs_val": "{hits}회 성공 / {errors}회 오류",
+    "training_btn_next_world": "{world}(으)로 이동 →",
+    "training_btn_finish_all": "모든 트레이닝 완료! →",
+    "training_btn_next_lesson": "레슨 {lesson}(으)로 이동 (룬 {runics}개) →",
+    "fb_boss_defeated": "{boss} 처치! +350 코인!",
+    "modal_phase_pts": "페이즈 획득 점수",
+    "modal_acc_bonus": "정확도 보너스 ({acc}%)",
+    "modal_penalty": "오류 (페널티)",
+    "modal_net_pts": "순 추가 점수",
+    "modal_total_pts": "총 점수",
+    "modal_combo_bonus": "최대 콤보 보너스 ({combo}×)",
+    "modal_phase_total_pts": "총 획득 점수",
+    "modal_section_score": "점수 요약",
+    "modal_section_coins": "획득 코인",
+    "modal_coins_completion": "스테이지 완료",
+    "modal_boss_bonus": "보스 보너스",
+    "modal_coins_precision": "100% 정확도 보너스",
+    "modal_coins_streak": "무실수 연속 완료 ({streak} 페이즈)",
+    "modal_coins_phase_total": "획득 코인 합계",
+    "modal_coins_balance": "보유 코인 잔액",
+    "hud_coins": "코인",
+    "hud_boss_hp": "보스 HP",
+    "fb_skill_acquired": "⚡ 스킬: {skill}!",
+    "fb_vortex_devour": "🌀 소용돌이가 {text} 을(를) 삼켰습니다! +{pts}",
+    "fb_enigma_solved": "💥 수수께끼 해결! 보스 HP -1! (+{pts}점)",
+    "fb_reward_granted": "보상 획득: {reward}!",
+    "queue_top": "상단",
+    "queue_bottom": "하단",
+    "queue_toggle_to_bottom": "상단 대기열 (클릭하여 하단으로 이동)",
+    "queue_toggle_to_top": "하단 대기열 (클릭하여 상단으로 이동)",
+    "theme_switch_to_light": "밝은 테마로 전환",
+    "theme_switch_to_dark": "어두운 테마로 전환",
+    "boss_enigma_badge": "📜 수수께끼 {num} / {total} • {scenario}",
+    "boss_enigma_letters": "{count}글자",
+    "boss_enigma_queue": "수수께끼 {num} / 3",
+    "boss_level_tag": " (Lv. {level})",
+    "boss_cyber_titan_name": "허공의 지배자 자이라리온",
+    "boss_cyber_titan_title": "외계 선봉 사령관",
+    "boss_cyber_titan_scenario": "카이퍼 벨트 (태양계 경계)",
+    "boss_cyber_titan_scenario_desc": "자이라리온의 외계 드레드노트 함대가 태양계를 침공하기 위해 진입했습니다!",
+    "boss_cyber_titan_badge": "외계인 • 드레드노트",
+    "boss_cyber_titan_lore": "침공 함대의 총사령관이자 스텔라 플라즈마 병기의 지배자.",
+    "boss_feral_apex_name": "궤도의 정복자 조르콘",
+    "boss_feral_apex_title": "생체기계 군집 군주",
+    "boss_feral_apex_scenario": "해왕성 궤도",
+    "boss_feral_apex_scenario_desc": "조르콘의 유기 생체 군집선이 태양계의 가스 행성들을 포위했습니다!",
+    "boss_feral_apex_badge": "외계인 • 하이브",
+    "boss_feral_apex_lore": "우주 함대마저 삼켜버리는 생체 기계 군집 의식을 통제합니다.",
+    "boss_arcane_chimera_name": "반물질의 여제 베스페라",
+    "boss_arcane_chimera_title": "외계 사이오닉 지배자",
+    "boss_arcane_chimera_scenario": "토성의 고리",
+    "boss_arcane_chimera_scenario_desc": "베스페라가 반물질 포격을 가해 태양계의 중력 방벽을 파괴하려 합니다!",
+    "boss_arcane_chimera_badge": "외계인 • 사이오닉",
+    "boss_arcane_chimera_lore": "암흑 에너지와 은하계 사이오닉 폭풍을 자유자재로 다룹니다.",
+    "boss_abyssal_leviathan_name": "암흑물질의 전령 네뷸러",
+    "boss_abyssal_leviathan_title": "우주 그림자 실체",
+    "boss_abyssal_leviathan_scenario": "목성 궤도",
+    "boss_abyssal_leviathan_scenario_desc": "네뷸러가 목성의 자기장을 왜곡하며 지구 최종 공격을 준비하고 있습니다!",
+    "boss_abyssal_leviathan_badge": "외계인 • 섀도우",
+    "boss_abyssal_leviathan_lore": "시공간 변칙과 특이점 중력을 조종하는 우주적 존재.",
+    "boss_cosmic_chronos_name": "은하 최고 지성 제노아",
+    "boss_cosmic_chronos_title": "침공 중추 오버마인드",
+    "boss_cosmic_chronos_scenario": "지구 달 궤도",
+    "boss_cosmic_chronos_scenario_desc": "제노아의 거대한 외계 모선이 달 궤도에 자리잡고 지구 최종 침공을 시작했습니다!",
+    "boss_cosmic_chronos_badge": "외계인 • 모선",
+    "boss_cosmic_chronos_lore": "태양계 침공을 총괄하는 외계 최고 지성 중추.",
+    "boss_magma_vulcanus_name": "함대 파괴자 크라그토르",
+    "boss_magma_vulcanus_title": "외계 군벌 장군",
+    "boss_magma_vulcanus_scenario": "소행성대",
+    "boss_magma_vulcanus_scenario_desc": "크라그토르의 거대 장갑전함이 소행성을 부수며 지구로 향하는 길을 뚫고 있습니다!",
+    "boss_magma_vulcanus_badge": "외계인 • 워로드",
+    "boss_magma_vulcanus_lore": "반물질 분해 병기를 장착한 중장갑 외계 침략 전사.",
+    "btn_continue": "게임 이어하기",
+    "btn_new_game": "새 게임",
+    "btn_new_game_desc": "공유 코인으로 처음부터 시작",
+    "btn_save_slots": "저장 슬롯",
+    "slots_title": "저장 슬롯",
+    "slots_sub": "진행 상황을 관리하거나 새 게임을 시작하세요",
+    "lbl_highscore": "최고 점수",
+    "lbl_shared_coins": "코인",
+    "lbl_highcoins": "최다 코인",
+    "slot_number": "슬롯 {slot}",
+    "slot_in_progress": "진행 중",
+    "slot_empty": "비어 있음",
+    "slot_empty_desc": "저장된 게임이 없습니다. 공유 코인으로 새로 시작하세요!",
+    "slot_btn_continue": "이어하기",
+    "slot_btn_new": "새 게임",
+    "slot_btn_delete": "삭제",
+    "slot_confirm_overwrite": "슬롯 {slot}을(를) 덮어쓰고 새 게임을 시작하시겠습니까? 기존 진행 상황이 대체됩니다.",
+    "slot_confirm_delete": "슬롯 {slot}의 저장된 게임을 삭제하시겠습니까?",
+    "fb_game_saved": "게임 진행 상황이 저장되었습니다!",
+    "fb_game_resumed": "페이즈 {phase}부터 게임이 재개되었습니다!",
+    "slots_shared_wallet": "공유 코인 보관소",
+    "slots_close": "닫기",
+    "slot_phase_score": "페이즈 {phase} • {score}점",
+    "slot_date_fmt": "저장: {date}",
+    "confirm_new_game_title": "새 게임을 시작하시겠습니까?",
+    "confirm_new_game_desc": "진행 중인 저장 게임이 있습니다. 새 게임을 시작하면 슬롯 {slot}을(를) 덮어씁니다. 공유 코인은 계속 사용할 수 있습니다!",
+    "settings_finger_guide": "손가락 시각 가이드",
+    "settings_finger_guide_always": "항상 활성화 (기본값)",
+    "settings_finger_guide_training": "연습 전용",
+    "settings_finger_guide_off": "비활성화",
+    "vk_space": "스페이스",
+    "finger_guide_title": "손가락 가이드",
+    "finger_ready": "기본 자리",
+    "finger_space_bar": "스페이스",
+    "hand_left": "왼손",
+    "hand_right": "오른손",
+    "hand_both": "양손",
+    "finger_l_pinky": "왼손 새끼손가락",
+    "finger_l_ring": "왼손 약지",
+    "finger_l_middle": "왼손 중지",
+    "finger_l_index": "왼손 검지",
+    "finger_l_thumb": "왼손 엄지",
+    "finger_r_thumb": "오른손 엄지",
+    "finger_r_index": "오른손 검지",
+    "finger_r_middle": "오른손 중지",
+    "finger_r_ring": "오른손 약지",
+    "finger_r_pinky": "오른손 새끼손가락",
+    "finger_thumb": "엄지손가락",
+    "footer_privacy": "개인정보 처리방침",
+    "btn_privacy": "개인정보",
+    "settings_privacy": "개인정보 및 데이터",
+    "settings_view_privacy": "정책 보기",
+    "privacy_title": "개인정보 처리방침 및 투명성",
+    "privacy_sub": "데이터 처리, 브라우저 로컬 저장소 및 GitHub Pages 인프라 안내",
+    "privacy_btn_open_page": "전체 페이지 열기",
+    "btn_close_privacy": "확인",
+    "privacy_badge_nocollect": "데이터 수집 없음",
+    "privacy_badge_local": "100% 로컬 저장",
+    "privacy_badge_github": "GitHub Pages 호스팅",
+    "privacy_badge_lgpd": "LGPD 및 ANPD 준수",
+    "privacy_sec_collection_title": "1. Digitinho Galaxy의 개인정보 수집 없음",
+    "privacy_sec_collection_desc": "Digitinho Galaxy는 플레이어의 브라우저에서 전적으로 실행되는 정적 클라이언트 측 웹 게임입니다. 자체 백엔드 서버, 원격 데이터베이스, 가입 양식 또는 사용자 계정 시스템이 없습니다. 이름, 이메일, 문서 번호, 전화번호 등 어떠한 개인정보도 요구, 수집, 처리 또는 판매하지 않습니다.",
+    "privacy_sec_storage_title": "2. 기기 내 로컬 저장소 (HTML5 LocalStorage)",
+    "privacy_sec_storage_desc": "점수, 세이브 슬롯, 단어 도감, 달성 업적, 사운드 설정, 난이도 및 인터페이스 테마를 포함한 모든 게임 진행 상황은 이용자 브라우저의 로컬 저장소(localStorage)에만 보관됩니다. 이 정보는 기기 외부로 전송되지 않으며, 브라우저 설정이나 게임 내 세이브 슬롯 관리에서 언제든지 영구 삭제할 수 있습니다.",
+    "privacy_sec_hosting_title": "3. 호스팅 인프라 및 GitHub Pages 기술 로그",
+    "privacy_sec_hosting_desc": "Digitinho Galaxy는 GitHub Pages(GitHub, Inc. / Microsoft 운영)에 정적 웹사이트로 호스팅됩니다. 접속 시 GitHub 서버는 GitHub 개인정보 처리방침에 따라 보안, 인프라 보호 및 어뷰징 방지를 위해 IP 주소, 요청 시간, 브라우저 식별자(user-agent) 등의 기술적 연결 로그를 기록할 수 있습니다. Digitinho Galaxy 개발자는 원시 IP 로그에 접근할 수 없으며 이를 통해 이용자를 식별하거나 추적하지 않습니다.",
+    "privacy_sec_cookies_title": "4. 추적 쿠키 및 타사 분석 도구 미사용",
+    "privacy_sec_cookies_desc": "본 게임은 광고 쿠키, Google Analytics, 소셜 미디어 트래커 또는 타사 프로파일링 스크립트를 사용하지 않습니다. 타이핑 연습과 아케이드 게임 본연의 재미에 100% 집중되어 있습니다.",
+    "privacy_sec_lgpd_title": "5. 브라질 개인정보보호법(LGPD) 및 ANPD 지침 준수",
+    "privacy_sec_lgpd_desc": "브라질 일반개인정보보호법(LGPD, 법률 제13.709/2018호) 및 국가데이터보호청(ANPD) 지침에 따라 본 프로젝트는 목적 한정, 필요성 및 데이터 최소화 원칙을 엄격히 준수합니다. 개발자가 이용자의 개인정보를 처리하지 않으므로 개인정보의 판매, 공유 또는 제3자 이전은 전혀 발생하지 않습니다.",
+    "privacy_sec_opensource_title": "6. 오픈소스 및 투명성 검증",
+    "privacy_sec_opensource_desc": "Digitinho Galaxy는 MIT 라이선스에 따라 배포되는 오픈소스 프로젝트입니다. 누구나 GitHub에서 전체 소스코드를 열람하고 감사하여 숨겨진 트래커, 텔레메트리 또는 원격 데이터 수집이 전혀 없음을 직접 검증할 수 있습니다.",
+    "privacy_sec_links_title": "공식 출처 및 규제 법령 참조",
+    "privacy_link_github": "GitHub Pages: 작동 방식 및 IP 로깅 안내",
+    "privacy_link_anpd": "ANPD: 개인정보 개념 및 처리 주체 안내",
+    "privacy_link_lgpd": "LGPD — 브라질 일반개인정보보호법 (법률 제13.709/2018호)",
+    "privacy_back_game": "게임으로 돌아가기",
+    "privacy_updated": "최종 업데이트: 2026년 10월 • Digitinho Galaxy 타이핑 게임",
+    "privacy_page_title": "Digitinho Galaxy — 개인정보 처리방침 및 투명성",
+    "privacy_overview_title": "핵심 요약",
+    "privacy_contact_title": "문의 및 피드백",
+    "privacy_contact_desc": "본 프로젝트는 서버나 데이터 수집이 없는 클라이언트 측 오픈소스 프로젝트이므로 문의나 제안은 GitHub 저장소의 Issue를 통해 제출하실 수 있습니다.",
+    "boss_alien_xylarion_name": "허공의 지배자 자이라리온",
+    "boss_alien_xylarion_title": "외계 선봉 사령관",
+    "boss_alien_xylarion_scenario": "카이퍼 벨트 (태양계 경계)",
+    "boss_alien_xylarion_scenario_desc": "자이라리온의 외계 드레드노트 함대가 태양계를 침공하기 위해 진입했습니다!",
+    "boss_alien_xylarion_badge": "외계인 • 드레드노트",
+    "boss_alien_xylarion_lore": "침공 함대의 총사령관이자 스텔라 플라즈마 병기의 지배자.",
+    "boss_alien_zorkon_name": "궤도의 정복자 조르콘",
+    "boss_alien_zorkon_title": "생체기계 군집 군주",
+    "boss_alien_zorkon_scenario": "해왕성 궤도",
+    "boss_alien_zorkon_scenario_desc": "조르콘의 유기 생체 군집선이 태양계의 가스 행성들을 포위했습니다!",
+    "boss_alien_zorkon_badge": "외계인 • 하이브",
+    "boss_alien_zorkon_lore": "우주 함대마저 삼켜버리는 생체 기계 군집 의식을 통제합니다.",
+    "boss_alien_vespera_name": "반물질의 여제 베스페라",
+    "boss_alien_vespera_title": "외계 사이오닉 지배자",
+    "boss_alien_vespera_scenario": "토성의 고리",
+    "boss_alien_vespera_scenario_desc": "베스페라가 반물질 포격을 가해 태양계의 중력 방벽을 파괴하려 합니다!",
+    "boss_alien_vespera_badge": "외계인 • 사이오닉",
+    "boss_alien_vespera_lore": "암흑 에너지와 은하계 사이오닉 폭풍을 자유자재로 다룹니다.",
+    "boss_alien_kragthor_name": "함대 파괴자 크라그토르",
+    "boss_alien_kragthor_title": "외계 군벌 장군",
+    "boss_alien_kragthor_scenario": "소행성대",
+    "boss_alien_kragthor_scenario_desc": "크라그토르의 거대 장갑전함이 소행성을 부수며 지구로 향하는 길을 뚫고 있습니다!",
+    "boss_alien_kragthor_badge": "외계인 • 워로드",
+    "boss_alien_kragthor_lore": "반물질 분해 병기를 장착한 중장갑 외계 침략 전사.",
+    "boss_alien_nebulor_name": "암흑물질의 전령 네뷸러",
+    "boss_alien_nebulor_title": "우주 그림자 실체",
+    "boss_alien_nebulor_scenario": "목성 궤도",
+    "boss_alien_nebulor_scenario_desc": "네뷸러가 목성의 자기장을 왜곡하며 지구 최종 공격을 준비하고 있습니다!",
+    "boss_alien_nebulor_badge": "외계인 • 섀도우",
+    "boss_alien_nebulor_lore": "시공간 변칙과 특이점 중력을 조종하는 우주적 존재.",
+    "boss_alien_xenor_name": "은하 최고 지성 제노아",
+    "boss_alien_xenor_title": "침공 중추 오버마인드",
+    "boss_alien_xenor_scenario": "지구 달 궤도",
+    "boss_alien_xenor_scenario_desc": "제노아의 거대한 외계 모선이 달 궤도에 자리잡고 지구 최종 침공을 시작했습니다!",
+    "boss_alien_xenor_badge": "외계인 • 모선",
+    "boss_alien_xenor_lore": "태양계 침공을 총괄하는 외계 최고 지성 중추.",
+    "hud_perk_passive": "패시브",
+    "hud_perk_active_label": "활성",
+    "hud_perk_recharging": "재충전",
+    "hud_perk_queue": "대기 중",
+    "hud_perk_lvl": "Lv. {lvl}"
+  },
+  "syllables": [
+    "ga",
+    "na",
+    "da",
+    "ra",
+    "ma",
+    "ba",
+    "sa",
+    "ah",
+    "ja",
+    "cha",
+    "ka",
+    "ta",
+    "pa",
+    "ha",
+    "go",
+    "no",
+    "do",
+    "ro",
+    "mo",
+    "bo",
+    "so",
+    "oh",
+    "jo",
+    "cho",
+    "ko",
+    "to",
+    "po",
+    "ho",
+    "su",
+    "woo"
+  ],
+  "words": [
+    {
+      "text": "sun",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: sun"
     },
-    "syllables": [
-        "ga",
-        "na",
-        "da",
-        "ra",
-        "ma",
-        "ba",
-        "sa",
-        "ah",
-        "ja",
-        "cha",
-        "ka",
-        "ta",
-        "pa",
-        "ha",
-        "go",
-        "no",
-        "do",
-        "ro",
-        "mo",
-        "bo",
-        "so",
-        "oh",
-        "jo",
-        "cho",
-        "ko",
-        "to",
-        "po",
-        "ho",
-        "su",
-        "woo"
-    ],
-    "words": [
-        {
-            "text": "sun",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: sun"
-        },
-        {
-            "text": "moon",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: moon"
-        },
-        {
-            "text": "moons",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: moons"
-        },
-        {
-            "text": "sky",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: sky"
-        },
-        {
-            "text": "ray",
-            "type": "phenomenon",
-            "meaning": "우주 및 천체 개념: ray"
-        },
-        {
-            "text": "halo",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: halo"
-        },
-        {
-            "text": "axis",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: axis"
-        },
-        {
-            "text": "phase",
-            "type": "phenomenon",
-            "meaning": "우주 및 천체 개념: phase"
-        },
-        {
-            "text": "wave",
-            "type": "phenomenon",
-            "meaning": "우주 및 천체 개념: wave"
-        },
-        {
-            "text": "ship",
-            "type": "tech",
-            "meaning": "우주 및 천체 개념: ship"
-        },
-        {
-            "text": "nova",
-            "type": "phenomenon",
-            "meaning": "우주 및 천체 개념: nova"
-        },
-        {
-            "text": "target",
-            "type": "tech",
-            "meaning": "우주 및 천체 개념: target"
-        },
-        {
-            "text": "data",
-            "type": "tech",
-            "meaning": "우주 및 천체 개념: data"
-        },
-        {
-            "text": "pitch",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: pitch"
-        },
-        {
-            "text": "year",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: year"
-        },
-        {
-            "text": "vacuum",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: vacuum"
-        },
-        {
-            "text": "astro",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: astro"
-        },
-        {
-            "text": "cosmos",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: cosmos"
-        },
-        {
-            "text": "mars",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: mars"
-        },
-        {
-            "text": "venus",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: venus"
-        },
-        {
-            "text": "earth",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: earth"
-        },
-        {
-            "text": "solar",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: solar"
-        },
-        {
-            "text": "probe",
-            "type": "tech",
-            "meaning": "우주 및 천체 개념: probe"
-        },
-        {
-            "text": "radar",
-            "type": "tech",
-            "meaning": "우주 및 천체 개념: radar"
-        },
-        {
-            "text": "magma",
-            "type": "nature",
-            "meaning": "우주 및 천체 개념: magma"
-        },
-        {
-            "text": "cloud",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: cloud"
-        },
-        {
-            "text": "pluto",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: pluto"
-        },
-        {
-            "text": "orbit",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: orbit"
-        },
-        {
-            "text": "comet",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: comet"
-        },
-        {
-            "text": "pulsar",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: pulsar"
-        },
-        {
-            "text": "quasar",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: quasar"
-        },
-        {
-            "text": "corona",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: corona"
-        },
-        {
-            "text": "meteor",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: meteor"
-        },
-        {
-            "text": "optics",
-            "type": "tech",
-            "meaning": "우주 및 천체 개념: optics"
-        },
-        {
-            "text": "space",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: space"
-        },
-        {
-            "text": "aurora",
-            "type": "phenomenon",
-            "meaning": "우주 및 천체 개념: aurora"
-        },
-        {
-            "text": "zenith",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: zenith"
-        },
-        {
-            "text": "hubble",
-            "type": "tech",
-            "meaning": "우주 및 천체 개념: hubble"
-        },
-        {
-            "text": "dust",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: dust"
-        },
-        {
-            "text": "hole",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: hole"
-        },
-        {
-            "text": "star",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: star"
-        },
-        {
-            "text": "planet",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: planet"
-        },
-        {
-            "text": "galaxy",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: galaxy"
-        },
-        {
-            "text": "galaxies",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: galaxies"
-        },
-        {
-            "text": "universe",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: universe"
-        },
-        {
-            "text": "nebula",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: nebula"
-        },
-        {
-            "text": "gravity",
-            "type": "phenomenon",
-            "meaning": "우주 및 천체 개념: gravity"
-        },
-        {
-            "text": "supernova",
-            "type": "phenomenon",
-            "meaning": "우주 및 천체 개념: supernova"
-        },
-        {
-            "text": "astronaut",
-            "type": "tech",
-            "meaning": "우주 및 천체 개념: astronaut"
-        },
-        {
-            "text": "astronomy",
-            "type": "science",
-            "meaning": "우주 및 천체 개념: astronomy"
-        },
-        {
-            "text": "exoplanet",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: exoplanet"
-        },
-        {
-            "text": "exoplanets",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: exoplanets"
-        },
-        {
-            "text": "satellite",
-            "type": "tech",
-            "meaning": "우주 및 천체 개념: satellite"
-        },
-        {
-            "text": "constellation",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: constellation"
-        },
-        {
-            "text": "telescope",
-            "type": "tech",
-            "meaning": "우주 및 천체 개념: telescope"
-        },
-        {
-            "text": "starship",
-            "type": "tech",
-            "meaning": "우주 및 천체 개념: starship"
-        },
-        {
-            "text": "atmosphere",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: atmosphere"
-        },
-        {
-            "text": "magnetosphere",
-            "type": "phenomenon",
-            "meaning": "우주 및 천체 개념: magnetosphere"
-        },
-        {
-            "text": "radiation",
-            "type": "phenomenon",
-            "meaning": "우주 및 천체 개념: radiation"
-        },
-        {
-            "text": "spectrum",
-            "type": "science",
-            "meaning": "우주 및 천체 개념: spectrum"
-        },
-        {
-            "text": "andromeda",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: andromeda"
-        },
-        {
-            "text": "heliosphere",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: heliosphere"
-        },
-        {
-            "text": "antimatter",
-            "type": "science",
-            "meaning": "우주 및 천체 개념: antimatter"
-        },
-        {
-            "text": "singularity",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: singularity"
-        },
-        {
-            "text": "multiverse",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: multiverse"
-        },
-        {
-            "text": "light-year",
-            "type": "science",
-            "meaning": "우주 및 천체 개념: light-year"
-        },
-        {
-            "text": "black-hole",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: black-hole"
-        },
-        {
-            "text": "stardust",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: stardust"
-        },
-        {
-            "text": "dark-matter",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: dark-matter"
-        },
-        {
-            "text": "dark-energy",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: dark-energy"
-        },
-        {
-            "text": "wormhole",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: wormhole"
-        },
-        {
-            "text": "speed-of-light",
-            "type": "science",
-            "meaning": "우주 및 천체 개념: speed-of-light"
-        },
-        {
-            "text": "space-station",
-            "type": "tech",
-            "meaning": "우주 및 천체 개념: space-station"
-        },
-        {
-            "text": "event-horizon",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: event-horizon"
-        },
-        {
-            "text": "milky-way",
-            "type": "cosmos",
-            "meaning": "우주 및 천체 개념: milky-way"
-        }
-    ],
-    "bossWords": {
-        "alien_dreadnought": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: year"
-            }
-        ],
-        "alien_hive": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: year"
-            }
-        ],
-        "alien_psionic": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: year"
-            }
-        ],
-        "alien_warlord": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: year"
-            }
-        ],
-        "alien_darkmatter": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: year"
-            }
-        ],
-        "alien_mothership": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: year"
-            }
-        ],
-        "robot": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: year"
-            }
-        ],
-        "beast": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: year"
-            }
-        ],
-        "mythology": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: year"
-            }
-        ],
-        "volcano": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: year"
-            }
-        ],
-        "ocean": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: year"
-            }
-        ],
-        "cosmos": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "우주 및 천체 개념: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "우주 및 천체 개념: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "우주 및 천체 개념: year"
-            }
-        ]
+    {
+      "text": "moon",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: moon"
     },
-    "trainingWorlds": []
+    {
+      "text": "moons",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: moons"
+    },
+    {
+      "text": "sky",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: sky"
+    },
+    {
+      "text": "ray",
+      "type": "phenomenon",
+      "meaning": "우주 및 천체 개념: ray"
+    },
+    {
+      "text": "halo",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: halo"
+    },
+    {
+      "text": "axis",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: axis"
+    },
+    {
+      "text": "phase",
+      "type": "phenomenon",
+      "meaning": "우주 및 천체 개념: phase"
+    },
+    {
+      "text": "wave",
+      "type": "phenomenon",
+      "meaning": "우주 및 천체 개념: wave"
+    },
+    {
+      "text": "ship",
+      "type": "tech",
+      "meaning": "우주 및 천체 개념: ship"
+    },
+    {
+      "text": "nova",
+      "type": "phenomenon",
+      "meaning": "우주 및 천체 개념: nova"
+    },
+    {
+      "text": "target",
+      "type": "tech",
+      "meaning": "우주 및 천체 개념: target"
+    },
+    {
+      "text": "data",
+      "type": "tech",
+      "meaning": "우주 및 천체 개념: data"
+    },
+    {
+      "text": "pitch",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: pitch"
+    },
+    {
+      "text": "year",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: year"
+    },
+    {
+      "text": "vacuum",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: vacuum"
+    },
+    {
+      "text": "astro",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: astro"
+    },
+    {
+      "text": "cosmos",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: cosmos"
+    },
+    {
+      "text": "mars",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: mars"
+    },
+    {
+      "text": "venus",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: venus"
+    },
+    {
+      "text": "earth",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: earth"
+    },
+    {
+      "text": "solar",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: solar"
+    },
+    {
+      "text": "probe",
+      "type": "tech",
+      "meaning": "우주 및 천체 개념: probe"
+    },
+    {
+      "text": "radar",
+      "type": "tech",
+      "meaning": "우주 및 천체 개념: radar"
+    },
+    {
+      "text": "magma",
+      "type": "nature",
+      "meaning": "우주 및 천체 개념: magma"
+    },
+    {
+      "text": "cloud",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: cloud"
+    },
+    {
+      "text": "pluto",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: pluto"
+    },
+    {
+      "text": "orbit",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: orbit"
+    },
+    {
+      "text": "comet",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: comet"
+    },
+    {
+      "text": "pulsar",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: pulsar"
+    },
+    {
+      "text": "quasar",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: quasar"
+    },
+    {
+      "text": "corona",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: corona"
+    },
+    {
+      "text": "meteor",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: meteor"
+    },
+    {
+      "text": "optics",
+      "type": "tech",
+      "meaning": "우주 및 천체 개념: optics"
+    },
+    {
+      "text": "space",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: space"
+    },
+    {
+      "text": "aurora",
+      "type": "phenomenon",
+      "meaning": "우주 및 천체 개념: aurora"
+    },
+    {
+      "text": "zenith",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: zenith"
+    },
+    {
+      "text": "hubble",
+      "type": "tech",
+      "meaning": "우주 및 천체 개념: hubble"
+    },
+    {
+      "text": "dust",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: dust"
+    },
+    {
+      "text": "hole",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: hole"
+    },
+    {
+      "text": "star",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: star"
+    },
+    {
+      "text": "planet",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: planet"
+    },
+    {
+      "text": "galaxy",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: galaxy"
+    },
+    {
+      "text": "galaxies",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: galaxies"
+    },
+    {
+      "text": "universe",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: universe"
+    },
+    {
+      "text": "nebula",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: nebula"
+    },
+    {
+      "text": "gravity",
+      "type": "phenomenon",
+      "meaning": "우주 및 천체 개념: gravity"
+    },
+    {
+      "text": "supernova",
+      "type": "phenomenon",
+      "meaning": "우주 및 천체 개념: supernova"
+    },
+    {
+      "text": "astronaut",
+      "type": "tech",
+      "meaning": "우주 및 천체 개념: astronaut"
+    },
+    {
+      "text": "astronomy",
+      "type": "science",
+      "meaning": "우주 및 천체 개념: astronomy"
+    },
+    {
+      "text": "exoplanet",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: exoplanet"
+    },
+    {
+      "text": "exoplanets",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: exoplanets"
+    },
+    {
+      "text": "satellite",
+      "type": "tech",
+      "meaning": "우주 및 천체 개념: satellite"
+    },
+    {
+      "text": "constellation",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: constellation"
+    },
+    {
+      "text": "telescope",
+      "type": "tech",
+      "meaning": "우주 및 천체 개념: telescope"
+    },
+    {
+      "text": "starship",
+      "type": "tech",
+      "meaning": "우주 및 천체 개념: starship"
+    },
+    {
+      "text": "atmosphere",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: atmosphere"
+    },
+    {
+      "text": "magnetosphere",
+      "type": "phenomenon",
+      "meaning": "우주 및 천체 개념: magnetosphere"
+    },
+    {
+      "text": "radiation",
+      "type": "phenomenon",
+      "meaning": "우주 및 천체 개념: radiation"
+    },
+    {
+      "text": "spectrum",
+      "type": "science",
+      "meaning": "우주 및 천체 개념: spectrum"
+    },
+    {
+      "text": "andromeda",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: andromeda"
+    },
+    {
+      "text": "heliosphere",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: heliosphere"
+    },
+    {
+      "text": "antimatter",
+      "type": "science",
+      "meaning": "우주 및 천체 개념: antimatter"
+    },
+    {
+      "text": "singularity",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: singularity"
+    },
+    {
+      "text": "multiverse",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: multiverse"
+    },
+    {
+      "text": "light-year",
+      "type": "science",
+      "meaning": "우주 및 천체 개념: light-year"
+    },
+    {
+      "text": "black-hole",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: black-hole"
+    },
+    {
+      "text": "stardust",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: stardust"
+    },
+    {
+      "text": "dark-matter",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: dark-matter"
+    },
+    {
+      "text": "dark-energy",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: dark-energy"
+    },
+    {
+      "text": "wormhole",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: wormhole"
+    },
+    {
+      "text": "speed-of-light",
+      "type": "science",
+      "meaning": "우주 및 천체 개념: speed-of-light"
+    },
+    {
+      "text": "space-station",
+      "type": "tech",
+      "meaning": "우주 및 천체 개념: space-station"
+    },
+    {
+      "text": "event-horizon",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: event-horizon"
+    },
+    {
+      "text": "milky-way",
+      "type": "cosmos",
+      "meaning": "우주 및 천체 개념: milky-way"
+    }
+  ],
+  "bossWords": {
+    "alien_dreadnought": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: year"
+      }
+    ],
+    "alien_hive": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: year"
+      }
+    ],
+    "alien_psionic": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: year"
+      }
+    ],
+    "alien_warlord": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: year"
+      }
+    ],
+    "alien_darkmatter": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: year"
+      }
+    ],
+    "alien_mothership": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: year"
+      }
+    ],
+    "robot": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: year"
+      }
+    ],
+    "beast": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: year"
+      }
+    ],
+    "mythology": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: year"
+      }
+    ],
+    "volcano": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: year"
+      }
+    ],
+    "ocean": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: year"
+      }
+    ],
+    "cosmos": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "우주 및 천체 개념: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "우주 및 천체 개념: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "우주 및 천체 개념: year"
+      }
+    ]
+  },
+  "trainingWorlds": []
 }

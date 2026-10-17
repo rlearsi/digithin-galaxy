@@ -568,9 +568,9 @@
   gap: 12px;
 }#side-left,
 #side-right {
-  flex: 0 0 240px;
-  width: 240px;
-  padding: 14px;
+  flex: 0 0 264px;
+  width: 264px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -593,7 +593,7 @@
   backdrop-filter: var(--glass-card-blur);
   -webkit-backdrop-filter: var(--glass-card-blur);
   border-radius: var(--r-md);
-  padding: 12px 14px;
+  padding: 12px 8px;
   border: none;
   box-shadow: none;
 }
@@ -824,148 +824,122 @@
 }
 
 /* ======================================================
-   HORIZONTAL BLACK HOLE ACCRETION VORTEX (EVENT HORIZON MOUTH)
+   PLANET EARTH HORIZON (DEFENSE SHIELD & ATMOSPHERE RIM)
+   Replaces black hole: Earth is protected from falling debris.
+   Over 90% of Earth is hidden below the frame, presenting
+   a gently curved, realistic orbital horizon spanning 100% of the playfield.
    ====================================================== */
+.earth-horizon,
 .black-hole-vortex {
   position: absolute;
-  bottom: -15px;
+  bottom: 0;
   left: -2%;
   right: -2%;
   width: 104%;
-  height: 125px;
+  height: 110px;
   pointer-events: none;
   z-index: 2;
   overflow: visible;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.bh-svg {
+/* Luminous Rayleigh scattering atmospheric glow expanding above Earth */
+.earth-atmosphere-glow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  display: block;
-  overflow: visible;
+  background: radial-gradient(ellipse 92% 70% at 50% 98%, rgba(56, 189, 248, 0.40) 0%, rgba(14, 165, 233, 0.20) 42%, rgba(3, 105, 161, 0.08) 72%, transparent 100%);
+  filter: blur(8px);
+  pointer-events: none;
+  animation: earthAtmosphereBreathe 4.5s ease-in-out infinite alternate;
 }
 
-/* ======================================================
-   CONSTANT LUMINOUS ACCRETION DISK PULSE & RELATIVISTIC GLOW
-   ====================================================== */
-/* Radiant accretion atmosphere pulsing rhythmically */
-.bh-pulsing-glow {
-  transform-origin: 500px 180px;
-  animation: bhAccretionGlowPulse 2.8s ease-in-out infinite alternate;
-}
-
-@keyframes bhAccretionGlowPulse {
+@keyframes earthAtmosphereBreathe {
   0% {
-    opacity: 0.58;
+    opacity: 0.72;
     transform: scale(0.99);
-  }
-  50% {
-    opacity: 0.85;
-    transform: scale(1.02);
   }
   100% {
     opacity: 0.98;
-    transform: scale(1.042);
+    transform: scale(1.02);
   }
 }
 
-/* Outer accretion ring: constantly luminous, colorful and pulsating */
-.bh-disk-outer {
-  transform-origin: 500px 180px;
-  animation: bhDiskOuterPulse 2.8s ease-in-out infinite alternate;
+.earth-horizon-wrap {
+  position: relative;
+  width: 100%;
+  height: 82px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-@keyframes bhDiskOuterPulse {
+.earth-horizon-img {
+  width: 135%;
+  max-width: none;
+  height: auto;
+  min-height: 160px;
+  object-fit: cover;
+  object-position: center top;
+  margin-top: -10px;
+  filter: drop-shadow(0 0 18px rgba(56, 189, 248, 0.65)) brightness(1.06);
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  transform: translateZ(0);
+}
+
+/* Radiant atmospheric limb line along the curvature */
+.earth-limb-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: radial-gradient(ellipse 70% 100% at 50% 0%, rgba(186, 230, 253, 0.60) 0%, rgba(56, 189, 248, 0.30) 45%, transparent 80%);
+  pointer-events: none;
+  filter: blur(3px);
+  mix-blend-mode: screen;
+}
+
+/* Planetary Defense Shield: flashes on dropped celestial debris */
+.earth-impact-shield {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 95px;
+  background: radial-gradient(ellipse 85% 75% at 50% 90%, rgba(239, 68, 68, 0.60) 0%, rgba(245, 158, 11, 0.35) 45%, transparent 75%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease-out;
+  filter: blur(8px);
+}
+
+.earth-horizon.pulse .earth-impact-shield,
+.black-hole-vortex.pulse .earth-impact-shield {
+  animation: earthImpactFlash 0.42s ease-out forwards;
+}
+
+@keyframes earthImpactFlash {
   0% {
-    stroke-width: 9.5;
-    opacity: 0.90;
-    transform: scale(0.996);
-    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.85)) drop-shadow(0 0 18px rgba(244, 114, 182, 0.65));
+    opacity: 1;
+    transform: scale(1.04);
   }
   50% {
-    stroke-width: 12.5;
-    opacity: 1;
-    transform: scale(1.012);
-    filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.95)) drop-shadow(0 0 28px rgba(251, 191, 36, 0.8));
+    opacity: 0.85;
+    transform: scale(1.01);
   }
   100% {
-    stroke-width: 14.5;
-    opacity: 1;
-    transform: scale(1.022);
-    filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 36px rgba(244, 114, 182, 0.9));
+    opacity: 0;
+    transform: scale(0.98);
   }
-}
-
-/* Inner accretion core line: constant starlight emission */
-.bh-disk-core {
-  animation: bhDiskCorePulse 2.8s ease-in-out infinite alternate;
-}
-
-@keyframes bhDiskCorePulse {
-  0% {
-    stroke-width: 3.2;
-    opacity: 0.90;
-  }
-  100% {
-    stroke-width: 4.8;
-    opacity: 1;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.95));
-  }
-}
-
-/* Front event horizon rim highlight: crisp, pure white relativistic pulse */
-.bh-front-rim {
-  animation: bhRimPulse 2.8s ease-in-out infinite alternate;
-}
-
-@keyframes bhRimPulse {
-  0% {
-    stroke-width: 2.8;
-    opacity: 0.88;
-  }
-  100% {
-    stroke-width: 4.5;
-    opacity: 1;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
-  }
-}
-
-/* Relativistic Gravitational Lensing Upper Arc subtle pulse */
-.bh-lensing-arc {
-  animation: bhLensingPulse 3.6s ease-in-out infinite alternate;
-}
-
-@keyframes bhLensingPulse {
-  0% {
-    stroke-width: 5.5;
-    opacity: 0.75;
-  }
-  100% {
-    stroke-width: 7.8;
-    opacity: 0.96;
-  }
-}
-
-/* Relativistic surge burst triggered when an item is swallowed */
-.black-hole-vortex.pulse .bh-pulsing-glow {
-  opacity: 1 !important;
-  transform: scale(1.10) !important;
-  transition: opacity 0.08s ease-out, transform 0.08s ease-out;
-}
-.black-hole-vortex.pulse .bh-disk-outer {
-  stroke-width: 18 !important;
-  opacity: 1 !important;
-  filter: drop-shadow(0 0 28px rgba(255, 255, 255, 1)) drop-shadow(0 0 52px rgba(56, 189, 248, 1)) !important;
-  transition: stroke-width 0.08s ease-out;
-}
-.black-hole-vortex.pulse .bh-front-rim {
-  stroke-width: 6.5 !important;
-  opacity: 1 !important;
-  filter: drop-shadow(0 0 16px rgba(255, 255, 255, 1)) !important;
-  transition: stroke-width 0.08s ease-out;
 }
 
 /* Shield Aura Barrier Effect */

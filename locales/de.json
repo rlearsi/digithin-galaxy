@@ -1,1837 +1,1842 @@
 {
-    "ui": {
-        "app_title": "Digitinho Galaxy.",
-        "app_subtitle": "Meistern Sie die kosmische Tastatur, bevor die Wörter vom Schwarzen Loch verschlungen werden",
-        "rules_title": "Spielanleitung & Runenregeln",
-        "rule_typing": "<strong>Tastatureingabe:</strong> Tippe Buchstaben, Silben und Wörter ein, bevor sie den Boden berühren",
-        "rule_wildcard": "<strong>Joker-Wörter:</strong> Zerstören sofort alle Runen auf dem Bildschirm und absorbieren deren Punkte",
-        "rule_spells": "<strong>Tasten 1–8 (oder Klick):</strong> Aktiviere Zeitlupe, Einfrieren, Abstand, Schild und Zauber",
-        "rule_combo": "<strong>Combos & Wutmodus:</strong> Fehlerfreie Trefferserien multiplizieren deine Punktzahl bis zu 8×",
-        "rule_danger": "<strong>Leben & Gefahr:</strong> Gefährdete Runen blinken rot und kosten 1 Leben (3 Leben im Klassik-Modus)",
-        "btn_start": "Spielen",
-        "btn_training": "Trainingsmodus (Tastaturreihen)",
-        "btn_zen": "Zen-Modus (Keine Leben)",
-        "btn_timeattack": "Zeitangriff (60s)",
-        "btn_library": "Bibliothek",
-        "btn_achievements": "Erfolge",
-        "btn_settings": "Einstellungen",
-        "btn_shop": "Kosmischer Shop",
-        "btn_skills_inventory": "Fähigkeiten",
-        "skills_inventory_title": "Kosmisches Arsenal",
-        "skills_inventory_sub": "Deine permanenten Fähigkeiten aus dem Shop",
-        "skills_inventory_empty": "Noch keine Fähigkeiten erworben. Besuche den Kosmischen Shop!",
-        "skills_inventory_stock": "Auf Lager: ×{count}",
-        "start_record_label": "REKORD:",
-        "start_high_score": "HIGHSCORE: {score}",
-        "shop_btn_reroll": "Neu Würfeln",
-        "shop_reroll_cost": "{cost}",
-        "hud_infinite_mode": "ENDLOS-ARCADE",
-        "hud_coin_farm_progress": "Nächste Münze: {current} / {target} Wörter",
-        "badge_new_label": "NEU",
-        "badge_new_word": "Neues Wort in diesem Durchlauf",
-        "fb_coin_farmed": "+1 Kosmische Münze gesammelt!",
-        "start_game_modes": "Spielmodi",
-        "btn_classic_short": "Klassisch",
-        "btn_training_short": "Training",
-        "btn_training_desc": "Tastaturreihen",
-        "btn_zen_short": "Zen-Modus",
-        "btn_zen_desc": "Keine Leben verloren",
-        "btn_timeattack_short": "Zeitangriff",
-        "btn_timeattack_desc": "60s Sprint",
-        "btn_rules": "Spielanleitung",
-        "btn_close_rules": "Verstanden",
-        "hud_phase": "PHASE",
-        "hud_zen_badge": "Zen-Modus: keine Leben verloren",
-        "hud_training_badge": "Trainingsmodus: keine Leben verloren",
-        "hud_training_lesson": "Lektion",
-        "hud_zen_lbl": "ZEN-MODUS",
-        "hud_training_lbl": "TRAINING",
-        "hud_free": "Frei",
-        "hud_zen_pill": "Keine Leben verloren",
-        "hud_zen_pill_title": "Im Zen-Modus übst du frei ohne Leben zu verlieren",
-        "hud_training_pill_title": "Im Trainingsmodus entwickelst du Präzision und Muskelgedächtnis ohne Leben zu verlieren",
-        "hud_lives": "LEBEN",
-        "hud_accuracy": "GENAUIGKEIT",
-        "hud_wpm": "WPM",
-        "hud_combo": "COMBO",
-        "hud_upcoming": "NÄCHSTE",
-        "hud_new_word_badge": "Neues Wort",
-        "hud_spells": "FERTIGKEITEN",
-        "hud_active": "AKTIV",
-        "hud_sec": "s",
-        "pause_title": "Spiel Pausiert",
-        "pause_hint": "Drücke <kbd>ESC</kbd> zum Fortsetzen",
-        "pause_resume": "Fortsetzen",
-        "pause_library": "Bibliothek",
-        "pause_achievements": "Erfolge",
-        "pause_settings": "Einstellungen",
-        "pause_training_menu": "Zurück zum Trainingsmenü",
-        "pause_main_menu": "Zurück zum Hauptmenü",
-        "confirm_exit_to_menu": "Verdiente Münzen bleiben erhalten, aber während des Spiels erhaltene Fähigkeiten gehen verloren.",
-        "confirm_exit_title": "Zurück zum Hauptmenü?",
-        "confirm_exit_cancel": "Weiterspielen",
-        "confirm_exit_confirm": "Ja, zum Menü",
-        "countdown_hint": "Mach deine Finger bereit!",
-        "countdown_go": "LOS!",
-        "modal_performance": "LEISTUNG",
-        "modal_phase_complete": "Phase {phase} Abgeschlossen!",
-        "modal_press_continue": "Drücke ENTER oder Leertaste zum Fortfahren",
-        "modal_btn_continue": "Fortfahren ➔",
-        "modal_btn_shop": "Zum Zauberladen",
-        "modal_stat_score": "Punkte",
-        "modal_stat_accuracy": "Genauigkeit",
-        "modal_stat_wpm": "WPM",
-        "modal_stat_combo": "Max. Combo",
-        "modal_stat_discovered": "Neue Wörter Entdeckt",
-        "go_title": "Spiel Vorbei",
-        "go_sub": "Deine runische Reise hat ihr Ende erreicht",
-        "go_score": "Spielpunktzahl",
-        "go_best_score": "Rekord",
-        "go_new_record_tag": "NEUER REKORD!",
-        "go_final_score": "Endpunktzahl",
-        "go_phase_reached": "Erreichte Phase",
-        "go_best_combo": "Bester Combo",
-        "go_avg_accuracy": "Genauigkeit",
-        "go_coins_earned": "Erhaltene Gesamtmünzen",
-        "go_hits_errors": "Treffer / Fehler",
-        "go_discovered_words": "Entdeckte Wörter",
-        "go_use_continue": "Continue nutzen ({n})",
-        "go_revive_continue": "Wiederbeleben ({n})",
-        "go_play_again": "Nochmal spielen",
-        "go_main_menu": "Hauptmenü",
-        "victory_title": "Epischer Sieg!",
-        "victory_desc": "Glückwunsch! Du hast die Runentastatur gemeistert!",
-        "victory_play_again": "Erneut spielen",
-        "shop_title": "Fertigkeitenladen",
-        "shop_sub": "Erwirb permanente Fähigkeiten für deine kosmischen Reisen",
-        "shop_points": "Deine Punkte:",
-        "shop_coins": "Deine Münzen:",
-        "shop_btn_buy": "Kaufen",
-        "shop_btn_owned": "Gekauft",
-        "shop_available": "Verfügbar",
-        "shop_btn_close": "Schließen",
-        "shop_confirm_exit_title": "Laden verlassen?",
-        "shop_confirm_exit_desc": "Bist du sicher, dass du den Laden verlassen möchtest?",
-        "shop_confirm_stay": "Im Laden bleiben",
-        "shop_confirm_leave": "Zurück zum Hauptmenü",
-        "shop_insufficient_pts": "Nicht genug Punkte!",
-        "shop_insufficient_coins": "Nicht genug Münzen!",
-        "skill_name_freezer": "Einfrieren",
-        "skill_desc_freezer": "Friert alle Runen auf der Bahn für 10s alle 2 Minuten ein",
-        "skill_name_bomb": "Bombe",
-        "skill_desc_bomb": "Löst alle 90s eine kosmische Explosion aus, die Runen im Bereich zerstört",
-        "skill_name_shield": "Runenschild",
-        "skill_desc_shield": "Schützt für 10s alle 2 Minuten vor gefallenen Runen und Tippfehlern",
-        "skill_name_vortex": "Vortex",
-        "skill_desc_vortex": "Ein Wirbel öffnet sich im Zentrum und verschlingt alle 3 Minuten alle Runen auf dem Bildschirm",
-        "skill_name_slowdown": "Zeitlupe",
-        "skill_desc_slowdown": "Verringert die Fallgeschwindigkeit der Runen um 50% für 15s alle 1 Minute",
-        "skill_name_haste": "Doppelte Punkte",
-        "skill_desc_haste": "Verdoppelt alle Punkte für 10s alle 30s",
-        "skill_name_dilation": "Abstand",
-        "skill_desc_dilation": "Erhöht den Abstand und das Intervall zwischen Runen bis zu {max}",
-        "skill_name_autodestroy": "Kosmisches Echo",
-        "skill_desc_autodestroy": "Zerstört gelernte Wörter dieses Laufs für 10s alle 1 Minute automatisch",
-        "boss_reward_extralife": "+1 Leben",
-        "boss_reward_extralife_desc": "Stellt 1 Leben für den aktuellen Durchlauf wieder her oder fügt es hinzu",
-        "boss_reward_continue": "Continue-Münze",
-        "boss_reward_continue_desc": "Ermöglicht sofortige Wiederbelebung, wenn alle Leben verloren sind",
-        "boss_reward_coins_100": "+100 Münzen",
-        "boss_reward_coins_100_desc": "Erhalte +100 kosmische Münzen direkt auf deine Bank",
-        "hud_level": "LEVEL",
-        "hud_run_perks": "AKTIVE FÄHIGKEITEN",
-        "hud_perks_empty": "Noch keine Fähigkeiten erworben.<br/>Steige ein Level auf, um freizuschalten!",
-        "levelup_title": "LEVEL-AUFSTIEG!",
-        "levelup_sub": "Du hast Level {level} erreicht!",
-        "levelup_prompt": "Wähle 1 Fähigkeit zur Aktivierung für diesen Durchlauf:",
-        "levelup_btn_pick": "Wählen",
-        "fb_dilation_upgraded": "Abstand verbessert bis zu {max}!",
-        "lib_title": "Runenbibliothek",
-        "lib_sub": "Sammlung entdeckter Wörter",
-        "lib_discovered": "Wörter Entdeckt",
-        "lib_locked": "Gesperrt",
-        "lib_typed": "getippt {count}×",
-        "lib_not_typed": "noch nicht getippt",
-        "lib_btn_close": "Schließen",
-        "ach_title": "Erfolge & Siegel",
-        "ach_sub": "Deine Meilensteine in Tempo und Präzision",
-        "ach_counter": "{unlocked} / {total} Freigeschaltet",
-        "ach_btn_close": "Schließen",
-        "ach_status_unlocked": "✓ Freigeschaltet",
-        "ach_status_locked": "Gesperrt",
-        "ach_goal_reached": "Ziel erreicht",
-        "ach_unit_words": "Wörter",
-        "ach_unit_streak": "Treffer",
-        "ach_unit_combo": "Combo",
-        "ach_dedo_veloz_name": "Schnelle Finger",
-        "ach_dedo_veloz_desc": "Erreiche 60 WPM.",
-        "ach_cirurgico_name": "Präzisionsmeister",
-        "ach_cirurgico_desc": "Beende eine Phase mit 100% Genauigkeit.",
-        "ach_colecionador_name": "Sammler",
-        "ach_colecionador_desc": "Schalte alle Wörter in der Bibliothek frei.",
-        "ach_mestre_combo_name": "Combo-Meister",
-        "ach_mestre_combo_desc": "Erreiche 30 Treffer in Folge.",
-        "ach_modo_furia_name": "Wutmodus",
-        "ach_modo_furia_desc": "Aktiviere den Wutmodus mit 15 Treffern in Folge.",
-        "ach_mestre_tipo_name": "Meister der Typografie",
-        "ach_mestre_tipo_desc": "Vervollständige 100 ganze Wörter.",
-        "settings_title": "Einstellungen",
-        "settings_sub": "Spiel- und Oberflächeneinstellungen",
-        "settings_sound": "Soundeffekte",
-        "settings_sound_on": "Ein",
-        "settings_sound_off": "Stumm",
-        "settings_queue": "Warteschlangen-Position",
-        "settings_queue_top": "Oben",
-        "settings_queue_bottom": "Unten",
-        "settings_theme": "Farbschema",
-        "settings_theme_dark": "Dunkel",
-        "settings_theme_light": "Hell",
-        "settings_boss": "Boss-Kämpfe",
-        "settings_boss_on": "Alle 8 Phasen (Aktiv)",
-        "settings_boss_off": "Deaktiviert",
-        "settings_test_boss": "Bosskampf testen",
-        "settings_face_boss": "Boss herausfordern",
-        "settings_lang": "Sprache",
-        "settings_difficulty": "Schwierigkeit",
-        "settings_diff_locked_match": "Schwierigkeit kann während einer Partie nicht geändert werden",
-        "diff_easy": "Leicht",
-        "diff_normal": "Mittel",
-        "diff_hard": "Schwer",
-        "diff_desc_easy": "0.5× Starttempo • Keine Tempobeschleunigung • Kein Fortschrittsverlust • 5 Leben",
-        "diff_desc_normal": "1.0× Starttempo • Keine Tempobeschleunigung • Normaler Fortschrittsverlust • 3 Leben",
-        "diff_desc_hard": "1.5× Starttempo • +0.05× pro Fehler • Normaler Fortschrittsverlust • 3 Leben",
-        "settings_cat_general": "Allgemein & Oberfläche",
-        "settings_cat_boss": "Boss-Kämpfe",
-        "settings_cat_about": "Über die App",
-        "settings_version": "Aktuelle Version",
-        "settings_author": "Autor",
-        "settings_btn_check_update": "Prüfen",
-        "settings_update_latest": "Aktuell",
-        "update_available_title": "Ein neues Update ist verfügbar!",
-        "update_available_sub": "Klicken, um den Cache zu leeren und die neueste Version zu laden",
-        "update_btn_action": "Aktualisieren",
-        "update_applying": "Wird aktualisiert...",
-        "settings_btn_back": "Zurück",
-        "training_title": "Training: Tastaturreihen",
-        "training_sub": "Baue Muskelgedächtnis auf, ohne auf die Tasten zu schauen",
-        "training_notice": "In diesem Modus verlierst du <strong>keine Leben</strong>. Fehler senken deine <strong>Genauigkeit %</strong> und <strong>WPM</strong>.",
-        "training_btn_back": "Zurück",
-        "training_btn_start": "Starten (3 Lektionen) →",
-        "training_btn_again": "Erneut trainieren",
-        "training_completed": "Abgeschlossen (Meisterschaft)",
-        "training_pending": "3 Lektionen",
-        "training_record_acc": "Rekord: {acc}% Genauigkeit",
-        "boss_defeated_title": "BOSS BESIEGT!",
-        "boss_defeated_sub": "Du hast alle Runenprüfungen meisterhaft gelöst.",
-        "boss_defeated_prompt": "Wähle 1 dauerhafte Bonus-Fähigkeit:",
-        "boss_btn_pick": "Erhalten",
-        "boss_pick_skill": "Erhalten",
-        "boss_default_name": "Boss",
-        "fb_combo_broken": "Combo Unterbrochen!",
-        "fb_fury_activated": "WUTMODUS AKTIV! DOPPELTE PUNKTE!",
-        "fb_bomb_activated": "BOMBE AKTIV (10s)!",
-        "fb_bomb_expired": "Bombe abgelaufen",
-        "fb_bomb_explosion": "Explosion ({lines} Zeilen)! +{pts}",
-        "fb_freezer_activated": "EINFRIEREN AKTIV (10s)!",
-        "fb_freezer_expired": "Einfrieren abgelaufen",
-        "fb_shield_activated": "RUNENSCHILD AKTIV (10s)!",
-        "fb_shield_expired": "Runenschild abgelaufen",
-        "fb_shield_blocked": "Schaden durch Runenschild abgewehrt!",
-        "fb_shield_error_protected": "Tippfehler durch Schild geschützt!",
-        "fb_vortex_activated": "VORTEX AKTIV (10s)!",
-        "fb_vortex_expired": "Vortex abgelaufen",
-        "fb_slowdown_activated": "ZEITLUPE AKTIV (15s)!",
-        "fb_slowdown_expired": "Zeitlupe abgelaufen",
-        "fb_slow_activated": "ZEITLUPE AKTIV (15s)!",
-        "fb_slow_expired": "Zeitlupe abgelaufen",
-        "fb_haste_activated": "DOPPELTE PUNKTE (15s)!",
-        "fb_haste_expired": "Doppelte Punkte abgelaufen",
-        "fb_dilation_activated": "ABSTAND VERGRÖSSERT (45s)!",
-        "fb_dilation_expired": "Abstandserweiterung abgelaufen",
-        "fb_speedlock_activated": "GESCHWINDIGKEIT GESPERRT (1.0x / 60s)!",
-        "fb_speedlock_expired": "Temposperre abgelaufen",
-        "fb_autodestroy_activated": "KOSMISCHE SELBSTZERSTÖRUNG AKTIVIERT (60s)!",
-        "fb_autodestroy_expired": "Kosmische Selbstzerstörung abgelaufen",
-        "fb_autodestroy_shattered": "⚡ Automatisch zerstört: {word}! +{pts}",
-        "fb_wildcard": "JOKER! Alle Runen absorbiert! +{pts}",
-        "fb_life_recovered": "+1 Leben Wiederhergestellt!",
-        "fb_perfect": "PERFEKT!",
-        "hud_performance": "LEISTUNGSÜBERSICHT",
-        "hud_total_score": "GESAMTPUNKTE",
-        "hud_hits": "TREFFER",
-        "hud_errors": "FEHLER",
-        "hud_discovered_words": "ENTDECKTE WÖRTER",
-        "hud_view_all": "Alle anzeigen",
-        "hud_spells_hint": "Im Shop kaufen<br/>oder Wörter tippen",
-        "hud_activate_kb": "AKTIVIEREN (TASTATUR)",
-        "hud_key_label": "Taste",
-        "hud_max_phase": "MAX. PHASE",
-        "modal_unlocked_words": "Freigeschaltete Wörter",
-        "modal_btn_next_phase": "Nächste Phase →",
-        "modal_btn_back_training": "Zurück zum Trainingsmenü",
-        "shop_note": "Preise steigen nach jedem Kauf",
-        "shop_btn_continue": "Weiterspielen",
-        "btn_back_to_game": "Zurück zum Spiel",
-        "app_loading": "Runendaten werden geladen...",
-        "fb_runic_dropped_zen": "⚠️ Rune gefallen (- Genauigkeit)",
-        "fb_runic_dropped": "💔 Rune gefallen!",
-        "fb_time_up": "⏱️ Zeit abgelaufen!",
-        "fb_boss_enigma_dropped": "💥 Das Rätsel ist gefallen! Der Boss hat angegriffen!",
-        "fb_ice_cleared": "❄️ Bildschirm frei — Frost beendet!",
-        "fb_error_letter": "❌ Falscher Buchstabe!",
-        "fb_error": "❌ Fehler",
-        "fb_wildcard_clean": "💥 JOKER! ALLES BESEITIGT!",
-        "fb_training_completed": "🎉 Glückwunsch! Du hast alle Trainingswelten abgeschlossen!",
-        "fb_continue_used": "🪙 Continue verwendet! Phase wird fortgesetzt...",
-        "fb_permanent_life": "+1 Permanentes Leben!",
-        "fb_continue_obtained": "🪙 +1 Continue-Münze erhalten!",
-        "shop_all_words_unlocked": "Alle Wörter wurden bereits entdeckt!",
-        "hud_skills_empty_hint": "Im Shop kaufen<br/>oder Wörter vervollständigen <strong>⚡</strong>",
-        "training_lesson_1_title": "Lektion 1: Tastenerkennung",
-        "training_lesson_2_title": "Lektion 2: Fingerwechsel",
-        "training_lesson_3_title": "Lektion 3: Meisterschaftsherausforderung",
-        "training_lesson_1_name": "Grundstellung",
-        "training_lesson_2_name": "Wechsel",
-        "training_lesson_3_name": "Endprüfung",
-        "training_next_obj_2": "Nächstes Ziel: Tasten zu kurzen Wörtern kombinieren und Hände abwechseln.",
-        "training_next_obj_3": "Nächstes Ziel: Meisterprüfung für flüssiges Tippen mit ganzen Wörtern!",
-        "training_new_record": "NEUER REKORD!",
-        "training_world_mastered": "WELT GEMEISTERT",
-        "training_mastery_completed": "{world} — Meisterschaft abgeschlossen!",
-        "training_lesson_completed": "{world} — {lesson} abgeschlossen!",
-        "training_rank_s": "CHIRURGISCHE PRÄZISION",
-        "training_rank_a": "HERVORRAGENDE FLÜSSIGKEIT",
-        "training_rank_b": "GUTE KONTROLLE",
-        "training_rank_c": "MEHR ÜBEN",
-        "training_stat_world_progress": "Welt-Fortschritt",
-        "training_stat_lesson_done": "Lektion {lesson} von 3 abgeschlossen",
-        "training_stat_accuracy_rate": "Genauigkeitsrate",
-        "training_stat_status": "Trainingsstatus",
-        "training_stat_completed": "100% abgeschlossen (3/3 Lektionen)",
-        "training_stat_keys": "Gemeisterte Tasten",
-        "training_stat_accuracy": "Partie-Genauigkeit",
-        "training_stat_best_record": "Bester Rekord (Genauigkeit)",
-        "training_stat_speed": "Echte Geschwindigkeit (WPM)",
-        "training_stat_hits_errors": "Treffer / Fehler",
-        "training_hits_errs_val": "{hits} Treffer / {errors} Fehler",
-        "training_btn_next_world": "Weiter zu {world} →",
-        "training_btn_finish_all": "Alle Trainings abschließen! →",
-        "training_btn_next_lesson": "Weiter zu Lektion {lesson} ({runics} Runen) →",
-        "fb_boss_defeated": "{boss} BESIEGT! +350 MÜNZEN!",
-        "modal_phase_pts": "Punkte in der Phase erzielt",
-        "modal_acc_bonus": "Genauigkeitsbonus ({acc}%)",
-        "modal_penalty": "Fehler (Strafe)",
-        "modal_net_pts": "Netto hinzugefügt",
-        "modal_total_pts": "Gesamtpunktzahl",
-        "modal_combo_bonus": "Max.-Combo-Bonus ({combo}×)",
-        "modal_phase_total_pts": "Erhaltene Gesamtpunkte",
-        "modal_section_score": "Punktestand",
-        "modal_section_coins": "Verdiente Münzen",
-        "modal_coins_completion": "Phase Abgeschlossen",
-        "modal_boss_bonus": "Boss-Bonus",
-        "modal_coins_precision": "100% Genauigkeitsbonus",
-        "modal_coins_streak": "Fehlerfreie Serie ({streak} Phasen)",
-        "modal_coins_phase_total": "Münzen Gesamt Hinzugefügt",
-        "modal_coins_balance": "Gesamter Münzbestand",
-        "hud_coins": "MÜNZEN",
-        "hud_boss_hp": "BOSS-LP",
-        "fb_skill_acquired": "⚡ Fähigkeit: {skill}!",
-        "fb_vortex_devour": "🌀 Vortex hat {text} verschlungen! +{pts}",
-        "fb_enigma_solved": "💥 RÄTSEL GELÖST! -1 BOSS-LP! (+{pts}Pkt)",
-        "fb_reward_granted": "Belohnung gewährt: {reward}!",
-        "queue_top": "Oben",
-        "queue_bottom": "Unten",
-        "queue_toggle_to_bottom": "Warteschlange oben (Klicken zum Verschieben nach unten)",
-        "queue_toggle_to_top": "Warteschlange unten (Klicken zum Verschieben nach oben)",
-        "theme_switch_to_light": "Zu hellem Design wechseln",
-        "theme_switch_to_dark": "Zu dunklem Design wechseln",
-        "boss_enigma_badge": "📜 RÄTSEL {num} VON {total} • {scenario}",
-        "boss_enigma_letters": "{count} BUCHSTABEN",
-        "boss_enigma_queue": "RÄTSEL {num} VON 3",
-        "boss_level_tag": " (St. {level})",
-        "boss_cyber_titan_name": "Xylarion, der Leeren-Herrscher",
-        "boss_cyber_titan_title": "Kommandant der Alien-Vorhut",
-        "boss_cyber_titan_scenario": "Kuipergürtel (Rand des Sonnensystems)",
-        "boss_cyber_titan_scenario_desc": "Xylarions Dreadnought-Armada hat die Leere durchquert, um das Sonnensystem zu erobern!",
-        "boss_cyber_titan_badge": "ALIEN • DREADNOUGHT",
-        "boss_cyber_titan_lore": "Oberbefehlshaber der Invasionsflotte und Meister stellarer Plasmageschütze.",
-        "boss_feral_apex_name": "Zorkon, Orbit-Eroberer",
-        "boss_feral_apex_title": "Meister des Biomechanischen Schwarms",
-        "boss_feral_apex_scenario": "Neptun-Umlaufbahn",
-        "boss_feral_apex_scenario_desc": "Zorkons bio-organischer Schwarm umzingelt die Gasriesen des Sonnensystems!",
-        "boss_feral_apex_badge": "ALIEN • SCHWARM",
-        "boss_feral_apex_lore": "Befiehlt biomechanische Kolonien, die Sternenflotten verschlingen können.",
-        "boss_arcane_chimera_name": "Vespera, Antimaterie-Herrscherin",
-        "boss_arcane_chimera_title": "Außerirdische Psionik-Herrscherin",
-        "boss_arcane_chimera_scenario": "Saturnringe",
-        "boss_arcane_chimera_scenario_desc": "Vespera setzt Antimaterie-Batterien ein, um die Gravitationsschilde des Sonnensystems zu brechen!",
-        "boss_arcane_chimera_badge": "ALIEN • PSIONIK",
-        "boss_arcane_chimera_lore": "Beherrscht Dunkle Energie und intergalaktische Gedankenstürme.",
-        "boss_abyssal_leviathan_name": "Nebulor, Herold der Dunklen Materie",
-        "boss_abyssal_leviathan_title": "Kosmische Schattenentität",
-        "boss_abyssal_leviathan_scenario": "Jupiter-Umlaufbahn",
-        "boss_abyssal_leviathan_scenario_desc": "Nebulor krümmt Jupiters Magnetosphäre zur Vorbereitung des Angriffs auf die Erde!",
-        "boss_abyssal_leviathan_badge": "ALIEN • SCHATTEN",
-        "boss_abyssal_leviathan_lore": "Manipuliert Raumzeit-Anomalien und Schwerkraftwirbel.",
-        "boss_cosmic_chronos_name": "Xenor, Intergalaktisches Überbewusstsein",
-        "boss_cosmic_chronos_title": "Zentrale Invasionsintelligenz",
-        "boss_cosmic_chronos_scenario": "Mond-Umlaufbahn",
-        "boss_cosmic_chronos_scenario_desc": "Xenors kolossales Mutterschiff geht im Mondorbit für die finale Invasion der Erde in Stellung!",
-        "boss_cosmic_chronos_badge": "ALIEN • MUTTERSCHIFF",
-        "boss_cosmic_chronos_lore": "Das übergeordnete Alien-Bewusstsein, das die Invasion des Sonnensystems lenkt.",
-        "boss_magma_vulcanus_name": "Kragthor, Flottenbrecher",
-        "boss_magma_vulcanus_title": "Kriegstreiber-General der Invasoren",
-        "boss_magma_vulcanus_scenario": "Asteroidengürtel",
-        "boss_magma_vulcanus_scenario_desc": "Kragthors gewaltiges Kriegsschiff zerschmettert Asteroiden, um den Weg zur Erde zu bahnen!",
-        "boss_magma_vulcanus_badge": "ALIEN • KRIEGSFÜRST",
-        "boss_magma_vulcanus_lore": "Schwer gepanzerter Invasor mit verheerenden Antimaterie-Desintegratoren.",
-        "btn_continue": "Spiel Fortsetzen",
-        "btn_new_game": "Neues Spiel",
-        "btn_new_game_desc": "Neu starten mit geteilten Münzen",
-        "btn_save_slots": "Speicherplätze",
-        "slots_title": "Speicherplätze",
-        "slots_sub": "Verwalte deinen Fortschritt oder starte ein neues Spiel",
-        "lbl_highscore": "REKORD",
-        "lbl_shared_coins": "MÜNZEN",
-        "lbl_highcoins": "MAX MÜNZEN",
-        "slot_number": "Platz {slot}",
-        "slot_in_progress": "Läuft",
-        "slot_empty": "Leer",
-        "slot_empty_desc": "Kein Spielstand. Starte frisch mit deinen geteilten Münzen!",
-        "slot_btn_continue": "Fortsetzen",
-        "slot_btn_new": "Neues Spiel",
-        "slot_btn_delete": "Löschen",
-        "slot_confirm_overwrite": "Platz {slot} überschreiben und neues Spiel starten? Der vorhandene Fortschritt wird ersetzt.",
-        "slot_confirm_delete": "Möchtest du den Spielstand in Platz {slot} wirklich löschen?",
-        "fb_game_saved": "Spielfortschritt gespeichert!",
-        "fb_game_resumed": "Spiel ab Phase {phase} fortgesetzt!",
-        "slots_shared_wallet": "Geteilte Münzbank",
-        "slots_close": "Schließen",
-        "slot_phase_score": "Phase {phase} • {score} Pkt",
-        "slot_date_fmt": "Gespeichert: {date}",
-        "confirm_new_game_title": "Neues Spiel Starten?",
-        "confirm_new_game_desc": "Du hast ein laufendes Spiel. Ein neues Spiel überschreibt Platz {slot}. Deine geteilten Münzen bleiben verfügbar!",
-        "settings_finger_guide": "Visuelle Fingerhilfe",
-        "settings_finger_guide_always": "Immer aktiv (Standard)",
-        "settings_finger_guide_training": "Nur Training",
-        "settings_finger_guide_off": "Deaktiviert",
-        "vk_space": "LEERTASTE",
-        "finger_guide_title": "Fingerhilfe",
-        "finger_ready": "Ruhestellung",
-        "finger_space_bar": "Leertaste",
-        "hand_left": "Linke Hand",
-        "hand_right": "Rechte Hand",
-        "hand_both": "Beide Hände",
-        "finger_l_pinky": "Linker kleiner Finger",
-        "finger_l_ring": "Linker Ringfinger",
-        "finger_l_middle": "Linker Mittelfinger",
-        "finger_l_index": "Linker Zeigefinger",
-        "finger_l_thumb": "Linker Daumen",
-        "finger_r_thumb": "Rechter Daumen",
-        "finger_r_index": "Rechter Zeigefinger",
-        "finger_r_middle": "Rechter Mittelfinger",
-        "finger_r_ring": "Rechter Ringfinger",
-        "finger_r_pinky": "Rechter kleiner Finger",
-        "finger_thumb": "Daumen",
-        "footer_privacy": "Datenschutzerklärung",
-        "btn_privacy": "Datenschutz",
-        "settings_privacy": "Datenschutz & Daten",
-        "settings_view_privacy": "Richtlinie anzeigen",
-        "privacy_title": "Datenschutzerklärung & Transparenz",
-        "privacy_sub": "Datenverarbeitung, lokaler Speicher und GitHub Pages-Infrastruktur",
-        "privacy_btn_open_page": "Vollständige Seite öffnen",
-        "btn_close_privacy": "Verstanden",
-        "privacy_badge_nocollect": "Keine Datenerhebung",
-        "privacy_badge_local": "100% Lokale Speicherung",
-        "privacy_badge_github": "GitHub Pages Hosting",
-        "privacy_badge_lgpd": "LGPD & ANPD Konformität",
-        "privacy_sec_collection_title": "1. Keine Erhebung personenbezogener Daten durch Digitinho Galaxy",
-        "privacy_sec_collection_desc": "Digitinho Galaxy ist ein statisches Webspiel, das vollständig im Browser des Spielers ausgeführt wird (clientseitig). Das Projekt betreibt keine eigenen Backend-Server, Remote-Datenbanken, Registrierungsformulare oder Benutzerkonten. Es werden keine personenbezogenen Daten (wie Name, E-Mail, Ausweis oder Telefonnummer) angefordert, erhoben, verarbeitet oder weitergegeben.",
-        "privacy_sec_storage_title": "2. Lokale Speicherung auf dem Endgerät (HTML5 LocalStorage)",
-        "privacy_sec_storage_desc": "Der gesamte Spielfortschritt — Punktestände, Speicherstände, in der Bibliothek freigeschaltete Wörter, Erfolge, Audioeinstellungen, Schwierigkeitsgrad und Farbmodi — wird ausschließlich im lokalen Speicher Ihres Browsers (localStorage) abgelegt. Diese Daten verlassen Ihr Gerät nie und können jederzeit über die Browsereinstellungen oder die Spielstandverwaltung gelöscht werden.",
-        "privacy_sec_hosting_title": "3. Hosting-Infrastruktur & Technische Protokolle von GitHub Pages",
-        "privacy_sec_hosting_desc": "Digitinho Galaxy wird als statische Website auf GitHub Pages gehostet (betrieben von GitHub, Inc. / Microsoft). Beim Aufrufen der Website können die Server von GitHub technische Verbindungsmetadaten wie IP-Adressen, Zugriffszeitpunkte, Browser-Kennungen und URLs protokollieren, um Sicherheit, Systemintegrität und Missbrauchsschutz gemäß der GitHub-Datenschutzerklärung zu gewährleisten. Der Entwickler von Digitinho Galaxy hat keinen Zugriff auf IP-Rohprotokolle.",
-        "privacy_sec_cookies_title": "4. Keine Tracking-Cookies oder Analysewerkzeuge Dritter",
-        "privacy_sec_cookies_desc": "Das Spiel verwendet keine Werbe-Cookies, Google Analytics, Social-Media-Pixel oder Profiling-Skripte von Drittanbietern. Das Erlebnis dient ausschließlich dem Tipptraining und dem Spielspaß.",
-        "privacy_sec_lgpd_title": "5. Einhaltung des brasilianischen Datenschutzgesetzes (LGPD) & ANPD",
-        "privacy_sec_lgpd_desc": "Unter Berücksichtigung des brasilianischen Datenschutzgesetzes (LGPD, Gesetz Nr. 13.709/2018) und der Richtlinien der ANPD folgt das Projekt den Grundsätzen der Zweckbindung, Erforderlichkeit, Datenminimierung und Transparenz. Da keine personenbezogenen Daten verarbeitet werden, findet weder ein Verkauf noch eine Weitergabe statt.",
-        "privacy_sec_opensource_title": "6. Open Source, Transparenz und Überprüfbarkeit",
-        "privacy_sec_opensource_desc": "Digitinho Galaxy ist ein Open-Source-Projekt unter der MIT-Lizenz. Der gesamte Quellcode kann öffentlich auf GitHub eingesehen und geprüft werden, um die vollständige Abwesenheit von Trackern, Telemetrie oder Datenübertragungen nachzuweisen.",
-        "privacy_sec_links_title": "Offizielle Quellen und rechtliche Referenzen",
-        "privacy_link_github": "GitHub Pages: Funktionsweise und IP-Protokollierung",
-        "privacy_link_anpd": "ANPD: Personenbezogene Daten und Verantwortliche",
-        "privacy_link_lgpd": "LGPD — Brasilianisches Datenschutzgesetz (Gesetz Nr. 13.709/2018)",
-        "privacy_back_game": "Zurück zum Spiel",
-        "privacy_updated": "Zuletzt aktualisiert: Oktober 2026 • Digitinho Galaxy Space Typing Game",
-        "privacy_page_title": "Digitinho Galaxy — Datenschutzerklärung & Transparenz",
-        "privacy_overview_title": "Wichtige Punkte im Überblick",
-        "privacy_contact_title": "Fragen & Kontakt",
-        "privacy_contact_desc": "Da es sich um ein clientseitiges Open-Source-Projekt ohne Server oder Datenerfassung handelt, können Fragen oder Anregungen direkt über das GitHub-Repository als Issue eingereicht werden.",
-        "boss_alien_xylarion_name": "Xylarion, der Leeren-Herrscher",
-        "boss_alien_xylarion_title": "Kommandant der Alien-Vorhut",
-        "boss_alien_xylarion_scenario": "Kuipergürtel (Rand des Sonnensystems)",
-        "boss_alien_xylarion_scenario_desc": "Xylarions Dreadnought-Armada hat die Leere durchquert, um das Sonnensystem zu erobern!",
-        "boss_alien_xylarion_badge": "ALIEN • DREADNOUGHT",
-        "boss_alien_xylarion_lore": "Oberbefehlshaber der Invasionsflotte und Meister stellarer Plasmageschütze.",
-        "boss_alien_zorkon_name": "Zorkon, Orbit-Eroberer",
-        "boss_alien_zorkon_title": "Meister des Biomechanischen Schwarms",
-        "boss_alien_zorkon_scenario": "Neptun-Umlaufbahn",
-        "boss_alien_zorkon_scenario_desc": "Zorkons bio-organischer Schwarm umzingelt die Gasriesen des Sonnensystems!",
-        "boss_alien_zorkon_badge": "ALIEN • SCHWARM",
-        "boss_alien_zorkon_lore": "Befiehlt biomechanische Kolonien, die Sternenflotten verschlingen können.",
-        "boss_alien_vespera_name": "Vespera, Antimaterie-Herrscherin",
-        "boss_alien_vespera_title": "Außerirdische Psionik-Herrscherin",
-        "boss_alien_vespera_scenario": "Saturnringe",
-        "boss_alien_vespera_scenario_desc": "Vespera setzt Antimaterie-Batterien ein, um die Gravitationsschilde des Sonnensystems zu brechen!",
-        "boss_alien_vespera_badge": "ALIEN • PSIONIK",
-        "boss_alien_vespera_lore": "Beherrscht Dunkle Energie und intergalaktische Gedankenstürme.",
-        "boss_alien_kragthor_name": "Kragthor, Flottenbrecher",
-        "boss_alien_kragthor_title": "Kriegstreiber-General der Invasoren",
-        "boss_alien_kragthor_scenario": "Asteroidengürtel",
-        "boss_alien_kragthor_scenario_desc": "Kragthors gewaltiges Kriegsschiff zerschmettert Asteroiden, um den Weg zur Erde zu bahnen!",
-        "boss_alien_kragthor_badge": "ALIEN • KRIEGSFÜRST",
-        "boss_alien_kragthor_lore": "Schwer gepanzerter Invasor mit verheerenden Antimaterie-Desintegratoren.",
-        "boss_alien_nebulor_name": "Nebulor, Herold der Dunklen Materie",
-        "boss_alien_nebulor_title": "Kosmische Schattenentität",
-        "boss_alien_nebulor_scenario": "Jupiter-Umlaufbahn",
-        "boss_alien_nebulor_scenario_desc": "Nebulor krümmt Jupiters Magnetosphäre zur Vorbereitung des Angriffs auf die Erde!",
-        "boss_alien_nebulor_badge": "ALIEN • SCHATTEN",
-        "boss_alien_nebulor_lore": "Manipuliert Raumzeit-Anomalien und Schwerkraftwirbel.",
-        "boss_alien_xenor_name": "Xenor, Intergalaktisches Überbewusstsein",
-        "boss_alien_xenor_title": "Zentrale Invasionsintelligenz",
-        "boss_alien_xenor_scenario": "Mond-Umlaufbahn",
-        "boss_alien_xenor_scenario_desc": "Xenors kolossales Mutterschiff geht im Mondorbit für die finale Invasion der Erde in Stellung!",
-        "boss_alien_xenor_badge": "ALIEN • MUTTERSCHIFF",
-        "boss_alien_xenor_lore": "Das übergeordnete Alien-Bewusstsein, das die Invasion des Sonnensystems lenkt."
+  "ui": {
+    "app_title": "Digitinho Galaxy.",
+    "app_subtitle": "Meistere die kosmische Tastatur und beschütze die Erde vor herabstürzenden Trümmern",
+    "rules_title": "Spielanleitung & Runenregeln",
+    "rule_typing": "<strong>Tastatureingabe:</strong> Tippe Buchstaben, Silben und Wörter ein, bevor sie den Boden berühren",
+    "rule_wildcard": "<strong>Joker-Wörter:</strong> Zerstören sofort alle Runen auf dem Bildschirm und absorbieren deren Punkte",
+    "rule_spells": "<strong>Tasten 1–8 (oder Klick):</strong> Aktiviere Zeitlupe, Einfrieren, Abstand, Schild und Zauber",
+    "rule_combo": "<strong>Combos & Wutmodus:</strong> Fehlerfreie Trefferserien multiplizieren deine Punktzahl bis zu 8×",
+    "rule_danger": "<strong>Leben & Gefahr:</strong> Gefährdete Runen blinken rot und kosten 1 Leben (3 Leben im Klassik-Modus)",
+    "btn_start": "Spielen",
+    "btn_training": "Trainingsmodus (Tastaturreihen)",
+    "btn_zen": "Zen-Modus (Keine Leben)",
+    "btn_timeattack": "Zeitangriff (60s)",
+    "btn_library": "Bibliothek",
+    "btn_achievements": "Erfolge",
+    "btn_settings": "Einstellungen",
+    "btn_shop": "Kosmischer Shop",
+    "btn_skills_inventory": "Fähigkeiten",
+    "skills_inventory_title": "Kosmisches Arsenal",
+    "skills_inventory_sub": "Deine permanenten Fähigkeiten aus dem Shop",
+    "skills_inventory_empty": "Noch keine Fähigkeiten erworben. Besuche den Kosmischen Shop!",
+    "skills_inventory_stock": "Auf Lager: ×{count}",
+    "start_record_label": "REKORD:",
+    "start_high_score": "HIGHSCORE: {score}",
+    "shop_btn_reroll": "Neu Würfeln",
+    "shop_reroll_cost": "{cost}",
+    "hud_infinite_mode": "ENDLOS-ARCADE",
+    "hud_coin_farm_progress": "Nächste Münze: {current} / {target} Wörter",
+    "badge_new_label": "NEU",
+    "badge_new_word": "Neues Wort in diesem Durchlauf",
+    "fb_coin_farmed": "+1 Kosmische Münze gesammelt!",
+    "start_game_modes": "Spielmodi",
+    "btn_classic_short": "Klassisch",
+    "btn_training_short": "Training",
+    "btn_training_desc": "Tastaturreihen",
+    "btn_zen_short": "Zen-Modus",
+    "btn_zen_desc": "Keine Leben verloren",
+    "btn_timeattack_short": "Zeitangriff",
+    "btn_timeattack_desc": "60s Sprint",
+    "btn_rules": "Spielanleitung",
+    "btn_close_rules": "Verstanden",
+    "hud_phase": "PHASE",
+    "hud_zen_badge": "Zen-Modus: keine Leben verloren",
+    "hud_training_badge": "Trainingsmodus: keine Leben verloren",
+    "hud_training_lesson": "Lektion",
+    "hud_zen_lbl": "ZEN-MODUS",
+    "hud_training_lbl": "TRAINING",
+    "hud_free": "Frei",
+    "hud_zen_pill": "Keine Leben verloren",
+    "hud_zen_pill_title": "Im Zen-Modus übst du frei ohne Leben zu verlieren",
+    "hud_training_pill_title": "Im Trainingsmodus entwickelst du Präzision und Muskelgedächtnis ohne Leben zu verlieren",
+    "hud_lives": "LEBEN",
+    "hud_accuracy": "GENAUIGKEIT",
+    "hud_wpm": "WPM",
+    "hud_combo": "COMBO",
+    "hud_upcoming": "NÄCHSTE",
+    "hud_new_word_badge": "Neues Wort",
+    "hud_spells": "FERTIGKEITEN",
+    "hud_active": "AKTIV",
+    "hud_sec": "s",
+    "pause_title": "Spiel Pausiert",
+    "pause_hint": "Drücke <kbd>ESC</kbd> zum Fortsetzen",
+    "pause_resume": "Fortsetzen",
+    "pause_library": "Bibliothek",
+    "pause_achievements": "Erfolge",
+    "pause_settings": "Einstellungen",
+    "pause_training_menu": "Zurück zum Trainingsmenü",
+    "pause_main_menu": "Zurück zum Hauptmenü",
+    "confirm_exit_to_menu": "Verdiente Münzen bleiben erhalten, aber während des Spiels erhaltene Fähigkeiten gehen verloren.",
+    "confirm_exit_title": "Zurück zum Hauptmenü?",
+    "confirm_exit_cancel": "Weiterspielen",
+    "confirm_exit_confirm": "Ja, zum Menü",
+    "countdown_hint": "Mach deine Finger bereit!",
+    "countdown_go": "LOS!",
+    "modal_performance": "LEISTUNG",
+    "modal_phase_complete": "Phase {phase} Abgeschlossen!",
+    "modal_press_continue": "Drücke ENTER oder Leertaste zum Fortfahren",
+    "modal_btn_continue": "Fortfahren ➔",
+    "modal_btn_shop": "Zum Zauberladen",
+    "modal_stat_score": "Punkte",
+    "modal_stat_accuracy": "Genauigkeit",
+    "modal_stat_wpm": "WPM",
+    "modal_stat_combo": "Max. Combo",
+    "modal_stat_discovered": "Neue Wörter Entdeckt",
+    "go_title": "Spiel Vorbei",
+    "go_sub": "Deine runische Reise hat ihr Ende erreicht",
+    "go_score": "Spielpunktzahl",
+    "go_best_score": "Rekord",
+    "go_new_record_tag": "NEUER REKORD!",
+    "go_final_score": "Endpunktzahl",
+    "go_phase_reached": "Erreichte Phase",
+    "go_best_combo": "Bester Combo",
+    "go_avg_accuracy": "Genauigkeit",
+    "go_coins_earned": "Erhaltene Gesamtmünzen",
+    "go_hits_errors": "Treffer / Fehler",
+    "go_discovered_words": "Entdeckte Wörter",
+    "go_use_continue": "Continue nutzen ({n})",
+    "go_revive_continue": "Wiederbeleben ({n})",
+    "go_play_again": "Nochmal spielen",
+    "go_main_menu": "Hauptmenü",
+    "victory_title": "Epischer Sieg!",
+    "victory_desc": "Glückwunsch! Du hast die Runentastatur gemeistert!",
+    "victory_play_again": "Erneut spielen",
+    "shop_title": "Fertigkeitenladen",
+    "shop_sub": "Erwirb permanente Fähigkeiten für deine kosmischen Reisen",
+    "shop_points": "Deine Punkte:",
+    "shop_coins": "Deine Münzen:",
+    "shop_btn_buy": "Kaufen",
+    "shop_btn_owned": "Gekauft",
+    "shop_available": "Verfügbar",
+    "shop_btn_close": "Schließen",
+    "shop_confirm_exit_title": "Laden verlassen?",
+    "shop_confirm_exit_desc": "Bist du sicher, dass du den Laden verlassen möchtest?",
+    "shop_confirm_stay": "Im Laden bleiben",
+    "shop_confirm_leave": "Zurück zum Hauptmenü",
+    "shop_insufficient_pts": "Nicht genug Punkte!",
+    "shop_insufficient_coins": "Nicht genug Münzen!",
+    "skill_name_freezer": "Einfrieren",
+    "skill_desc_freezer": "Friert alle Runen auf der Bahn für 10s alle 2 Minuten ein",
+    "skill_name_bomb": "Bombe",
+    "skill_desc_bomb": "Löst alle 90s eine kosmische Explosion aus, die Runen im Bereich zerstört",
+    "skill_name_shield": "Runenschild",
+    "skill_desc_shield": "Schützt für 10s alle 2 Minuten vor gefallenen Runen und Tippfehlern",
+    "skill_name_vortex": "Vortex",
+    "skill_desc_vortex": "Ein Wirbel öffnet sich im Zentrum und verschlingt alle 3 Minuten alle Runen auf dem Bildschirm",
+    "skill_name_slowdown": "Zeitlupe",
+    "skill_desc_slowdown": "Verringert die Fallgeschwindigkeit der Runen um 50% für 15s alle 1 Minute",
+    "skill_name_haste": "Doppelte Punkte",
+    "skill_desc_haste": "Verdoppelt alle Punkte für 10s alle 30s",
+    "skill_name_dilation": "Abstand",
+    "skill_desc_dilation": "Erhöht den Abstand und das Intervall zwischen Runen bis zu {max}",
+    "skill_name_autodestroy": "Kosmisches Echo",
+    "skill_desc_autodestroy": "Zerstört gelernte Wörter dieses Laufs für 10s alle 1 Minute automatisch",
+    "boss_reward_extralife": "+1 Leben",
+    "boss_reward_extralife_desc": "Stellt 1 Leben für den aktuellen Durchlauf wieder her oder fügt es hinzu",
+    "boss_reward_continue": "Continue-Münze",
+    "boss_reward_continue_desc": "Ermöglicht sofortige Wiederbelebung, wenn alle Leben verloren sind",
+    "boss_reward_coins_100": "+100 Münzen",
+    "boss_reward_coins_100_desc": "Erhalte +100 kosmische Münzen direkt auf deine Bank",
+    "hud_level": "LEVEL",
+    "hud_run_perks": "AKTIVE FÄHIGKEITEN",
+    "hud_perks_empty": "Noch keine Fähigkeiten erworben.<br/>Steige ein Level auf, um freizuschalten!",
+    "levelup_title": "LEVEL-AUFSTIEG!",
+    "levelup_sub": "Du hast Level {level} erreicht!",
+    "levelup_prompt": "Wähle 1 Fähigkeit zur Aktivierung für diesen Durchlauf:",
+    "levelup_btn_pick": "Wählen",
+    "fb_dilation_upgraded": "Abstand verbessert bis zu {max}!",
+    "lib_title": "Runenbibliothek",
+    "lib_sub": "Sammlung entdeckter Wörter",
+    "lib_discovered": "Wörter Entdeckt",
+    "lib_locked": "Gesperrt",
+    "lib_typed": "getippt {count}×",
+    "lib_not_typed": "noch nicht getippt",
+    "lib_btn_close": "Schließen",
+    "ach_title": "Erfolge & Siegel",
+    "ach_sub": "Deine Meilensteine in Tempo und Präzision",
+    "ach_counter": "{unlocked} / {total} Freigeschaltet",
+    "ach_btn_close": "Schließen",
+    "ach_status_unlocked": "✓ Freigeschaltet",
+    "ach_status_locked": "Gesperrt",
+    "ach_goal_reached": "Ziel erreicht",
+    "ach_unit_words": "Wörter",
+    "ach_unit_streak": "Treffer",
+    "ach_unit_combo": "Combo",
+    "ach_dedo_veloz_name": "Schnelle Finger",
+    "ach_dedo_veloz_desc": "Erreiche 60 WPM.",
+    "ach_cirurgico_name": "Präzisionsmeister",
+    "ach_cirurgico_desc": "Beende eine Phase mit 100% Genauigkeit.",
+    "ach_colecionador_name": "Sammler",
+    "ach_colecionador_desc": "Schalte alle Wörter in der Bibliothek frei.",
+    "ach_mestre_combo_name": "Combo-Meister",
+    "ach_mestre_combo_desc": "Erreiche 30 Treffer in Folge.",
+    "ach_modo_furia_name": "Wutmodus",
+    "ach_modo_furia_desc": "Aktiviere den Wutmodus mit 15 Treffern in Folge.",
+    "ach_mestre_tipo_name": "Meister der Typografie",
+    "ach_mestre_tipo_desc": "Vervollständige 100 ganze Wörter.",
+    "settings_title": "Einstellungen",
+    "settings_sub": "Spiel- und Oberflächeneinstellungen",
+    "settings_sound": "Soundeffekte",
+    "settings_sound_on": "Ein",
+    "settings_sound_off": "Stumm",
+    "settings_queue": "Warteschlangen-Position",
+    "settings_queue_top": "Oben",
+    "settings_queue_bottom": "Unten",
+    "settings_theme": "Farbschema",
+    "settings_theme_dark": "Dunkel",
+    "settings_theme_light": "Hell",
+    "settings_boss": "Boss-Kämpfe",
+    "settings_boss_on": "Alle 8 Phasen (Aktiv)",
+    "settings_boss_off": "Deaktiviert",
+    "settings_test_boss": "Bosskampf testen",
+    "settings_face_boss": "Boss herausfordern",
+    "settings_lang": "Sprache",
+    "settings_difficulty": "Schwierigkeit",
+    "settings_diff_locked_match": "Schwierigkeit kann während einer Partie nicht geändert werden",
+    "diff_easy": "Leicht",
+    "diff_normal": "Mittel",
+    "diff_hard": "Schwer",
+    "diff_desc_easy": "0.5× Starttempo • Keine Tempobeschleunigung • Kein Fortschrittsverlust • 5 Leben",
+    "diff_desc_normal": "1.0× Starttempo • Keine Tempobeschleunigung • Normaler Fortschrittsverlust • 3 Leben",
+    "diff_desc_hard": "1.5× Starttempo • +0.05× pro Fehler • Normaler Fortschrittsverlust • 3 Leben",
+    "settings_cat_general": "Allgemein & Oberfläche",
+    "settings_cat_boss": "Boss-Kämpfe",
+    "settings_cat_about": "Über die App",
+    "settings_version": "Aktuelle Version",
+    "settings_author": "Autor",
+    "settings_btn_check_update": "Prüfen",
+    "settings_update_latest": "Aktuell",
+    "update_available_title": "Ein neues Update ist verfügbar!",
+    "update_available_sub": "Klicken, um den Cache zu leeren und die neueste Version zu laden",
+    "update_btn_action": "Aktualisieren",
+    "update_applying": "Wird aktualisiert...",
+    "settings_btn_back": "Zurück",
+    "training_title": "Training: Tastaturreihen",
+    "training_sub": "Baue Muskelgedächtnis auf, ohne auf die Tasten zu schauen",
+    "training_notice": "In diesem Modus verlierst du <strong>keine Leben</strong>. Fehler senken deine <strong>Genauigkeit %</strong> und <strong>WPM</strong>.",
+    "training_btn_back": "Zurück",
+    "training_btn_start": "Starten (3 Lektionen) →",
+    "training_btn_again": "Erneut trainieren",
+    "training_completed": "Abgeschlossen (Meisterschaft)",
+    "training_pending": "3 Lektionen",
+    "training_record_acc": "Rekord: {acc}% Genauigkeit",
+    "boss_defeated_title": "BOSS BESIEGT!",
+    "boss_defeated_sub": "Du hast alle Runenprüfungen meisterhaft gelöst.",
+    "boss_defeated_prompt": "Wähle 1 dauerhafte Bonus-Fähigkeit:",
+    "boss_btn_pick": "Erhalten",
+    "boss_pick_skill": "Erhalten",
+    "boss_default_name": "Boss",
+    "fb_combo_broken": "Combo Unterbrochen!",
+    "fb_fury_activated": "WUTMODUS AKTIV! DOPPELTE PUNKTE!",
+    "fb_bomb_activated": "BOMBE AKTIV (10s)!",
+    "fb_bomb_expired": "Bombe abgelaufen",
+    "fb_bomb_explosion": "Explosion ({lines} Zeilen)! +{pts}",
+    "fb_freezer_activated": "EINFRIEREN AKTIV (10s)!",
+    "fb_freezer_expired": "Einfrieren abgelaufen",
+    "fb_shield_activated": "RUNENSCHILD AKTIV (10s)!",
+    "fb_shield_expired": "Runenschild abgelaufen",
+    "fb_shield_blocked": "Schaden durch Runenschild abgewehrt!",
+    "fb_shield_error_protected": "Tippfehler durch Schild geschützt!",
+    "fb_vortex_activated": "VORTEX AKTIV (10s)!",
+    "fb_vortex_expired": "Vortex abgelaufen",
+    "fb_slowdown_activated": "ZEITLUPE AKTIV (15s)!",
+    "fb_slowdown_expired": "Zeitlupe abgelaufen",
+    "fb_slow_activated": "ZEITLUPE AKTIV (15s)!",
+    "fb_slow_expired": "Zeitlupe abgelaufen",
+    "fb_haste_activated": "DOPPELTE PUNKTE (15s)!",
+    "fb_haste_expired": "Doppelte Punkte abgelaufen",
+    "fb_dilation_activated": "ABSTAND VERGRÖSSERT (45s)!",
+    "fb_dilation_expired": "Abstandserweiterung abgelaufen",
+    "fb_speedlock_activated": "GESCHWINDIGKEIT GESPERRT (1.0x / 60s)!",
+    "fb_speedlock_expired": "Temposperre abgelaufen",
+    "fb_autodestroy_activated": "KOSMISCHE SELBSTZERSTÖRUNG AKTIVIERT (60s)!",
+    "fb_autodestroy_expired": "Kosmische Selbstzerstörung abgelaufen",
+    "fb_autodestroy_shattered": "⚡ Automatisch zerstört: {word}! +{pts}",
+    "fb_wildcard": "JOKER! Alle Runen absorbiert! +{pts}",
+    "fb_life_recovered": "+1 Leben Wiederhergestellt!",
+    "fb_perfect": "PERFEKT!",
+    "hud_performance": "LEISTUNGSÜBERSICHT",
+    "hud_total_score": "GESAMTPUNKTE",
+    "hud_hits": "TREFFER",
+    "hud_errors": "FEHLER",
+    "hud_discovered_words": "ENTDECKTE WÖRTER",
+    "hud_view_all": "Alle anzeigen",
+    "hud_spells_hint": "Im Shop kaufen<br/>oder Wörter tippen",
+    "hud_activate_kb": "AKTIVIEREN (TASTATUR)",
+    "hud_key_label": "Taste",
+    "hud_max_phase": "MAX. PHASE",
+    "modal_unlocked_words": "Freigeschaltete Wörter",
+    "modal_btn_next_phase": "Nächste Phase →",
+    "modal_btn_back_training": "Zurück zum Trainingsmenü",
+    "shop_note": "Preise steigen nach jedem Kauf",
+    "shop_btn_continue": "Weiterspielen",
+    "btn_back_to_game": "Zurück zum Spiel",
+    "app_loading": "Runendaten werden geladen...",
+    "fb_runic_dropped_zen": "⚠️ Rune gefallen (- Genauigkeit)",
+    "fb_runic_dropped": "💔 Rune gefallen!",
+    "fb_time_up": "⏱️ Zeit abgelaufen!",
+    "fb_boss_enigma_dropped": "💥 Das Rätsel ist gefallen! Der Boss hat angegriffen!",
+    "fb_ice_cleared": "❄️ Bildschirm frei — Frost beendet!",
+    "fb_error_letter": "❌ Falscher Buchstabe!",
+    "fb_error": "❌ Fehler",
+    "fb_wildcard_clean": "💥 JOKER! ALLES BESEITIGT!",
+    "fb_training_completed": "🎉 Glückwunsch! Du hast alle Trainingswelten abgeschlossen!",
+    "fb_continue_used": "🪙 Continue verwendet! Phase wird fortgesetzt...",
+    "fb_permanent_life": "+1 Permanentes Leben!",
+    "fb_continue_obtained": "🪙 +1 Continue-Münze erhalten!",
+    "shop_all_words_unlocked": "Alle Wörter wurden bereits entdeckt!",
+    "hud_skills_empty_hint": "Im Shop kaufen<br/>oder Wörter vervollständigen <strong>⚡</strong>",
+    "training_lesson_1_title": "Lektion 1: Tastenerkennung",
+    "training_lesson_2_title": "Lektion 2: Fingerwechsel",
+    "training_lesson_3_title": "Lektion 3: Meisterschaftsherausforderung",
+    "training_lesson_1_name": "Grundstellung",
+    "training_lesson_2_name": "Wechsel",
+    "training_lesson_3_name": "Endprüfung",
+    "training_next_obj_2": "Nächstes Ziel: Tasten zu kurzen Wörtern kombinieren und Hände abwechseln.",
+    "training_next_obj_3": "Nächstes Ziel: Meisterprüfung für flüssiges Tippen mit ganzen Wörtern!",
+    "training_new_record": "NEUER REKORD!",
+    "training_world_mastered": "WELT GEMEISTERT",
+    "training_mastery_completed": "{world} — Meisterschaft abgeschlossen!",
+    "training_lesson_completed": "{world} — {lesson} abgeschlossen!",
+    "training_rank_s": "CHIRURGISCHE PRÄZISION",
+    "training_rank_a": "HERVORRAGENDE FLÜSSIGKEIT",
+    "training_rank_b": "GUTE KONTROLLE",
+    "training_rank_c": "MEHR ÜBEN",
+    "training_stat_world_progress": "Welt-Fortschritt",
+    "training_stat_lesson_done": "Lektion {lesson} von 3 abgeschlossen",
+    "training_stat_accuracy_rate": "Genauigkeitsrate",
+    "training_stat_status": "Trainingsstatus",
+    "training_stat_completed": "100% abgeschlossen (3/3 Lektionen)",
+    "training_stat_keys": "Gemeisterte Tasten",
+    "training_stat_accuracy": "Partie-Genauigkeit",
+    "training_stat_best_record": "Bester Rekord (Genauigkeit)",
+    "training_stat_speed": "Echte Geschwindigkeit (WPM)",
+    "training_stat_hits_errors": "Treffer / Fehler",
+    "training_hits_errs_val": "{hits} Treffer / {errors} Fehler",
+    "training_btn_next_world": "Weiter zu {world} →",
+    "training_btn_finish_all": "Alle Trainings abschließen! →",
+    "training_btn_next_lesson": "Weiter zu Lektion {lesson} ({runics} Runen) →",
+    "fb_boss_defeated": "{boss} BESIEGT! +350 MÜNZEN!",
+    "modal_phase_pts": "Punkte in der Phase erzielt",
+    "modal_acc_bonus": "Genauigkeitsbonus ({acc}%)",
+    "modal_penalty": "Fehler (Strafe)",
+    "modal_net_pts": "Netto hinzugefügt",
+    "modal_total_pts": "Gesamtpunktzahl",
+    "modal_combo_bonus": "Max.-Combo-Bonus ({combo}×)",
+    "modal_phase_total_pts": "Erhaltene Gesamtpunkte",
+    "modal_section_score": "Punktestand",
+    "modal_section_coins": "Verdiente Münzen",
+    "modal_coins_completion": "Phase Abgeschlossen",
+    "modal_boss_bonus": "Boss-Bonus",
+    "modal_coins_precision": "100% Genauigkeitsbonus",
+    "modal_coins_streak": "Fehlerfreie Serie ({streak} Phasen)",
+    "modal_coins_phase_total": "Münzen Gesamt Hinzugefügt",
+    "modal_coins_balance": "Gesamter Münzbestand",
+    "hud_coins": "MÜNZEN",
+    "hud_boss_hp": "BOSS-LP",
+    "fb_skill_acquired": "⚡ Fähigkeit: {skill}!",
+    "fb_vortex_devour": "🌀 Vortex hat {text} verschlungen! +{pts}",
+    "fb_enigma_solved": "💥 RÄTSEL GELÖST! -1 BOSS-LP! (+{pts}Pkt)",
+    "fb_reward_granted": "Belohnung gewährt: {reward}!",
+    "queue_top": "Oben",
+    "queue_bottom": "Unten",
+    "queue_toggle_to_bottom": "Warteschlange oben (Klicken zum Verschieben nach unten)",
+    "queue_toggle_to_top": "Warteschlange unten (Klicken zum Verschieben nach oben)",
+    "theme_switch_to_light": "Zu hellem Design wechseln",
+    "theme_switch_to_dark": "Zu dunklem Design wechseln",
+    "boss_enigma_badge": "📜 RÄTSEL {num} VON {total} • {scenario}",
+    "boss_enigma_letters": "{count} BUCHSTABEN",
+    "boss_enigma_queue": "RÄTSEL {num} VON 3",
+    "boss_level_tag": " (St. {level})",
+    "boss_cyber_titan_name": "Xylarion, der Leeren-Herrscher",
+    "boss_cyber_titan_title": "Kommandant der Alien-Vorhut",
+    "boss_cyber_titan_scenario": "Kuipergürtel (Rand des Sonnensystems)",
+    "boss_cyber_titan_scenario_desc": "Xylarions Dreadnought-Armada hat die Leere durchquert, um das Sonnensystem zu erobern!",
+    "boss_cyber_titan_badge": "ALIEN • DREADNOUGHT",
+    "boss_cyber_titan_lore": "Oberbefehlshaber der Invasionsflotte und Meister stellarer Plasmageschütze.",
+    "boss_feral_apex_name": "Zorkon, Orbit-Eroberer",
+    "boss_feral_apex_title": "Meister des Biomechanischen Schwarms",
+    "boss_feral_apex_scenario": "Neptun-Umlaufbahn",
+    "boss_feral_apex_scenario_desc": "Zorkons bio-organischer Schwarm umzingelt die Gasriesen des Sonnensystems!",
+    "boss_feral_apex_badge": "ALIEN • SCHWARM",
+    "boss_feral_apex_lore": "Befiehlt biomechanische Kolonien, die Sternenflotten verschlingen können.",
+    "boss_arcane_chimera_name": "Vespera, Antimaterie-Herrscherin",
+    "boss_arcane_chimera_title": "Außerirdische Psionik-Herrscherin",
+    "boss_arcane_chimera_scenario": "Saturnringe",
+    "boss_arcane_chimera_scenario_desc": "Vespera setzt Antimaterie-Batterien ein, um die Gravitationsschilde des Sonnensystems zu brechen!",
+    "boss_arcane_chimera_badge": "ALIEN • PSIONIK",
+    "boss_arcane_chimera_lore": "Beherrscht Dunkle Energie und intergalaktische Gedankenstürme.",
+    "boss_abyssal_leviathan_name": "Nebulor, Herold der Dunklen Materie",
+    "boss_abyssal_leviathan_title": "Kosmische Schattenentität",
+    "boss_abyssal_leviathan_scenario": "Jupiter-Umlaufbahn",
+    "boss_abyssal_leviathan_scenario_desc": "Nebulor krümmt Jupiters Magnetosphäre zur Vorbereitung des Angriffs auf die Erde!",
+    "boss_abyssal_leviathan_badge": "ALIEN • SCHATTEN",
+    "boss_abyssal_leviathan_lore": "Manipuliert Raumzeit-Anomalien und Schwerkraftwirbel.",
+    "boss_cosmic_chronos_name": "Xenor, Intergalaktisches Überbewusstsein",
+    "boss_cosmic_chronos_title": "Zentrale Invasionsintelligenz",
+    "boss_cosmic_chronos_scenario": "Mond-Umlaufbahn",
+    "boss_cosmic_chronos_scenario_desc": "Xenors kolossales Mutterschiff geht im Mondorbit für die finale Invasion der Erde in Stellung!",
+    "boss_cosmic_chronos_badge": "ALIEN • MUTTERSCHIFF",
+    "boss_cosmic_chronos_lore": "Das übergeordnete Alien-Bewusstsein, das die Invasion des Sonnensystems lenkt.",
+    "boss_magma_vulcanus_name": "Kragthor, Flottenbrecher",
+    "boss_magma_vulcanus_title": "Kriegstreiber-General der Invasoren",
+    "boss_magma_vulcanus_scenario": "Asteroidengürtel",
+    "boss_magma_vulcanus_scenario_desc": "Kragthors gewaltiges Kriegsschiff zerschmettert Asteroiden, um den Weg zur Erde zu bahnen!",
+    "boss_magma_vulcanus_badge": "ALIEN • KRIEGSFÜRST",
+    "boss_magma_vulcanus_lore": "Schwer gepanzerter Invasor mit verheerenden Antimaterie-Desintegratoren.",
+    "btn_continue": "Spiel Fortsetzen",
+    "btn_new_game": "Neues Spiel",
+    "btn_new_game_desc": "Neu starten mit geteilten Münzen",
+    "btn_save_slots": "Speicherplätze",
+    "slots_title": "Speicherplätze",
+    "slots_sub": "Verwalte deinen Fortschritt oder starte ein neues Spiel",
+    "lbl_highscore": "REKORD",
+    "lbl_shared_coins": "MÜNZEN",
+    "lbl_highcoins": "MAX MÜNZEN",
+    "slot_number": "Platz {slot}",
+    "slot_in_progress": "Läuft",
+    "slot_empty": "Leer",
+    "slot_empty_desc": "Kein Spielstand. Starte frisch mit deinen geteilten Münzen!",
+    "slot_btn_continue": "Fortsetzen",
+    "slot_btn_new": "Neues Spiel",
+    "slot_btn_delete": "Löschen",
+    "slot_confirm_overwrite": "Platz {slot} überschreiben und neues Spiel starten? Der vorhandene Fortschritt wird ersetzt.",
+    "slot_confirm_delete": "Möchtest du den Spielstand in Platz {slot} wirklich löschen?",
+    "fb_game_saved": "Spielfortschritt gespeichert!",
+    "fb_game_resumed": "Spiel ab Phase {phase} fortgesetzt!",
+    "slots_shared_wallet": "Geteilte Münzbank",
+    "slots_close": "Schließen",
+    "slot_phase_score": "Phase {phase} • {score} Pkt",
+    "slot_date_fmt": "Gespeichert: {date}",
+    "confirm_new_game_title": "Neues Spiel Starten?",
+    "confirm_new_game_desc": "Du hast ein laufendes Spiel. Ein neues Spiel überschreibt Platz {slot}. Deine geteilten Münzen bleiben verfügbar!",
+    "settings_finger_guide": "Visuelle Fingerhilfe",
+    "settings_finger_guide_always": "Immer aktiv (Standard)",
+    "settings_finger_guide_training": "Nur Training",
+    "settings_finger_guide_off": "Deaktiviert",
+    "vk_space": "LEERTASTE",
+    "finger_guide_title": "Fingerhilfe",
+    "finger_ready": "Ruhestellung",
+    "finger_space_bar": "Leertaste",
+    "hand_left": "Linke Hand",
+    "hand_right": "Rechte Hand",
+    "hand_both": "Beide Hände",
+    "finger_l_pinky": "Linker kleiner Finger",
+    "finger_l_ring": "Linker Ringfinger",
+    "finger_l_middle": "Linker Mittelfinger",
+    "finger_l_index": "Linker Zeigefinger",
+    "finger_l_thumb": "Linker Daumen",
+    "finger_r_thumb": "Rechter Daumen",
+    "finger_r_index": "Rechter Zeigefinger",
+    "finger_r_middle": "Rechter Mittelfinger",
+    "finger_r_ring": "Rechter Ringfinger",
+    "finger_r_pinky": "Rechter kleiner Finger",
+    "finger_thumb": "Daumen",
+    "footer_privacy": "Datenschutzerklärung",
+    "btn_privacy": "Datenschutz",
+    "settings_privacy": "Datenschutz & Daten",
+    "settings_view_privacy": "Richtlinie anzeigen",
+    "privacy_title": "Datenschutzerklärung & Transparenz",
+    "privacy_sub": "Datenverarbeitung, lokaler Speicher und GitHub Pages-Infrastruktur",
+    "privacy_btn_open_page": "Vollständige Seite öffnen",
+    "btn_close_privacy": "Verstanden",
+    "privacy_badge_nocollect": "Keine Datenerhebung",
+    "privacy_badge_local": "100% Lokale Speicherung",
+    "privacy_badge_github": "GitHub Pages Hosting",
+    "privacy_badge_lgpd": "LGPD & ANPD Konformität",
+    "privacy_sec_collection_title": "1. Keine Erhebung personenbezogener Daten durch Digitinho Galaxy",
+    "privacy_sec_collection_desc": "Digitinho Galaxy ist ein statisches Webspiel, das vollständig im Browser des Spielers ausgeführt wird (clientseitig). Das Projekt betreibt keine eigenen Backend-Server, Remote-Datenbanken, Registrierungsformulare oder Benutzerkonten. Es werden keine personenbezogenen Daten (wie Name, E-Mail, Ausweis oder Telefonnummer) angefordert, erhoben, verarbeitet oder weitergegeben.",
+    "privacy_sec_storage_title": "2. Lokale Speicherung auf dem Endgerät (HTML5 LocalStorage)",
+    "privacy_sec_storage_desc": "Der gesamte Spielfortschritt — Punktestände, Speicherstände, in der Bibliothek freigeschaltete Wörter, Erfolge, Audioeinstellungen, Schwierigkeitsgrad und Farbmodi — wird ausschließlich im lokalen Speicher Ihres Browsers (localStorage) abgelegt. Diese Daten verlassen Ihr Gerät nie und können jederzeit über die Browsereinstellungen oder die Spielstandverwaltung gelöscht werden.",
+    "privacy_sec_hosting_title": "3. Hosting-Infrastruktur & Technische Protokolle von GitHub Pages",
+    "privacy_sec_hosting_desc": "Digitinho Galaxy wird als statische Website auf GitHub Pages gehostet (betrieben von GitHub, Inc. / Microsoft). Beim Aufrufen der Website können die Server von GitHub technische Verbindungsmetadaten wie IP-Adressen, Zugriffszeitpunkte, Browser-Kennungen und URLs protokollieren, um Sicherheit, Systemintegrität und Missbrauchsschutz gemäß der GitHub-Datenschutzerklärung zu gewährleisten. Der Entwickler von Digitinho Galaxy hat keinen Zugriff auf IP-Rohprotokolle.",
+    "privacy_sec_cookies_title": "4. Keine Tracking-Cookies oder Analysewerkzeuge Dritter",
+    "privacy_sec_cookies_desc": "Das Spiel verwendet keine Werbe-Cookies, Google Analytics, Social-Media-Pixel oder Profiling-Skripte von Drittanbietern. Das Erlebnis dient ausschließlich dem Tipptraining und dem Spielspaß.",
+    "privacy_sec_lgpd_title": "5. Einhaltung des brasilianischen Datenschutzgesetzes (LGPD) & ANPD",
+    "privacy_sec_lgpd_desc": "Unter Berücksichtigung des brasilianischen Datenschutzgesetzes (LGPD, Gesetz Nr. 13.709/2018) und der Richtlinien der ANPD folgt das Projekt den Grundsätzen der Zweckbindung, Erforderlichkeit, Datenminimierung und Transparenz. Da keine personenbezogenen Daten verarbeitet werden, findet weder ein Verkauf noch eine Weitergabe statt.",
+    "privacy_sec_opensource_title": "6. Open Source, Transparenz und Überprüfbarkeit",
+    "privacy_sec_opensource_desc": "Digitinho Galaxy ist ein Open-Source-Projekt unter der MIT-Lizenz. Der gesamte Quellcode kann öffentlich auf GitHub eingesehen und geprüft werden, um die vollständige Abwesenheit von Trackern, Telemetrie oder Datenübertragungen nachzuweisen.",
+    "privacy_sec_links_title": "Offizielle Quellen und rechtliche Referenzen",
+    "privacy_link_github": "GitHub Pages: Funktionsweise und IP-Protokollierung",
+    "privacy_link_anpd": "ANPD: Personenbezogene Daten und Verantwortliche",
+    "privacy_link_lgpd": "LGPD — Brasilianisches Datenschutzgesetz (Gesetz Nr. 13.709/2018)",
+    "privacy_back_game": "Zurück zum Spiel",
+    "privacy_updated": "Zuletzt aktualisiert: Oktober 2026 • Digitinho Galaxy Space Typing Game",
+    "privacy_page_title": "Digitinho Galaxy — Datenschutzerklärung & Transparenz",
+    "privacy_overview_title": "Wichtige Punkte im Überblick",
+    "privacy_contact_title": "Fragen & Kontakt",
+    "privacy_contact_desc": "Da es sich um ein clientseitiges Open-Source-Projekt ohne Server oder Datenerfassung handelt, können Fragen oder Anregungen direkt über das GitHub-Repository als Issue eingereicht werden.",
+    "boss_alien_xylarion_name": "Xylarion, der Leeren-Herrscher",
+    "boss_alien_xylarion_title": "Kommandant der Alien-Vorhut",
+    "boss_alien_xylarion_scenario": "Kuipergürtel (Rand des Sonnensystems)",
+    "boss_alien_xylarion_scenario_desc": "Xylarions Dreadnought-Armada hat die Leere durchquert, um das Sonnensystem zu erobern!",
+    "boss_alien_xylarion_badge": "ALIEN • DREADNOUGHT",
+    "boss_alien_xylarion_lore": "Oberbefehlshaber der Invasionsflotte und Meister stellarer Plasmageschütze.",
+    "boss_alien_zorkon_name": "Zorkon, Orbit-Eroberer",
+    "boss_alien_zorkon_title": "Meister des Biomechanischen Schwarms",
+    "boss_alien_zorkon_scenario": "Neptun-Umlaufbahn",
+    "boss_alien_zorkon_scenario_desc": "Zorkons bio-organischer Schwarm umzingelt die Gasriesen des Sonnensystems!",
+    "boss_alien_zorkon_badge": "ALIEN • SCHWARM",
+    "boss_alien_zorkon_lore": "Befiehlt biomechanische Kolonien, die Sternenflotten verschlingen können.",
+    "boss_alien_vespera_name": "Vespera, Antimaterie-Herrscherin",
+    "boss_alien_vespera_title": "Außerirdische Psionik-Herrscherin",
+    "boss_alien_vespera_scenario": "Saturnringe",
+    "boss_alien_vespera_scenario_desc": "Vespera setzt Antimaterie-Batterien ein, um die Gravitationsschilde des Sonnensystems zu brechen!",
+    "boss_alien_vespera_badge": "ALIEN • PSIONIK",
+    "boss_alien_vespera_lore": "Beherrscht Dunkle Energie und intergalaktische Gedankenstürme.",
+    "boss_alien_kragthor_name": "Kragthor, Flottenbrecher",
+    "boss_alien_kragthor_title": "Kriegstreiber-General der Invasoren",
+    "boss_alien_kragthor_scenario": "Asteroidengürtel",
+    "boss_alien_kragthor_scenario_desc": "Kragthors gewaltiges Kriegsschiff zerschmettert Asteroiden, um den Weg zur Erde zu bahnen!",
+    "boss_alien_kragthor_badge": "ALIEN • KRIEGSFÜRST",
+    "boss_alien_kragthor_lore": "Schwer gepanzerter Invasor mit verheerenden Antimaterie-Desintegratoren.",
+    "boss_alien_nebulor_name": "Nebulor, Herold der Dunklen Materie",
+    "boss_alien_nebulor_title": "Kosmische Schattenentität",
+    "boss_alien_nebulor_scenario": "Jupiter-Umlaufbahn",
+    "boss_alien_nebulor_scenario_desc": "Nebulor krümmt Jupiters Magnetosphäre zur Vorbereitung des Angriffs auf die Erde!",
+    "boss_alien_nebulor_badge": "ALIEN • SCHATTEN",
+    "boss_alien_nebulor_lore": "Manipuliert Raumzeit-Anomalien und Schwerkraftwirbel.",
+    "boss_alien_xenor_name": "Xenor, Intergalaktisches Überbewusstsein",
+    "boss_alien_xenor_title": "Zentrale Invasionsintelligenz",
+    "boss_alien_xenor_scenario": "Mond-Umlaufbahn",
+    "boss_alien_xenor_scenario_desc": "Xenors kolossales Mutterschiff geht im Mondorbit für die finale Invasion der Erde in Stellung!",
+    "boss_alien_xenor_badge": "ALIEN • MUTTERSCHIFF",
+    "boss_alien_xenor_lore": "Das übergeordnete Alien-Bewusstsein, das die Invasion des Sonnensystems lenkt.",
+    "hud_perk_passive": "Passiv",
+    "hud_perk_active_label": "Aktiv",
+    "hud_perk_recharging": "Aufladen",
+    "hud_perk_queue": "Warteschlange",
+    "hud_perk_lvl": "St. {lvl}"
+  },
+  "syllables": [
+    "de",
+    "en",
+    "er",
+    "te",
+    "in",
+    "ch",
+    "un",
+    "an",
+    "re",
+    "st",
+    "ge",
+    "ne",
+    "li",
+    "be",
+    "da",
+    "so",
+    "ma",
+    "mi",
+    "au",
+    "ei",
+    "sch",
+    "ver",
+    "ent",
+    "zer"
+  ],
+  "words": [
+    {
+      "text": "sonne",
+      "type": "cosmos",
+      "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
     },
-    "syllables": [
-        "de",
-        "en",
-        "er",
-        "te",
-        "in",
-        "ch",
-        "un",
-        "an",
-        "re",
-        "st",
-        "ge",
-        "ne",
-        "li",
-        "be",
-        "da",
-        "so",
-        "ma",
-        "mi",
-        "au",
-        "ei",
-        "sch",
-        "ver",
-        "ent",
-        "zer"
-    ],
-    "words": [
-        {
-            "text": "sonne",
-            "type": "cosmos",
-            "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
-        },
-        {
-            "text": "mond",
-            "type": "cosmos",
-            "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
-        },
-        {
-            "text": "monde",
-            "type": "cosmos",
-            "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
-        },
-        {
-            "text": "himmel",
-            "type": "cosmos",
-            "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
-        },
-        {
-            "text": "strahl",
-            "type": "phaenomen",
-            "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
-        },
-        {
-            "text": "halo",
-            "type": "cosmos",
-            "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
-        },
-        {
-            "text": "achse",
-            "type": "cosmos",
-            "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
-        },
-        {
-            "text": "phase",
-            "type": "phaenomen",
-            "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
-        },
-        {
-            "text": "welle",
-            "type": "phaenomen",
-            "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
-        },
-        {
-            "text": "schiff",
-            "type": "tech",
-            "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
-        },
-        {
-            "text": "nova",
-            "type": "phaenomen",
-            "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
-        },
-        {
-            "text": "ziel",
-            "type": "tech",
-            "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
-        },
-        {
-            "text": "daten",
-            "type": "tech",
-            "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
-        },
-        {
-            "text": "nacht",
-            "type": "cosmos",
-            "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
-        },
-        {
-            "text": "jahr",
-            "type": "cosmos",
-            "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
-        },
-        {
-            "text": "vakuum",
-            "type": "cosmos",
-            "meaning": "Materiefreier Raum, in dem die absolute Stille des Kosmos herrscht"
-        },
-        {
-            "text": "gestirn",
-            "type": "cosmos",
-            "meaning": "Jeder natürliche Himmelskörper in den Weiten des Universums"
-        },
-        {
-            "text": "kosmos",
-            "type": "cosmos",
-            "meaning": "Das geordnete, harmonische und unendliche physikalische Universum"
-        },
-        {
-            "text": "mars",
-            "type": "cosmos",
-            "meaning": "Vierter Planet von der Sonne, historisch als Roter Planet bekannt"
-        },
-        {
-            "text": "venus",
-            "type": "cosmos",
-            "meaning": "Zweiter Planet von der Sonne und hellster Wandelstern am Nachthimmel"
-        },
-        {
-            "text": "erde",
-            "type": "cosmos",
-            "meaning": "Unsere blaue Heimatwelt, die einzige bekannte Oase mit flüssigem Wasser"
-        },
-        {
-            "text": "solar",
-            "type": "cosmos",
-            "meaning": "Die Sonne, ihre Strahlung, Sonnenwinde und ihr System betreffend"
-        },
-        {
-            "text": "sonde",
-            "type": "tech",
-            "meaning": "Unbemanntes Forschungsraumschiff zur Erkundung fremder Atmosphären"
-        },
-        {
-            "text": "radar",
-            "type": "tech",
-            "meaning": "Funkortungssystem zur Kartierung planetarer Oberflächen und Asteroiden"
-        },
-        {
-            "text": "magma",
-            "type": "natur",
-            "meaning": "Glühend heißes geschmolzenes Gestein im Inneren von Gesteinsplaneten"
-        },
-        {
-            "text": "wolke",
-            "type": "cosmos",
-            "meaning": "Dichte molekulare Gas- und Staubwolke als Geburtsstätte neuer Sonnen"
-        },
-        {
-            "text": "pluto",
-            "type": "cosmos",
-            "meaning": "Eisiger Zwergplanet im Kuipergürtel am Rande unseres Sonnensystems"
-        },
-        {
-            "text": "orbit",
-            "type": "cosmos",
-            "meaning": "Gravitative Umlaufbahn eines Himmelskörpers um ein Massezentrum"
-        },
-        {
-            "text": "komet",
-            "type": "cosmos",
-            "meaning": "Eisiger Himmelskörper, der in Sonnennähe einen leuchtenden Schweif bildet"
-        },
-        {
-            "text": "pulsar",
-            "type": "cosmos",
-            "meaning": "Rasch rotierender Neutronenstern, der periodische Strahlungsimpulse aussendet"
-        },
-        {
-            "text": "quasar",
-            "type": "cosmos",
-            "meaning": "Extrem leuchtkräftiger aktiver Galaxienkern, angetrieben von supermassereichem Schwarzen Loch"
-        },
-        {
-            "text": "korona",
-            "type": "cosmos",
-            "meaning": "Äußerste, millionengradheiße Atmosphärenschicht der Sonne"
-        },
-        {
-            "text": "meteor",
-            "type": "cosmos",
-            "meaning": "Leuchtspur beim Verglühen eines Partikels in der Planetenatmosphäre"
-        },
-        {
-            "text": "optik",
-            "type": "tech",
-            "meaning": "Wissenschaft des Lichts und der Spiegelsysteme moderner Weltraumteleskope"
-        },
-        {
-            "text": "weltall",
-            "type": "cosmos",
-            "meaning": "Die unendliche dreidimensionale Weite, in der Galaxien und Sterne treiben"
-        },
-        {
-            "text": "aurora",
-            "type": "phaenomen",
-            "meaning": "Atmosphärisches Polarlicht durch Wechselwirkung von Sonnenwind und Magnetfeld"
-        },
-        {
-            "text": "zenit",
-            "type": "cosmos",
-            "meaning": "Der Scheitelpunkt der Himmelssphäre direkt über dem Beobachter"
-        },
-        {
-            "text": "hubble",
-            "type": "tech",
-            "meaning": "Berühmtes Weltraumteleskop, das die moderne Astronomie revolutionierte"
-        },
-        {
-            "text": "staub",
-            "type": "cosmos",
-            "meaning": "Interstellare Mineralkörnchen in den Spiralarmen von Galaxien"
-        },
-        {
-            "text": "trichter",
-            "type": "cosmos",
-            "meaning": "Extremer Raumzeit-Krümmungstrichter, der in eine Singularität mündet"
-        },
-        {
-            "text": "stern",
-            "type": "cosmos",
-            "meaning": "Gigantischer Plasmaball, angetrieben durch nukleare Fusion im Kern"
-        },
-        {
-            "text": "planet",
-            "type": "cosmos",
-            "meaning": "Massereicher Himmelskörper, der einen Stern umkreist und seine Bahn geräumt hat"
-        },
-        {
-            "text": "galaxie",
-            "type": "cosmos",
-            "meaning": "Gewaltiges Sternensystem aus Milliarden Sonnen, Gas und Dunkler Materie"
-        },
-        {
-            "text": "galaxien",
-            "type": "cosmos",
-            "meaning": "Milliarden von Sterneninseln verteilt über das kosmische Netz des Alls"
-        },
-        {
-            "text": "universum",
-            "type": "cosmos",
-            "meaning": "Die Gesamtheit aller Materie, Energie, Raum, Zeit und Naturgesetze"
-        },
-        {
-            "text": "nebel",
-            "type": "cosmos",
-            "meaning": "Interstellare Wolke aus leuchtendem Gas, Sternenresten und kosmischem Staub"
-        },
-        {
-            "text": "gravitation",
-            "type": "phaenomen",
-            "meaning": "Fundamentale Anziehungskraft zwischen Massen, die die Raumzeit krümmt"
-        },
-        {
-            "text": "supernova",
-            "type": "phaenomen",
-            "meaning": "Katastrophale Explosion eines massereichen Sterns am Ende seiner Entwicklung"
-        },
-        {
-            "text": "astronaut",
-            "type": "tech",
-            "meaning": "Professionell ausgebildeter Raumfahrer auf orbitalen Forschungsmissionen"
-        },
-        {
-            "text": "astronomie",
-            "type": "wissenschaft",
-            "meaning": "Wissenschaftliche Erforschung der Himmelskörper und des Universums"
-        },
-        {
-            "text": "exoplanet",
-            "type": "cosmos",
-            "meaning": "Planet außerhalb unseres Sonnensystems, der eine fremde Sonne umkreist"
-        },
-        {
-            "text": "exoplaneten",
-            "type": "cosmos",
-            "meaning": "Fremde Planetenwelten um ferne Sonnen in unserer Heimatgalaxie"
-        },
-        {
-            "text": "satellit",
-            "type": "tech",
-            "meaning": "Natürlicher oder künstlicher Himmelskörper auf einer Planetenumlaufbahn"
-        },
-        {
-            "text": "sternbild",
-            "type": "cosmos",
-            "meaning": "Muster aus Sternen an der Himmelskugel, benannt nach Mythologien"
-        },
-        {
-            "text": "teleskop",
-            "type": "tech",
-            "meaning": "Optisches Instrument zum Sammeln von Licht ferner Himmelskörper"
-        },
-        {
-            "text": "raumschiff",
-            "type": "tech",
-            "meaning": "Sternenschiff konstruiert für interstellare Reisen und Missionen"
-        },
-        {
-            "text": "atmosphaere",
-            "type": "cosmos",
-            "meaning": "Gashülle, die durch Gravitation an einen Planeten gebunden ist"
-        },
-        {
-            "text": "magnetosphaere",
-            "type": "phaenomen",
-            "meaning": "Magnetischer Schutzschild gegen tödliche Sonnenwinde und kosmische Strahlung"
-        },
-        {
-            "text": "strahlung",
-            "type": "phaenomen",
-            "meaning": "Elektromagnetische Wellen oder hochenergetische Teilchen im Weltraum"
-        },
-        {
-            "text": "spektrum",
-            "type": "wissenschaft",
-            "meaning": "Zerlegung des Sternenlichts zur Analyse chemischer Zusammensetzungen"
-        },
-        {
-            "text": "andromeda",
-            "type": "cosmos",
-            "meaning": "Die uns am nächsten gelegene große Spiralgalaxie im lokalen Haufen"
-        },
-        {
-            "text": "heliosphaere",
-            "type": "cosmos",
-            "meaning": "Vom Sonnenwind geformte gigantische Schutzblase im interstellaren Raum"
-        },
-        {
-            "text": "antimaterie",
-            "type": "wissenschaft",
-            "meaning": "Materie aus Antiteilchen, die sich bei Kontakt mit Materie zerstrahlt"
-        },
-        {
-            "text": "singularitaet",
-            "type": "cosmos",
-            "meaning": "Zentrum eines Schwarzen Lochs, an dem physikalische Dichte unendlich wird"
-        },
-        {
-            "text": "multiversum",
-            "type": "cosmos",
-            "meaning": "Hypothetische Gesamtheit unendlich vieler koexistierender Parallelwelten"
-        },
-        {
-            "text": "lichtjahr",
-            "type": "wissenschaft",
-            "meaning": "Entfernung, die ein Lichtstrahl im Vakuum während eines Erdjahres zurücklegt"
-        },
-        {
-            "text": "schwarzes-loch",
-            "type": "cosmos",
-            "meaning": "Kosmisches Objekt so gewaltiger Gravitation, dass selbst Licht nicht entkommt"
-        },
-        {
-            "text": "sternenstaub",
-            "type": "cosmos",
-            "meaning": "Asche vergangener Supernovae, aus der neue Welten und Leben entstehen"
-        },
-        {
-            "text": "dunkle-materie",
-            "type": "cosmos",
-            "meaning": "Unsichtbare Materieform, die den Großteil der galaktischen Masse bildet"
-        },
-        {
-            "text": "dunkle-energie",
-            "type": "cosmos",
-            "meaning": "Rätselhafte Kraft, die die beschleunigte Ausdehnung des Raumes antreibt"
-        },
-        {
-            "text": "wurmloch",
-            "type": "cosmos",
-            "meaning": "Theoretische Abkürzung durch die Raumzeit, die entfernte Punkte verbindet"
-        },
-        {
-            "text": "lichtgeschwindigkeit",
-            "type": "wissenschaft",
-            "meaning": "Universelle Geschwindigkeitsgrenze von dreihunderttausend Kilometern pro Sekunde"
-        },
-        {
-            "text": "raumstation",
-            "type": "tech",
-            "meaning": "Bewohnbare künstliche Orbitalbasis für Langzeitforschungen im All"
-        },
-        {
-            "text": "ereignishorizont",
-            "type": "cosmos",
-            "meaning": "Grenzfläche ohne Wiederkehr, die ein Schwarzes Loch umschließt"
-        },
-        {
-            "text": "milchstrasse",
-            "type": "cosmos",
-            "meaning": "Unsere Heimat-Balkenspiralgalaxie mit Hunderten Milliarden Sternensystemen"
-        }
-    ],
-    "bossWords": {
-        "alien_dreadnought": [
-            {
-                "text": "sonne",
-                "type": "cosmos",
-                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
-            },
-            {
-                "text": "mond",
-                "type": "cosmos",
-                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
-            },
-            {
-                "text": "monde",
-                "type": "cosmos",
-                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
-            },
-            {
-                "text": "himmel",
-                "type": "cosmos",
-                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
-            },
-            {
-                "text": "strahl",
-                "type": "phaenomen",
-                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
-            },
-            {
-                "text": "achse",
-                "type": "cosmos",
-                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
-            },
-            {
-                "text": "phase",
-                "type": "phaenomen",
-                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
-            },
-            {
-                "text": "welle",
-                "type": "phaenomen",
-                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
-            },
-            {
-                "text": "schiff",
-                "type": "tech",
-                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
-            },
-            {
-                "text": "nova",
-                "type": "phaenomen",
-                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
-            },
-            {
-                "text": "ziel",
-                "type": "tech",
-                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
-            },
-            {
-                "text": "daten",
-                "type": "tech",
-                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
-            },
-            {
-                "text": "nacht",
-                "type": "cosmos",
-                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
-            },
-            {
-                "text": "jahr",
-                "type": "cosmos",
-                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
-            }
-        ],
-        "alien_hive": [
-            {
-                "text": "sonne",
-                "type": "cosmos",
-                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
-            },
-            {
-                "text": "mond",
-                "type": "cosmos",
-                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
-            },
-            {
-                "text": "monde",
-                "type": "cosmos",
-                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
-            },
-            {
-                "text": "himmel",
-                "type": "cosmos",
-                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
-            },
-            {
-                "text": "strahl",
-                "type": "phaenomen",
-                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
-            },
-            {
-                "text": "achse",
-                "type": "cosmos",
-                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
-            },
-            {
-                "text": "phase",
-                "type": "phaenomen",
-                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
-            },
-            {
-                "text": "welle",
-                "type": "phaenomen",
-                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
-            },
-            {
-                "text": "schiff",
-                "type": "tech",
-                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
-            },
-            {
-                "text": "nova",
-                "type": "phaenomen",
-                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
-            },
-            {
-                "text": "ziel",
-                "type": "tech",
-                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
-            },
-            {
-                "text": "daten",
-                "type": "tech",
-                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
-            },
-            {
-                "text": "nacht",
-                "type": "cosmos",
-                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
-            },
-            {
-                "text": "jahr",
-                "type": "cosmos",
-                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
-            }
-        ],
-        "alien_psionic": [
-            {
-                "text": "sonne",
-                "type": "cosmos",
-                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
-            },
-            {
-                "text": "mond",
-                "type": "cosmos",
-                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
-            },
-            {
-                "text": "monde",
-                "type": "cosmos",
-                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
-            },
-            {
-                "text": "himmel",
-                "type": "cosmos",
-                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
-            },
-            {
-                "text": "strahl",
-                "type": "phaenomen",
-                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
-            },
-            {
-                "text": "achse",
-                "type": "cosmos",
-                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
-            },
-            {
-                "text": "phase",
-                "type": "phaenomen",
-                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
-            },
-            {
-                "text": "welle",
-                "type": "phaenomen",
-                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
-            },
-            {
-                "text": "schiff",
-                "type": "tech",
-                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
-            },
-            {
-                "text": "nova",
-                "type": "phaenomen",
-                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
-            },
-            {
-                "text": "ziel",
-                "type": "tech",
-                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
-            },
-            {
-                "text": "daten",
-                "type": "tech",
-                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
-            },
-            {
-                "text": "nacht",
-                "type": "cosmos",
-                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
-            },
-            {
-                "text": "jahr",
-                "type": "cosmos",
-                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
-            }
-        ],
-        "alien_warlord": [
-            {
-                "text": "sonne",
-                "type": "cosmos",
-                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
-            },
-            {
-                "text": "mond",
-                "type": "cosmos",
-                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
-            },
-            {
-                "text": "monde",
-                "type": "cosmos",
-                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
-            },
-            {
-                "text": "himmel",
-                "type": "cosmos",
-                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
-            },
-            {
-                "text": "strahl",
-                "type": "phaenomen",
-                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
-            },
-            {
-                "text": "achse",
-                "type": "cosmos",
-                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
-            },
-            {
-                "text": "phase",
-                "type": "phaenomen",
-                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
-            },
-            {
-                "text": "welle",
-                "type": "phaenomen",
-                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
-            },
-            {
-                "text": "schiff",
-                "type": "tech",
-                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
-            },
-            {
-                "text": "nova",
-                "type": "phaenomen",
-                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
-            },
-            {
-                "text": "ziel",
-                "type": "tech",
-                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
-            },
-            {
-                "text": "daten",
-                "type": "tech",
-                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
-            },
-            {
-                "text": "nacht",
-                "type": "cosmos",
-                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
-            },
-            {
-                "text": "jahr",
-                "type": "cosmos",
-                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
-            }
-        ],
-        "alien_darkmatter": [
-            {
-                "text": "sonne",
-                "type": "cosmos",
-                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
-            },
-            {
-                "text": "mond",
-                "type": "cosmos",
-                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
-            },
-            {
-                "text": "monde",
-                "type": "cosmos",
-                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
-            },
-            {
-                "text": "himmel",
-                "type": "cosmos",
-                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
-            },
-            {
-                "text": "strahl",
-                "type": "phaenomen",
-                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
-            },
-            {
-                "text": "achse",
-                "type": "cosmos",
-                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
-            },
-            {
-                "text": "phase",
-                "type": "phaenomen",
-                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
-            },
-            {
-                "text": "welle",
-                "type": "phaenomen",
-                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
-            },
-            {
-                "text": "schiff",
-                "type": "tech",
-                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
-            },
-            {
-                "text": "nova",
-                "type": "phaenomen",
-                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
-            },
-            {
-                "text": "ziel",
-                "type": "tech",
-                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
-            },
-            {
-                "text": "daten",
-                "type": "tech",
-                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
-            },
-            {
-                "text": "nacht",
-                "type": "cosmos",
-                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
-            },
-            {
-                "text": "jahr",
-                "type": "cosmos",
-                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
-            }
-        ],
-        "alien_mothership": [
-            {
-                "text": "sonne",
-                "type": "cosmos",
-                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
-            },
-            {
-                "text": "mond",
-                "type": "cosmos",
-                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
-            },
-            {
-                "text": "monde",
-                "type": "cosmos",
-                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
-            },
-            {
-                "text": "himmel",
-                "type": "cosmos",
-                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
-            },
-            {
-                "text": "strahl",
-                "type": "phaenomen",
-                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
-            },
-            {
-                "text": "achse",
-                "type": "cosmos",
-                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
-            },
-            {
-                "text": "phase",
-                "type": "phaenomen",
-                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
-            },
-            {
-                "text": "welle",
-                "type": "phaenomen",
-                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
-            },
-            {
-                "text": "schiff",
-                "type": "tech",
-                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
-            },
-            {
-                "text": "nova",
-                "type": "phaenomen",
-                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
-            },
-            {
-                "text": "ziel",
-                "type": "tech",
-                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
-            },
-            {
-                "text": "daten",
-                "type": "tech",
-                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
-            },
-            {
-                "text": "nacht",
-                "type": "cosmos",
-                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
-            },
-            {
-                "text": "jahr",
-                "type": "cosmos",
-                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
-            }
-        ],
-        "robot": [
-            {
-                "text": "sonne",
-                "type": "cosmos",
-                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
-            },
-            {
-                "text": "mond",
-                "type": "cosmos",
-                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
-            },
-            {
-                "text": "monde",
-                "type": "cosmos",
-                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
-            },
-            {
-                "text": "himmel",
-                "type": "cosmos",
-                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
-            },
-            {
-                "text": "strahl",
-                "type": "phaenomen",
-                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
-            },
-            {
-                "text": "achse",
-                "type": "cosmos",
-                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
-            },
-            {
-                "text": "phase",
-                "type": "phaenomen",
-                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
-            },
-            {
-                "text": "welle",
-                "type": "phaenomen",
-                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
-            },
-            {
-                "text": "schiff",
-                "type": "tech",
-                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
-            },
-            {
-                "text": "nova",
-                "type": "phaenomen",
-                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
-            },
-            {
-                "text": "ziel",
-                "type": "tech",
-                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
-            },
-            {
-                "text": "daten",
-                "type": "tech",
-                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
-            },
-            {
-                "text": "nacht",
-                "type": "cosmos",
-                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
-            },
-            {
-                "text": "jahr",
-                "type": "cosmos",
-                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
-            }
-        ],
-        "beast": [
-            {
-                "text": "sonne",
-                "type": "cosmos",
-                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
-            },
-            {
-                "text": "mond",
-                "type": "cosmos",
-                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
-            },
-            {
-                "text": "monde",
-                "type": "cosmos",
-                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
-            },
-            {
-                "text": "himmel",
-                "type": "cosmos",
-                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
-            },
-            {
-                "text": "strahl",
-                "type": "phaenomen",
-                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
-            },
-            {
-                "text": "achse",
-                "type": "cosmos",
-                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
-            },
-            {
-                "text": "phase",
-                "type": "phaenomen",
-                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
-            },
-            {
-                "text": "welle",
-                "type": "phaenomen",
-                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
-            },
-            {
-                "text": "schiff",
-                "type": "tech",
-                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
-            },
-            {
-                "text": "nova",
-                "type": "phaenomen",
-                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
-            },
-            {
-                "text": "ziel",
-                "type": "tech",
-                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
-            },
-            {
-                "text": "daten",
-                "type": "tech",
-                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
-            },
-            {
-                "text": "nacht",
-                "type": "cosmos",
-                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
-            },
-            {
-                "text": "jahr",
-                "type": "cosmos",
-                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
-            }
-        ],
-        "mythology": [
-            {
-                "text": "sonne",
-                "type": "cosmos",
-                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
-            },
-            {
-                "text": "mond",
-                "type": "cosmos",
-                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
-            },
-            {
-                "text": "monde",
-                "type": "cosmos",
-                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
-            },
-            {
-                "text": "himmel",
-                "type": "cosmos",
-                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
-            },
-            {
-                "text": "strahl",
-                "type": "phaenomen",
-                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
-            },
-            {
-                "text": "achse",
-                "type": "cosmos",
-                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
-            },
-            {
-                "text": "phase",
-                "type": "phaenomen",
-                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
-            },
-            {
-                "text": "welle",
-                "type": "phaenomen",
-                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
-            },
-            {
-                "text": "schiff",
-                "type": "tech",
-                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
-            },
-            {
-                "text": "nova",
-                "type": "phaenomen",
-                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
-            },
-            {
-                "text": "ziel",
-                "type": "tech",
-                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
-            },
-            {
-                "text": "daten",
-                "type": "tech",
-                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
-            },
-            {
-                "text": "nacht",
-                "type": "cosmos",
-                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
-            },
-            {
-                "text": "jahr",
-                "type": "cosmos",
-                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
-            }
-        ],
-        "volcano": [
-            {
-                "text": "sonne",
-                "type": "cosmos",
-                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
-            },
-            {
-                "text": "mond",
-                "type": "cosmos",
-                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
-            },
-            {
-                "text": "monde",
-                "type": "cosmos",
-                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
-            },
-            {
-                "text": "himmel",
-                "type": "cosmos",
-                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
-            },
-            {
-                "text": "strahl",
-                "type": "phaenomen",
-                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
-            },
-            {
-                "text": "achse",
-                "type": "cosmos",
-                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
-            },
-            {
-                "text": "phase",
-                "type": "phaenomen",
-                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
-            },
-            {
-                "text": "welle",
-                "type": "phaenomen",
-                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
-            },
-            {
-                "text": "schiff",
-                "type": "tech",
-                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
-            },
-            {
-                "text": "nova",
-                "type": "phaenomen",
-                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
-            },
-            {
-                "text": "ziel",
-                "type": "tech",
-                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
-            },
-            {
-                "text": "daten",
-                "type": "tech",
-                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
-            },
-            {
-                "text": "nacht",
-                "type": "cosmos",
-                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
-            },
-            {
-                "text": "jahr",
-                "type": "cosmos",
-                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
-            }
-        ],
-        "ocean": [
-            {
-                "text": "sonne",
-                "type": "cosmos",
-                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
-            },
-            {
-                "text": "mond",
-                "type": "cosmos",
-                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
-            },
-            {
-                "text": "monde",
-                "type": "cosmos",
-                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
-            },
-            {
-                "text": "himmel",
-                "type": "cosmos",
-                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
-            },
-            {
-                "text": "strahl",
-                "type": "phaenomen",
-                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
-            },
-            {
-                "text": "achse",
-                "type": "cosmos",
-                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
-            },
-            {
-                "text": "phase",
-                "type": "phaenomen",
-                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
-            },
-            {
-                "text": "welle",
-                "type": "phaenomen",
-                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
-            },
-            {
-                "text": "schiff",
-                "type": "tech",
-                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
-            },
-            {
-                "text": "nova",
-                "type": "phaenomen",
-                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
-            },
-            {
-                "text": "ziel",
-                "type": "tech",
-                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
-            },
-            {
-                "text": "daten",
-                "type": "tech",
-                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
-            },
-            {
-                "text": "nacht",
-                "type": "cosmos",
-                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
-            },
-            {
-                "text": "jahr",
-                "type": "cosmos",
-                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
-            }
-        ],
-        "cosmos": [
-            {
-                "text": "sonne",
-                "type": "cosmos",
-                "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
-            },
-            {
-                "text": "mond",
-                "type": "cosmos",
-                "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
-            },
-            {
-                "text": "monde",
-                "type": "cosmos",
-                "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
-            },
-            {
-                "text": "himmel",
-                "type": "cosmos",
-                "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
-            },
-            {
-                "text": "strahl",
-                "type": "phaenomen",
-                "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
-            },
-            {
-                "text": "achse",
-                "type": "cosmos",
-                "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
-            },
-            {
-                "text": "phase",
-                "type": "phaenomen",
-                "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
-            },
-            {
-                "text": "welle",
-                "type": "phaenomen",
-                "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
-            },
-            {
-                "text": "schiff",
-                "type": "tech",
-                "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
-            },
-            {
-                "text": "nova",
-                "type": "phaenomen",
-                "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
-            },
-            {
-                "text": "ziel",
-                "type": "tech",
-                "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
-            },
-            {
-                "text": "daten",
-                "type": "tech",
-                "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
-            },
-            {
-                "text": "nacht",
-                "type": "cosmos",
-                "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
-            },
-            {
-                "text": "jahr",
-                "type": "cosmos",
-                "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
-            }
-        ]
+    {
+      "text": "mond",
+      "type": "cosmos",
+      "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
     },
-    "trainingWorlds": []
+    {
+      "text": "monde",
+      "type": "cosmos",
+      "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+    },
+    {
+      "text": "himmel",
+      "type": "cosmos",
+      "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+    },
+    {
+      "text": "strahl",
+      "type": "phaenomen",
+      "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+    },
+    {
+      "text": "halo",
+      "type": "cosmos",
+      "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+    },
+    {
+      "text": "achse",
+      "type": "cosmos",
+      "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+    },
+    {
+      "text": "phase",
+      "type": "phaenomen",
+      "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+    },
+    {
+      "text": "welle",
+      "type": "phaenomen",
+      "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+    },
+    {
+      "text": "schiff",
+      "type": "tech",
+      "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+    },
+    {
+      "text": "nova",
+      "type": "phaenomen",
+      "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+    },
+    {
+      "text": "ziel",
+      "type": "tech",
+      "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+    },
+    {
+      "text": "daten",
+      "type": "tech",
+      "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+    },
+    {
+      "text": "nacht",
+      "type": "cosmos",
+      "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+    },
+    {
+      "text": "jahr",
+      "type": "cosmos",
+      "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+    },
+    {
+      "text": "vakuum",
+      "type": "cosmos",
+      "meaning": "Materiefreier Raum, in dem die absolute Stille des Kosmos herrscht"
+    },
+    {
+      "text": "gestirn",
+      "type": "cosmos",
+      "meaning": "Jeder natürliche Himmelskörper in den Weiten des Universums"
+    },
+    {
+      "text": "kosmos",
+      "type": "cosmos",
+      "meaning": "Das geordnete, harmonische und unendliche physikalische Universum"
+    },
+    {
+      "text": "mars",
+      "type": "cosmos",
+      "meaning": "Vierter Planet von der Sonne, historisch als Roter Planet bekannt"
+    },
+    {
+      "text": "venus",
+      "type": "cosmos",
+      "meaning": "Zweiter Planet von der Sonne und hellster Wandelstern am Nachthimmel"
+    },
+    {
+      "text": "erde",
+      "type": "cosmos",
+      "meaning": "Unsere blaue Heimatwelt, die einzige bekannte Oase mit flüssigem Wasser"
+    },
+    {
+      "text": "solar",
+      "type": "cosmos",
+      "meaning": "Die Sonne, ihre Strahlung, Sonnenwinde und ihr System betreffend"
+    },
+    {
+      "text": "sonde",
+      "type": "tech",
+      "meaning": "Unbemanntes Forschungsraumschiff zur Erkundung fremder Atmosphären"
+    },
+    {
+      "text": "radar",
+      "type": "tech",
+      "meaning": "Funkortungssystem zur Kartierung planetarer Oberflächen und Asteroiden"
+    },
+    {
+      "text": "magma",
+      "type": "natur",
+      "meaning": "Glühend heißes geschmolzenes Gestein im Inneren von Gesteinsplaneten"
+    },
+    {
+      "text": "wolke",
+      "type": "cosmos",
+      "meaning": "Dichte molekulare Gas- und Staubwolke als Geburtsstätte neuer Sonnen"
+    },
+    {
+      "text": "pluto",
+      "type": "cosmos",
+      "meaning": "Eisiger Zwergplanet im Kuipergürtel am Rande unseres Sonnensystems"
+    },
+    {
+      "text": "orbit",
+      "type": "cosmos",
+      "meaning": "Gravitative Umlaufbahn eines Himmelskörpers um ein Massezentrum"
+    },
+    {
+      "text": "komet",
+      "type": "cosmos",
+      "meaning": "Eisiger Himmelskörper, der in Sonnennähe einen leuchtenden Schweif bildet"
+    },
+    {
+      "text": "pulsar",
+      "type": "cosmos",
+      "meaning": "Rasch rotierender Neutronenstern, der periodische Strahlungsimpulse aussendet"
+    },
+    {
+      "text": "quasar",
+      "type": "cosmos",
+      "meaning": "Extrem leuchtkräftiger aktiver Galaxienkern, angetrieben von supermassereichem Schwarzen Loch"
+    },
+    {
+      "text": "korona",
+      "type": "cosmos",
+      "meaning": "Äußerste, millionengradheiße Atmosphärenschicht der Sonne"
+    },
+    {
+      "text": "meteor",
+      "type": "cosmos",
+      "meaning": "Leuchtspur beim Verglühen eines Partikels in der Planetenatmosphäre"
+    },
+    {
+      "text": "optik",
+      "type": "tech",
+      "meaning": "Wissenschaft des Lichts und der Spiegelsysteme moderner Weltraumteleskope"
+    },
+    {
+      "text": "weltall",
+      "type": "cosmos",
+      "meaning": "Die unendliche dreidimensionale Weite, in der Galaxien und Sterne treiben"
+    },
+    {
+      "text": "aurora",
+      "type": "phaenomen",
+      "meaning": "Atmosphärisches Polarlicht durch Wechselwirkung von Sonnenwind und Magnetfeld"
+    },
+    {
+      "text": "zenit",
+      "type": "cosmos",
+      "meaning": "Der Scheitelpunkt der Himmelssphäre direkt über dem Beobachter"
+    },
+    {
+      "text": "hubble",
+      "type": "tech",
+      "meaning": "Berühmtes Weltraumteleskop, das die moderne Astronomie revolutionierte"
+    },
+    {
+      "text": "staub",
+      "type": "cosmos",
+      "meaning": "Interstellare Mineralkörnchen in den Spiralarmen von Galaxien"
+    },
+    {
+      "text": "trichter",
+      "type": "cosmos",
+      "meaning": "Extremer Raumzeit-Krümmungstrichter, der in eine Singularität mündet"
+    },
+    {
+      "text": "stern",
+      "type": "cosmos",
+      "meaning": "Gigantischer Plasmaball, angetrieben durch nukleare Fusion im Kern"
+    },
+    {
+      "text": "planet",
+      "type": "cosmos",
+      "meaning": "Massereicher Himmelskörper, der einen Stern umkreist und seine Bahn geräumt hat"
+    },
+    {
+      "text": "galaxie",
+      "type": "cosmos",
+      "meaning": "Gewaltiges Sternensystem aus Milliarden Sonnen, Gas und Dunkler Materie"
+    },
+    {
+      "text": "galaxien",
+      "type": "cosmos",
+      "meaning": "Milliarden von Sterneninseln verteilt über das kosmische Netz des Alls"
+    },
+    {
+      "text": "universum",
+      "type": "cosmos",
+      "meaning": "Die Gesamtheit aller Materie, Energie, Raum, Zeit und Naturgesetze"
+    },
+    {
+      "text": "nebel",
+      "type": "cosmos",
+      "meaning": "Interstellare Wolke aus leuchtendem Gas, Sternenresten und kosmischem Staub"
+    },
+    {
+      "text": "gravitation",
+      "type": "phaenomen",
+      "meaning": "Fundamentale Anziehungskraft zwischen Massen, die die Raumzeit krümmt"
+    },
+    {
+      "text": "supernova",
+      "type": "phaenomen",
+      "meaning": "Katastrophale Explosion eines massereichen Sterns am Ende seiner Entwicklung"
+    },
+    {
+      "text": "astronaut",
+      "type": "tech",
+      "meaning": "Professionell ausgebildeter Raumfahrer auf orbitalen Forschungsmissionen"
+    },
+    {
+      "text": "astronomie",
+      "type": "wissenschaft",
+      "meaning": "Wissenschaftliche Erforschung der Himmelskörper und des Universums"
+    },
+    {
+      "text": "exoplanet",
+      "type": "cosmos",
+      "meaning": "Planet außerhalb unseres Sonnensystems, der eine fremde Sonne umkreist"
+    },
+    {
+      "text": "exoplaneten",
+      "type": "cosmos",
+      "meaning": "Fremde Planetenwelten um ferne Sonnen in unserer Heimatgalaxie"
+    },
+    {
+      "text": "satellit",
+      "type": "tech",
+      "meaning": "Natürlicher oder künstlicher Himmelskörper auf einer Planetenumlaufbahn"
+    },
+    {
+      "text": "sternbild",
+      "type": "cosmos",
+      "meaning": "Muster aus Sternen an der Himmelskugel, benannt nach Mythologien"
+    },
+    {
+      "text": "teleskop",
+      "type": "tech",
+      "meaning": "Optisches Instrument zum Sammeln von Licht ferner Himmelskörper"
+    },
+    {
+      "text": "raumschiff",
+      "type": "tech",
+      "meaning": "Sternenschiff konstruiert für interstellare Reisen und Missionen"
+    },
+    {
+      "text": "atmosphaere",
+      "type": "cosmos",
+      "meaning": "Gashülle, die durch Gravitation an einen Planeten gebunden ist"
+    },
+    {
+      "text": "magnetosphaere",
+      "type": "phaenomen",
+      "meaning": "Magnetischer Schutzschild gegen tödliche Sonnenwinde und kosmische Strahlung"
+    },
+    {
+      "text": "strahlung",
+      "type": "phaenomen",
+      "meaning": "Elektromagnetische Wellen oder hochenergetische Teilchen im Weltraum"
+    },
+    {
+      "text": "spektrum",
+      "type": "wissenschaft",
+      "meaning": "Zerlegung des Sternenlichts zur Analyse chemischer Zusammensetzungen"
+    },
+    {
+      "text": "andromeda",
+      "type": "cosmos",
+      "meaning": "Die uns am nächsten gelegene große Spiralgalaxie im lokalen Haufen"
+    },
+    {
+      "text": "heliosphaere",
+      "type": "cosmos",
+      "meaning": "Vom Sonnenwind geformte gigantische Schutzblase im interstellaren Raum"
+    },
+    {
+      "text": "antimaterie",
+      "type": "wissenschaft",
+      "meaning": "Materie aus Antiteilchen, die sich bei Kontakt mit Materie zerstrahlt"
+    },
+    {
+      "text": "singularitaet",
+      "type": "cosmos",
+      "meaning": "Zentrum eines Schwarzen Lochs, an dem physikalische Dichte unendlich wird"
+    },
+    {
+      "text": "multiversum",
+      "type": "cosmos",
+      "meaning": "Hypothetische Gesamtheit unendlich vieler koexistierender Parallelwelten"
+    },
+    {
+      "text": "lichtjahr",
+      "type": "wissenschaft",
+      "meaning": "Entfernung, die ein Lichtstrahl im Vakuum während eines Erdjahres zurücklegt"
+    },
+    {
+      "text": "schwarzes-loch",
+      "type": "cosmos",
+      "meaning": "Kosmisches Objekt so gewaltiger Gravitation, dass selbst Licht nicht entkommt"
+    },
+    {
+      "text": "sternenstaub",
+      "type": "cosmos",
+      "meaning": "Asche vergangener Supernovae, aus der neue Welten und Leben entstehen"
+    },
+    {
+      "text": "dunkle-materie",
+      "type": "cosmos",
+      "meaning": "Unsichtbare Materieform, die den Großteil der galaktischen Masse bildet"
+    },
+    {
+      "text": "dunkle-energie",
+      "type": "cosmos",
+      "meaning": "Rätselhafte Kraft, die die beschleunigte Ausdehnung des Raumes antreibt"
+    },
+    {
+      "text": "wurmloch",
+      "type": "cosmos",
+      "meaning": "Theoretische Abkürzung durch die Raumzeit, die entfernte Punkte verbindet"
+    },
+    {
+      "text": "lichtgeschwindigkeit",
+      "type": "wissenschaft",
+      "meaning": "Universelle Geschwindigkeitsgrenze von dreihunderttausend Kilometern pro Sekunde"
+    },
+    {
+      "text": "raumstation",
+      "type": "tech",
+      "meaning": "Bewohnbare künstliche Orbitalbasis für Langzeitforschungen im All"
+    },
+    {
+      "text": "ereignishorizont",
+      "type": "cosmos",
+      "meaning": "Grenzfläche ohne Wiederkehr, die ein Schwarzes Loch umschließt"
+    },
+    {
+      "text": "milchstrasse",
+      "type": "cosmos",
+      "meaning": "Unsere Heimat-Balkenspiralgalaxie mit Hunderten Milliarden Sternensystemen"
+    }
+  ],
+  "bossWords": {
+    "alien_dreadnought": [
+      {
+        "text": "sonne",
+        "type": "cosmos",
+        "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+      },
+      {
+        "text": "mond",
+        "type": "cosmos",
+        "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+      },
+      {
+        "text": "monde",
+        "type": "cosmos",
+        "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+      },
+      {
+        "text": "himmel",
+        "type": "cosmos",
+        "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+      },
+      {
+        "text": "strahl",
+        "type": "phaenomen",
+        "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+      },
+      {
+        "text": "achse",
+        "type": "cosmos",
+        "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+      },
+      {
+        "text": "phase",
+        "type": "phaenomen",
+        "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+      },
+      {
+        "text": "welle",
+        "type": "phaenomen",
+        "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+      },
+      {
+        "text": "schiff",
+        "type": "tech",
+        "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+      },
+      {
+        "text": "nova",
+        "type": "phaenomen",
+        "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+      },
+      {
+        "text": "ziel",
+        "type": "tech",
+        "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+      },
+      {
+        "text": "daten",
+        "type": "tech",
+        "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+      },
+      {
+        "text": "nacht",
+        "type": "cosmos",
+        "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+      },
+      {
+        "text": "jahr",
+        "type": "cosmos",
+        "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+      }
+    ],
+    "alien_hive": [
+      {
+        "text": "sonne",
+        "type": "cosmos",
+        "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+      },
+      {
+        "text": "mond",
+        "type": "cosmos",
+        "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+      },
+      {
+        "text": "monde",
+        "type": "cosmos",
+        "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+      },
+      {
+        "text": "himmel",
+        "type": "cosmos",
+        "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+      },
+      {
+        "text": "strahl",
+        "type": "phaenomen",
+        "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+      },
+      {
+        "text": "achse",
+        "type": "cosmos",
+        "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+      },
+      {
+        "text": "phase",
+        "type": "phaenomen",
+        "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+      },
+      {
+        "text": "welle",
+        "type": "phaenomen",
+        "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+      },
+      {
+        "text": "schiff",
+        "type": "tech",
+        "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+      },
+      {
+        "text": "nova",
+        "type": "phaenomen",
+        "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+      },
+      {
+        "text": "ziel",
+        "type": "tech",
+        "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+      },
+      {
+        "text": "daten",
+        "type": "tech",
+        "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+      },
+      {
+        "text": "nacht",
+        "type": "cosmos",
+        "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+      },
+      {
+        "text": "jahr",
+        "type": "cosmos",
+        "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+      }
+    ],
+    "alien_psionic": [
+      {
+        "text": "sonne",
+        "type": "cosmos",
+        "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+      },
+      {
+        "text": "mond",
+        "type": "cosmos",
+        "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+      },
+      {
+        "text": "monde",
+        "type": "cosmos",
+        "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+      },
+      {
+        "text": "himmel",
+        "type": "cosmos",
+        "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+      },
+      {
+        "text": "strahl",
+        "type": "phaenomen",
+        "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+      },
+      {
+        "text": "achse",
+        "type": "cosmos",
+        "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+      },
+      {
+        "text": "phase",
+        "type": "phaenomen",
+        "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+      },
+      {
+        "text": "welle",
+        "type": "phaenomen",
+        "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+      },
+      {
+        "text": "schiff",
+        "type": "tech",
+        "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+      },
+      {
+        "text": "nova",
+        "type": "phaenomen",
+        "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+      },
+      {
+        "text": "ziel",
+        "type": "tech",
+        "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+      },
+      {
+        "text": "daten",
+        "type": "tech",
+        "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+      },
+      {
+        "text": "nacht",
+        "type": "cosmos",
+        "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+      },
+      {
+        "text": "jahr",
+        "type": "cosmos",
+        "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+      }
+    ],
+    "alien_warlord": [
+      {
+        "text": "sonne",
+        "type": "cosmos",
+        "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+      },
+      {
+        "text": "mond",
+        "type": "cosmos",
+        "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+      },
+      {
+        "text": "monde",
+        "type": "cosmos",
+        "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+      },
+      {
+        "text": "himmel",
+        "type": "cosmos",
+        "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+      },
+      {
+        "text": "strahl",
+        "type": "phaenomen",
+        "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+      },
+      {
+        "text": "achse",
+        "type": "cosmos",
+        "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+      },
+      {
+        "text": "phase",
+        "type": "phaenomen",
+        "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+      },
+      {
+        "text": "welle",
+        "type": "phaenomen",
+        "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+      },
+      {
+        "text": "schiff",
+        "type": "tech",
+        "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+      },
+      {
+        "text": "nova",
+        "type": "phaenomen",
+        "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+      },
+      {
+        "text": "ziel",
+        "type": "tech",
+        "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+      },
+      {
+        "text": "daten",
+        "type": "tech",
+        "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+      },
+      {
+        "text": "nacht",
+        "type": "cosmos",
+        "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+      },
+      {
+        "text": "jahr",
+        "type": "cosmos",
+        "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+      }
+    ],
+    "alien_darkmatter": [
+      {
+        "text": "sonne",
+        "type": "cosmos",
+        "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+      },
+      {
+        "text": "mond",
+        "type": "cosmos",
+        "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+      },
+      {
+        "text": "monde",
+        "type": "cosmos",
+        "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+      },
+      {
+        "text": "himmel",
+        "type": "cosmos",
+        "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+      },
+      {
+        "text": "strahl",
+        "type": "phaenomen",
+        "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+      },
+      {
+        "text": "achse",
+        "type": "cosmos",
+        "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+      },
+      {
+        "text": "phase",
+        "type": "phaenomen",
+        "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+      },
+      {
+        "text": "welle",
+        "type": "phaenomen",
+        "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+      },
+      {
+        "text": "schiff",
+        "type": "tech",
+        "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+      },
+      {
+        "text": "nova",
+        "type": "phaenomen",
+        "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+      },
+      {
+        "text": "ziel",
+        "type": "tech",
+        "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+      },
+      {
+        "text": "daten",
+        "type": "tech",
+        "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+      },
+      {
+        "text": "nacht",
+        "type": "cosmos",
+        "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+      },
+      {
+        "text": "jahr",
+        "type": "cosmos",
+        "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+      }
+    ],
+    "alien_mothership": [
+      {
+        "text": "sonne",
+        "type": "cosmos",
+        "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+      },
+      {
+        "text": "mond",
+        "type": "cosmos",
+        "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+      },
+      {
+        "text": "monde",
+        "type": "cosmos",
+        "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+      },
+      {
+        "text": "himmel",
+        "type": "cosmos",
+        "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+      },
+      {
+        "text": "strahl",
+        "type": "phaenomen",
+        "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+      },
+      {
+        "text": "achse",
+        "type": "cosmos",
+        "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+      },
+      {
+        "text": "phase",
+        "type": "phaenomen",
+        "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+      },
+      {
+        "text": "welle",
+        "type": "phaenomen",
+        "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+      },
+      {
+        "text": "schiff",
+        "type": "tech",
+        "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+      },
+      {
+        "text": "nova",
+        "type": "phaenomen",
+        "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+      },
+      {
+        "text": "ziel",
+        "type": "tech",
+        "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+      },
+      {
+        "text": "daten",
+        "type": "tech",
+        "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+      },
+      {
+        "text": "nacht",
+        "type": "cosmos",
+        "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+      },
+      {
+        "text": "jahr",
+        "type": "cosmos",
+        "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+      }
+    ],
+    "robot": [
+      {
+        "text": "sonne",
+        "type": "cosmos",
+        "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+      },
+      {
+        "text": "mond",
+        "type": "cosmos",
+        "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+      },
+      {
+        "text": "monde",
+        "type": "cosmos",
+        "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+      },
+      {
+        "text": "himmel",
+        "type": "cosmos",
+        "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+      },
+      {
+        "text": "strahl",
+        "type": "phaenomen",
+        "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+      },
+      {
+        "text": "achse",
+        "type": "cosmos",
+        "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+      },
+      {
+        "text": "phase",
+        "type": "phaenomen",
+        "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+      },
+      {
+        "text": "welle",
+        "type": "phaenomen",
+        "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+      },
+      {
+        "text": "schiff",
+        "type": "tech",
+        "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+      },
+      {
+        "text": "nova",
+        "type": "phaenomen",
+        "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+      },
+      {
+        "text": "ziel",
+        "type": "tech",
+        "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+      },
+      {
+        "text": "daten",
+        "type": "tech",
+        "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+      },
+      {
+        "text": "nacht",
+        "type": "cosmos",
+        "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+      },
+      {
+        "text": "jahr",
+        "type": "cosmos",
+        "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+      }
+    ],
+    "beast": [
+      {
+        "text": "sonne",
+        "type": "cosmos",
+        "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+      },
+      {
+        "text": "mond",
+        "type": "cosmos",
+        "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+      },
+      {
+        "text": "monde",
+        "type": "cosmos",
+        "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+      },
+      {
+        "text": "himmel",
+        "type": "cosmos",
+        "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+      },
+      {
+        "text": "strahl",
+        "type": "phaenomen",
+        "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+      },
+      {
+        "text": "achse",
+        "type": "cosmos",
+        "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+      },
+      {
+        "text": "phase",
+        "type": "phaenomen",
+        "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+      },
+      {
+        "text": "welle",
+        "type": "phaenomen",
+        "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+      },
+      {
+        "text": "schiff",
+        "type": "tech",
+        "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+      },
+      {
+        "text": "nova",
+        "type": "phaenomen",
+        "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+      },
+      {
+        "text": "ziel",
+        "type": "tech",
+        "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+      },
+      {
+        "text": "daten",
+        "type": "tech",
+        "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+      },
+      {
+        "text": "nacht",
+        "type": "cosmos",
+        "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+      },
+      {
+        "text": "jahr",
+        "type": "cosmos",
+        "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+      }
+    ],
+    "mythology": [
+      {
+        "text": "sonne",
+        "type": "cosmos",
+        "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+      },
+      {
+        "text": "mond",
+        "type": "cosmos",
+        "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+      },
+      {
+        "text": "monde",
+        "type": "cosmos",
+        "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+      },
+      {
+        "text": "himmel",
+        "type": "cosmos",
+        "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+      },
+      {
+        "text": "strahl",
+        "type": "phaenomen",
+        "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+      },
+      {
+        "text": "achse",
+        "type": "cosmos",
+        "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+      },
+      {
+        "text": "phase",
+        "type": "phaenomen",
+        "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+      },
+      {
+        "text": "welle",
+        "type": "phaenomen",
+        "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+      },
+      {
+        "text": "schiff",
+        "type": "tech",
+        "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+      },
+      {
+        "text": "nova",
+        "type": "phaenomen",
+        "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+      },
+      {
+        "text": "ziel",
+        "type": "tech",
+        "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+      },
+      {
+        "text": "daten",
+        "type": "tech",
+        "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+      },
+      {
+        "text": "nacht",
+        "type": "cosmos",
+        "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+      },
+      {
+        "text": "jahr",
+        "type": "cosmos",
+        "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+      }
+    ],
+    "volcano": [
+      {
+        "text": "sonne",
+        "type": "cosmos",
+        "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+      },
+      {
+        "text": "mond",
+        "type": "cosmos",
+        "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+      },
+      {
+        "text": "monde",
+        "type": "cosmos",
+        "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+      },
+      {
+        "text": "himmel",
+        "type": "cosmos",
+        "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+      },
+      {
+        "text": "strahl",
+        "type": "phaenomen",
+        "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+      },
+      {
+        "text": "achse",
+        "type": "cosmos",
+        "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+      },
+      {
+        "text": "phase",
+        "type": "phaenomen",
+        "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+      },
+      {
+        "text": "welle",
+        "type": "phaenomen",
+        "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+      },
+      {
+        "text": "schiff",
+        "type": "tech",
+        "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+      },
+      {
+        "text": "nova",
+        "type": "phaenomen",
+        "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+      },
+      {
+        "text": "ziel",
+        "type": "tech",
+        "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+      },
+      {
+        "text": "daten",
+        "type": "tech",
+        "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+      },
+      {
+        "text": "nacht",
+        "type": "cosmos",
+        "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+      },
+      {
+        "text": "jahr",
+        "type": "cosmos",
+        "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+      }
+    ],
+    "ocean": [
+      {
+        "text": "sonne",
+        "type": "cosmos",
+        "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+      },
+      {
+        "text": "mond",
+        "type": "cosmos",
+        "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+      },
+      {
+        "text": "monde",
+        "type": "cosmos",
+        "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+      },
+      {
+        "text": "himmel",
+        "type": "cosmos",
+        "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+      },
+      {
+        "text": "strahl",
+        "type": "phaenomen",
+        "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+      },
+      {
+        "text": "achse",
+        "type": "cosmos",
+        "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+      },
+      {
+        "text": "phase",
+        "type": "phaenomen",
+        "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+      },
+      {
+        "text": "welle",
+        "type": "phaenomen",
+        "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+      },
+      {
+        "text": "schiff",
+        "type": "tech",
+        "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+      },
+      {
+        "text": "nova",
+        "type": "phaenomen",
+        "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+      },
+      {
+        "text": "ziel",
+        "type": "tech",
+        "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+      },
+      {
+        "text": "daten",
+        "type": "tech",
+        "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+      },
+      {
+        "text": "nacht",
+        "type": "cosmos",
+        "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+      },
+      {
+        "text": "jahr",
+        "type": "cosmos",
+        "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+      }
+    ],
+    "cosmos": [
+      {
+        "text": "sonne",
+        "type": "cosmos",
+        "meaning": "Zentraler Stern unseres Sonnensystems, der Licht, Wärme und Gravitation spendet"
+      },
+      {
+        "text": "mond",
+        "type": "cosmos",
+        "meaning": "Natürlicher Satellit der Erde, der die Gezeiten und die Achsenneigung stabilisiert"
+      },
+      {
+        "text": "monde",
+        "type": "cosmos",
+        "meaning": "Natürliche Fels- oder Eissatelliten, die Planeten im Weltraum umkreisen"
+      },
+      {
+        "text": "himmel",
+        "type": "cosmos",
+        "meaning": "Das von der Oberfläche sichtbare Himmelsgewölbe voller Sterne und Sternbilder"
+      },
+      {
+        "text": "strahl",
+        "type": "phaenomen",
+        "meaning": "Bündel elektromagnetischer Energie oder strahlendes Sternenlicht"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Leuchtender diffuser Ring aus Gas und Sternen um Himmelskörper und Galaxien"
+      },
+      {
+        "text": "achse",
+        "type": "cosmos",
+        "meaning": "Imaginäre Achse, um die ein Himmelskörper seine tägliche Rotation vollzieht"
+      },
+      {
+        "text": "phase",
+        "type": "phaenomen",
+        "meaning": "Sichtbare Lichtgestalt eines Mondes oder Planeten von der Erde aus betrachtet"
+      },
+      {
+        "text": "welle",
+        "type": "phaenomen",
+        "meaning": "Energiewellen wie Gravitationswellen, die die Raumzeit durchlaufen"
+      },
+      {
+        "text": "schiff",
+        "type": "tech",
+        "meaning": "Raumfahrzeug für bemannte oder autonome interplanetare Missionen"
+      },
+      {
+        "text": "nova",
+        "type": "phaenomen",
+        "meaning": "Plötzlicher thermonuklearer Helligkeitsausbruch eines sterbenden Sterns"
+      },
+      {
+        "text": "ziel",
+        "type": "tech",
+        "meaning": "Orbitales Ziel oder Himmelskörper für unbemannte Forschungssonden"
+      },
+      {
+        "text": "daten",
+        "type": "tech",
+        "meaning": "Wissenschaftliche Telemetriedaten von Weltraumteleskopen und Satelliten"
+      },
+      {
+        "text": "nacht",
+        "type": "cosmos",
+        "meaning": "Die tiefe Dunkelheit der intergalaktischen Leere zwischen den Sternen"
+      },
+      {
+        "text": "jahr",
+        "type": "cosmos",
+        "meaning": "Zeitspanne für einen vollständigen Umlauf eines Planeten um sein Zentralgestirn"
+      }
+    ]
+  },
+  "trainingWorlds": []
 }

@@ -1,1844 +1,1849 @@
 {
-    "ui": {
-        "app_title": "Digitinho Galaxy.",
-        "app_subtitle": "在文字被黑洞吞噬之前，掌控星际键盘",
-        "rules_title": "游戏玩法与符文规则",
-        "rule_typing": "<strong>键盘打字：</strong>在字母、音节和单词掉落到底部之前在键盘上输入它们",
-        "rule_wildcard": "<strong>万能单词：</strong>瞬间摧毁屏幕上的所有符文并吸取所有点数",
-        "rule_spells": "<strong>按键 1–8（或点击）：</strong>激活减速、冰冻、间距增加、护盾和强力法术",
-        "rule_combo": "<strong>连击与狂暴模式：</strong>无失误连击可将得分提高至多8倍",
-        "rule_danger": "<strong>生命与危险：</strong>底部的符文会闪烁红光警报，掉落会扣除1点生命值",
-        "btn_start": "开始游戏",
-        "btn_training": "训练模式（键盘按键行）",
-        "btn_zen": "禅模式（无生命限制）",
-        "btn_timeattack": "限时挑战 (60秒)",
-        "btn_library": "图书馆",
-        "btn_achievements": "成就",
-        "btn_settings": "设置",
-        "btn_shop": "宇宙商店",
-        "btn_skills_inventory": "技能库",
-        "skills_inventory_title": "宇宙武器库",
-        "skills_inventory_sub": "你在商店中购买的永久技能",
-        "skills_inventory_empty": "暂无已获得的技能。请前往宇宙商店武装你的库房！",
-        "skills_inventory_stock": "库存数量: ×{count}",
-        "start_record_label": "纪录：",
-        "start_high_score": "最高纪录: {score}",
-        "shop_btn_reroll": "刷新商品",
-        "shop_reroll_cost": "{cost}",
-        "hud_infinite_mode": "无尽街机",
-        "hud_coin_farm_progress": "获得下枚金币: {current} / {target} 词",
-        "badge_new_label": "新词",
-        "badge_new_word": "当局新单词",
-        "fb_coin_farmed": "+1 宇宙金币收获！",
-        "start_game_modes": "游戏模式",
-        "btn_classic_short": "经典",
-        "btn_training_short": "训练模式",
-        "btn_training_desc": "按键行练习",
-        "btn_zen_short": "禅模式",
-        "btn_zen_desc": "无生命限制",
-        "btn_timeattack_short": "限时挑战",
-        "btn_timeattack_desc": "60秒极速",
-        "btn_rules": "玩法说明",
-        "btn_close_rules": "知道了",
-        "hud_phase": "关卡",
-        "hud_zen_badge": "禅模式：不扣除生命",
-        "hud_training_badge": "训练模式：不扣除生命",
-        "hud_training_lesson": "课程",
-        "hud_zen_lbl": "禅模式",
-        "hud_training_lbl": "训练",
-        "hud_free": "自由",
-        "hud_zen_pill": "不扣除生命",
-        "hud_zen_pill_title": "禅模式下您可以自由练习而不会失去生命",
-        "hud_training_pill_title": "训练模式下您可以在不失去生命的情况下培养精准度和肌肉记忆",
-        "hud_lives": "生命",
-        "hud_accuracy": "准确率",
-        "hud_wpm": "WPM",
-        "hud_combo": "连击",
-        "hud_upcoming": "下一个",
-        "hud_new_word_badge": "新词汇",
-        "hud_spells": "技能",
-        "hud_active": "已激活",
-        "hud_sec": "秒",
-        "pause_title": "游戏暂停",
-        "pause_hint": "按 <kbd>ESC</kbd> 继续游戏",
-        "pause_resume": "继续",
-        "pause_library": "词典",
-        "pause_achievements": "成就",
-        "pause_settings": "设置",
-        "pause_training_menu": "返回训练菜单",
-        "pause_main_menu": "返回主菜单",
-        "confirm_exit_to_menu": "已赚取的金币将被保留，但本局获得的技能将会丢失。",
-        "confirm_exit_title": "返回主菜单？",
-        "confirm_exit_cancel": "继续游戏",
-        "confirm_exit_confirm": "确认返回菜单",
-        "countdown_hint": "准备好你的手指！",
-        "countdown_go": "开始！",
-        "modal_performance": "对局表现",
-        "modal_phase_complete": "关卡 {phase} 完成！",
-        "modal_press_continue": "按回车键或空格键继续",
-        "modal_btn_continue": "继续 ➔",
-        "modal_btn_shop": "前往商店",
-        "modal_stat_score": "得分",
-        "modal_stat_accuracy": "准确率",
-        "modal_stat_wpm": "WPM",
-        "modal_stat_combo": "最高连击",
-        "modal_stat_discovered": "新发现的单词",
-        "go_title": "游戏结束",
-        "go_sub": "你的符文之旅已结束",
-        "go_score": "本局得分",
-        "go_best_score": "最高纪录",
-        "go_new_record_tag": "创纪录！",
-        "go_final_score": "最终得分",
-        "go_phase_reached": "到达关卡",
-        "go_best_combo": "最高连击",
-        "go_avg_accuracy": "准确率",
-        "go_coins_earned": "获得总金币",
-        "go_hits_errors": "命中 / 错误",
-        "go_discovered_words": "已发现单词",
-        "go_use_continue": "使用继续 ({n})",
-        "go_revive_continue": "复活并继续 ({n})",
-        "go_play_again": "重新游玩",
-        "go_main_menu": "主菜单",
-        "victory_title": "史诗大捷！",
-        "victory_desc": "恭喜你，你已经完全掌握了符文键盘！",
-        "victory_play_again": "再次游玩",
-        "shop_title": "技能商店",
-        "shop_sub": "为你的宇宙之旅获取永久技能",
-        "shop_points": "你的点数：",
-        "shop_coins": "你的金币：",
-        "shop_btn_buy": "购买",
-        "shop_btn_owned": "已购买",
-        "shop_available": "可购买",
-        "shop_btn_close": "关闭",
-        "shop_confirm_exit_title": "离开商店？",
-        "shop_confirm_exit_desc": "确定要离开商店吗？",
-        "shop_confirm_stay": "留在商店",
-        "shop_confirm_leave": "返回主菜单",
-        "shop_insufficient_pts": "点数不足！",
-        "shop_insufficient_coins": "金币不足！",
-        "skill_name_freezer": "冰冻",
-        "skill_desc_freezer": "每2分钟冻结轨道上的所有符文10秒",
-        "skill_name_bomb": "炸弹",
-        "skill_desc_bomb": "每90秒引发宇宙冲击波，摧毁区域内符文",
-        "skill_name_shield": "符文护盾",
-        "skill_desc_shield": "每2分钟提供10秒掉落符文与输入错误惩罚免疫",
-        "skill_name_vortex": "旋涡",
-        "skill_desc_vortex": "每3分钟在屏幕中心开启旋涡，吸入全屏所有符文",
-        "skill_name_slowdown": "慢速",
-        "skill_desc_slowdown": "每1分钟将符文下落速度降低50%，持续15秒",
-        "skill_name_haste": "双倍积分",
-        "skill_desc_haste": "每30秒将获得积分翻倍，持续10秒",
-        "skill_name_dilation": "拉开间距",
-        "skill_desc_dilation": "增加符文出现间隔与距离，最高可达{max}倍",
-        "skill_name_autodestroy": "宇宙回响",
-        "skill_desc_autodestroy": "每1分钟自动粉碎本局已掌握的词汇，持续10秒",
-        "boss_reward_extralife": "+1 生命",
-        "boss_reward_extralife_desc": "为当前对局恢复或增加1点生命",
-        "boss_reward_continue": "接关币",
-        "boss_reward_continue_desc": "生命耗尽时可立即原地复活",
-        "boss_reward_coins_100": "+100 金币",
-        "boss_reward_coins_100_desc": "直接向金库注入+100枚宇宙金币",
-        "hud_level": "等级",
-        "hud_run_perks": "生效中能力",
-        "hud_perks_empty": "尚未获得任何能力。<br/>提升等级以解锁！",
-        "levelup_title": "等级提升！",
-        "levelup_sub": "已升至 等级 {level}！",
-        "levelup_prompt": "选择1项在本局激活的宇宙能力：",
-        "levelup_btn_pick": "选择",
-        "fb_dilation_upgraded": "间距拉开已提升至最高{max}倍！",
-        "lib_title": "符文词典",
-        "lib_sub": "已发现的单词图鉴",
-        "lib_discovered": "已发现单词",
-        "lib_locked": "未解锁",
-        "lib_typed": "已输入 {count}次",
-        "lib_not_typed": "尚未输入",
-        "lib_btn_close": "关闭",
-        "ach_title": "成就与勋章",
-        "ach_sub": "你的打字速度与准确率里程碑",
-        "ach_counter": "{unlocked} / {total} 已解锁",
-        "ach_btn_close": "关闭",
-        "ach_status_unlocked": "✓ 已达成",
-        "ach_status_locked": "未解锁",
-        "ach_goal_reached": "目标达成",
-        "ach_unit_words": "单词",
-        "ach_unit_streak": "次命中",
-        "ach_unit_combo": "连击",
-        "ach_dedo_veloz_name": "飞速之指",
-        "ach_dedo_veloz_desc": "达到 60 WPM。",
-        "ach_cirurgico_name": "精准无误",
-        "ach_cirurgico_desc": "以100%准确率完成任意阶段。",
-        "ach_colecionador_name": "收藏家",
-        "ach_colecionador_desc": "解锁词库中的所有词汇。",
-        "ach_mestre_combo_name": "连击大师",
-        "ach_mestre_combo_desc": "达成30次连续正确击键。",
-        "ach_modo_furia_name": "狂暴模式",
-        "ach_modo_furia_desc": "连击15次激活狂暴模式。",
-        "ach_mestre_tipo_name": "打字宗师",
-        "ach_mestre_tipo_desc": "敲击完成100个完整词汇。",
-        "settings_title": "设置",
-        "settings_sub": "游戏与界面选项调整",
-        "settings_sound": "音效",
-        "settings_sound_on": "开启",
-        "settings_sound_off": "静音",
-        "settings_queue": "队列位置",
-        "settings_queue_top": "顶部",
-        "settings_queue_bottom": "底部",
-        "settings_theme": "界面主题",
-        "settings_theme_dark": "暗色",
-        "settings_theme_light": "亮色",
-        "settings_boss": "Boss战",
-        "settings_boss_on": "每8关（已激活）",
-        "settings_boss_off": "已禁用",
-        "settings_test_boss": "测试Boss战",
-        "settings_face_boss": "挑战Boss",
-        "settings_lang": "语言",
-        "settings_difficulty": "游戏难度",
-        "settings_diff_locked_match": "对局进行中无法更改难度",
-        "diff_easy": "简单",
-        "diff_normal": "普通",
-        "diff_hard": "困难",
-        "diff_desc_easy": "初始速度0.5× • 失误不加速 • 失误不扣进度 • 5条生命",
-        "diff_desc_normal": "初始速度1.0× • 失误不加速 • 正常扣除进度 • 3条生命",
-        "diff_desc_hard": "初始速度1.5× • 每次失误+0.05×加速 • 正常扣除进度 • 3条生命",
-        "settings_cat_general": "通用与界面",
-        "settings_cat_boss": "首领之战",
-        "settings_cat_about": "关于应用",
-        "settings_version": "当前版本",
-        "settings_author": "作者",
-        "settings_btn_check_update": "检查",
-        "settings_update_latest": "已是最新",
-        "update_available_title": "有新的更新可用！",
-        "update_available_sub": "点击清理缓存并载入最新版本",
-        "update_btn_action": "更新",
-        "update_applying": "正在更新...",
-        "settings_btn_back": "返回",
-        "training_title": "训练模式：键盘按键行",
-        "training_sub": "盲打肌肉记忆练习，无需低头看键盘",
-        "training_notice": "在此教学练习模式下<strong>不会扣除生命值</strong>。输入失误与掉落会降低你的<strong>准确率 %</strong>与<strong>WPM</strong>。",
-        "training_btn_back": "返回",
-        "training_btn_start": "开始练习（3课） →",
-        "training_btn_again": "再次练习",
-        "training_completed": "已完成（精通）",
-        "training_pending": "3节课",
-        "training_record_acc": "最佳记录：{acc}% 准确率",
-        "boss_defeated_title": "BOSS 已击败！",
-        "boss_defeated_sub": "你以极高的造诣解开了所有符文谜题。",
-        "boss_defeated_prompt": "选择 1 项永久奖励技能：",
-        "boss_btn_pick": "获取",
-        "boss_pick_skill": "获取",
-        "boss_default_name": "Boss",
-        "fb_combo_broken": "连击中断！",
-        "fb_fury_activated": "狂暴模式激活！得分翻倍！",
-        "fb_bomb_activated": "炸弹法术激活 (10秒)！",
-        "fb_bomb_expired": "炸弹效果结束",
-        "fb_bomb_explosion": "大爆炸 (摧毁 {lines} 行)！+{pts}",
-        "fb_freezer_activated": "冰冻激活 (10秒)！",
-        "fb_freezer_expired": "冰冻结束",
-        "fb_shield_activated": "符文护盾激活 (10秒)！",
-        "fb_shield_expired": "护盾效果结束",
-        "fb_shield_blocked": "符文护盾阻挡了伤害！",
-        "fb_shield_error_protected": "护盾保护了误敲失误！",
-        "fb_vortex_activated": "符文漩涡激活 (10秒)！",
-        "fb_vortex_expired": "符文漩涡结束",
-        "fb_slowdown_activated": "减速激活 (15秒)！",
-        "fb_slowdown_expired": "减速结束",
-        "fb_slow_activated": "减速激活 (15秒)！",
-        "fb_slow_expired": "减速结束",
-        "fb_haste_activated": "双倍积分激活 (15秒)！",
-        "fb_haste_expired": "双倍积分结束",
-        "fb_dilation_activated": "间距延展 (45秒)！",
-        "fb_dilation_expired": "间距延展结束",
-        "fb_speedlock_activated": "速度锁定 (1.0x / 60秒)！",
-        "fb_speedlock_expired": "速度锁定结束",
-        "fb_autodestroy_activated": "宇宙自动粉碎已激活 (60秒)！",
-        "fb_autodestroy_expired": "宇宙自动粉碎已结束",
-        "fb_autodestroy_shattered": "⚡ 自动粉碎: {word}! +{pts}",
-        "fb_wildcard": "万能符文！全屏吸收！+{pts}",
-        "fb_life_recovered": "+1 生命恢复！",
-        "fb_perfect": "完美无瑕！",
-        "hud_performance": "表现面板",
-        "hud_total_score": "总积分",
-        "hud_hits": "击中",
-        "hud_errors": "错误",
-        "hud_discovered_words": "已探索词汇",
-        "hud_view_all": "查看全部",
-        "hud_spells_hint": "在商店购买<br/>或敲击完整词汇",
-        "hud_activate_kb": "激活 (键盘)",
-        "hud_key_label": "按键",
-        "hud_max_phase": "最高阶段",
-        "modal_unlocked_words": "已解锁词汇",
-        "modal_btn_next_phase": "下一阶段 →",
-        "modal_btn_back_training": "返回训练菜单",
-        "shop_note": "每次购买后价格递增",
-        "shop_btn_continue": "继续游戏",
-        "btn_back_to_game": "返回游戏",
-        "app_loading": "正在加载符文数据...",
-        "fb_runic_dropped_zen": "⚠️ 符文坠落（-准确率）",
-        "fb_runic_dropped": "💔 符文坠落！",
-        "fb_time_up": "⏱️ 时间到！",
-        "fb_boss_enigma_dropped": "💥 谜题坠落！首领发动攻击！",
-        "fb_ice_cleared": "❄️ 屏幕已清空 — 冰冻解除！",
-        "fb_error_letter": "❌ 字母错误！",
-        "fb_error": "❌ 错误",
-        "fb_wildcard_clean": "💥 通配符！全屏清除！",
-        "fb_training_completed": "🎉 恭喜！您已完成所有训练世界！",
-        "fb_continue_used": "🪙 已使用续关！正在继续阶段...",
-        "fb_permanent_life": "+1 永久生命！",
-        "fb_continue_obtained": "🪙 获得 +1 续关代币！",
-        "shop_all_words_unlocked": "所有单词均已被发现！",
-        "hud_skills_empty_hint": "在商店购买<br/>或完成单词 <strong>⚡</strong>",
-        "training_lesson_1_title": "第1课：按键识别",
-        "training_lesson_2_title": "第2课：手指交替",
-        "training_lesson_3_title": "第3课：精通挑战",
-        "training_lesson_1_name": "基准键",
-        "training_lesson_2_name": "交替",
-        "training_lesson_3_name": "最终挑战",
-        "training_next_obj_2": "下一个目标：将按键组合成简短单词并交替使用双手。",
-        "training_next_obj_3": "下一个目标：使用完整单词进行的流畅度与熟练度最终挑战！",
-        "training_new_record": "新纪录！",
-        "training_world_mastered": "世界精通",
-        "training_mastery_completed": "{world} — 精通完成！",
-        "training_lesson_completed": "{world} — {lesson}已完成！",
-        "training_rank_s": "精准无误",
-        "training_rank_a": "流畅非凡",
-        "training_rank_b": "控制良好",
-        "training_rank_c": "仍需练习",
-        "training_stat_world_progress": "世界进度",
-        "training_stat_lesson_done": "第 {lesson}/3 课已完成",
-        "training_stat_accuracy_rate": "准确率",
-        "training_stat_status": "训练状态",
-        "training_stat_completed": "100%已完成（3/3课）",
-        "training_stat_keys": "已掌握的按键",
-        "training_stat_accuracy": "本局准确度",
-        "training_stat_best_record": "最高纪录（准确率）",
-        "training_stat_speed": "实际语速（WPM）",
-        "training_stat_hits_errors": "命中 / 错误",
-        "training_hits_errs_val": "{hits} 命中 / {errors} 错误",
-        "training_btn_next_world": "前往 {world} →",
-        "training_btn_finish_all": "完成所有训练！ →",
-        "training_btn_next_lesson": "进入第 {lesson} 课（{runics} 符文） →",
-        "fb_boss_defeated": "{boss} 已击败！+350 金币！",
-        "modal_phase_pts": "本阶段获得点数",
-        "modal_acc_bonus": "准确率加成 ({acc}%)",
-        "modal_penalty": "失误（惩罚）",
-        "modal_net_pts": "净增加点数",
-        "modal_total_pts": "总积分",
-        "modal_combo_bonus": "最大连击奖励 ({combo}×)",
-        "modal_phase_total_pts": "获得总积分",
-        "modal_section_score": "得分明细",
-        "modal_section_coins": "获得金币",
-        "modal_coins_completion": "关卡完成",
-        "modal_boss_bonus": "首领击败奖励",
-        "modal_coins_precision": "100% 准确度奖励",
-        "modal_coins_streak": "零失误连胜 ({streak} 关)",
-        "modal_coins_phase_total": "本次获得金币总计",
-        "modal_coins_balance": "金币总余额",
-        "hud_coins": "金币",
-        "hud_boss_hp": "Boss 生命值",
-        "fb_skill_acquired": "⚡ 技能: {skill}！",
-        "fb_vortex_devour": "🌀 漩涡吞噬了 {text}！+{pts}",
-        "fb_enigma_solved": "💥 谜题解开！Boss 生命值 -1！(+{pts}分)",
-        "fb_reward_granted": "已获得奖励: {reward}！",
-        "queue_top": "顶部",
-        "queue_bottom": "底部",
-        "queue_toggle_to_bottom": "队列在顶部（点击移至底部）",
-        "queue_toggle_to_top": "队列在底部（点击移至顶部）",
-        "theme_switch_to_light": "切换至浅色主题",
-        "theme_switch_to_dark": "切换至深色主题",
-        "boss_enigma_badge": "📜 谜题 {num} / {total} • {scenario}",
-        "boss_enigma_letters": "{count}个字母",
-        "boss_enigma_queue": "谜题 {num} / 3",
-        "boss_level_tag": " (Lv. {level})",
-        "boss_cyber_titan_name": "虚空霸主 希拉里昂",
-        "boss_cyber_titan_title": "外星先锋指挥官",
-        "boss_cyber_titan_scenario": "柯伊伯带（太阳系边界）",
-        "boss_cyber_titan_scenario_desc": "希拉里昂的无畏级外星舰队已经越过虚空，开始入侵太阳系！",
-        "boss_cyber_titan_badge": "外星人 • 无畏舰",
-        "boss_cyber_titan_lore": "入侵舰队最高指挥官，掌控高能恒星等离子巨炮。",
-        "boss_feral_apex_name": "轨道征服者 佐尔肯",
-        "boss_feral_apex_title": "生化机械蜂群主脑",
-        "boss_feral_apex_scenario": "海王星轨道",
-        "boss_feral_apex_scenario_desc": "佐尔肯的生物机械群舰已包围太阳系的气态巨行星！",
-        "boss_feral_apex_badge": "外星人 • 蜂群",
-        "boss_feral_apex_lore": "统辖能够吞噬星际舰队的外星生物机械母巢。",
-        "boss_arcane_chimera_name": "反物质女皇 维斯佩拉",
-        "boss_arcane_chimera_title": "星际灵能统治者",
-        "boss_arcane_chimera_scenario": "土星光环",
-        "boss_arcane_chimera_scenario_desc": "维斯佩拉正启动反物质炮阵，企图撕裂太阳系的引力护盾！",
-        "boss_arcane_chimera_badge": "外星人 • 灵能",
-        "boss_arcane_chimera_lore": "操纵暗能量与星系级别的灵能风暴。",
-        "boss_abyssal_leviathan_name": "暗物质使者 涅布拉",
-        "boss_abyssal_leviathan_title": "宇宙阴影实体",
-        "boss_abyssal_leviathan_scenario": "木星轨道",
-        "boss_abyssal_leviathan_scenario_desc": "涅布拉正在扭曲木星磁层，为对地球发动毁灭性打击做准备！",
-        "boss_abyssal_leviathan_badge": "外星人 • 阴影",
-        "boss_abyssal_leviathan_lore": "随心所欲操控时空畸变与引力奇点。",
-        "boss_cosmic_chronos_name": "银河主脑 塞诺尔",
-        "boss_cosmic_chronos_title": "入侵中枢主脑母舰",
-        "boss_cosmic_chronos_scenario": "地月轨道",
-        "boss_cosmic_chronos_scenario_desc": "塞诺尔的巨型外星母舰已逼近月球轨道，正式展开对地球的最终入侵！",
-        "boss_cosmic_chronos_badge": "外星人 • 母舰",
-        "boss_cosmic_chronos_lore": "统筹并指挥整个太阳系大入侵的外星至高母体意志。",
-        "boss_magma_vulcanus_name": "舰队粉碎者 克拉格托尔",
-        "boss_magma_vulcanus_title": "外星军阀大将军",
-        "boss_magma_vulcanus_scenario": "小行星带",
-        "boss_magma_vulcanus_scenario_desc": "克拉格托尔的重型装甲战舰正轰碎小行星群，开辟直通地球的入侵通道！",
-        "boss_magma_vulcanus_badge": "外星人 • 军阀",
-        "boss_magma_vulcanus_lore": "装备毁灭性反物质分解武器的重甲侵略战神。",
-        "btn_continue": "继续游戏",
-        "btn_new_game": "新游戏",
-        "btn_new_game_desc": "使用共享金币重新开始",
-        "btn_save_slots": "存档槽位",
-        "slots_title": "存档槽位",
-        "slots_sub": "管理进度或开始新游戏",
-        "lbl_highscore": "最高分",
-        "lbl_shared_coins": "金币",
-        "lbl_highcoins": "最多金币",
-        "slot_number": "槽位 {slot}",
-        "slot_in_progress": "进行中",
-        "slot_empty": "空",
-        "slot_empty_desc": "没有存档。使用共享金币重新开始！",
-        "slot_btn_continue": "继续",
-        "slot_btn_new": "新游戏",
-        "slot_btn_delete": "删除",
-        "slot_confirm_overwrite": "覆盖槽位 {slot} 并开始新游戏？现有的进度将被替换。",
-        "slot_confirm_delete": "您确定要删除槽位 {slot} 中的存档吗？",
-        "fb_game_saved": "游戏进度已保存！",
-        "fb_game_resumed": "游戏已从第 {phase} 阶段恢复！",
-        "slots_shared_wallet": "共享金币金库",
-        "slots_close": "关闭",
-        "slot_phase_score": "阶段 {phase} • {score} 分",
-        "slot_date_fmt": "已保存：{date}",
-        "confirm_new_game_title": "开始新游戏？",
-        "confirm_new_game_desc": "您有正在进行的游戏。开始新游戏将覆盖槽位 {slot}。您的共享金币仍然可用！",
-        "settings_finger_guide": "手指视觉指引",
-        "settings_finger_guide_always": "始终启用 (默认)",
-        "settings_finger_guide_training": "仅限训练",
-        "settings_finger_guide_off": "禁用",
-        "vk_space": "空格",
-        "finger_guide_title": "手指指引",
-        "finger_ready": "起始位置",
-        "finger_space_bar": "空格",
-        "hand_left": "左手",
-        "hand_right": "右手",
-        "hand_both": "双手",
-        "finger_l_pinky": "左手小指",
-        "finger_l_ring": "左手无名指",
-        "finger_l_middle": "左手中指",
-        "finger_l_index": "左手食指",
-        "finger_l_thumb": "左手大拇指",
-        "finger_r_thumb": "右手大拇指",
-        "finger_r_index": "右手食指",
-        "finger_r_middle": "右手中指",
-        "finger_r_ring": "右手无名指",
-        "finger_r_pinky": "右手小指",
-        "finger_thumb": "大拇指",
-        "footer_privacy": "隐私政策",
-        "btn_privacy": "隐私",
-        "settings_privacy": "隐私与数据",
-        "settings_view_privacy": "查看政策",
-        "privacy_title": "隐私政策与透明度",
-        "privacy_sub": "数据处理、浏览器本地存储以及 GitHub Pages 基础设施说明",
-        "privacy_btn_open_page": "打开完整页面",
-        "btn_close_privacy": "明白",
-        "privacy_badge_nocollect": "零数据收集",
-        "privacy_badge_local": "100% 本地存储",
-        "privacy_badge_github": "GitHub Pages 托管",
-        "privacy_badge_lgpd": "符合 LGPD 和 ANPD 规范",
-        "privacy_sec_collection_title": "1. Digitinho Galaxy 零个人数据收集",
-        "privacy_sec_collection_desc": "Digitinho Galaxy 是一款完全在玩家浏览器端（客户端）运行的静态网页游戏。本项目不维护任何后端服务器、远程数据库、注册表单或用户账户系统。我们绝不会索取、收集、处理或出售任何个人数据（如姓名、电子邮箱、证件或电话号码）。",
-        "privacy_sec_storage_title": "2. 设备本地存储 (HTML5 LocalStorage)",
-        "privacy_sec_storage_desc": "所有游戏进度——包括得分、存档槽位、图鉴词汇、已获成就、音频设置、难度与界面主题——均仅存储在您浏览器的本地存储（localStorage）中。这些信息绝不会离开您的设备，您随时可以通过浏览器设置或游戏内的存档管理将其彻底清除。",
-        "privacy_sec_hosting_title": "3. 托管基础设施与 GitHub Pages 技术日志",
-        "privacy_sec_hosting_desc": "Digitinho Galaxy 作为静态网站托管在 GitHub Pages（由 GitHub, Inc. / Microsoft 运营）上。当您访问游戏时，GitHub 服务器可能会根据其隐私政策自动记录技术性连接元数据（如 IP 地址、访问时间、浏览器标识、请求 URL 等），用于网络安全防护、基础设施维护与防滥用监控。Digitinho Galaxy 开发者无权访问原始 IP 日志，也不会将其用于识别或追踪访客。",
-        "privacy_sec_cookies_title": "4. 无追踪 Cookie 或第三方数据分析",
-        "privacy_sec_cookies_desc": "本游戏不使用任何广告 Cookie、Google Analytics、社交媒体追踪器或第三方行为分析工具。我们致力于提供纯粹的打字练习与街机游戏体验。",
-        "privacy_sec_lgpd_title": "5. 符合巴西《通用数据保护法》（LGPD）与 ANPD 监管原则",
-        "privacy_sec_lgpd_desc": "根据巴西《通用数据保护法》（第 13.709/2018 号法律 - LGPD）及国家数据保护局（ANPD）的指导方针，本项目严格遵循目的明确、必要性与数据最小化原则。由于开发者不处理玩家的个人数据，因此绝不存在任何出售、共享或向第三方转让个人信息的行为。",
-        "privacy_sec_opensource_title": "6. 开源代码与透明度审查",
-        "privacy_sec_opensource_desc": "Digitinho Galaxy 是一个在 MIT 许可证下发布的开源项目。任何人均可在 GitHub 上自由查阅和审查完整的源代码，以证实本游戏绝无任何隐藏追踪器、遥测脚本或远程数据收集行为。",
-        "privacy_sec_links_title": "官方参考与法规来源",
-        "privacy_link_github": "GitHub Pages: 运行机制与 IP 日志记录",
-        "privacy_link_anpd": "ANPD: 个人数据概念与数据处理主体",
-        "privacy_link_lgpd": "LGPD — 巴西《通用数据保护法》（第 13.709/2018 号法律）",
-        "privacy_back_game": "返回游戏",
-        "privacy_updated": "最近更新：2026年10月 • Digitinho Galaxy 打字游戏",
-        "privacy_page_title": "Digitinho Galaxy — 隐私政策与透明度",
-        "privacy_overview_title": "核心要点概览",
-        "privacy_contact_title": "疑问与联系",
-        "privacy_contact_desc": "由于这是一个无需后端服务器且不收集任何数据的客户端开源项目，如有疑问或建议，可直接通过 GitHub 仓库提交 Issue。",
-        "boss_alien_xylarion_name": "虚空霸主 希拉里昂",
-        "boss_alien_xylarion_title": "外星先锋指挥官",
-        "boss_alien_xylarion_scenario": "柯伊伯带（太阳系边界）",
-        "boss_alien_xylarion_scenario_desc": "希拉里昂的无畏级外星舰队已经越过虚空，开始入侵太阳系！",
-        "boss_alien_xylarion_badge": "外星人 • 无畏舰",
-        "boss_alien_xylarion_lore": "入侵舰队最高指挥官，掌控高能恒星等离子巨炮。",
-        "boss_alien_zorkon_name": "轨道征服者 佐尔肯",
-        "boss_alien_zorkon_title": "生化机械蜂群主脑",
-        "boss_alien_zorkon_scenario": "海王星轨道",
-        "boss_alien_zorkon_scenario_desc": "佐尔肯的生物机械群舰已包围太阳系的气态巨行星！",
-        "boss_alien_zorkon_badge": "外星人 • 蜂群",
-        "boss_alien_zorkon_lore": "统辖能够吞噬星际舰队的外星生物机械母巢。",
-        "boss_alien_vespera_name": "反物质女皇 维斯佩拉",
-        "boss_alien_vespera_title": "星际灵能统治者",
-        "boss_alien_vespera_scenario": "土星光环",
-        "boss_alien_vespera_scenario_desc": "维斯佩拉正启动反物质炮阵，企图撕裂太阳系的引力护盾！",
-        "boss_alien_vespera_badge": "外星人 • 灵能",
-        "boss_alien_vespera_lore": "操纵暗能量与星系级别的灵能风暴。",
-        "boss_alien_kragthor_name": "舰队粉碎者 克拉格托尔",
-        "boss_alien_kragthor_title": "外星军阀大将军",
-        "boss_alien_kragthor_scenario": "小行星带",
-        "boss_alien_kragthor_scenario_desc": "克拉格托尔的重型装甲战舰正轰碎小行星群，开辟直通地球的入侵通道！",
-        "boss_alien_kragthor_badge": "外星人 • 军阀",
-        "boss_alien_kragthor_lore": "装备毁灭性反物质分解武器的重甲侵略战神。",
-        "boss_alien_nebulor_name": "暗物质使者 涅布拉",
-        "boss_alien_nebulor_title": "宇宙阴影实体",
-        "boss_alien_nebulor_scenario": "木星轨道",
-        "boss_alien_nebulor_scenario_desc": "涅布拉正在扭曲木星磁层，为对地球发动毁灭性打击做准备！",
-        "boss_alien_nebulor_badge": "外星人 • 阴影",
-        "boss_alien_nebulor_lore": "随心所欲操控时空畸变与引力奇点。",
-        "boss_alien_xenor_name": "银河主脑 塞诺尔",
-        "boss_alien_xenor_title": "入侵中枢主脑母舰",
-        "boss_alien_xenor_scenario": "地月轨道",
-        "boss_alien_xenor_scenario_desc": "塞诺尔的巨型外星母舰已逼近月球轨道，正式展开对地球的最终入侵！",
-        "boss_alien_xenor_badge": "外星人 • 母舰",
-        "boss_alien_xenor_lore": "统筹并指挥整个太阳系大入侵的外星至高母体意志。"
+  "ui": {
+    "app_title": "Digitinho Galaxy.",
+    "app_subtitle": "掌握星际键盘，在天体碎片进入大气层前保卫地球",
+    "rules_title": "游戏玩法与符文规则",
+    "rule_typing": "<strong>键盘打字：</strong>在字母、音节和单词掉落到底部之前在键盘上输入它们",
+    "rule_wildcard": "<strong>万能单词：</strong>瞬间摧毁屏幕上的所有符文并吸取所有点数",
+    "rule_spells": "<strong>按键 1–8（或点击）：</strong>激活减速、冰冻、间距增加、护盾和强力法术",
+    "rule_combo": "<strong>连击与狂暴模式：</strong>无失误连击可将得分提高至多8倍",
+    "rule_danger": "<strong>生命与危险：</strong>底部的符文会闪烁红光警报，掉落会扣除1点生命值",
+    "btn_start": "开始游戏",
+    "btn_training": "训练模式（键盘按键行）",
+    "btn_zen": "禅模式（无生命限制）",
+    "btn_timeattack": "限时挑战 (60秒)",
+    "btn_library": "图书馆",
+    "btn_achievements": "成就",
+    "btn_settings": "设置",
+    "btn_shop": "宇宙商店",
+    "btn_skills_inventory": "技能库",
+    "skills_inventory_title": "宇宙武器库",
+    "skills_inventory_sub": "你在商店中购买的永久技能",
+    "skills_inventory_empty": "暂无已获得的技能。请前往宇宙商店武装你的库房！",
+    "skills_inventory_stock": "库存数量: ×{count}",
+    "start_record_label": "纪录：",
+    "start_high_score": "最高纪录: {score}",
+    "shop_btn_reroll": "刷新商品",
+    "shop_reroll_cost": "{cost}",
+    "hud_infinite_mode": "无尽街机",
+    "hud_coin_farm_progress": "获得下枚金币: {current} / {target} 词",
+    "badge_new_label": "新词",
+    "badge_new_word": "当局新单词",
+    "fb_coin_farmed": "+1 宇宙金币收获！",
+    "start_game_modes": "游戏模式",
+    "btn_classic_short": "经典",
+    "btn_training_short": "训练模式",
+    "btn_training_desc": "按键行练习",
+    "btn_zen_short": "禅模式",
+    "btn_zen_desc": "无生命限制",
+    "btn_timeattack_short": "限时挑战",
+    "btn_timeattack_desc": "60秒极速",
+    "btn_rules": "玩法说明",
+    "btn_close_rules": "知道了",
+    "hud_phase": "关卡",
+    "hud_zen_badge": "禅模式：不扣除生命",
+    "hud_training_badge": "训练模式：不扣除生命",
+    "hud_training_lesson": "课程",
+    "hud_zen_lbl": "禅模式",
+    "hud_training_lbl": "训练",
+    "hud_free": "自由",
+    "hud_zen_pill": "不扣除生命",
+    "hud_zen_pill_title": "禅模式下您可以自由练习而不会失去生命",
+    "hud_training_pill_title": "训练模式下您可以在不失去生命的情况下培养精准度和肌肉记忆",
+    "hud_lives": "生命",
+    "hud_accuracy": "准确率",
+    "hud_wpm": "WPM",
+    "hud_combo": "连击",
+    "hud_upcoming": "下一个",
+    "hud_new_word_badge": "新词汇",
+    "hud_spells": "技能",
+    "hud_active": "已激活",
+    "hud_sec": "秒",
+    "pause_title": "游戏暂停",
+    "pause_hint": "按 <kbd>ESC</kbd> 继续游戏",
+    "pause_resume": "继续",
+    "pause_library": "词典",
+    "pause_achievements": "成就",
+    "pause_settings": "设置",
+    "pause_training_menu": "返回训练菜单",
+    "pause_main_menu": "返回主菜单",
+    "confirm_exit_to_menu": "已赚取的金币将被保留，但本局获得的技能将会丢失。",
+    "confirm_exit_title": "返回主菜单？",
+    "confirm_exit_cancel": "继续游戏",
+    "confirm_exit_confirm": "确认返回菜单",
+    "countdown_hint": "准备好你的手指！",
+    "countdown_go": "开始！",
+    "modal_performance": "对局表现",
+    "modal_phase_complete": "关卡 {phase} 完成！",
+    "modal_press_continue": "按回车键或空格键继续",
+    "modal_btn_continue": "继续 ➔",
+    "modal_btn_shop": "前往商店",
+    "modal_stat_score": "得分",
+    "modal_stat_accuracy": "准确率",
+    "modal_stat_wpm": "WPM",
+    "modal_stat_combo": "最高连击",
+    "modal_stat_discovered": "新发现的单词",
+    "go_title": "游戏结束",
+    "go_sub": "你的符文之旅已结束",
+    "go_score": "本局得分",
+    "go_best_score": "最高纪录",
+    "go_new_record_tag": "创纪录！",
+    "go_final_score": "最终得分",
+    "go_phase_reached": "到达关卡",
+    "go_best_combo": "最高连击",
+    "go_avg_accuracy": "准确率",
+    "go_coins_earned": "获得总金币",
+    "go_hits_errors": "命中 / 错误",
+    "go_discovered_words": "已发现单词",
+    "go_use_continue": "使用继续 ({n})",
+    "go_revive_continue": "复活并继续 ({n})",
+    "go_play_again": "重新游玩",
+    "go_main_menu": "主菜单",
+    "victory_title": "史诗大捷！",
+    "victory_desc": "恭喜你，你已经完全掌握了符文键盘！",
+    "victory_play_again": "再次游玩",
+    "shop_title": "技能商店",
+    "shop_sub": "为你的宇宙之旅获取永久技能",
+    "shop_points": "你的点数：",
+    "shop_coins": "你的金币：",
+    "shop_btn_buy": "购买",
+    "shop_btn_owned": "已购买",
+    "shop_available": "可购买",
+    "shop_btn_close": "关闭",
+    "shop_confirm_exit_title": "离开商店？",
+    "shop_confirm_exit_desc": "确定要离开商店吗？",
+    "shop_confirm_stay": "留在商店",
+    "shop_confirm_leave": "返回主菜单",
+    "shop_insufficient_pts": "点数不足！",
+    "shop_insufficient_coins": "金币不足！",
+    "skill_name_freezer": "冰冻",
+    "skill_desc_freezer": "每2分钟冻结轨道上的所有符文10秒",
+    "skill_name_bomb": "炸弹",
+    "skill_desc_bomb": "每90秒引发宇宙冲击波，摧毁区域内符文",
+    "skill_name_shield": "符文护盾",
+    "skill_desc_shield": "每2分钟提供10秒掉落符文与输入错误惩罚免疫",
+    "skill_name_vortex": "旋涡",
+    "skill_desc_vortex": "每3分钟在屏幕中心开启旋涡，吸入全屏所有符文",
+    "skill_name_slowdown": "慢速",
+    "skill_desc_slowdown": "每1分钟将符文下落速度降低50%，持续15秒",
+    "skill_name_haste": "双倍积分",
+    "skill_desc_haste": "每30秒将获得积分翻倍，持续10秒",
+    "skill_name_dilation": "拉开间距",
+    "skill_desc_dilation": "增加符文出现间隔与距离，最高可达{max}倍",
+    "skill_name_autodestroy": "宇宙回响",
+    "skill_desc_autodestroy": "每1分钟自动粉碎本局已掌握的词汇，持续10秒",
+    "boss_reward_extralife": "+1 生命",
+    "boss_reward_extralife_desc": "为当前对局恢复或增加1点生命",
+    "boss_reward_continue": "接关币",
+    "boss_reward_continue_desc": "生命耗尽时可立即原地复活",
+    "boss_reward_coins_100": "+100 金币",
+    "boss_reward_coins_100_desc": "直接向金库注入+100枚宇宙金币",
+    "hud_level": "等级",
+    "hud_run_perks": "生效中能力",
+    "hud_perks_empty": "尚未获得任何能力。<br/>提升等级以解锁！",
+    "levelup_title": "等级提升！",
+    "levelup_sub": "已升至 等级 {level}！",
+    "levelup_prompt": "选择1项在本局激活的宇宙能力：",
+    "levelup_btn_pick": "选择",
+    "fb_dilation_upgraded": "间距拉开已提升至最高{max}倍！",
+    "lib_title": "符文词典",
+    "lib_sub": "已发现的单词图鉴",
+    "lib_discovered": "已发现单词",
+    "lib_locked": "未解锁",
+    "lib_typed": "已输入 {count}次",
+    "lib_not_typed": "尚未输入",
+    "lib_btn_close": "关闭",
+    "ach_title": "成就与勋章",
+    "ach_sub": "你的打字速度与准确率里程碑",
+    "ach_counter": "{unlocked} / {total} 已解锁",
+    "ach_btn_close": "关闭",
+    "ach_status_unlocked": "✓ 已达成",
+    "ach_status_locked": "未解锁",
+    "ach_goal_reached": "目标达成",
+    "ach_unit_words": "单词",
+    "ach_unit_streak": "次命中",
+    "ach_unit_combo": "连击",
+    "ach_dedo_veloz_name": "飞速之指",
+    "ach_dedo_veloz_desc": "达到 60 WPM。",
+    "ach_cirurgico_name": "精准无误",
+    "ach_cirurgico_desc": "以100%准确率完成任意阶段。",
+    "ach_colecionador_name": "收藏家",
+    "ach_colecionador_desc": "解锁词库中的所有词汇。",
+    "ach_mestre_combo_name": "连击大师",
+    "ach_mestre_combo_desc": "达成30次连续正确击键。",
+    "ach_modo_furia_name": "狂暴模式",
+    "ach_modo_furia_desc": "连击15次激活狂暴模式。",
+    "ach_mestre_tipo_name": "打字宗师",
+    "ach_mestre_tipo_desc": "敲击完成100个完整词汇。",
+    "settings_title": "设置",
+    "settings_sub": "游戏与界面选项调整",
+    "settings_sound": "音效",
+    "settings_sound_on": "开启",
+    "settings_sound_off": "静音",
+    "settings_queue": "队列位置",
+    "settings_queue_top": "顶部",
+    "settings_queue_bottom": "底部",
+    "settings_theme": "界面主题",
+    "settings_theme_dark": "暗色",
+    "settings_theme_light": "亮色",
+    "settings_boss": "Boss战",
+    "settings_boss_on": "每8关（已激活）",
+    "settings_boss_off": "已禁用",
+    "settings_test_boss": "测试Boss战",
+    "settings_face_boss": "挑战Boss",
+    "settings_lang": "语言",
+    "settings_difficulty": "游戏难度",
+    "settings_diff_locked_match": "对局进行中无法更改难度",
+    "diff_easy": "简单",
+    "diff_normal": "普通",
+    "diff_hard": "困难",
+    "diff_desc_easy": "初始速度0.5× • 失误不加速 • 失误不扣进度 • 5条生命",
+    "diff_desc_normal": "初始速度1.0× • 失误不加速 • 正常扣除进度 • 3条生命",
+    "diff_desc_hard": "初始速度1.5× • 每次失误+0.05×加速 • 正常扣除进度 • 3条生命",
+    "settings_cat_general": "通用与界面",
+    "settings_cat_boss": "首领之战",
+    "settings_cat_about": "关于应用",
+    "settings_version": "当前版本",
+    "settings_author": "作者",
+    "settings_btn_check_update": "检查",
+    "settings_update_latest": "已是最新",
+    "update_available_title": "有新的更新可用！",
+    "update_available_sub": "点击清理缓存并载入最新版本",
+    "update_btn_action": "更新",
+    "update_applying": "正在更新...",
+    "settings_btn_back": "返回",
+    "training_title": "训练模式：键盘按键行",
+    "training_sub": "盲打肌肉记忆练习，无需低头看键盘",
+    "training_notice": "在此教学练习模式下<strong>不会扣除生命值</strong>。输入失误与掉落会降低你的<strong>准确率 %</strong>与<strong>WPM</strong>。",
+    "training_btn_back": "返回",
+    "training_btn_start": "开始练习（3课） →",
+    "training_btn_again": "再次练习",
+    "training_completed": "已完成（精通）",
+    "training_pending": "3节课",
+    "training_record_acc": "最佳记录：{acc}% 准确率",
+    "boss_defeated_title": "BOSS 已击败！",
+    "boss_defeated_sub": "你以极高的造诣解开了所有符文谜题。",
+    "boss_defeated_prompt": "选择 1 项永久奖励技能：",
+    "boss_btn_pick": "获取",
+    "boss_pick_skill": "获取",
+    "boss_default_name": "Boss",
+    "fb_combo_broken": "连击中断！",
+    "fb_fury_activated": "狂暴模式激活！得分翻倍！",
+    "fb_bomb_activated": "炸弹法术激活 (10秒)！",
+    "fb_bomb_expired": "炸弹效果结束",
+    "fb_bomb_explosion": "大爆炸 (摧毁 {lines} 行)！+{pts}",
+    "fb_freezer_activated": "冰冻激活 (10秒)！",
+    "fb_freezer_expired": "冰冻结束",
+    "fb_shield_activated": "符文护盾激活 (10秒)！",
+    "fb_shield_expired": "护盾效果结束",
+    "fb_shield_blocked": "符文护盾阻挡了伤害！",
+    "fb_shield_error_protected": "护盾保护了误敲失误！",
+    "fb_vortex_activated": "符文漩涡激活 (10秒)！",
+    "fb_vortex_expired": "符文漩涡结束",
+    "fb_slowdown_activated": "减速激活 (15秒)！",
+    "fb_slowdown_expired": "减速结束",
+    "fb_slow_activated": "减速激活 (15秒)！",
+    "fb_slow_expired": "减速结束",
+    "fb_haste_activated": "双倍积分激活 (15秒)！",
+    "fb_haste_expired": "双倍积分结束",
+    "fb_dilation_activated": "间距延展 (45秒)！",
+    "fb_dilation_expired": "间距延展结束",
+    "fb_speedlock_activated": "速度锁定 (1.0x / 60秒)！",
+    "fb_speedlock_expired": "速度锁定结束",
+    "fb_autodestroy_activated": "宇宙自动粉碎已激活 (60秒)！",
+    "fb_autodestroy_expired": "宇宙自动粉碎已结束",
+    "fb_autodestroy_shattered": "⚡ 自动粉碎: {word}! +{pts}",
+    "fb_wildcard": "万能符文！全屏吸收！+{pts}",
+    "fb_life_recovered": "+1 生命恢复！",
+    "fb_perfect": "完美无瑕！",
+    "hud_performance": "表现面板",
+    "hud_total_score": "总积分",
+    "hud_hits": "击中",
+    "hud_errors": "错误",
+    "hud_discovered_words": "已探索词汇",
+    "hud_view_all": "查看全部",
+    "hud_spells_hint": "在商店购买<br/>或敲击完整词汇",
+    "hud_activate_kb": "激活 (键盘)",
+    "hud_key_label": "按键",
+    "hud_max_phase": "最高阶段",
+    "modal_unlocked_words": "已解锁词汇",
+    "modal_btn_next_phase": "下一阶段 →",
+    "modal_btn_back_training": "返回训练菜单",
+    "shop_note": "每次购买后价格递增",
+    "shop_btn_continue": "继续游戏",
+    "btn_back_to_game": "返回游戏",
+    "app_loading": "正在加载符文数据...",
+    "fb_runic_dropped_zen": "⚠️ 符文坠落（-准确率）",
+    "fb_runic_dropped": "💔 符文坠落！",
+    "fb_time_up": "⏱️ 时间到！",
+    "fb_boss_enigma_dropped": "💥 谜题坠落！首领发动攻击！",
+    "fb_ice_cleared": "❄️ 屏幕已清空 — 冰冻解除！",
+    "fb_error_letter": "❌ 字母错误！",
+    "fb_error": "❌ 错误",
+    "fb_wildcard_clean": "💥 通配符！全屏清除！",
+    "fb_training_completed": "🎉 恭喜！您已完成所有训练世界！",
+    "fb_continue_used": "🪙 已使用续关！正在继续阶段...",
+    "fb_permanent_life": "+1 永久生命！",
+    "fb_continue_obtained": "🪙 获得 +1 续关代币！",
+    "shop_all_words_unlocked": "所有单词均已被发现！",
+    "hud_skills_empty_hint": "在商店购买<br/>或完成单词 <strong>⚡</strong>",
+    "training_lesson_1_title": "第1课：按键识别",
+    "training_lesson_2_title": "第2课：手指交替",
+    "training_lesson_3_title": "第3课：精通挑战",
+    "training_lesson_1_name": "基准键",
+    "training_lesson_2_name": "交替",
+    "training_lesson_3_name": "最终挑战",
+    "training_next_obj_2": "下一个目标：将按键组合成简短单词并交替使用双手。",
+    "training_next_obj_3": "下一个目标：使用完整单词进行的流畅度与熟练度最终挑战！",
+    "training_new_record": "新纪录！",
+    "training_world_mastered": "世界精通",
+    "training_mastery_completed": "{world} — 精通完成！",
+    "training_lesson_completed": "{world} — {lesson}已完成！",
+    "training_rank_s": "精准无误",
+    "training_rank_a": "流畅非凡",
+    "training_rank_b": "控制良好",
+    "training_rank_c": "仍需练习",
+    "training_stat_world_progress": "世界进度",
+    "training_stat_lesson_done": "第 {lesson}/3 课已完成",
+    "training_stat_accuracy_rate": "准确率",
+    "training_stat_status": "训练状态",
+    "training_stat_completed": "100%已完成（3/3课）",
+    "training_stat_keys": "已掌握的按键",
+    "training_stat_accuracy": "本局准确度",
+    "training_stat_best_record": "最高纪录（准确率）",
+    "training_stat_speed": "实际语速（WPM）",
+    "training_stat_hits_errors": "命中 / 错误",
+    "training_hits_errs_val": "{hits} 命中 / {errors} 错误",
+    "training_btn_next_world": "前往 {world} →",
+    "training_btn_finish_all": "完成所有训练！ →",
+    "training_btn_next_lesson": "进入第 {lesson} 课（{runics} 符文） →",
+    "fb_boss_defeated": "{boss} 已击败！+350 金币！",
+    "modal_phase_pts": "本阶段获得点数",
+    "modal_acc_bonus": "准确率加成 ({acc}%)",
+    "modal_penalty": "失误（惩罚）",
+    "modal_net_pts": "净增加点数",
+    "modal_total_pts": "总积分",
+    "modal_combo_bonus": "最大连击奖励 ({combo}×)",
+    "modal_phase_total_pts": "获得总积分",
+    "modal_section_score": "得分明细",
+    "modal_section_coins": "获得金币",
+    "modal_coins_completion": "关卡完成",
+    "modal_boss_bonus": "首领击败奖励",
+    "modal_coins_precision": "100% 准确度奖励",
+    "modal_coins_streak": "零失误连胜 ({streak} 关)",
+    "modal_coins_phase_total": "本次获得金币总计",
+    "modal_coins_balance": "金币总余额",
+    "hud_coins": "金币",
+    "hud_boss_hp": "Boss 生命值",
+    "fb_skill_acquired": "⚡ 技能: {skill}！",
+    "fb_vortex_devour": "🌀 漩涡吞噬了 {text}！+{pts}",
+    "fb_enigma_solved": "💥 谜题解开！Boss 生命值 -1！(+{pts}分)",
+    "fb_reward_granted": "已获得奖励: {reward}！",
+    "queue_top": "顶部",
+    "queue_bottom": "底部",
+    "queue_toggle_to_bottom": "队列在顶部（点击移至底部）",
+    "queue_toggle_to_top": "队列在底部（点击移至顶部）",
+    "theme_switch_to_light": "切换至浅色主题",
+    "theme_switch_to_dark": "切换至深色主题",
+    "boss_enigma_badge": "📜 谜题 {num} / {total} • {scenario}",
+    "boss_enigma_letters": "{count}个字母",
+    "boss_enigma_queue": "谜题 {num} / 3",
+    "boss_level_tag": " (Lv. {level})",
+    "boss_cyber_titan_name": "虚空霸主 希拉里昂",
+    "boss_cyber_titan_title": "外星先锋指挥官",
+    "boss_cyber_titan_scenario": "柯伊伯带（太阳系边界）",
+    "boss_cyber_titan_scenario_desc": "希拉里昂的无畏级外星舰队已经越过虚空，开始入侵太阳系！",
+    "boss_cyber_titan_badge": "外星人 • 无畏舰",
+    "boss_cyber_titan_lore": "入侵舰队最高指挥官，掌控高能恒星等离子巨炮。",
+    "boss_feral_apex_name": "轨道征服者 佐尔肯",
+    "boss_feral_apex_title": "生化机械蜂群主脑",
+    "boss_feral_apex_scenario": "海王星轨道",
+    "boss_feral_apex_scenario_desc": "佐尔肯的生物机械群舰已包围太阳系的气态巨行星！",
+    "boss_feral_apex_badge": "外星人 • 蜂群",
+    "boss_feral_apex_lore": "统辖能够吞噬星际舰队的外星生物机械母巢。",
+    "boss_arcane_chimera_name": "反物质女皇 维斯佩拉",
+    "boss_arcane_chimera_title": "星际灵能统治者",
+    "boss_arcane_chimera_scenario": "土星光环",
+    "boss_arcane_chimera_scenario_desc": "维斯佩拉正启动反物质炮阵，企图撕裂太阳系的引力护盾！",
+    "boss_arcane_chimera_badge": "外星人 • 灵能",
+    "boss_arcane_chimera_lore": "操纵暗能量与星系级别的灵能风暴。",
+    "boss_abyssal_leviathan_name": "暗物质使者 涅布拉",
+    "boss_abyssal_leviathan_title": "宇宙阴影实体",
+    "boss_abyssal_leviathan_scenario": "木星轨道",
+    "boss_abyssal_leviathan_scenario_desc": "涅布拉正在扭曲木星磁层，为对地球发动毁灭性打击做准备！",
+    "boss_abyssal_leviathan_badge": "外星人 • 阴影",
+    "boss_abyssal_leviathan_lore": "随心所欲操控时空畸变与引力奇点。",
+    "boss_cosmic_chronos_name": "银河主脑 塞诺尔",
+    "boss_cosmic_chronos_title": "入侵中枢主脑母舰",
+    "boss_cosmic_chronos_scenario": "地月轨道",
+    "boss_cosmic_chronos_scenario_desc": "塞诺尔的巨型外星母舰已逼近月球轨道，正式展开对地球的最终入侵！",
+    "boss_cosmic_chronos_badge": "外星人 • 母舰",
+    "boss_cosmic_chronos_lore": "统筹并指挥整个太阳系大入侵的外星至高母体意志。",
+    "boss_magma_vulcanus_name": "舰队粉碎者 克拉格托尔",
+    "boss_magma_vulcanus_title": "外星军阀大将军",
+    "boss_magma_vulcanus_scenario": "小行星带",
+    "boss_magma_vulcanus_scenario_desc": "克拉格托尔的重型装甲战舰正轰碎小行星群，开辟直通地球的入侵通道！",
+    "boss_magma_vulcanus_badge": "外星人 • 军阀",
+    "boss_magma_vulcanus_lore": "装备毁灭性反物质分解武器的重甲侵略战神。",
+    "btn_continue": "继续游戏",
+    "btn_new_game": "新游戏",
+    "btn_new_game_desc": "使用共享金币重新开始",
+    "btn_save_slots": "存档槽位",
+    "slots_title": "存档槽位",
+    "slots_sub": "管理进度或开始新游戏",
+    "lbl_highscore": "最高分",
+    "lbl_shared_coins": "金币",
+    "lbl_highcoins": "最多金币",
+    "slot_number": "槽位 {slot}",
+    "slot_in_progress": "进行中",
+    "slot_empty": "空",
+    "slot_empty_desc": "没有存档。使用共享金币重新开始！",
+    "slot_btn_continue": "继续",
+    "slot_btn_new": "新游戏",
+    "slot_btn_delete": "删除",
+    "slot_confirm_overwrite": "覆盖槽位 {slot} 并开始新游戏？现有的进度将被替换。",
+    "slot_confirm_delete": "您确定要删除槽位 {slot} 中的存档吗？",
+    "fb_game_saved": "游戏进度已保存！",
+    "fb_game_resumed": "游戏已从第 {phase} 阶段恢复！",
+    "slots_shared_wallet": "共享金币金库",
+    "slots_close": "关闭",
+    "slot_phase_score": "阶段 {phase} • {score} 分",
+    "slot_date_fmt": "已保存：{date}",
+    "confirm_new_game_title": "开始新游戏？",
+    "confirm_new_game_desc": "您有正在进行的游戏。开始新游戏将覆盖槽位 {slot}。您的共享金币仍然可用！",
+    "settings_finger_guide": "手指视觉指引",
+    "settings_finger_guide_always": "始终启用 (默认)",
+    "settings_finger_guide_training": "仅限训练",
+    "settings_finger_guide_off": "禁用",
+    "vk_space": "空格",
+    "finger_guide_title": "手指指引",
+    "finger_ready": "起始位置",
+    "finger_space_bar": "空格",
+    "hand_left": "左手",
+    "hand_right": "右手",
+    "hand_both": "双手",
+    "finger_l_pinky": "左手小指",
+    "finger_l_ring": "左手无名指",
+    "finger_l_middle": "左手中指",
+    "finger_l_index": "左手食指",
+    "finger_l_thumb": "左手大拇指",
+    "finger_r_thumb": "右手大拇指",
+    "finger_r_index": "右手食指",
+    "finger_r_middle": "右手中指",
+    "finger_r_ring": "右手无名指",
+    "finger_r_pinky": "右手小指",
+    "finger_thumb": "大拇指",
+    "footer_privacy": "隐私政策",
+    "btn_privacy": "隐私",
+    "settings_privacy": "隐私与数据",
+    "settings_view_privacy": "查看政策",
+    "privacy_title": "隐私政策与透明度",
+    "privacy_sub": "数据处理、浏览器本地存储以及 GitHub Pages 基础设施说明",
+    "privacy_btn_open_page": "打开完整页面",
+    "btn_close_privacy": "明白",
+    "privacy_badge_nocollect": "零数据收集",
+    "privacy_badge_local": "100% 本地存储",
+    "privacy_badge_github": "GitHub Pages 托管",
+    "privacy_badge_lgpd": "符合 LGPD 和 ANPD 规范",
+    "privacy_sec_collection_title": "1. Digitinho Galaxy 零个人数据收集",
+    "privacy_sec_collection_desc": "Digitinho Galaxy 是一款完全在玩家浏览器端（客户端）运行的静态网页游戏。本项目不维护任何后端服务器、远程数据库、注册表单或用户账户系统。我们绝不会索取、收集、处理或出售任何个人数据（如姓名、电子邮箱、证件或电话号码）。",
+    "privacy_sec_storage_title": "2. 设备本地存储 (HTML5 LocalStorage)",
+    "privacy_sec_storage_desc": "所有游戏进度——包括得分、存档槽位、图鉴词汇、已获成就、音频设置、难度与界面主题——均仅存储在您浏览器的本地存储（localStorage）中。这些信息绝不会离开您的设备，您随时可以通过浏览器设置或游戏内的存档管理将其彻底清除。",
+    "privacy_sec_hosting_title": "3. 托管基础设施与 GitHub Pages 技术日志",
+    "privacy_sec_hosting_desc": "Digitinho Galaxy 作为静态网站托管在 GitHub Pages（由 GitHub, Inc. / Microsoft 运营）上。当您访问游戏时，GitHub 服务器可能会根据其隐私政策自动记录技术性连接元数据（如 IP 地址、访问时间、浏览器标识、请求 URL 等），用于网络安全防护、基础设施维护与防滥用监控。Digitinho Galaxy 开发者无权访问原始 IP 日志，也不会将其用于识别或追踪访客。",
+    "privacy_sec_cookies_title": "4. 无追踪 Cookie 或第三方数据分析",
+    "privacy_sec_cookies_desc": "本游戏不使用任何广告 Cookie、Google Analytics、社交媒体追踪器或第三方行为分析工具。我们致力于提供纯粹的打字练习与街机游戏体验。",
+    "privacy_sec_lgpd_title": "5. 符合巴西《通用数据保护法》（LGPD）与 ANPD 监管原则",
+    "privacy_sec_lgpd_desc": "根据巴西《通用数据保护法》（第 13.709/2018 号法律 - LGPD）及国家数据保护局（ANPD）的指导方针，本项目严格遵循目的明确、必要性与数据最小化原则。由于开发者不处理玩家的个人数据，因此绝不存在任何出售、共享或向第三方转让个人信息的行为。",
+    "privacy_sec_opensource_title": "6. 开源代码与透明度审查",
+    "privacy_sec_opensource_desc": "Digitinho Galaxy 是一个在 MIT 许可证下发布的开源项目。任何人均可在 GitHub 上自由查阅和审查完整的源代码，以证实本游戏绝无任何隐藏追踪器、遥测脚本或远程数据收集行为。",
+    "privacy_sec_links_title": "官方参考与法规来源",
+    "privacy_link_github": "GitHub Pages: 运行机制与 IP 日志记录",
+    "privacy_link_anpd": "ANPD: 个人数据概念与数据处理主体",
+    "privacy_link_lgpd": "LGPD — 巴西《通用数据保护法》（第 13.709/2018 号法律）",
+    "privacy_back_game": "返回游戏",
+    "privacy_updated": "最近更新：2026年10月 • Digitinho Galaxy 打字游戏",
+    "privacy_page_title": "Digitinho Galaxy — 隐私政策与透明度",
+    "privacy_overview_title": "核心要点概览",
+    "privacy_contact_title": "疑问与联系",
+    "privacy_contact_desc": "由于这是一个无需后端服务器且不收集任何数据的客户端开源项目，如有疑问或建议，可直接通过 GitHub 仓库提交 Issue。",
+    "boss_alien_xylarion_name": "虚空霸主 希拉里昂",
+    "boss_alien_xylarion_title": "外星先锋指挥官",
+    "boss_alien_xylarion_scenario": "柯伊伯带（太阳系边界）",
+    "boss_alien_xylarion_scenario_desc": "希拉里昂的无畏级外星舰队已经越过虚空，开始入侵太阳系！",
+    "boss_alien_xylarion_badge": "外星人 • 无畏舰",
+    "boss_alien_xylarion_lore": "入侵舰队最高指挥官，掌控高能恒星等离子巨炮。",
+    "boss_alien_zorkon_name": "轨道征服者 佐尔肯",
+    "boss_alien_zorkon_title": "生化机械蜂群主脑",
+    "boss_alien_zorkon_scenario": "海王星轨道",
+    "boss_alien_zorkon_scenario_desc": "佐尔肯的生物机械群舰已包围太阳系的气态巨行星！",
+    "boss_alien_zorkon_badge": "外星人 • 蜂群",
+    "boss_alien_zorkon_lore": "统辖能够吞噬星际舰队的外星生物机械母巢。",
+    "boss_alien_vespera_name": "反物质女皇 维斯佩拉",
+    "boss_alien_vespera_title": "星际灵能统治者",
+    "boss_alien_vespera_scenario": "土星光环",
+    "boss_alien_vespera_scenario_desc": "维斯佩拉正启动反物质炮阵，企图撕裂太阳系的引力护盾！",
+    "boss_alien_vespera_badge": "外星人 • 灵能",
+    "boss_alien_vespera_lore": "操纵暗能量与星系级别的灵能风暴。",
+    "boss_alien_kragthor_name": "舰队粉碎者 克拉格托尔",
+    "boss_alien_kragthor_title": "外星军阀大将军",
+    "boss_alien_kragthor_scenario": "小行星带",
+    "boss_alien_kragthor_scenario_desc": "克拉格托尔的重型装甲战舰正轰碎小行星群，开辟直通地球的入侵通道！",
+    "boss_alien_kragthor_badge": "外星人 • 军阀",
+    "boss_alien_kragthor_lore": "装备毁灭性反物质分解武器的重甲侵略战神。",
+    "boss_alien_nebulor_name": "暗物质使者 涅布拉",
+    "boss_alien_nebulor_title": "宇宙阴影实体",
+    "boss_alien_nebulor_scenario": "木星轨道",
+    "boss_alien_nebulor_scenario_desc": "涅布拉正在扭曲木星磁层，为对地球发动毁灭性打击做准备！",
+    "boss_alien_nebulor_badge": "外星人 • 阴影",
+    "boss_alien_nebulor_lore": "随心所欲操控时空畸变与引力奇点。",
+    "boss_alien_xenor_name": "银河主脑 塞诺尔",
+    "boss_alien_xenor_title": "入侵中枢主脑母舰",
+    "boss_alien_xenor_scenario": "地月轨道",
+    "boss_alien_xenor_scenario_desc": "塞诺尔的巨型外星母舰已逼近月球轨道，正式展开对地球的最终入侵！",
+    "boss_alien_xenor_badge": "外星人 • 母舰",
+    "boss_alien_xenor_lore": "统筹并指挥整个太阳系大入侵的外星至高母体意志。",
+    "hud_perk_passive": "被动",
+    "hud_perk_active_label": "活跃",
+    "hud_perk_recharging": "充能中",
+    "hud_perk_queue": "排队中",
+    "hud_perk_lvl": "等级 {lvl}"
+  },
+  "syllables": [
+    "ba",
+    "pa",
+    "ma",
+    "fa",
+    "da",
+    "ta",
+    "na",
+    "la",
+    "ga",
+    "ka",
+    "ha",
+    "ji",
+    "qi",
+    "xi",
+    "zhi",
+    "chi",
+    "shi",
+    "ri",
+    "zi",
+    "ci",
+    "si",
+    "de",
+    "le",
+    "me",
+    "ne",
+    "ge",
+    "he",
+    "bo",
+    "po",
+    "mo",
+    "fo"
+  ],
+  "words": [
+    {
+      "text": "sun",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: sun"
     },
-    "syllables": [
-        "ba",
-        "pa",
-        "ma",
-        "fa",
-        "da",
-        "ta",
-        "na",
-        "la",
-        "ga",
-        "ka",
-        "ha",
-        "ji",
-        "qi",
-        "xi",
-        "zhi",
-        "chi",
-        "shi",
-        "ri",
-        "zi",
-        "ci",
-        "si",
-        "de",
-        "le",
-        "me",
-        "ne",
-        "ge",
-        "he",
-        "bo",
-        "po",
-        "mo",
-        "fo"
-    ],
-    "words": [
-        {
-            "text": "sun",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: sun"
-        },
-        {
-            "text": "moon",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: moon"
-        },
-        {
-            "text": "moons",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: moons"
-        },
-        {
-            "text": "sky",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: sky"
-        },
-        {
-            "text": "ray",
-            "type": "phenomenon",
-            "meaning": "宇宙与天体概念: ray"
-        },
-        {
-            "text": "halo",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: halo"
-        },
-        {
-            "text": "axis",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: axis"
-        },
-        {
-            "text": "phase",
-            "type": "phenomenon",
-            "meaning": "宇宙与天体概念: phase"
-        },
-        {
-            "text": "wave",
-            "type": "phenomenon",
-            "meaning": "宇宙与天体概念: wave"
-        },
-        {
-            "text": "ship",
-            "type": "tech",
-            "meaning": "宇宙与天体概念: ship"
-        },
-        {
-            "text": "nova",
-            "type": "phenomenon",
-            "meaning": "宇宙与天体概念: nova"
-        },
-        {
-            "text": "target",
-            "type": "tech",
-            "meaning": "宇宙与天体概念: target"
-        },
-        {
-            "text": "data",
-            "type": "tech",
-            "meaning": "宇宙与天体概念: data"
-        },
-        {
-            "text": "pitch",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: pitch"
-        },
-        {
-            "text": "year",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: year"
-        },
-        {
-            "text": "vacuum",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: vacuum"
-        },
-        {
-            "text": "astro",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: astro"
-        },
-        {
-            "text": "cosmos",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: cosmos"
-        },
-        {
-            "text": "mars",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: mars"
-        },
-        {
-            "text": "venus",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: venus"
-        },
-        {
-            "text": "earth",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: earth"
-        },
-        {
-            "text": "solar",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: solar"
-        },
-        {
-            "text": "probe",
-            "type": "tech",
-            "meaning": "宇宙与天体概念: probe"
-        },
-        {
-            "text": "radar",
-            "type": "tech",
-            "meaning": "宇宙与天体概念: radar"
-        },
-        {
-            "text": "magma",
-            "type": "nature",
-            "meaning": "宇宙与天体概念: magma"
-        },
-        {
-            "text": "cloud",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: cloud"
-        },
-        {
-            "text": "pluto",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: pluto"
-        },
-        {
-            "text": "orbit",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: orbit"
-        },
-        {
-            "text": "comet",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: comet"
-        },
-        {
-            "text": "pulsar",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: pulsar"
-        },
-        {
-            "text": "quasar",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: quasar"
-        },
-        {
-            "text": "corona",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: corona"
-        },
-        {
-            "text": "meteor",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: meteor"
-        },
-        {
-            "text": "optics",
-            "type": "tech",
-            "meaning": "宇宙与天体概念: optics"
-        },
-        {
-            "text": "space",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: space"
-        },
-        {
-            "text": "aurora",
-            "type": "phenomenon",
-            "meaning": "宇宙与天体概念: aurora"
-        },
-        {
-            "text": "zenith",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: zenith"
-        },
-        {
-            "text": "hubble",
-            "type": "tech",
-            "meaning": "宇宙与天体概念: hubble"
-        },
-        {
-            "text": "dust",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: dust"
-        },
-        {
-            "text": "hole",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: hole"
-        },
-        {
-            "text": "star",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: star"
-        },
-        {
-            "text": "planet",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: planet"
-        },
-        {
-            "text": "galaxy",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: galaxy"
-        },
-        {
-            "text": "galaxies",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: galaxies"
-        },
-        {
-            "text": "universe",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: universe"
-        },
-        {
-            "text": "nebula",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: nebula"
-        },
-        {
-            "text": "gravity",
-            "type": "phenomenon",
-            "meaning": "宇宙与天体概念: gravity"
-        },
-        {
-            "text": "supernova",
-            "type": "phenomenon",
-            "meaning": "宇宙与天体概念: supernova"
-        },
-        {
-            "text": "astronaut",
-            "type": "tech",
-            "meaning": "宇宙与天体概念: astronaut"
-        },
-        {
-            "text": "astronomy",
-            "type": "science",
-            "meaning": "宇宙与天体概念: astronomy"
-        },
-        {
-            "text": "exoplanet",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: exoplanet"
-        },
-        {
-            "text": "exoplanets",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: exoplanets"
-        },
-        {
-            "text": "satellite",
-            "type": "tech",
-            "meaning": "宇宙与天体概念: satellite"
-        },
-        {
-            "text": "constellation",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: constellation"
-        },
-        {
-            "text": "telescope",
-            "type": "tech",
-            "meaning": "宇宙与天体概念: telescope"
-        },
-        {
-            "text": "starship",
-            "type": "tech",
-            "meaning": "宇宙与天体概念: starship"
-        },
-        {
-            "text": "atmosphere",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: atmosphere"
-        },
-        {
-            "text": "magnetosphere",
-            "type": "phenomenon",
-            "meaning": "宇宙与天体概念: magnetosphere"
-        },
-        {
-            "text": "radiation",
-            "type": "phenomenon",
-            "meaning": "宇宙与天体概念: radiation"
-        },
-        {
-            "text": "spectrum",
-            "type": "science",
-            "meaning": "宇宙与天体概念: spectrum"
-        },
-        {
-            "text": "andromeda",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: andromeda"
-        },
-        {
-            "text": "heliosphere",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: heliosphere"
-        },
-        {
-            "text": "antimatter",
-            "type": "science",
-            "meaning": "宇宙与天体概念: antimatter"
-        },
-        {
-            "text": "singularity",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: singularity"
-        },
-        {
-            "text": "multiverse",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: multiverse"
-        },
-        {
-            "text": "light-year",
-            "type": "science",
-            "meaning": "宇宙与天体概念: light-year"
-        },
-        {
-            "text": "black-hole",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: black-hole"
-        },
-        {
-            "text": "stardust",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: stardust"
-        },
-        {
-            "text": "dark-matter",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: dark-matter"
-        },
-        {
-            "text": "dark-energy",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: dark-energy"
-        },
-        {
-            "text": "wormhole",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: wormhole"
-        },
-        {
-            "text": "speed-of-light",
-            "type": "science",
-            "meaning": "宇宙与天体概念: speed-of-light"
-        },
-        {
-            "text": "space-station",
-            "type": "tech",
-            "meaning": "宇宙与天体概念: space-station"
-        },
-        {
-            "text": "event-horizon",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: event-horizon"
-        },
-        {
-            "text": "milky-way",
-            "type": "cosmos",
-            "meaning": "宇宙与天体概念: milky-way"
-        }
-    ],
-    "bossWords": {
-        "alien_dreadnought": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: year"
-            }
-        ],
-        "alien_hive": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: year"
-            }
-        ],
-        "alien_psionic": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: year"
-            }
-        ],
-        "alien_warlord": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: year"
-            }
-        ],
-        "alien_darkmatter": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: year"
-            }
-        ],
-        "alien_mothership": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: year"
-            }
-        ],
-        "robot": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: year"
-            }
-        ],
-        "beast": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: year"
-            }
-        ],
-        "mythology": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: year"
-            }
-        ],
-        "volcano": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: year"
-            }
-        ],
-        "ocean": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: year"
-            }
-        ],
-        "cosmos": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙与天体概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙与天体概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙与天体概念: year"
-            }
-        ]
+    {
+      "text": "moon",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: moon"
     },
-    "trainingWorlds": []
+    {
+      "text": "moons",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: moons"
+    },
+    {
+      "text": "sky",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: sky"
+    },
+    {
+      "text": "ray",
+      "type": "phenomenon",
+      "meaning": "宇宙与天体概念: ray"
+    },
+    {
+      "text": "halo",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: halo"
+    },
+    {
+      "text": "axis",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: axis"
+    },
+    {
+      "text": "phase",
+      "type": "phenomenon",
+      "meaning": "宇宙与天体概念: phase"
+    },
+    {
+      "text": "wave",
+      "type": "phenomenon",
+      "meaning": "宇宙与天体概念: wave"
+    },
+    {
+      "text": "ship",
+      "type": "tech",
+      "meaning": "宇宙与天体概念: ship"
+    },
+    {
+      "text": "nova",
+      "type": "phenomenon",
+      "meaning": "宇宙与天体概念: nova"
+    },
+    {
+      "text": "target",
+      "type": "tech",
+      "meaning": "宇宙与天体概念: target"
+    },
+    {
+      "text": "data",
+      "type": "tech",
+      "meaning": "宇宙与天体概念: data"
+    },
+    {
+      "text": "pitch",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: pitch"
+    },
+    {
+      "text": "year",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: year"
+    },
+    {
+      "text": "vacuum",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: vacuum"
+    },
+    {
+      "text": "astro",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: astro"
+    },
+    {
+      "text": "cosmos",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: cosmos"
+    },
+    {
+      "text": "mars",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: mars"
+    },
+    {
+      "text": "venus",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: venus"
+    },
+    {
+      "text": "earth",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: earth"
+    },
+    {
+      "text": "solar",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: solar"
+    },
+    {
+      "text": "probe",
+      "type": "tech",
+      "meaning": "宇宙与天体概念: probe"
+    },
+    {
+      "text": "radar",
+      "type": "tech",
+      "meaning": "宇宙与天体概念: radar"
+    },
+    {
+      "text": "magma",
+      "type": "nature",
+      "meaning": "宇宙与天体概念: magma"
+    },
+    {
+      "text": "cloud",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: cloud"
+    },
+    {
+      "text": "pluto",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: pluto"
+    },
+    {
+      "text": "orbit",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: orbit"
+    },
+    {
+      "text": "comet",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: comet"
+    },
+    {
+      "text": "pulsar",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: pulsar"
+    },
+    {
+      "text": "quasar",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: quasar"
+    },
+    {
+      "text": "corona",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: corona"
+    },
+    {
+      "text": "meteor",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: meteor"
+    },
+    {
+      "text": "optics",
+      "type": "tech",
+      "meaning": "宇宙与天体概念: optics"
+    },
+    {
+      "text": "space",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: space"
+    },
+    {
+      "text": "aurora",
+      "type": "phenomenon",
+      "meaning": "宇宙与天体概念: aurora"
+    },
+    {
+      "text": "zenith",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: zenith"
+    },
+    {
+      "text": "hubble",
+      "type": "tech",
+      "meaning": "宇宙与天体概念: hubble"
+    },
+    {
+      "text": "dust",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: dust"
+    },
+    {
+      "text": "hole",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: hole"
+    },
+    {
+      "text": "star",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: star"
+    },
+    {
+      "text": "planet",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: planet"
+    },
+    {
+      "text": "galaxy",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: galaxy"
+    },
+    {
+      "text": "galaxies",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: galaxies"
+    },
+    {
+      "text": "universe",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: universe"
+    },
+    {
+      "text": "nebula",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: nebula"
+    },
+    {
+      "text": "gravity",
+      "type": "phenomenon",
+      "meaning": "宇宙与天体概念: gravity"
+    },
+    {
+      "text": "supernova",
+      "type": "phenomenon",
+      "meaning": "宇宙与天体概念: supernova"
+    },
+    {
+      "text": "astronaut",
+      "type": "tech",
+      "meaning": "宇宙与天体概念: astronaut"
+    },
+    {
+      "text": "astronomy",
+      "type": "science",
+      "meaning": "宇宙与天体概念: astronomy"
+    },
+    {
+      "text": "exoplanet",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: exoplanet"
+    },
+    {
+      "text": "exoplanets",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: exoplanets"
+    },
+    {
+      "text": "satellite",
+      "type": "tech",
+      "meaning": "宇宙与天体概念: satellite"
+    },
+    {
+      "text": "constellation",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: constellation"
+    },
+    {
+      "text": "telescope",
+      "type": "tech",
+      "meaning": "宇宙与天体概念: telescope"
+    },
+    {
+      "text": "starship",
+      "type": "tech",
+      "meaning": "宇宙与天体概念: starship"
+    },
+    {
+      "text": "atmosphere",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: atmosphere"
+    },
+    {
+      "text": "magnetosphere",
+      "type": "phenomenon",
+      "meaning": "宇宙与天体概念: magnetosphere"
+    },
+    {
+      "text": "radiation",
+      "type": "phenomenon",
+      "meaning": "宇宙与天体概念: radiation"
+    },
+    {
+      "text": "spectrum",
+      "type": "science",
+      "meaning": "宇宙与天体概念: spectrum"
+    },
+    {
+      "text": "andromeda",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: andromeda"
+    },
+    {
+      "text": "heliosphere",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: heliosphere"
+    },
+    {
+      "text": "antimatter",
+      "type": "science",
+      "meaning": "宇宙与天体概念: antimatter"
+    },
+    {
+      "text": "singularity",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: singularity"
+    },
+    {
+      "text": "multiverse",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: multiverse"
+    },
+    {
+      "text": "light-year",
+      "type": "science",
+      "meaning": "宇宙与天体概念: light-year"
+    },
+    {
+      "text": "black-hole",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: black-hole"
+    },
+    {
+      "text": "stardust",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: stardust"
+    },
+    {
+      "text": "dark-matter",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: dark-matter"
+    },
+    {
+      "text": "dark-energy",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: dark-energy"
+    },
+    {
+      "text": "wormhole",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: wormhole"
+    },
+    {
+      "text": "speed-of-light",
+      "type": "science",
+      "meaning": "宇宙与天体概念: speed-of-light"
+    },
+    {
+      "text": "space-station",
+      "type": "tech",
+      "meaning": "宇宙与天体概念: space-station"
+    },
+    {
+      "text": "event-horizon",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: event-horizon"
+    },
+    {
+      "text": "milky-way",
+      "type": "cosmos",
+      "meaning": "宇宙与天体概念: milky-way"
+    }
+  ],
+  "bossWords": {
+    "alien_dreadnought": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: year"
+      }
+    ],
+    "alien_hive": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: year"
+      }
+    ],
+    "alien_psionic": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: year"
+      }
+    ],
+    "alien_warlord": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: year"
+      }
+    ],
+    "alien_darkmatter": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: year"
+      }
+    ],
+    "alien_mothership": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: year"
+      }
+    ],
+    "robot": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: year"
+      }
+    ],
+    "beast": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: year"
+      }
+    ],
+    "mythology": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: year"
+      }
+    ],
+    "volcano": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: year"
+      }
+    ],
+    "ocean": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: year"
+      }
+    ],
+    "cosmos": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙与天体概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙与天体概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙与天体概念: year"
+      }
+    ]
+  },
+  "trainingWorlds": []
 }

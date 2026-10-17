@@ -934,9 +934,9 @@ function clearArea() {
   if (feedbackEl && gameArea && !gameArea.contains(feedbackEl)) {
     gameArea.appendChild(feedbackEl);
   }
-  const bh = document.getElementById('black-hole-vortex');
-  if (bh && gameArea && !gameArea.contains(bh)) {
-    gameArea.appendChild(bh);
+  const earthEl = document.getElementById('earth-horizon') || document.getElementById('black-hole-vortex');
+  if (earthEl && gameArea && !gameArea.contains(earthEl)) {
+    gameArea.appendChild(earthEl);
   }
   if (state) state.activeItems = [];
 }
@@ -1350,6 +1350,8 @@ function getSkillSvgIcon(skillId) {
       return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M10 2h4"/></svg>`;
     case 'haste':
       return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`;
+    case 'dilation':
+      return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 12l4-4M4 12l4 4M20 12l-4-4M20 12l4 4"/><circle cx="12" cy="12" r="2"/></svg>`;
     case 'speedlock':
       return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
     case 'autodestroy':
@@ -1375,11 +1377,29 @@ function renderRunPerks() {
 
   if (perkIds.length === 0) {
     const emptyHint = typeof t === 'function' ? t('hud_perks_empty') : 'Nenhuma habilidade adquirida ainda.<br/>Suba de nível para desbloquear!';
-    container.innerHTML = `<div class="empty-hint">${emptyHint}</div>`;
+    if (container.dataset.emptyState !== 'true') {
+      container.innerHTML = `<div class="empty-hint">${emptyHint}</div>`;
+      container.dataset.emptyState = 'true';
+      container.dataset.perksKey = '';
+    }
     return;
   }
+  container.dataset.emptyState = 'false';
 
-  container.innerHTML = '';
+  const currentKey = perkIds.map(id => `${id}:${perks[id]}`).join('|');
+  const needsRebuild = (container.dataset.perksKey !== currentKey);
+
+  if (needsRebuild) {
+    container.innerHTML = '';
+    container.dataset.perksKey = currentKey;
+  }
+
+  // Pre-defined SVG icons for statuses (Rule 11: 100% SVG, strictly NO emojis!)
+  const svgPassive = `<svg class="perk-badge-svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18.178 8c5.096 0 5.096 8 0 8-5.095 0-7.267-8-12.362-8-5.096 0-5.096 8 0 8 5.095 0 7.267-8 12.362-8z"/></svg>`;
+  const svgRunning = `<svg class="perk-badge-svg" width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.5 3.5 3 6.5 3 10a6 6 0 1 1-12 0c0-3.5 2.5-6.5 3-10 1 2 2.5 3.5 3 4.5 1-1 2-2.5 3-4.5z"/></svg>`;
+  const svgQueued = `<svg class="perk-badge-svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14M5 2h14m-2 20v-5l-5-5 5-5V2M7 2v5l5 5-5 5v5"/></svg>`;
+  const svgCd = `<svg class="perk-badge-svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M10 2h4"/></svg>`;
+
   perkIds.forEach(id => {
     const def = SKILLS_CONFIG[id];
     if (!def) return;
@@ -1388,40 +1408,74 @@ function renderRunPerks() {
       ? t('skill_name_' + id)
       : (def.name || id);
 
-    const isActive = (state.activeTimers && (state.activeTimers[id] || 0) > 0);
-    const isQueued = (state.skillQueue && state.skillQueue.includes(id));
-    const timerSec = isActive ? Math.ceil(state.activeTimers[id] / 1000) : 0;
+    const isPassive = (def.type === 'passive');
+    const isRunning = !isPassive && (state.activeTimers && (state.activeTimers[id] || 0) > 0);
+    const isQueued = !isPassive && !isRunning && (state.skillQueue && state.skillQueue.includes(id));
+    const timerSec = isRunning ? Math.ceil(state.activeTimers[id] / 1000) : 0;
     const cdSec = Math.max(0, Math.ceil((state.skillCooldowns?.[id] || 0) / 1000));
 
-    const card = document.createElement('div');
-    card.className = 'run-perk-card' + (isActive ? ' perk-active' : isQueued ? ' perk-queued' : '');
-    card.style.setProperty('--perk-clr', def.color || 'var(--accent-primary)');
+    // Dynamic classes: Passives ALWAYS get highlighted active color! Duration skills get active highlight while running!
+    const cardClass = 'run-perk-card' +
+      (isPassive ? ' perk-always-active' :
+       isRunning ? ' perk-active' :
+       isQueued ? ' perk-queued' : ' perk-cooldown');
 
-    let statusText = '';
-    if (def.type === 'passive') {
+    const lvlPrefix = (typeof t === 'function' && t('hud_perk_lvl', { lvl: lvl }) !== 'hud_perk_lvl')
+      ? t('hud_perk_lvl', { lvl: lvl })
+      : `Nv. ${lvl}`;
+    let subTypeTxt = '';
+    let statusBadgeHtml = '';
+
+    if (isPassive) {
+      subTypeTxt = typeof t === 'function' ? t('hud_perk_passive') : 'Passiva';
       const maxMult = Math.min(5, 1 + lvl);
-      statusText = `<span class="perk-status-badge perk-status-passive">+${maxMult}×</span>`;
-    } else if (isActive) {
-      statusText = `<span class="perk-status-badge perk-status-running">🔥 ${timerSec}s</span>`;
+      statusBadgeHtml = `<span class="perk-status-badge perk-status-passive">${svgPassive}+${maxMult}×</span>`;
+    } else if (isRunning) {
+      subTypeTxt = typeof t === 'function' ? t('hud_perk_active_label') : 'Ativa';
+      statusBadgeHtml = `<span class="perk-status-badge perk-status-running">${svgRunning}${timerSec}s</span>`;
     } else if (isQueued) {
-      statusText = `<span class="perk-status-badge perk-status-queued">⏳ Fila</span>`;
+      subTypeTxt = typeof t === 'function' ? t('hud_perk_queue') : 'Fila';
+      statusBadgeHtml = `<span class="perk-status-badge perk-status-queued">${svgQueued}<span>${subTypeTxt}</span></span>`;
     } else {
-      statusText = `<span class="perk-status-badge perk-status-cd">⏱️ ${cdSec}s</span>`;
+      subTypeTxt = typeof t === 'function' ? t('hud_perk_recharging') : 'Recarga';
+      statusBadgeHtml = `<span class="perk-status-badge perk-status-cd">${svgCd}${cdSec}s</span>`;
     }
 
-    card.innerHTML = `
-      <div class="perk-card-left">
-        <span class="perk-card-icon" style="color:${def.color || 'var(--accent-primary)'}">${getSkillSvgIcon(id)}</span>
-        <div class="perk-card-info">
-          <span class="perk-card-name">${sName}</span>
-          <span class="perk-card-lvl">Nv. ${lvl}</span>
+    const metaTxt = `${lvlPrefix} • ${subTypeTxt}`;
+
+    if (needsRebuild) {
+      const card = document.createElement('div');
+      card.className = cardClass;
+      card.setAttribute('data-perk-id', id);
+      card.style.setProperty('--perk-clr', def.color || 'var(--accent-primary)');
+
+      card.innerHTML = `
+        <div class="perk-card-left">
+          <div class="perk-icon-wrap" style="--perk-clr: ${def.color || 'var(--accent-primary)'}">
+            <img class="perk-img" src="${def.image || `assets/skills/${id}.webp`}" alt="${sName}" loading="lazy" onerror="this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+            <span class="perk-svg-fallback" style="display:none; color:${def.color || 'var(--accent-primary)'}">${getSkillSvgIcon(id)}</span>
+          </div>
+          <div class="perk-card-info">
+            <span class="perk-card-name" title="${sName}">${sName}</span>
+            <span class="perk-card-meta">${metaTxt}</span>
+          </div>
         </div>
-      </div>
-      <div class="perk-card-right">
-        ${statusText}
-      </div>
-    `;
-    container.appendChild(card);
+        <div class="perk-card-right">
+          ${statusBadgeHtml}
+        </div>
+      `;
+      container.appendChild(card);
+    } else {
+      // Smart DOM update for high performance
+      const card = container.querySelector(`[data-perk-id="${id}"]`);
+      if (card) {
+        if (card.className !== cardClass) card.className = cardClass;
+        const metaEl = card.querySelector('.perk-card-meta');
+        if (metaEl && metaEl.textContent !== metaTxt) metaEl.textContent = metaTxt;
+        const rightEl = card.querySelector('.perk-card-right');
+        if (rightEl && rightEl.innerHTML !== statusBadgeHtml) rightEl.innerHTML = statusBadgeHtml;
+      }
+    }
   });
 }
 
@@ -3221,7 +3275,8 @@ function showLevelUpModal(choices, onPick) {
       <kbd class="card-key-hint" aria-hidden="true">${index + 1}</kbd>
       <div class="levelup-card-badge">${tagTxt}</div>
       <div class="levelup-skill-icon-wrap" style="--item-clr: ${skill.color || 'var(--accent-primary)'}">
-        <span>${getSkillSvgIcon(skill.id) || skill.icon}</span>
+        <img class="levelup-skill-img" src="${skill.image || `assets/skills/${skill.id}.webp`}" alt="${sName}" loading="lazy" onerror="this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+        <span class="levelup-skill-svg-fallback" style="display:none; color:${skill.color || 'var(--accent-primary)'}">${getSkillSvgIcon(skill.id) || skill.icon}</span>
       </div>
       <div class="levelup-skill-name">${sName}</div>
       <div class="levelup-skill-desc">${sDesc}</div>

@@ -1,1994 +1,1999 @@
 {
-    "ui": {
-        "app_title": "Digitinho Galaxy.",
-        "app_subtitle": "Master the cosmic keyboard before words are swallowed by the black hole",
-        "rules_title": "How to Play & Runic Rules",
-        "rule_typing": "<strong>Keyboard Typing:</strong> Type letters, syllables and words before they hit the bottom of the screen",
-        "rule_wildcard": "<strong>Wildcard Words:</strong> Instantly destroy all runics on screen simultaneously and absorb all their points",
-        "rule_spells": "<strong>Keys 1–8 (or click):</strong> Activate slow motion, freeze, spacing, shield and power spells",
-        "rule_combo": "<strong>Combos & Fury Mode:</strong> Error-free streaks multiply your score up to 8×",
-        "rule_danger": "<strong>Lives & Danger:</strong> Runics at the bottom flash red and cost 1 life if dropped (3 lives in Classic)",
-        "btn_start": "Play",
-        "btn_training": "Training Mode (Keyboard Rows)",
-        "btn_zen": "Zen Mode (No Lives Lost)",
-        "btn_timeattack": "Time Attack (60s)",
-        "btn_library": "Library",
-        "btn_achievements": "Achievements",
-        "btn_settings": "Settings",
-        "btn_shop": "Cosmic Shop",
-        "btn_skills_inventory": "Skills",
-        "skills_inventory_title": "Cosmic Arsenal",
-        "skills_inventory_sub": "Your permanent skills acquired from the Shop",
-        "skills_inventory_empty": "No skills acquired yet. Visit the Cosmic Shop to stock your arsenal!",
-        "skills_inventory_stock": "In stock: ×{count}",
-        "start_record_label": "RECORD:",
-        "start_high_score": "HIGH SCORE: {score}",
-        "shop_btn_reroll": "Reroll Offers",
-        "shop_reroll_cost": "{cost}",
-        "hud_infinite_mode": "INFINITE ARCADE",
-        "hud_coin_farm_progress": "Next Coin: {current} / {target} words",
-        "badge_new_label": "NEW",
-        "badge_new_word": "New word in this run",
-        "fb_coin_farmed": "+1 Cosmic Coin farmed!",
-        "start_game_modes": "Game Modes",
-        "btn_classic_short": "Classic",
-        "btn_training_short": "Training",
-        "btn_training_desc": "Keyboard rows",
-        "btn_zen_short": "Zen Mode",
-        "btn_zen_desc": "No lives lost",
-        "btn_timeattack_short": "Time Attack",
-        "btn_timeattack_desc": "60s sprint",
-        "btn_rules": "How to Play",
-        "btn_close_rules": "Got It",
-        "hud_phase": "PHASE",
-        "hud_zen_badge": "Zen Mode: no lives lost",
-        "hud_training_badge": "Training Mode: no lives lost",
-        "hud_training_lesson": "Lesson",
-        "hud_zen_lbl": "ZEN MODE",
-        "hud_training_lbl": "TRAINING",
-        "hud_free": "Free",
-        "hud_zen_pill": "No lives lost",
-        "hud_zen_pill_title": "In Zen Mode you practice freely without losing lives",
-        "hud_training_pill_title": "In Training Mode you develop precision and muscle memory without losing lives",
-        "hud_lives": "LIVES",
-        "hud_accuracy": "ACCURACY",
-        "hud_wpm": "WPM",
-        "hud_combo": "COMBO",
-        "hud_upcoming": "UPCOMING",
-        "hud_new_word_badge": "New Word",
-        "hud_spells": "SKILLS",
-        "hud_active": "ACTIVE",
-        "hud_sec": "s",
-        "pause_title": "Game Paused",
-        "pause_hint": "Press <kbd>ESC</kbd> to resume",
-        "pause_resume": "Resume",
-        "pause_library": "Library",
-        "pause_achievements": "Achievements",
-        "pause_settings": "Settings",
-        "pause_training_menu": "Return to Training Menu",
-        "pause_main_menu": "Return to Main Menu",
-        "confirm_exit_to_menu": "Earned coins will be kept, but skills obtained during this match will be lost.",
-        "confirm_exit_title": "Return to Main Menu?",
-        "confirm_exit_cancel": "Continue Playing",
-        "confirm_exit_confirm": "Yes, Return to Menu",
-        "countdown_hint": "Get your fingers ready!",
-        "countdown_go": "GO!",
-        "modal_performance": "PERFORMANCE",
-        "modal_phase_complete": "Phase {phase} Complete!",
-        "modal_press_continue": "Press ENTER or Space to continue",
-        "modal_btn_continue": "Continue ➔",
-        "modal_btn_shop": "Go to Shop",
-        "modal_stat_score": "Points",
-        "modal_stat_accuracy": "Accuracy",
-        "modal_stat_wpm": "WPM",
-        "modal_stat_combo": "Max Combo",
-        "modal_stat_discovered": "New Words Discovered",
-        "go_title": "Game Over",
-        "go_sub": "Your runic journey has reached an end",
-        "go_score": "Match Score",
-        "go_best_score": "Best Score",
-        "go_new_record_tag": "NEW RECORD!",
-        "go_final_score": "Final Score",
-        "go_phase_reached": "Phase Reached",
-        "go_best_combo": "Best Combo",
-        "go_avg_accuracy": "Accuracy",
-        "go_coins_earned": "Total Coins Earned",
-        "go_hits_errors": "Hits / Errors",
-        "go_discovered_words": "Discovered Words",
-        "go_use_continue": "Use Continue ({n})",
-        "go_revive_continue": "Revive & Continue ({n})",
-        "go_play_again": "Play Again",
-        "go_main_menu": "Main Menu",
-        "victory_title": "Epic Victory!",
-        "victory_desc": "Congratulations, you have mastered the runic keyboard!",
-        "victory_play_again": "Play Again",
-        "shop_title": "Skill Shop",
-        "shop_sub": "Acquire permanent skills for your cosmic journeys",
-        "shop_points": "Your Points:",
-        "shop_coins": "Your Coins:",
-        "shop_btn_buy": "Buy",
-        "shop_btn_owned": "Purchased",
-        "shop_available": "Available",
-        "shop_btn_close": "Close",
-        "shop_confirm_exit_title": "Leave the Shop?",
-        "shop_confirm_exit_desc": "Are you sure you want to leave the shop?",
-        "shop_confirm_stay": "Stay in Shop",
-        "shop_confirm_leave": "Return to Main Menu",
-        "shop_insufficient_pts": "Not enough points!",
-        "shop_insufficient_coins": "Not enough coins!",
-        "skill_name_freezer": "Freeze",
-        "skill_desc_freezer": "Freezes all falling runics on the track for 10s every 2 minutes",
-        "skill_name_bomb": "Bomb",
-        "skill_desc_bomb": "Triggers a cosmic blast clearing runics in area every 90s",
-        "skill_name_shield": "Runic Shield",
-        "skill_desc_shield": "Protects against dropped runics and typo penalties for 10s every 2 minutes",
-        "skill_name_vortex": "Vortex",
-        "skill_desc_vortex": "A vortex opens in the center devouring all runics on screen every 3 minutes",
-        "skill_name_slowdown": "Slow-Mo",
-        "skill_desc_slowdown": "Reduces runic fall speed by 50% for 15s every 1 minute",
-        "skill_name_haste": "Double Points",
-        "skill_desc_haste": "Doubles all points earned for 10s every 30s",
-        "skill_name_dilation": "Spacing",
-        "skill_desc_dilation": "Increases spacing and interval between runics up to {max}",
-        "skill_name_autodestroy": "Cosmic Echo",
-        "skill_desc_autodestroy": "Automatically shatters learned words from this run for 10s every 1 minute",
-        "boss_reward_extralife": "+1 Life",
-        "boss_reward_extralife_desc": "Recovers or adds 1 life for the current run",
-        "boss_reward_continue": "Continue Token",
-        "boss_reward_continue_desc": "Allows instant revival if all lives are lost",
-        "boss_reward_coins_100": "+100 Coins",
-        "boss_reward_coins_100_desc": "Receive +100 cosmic coins directly into your bank",
-        "hud_level": "LEVEL",
-        "hud_run_perks": "ACTIVE PERKS",
-        "hud_perks_empty": "No perks acquired yet.<br/>Level up to unlock!",
-        "levelup_title": "LEVEL UP!",
-        "levelup_sub": "You reached Level {level}!",
-        "levelup_prompt": "Choose 1 ability to activate for this run:",
-        "levelup_btn_pick": "Choose",
-        "fb_dilation_upgraded": "Spacing upgraded up to {max}!",
-        "lib_title": "Runic Library",
-        "lib_sub": "Collection of discovered words",
-        "lib_discovered": "Words Discovered",
-        "lib_locked": "Locked",
-        "lib_typed": "typed {count}×",
-        "lib_not_typed": "not yet typed",
-        "lib_btn_close": "Close",
-        "ach_title": "Achievements & Badges",
-        "ach_sub": "Your speed, precision and mastery milestones",
-        "ach_counter": "{unlocked} / {total} Unlocked",
-        "ach_btn_close": "Close",
-        "ach_status_unlocked": "✓ Unlocked",
-        "ach_status_locked": "Locked",
-        "ach_goal_reached": "Goal reached",
-        "ach_unit_words": "words",
-        "ach_unit_streak": "hits",
-        "ach_unit_combo": "combo",
-        "ach_dedo_veloz_name": "Speed Demon",
-        "ach_dedo_veloz_desc": "Reach 60 WPM.",
-        "ach_cirurgico_name": "Surgical",
-        "ach_cirurgico_desc": "Complete any phase with 100% accuracy.",
-        "ach_colecionador_name": "Collector",
-        "ach_colecionador_desc": "Unlock all words in the Library.",
-        "ach_mestre_combo_name": "Combo Master",
-        "ach_mestre_combo_desc": "Reach 30 consecutive correct keystrokes.",
-        "ach_modo_furia_name": "Fury Mode",
-        "ach_modo_furia_desc": "Activate Fury Mode with 15 hits in a row.",
-        "ach_mestre_tipo_name": "Typography Master",
-        "ach_mestre_tipo_desc": "Complete 100 full words.",
-        "settings_title": "Settings",
-        "settings_sub": "Game and interface adjustments",
-        "settings_sound": "Sound Effects",
-        "settings_sound_on": "On",
-        "settings_sound_off": "Muted",
-        "settings_queue": "Queue Position",
-        "settings_queue_top": "Top",
-        "settings_queue_bottom": "Bottom",
-        "settings_theme": "Interface Theme",
-        "settings_theme_dark": "Dark",
-        "settings_theme_light": "Light",
-        "settings_boss": "Boss Battles",
-        "settings_boss_on": "Every 8 Phases (Active)",
-        "settings_boss_off": "Disabled",
-        "settings_test_boss": "Test Boss Battle",
-        "settings_face_boss": "Face Boss",
-        "settings_lang": "Language",
-        "settings_difficulty": "Difficulty",
-        "settings_diff_locked_match": "Difficulty cannot be changed during a match",
-        "diff_easy": "Easy",
-        "diff_normal": "Medium",
-        "diff_hard": "Hard",
-        "diff_desc_easy": "0.5× initial speed • No typo acceleration • No progress loss • 5 lives",
-        "diff_desc_normal": "1.0× initial speed • No typo acceleration • Normal progress loss • 3 lives",
-        "diff_desc_hard": "1.5× initial speed • +0.05× per typo • Normal progress loss • 3 lives",
-        "settings_cat_general": "General & Interface",
-        "settings_cat_boss": "Boss Battles",
-        "settings_cat_about": "About App",
-        "settings_version": "Current Version",
-        "settings_author": "Author",
-        "settings_btn_check_update": "Check",
-        "settings_update_latest": "Up to date",
-        "update_available_title": "A new update is available!",
-        "update_available_sub": "Click to refresh cache and load the latest version",
-        "update_btn_action": "Update",
-        "update_applying": "Updating...",
-        "settings_btn_back": "Back",
-        "training_title": "Training: Keyboard Rows",
-        "training_sub": "Build muscle memory without looking at keys",
-        "training_notice": "In this practice mode you <strong>do not lose lives</strong>. Typo errors and fallen runics lower your <strong>Accuracy %</strong> and <strong>WPM</strong>.",
-        "training_btn_back": "Back",
-        "training_btn_start": "Start Training (3 Lessons) →",
-        "training_btn_again": "Train Again",
-        "training_completed": "Completed (Mastery)",
-        "training_pending": "3 Lessons",
-        "training_record_acc": "Record: {acc}% Precision",
-        "boss_defeated_title": "BOSS DEFEATED!",
-        "boss_defeated_sub": "You masterfully solved all runic trials.",
-        "boss_defeated_prompt": "Choose 1 permanent bonus skill for upcoming phases:",
-        "boss_btn_pick": "Claim",
-        "boss_pick_skill": "Claim",
-        "boss_default_name": "Boss",
-        "fb_combo_broken": "Combo Broken!",
-        "fb_fury_activated": "FURY MODE ACTIVATED! DOUBLE POINTS!",
-        "fb_bomb_activated": "BOMB ACTIVATED (10s)!",
-        "fb_bomb_expired": "Bomb expired",
-        "fb_bomb_explosion": "Explosion ({lines} lines)! +{pts}",
-        "fb_freezer_activated": "FREEZE ACTIVATED (10s)!",
-        "fb_freezer_expired": "Freeze expired",
-        "fb_shield_activated": "RUNIC SHIELD ACTIVATED (10s)!",
-        "fb_shield_expired": "Runic Shield expired",
-        "fb_shield_blocked": "Damage blocked by Runic Shield!",
-        "fb_shield_error_protected": "Typo protected by Shield!",
-        "fb_vortex_activated": "VORTEX ACTIVATED (10s)!",
-        "fb_vortex_expired": "Vortex expired",
-        "fb_slowdown_activated": "SLOWDOWN ACTIVATED (15s)!",
-        "fb_slowdown_expired": "Slowdown expired",
-        "fb_slow_activated": "SLOWDOWN ACTIVATED (15s)!",
-        "fb_slow_expired": "Slowdown expired",
-        "fb_haste_activated": "DOUBLE POINTS ACTIVATED (15s)!",
-        "fb_haste_expired": "Double points expired",
-        "fb_dilation_activated": "SPACING INCREASED (45s)!",
-        "fb_dilation_expired": "Spacing expired",
-        "fb_speedlock_activated": "SPEED LOCKED (1.0x / 60s)!",
-        "fb_speedlock_expired": "Speed Lock expired",
-        "fb_autodestroy_activated": "COSMIC AUTO-CLEAR ACTIVATED (60s)!",
-        "fb_autodestroy_expired": "Cosmic Auto-Clear expired",
-        "fb_autodestroy_shattered": "⚡ Auto-shattered: {word}! +{pts}",
-        "fb_wildcard": "WILDCARD! All runics absorbed! +{pts}",
-        "fb_life_recovered": "+1 Life Recovered!",
-        "fb_perfect": "PERFECT!",
-        "hud_performance": "PERFORMANCE DASHBOARD",
-        "hud_total_score": "TOTAL SCORE",
-        "hud_hits": "HITS",
-        "hud_errors": "ERRORS",
-        "hud_discovered_words": "DISCOVERED WORDS",
-        "hud_view_all": "View all",
-        "hud_spells_hint": "Buy in shop<br/>or complete words",
-        "hud_activate_kb": "ACTIVATE (KEYBOARD)",
-        "hud_key_label": "Key",
-        "hud_max_phase": "MAX PHASE",
-        "modal_unlocked_words": "Unlocked words",
-        "modal_btn_next_phase": "Next Phase →",
-        "modal_btn_back_training": "Back to Training Menu",
-        "shop_note": "Prices increase after each purchase",
-        "shop_btn_continue": "Continue Playing",
-        "btn_back_to_game": "Back to Game",
-        "app_loading": "Loading runic data...",
-        "fb_runic_dropped_zen": "⚠️ Runic dropped (-accuracy)",
-        "fb_runic_dropped": "💔 Runic dropped!",
-        "fb_time_up": "⏱️ Time's Up!",
-        "fb_boss_enigma_dropped": "💥 The enigma dropped! The Boss attacked!",
-        "fb_ice_cleared": "❄️ Screen cleared — Freeze deactivated!",
-        "fb_error_letter": "❌ Wrong letter!",
-        "fb_error": "❌ Error",
-        "fb_wildcard_clean": "💥 WILDCARD! TOTAL CLEAR!",
-        "fb_training_completed": "🎉 Congratulations! You completed all training worlds!",
-        "fb_continue_used": "🪙 Continue used! Resuming phase...",
-        "fb_permanent_life": "+1 Permanent Life!",
-        "fb_continue_obtained": "🪙 +1 Continue token obtained!",
-        "shop_all_words_unlocked": "All words have already been discovered!",
-        "hud_skills_empty_hint": "Buy in the shop<br/>or complete words <strong>⚡</strong>",
-        "training_lesson_1_title": "Lesson 1: Key Recognition",
-        "training_lesson_2_title": "Lesson 2: Finger Alternation",
-        "training_lesson_3_title": "Lesson 3: Mastery Challenge",
-        "training_lesson_1_name": "Home Keys",
-        "training_lesson_2_name": "Alternation",
-        "training_lesson_3_name": "Final Challenge",
-        "training_next_obj_2": "Next goal: Combine keys into short words and alternate hands.",
-        "training_next_obj_3": "Next goal: Final flow and mastery challenge with full words!",
-        "training_new_record": "NEW RECORD!",
-        "training_world_mastered": "WORLD MASTERED",
-        "training_mastery_completed": "{world} — Mastery Completed!",
-        "training_lesson_completed": "{world} — {lesson} Completed!",
-        "training_rank_s": "SURGICAL PRECISION",
-        "training_rank_a": "EXCELLENT FLOW",
-        "training_rank_b": "GOOD CONTROL",
-        "training_rank_c": "PRACTICE MORE",
-        "training_stat_world_progress": "World Progress",
-        "training_stat_lesson_done": "Lesson {lesson} of 3 Completed",
-        "training_stat_accuracy_rate": "Accuracy Rate",
-        "training_stat_status": "Training Status",
-        "training_stat_completed": "100% Completed (3/3 Lessons)",
-        "training_stat_keys": "Mastered Keys",
-        "training_stat_accuracy": "Match Accuracy",
-        "training_stat_best_record": "Best Record (Accuracy)",
-        "training_stat_speed": "Real Speed (WPM)",
-        "training_stat_hits_errors": "Hits / Errors",
-        "training_hits_errs_val": "{hits} hits / {errors} errors",
-        "training_btn_next_world": "Advance to {world} →",
-        "training_btn_finish_all": "Finish All Trainings! →",
-        "training_btn_next_lesson": "Advance to Lesson {lesson} ({runics} runics) →",
-        "fb_boss_defeated": "{boss} DEFEATED! +350 COINS!",
-        "modal_phase_pts": "Points Earned in Phase",
-        "modal_acc_bonus": "Accuracy Bonus ({acc}%)",
-        "modal_penalty": "Errors (Penalty)",
-        "modal_net_pts": "Net Added Points",
-        "modal_total_pts": "Total Score",
-        "modal_combo_bonus": "Max Combo Bonus ({combo}×)",
-        "modal_phase_total_pts": "Total Points Received",
-        "modal_section_score": "Score Summary",
-        "modal_section_coins": "Coins Earned",
-        "modal_coins_completion": "Stage Completed",
-        "modal_boss_bonus": "Boss Bonus",
-        "modal_coins_precision": "100% Accuracy Bonus",
-        "modal_coins_streak": "Flawless Streak ({streak} phases)",
-        "modal_coins_phase_total": "Total Coins Added",
-        "modal_coins_balance": "Total Coins Balance",
-        "hud_coins": "COINS",
-        "hud_boss_hp": "BOSS HP",
-        "fb_skill_acquired": "⚡ Skill: {skill}!",
-        "fb_vortex_devour": "🌀 Vortex devoured {text}! +{pts}",
-        "fb_enigma_solved": "💥 ENIGMA SOLVED! -1 BOSS HP! (+{pts}pts)",
-        "fb_reward_granted": "Reward granted: {reward}!",
-        "queue_top": "Top",
-        "queue_bottom": "Bottom",
-        "queue_toggle_to_bottom": "Queue at Top (click to move to bottom)",
-        "queue_toggle_to_top": "Queue at Bottom (click to move to top)",
-        "theme_switch_to_light": "Switch to light theme",
-        "theme_switch_to_dark": "Switch to dark theme",
-        "boss_enigma_badge": "📜 ENIGMA {num} / {total} • {scenario}",
-        "boss_enigma_letters": "{count} LETTERS",
-        "boss_enigma_queue": "ENIGMA {num} / 3",
-        "boss_level_tag": " (Lv. {level})",
-        "boss_cyber_titan_name": "Xylarion, the Void Overlord",
-        "boss_cyber_titan_title": "Commander of the Alien Vanguard",
-        "boss_cyber_titan_scenario": "Kuiper Belt (Edge of the Solar System)",
-        "boss_cyber_titan_scenario_desc": "Xylarion's alien dreadnought armada has crossed the void to invade the Solar System!",
-        "boss_cyber_titan_badge": "ALIEN • DREADNOUGHT",
-        "boss_cyber_titan_lore": "Supreme commander of the alien invasion fleet and master of stellar plasma weaponry.",
-        "boss_feral_apex_name": "Zorkon, Orbit Conqueror",
-        "boss_feral_apex_title": "Master of the Biomechanical Swarm",
-        "boss_feral_apex_scenario": "Neptune's Orbit",
-        "boss_feral_apex_scenario_desc": "Zorkon's bio-organic swarm carriers encircle the gas giants of the Solar System!",
-        "boss_feral_apex_badge": "ALIEN • HIVE",
-        "boss_feral_apex_lore": "Controls alien biomechanical hive minds capable of devouring space fleets.",
-        "boss_arcane_chimera_name": "Vespera, Antimatter Empress",
-        "boss_arcane_chimera_title": "Extraterrestrial Psionic Sovereign",
-        "boss_arcane_chimera_scenario": "Saturn's Rings",
-        "boss_arcane_chimera_scenario_desc": "Vespera commands antimatter batteries to shatter the gravitational shields of the Solar System!",
-        "boss_arcane_chimera_badge": "ALIEN • PSIONIC",
-        "boss_arcane_chimera_lore": "Bends dark energy and commands intergalactic psionic storms.",
-        "boss_abyssal_leviathan_name": "Nebulor, Dark Matter Herald",
-        "boss_abyssal_leviathan_title": "Cosmic Shadow Entity",
-        "boss_abyssal_leviathan_scenario": "Jupiter's Orbit",
-        "boss_abyssal_leviathan_scenario_desc": "Nebulor bends Jupiter's magnetosphere to prepare the final strike on Earth!",
-        "boss_abyssal_leviathan_badge": "ALIEN • SHADOW",
-        "boss_abyssal_leviathan_lore": "Manipulates spacetime anomalies and singularity distortions.",
-        "boss_cosmic_chronos_name": "Xenor, Intergalactic Overmind",
-        "boss_cosmic_chronos_title": "Central Invasion Intelligence",
-        "boss_cosmic_chronos_scenario": "Lunar Orbit",
-        "boss_cosmic_chronos_scenario_desc": "Xenor's titanic alien mothership positions in orbit for the final invasion of Earth!",
-        "boss_cosmic_chronos_badge": "ALIEN • MOTHERSHIP",
-        "boss_cosmic_chronos_lore": "The supreme alien consciousness orchestrating the grand invasion of the Solar System.",
-        "boss_magma_vulcanus_name": "Kragthor, Fleet Breaker",
-        "boss_magma_vulcanus_title": "Alien Warlord General",
-        "boss_magma_vulcanus_scenario": "Asteroid Belt",
-        "boss_magma_vulcanus_scenario_desc": "Kragthor's colossal war juggernaut pulverizes asteroids to clear a direct corridor to Earth!",
-        "boss_magma_vulcanus_badge": "ALIEN • WARLORD",
-        "boss_magma_vulcanus_lore": "Heavily armored alien conqueror wielding antimatter disintegration ordnance.",
-        "btn_continue": "Continue Playing",
-        "btn_new_game": "New Game",
-        "btn_new_game_desc": "Start fresh with shared coins",
-        "btn_save_slots": "Save Slots",
-        "slots_title": "Save Slots",
-        "slots_sub": "Manage your progress or start a new game",
-        "lbl_highscore": "HIGH SCORE",
-        "lbl_shared_coins": "COINS",
-        "lbl_highcoins": "MAX COINS",
-        "slot_number": "Slot {slot}",
-        "slot_in_progress": "In Progress",
-        "slot_empty": "Empty",
-        "slot_empty_desc": "No saved match. Start fresh with your shared coins!",
-        "slot_btn_continue": "Continue",
-        "slot_btn_new": "New Game",
-        "slot_btn_delete": "Delete",
-        "slot_confirm_overwrite": "Overwrite Slot {slot} and start a new game? Existing progress in this slot will be replaced.",
-        "slot_confirm_delete": "Are you sure you want to delete the saved game in Slot {slot}?",
-        "fb_game_saved": "Game progress saved!",
-        "fb_game_resumed": "Game resumed from Phase {phase}!",
-        "slots_shared_wallet": "Shared Coins Bank",
-        "slots_close": "Close",
-        "slot_phase_score": "Phase {phase} • {score} pts",
-        "slot_date_fmt": "Saved: {date}",
-        "confirm_new_game_title": "Start New Game?",
-        "confirm_new_game_desc": "You have a saved game in progress. Starting a new game will overwrite Slot {slot}. Your shared coins will remain available!",
-        "settings_finger_guide": "Visual Finger Guide",
-        "settings_finger_guide_always": "Always Active (Default)",
-        "settings_finger_guide_training": "Training Only",
-        "settings_finger_guide_off": "Disabled",
-        "vk_space": "SPACE",
-        "finger_guide_title": "Finger Guide",
-        "finger_ready": "Resting Position",
-        "finger_space_bar": "Space",
-        "hand_left": "Left Hand",
-        "hand_right": "Right Hand",
-        "hand_both": "Both Hands",
-        "finger_l_pinky": "Left Pinky",
-        "finger_l_ring": "Left Ring",
-        "finger_l_middle": "Left Middle",
-        "finger_l_index": "Left Index",
-        "finger_l_thumb": "Left Thumb",
-        "finger_r_thumb": "Right Thumb",
-        "finger_r_index": "Right Index",
-        "finger_r_middle": "Right Middle",
-        "finger_r_ring": "Right Ring",
-        "finger_r_pinky": "Right Pinky",
-        "finger_thumb": "Thumb",
-        "footer_privacy": "Privacy Policy",
-        "btn_privacy": "Privacy",
-        "settings_privacy": "Privacy & Data",
-        "settings_view_privacy": "View Policy",
-        "privacy_title": "Privacy Policy & Transparency",
-        "privacy_sub": "Data handling, browser local storage, and GitHub Pages infrastructure",
-        "privacy_btn_open_page": "Open Full Page",
-        "btn_close_privacy": "Got It",
-        "privacy_badge_nocollect": "Zero Data Collection",
-        "privacy_badge_local": "100% Local Storage",
-        "privacy_badge_github": "GitHub Pages Hosting",
-        "privacy_badge_lgpd": "LGPD & ANPD Compliance",
-        "privacy_sec_collection_title": "1. Zero Personal Data Collection by Digitinho Galaxy",
-        "privacy_sec_collection_desc": "Digitinho Galaxy is a static client-side web application. The game does not operate any backend server, remote database, registration forms, or user account systems. We do not request, collect, process, or sell any personal data such as names, emails, documents, or phone numbers.",
-        "privacy_sec_storage_title": "2. Client-Side Local Storage (HTML5 LocalStorage)",
-        "privacy_sec_storage_desc": "All game state — such as scores, save slots, unlocked words in the Library, achievements, audio toggles, difficulty, and color themes — is stored exclusively inside your browser's local storage (localStorage). These files never leave your device and can be permanently deleted at any time through your browser settings or the in-game Save Slots manager.",
-        "privacy_sec_hosting_title": "3. Hosting Infrastructure & GitHub Pages Technical Logs",
-        "privacy_sec_hosting_desc": "Digitinho Galaxy is hosted as a static website on GitHub Pages (operated by GitHub, Inc. / Microsoft). When accessing the site, GitHub servers may automatically receive and log technical network information, such as IP addresses, access timestamps, user-agent headers, and requested URLs, for security, infrastructure defense, and abuse prevention purposes in accordance with the GitHub Privacy Statement. The Digitinho Galaxy author does not have access to raw IP logs or use them to identify visitors.",
-        "privacy_sec_cookies_title": "4. No Tracking Cookies or Third-Party Analytics",
-        "privacy_sec_cookies_desc": "The game does not use advertising cookies, Google Analytics, social media trackers, or third-party behavioral profiling scripts. The experience is 100% focused on gameplay and typing practice.",
-        "privacy_sec_lgpd_title": "5. LGPD & ANPD Compliance (Brazilian Data Protection Law)",
-        "privacy_sec_lgpd_desc": "In adherence to Brazilian Law No. 13,709/2018 (LGPD) and the National Data Protection Authority (ANPD) guidelines, this project follows the core principles of purpose limitation, necessity, data minimization, and transparency. As Digitinho Galaxy does not collect or treat personal data, no personal data is shared, sold, or transferred.",
-        "privacy_sec_opensource_title": "6. Open Source Verification & Source Code",
-        "privacy_sec_opensource_desc": "Digitinho Galaxy is an open-source project licensed under the MIT License. Anyone can inspect, verify, and audit the complete source code on GitHub to confirm the absence of hidden trackers, telemetry, or remote data collection.",
-        "privacy_sec_links_title": "Official References & Regulatory Sources",
-        "privacy_link_github": "GitHub Pages: Operation and IP Logging",
-        "privacy_link_anpd": "ANPD: Personal Data Concept & Processing Agents",
-        "privacy_link_lgpd": "LGPD — General Personal Data Protection Law (Law 13,709/2018)",
-        "privacy_back_game": "Back to Game",
-        "privacy_updated": "Last updated: October 2026 • Digitinho Galaxy Space Typing Game",
-        "privacy_page_title": "Digitinho Galaxy — Privacy Policy & Transparency",
-        "privacy_overview_title": "Key Highlights",
-        "privacy_contact_title": "Questions & Contact",
-        "privacy_contact_desc": "Since this is a client-side open-source project with no servers or data collection, questions or suggestions can be submitted directly through the GitHub repository by opening an Issue.",
-        "boss_alien_xylarion_name": "Xylarion, the Void Overlord",
-        "boss_alien_xylarion_title": "Commander of the Alien Vanguard",
-        "boss_alien_xylarion_scenario": "Kuiper Belt (Edge of the Solar System)",
-        "boss_alien_xylarion_scenario_desc": "Xylarion's alien dreadnought armada has crossed the void to invade the Solar System!",
-        "boss_alien_xylarion_badge": "ALIEN • DREADNOUGHT",
-        "boss_alien_xylarion_lore": "Supreme commander of the alien invasion fleet and master of stellar plasma weaponry.",
-        "boss_alien_zorkon_name": "Zorkon, Orbit Conqueror",
-        "boss_alien_zorkon_title": "Master of the Biomechanical Swarm",
-        "boss_alien_zorkon_scenario": "Neptune's Orbit",
-        "boss_alien_zorkon_scenario_desc": "Zorkon's bio-organic swarm carriers encircle the gas giants of the Solar System!",
-        "boss_alien_zorkon_badge": "ALIEN • HIVE",
-        "boss_alien_zorkon_lore": "Controls alien biomechanical hive minds capable of devouring space fleets.",
-        "boss_alien_vespera_name": "Vespera, Antimatter Empress",
-        "boss_alien_vespera_title": "Extraterrestrial Psionic Sovereign",
-        "boss_alien_vespera_scenario": "Saturn's Rings",
-        "boss_alien_vespera_scenario_desc": "Vespera commands antimatter batteries to shatter the gravitational shields of the Solar System!",
-        "boss_alien_vespera_badge": "ALIEN • PSIONIC",
-        "boss_alien_vespera_lore": "Bends dark energy and commands intergalactic psionic storms.",
-        "boss_alien_kragthor_name": "Kragthor, Fleet Breaker",
-        "boss_alien_kragthor_title": "Alien Warlord General",
-        "boss_alien_kragthor_scenario": "Asteroid Belt",
-        "boss_alien_kragthor_scenario_desc": "Kragthor's colossal war juggernaut pulverizes asteroids to clear a direct corridor to Earth!",
-        "boss_alien_kragthor_badge": "ALIEN • WARLORD",
-        "boss_alien_kragthor_lore": "Heavily armored alien conqueror wielding antimatter disintegration ordnance.",
-        "boss_alien_nebulor_name": "Nebulor, Dark Matter Herald",
-        "boss_alien_nebulor_title": "Cosmic Shadow Entity",
-        "boss_alien_nebulor_scenario": "Jupiter's Orbit",
-        "boss_alien_nebulor_scenario_desc": "Nebulor bends Jupiter's magnetosphere to prepare the final strike on Earth!",
-        "boss_alien_nebulor_badge": "ALIEN • SHADOW",
-        "boss_alien_nebulor_lore": "Manipulates spacetime anomalies and singularity distortions.",
-        "boss_alien_xenor_name": "Xenor, Intergalactic Overmind",
-        "boss_alien_xenor_title": "Central Invasion Intelligence",
-        "boss_alien_xenor_scenario": "Lunar Orbit",
-        "boss_alien_xenor_scenario_desc": "Xenor's titanic alien mothership positions in orbit for the final invasion of Earth!",
-        "boss_alien_xenor_badge": "ALIEN • MOTHERSHIP",
-        "boss_alien_xenor_lore": "The supreme alien consciousness orchestrating the grand invasion of the Solar System."
+  "ui": {
+    "app_title": "Digitinho Galaxy.",
+    "app_subtitle": "Master the cosmic keyboard and protect Earth before celestial debris enter the atmosphere",
+    "rules_title": "How to Play & Runic Rules",
+    "rule_typing": "<strong>Keyboard Typing:</strong> Type letters, syllables and words before they hit the bottom of the screen",
+    "rule_wildcard": "<strong>Wildcard Words:</strong> Instantly destroy all runics on screen simultaneously and absorb all their points",
+    "rule_spells": "<strong>Keys 1–8 (or click):</strong> Activate slow motion, freeze, spacing, shield and power spells",
+    "rule_combo": "<strong>Combos & Fury Mode:</strong> Error-free streaks multiply your score up to 8×",
+    "rule_danger": "<strong>Lives & Danger:</strong> Runics at the bottom flash red and cost 1 life if dropped (3 lives in Classic)",
+    "btn_start": "Play",
+    "btn_training": "Training Mode (Keyboard Rows)",
+    "btn_zen": "Zen Mode (No Lives Lost)",
+    "btn_timeattack": "Time Attack (60s)",
+    "btn_library": "Library",
+    "btn_achievements": "Achievements",
+    "btn_settings": "Settings",
+    "btn_shop": "Cosmic Shop",
+    "btn_skills_inventory": "Skills",
+    "skills_inventory_title": "Cosmic Arsenal",
+    "skills_inventory_sub": "Your permanent skills acquired from the Shop",
+    "skills_inventory_empty": "No skills acquired yet. Visit the Cosmic Shop to stock your arsenal!",
+    "skills_inventory_stock": "In stock: ×{count}",
+    "start_record_label": "RECORD:",
+    "start_high_score": "HIGH SCORE: {score}",
+    "shop_btn_reroll": "Reroll Offers",
+    "shop_reroll_cost": "{cost}",
+    "hud_infinite_mode": "INFINITE ARCADE",
+    "hud_coin_farm_progress": "Next Coin: {current} / {target} words",
+    "badge_new_label": "NEW",
+    "badge_new_word": "New word in this run",
+    "fb_coin_farmed": "+1 Cosmic Coin farmed!",
+    "start_game_modes": "Game Modes",
+    "btn_classic_short": "Classic",
+    "btn_training_short": "Training",
+    "btn_training_desc": "Keyboard rows",
+    "btn_zen_short": "Zen Mode",
+    "btn_zen_desc": "No lives lost",
+    "btn_timeattack_short": "Time Attack",
+    "btn_timeattack_desc": "60s sprint",
+    "btn_rules": "How to Play",
+    "btn_close_rules": "Got It",
+    "hud_phase": "PHASE",
+    "hud_zen_badge": "Zen Mode: no lives lost",
+    "hud_training_badge": "Training Mode: no lives lost",
+    "hud_training_lesson": "Lesson",
+    "hud_zen_lbl": "ZEN MODE",
+    "hud_training_lbl": "TRAINING",
+    "hud_free": "Free",
+    "hud_zen_pill": "No lives lost",
+    "hud_zen_pill_title": "In Zen Mode you practice freely without losing lives",
+    "hud_training_pill_title": "In Training Mode you develop precision and muscle memory without losing lives",
+    "hud_lives": "LIVES",
+    "hud_accuracy": "ACCURACY",
+    "hud_wpm": "WPM",
+    "hud_combo": "COMBO",
+    "hud_upcoming": "UPCOMING",
+    "hud_new_word_badge": "New Word",
+    "hud_spells": "SKILLS",
+    "hud_active": "ACTIVE",
+    "hud_sec": "s",
+    "pause_title": "Game Paused",
+    "pause_hint": "Press <kbd>ESC</kbd> to resume",
+    "pause_resume": "Resume",
+    "pause_library": "Library",
+    "pause_achievements": "Achievements",
+    "pause_settings": "Settings",
+    "pause_training_menu": "Return to Training Menu",
+    "pause_main_menu": "Return to Main Menu",
+    "confirm_exit_to_menu": "Earned coins will be kept, but skills obtained during this match will be lost.",
+    "confirm_exit_title": "Return to Main Menu?",
+    "confirm_exit_cancel": "Continue Playing",
+    "confirm_exit_confirm": "Yes, Return to Menu",
+    "countdown_hint": "Get your fingers ready!",
+    "countdown_go": "GO!",
+    "modal_performance": "PERFORMANCE",
+    "modal_phase_complete": "Phase {phase} Complete!",
+    "modal_press_continue": "Press ENTER or Space to continue",
+    "modal_btn_continue": "Continue ➔",
+    "modal_btn_shop": "Go to Shop",
+    "modal_stat_score": "Points",
+    "modal_stat_accuracy": "Accuracy",
+    "modal_stat_wpm": "WPM",
+    "modal_stat_combo": "Max Combo",
+    "modal_stat_discovered": "New Words Discovered",
+    "go_title": "Game Over",
+    "go_sub": "Your runic journey has reached an end",
+    "go_score": "Match Score",
+    "go_best_score": "Best Score",
+    "go_new_record_tag": "NEW RECORD!",
+    "go_final_score": "Final Score",
+    "go_phase_reached": "Phase Reached",
+    "go_best_combo": "Best Combo",
+    "go_avg_accuracy": "Accuracy",
+    "go_coins_earned": "Total Coins Earned",
+    "go_hits_errors": "Hits / Errors",
+    "go_discovered_words": "Discovered Words",
+    "go_use_continue": "Use Continue ({n})",
+    "go_revive_continue": "Revive & Continue ({n})",
+    "go_play_again": "Play Again",
+    "go_main_menu": "Main Menu",
+    "victory_title": "Epic Victory!",
+    "victory_desc": "Congratulations, you have mastered the runic keyboard!",
+    "victory_play_again": "Play Again",
+    "shop_title": "Skill Shop",
+    "shop_sub": "Acquire permanent skills for your cosmic journeys",
+    "shop_points": "Your Points:",
+    "shop_coins": "Your Coins:",
+    "shop_btn_buy": "Buy",
+    "shop_btn_owned": "Purchased",
+    "shop_available": "Available",
+    "shop_btn_close": "Close",
+    "shop_confirm_exit_title": "Leave the Shop?",
+    "shop_confirm_exit_desc": "Are you sure you want to leave the shop?",
+    "shop_confirm_stay": "Stay in Shop",
+    "shop_confirm_leave": "Return to Main Menu",
+    "shop_insufficient_pts": "Not enough points!",
+    "shop_insufficient_coins": "Not enough coins!",
+    "skill_name_freezer": "Freeze",
+    "skill_desc_freezer": "Freezes all falling runics on the track for 10s every 2 minutes",
+    "skill_name_bomb": "Bomb",
+    "skill_desc_bomb": "Triggers a cosmic blast clearing runics in area every 90s",
+    "skill_name_shield": "Runic Shield",
+    "skill_desc_shield": "Protects against dropped runics and typo penalties for 10s every 2 minutes",
+    "skill_name_vortex": "Vortex",
+    "skill_desc_vortex": "A vortex opens in the center devouring all runics on screen every 3 minutes",
+    "skill_name_slowdown": "Slow-Mo",
+    "skill_desc_slowdown": "Reduces runic fall speed by 50% for 15s every 1 minute",
+    "skill_name_haste": "Double Points",
+    "skill_desc_haste": "Doubles all points earned for 10s every 30s",
+    "skill_name_dilation": "Spacing",
+    "skill_desc_dilation": "Increases spacing and interval between runics up to {max}",
+    "skill_name_autodestroy": "Cosmic Echo",
+    "skill_desc_autodestroy": "Automatically shatters learned words from this run for 10s every 1 minute",
+    "boss_reward_extralife": "+1 Life",
+    "boss_reward_extralife_desc": "Recovers or adds 1 life for the current run",
+    "boss_reward_continue": "Continue Token",
+    "boss_reward_continue_desc": "Allows instant revival if all lives are lost",
+    "boss_reward_coins_100": "+100 Coins",
+    "boss_reward_coins_100_desc": "Receive +100 cosmic coins directly into your bank",
+    "hud_level": "LEVEL",
+    "hud_run_perks": "ACTIVE PERKS",
+    "hud_perks_empty": "No perks acquired yet.<br/>Level up to unlock!",
+    "levelup_title": "LEVEL UP!",
+    "levelup_sub": "You reached Level {level}!",
+    "levelup_prompt": "Choose 1 ability to activate for this run:",
+    "levelup_btn_pick": "Choose",
+    "fb_dilation_upgraded": "Spacing upgraded up to {max}!",
+    "lib_title": "Runic Library",
+    "lib_sub": "Collection of discovered words",
+    "lib_discovered": "Words Discovered",
+    "lib_locked": "Locked",
+    "lib_typed": "typed {count}×",
+    "lib_not_typed": "not yet typed",
+    "lib_btn_close": "Close",
+    "ach_title": "Achievements & Badges",
+    "ach_sub": "Your speed, precision and mastery milestones",
+    "ach_counter": "{unlocked} / {total} Unlocked",
+    "ach_btn_close": "Close",
+    "ach_status_unlocked": "✓ Unlocked",
+    "ach_status_locked": "Locked",
+    "ach_goal_reached": "Goal reached",
+    "ach_unit_words": "words",
+    "ach_unit_streak": "hits",
+    "ach_unit_combo": "combo",
+    "ach_dedo_veloz_name": "Speed Demon",
+    "ach_dedo_veloz_desc": "Reach 60 WPM.",
+    "ach_cirurgico_name": "Surgical",
+    "ach_cirurgico_desc": "Complete any phase with 100% accuracy.",
+    "ach_colecionador_name": "Collector",
+    "ach_colecionador_desc": "Unlock all words in the Library.",
+    "ach_mestre_combo_name": "Combo Master",
+    "ach_mestre_combo_desc": "Reach 30 consecutive correct keystrokes.",
+    "ach_modo_furia_name": "Fury Mode",
+    "ach_modo_furia_desc": "Activate Fury Mode with 15 hits in a row.",
+    "ach_mestre_tipo_name": "Typography Master",
+    "ach_mestre_tipo_desc": "Complete 100 full words.",
+    "settings_title": "Settings",
+    "settings_sub": "Game and interface adjustments",
+    "settings_sound": "Sound Effects",
+    "settings_sound_on": "On",
+    "settings_sound_off": "Muted",
+    "settings_queue": "Queue Position",
+    "settings_queue_top": "Top",
+    "settings_queue_bottom": "Bottom",
+    "settings_theme": "Interface Theme",
+    "settings_theme_dark": "Dark",
+    "settings_theme_light": "Light",
+    "settings_boss": "Boss Battles",
+    "settings_boss_on": "Every 8 Phases (Active)",
+    "settings_boss_off": "Disabled",
+    "settings_test_boss": "Test Boss Battle",
+    "settings_face_boss": "Face Boss",
+    "settings_lang": "Language",
+    "settings_difficulty": "Difficulty",
+    "settings_diff_locked_match": "Difficulty cannot be changed during a match",
+    "diff_easy": "Easy",
+    "diff_normal": "Medium",
+    "diff_hard": "Hard",
+    "diff_desc_easy": "0.5× initial speed • No typo acceleration • No progress loss • 5 lives",
+    "diff_desc_normal": "1.0× initial speed • No typo acceleration • Normal progress loss • 3 lives",
+    "diff_desc_hard": "1.5× initial speed • +0.05× per typo • Normal progress loss • 3 lives",
+    "settings_cat_general": "General & Interface",
+    "settings_cat_boss": "Boss Battles",
+    "settings_cat_about": "About App",
+    "settings_version": "Current Version",
+    "settings_author": "Author",
+    "settings_btn_check_update": "Check",
+    "settings_update_latest": "Up to date",
+    "update_available_title": "A new update is available!",
+    "update_available_sub": "Click to refresh cache and load the latest version",
+    "update_btn_action": "Update",
+    "update_applying": "Updating...",
+    "settings_btn_back": "Back",
+    "training_title": "Training: Keyboard Rows",
+    "training_sub": "Build muscle memory without looking at keys",
+    "training_notice": "In this practice mode you <strong>do not lose lives</strong>. Typo errors and fallen runics lower your <strong>Accuracy %</strong> and <strong>WPM</strong>.",
+    "training_btn_back": "Back",
+    "training_btn_start": "Start Training (3 Lessons) →",
+    "training_btn_again": "Train Again",
+    "training_completed": "Completed (Mastery)",
+    "training_pending": "3 Lessons",
+    "training_record_acc": "Record: {acc}% Precision",
+    "boss_defeated_title": "BOSS DEFEATED!",
+    "boss_defeated_sub": "You masterfully solved all runic trials.",
+    "boss_defeated_prompt": "Choose 1 permanent bonus skill for upcoming phases:",
+    "boss_btn_pick": "Claim",
+    "boss_pick_skill": "Claim",
+    "boss_default_name": "Boss",
+    "fb_combo_broken": "Combo Broken!",
+    "fb_fury_activated": "FURY MODE ACTIVATED! DOUBLE POINTS!",
+    "fb_bomb_activated": "BOMB ACTIVATED (10s)!",
+    "fb_bomb_expired": "Bomb expired",
+    "fb_bomb_explosion": "Explosion ({lines} lines)! +{pts}",
+    "fb_freezer_activated": "FREEZE ACTIVATED (10s)!",
+    "fb_freezer_expired": "Freeze expired",
+    "fb_shield_activated": "RUNIC SHIELD ACTIVATED (10s)!",
+    "fb_shield_expired": "Runic Shield expired",
+    "fb_shield_blocked": "Damage blocked by Runic Shield!",
+    "fb_shield_error_protected": "Typo protected by Shield!",
+    "fb_vortex_activated": "VORTEX ACTIVATED (10s)!",
+    "fb_vortex_expired": "Vortex expired",
+    "fb_slowdown_activated": "SLOWDOWN ACTIVATED (15s)!",
+    "fb_slowdown_expired": "Slowdown expired",
+    "fb_slow_activated": "SLOWDOWN ACTIVATED (15s)!",
+    "fb_slow_expired": "Slowdown expired",
+    "fb_haste_activated": "DOUBLE POINTS ACTIVATED (15s)!",
+    "fb_haste_expired": "Double points expired",
+    "fb_dilation_activated": "SPACING INCREASED (45s)!",
+    "fb_dilation_expired": "Spacing expired",
+    "fb_speedlock_activated": "SPEED LOCKED (1.0x / 60s)!",
+    "fb_speedlock_expired": "Speed Lock expired",
+    "fb_autodestroy_activated": "COSMIC AUTO-CLEAR ACTIVATED (60s)!",
+    "fb_autodestroy_expired": "Cosmic Auto-Clear expired",
+    "fb_autodestroy_shattered": "⚡ Auto-shattered: {word}! +{pts}",
+    "fb_wildcard": "WILDCARD! All runics absorbed! +{pts}",
+    "fb_life_recovered": "+1 Life Recovered!",
+    "fb_perfect": "PERFECT!",
+    "hud_performance": "PERFORMANCE DASHBOARD",
+    "hud_total_score": "TOTAL SCORE",
+    "hud_hits": "HITS",
+    "hud_errors": "ERRORS",
+    "hud_discovered_words": "DISCOVERED WORDS",
+    "hud_view_all": "View all",
+    "hud_spells_hint": "Buy in shop<br/>or complete words",
+    "hud_activate_kb": "ACTIVATE (KEYBOARD)",
+    "hud_key_label": "Key",
+    "hud_max_phase": "MAX PHASE",
+    "modal_unlocked_words": "Unlocked words",
+    "modal_btn_next_phase": "Next Phase →",
+    "modal_btn_back_training": "Back to Training Menu",
+    "shop_note": "Prices increase after each purchase",
+    "shop_btn_continue": "Continue Playing",
+    "btn_back_to_game": "Back to Game",
+    "app_loading": "Loading runic data...",
+    "fb_runic_dropped_zen": "⚠️ Runic dropped (-accuracy)",
+    "fb_runic_dropped": "💔 Runic dropped!",
+    "fb_time_up": "⏱️ Time's Up!",
+    "fb_boss_enigma_dropped": "💥 The enigma dropped! The Boss attacked!",
+    "fb_ice_cleared": "❄️ Screen cleared — Freeze deactivated!",
+    "fb_error_letter": "❌ Wrong letter!",
+    "fb_error": "❌ Error",
+    "fb_wildcard_clean": "💥 WILDCARD! TOTAL CLEAR!",
+    "fb_training_completed": "🎉 Congratulations! You completed all training worlds!",
+    "fb_continue_used": "🪙 Continue used! Resuming phase...",
+    "fb_permanent_life": "+1 Permanent Life!",
+    "fb_continue_obtained": "🪙 +1 Continue token obtained!",
+    "shop_all_words_unlocked": "All words have already been discovered!",
+    "hud_skills_empty_hint": "Buy in the shop<br/>or complete words <strong>⚡</strong>",
+    "training_lesson_1_title": "Lesson 1: Key Recognition",
+    "training_lesson_2_title": "Lesson 2: Finger Alternation",
+    "training_lesson_3_title": "Lesson 3: Mastery Challenge",
+    "training_lesson_1_name": "Home Keys",
+    "training_lesson_2_name": "Alternation",
+    "training_lesson_3_name": "Final Challenge",
+    "training_next_obj_2": "Next goal: Combine keys into short words and alternate hands.",
+    "training_next_obj_3": "Next goal: Final flow and mastery challenge with full words!",
+    "training_new_record": "NEW RECORD!",
+    "training_world_mastered": "WORLD MASTERED",
+    "training_mastery_completed": "{world} — Mastery Completed!",
+    "training_lesson_completed": "{world} — {lesson} Completed!",
+    "training_rank_s": "SURGICAL PRECISION",
+    "training_rank_a": "EXCELLENT FLOW",
+    "training_rank_b": "GOOD CONTROL",
+    "training_rank_c": "PRACTICE MORE",
+    "training_stat_world_progress": "World Progress",
+    "training_stat_lesson_done": "Lesson {lesson} of 3 Completed",
+    "training_stat_accuracy_rate": "Accuracy Rate",
+    "training_stat_status": "Training Status",
+    "training_stat_completed": "100% Completed (3/3 Lessons)",
+    "training_stat_keys": "Mastered Keys",
+    "training_stat_accuracy": "Match Accuracy",
+    "training_stat_best_record": "Best Record (Accuracy)",
+    "training_stat_speed": "Real Speed (WPM)",
+    "training_stat_hits_errors": "Hits / Errors",
+    "training_hits_errs_val": "{hits} hits / {errors} errors",
+    "training_btn_next_world": "Advance to {world} →",
+    "training_btn_finish_all": "Finish All Trainings! →",
+    "training_btn_next_lesson": "Advance to Lesson {lesson} ({runics} runics) →",
+    "fb_boss_defeated": "{boss} DEFEATED! +350 COINS!",
+    "modal_phase_pts": "Points Earned in Phase",
+    "modal_acc_bonus": "Accuracy Bonus ({acc}%)",
+    "modal_penalty": "Errors (Penalty)",
+    "modal_net_pts": "Net Added Points",
+    "modal_total_pts": "Total Score",
+    "modal_combo_bonus": "Max Combo Bonus ({combo}×)",
+    "modal_phase_total_pts": "Total Points Received",
+    "modal_section_score": "Score Summary",
+    "modal_section_coins": "Coins Earned",
+    "modal_coins_completion": "Stage Completed",
+    "modal_boss_bonus": "Boss Bonus",
+    "modal_coins_precision": "100% Accuracy Bonus",
+    "modal_coins_streak": "Flawless Streak ({streak} phases)",
+    "modal_coins_phase_total": "Total Coins Added",
+    "modal_coins_balance": "Total Coins Balance",
+    "hud_coins": "COINS",
+    "hud_boss_hp": "BOSS HP",
+    "fb_skill_acquired": "⚡ Skill: {skill}!",
+    "fb_vortex_devour": "🌀 Vortex devoured {text}! +{pts}",
+    "fb_enigma_solved": "💥 ENIGMA SOLVED! -1 BOSS HP! (+{pts}pts)",
+    "fb_reward_granted": "Reward granted: {reward}!",
+    "queue_top": "Top",
+    "queue_bottom": "Bottom",
+    "queue_toggle_to_bottom": "Queue at Top (click to move to bottom)",
+    "queue_toggle_to_top": "Queue at Bottom (click to move to top)",
+    "theme_switch_to_light": "Switch to light theme",
+    "theme_switch_to_dark": "Switch to dark theme",
+    "boss_enigma_badge": "📜 ENIGMA {num} / {total} • {scenario}",
+    "boss_enigma_letters": "{count} LETTERS",
+    "boss_enigma_queue": "ENIGMA {num} / 3",
+    "boss_level_tag": " (Lv. {level})",
+    "boss_cyber_titan_name": "Xylarion, the Void Overlord",
+    "boss_cyber_titan_title": "Commander of the Alien Vanguard",
+    "boss_cyber_titan_scenario": "Kuiper Belt (Edge of the Solar System)",
+    "boss_cyber_titan_scenario_desc": "Xylarion's alien dreadnought armada has crossed the void to invade the Solar System!",
+    "boss_cyber_titan_badge": "ALIEN • DREADNOUGHT",
+    "boss_cyber_titan_lore": "Supreme commander of the alien invasion fleet and master of stellar plasma weaponry.",
+    "boss_feral_apex_name": "Zorkon, Orbit Conqueror",
+    "boss_feral_apex_title": "Master of the Biomechanical Swarm",
+    "boss_feral_apex_scenario": "Neptune's Orbit",
+    "boss_feral_apex_scenario_desc": "Zorkon's bio-organic swarm carriers encircle the gas giants of the Solar System!",
+    "boss_feral_apex_badge": "ALIEN • HIVE",
+    "boss_feral_apex_lore": "Controls alien biomechanical hive minds capable of devouring space fleets.",
+    "boss_arcane_chimera_name": "Vespera, Antimatter Empress",
+    "boss_arcane_chimera_title": "Extraterrestrial Psionic Sovereign",
+    "boss_arcane_chimera_scenario": "Saturn's Rings",
+    "boss_arcane_chimera_scenario_desc": "Vespera commands antimatter batteries to shatter the gravitational shields of the Solar System!",
+    "boss_arcane_chimera_badge": "ALIEN • PSIONIC",
+    "boss_arcane_chimera_lore": "Bends dark energy and commands intergalactic psionic storms.",
+    "boss_abyssal_leviathan_name": "Nebulor, Dark Matter Herald",
+    "boss_abyssal_leviathan_title": "Cosmic Shadow Entity",
+    "boss_abyssal_leviathan_scenario": "Jupiter's Orbit",
+    "boss_abyssal_leviathan_scenario_desc": "Nebulor bends Jupiter's magnetosphere to prepare the final strike on Earth!",
+    "boss_abyssal_leviathan_badge": "ALIEN • SHADOW",
+    "boss_abyssal_leviathan_lore": "Manipulates spacetime anomalies and singularity distortions.",
+    "boss_cosmic_chronos_name": "Xenor, Intergalactic Overmind",
+    "boss_cosmic_chronos_title": "Central Invasion Intelligence",
+    "boss_cosmic_chronos_scenario": "Lunar Orbit",
+    "boss_cosmic_chronos_scenario_desc": "Xenor's titanic alien mothership positions in orbit for the final invasion of Earth!",
+    "boss_cosmic_chronos_badge": "ALIEN • MOTHERSHIP",
+    "boss_cosmic_chronos_lore": "The supreme alien consciousness orchestrating the grand invasion of the Solar System.",
+    "boss_magma_vulcanus_name": "Kragthor, Fleet Breaker",
+    "boss_magma_vulcanus_title": "Alien Warlord General",
+    "boss_magma_vulcanus_scenario": "Asteroid Belt",
+    "boss_magma_vulcanus_scenario_desc": "Kragthor's colossal war juggernaut pulverizes asteroids to clear a direct corridor to Earth!",
+    "boss_magma_vulcanus_badge": "ALIEN • WARLORD",
+    "boss_magma_vulcanus_lore": "Heavily armored alien conqueror wielding antimatter disintegration ordnance.",
+    "btn_continue": "Continue Playing",
+    "btn_new_game": "New Game",
+    "btn_new_game_desc": "Start fresh with shared coins",
+    "btn_save_slots": "Save Slots",
+    "slots_title": "Save Slots",
+    "slots_sub": "Manage your progress or start a new game",
+    "lbl_highscore": "HIGH SCORE",
+    "lbl_shared_coins": "COINS",
+    "lbl_highcoins": "MAX COINS",
+    "slot_number": "Slot {slot}",
+    "slot_in_progress": "In Progress",
+    "slot_empty": "Empty",
+    "slot_empty_desc": "No saved match. Start fresh with your shared coins!",
+    "slot_btn_continue": "Continue",
+    "slot_btn_new": "New Game",
+    "slot_btn_delete": "Delete",
+    "slot_confirm_overwrite": "Overwrite Slot {slot} and start a new game? Existing progress in this slot will be replaced.",
+    "slot_confirm_delete": "Are you sure you want to delete the saved game in Slot {slot}?",
+    "fb_game_saved": "Game progress saved!",
+    "fb_game_resumed": "Game resumed from Phase {phase}!",
+    "slots_shared_wallet": "Shared Coins Bank",
+    "slots_close": "Close",
+    "slot_phase_score": "Phase {phase} • {score} pts",
+    "slot_date_fmt": "Saved: {date}",
+    "confirm_new_game_title": "Start New Game?",
+    "confirm_new_game_desc": "You have a saved game in progress. Starting a new game will overwrite Slot {slot}. Your shared coins will remain available!",
+    "settings_finger_guide": "Visual Finger Guide",
+    "settings_finger_guide_always": "Always Active (Default)",
+    "settings_finger_guide_training": "Training Only",
+    "settings_finger_guide_off": "Disabled",
+    "vk_space": "SPACE",
+    "finger_guide_title": "Finger Guide",
+    "finger_ready": "Resting Position",
+    "finger_space_bar": "Space",
+    "hand_left": "Left Hand",
+    "hand_right": "Right Hand",
+    "hand_both": "Both Hands",
+    "finger_l_pinky": "Left Pinky",
+    "finger_l_ring": "Left Ring",
+    "finger_l_middle": "Left Middle",
+    "finger_l_index": "Left Index",
+    "finger_l_thumb": "Left Thumb",
+    "finger_r_thumb": "Right Thumb",
+    "finger_r_index": "Right Index",
+    "finger_r_middle": "Right Middle",
+    "finger_r_ring": "Right Ring",
+    "finger_r_pinky": "Right Pinky",
+    "finger_thumb": "Thumb",
+    "footer_privacy": "Privacy Policy",
+    "btn_privacy": "Privacy",
+    "settings_privacy": "Privacy & Data",
+    "settings_view_privacy": "View Policy",
+    "privacy_title": "Privacy Policy & Transparency",
+    "privacy_sub": "Data handling, browser local storage, and GitHub Pages infrastructure",
+    "privacy_btn_open_page": "Open Full Page",
+    "btn_close_privacy": "Got It",
+    "privacy_badge_nocollect": "Zero Data Collection",
+    "privacy_badge_local": "100% Local Storage",
+    "privacy_badge_github": "GitHub Pages Hosting",
+    "privacy_badge_lgpd": "LGPD & ANPD Compliance",
+    "privacy_sec_collection_title": "1. Zero Personal Data Collection by Digitinho Galaxy",
+    "privacy_sec_collection_desc": "Digitinho Galaxy is a static client-side web application. The game does not operate any backend server, remote database, registration forms, or user account systems. We do not request, collect, process, or sell any personal data such as names, emails, documents, or phone numbers.",
+    "privacy_sec_storage_title": "2. Client-Side Local Storage (HTML5 LocalStorage)",
+    "privacy_sec_storage_desc": "All game state — such as scores, save slots, unlocked words in the Library, achievements, audio toggles, difficulty, and color themes — is stored exclusively inside your browser's local storage (localStorage). These files never leave your device and can be permanently deleted at any time through your browser settings or the in-game Save Slots manager.",
+    "privacy_sec_hosting_title": "3. Hosting Infrastructure & GitHub Pages Technical Logs",
+    "privacy_sec_hosting_desc": "Digitinho Galaxy is hosted as a static website on GitHub Pages (operated by GitHub, Inc. / Microsoft). When accessing the site, GitHub servers may automatically receive and log technical network information, such as IP addresses, access timestamps, user-agent headers, and requested URLs, for security, infrastructure defense, and abuse prevention purposes in accordance with the GitHub Privacy Statement. The Digitinho Galaxy author does not have access to raw IP logs or use them to identify visitors.",
+    "privacy_sec_cookies_title": "4. No Tracking Cookies or Third-Party Analytics",
+    "privacy_sec_cookies_desc": "The game does not use advertising cookies, Google Analytics, social media trackers, or third-party behavioral profiling scripts. The experience is 100% focused on gameplay and typing practice.",
+    "privacy_sec_lgpd_title": "5. LGPD & ANPD Compliance (Brazilian Data Protection Law)",
+    "privacy_sec_lgpd_desc": "In adherence to Brazilian Law No. 13,709/2018 (LGPD) and the National Data Protection Authority (ANPD) guidelines, this project follows the core principles of purpose limitation, necessity, data minimization, and transparency. As Digitinho Galaxy does not collect or treat personal data, no personal data is shared, sold, or transferred.",
+    "privacy_sec_opensource_title": "6. Open Source Verification & Source Code",
+    "privacy_sec_opensource_desc": "Digitinho Galaxy is an open-source project licensed under the MIT License. Anyone can inspect, verify, and audit the complete source code on GitHub to confirm the absence of hidden trackers, telemetry, or remote data collection.",
+    "privacy_sec_links_title": "Official References & Regulatory Sources",
+    "privacy_link_github": "GitHub Pages: Operation and IP Logging",
+    "privacy_link_anpd": "ANPD: Personal Data Concept & Processing Agents",
+    "privacy_link_lgpd": "LGPD — General Personal Data Protection Law (Law 13,709/2018)",
+    "privacy_back_game": "Back to Game",
+    "privacy_updated": "Last updated: October 2026 • Digitinho Galaxy Space Typing Game",
+    "privacy_page_title": "Digitinho Galaxy — Privacy Policy & Transparency",
+    "privacy_overview_title": "Key Highlights",
+    "privacy_contact_title": "Questions & Contact",
+    "privacy_contact_desc": "Since this is a client-side open-source project with no servers or data collection, questions or suggestions can be submitted directly through the GitHub repository by opening an Issue.",
+    "boss_alien_xylarion_name": "Xylarion, the Void Overlord",
+    "boss_alien_xylarion_title": "Commander of the Alien Vanguard",
+    "boss_alien_xylarion_scenario": "Kuiper Belt (Edge of the Solar System)",
+    "boss_alien_xylarion_scenario_desc": "Xylarion's alien dreadnought armada has crossed the void to invade the Solar System!",
+    "boss_alien_xylarion_badge": "ALIEN • DREADNOUGHT",
+    "boss_alien_xylarion_lore": "Supreme commander of the alien invasion fleet and master of stellar plasma weaponry.",
+    "boss_alien_zorkon_name": "Zorkon, Orbit Conqueror",
+    "boss_alien_zorkon_title": "Master of the Biomechanical Swarm",
+    "boss_alien_zorkon_scenario": "Neptune's Orbit",
+    "boss_alien_zorkon_scenario_desc": "Zorkon's bio-organic swarm carriers encircle the gas giants of the Solar System!",
+    "boss_alien_zorkon_badge": "ALIEN • HIVE",
+    "boss_alien_zorkon_lore": "Controls alien biomechanical hive minds capable of devouring space fleets.",
+    "boss_alien_vespera_name": "Vespera, Antimatter Empress",
+    "boss_alien_vespera_title": "Extraterrestrial Psionic Sovereign",
+    "boss_alien_vespera_scenario": "Saturn's Rings",
+    "boss_alien_vespera_scenario_desc": "Vespera commands antimatter batteries to shatter the gravitational shields of the Solar System!",
+    "boss_alien_vespera_badge": "ALIEN • PSIONIC",
+    "boss_alien_vespera_lore": "Bends dark energy and commands intergalactic psionic storms.",
+    "boss_alien_kragthor_name": "Kragthor, Fleet Breaker",
+    "boss_alien_kragthor_title": "Alien Warlord General",
+    "boss_alien_kragthor_scenario": "Asteroid Belt",
+    "boss_alien_kragthor_scenario_desc": "Kragthor's colossal war juggernaut pulverizes asteroids to clear a direct corridor to Earth!",
+    "boss_alien_kragthor_badge": "ALIEN • WARLORD",
+    "boss_alien_kragthor_lore": "Heavily armored alien conqueror wielding antimatter disintegration ordnance.",
+    "boss_alien_nebulor_name": "Nebulor, Dark Matter Herald",
+    "boss_alien_nebulor_title": "Cosmic Shadow Entity",
+    "boss_alien_nebulor_scenario": "Jupiter's Orbit",
+    "boss_alien_nebulor_scenario_desc": "Nebulor bends Jupiter's magnetosphere to prepare the final strike on Earth!",
+    "boss_alien_nebulor_badge": "ALIEN • SHADOW",
+    "boss_alien_nebulor_lore": "Manipulates spacetime anomalies and singularity distortions.",
+    "boss_alien_xenor_name": "Xenor, Intergalactic Overmind",
+    "boss_alien_xenor_title": "Central Invasion Intelligence",
+    "boss_alien_xenor_scenario": "Lunar Orbit",
+    "boss_alien_xenor_scenario_desc": "Xenor's titanic alien mothership positions in orbit for the final invasion of Earth!",
+    "boss_alien_xenor_badge": "ALIEN • MOTHERSHIP",
+    "boss_alien_xenor_lore": "The supreme alien consciousness orchestrating the grand invasion of the Solar System.",
+    "hud_perk_passive": "Passive",
+    "hud_perk_active_label": "Active",
+    "hud_perk_recharging": "Recharging",
+    "hud_perk_queue": "Queued",
+    "hud_perk_lvl": "Lv. {lvl}"
+  },
+  "syllables": [
+    "th",
+    "sh",
+    "ch",
+    "in",
+    "on",
+    "er",
+    "re",
+    "at",
+    "it",
+    "to",
+    "an",
+    "en",
+    "he",
+    "is",
+    "or",
+    "ti",
+    "as",
+    "te",
+    "et",
+    "ng",
+    "ed",
+    "nd",
+    "ou",
+    "ea",
+    "st",
+    "ar",
+    "al",
+    "se",
+    "nt",
+    "ha",
+    "pro",
+    "con",
+    "com",
+    "dis",
+    "pre",
+    "sub"
+  ],
+  "words": [
+    {
+      "text": "sun",
+      "type": "cosmos",
+      "meaning": "Central star of our solar system providing light, heat and gravitational stability"
     },
-    "syllables": [
-        "th",
-        "sh",
-        "ch",
-        "in",
-        "on",
-        "er",
-        "re",
-        "at",
-        "it",
-        "to",
-        "an",
-        "en",
-        "he",
-        "is",
-        "or",
-        "ti",
-        "as",
-        "te",
-        "et",
-        "ng",
-        "ed",
-        "nd",
-        "ou",
-        "ea",
-        "st",
-        "ar",
-        "al",
-        "se",
-        "nt",
-        "ha",
-        "pro",
-        "con",
-        "com",
-        "dis",
-        "pre",
-        "sub"
-    ],
-    "words": [
-        {
-            "text": "sun",
-            "type": "cosmos",
-            "meaning": "Central star of our solar system providing light, heat and gravitational stability"
-        },
-        {
-            "text": "moon",
-            "type": "cosmos",
-            "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
-        },
-        {
-            "text": "moons",
-            "type": "cosmos",
-            "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-        },
-        {
-            "text": "sky",
-            "type": "cosmos",
-            "meaning": "The celestial vault visible from surface where stars and constellations shine"
-        },
-        {
-            "text": "ray",
-            "type": "phenomenon",
-            "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-        },
-        {
-            "text": "halo",
-            "type": "cosmos",
-            "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-        },
-        {
-            "text": "axis",
-            "type": "cosmos",
-            "meaning": "Imaginary central line around which a planet or celestial body rotates"
-        },
-        {
-            "text": "phase",
-            "type": "phenomenon",
-            "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-        },
-        {
-            "text": "wave",
-            "type": "phenomenon",
-            "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-        },
-        {
-            "text": "ship",
-            "type": "tech",
-            "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-        },
-        {
-            "text": "nova",
-            "type": "phenomenon",
-            "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-        },
-        {
-            "text": "target",
-            "type": "tech",
-            "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-        },
-        {
-            "text": "data",
-            "type": "tech",
-            "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-        },
-        {
-            "text": "pitch",
-            "type": "cosmos",
-            "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-        },
-        {
-            "text": "year",
-            "type": "cosmos",
-            "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
-        },
-        {
-            "text": "vacuum",
-            "type": "cosmos",
-            "meaning": "Space devoid of atmospheric matter where the silent expanse of the cosmos reigns"
-        },
-        {
-            "text": "astro",
-            "type": "cosmos",
-            "meaning": "Any natural celestial body that inhabits the endless cosmic arena"
-        },
-        {
-            "text": "cosmos",
-            "type": "cosmos",
-            "meaning": "The ordered, harmonious, and infinite physical universe in all its vastness"
-        },
-        {
-            "text": "mars",
-            "type": "cosmos",
-            "meaning": "The fourth planet from the sun, famously known across history as the Red Planet"
-        },
-        {
-            "text": "venus",
-            "type": "cosmos",
-            "meaning": "The second planet from the sun, the brightest celestial beacon in night sky"
-        },
-        {
-            "text": "earth",
-            "type": "cosmos",
-            "meaning": "Our blue terrestrial home planet, the only known oasis of living liquid water"
-        },
-        {
-            "text": "solar",
-            "type": "cosmos",
-            "meaning": "Relating to the Sun, its stellar wind, coronal radiation and planetary domain"
-        },
-        {
-            "text": "probe",
-            "type": "tech",
-            "meaning": "Uncrewed scientific spacecraft sent to study uncharted atmospheres and worlds"
-        },
-        {
-            "text": "radar",
-            "type": "tech",
-            "meaning": "Radio-frequency detection system used to map planetary terrain and asteroids"
-        },
-        {
-            "text": "magma",
-            "type": "nature",
-            "meaning": "Extremely hot molten rock beneath the crust of geologically active planets"
-        },
-        {
-            "text": "cloud",
-            "type": "cosmos",
-            "meaning": "Dense interstellar molecular cloud of hydrogen and dust birthing new stars"
-        },
-        {
-            "text": "pluto",
-            "type": "cosmos",
-            "meaning": "Icy dwarf planet situated within the Kuiper Belt at the edge of the solar system"
-        },
-        {
-            "text": "orbit",
-            "type": "cosmos",
-            "meaning": "Curved gravitational path that a celestial body traces around a massive center"
-        },
-        {
-            "text": "comet",
-            "type": "cosmos",
-            "meaning": "Icy celestial traveler that outgasses a radiant glowing tail near stellar heat"
-        },
-        {
-            "text": "pulsar",
-            "type": "cosmos",
-            "meaning": "Rapidly rotating magnetized neutron star sweeping rhythmic beams across space"
-        },
-        {
-            "text": "quasar",
-            "type": "cosmos",
-            "meaning": "Extremely luminous distant active galactic nucleus powered by a supermassive black hole"
-        },
-        {
-            "text": "corona",
-            "type": "cosmos",
-            "meaning": "The outermost, million-degree plasma envelope of the solar atmosphere"
-        },
-        {
-            "text": "meteor",
-            "type": "cosmos",
-            "meaning": "Streak of light produced when a space fragment incinerates in an atmosphere"
-        },
-        {
-            "text": "optics",
-            "type": "tech",
-            "meaning": "The science of light and reflection harnessed by deep space orbital telescopes"
-        },
-        {
-            "text": "space",
-            "type": "cosmos",
-            "meaning": "The boundless three-dimensional expanse where planets, stars, and galaxies drift"
-        },
-        {
-            "text": "aurora",
-            "type": "phenomenon",
-            "meaning": "Ethereal atmospheric light display ignited by solar wind particles hitting magnetosphere"
-        },
-        {
-            "text": "zenith",
-            "type": "cosmos",
-            "meaning": "The imaginary celestial point located directly overhead of an observer"
-        },
-        {
-            "text": "hubble",
-            "type": "tech",
-            "meaning": "Legendary orbital space observatory that revolutionized human understanding of the cosmos"
-        },
-        {
-            "text": "dust",
-            "type": "cosmos",
-            "meaning": "Microscopic mineral grains and cosmic soot dispersed throughout galactic spirals"
-        },
-        {
-            "text": "hole",
-            "type": "cosmos",
-            "meaning": "Extreme region of gravitational curvature collapsing spacetime into a singularity"
-        },
-        {
-            "text": "star",
-            "type": "cosmos",
-            "meaning": "Luminous sphere of incandescent plasma powered by thermonuclear fusion at its core"
-        },
-        {
-            "text": "planet",
-            "type": "cosmos",
-            "meaning": "Major spherical celestial body orbiting a star that has cleared its orbital path"
-        },
-        {
-            "text": "galaxy",
-            "type": "cosmos",
-            "meaning": "Colossal gravitationally bound system of billions of stars, dark matter, and nebulae"
-        },
-        {
-            "text": "galaxies",
-            "type": "cosmos",
-            "meaning": "Billions of cosmic island universes distributed throughout the cosmic web"
-        },
-        {
-            "text": "universe",
-            "type": "cosmos",
-            "meaning": "The totality of all physical matter, energy, space, time, and physical laws"
-        },
-        {
-            "text": "nebula",
-            "type": "cosmos",
-            "meaning": "Vast interstellar cloud of glowing ionized gas, stellar remnants, and cosmic dust"
-        },
-        {
-            "text": "gravity",
-            "type": "phenomenon",
-            "meaning": "Fundamental attractive force bending spacetime proportional to mass and energy"
-        },
-        {
-            "text": "supernova",
-            "type": "phenomenon",
-            "meaning": "Colossal explosion of a dying massive star briefly outshining entire galaxies"
-        },
-        {
-            "text": "astronaut",
-            "type": "tech",
-            "meaning": "Highly trained spacefarer traveling into orbital and interplanetary missions"
-        },
-        {
-            "text": "astronomy",
-            "type": "science",
-            "meaning": "The scientific discipline studying celestial bodies, physical cosmos, and deep space"
-        },
-        {
-            "text": "exoplanet",
-            "type": "cosmos",
-            "meaning": "A planet orbiting a distant star situated outside our local solar system"
-        },
-        {
-            "text": "exoplanets",
-            "type": "cosmos",
-            "meaning": "Alien worlds revolving around distant stars across the Milky Way galaxy"
-        },
-        {
-            "text": "satellite",
-            "type": "tech",
-            "meaning": "Artificial or natural celestial orbiter circling a planet for research and comms"
-        },
-        {
-            "text": "constellation",
-            "type": "cosmos",
-            "meaning": "Recognizable stellar grouping mapped across the night sky by astronomical chart"
-        },
-        {
-            "text": "telescope",
-            "type": "tech",
-            "meaning": "Optical instrument gathering light and radiation to observe distant celestial bodies"
-        },
-        {
-            "text": "starship",
-            "type": "tech",
-            "meaning": "Interplanetary spacecraft capable of navigating across vast interstellar gulfs"
-        },
-        {
-            "text": "atmosphere",
-            "type": "cosmos",
-            "meaning": "Gaseous envelope retained by gravity surrounding a planet or celestial sphere"
-        },
-        {
-            "text": "magnetosphere",
-            "type": "phenomenon",
-            "meaning": "Magnetic planetary shield deflecting high-energy solar winds and radiation"
-        },
-        {
-            "text": "radiation",
-            "type": "phenomenon",
-            "meaning": "High-energy electromagnetic waves or subatomic particles traversing the cosmos"
-        },
-        {
-            "text": "spectrum",
-            "type": "science",
-            "meaning": "The rainbow dispersion of light revealing temperature and chemical composition"
-        },
-        {
-            "text": "andromeda",
-            "type": "cosmos",
-            "meaning": "The nearest major spiral galaxy heading on a gravitational collision course with ours"
-        },
-        {
-            "text": "heliosphere",
-            "type": "cosmos",
-            "meaning": "Enormous protective bubble carved in interstellar space by outward solar winds"
-        },
-        {
-            "text": "antimatter",
-            "type": "science",
-            "meaning": "Matter composed of antiparticles that violently annihilates on contact with normal matter"
-        },
-        {
-            "text": "singularity",
-            "type": "cosmos",
-            "meaning": "Center of a black hole where gravitational density approaches infinity and physics breaks"
-        },
-        {
-            "text": "multiverse",
-            "type": "cosmos",
-            "meaning": "Theoretical ensemble of parallel universes containing infinite spacetime bubbles"
-        },
-        {
-            "text": "light-year",
-            "type": "science",
-            "meaning": "Astronomical distance traveled by a beam of light in vacuum over one solar year"
-        },
-        {
-            "text": "black-hole",
-            "type": "cosmos",
-            "meaning": "Cosmic region whose gravitational field is so intense that nothing, not even light, escapes"
-        },
-        {
-            "text": "stardust",
-            "type": "cosmos",
-            "meaning": "Supernova ash and heavy elements that seed the formation of rocky worlds and life"
-        },
-        {
-            "text": "dark-matter",
-            "type": "cosmos",
-            "meaning": "Hypothetical invisible substance comprising the majority of matter in the universe"
-        },
-        {
-            "text": "dark-energy",
-            "type": "cosmos",
-            "meaning": "Pervasive cosmic force driving the accelerating expansion of observable spacetime"
-        },
-        {
-            "text": "wormhole",
-            "type": "cosmos",
-            "meaning": "Theoretical topological shortcut connecting disparate regions of spacetime"
-        },
-        {
-            "text": "speed-of-light",
-            "type": "science",
-            "meaning": "Universal velocity constant of 300,000 kilometers per second in cosmic vacuum"
-        },
-        {
-            "text": "space-station",
-            "type": "tech",
-            "meaning": "Habitable artificial orbital satellite where scientists live and conduct zero-g research"
-        },
-        {
-            "text": "event-horizon",
-            "type": "cosmos",
-            "meaning": "The point of no return threshold enclosing a black hole beyond which nothing escapes"
-        },
-        {
-            "text": "milky-way",
-            "type": "cosmos",
-            "meaning": "Our home barred spiral galaxy holding hundreds of billions of suns and solar systems"
-        }
-    ],
-    "bossWords": {
-        "alien_dreadnought": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "The celestial vault visible from surface where stars and constellations shine"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "Imaginary central line around which a planet or celestial body rotates"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
-            }
-        ],
-        "alien_hive": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "The celestial vault visible from surface where stars and constellations shine"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "Imaginary central line around which a planet or celestial body rotates"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
-            }
-        ],
-        "alien_psionic": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "The celestial vault visible from surface where stars and constellations shine"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "Imaginary central line around which a planet or celestial body rotates"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
-            }
-        ],
-        "alien_warlord": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "The celestial vault visible from surface where stars and constellations shine"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "Imaginary central line around which a planet or celestial body rotates"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
-            }
-        ],
-        "alien_darkmatter": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "The celestial vault visible from surface where stars and constellations shine"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "Imaginary central line around which a planet or celestial body rotates"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
-            }
-        ],
-        "alien_mothership": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "The celestial vault visible from surface where stars and constellations shine"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "Imaginary central line around which a planet or celestial body rotates"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
-            }
-        ],
-        "robot": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "The celestial vault visible from surface where stars and constellations shine"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "Imaginary central line around which a planet or celestial body rotates"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
-            }
-        ],
-        "beast": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "The celestial vault visible from surface where stars and constellations shine"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "Imaginary central line around which a planet or celestial body rotates"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
-            }
-        ],
-        "mythology": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "The celestial vault visible from surface where stars and constellations shine"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "Imaginary central line around which a planet or celestial body rotates"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
-            }
-        ],
-        "volcano": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "The celestial vault visible from surface where stars and constellations shine"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "Imaginary central line around which a planet or celestial body rotates"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
-            }
-        ],
-        "ocean": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "The celestial vault visible from surface where stars and constellations shine"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "Imaginary central line around which a planet or celestial body rotates"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
-            }
-        ],
-        "cosmos": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "Central star of our solar system providing light, heat and gravitational stability"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "The celestial vault visible from surface where stars and constellations shine"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "Imaginary central line around which a planet or celestial body rotates"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
-            }
-        ]
+    {
+      "text": "moon",
+      "type": "cosmos",
+      "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
     },
-    "trainingWorlds": {
-        "1": {
-            "id": 1,
-            "name": "World 1: Home Row",
-            "subtitle": "Home Row (A S D F G H J K L ;)",
-            "desc": "Muscle memory for finger resting position (left hand ASDF, right hand JKL;).",
-            "icon": "🖐️",
-            "color": "#38BDF8",
-            "chars": [
-                "A",
-                "S",
-                "D",
-                "F",
-                "G",
-                "H",
-                "J",
-                "K",
-                "L",
-                ";"
-            ],
-            "words": [
-                "AS",
-                "ALL",
-                "FALL",
-                "GLAD",
-                "HALF",
-                "LAD",
-                "DASH",
-                "FLASH",
-                "GLASS",
-                "SALAD",
-                "FLASK",
-                "HALL",
-                "FLAG",
-                "LADS",
-                "FALLS",
-                "SHALL"
-            ]
-        },
-        "2": {
-            "id": 2,
-            "name": "World 2: Top Row",
-            "subtitle": "Top Row (Q W E R T Y U I O P)",
-            "desc": "Reach training for index, middle and ring fingers across the upper keyboard.",
-            "icon": "⬆️",
-            "color": "#F59E0B",
-            "chars": [
-                "Q",
-                "W",
-                "E",
-                "R",
-                "T",
-                "Y",
-                "U",
-                "I",
-                "O",
-                "P"
-            ],
-            "words": [
-                "TRY",
-                "TREE",
-                "POWER",
-                "QUIET",
-                "TYPE",
-                "WRITE",
-                "ROPE",
-                "TOWER",
-                "ROUTE",
-                "POET",
-                "PORT",
-                "TRIP",
-                "WIRE",
-                "PITY",
-                "PURE",
-                "ROTE"
-            ]
-        },
-        "3": {
-            "id": 3,
-            "name": "World 3: Bottom Row",
-            "subtitle": "Bottom Row (Z X C V B N M)",
-            "desc": "Downward finger dexterity, fine motor speed and bottom row keyboard coordination.",
-            "icon": "⬇️",
-            "color": "#10B981",
-            "chars": [
-                "Z",
-                "X",
-                "C",
-                "V",
-                "B",
-                "N",
-                "M"
-            ],
-            "words": [
-                "MAN",
-                "CAN",
-                "VAN",
-                "BOX",
-                "MIX",
-                "ZONE",
-                "CAMP",
-                "BOMB",
-                "NAME",
-                "MINE",
-                "VIBE",
-                "CAVE",
-                "NAVY",
-                "COMB",
-                "MAZE",
-                "ZINC"
-            ]
-        },
-        "4": {
-            "id": 4,
-            "name": "World 4: Numbers & Symbols",
-            "subtitle": "Numbers & Symbols (1 2 3 4 5 ? ! , .)",
-            "desc": "Mastery of upper number digits, questions, exclamations and essential punctuation marks.",
-            "icon": "✨",
-            "color": "#EC4899",
-            "chars": [
-                "1",
-                "2",
-                "3",
-                "4",
-                "5",
-                "?",
-                "!",
-                ",",
-                "."
-            ],
-            "words": [
-                "GO!",
-                "RUN!",
-                "HOW?",
-                "YES!",
-                "1, 2, 3",
-                "STOP.",
-                "WAIT!",
-                "WHO?",
-                "NOW.",
-                "WOW!",
-                "FAST!",
-                "GOAL!"
-            ]
-        }
+    {
+      "text": "moons",
+      "type": "cosmos",
+      "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+    },
+    {
+      "text": "sky",
+      "type": "cosmos",
+      "meaning": "The celestial vault visible from surface where stars and constellations shine"
+    },
+    {
+      "text": "ray",
+      "type": "phenomenon",
+      "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+    },
+    {
+      "text": "halo",
+      "type": "cosmos",
+      "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+    },
+    {
+      "text": "axis",
+      "type": "cosmos",
+      "meaning": "Imaginary central line around which a planet or celestial body rotates"
+    },
+    {
+      "text": "phase",
+      "type": "phenomenon",
+      "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+    },
+    {
+      "text": "wave",
+      "type": "phenomenon",
+      "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+    },
+    {
+      "text": "ship",
+      "type": "tech",
+      "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+    },
+    {
+      "text": "nova",
+      "type": "phenomenon",
+      "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+    },
+    {
+      "text": "target",
+      "type": "tech",
+      "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+    },
+    {
+      "text": "data",
+      "type": "tech",
+      "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+    },
+    {
+      "text": "pitch",
+      "type": "cosmos",
+      "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+    },
+    {
+      "text": "year",
+      "type": "cosmos",
+      "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+    },
+    {
+      "text": "vacuum",
+      "type": "cosmos",
+      "meaning": "Space devoid of atmospheric matter where the silent expanse of the cosmos reigns"
+    },
+    {
+      "text": "astro",
+      "type": "cosmos",
+      "meaning": "Any natural celestial body that inhabits the endless cosmic arena"
+    },
+    {
+      "text": "cosmos",
+      "type": "cosmos",
+      "meaning": "The ordered, harmonious, and infinite physical universe in all its vastness"
+    },
+    {
+      "text": "mars",
+      "type": "cosmos",
+      "meaning": "The fourth planet from the sun, famously known across history as the Red Planet"
+    },
+    {
+      "text": "venus",
+      "type": "cosmos",
+      "meaning": "The second planet from the sun, the brightest celestial beacon in night sky"
+    },
+    {
+      "text": "earth",
+      "type": "cosmos",
+      "meaning": "Our blue terrestrial home planet, the only known oasis of living liquid water"
+    },
+    {
+      "text": "solar",
+      "type": "cosmos",
+      "meaning": "Relating to the Sun, its stellar wind, coronal radiation and planetary domain"
+    },
+    {
+      "text": "probe",
+      "type": "tech",
+      "meaning": "Uncrewed scientific spacecraft sent to study uncharted atmospheres and worlds"
+    },
+    {
+      "text": "radar",
+      "type": "tech",
+      "meaning": "Radio-frequency detection system used to map planetary terrain and asteroids"
+    },
+    {
+      "text": "magma",
+      "type": "nature",
+      "meaning": "Extremely hot molten rock beneath the crust of geologically active planets"
+    },
+    {
+      "text": "cloud",
+      "type": "cosmos",
+      "meaning": "Dense interstellar molecular cloud of hydrogen and dust birthing new stars"
+    },
+    {
+      "text": "pluto",
+      "type": "cosmos",
+      "meaning": "Icy dwarf planet situated within the Kuiper Belt at the edge of the solar system"
+    },
+    {
+      "text": "orbit",
+      "type": "cosmos",
+      "meaning": "Curved gravitational path that a celestial body traces around a massive center"
+    },
+    {
+      "text": "comet",
+      "type": "cosmos",
+      "meaning": "Icy celestial traveler that outgasses a radiant glowing tail near stellar heat"
+    },
+    {
+      "text": "pulsar",
+      "type": "cosmos",
+      "meaning": "Rapidly rotating magnetized neutron star sweeping rhythmic beams across space"
+    },
+    {
+      "text": "quasar",
+      "type": "cosmos",
+      "meaning": "Extremely luminous distant active galactic nucleus powered by a supermassive black hole"
+    },
+    {
+      "text": "corona",
+      "type": "cosmos",
+      "meaning": "The outermost, million-degree plasma envelope of the solar atmosphere"
+    },
+    {
+      "text": "meteor",
+      "type": "cosmos",
+      "meaning": "Streak of light produced when a space fragment incinerates in an atmosphere"
+    },
+    {
+      "text": "optics",
+      "type": "tech",
+      "meaning": "The science of light and reflection harnessed by deep space orbital telescopes"
+    },
+    {
+      "text": "space",
+      "type": "cosmos",
+      "meaning": "The boundless three-dimensional expanse where planets, stars, and galaxies drift"
+    },
+    {
+      "text": "aurora",
+      "type": "phenomenon",
+      "meaning": "Ethereal atmospheric light display ignited by solar wind particles hitting magnetosphere"
+    },
+    {
+      "text": "zenith",
+      "type": "cosmos",
+      "meaning": "The imaginary celestial point located directly overhead of an observer"
+    },
+    {
+      "text": "hubble",
+      "type": "tech",
+      "meaning": "Legendary orbital space observatory that revolutionized human understanding of the cosmos"
+    },
+    {
+      "text": "dust",
+      "type": "cosmos",
+      "meaning": "Microscopic mineral grains and cosmic soot dispersed throughout galactic spirals"
+    },
+    {
+      "text": "hole",
+      "type": "cosmos",
+      "meaning": "Extreme region of gravitational curvature collapsing spacetime into a singularity"
+    },
+    {
+      "text": "star",
+      "type": "cosmos",
+      "meaning": "Luminous sphere of incandescent plasma powered by thermonuclear fusion at its core"
+    },
+    {
+      "text": "planet",
+      "type": "cosmos",
+      "meaning": "Major spherical celestial body orbiting a star that has cleared its orbital path"
+    },
+    {
+      "text": "galaxy",
+      "type": "cosmos",
+      "meaning": "Colossal gravitationally bound system of billions of stars, dark matter, and nebulae"
+    },
+    {
+      "text": "galaxies",
+      "type": "cosmos",
+      "meaning": "Billions of cosmic island universes distributed throughout the cosmic web"
+    },
+    {
+      "text": "universe",
+      "type": "cosmos",
+      "meaning": "The totality of all physical matter, energy, space, time, and physical laws"
+    },
+    {
+      "text": "nebula",
+      "type": "cosmos",
+      "meaning": "Vast interstellar cloud of glowing ionized gas, stellar remnants, and cosmic dust"
+    },
+    {
+      "text": "gravity",
+      "type": "phenomenon",
+      "meaning": "Fundamental attractive force bending spacetime proportional to mass and energy"
+    },
+    {
+      "text": "supernova",
+      "type": "phenomenon",
+      "meaning": "Colossal explosion of a dying massive star briefly outshining entire galaxies"
+    },
+    {
+      "text": "astronaut",
+      "type": "tech",
+      "meaning": "Highly trained spacefarer traveling into orbital and interplanetary missions"
+    },
+    {
+      "text": "astronomy",
+      "type": "science",
+      "meaning": "The scientific discipline studying celestial bodies, physical cosmos, and deep space"
+    },
+    {
+      "text": "exoplanet",
+      "type": "cosmos",
+      "meaning": "A planet orbiting a distant star situated outside our local solar system"
+    },
+    {
+      "text": "exoplanets",
+      "type": "cosmos",
+      "meaning": "Alien worlds revolving around distant stars across the Milky Way galaxy"
+    },
+    {
+      "text": "satellite",
+      "type": "tech",
+      "meaning": "Artificial or natural celestial orbiter circling a planet for research and comms"
+    },
+    {
+      "text": "constellation",
+      "type": "cosmos",
+      "meaning": "Recognizable stellar grouping mapped across the night sky by astronomical chart"
+    },
+    {
+      "text": "telescope",
+      "type": "tech",
+      "meaning": "Optical instrument gathering light and radiation to observe distant celestial bodies"
+    },
+    {
+      "text": "starship",
+      "type": "tech",
+      "meaning": "Interplanetary spacecraft capable of navigating across vast interstellar gulfs"
+    },
+    {
+      "text": "atmosphere",
+      "type": "cosmos",
+      "meaning": "Gaseous envelope retained by gravity surrounding a planet or celestial sphere"
+    },
+    {
+      "text": "magnetosphere",
+      "type": "phenomenon",
+      "meaning": "Magnetic planetary shield deflecting high-energy solar winds and radiation"
+    },
+    {
+      "text": "radiation",
+      "type": "phenomenon",
+      "meaning": "High-energy electromagnetic waves or subatomic particles traversing the cosmos"
+    },
+    {
+      "text": "spectrum",
+      "type": "science",
+      "meaning": "The rainbow dispersion of light revealing temperature and chemical composition"
+    },
+    {
+      "text": "andromeda",
+      "type": "cosmos",
+      "meaning": "The nearest major spiral galaxy heading on a gravitational collision course with ours"
+    },
+    {
+      "text": "heliosphere",
+      "type": "cosmos",
+      "meaning": "Enormous protective bubble carved in interstellar space by outward solar winds"
+    },
+    {
+      "text": "antimatter",
+      "type": "science",
+      "meaning": "Matter composed of antiparticles that violently annihilates on contact with normal matter"
+    },
+    {
+      "text": "singularity",
+      "type": "cosmos",
+      "meaning": "Center of a black hole where gravitational density approaches infinity and physics breaks"
+    },
+    {
+      "text": "multiverse",
+      "type": "cosmos",
+      "meaning": "Theoretical ensemble of parallel universes containing infinite spacetime bubbles"
+    },
+    {
+      "text": "light-year",
+      "type": "science",
+      "meaning": "Astronomical distance traveled by a beam of light in vacuum over one solar year"
+    },
+    {
+      "text": "black-hole",
+      "type": "cosmos",
+      "meaning": "Cosmic region whose gravitational field is so intense that nothing, not even light, escapes"
+    },
+    {
+      "text": "stardust",
+      "type": "cosmos",
+      "meaning": "Supernova ash and heavy elements that seed the formation of rocky worlds and life"
+    },
+    {
+      "text": "dark-matter",
+      "type": "cosmos",
+      "meaning": "Hypothetical invisible substance comprising the majority of matter in the universe"
+    },
+    {
+      "text": "dark-energy",
+      "type": "cosmos",
+      "meaning": "Pervasive cosmic force driving the accelerating expansion of observable spacetime"
+    },
+    {
+      "text": "wormhole",
+      "type": "cosmos",
+      "meaning": "Theoretical topological shortcut connecting disparate regions of spacetime"
+    },
+    {
+      "text": "speed-of-light",
+      "type": "science",
+      "meaning": "Universal velocity constant of 300,000 kilometers per second in cosmic vacuum"
+    },
+    {
+      "text": "space-station",
+      "type": "tech",
+      "meaning": "Habitable artificial orbital satellite where scientists live and conduct zero-g research"
+    },
+    {
+      "text": "event-horizon",
+      "type": "cosmos",
+      "meaning": "The point of no return threshold enclosing a black hole beyond which nothing escapes"
+    },
+    {
+      "text": "milky-way",
+      "type": "cosmos",
+      "meaning": "Our home barred spiral galaxy holding hundreds of billions of suns and solar systems"
     }
+  ],
+  "bossWords": {
+    "alien_dreadnought": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+      }
+    ],
+    "alien_hive": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+      }
+    ],
+    "alien_psionic": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+      }
+    ],
+    "alien_warlord": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+      }
+    ],
+    "alien_darkmatter": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+      }
+    ],
+    "alien_mothership": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+      }
+    ],
+    "robot": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+      }
+    ],
+    "beast": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+      }
+    ],
+    "mythology": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+      }
+    ],
+    "volcano": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+      }
+    ],
+    "ocean": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+      }
+    ],
+    "cosmos": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+      }
+    ]
+  },
+  "trainingWorlds": {
+    "1": {
+      "id": 1,
+      "name": "World 1: Home Row",
+      "subtitle": "Home Row (A S D F G H J K L ;)",
+      "desc": "Muscle memory for finger resting position (left hand ASDF, right hand JKL;).",
+      "icon": "🖐️",
+      "color": "#38BDF8",
+      "chars": [
+        "A",
+        "S",
+        "D",
+        "F",
+        "G",
+        "H",
+        "J",
+        "K",
+        "L",
+        ";"
+      ],
+      "words": [
+        "AS",
+        "ALL",
+        "FALL",
+        "GLAD",
+        "HALF",
+        "LAD",
+        "DASH",
+        "FLASH",
+        "GLASS",
+        "SALAD",
+        "FLASK",
+        "HALL",
+        "FLAG",
+        "LADS",
+        "FALLS",
+        "SHALL"
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "World 2: Top Row",
+      "subtitle": "Top Row (Q W E R T Y U I O P)",
+      "desc": "Reach training for index, middle and ring fingers across the upper keyboard.",
+      "icon": "⬆️",
+      "color": "#F59E0B",
+      "chars": [
+        "Q",
+        "W",
+        "E",
+        "R",
+        "T",
+        "Y",
+        "U",
+        "I",
+        "O",
+        "P"
+      ],
+      "words": [
+        "TRY",
+        "TREE",
+        "POWER",
+        "QUIET",
+        "TYPE",
+        "WRITE",
+        "ROPE",
+        "TOWER",
+        "ROUTE",
+        "POET",
+        "PORT",
+        "TRIP",
+        "WIRE",
+        "PITY",
+        "PURE",
+        "ROTE"
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "World 3: Bottom Row",
+      "subtitle": "Bottom Row (Z X C V B N M)",
+      "desc": "Downward finger dexterity, fine motor speed and bottom row keyboard coordination.",
+      "icon": "⬇️",
+      "color": "#10B981",
+      "chars": [
+        "Z",
+        "X",
+        "C",
+        "V",
+        "B",
+        "N",
+        "M"
+      ],
+      "words": [
+        "MAN",
+        "CAN",
+        "VAN",
+        "BOX",
+        "MIX",
+        "ZONE",
+        "CAMP",
+        "BOMB",
+        "NAME",
+        "MINE",
+        "VIBE",
+        "CAVE",
+        "NAVY",
+        "COMB",
+        "MAZE",
+        "ZINC"
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "World 4: Numbers & Symbols",
+      "subtitle": "Numbers & Symbols (1 2 3 4 5 ? ! , .)",
+      "desc": "Mastery of upper number digits, questions, exclamations and essential punctuation marks.",
+      "icon": "✨",
+      "color": "#EC4899",
+      "chars": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "?",
+        "!",
+        ",",
+        "."
+      ],
+      "words": [
+        "GO!",
+        "RUN!",
+        "HOW?",
+        "YES!",
+        "1, 2, 3",
+        "STOP.",
+        "WAIT!",
+        "WHO?",
+        "NOW.",
+        "WOW!",
+        "FAST!",
+        "GOAL!"
+      ]
+    }
+  }
 }

@@ -16,9 +16,9 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="./css/variables.css?v=1.6.1" />
   <link rel="stylesheet" href="./css/components.css?v=1.0" />
-  <link rel="stylesheet" href="./css/layout.css?v=1.4" />
-  <link rel="stylesheet" href="./css/gameplay.css?v=1.6.2" />
-  <link rel="stylesheet" href="./css/modals.css?v=1.4" />
+  <link rel="stylesheet" href="./css/layout.css?v=1.7" />
+  <link rel="stylesheet" href="./css/gameplay.css?v=1.7" />
+  <link rel="stylesheet" href="./css/modals.css?v=1.7" />
   <link rel="stylesheet" href="./css/responsive.css?v=1.0" />
 </head>
 
@@ -54,7 +54,7 @@
       <!-- Brand Header -->
       <div class="start-brand">
         <div class="start-logo"><span class="logo-main">Digitinho Galaxy</span><span class="logo-dot">.</span></div>
-        <p class="start-sub" data-i18n="app_subtitle">Master the runic keyboard before words reach the abyss</p>
+        <p class="start-sub" data-i18n="app_subtitle">Master the cosmic keyboard and protect Earth from falling celestial debris</p>
       </div>
 
       <!-- Dynamic Update Available Banner / Button (Hidden by default) -->
@@ -407,75 +407,14 @@
           <!-- Canvas para destroços cósmicos e partículas de explosão caindo até o final da tela -->
           <canvas id="debris-canvas" class="debris-canvas" aria-hidden="true"></canvas>
           <!-- Horizontal Black Hole Accretion Vortex (Event Horizon Mouth) -->
-          <div id="black-hole-vortex" class="black-hole-vortex" aria-hidden="true">
-            <svg class="bh-svg" viewBox="0 0 1000 280" preserveAspectRatio="none">
-              <defs>
-                <radialGradient id="bhOuterGlow" cx="50%" cy="58%" r="50%">
-                  <stop offset="0%" stop-color="rgba(6, 182, 212, 0.6)" />
-                  <stop offset="30%" stop-color="rgba(99, 102, 241, 0.45)" />
-                  <stop offset="65%" stop-color="rgba(168, 85, 247, 0.28)" />
-                  <stop offset="100%" stop-color="rgba(0, 0, 0, 0)" />
-                </radialGradient>
-
-                <linearGradient id="bhAccretionDiskGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="rgba(6, 182, 212, 0.35)" />
-                  <stop offset="14%" stop-color="rgba(56, 189, 248, 1)" />
-                  <stop offset="36%" stop-color="rgba(255, 255, 255, 1)" />
-                  <stop offset="54%" stop-color="rgba(244, 114, 182, 1)" />
-                  <stop offset="82%" stop-color="rgba(251, 191, 36, 1)" />
-                  <stop offset="100%" stop-color="rgba(245, 158, 11, 0.35)" />
-                </linearGradient>
-
-                <linearGradient id="bhPhotonRingGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#38BDF8" />
-                  <stop offset="50%" stop-color="#FFFFFF" />
-                  <stop offset="100%" stop-color="#C084FC" />
-                </linearGradient>
-
-                <linearGradient id="bhLensingGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-                  <stop offset="0%" stop-color="rgba(56, 189, 248, 0.85)" />
-                  <stop offset="55%" stop-color="rgba(192, 132, 252, 0.65)" />
-                  <stop offset="100%" stop-color="rgba(255, 255, 255, 0)" />
-                </linearGradient>
-
-                <filter id="bhAccretionBlur" x="-20%" y="-20%" width="140%" height="140%">
-                  <feGaussianBlur in="SourceGraphic" stdDeviation="6" />
-                </filter>
-                <filter id="bhIntenseGlow" x="-30%" y="-30%" width="160%" height="160%">
-                  <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
-                  <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-              </defs>
-
-              <!-- 1. Outer Accretion Atmosphere Glow (Spanning de fora a fora) -->
-              <ellipse cx="500" cy="180" rx="498" ry="95" fill="url(#bhOuterGlow)" />
-              <ellipse class="bh-pulsing-glow" cx="500" cy="180" rx="480" ry="85" fill="url(#bhAccretionDiskGrad)"
-                opacity="0.65" filter="url(#bhAccretionBlur)" />
-
-              <!-- 2. Relativistic Gravitational Lensing Upper Arc -->
-              <path class="bh-lensing-arc" d="M 25 180 Q 500 25 975 180" fill="none" stroke="url(#bhLensingGrad)"
-                stroke-width="6.5" opacity="0.85" />
-
-              <!-- 3. Outer Accretion Ring (The horizontal oval with accretion brightness) -->
-              <ellipse class="bh-disk-outer" cx="500" cy="180" rx="465" ry="76" fill="none"
-                stroke="url(#bhAccretionDiskGrad)" stroke-width="11" filter="url(#bhIntenseGlow)" opacity="0.98" />
-              <ellipse class="bh-disk-core" cx="500" cy="180" rx="455" ry="72" fill="none"
-                stroke="url(#bhAccretionDiskGrad)" stroke-width="3.5" />
-
-              <!-- 4. Inner Photon Sphere Ring -->
-              <ellipse class="bh-photon-sphere" cx="500" cy="180" rx="415" ry="56" fill="none"
-                stroke="url(#bhPhotonRingGrad)" stroke-width="2.5" />
-
-              <!-- 5. Event Horizon / Singularity Core Void (Pitch black horizontal oval) -->
-              <ellipse class="bh-void" cx="500" cy="180" rx="410" ry="54" fill="#000000" />
-
-              <!-- 6. Relativistic Front Rim Highlight -->
-              <path class="bh-front-rim" d="M 85 180 Q 500 238 915 180" fill="none" stroke="#FFFFFF" stroke-width="3.2"
-                opacity="0.95" />
-            </svg>
+          <!-- Planet Earth Horizon Defense Rim (Protects Earth from celestial debris) -->
+          <div id="earth-horizon" class="earth-horizon" aria-hidden="true">
+            <div class="earth-atmosphere-glow" aria-hidden="true"></div>
+            <div class="earth-horizon-wrap" aria-hidden="true">
+              <img class="earth-horizon-img" src="./assets/earth_horizon.webp" alt="Planet Earth Horizon" loading="eager" />
+              <div class="earth-limb-glow" aria-hidden="true"></div>
+            </div>
+            <div class="earth-impact-shield" aria-hidden="true"></div>
           </div>
           <div id="feedback-msg"></div>
         </div>
@@ -1758,12 +1697,12 @@
   </div>
 
   <!-- Modular Scripts with Cache Busting -->
-  <script src="./js/ambient.js?v=1.0"></script>
+  <script src="./js/ambient.js?v=1.7"></script>
   <script src="./js/audio.js?v=1.0"></script>
   <script src="./js/i18n.js?v=1.1"></script>
-  <script src="./js/data.js?v=1.4"></script>
+  <script src="./js/data.js?v=1.7"></script>
   <script src="./js/state.js?v=1.4"></script>
-  <script src="./js/ui.js?v=1.6.2"></script>
+  <script src="./js/ui.js?v=1.7"></script>
   <script src="./js/shop.js?v=1.3"></script>
   <script src="./js/library.js?v=1.0"></script>
   <script src="./js/spawner.js?v=1.6.2"></script>

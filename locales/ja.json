@@ -1,1853 +1,1858 @@
 {
-    "ui": {
-        "app_title": "Digitinho Galaxy.",
-        "app_subtitle": "言葉がブラックホールに飲み込まれる前に、星空のキーボードをマスターしよう",
-        "rules_title": "遊び方とルーンのルール",
-        "rule_typing": "<strong>キーボード入力：</strong>文字、音節、単語が画面の底に落ちる前に入力します",
-        "rule_wildcard": "<strong>ワイルドカード単語：</strong>画面上のすべてのルーンを瞬時に破壊しポイントを獲得",
-        "rule_spells": "<strong>数字キー 1〜8（またはクリック）：</strong>スロー、氷結、間隔拡大、シールド、強力な魔法を発動",
-        "rule_combo": "<strong>コンボ＆フューリーモード：</strong>ノーミスの連続入力でスコアが最大8倍にアップ",
-        "rule_danger": "<strong>ライフと危険：</strong>落下直前のルーンは赤く点滅し、落ちるとライフを失います",
-        "btn_start": "プレイ",
-        "btn_training": "トレーニングモード（キー列別）",
-        "btn_zen": "禅モード（ゲームオーバーなし）",
-        "btn_timeattack": "タイムアタック (60秒)",
-        "btn_library": "ライブラリ",
-        "btn_achievements": "実績",
-        "btn_settings": "設定",
-        "btn_shop": "コズミックショップ",
-        "btn_skills_inventory": "スキル",
-        "skills_inventory_title": "コズミックアーセナル",
-        "skills_inventory_sub": "ショップで購入した永久スキル",
-        "skills_inventory_empty": "まだスキルを所持していません。コズミックショップを訪れましょう！",
-        "skills_inventory_stock": "所持数: ×{count}",
-        "start_record_label": "記録:",
-        "start_high_score": "ハイスコア: {score}",
-        "shop_btn_reroll": "再抽選",
-        "shop_reroll_cost": "{cost}",
-        "hud_infinite_mode": "エンドレスアーケード",
-        "hud_coin_farm_progress": "次のコインまで: {current} / {target} 単語",
-        "badge_new_label": "新規",
-        "badge_new_word": "今回のプレイで新しい単語",
-        "fb_coin_farmed": "+1 コズミックコイン獲得！",
-        "start_game_modes": "ゲームモード",
-        "btn_classic_short": "クラシック",
-        "btn_training_short": "トレーニング",
-        "btn_training_desc": "キー列別練習",
-        "btn_zen_short": "禅モード",
-        "btn_zen_desc": "ライフ減少なし",
-        "btn_timeattack_short": "タイムアタック",
-        "btn_timeattack_desc": "60秒勝負",
-        "btn_rules": "遊び方",
-        "btn_close_rules": "了解",
-        "hud_phase": "フェーズ",
-        "hud_zen_badge": "禅モード：ライフ減少なし",
-        "hud_training_badge": "トレーニングモード：ライフ減少なし",
-        "hud_training_lesson": "レッスン",
-        "hud_zen_lbl": "禅モード",
-        "hud_training_lbl": "トレーニング",
-        "hud_free": "自由",
-        "hud_zen_pill": "ライフ減少なし",
-        "hud_zen_pill_title": "禅モードではライフを失わず自由に練習できます",
-        "hud_training_pill_title": "トレーニングモードではライフを失わず精度と筋記憶を鍛えます",
-        "hud_lives": "ライフ",
-        "hud_accuracy": "正確度",
-        "hud_wpm": "WPM",
-        "hud_combo": "コンボ",
-        "hud_upcoming": "次の文字",
-        "hud_new_word_badge": "新しい単語",
-        "hud_spells": "スキル",
-        "hud_active": "発動中",
-        "hud_sec": "秒",
-        "pause_title": "一時停止中",
-        "pause_hint": "<kbd>ESC</kbd> キーで再開",
-        "pause_resume": "再開する",
-        "pause_library": "ライブラリ",
-        "pause_achievements": "実績",
-        "pause_settings": "設定",
-        "pause_training_menu": "トレーニングメニューに戻る",
-        "pause_main_menu": "メインメニューに戻る",
-        "confirm_exit_to_menu": "獲得したコインは保持されますが、このマッチ中に獲得したスキルは失われます。",
-        "confirm_exit_title": "メインメニューに戻りますか？",
-        "confirm_exit_cancel": "プレイを続ける",
-        "confirm_exit_confirm": "はい、戻る",
-        "countdown_hint": "指を準備してください！",
-        "countdown_go": "スタート！",
-        "modal_performance": "パフォーマンス",
-        "modal_phase_complete": "フェーズ {phase} クリア！",
-        "modal_press_continue": "ENTERまたはスペースキーで次へ",
-        "modal_btn_continue": "次へ ➔",
-        "modal_btn_shop": "ショップへ",
-        "modal_stat_score": "スコア",
-        "modal_stat_accuracy": "正確度",
-        "modal_stat_wpm": "WPM",
-        "modal_stat_combo": "最大コンボ",
-        "modal_stat_discovered": "新しく発見した単語",
-        "go_title": "ゲームオーバー",
-        "go_sub": "ルーンの旅は終わりを告げました",
-        "go_score": "マッチスコア",
-        "go_best_score": "最高記録",
-        "go_new_record_tag": "新記録！",
-        "go_final_score": "最終スコア",
-        "go_phase_reached": "到達フェーズ",
-        "go_best_combo": "ベストコンボ",
-        "go_avg_accuracy": "正確度",
-        "go_coins_earned": "獲得した総コイン",
-        "go_hits_errors": "ヒット / ミス",
-        "go_discovered_words": "発見した単語",
-        "go_use_continue": "コンティニューを使用 ({n})",
-        "go_revive_continue": "復活して継続 ({n})",
-        "go_play_again": "もう一度プレイ",
-        "go_main_menu": "メインメニュー",
-        "victory_title": "完全勝利！",
-        "victory_desc": "おめでとうございます！ルーンキーボードを極めました！",
-        "victory_play_again": "もう一度挑戦",
-        "shop_title": "スキルショップ",
-        "shop_sub": "宇宙の旅のための永続的なスキルを獲得する",
-        "shop_points": "所持ポイント：",
-        "shop_coins": "所持コイン：",
-        "shop_btn_buy": "購入",
-        "shop_btn_owned": "購入済み",
-        "shop_available": "利用可能",
-        "shop_btn_close": "閉じる",
-        "shop_confirm_exit_title": "ショップを出ますか？",
-        "shop_confirm_exit_desc": "本当にショップを出ますか？",
-        "shop_confirm_stay": "ショップに残る",
-        "shop_confirm_leave": "メインメニューに戻る",
-        "shop_insufficient_pts": "ポイントが足りません！",
-        "shop_insufficient_coins": "コインが足りません！",
-        "skill_name_freezer": "フリーズ",
-        "skill_desc_freezer": "2分ごとに10秒間、画面上のすべてのルーンを凍結します",
-        "skill_name_bomb": "ボム",
-        "skill_desc_bomb": "90秒ごとに宇宙爆発を起こし、画面内のルーンを一掃します",
-        "skill_name_shield": "ルーンシールド",
-        "skill_desc_shield": "2分ごとに10秒間、ルーン落下やミスタイプのペナルティを防ぎます",
-        "skill_name_vortex": "ヴォルテックス",
-        "skill_desc_vortex": "3分ごとに画面中央に渦が出現し、画面上の全ルーンを吸い込みます",
-        "skill_name_slowdown": "スローモーション",
-        "skill_desc_slowdown": "1分ごとに15秒間、ルーンの落下速度を50%低下させます",
-        "skill_name_haste": "ポイント2倍",
-        "skill_desc_haste": "30秒ごとに10秒間、獲得ポイントを2倍にします",
-        "skill_name_dilation": "間隔拡大",
-        "skill_desc_dilation": "ルーンの出現間隔と距離を最大{max}倍に広げます",
-        "skill_name_autodestroy": "コズミックエコー",
-        "skill_desc_autodestroy": "1分ごとに10秒間、このランで学習済みの単語を自動破壊します",
-        "boss_reward_extralife": "+1 ライフ",
-        "boss_reward_extralife_desc": "現在のランのライフを1回復または追加します",
-        "boss_reward_continue": "コンティニューコイン",
-        "boss_reward_continue_desc": "全ライフ消失時にその場で即時復活できます",
-        "boss_reward_coins_100": "+100 コイン",
-        "boss_reward_coins_100_desc": "金庫に宇宙コインを即座に+100枚獲得します",
-        "hud_level": "レベル",
-        "hud_run_perks": "発動中の能力",
-        "hud_perks_empty": "まだ能力を獲得していません。<br/>レベルアップして解放しましょう！",
-        "levelup_title": "レベルアップ！",
-        "levelup_sub": "レベル {level} に到達しました！",
-        "levelup_prompt": "このランで発動する能力を1つ選択してください：",
-        "levelup_btn_pick": "選択",
-        "fb_dilation_upgraded": "間隔拡大が最大{max}倍に強化されました！",
-        "lib_title": "ルーンライブラリ",
-        "lib_sub": "発見した単語のコレクション",
-        "lib_discovered": "発見した単語",
-        "lib_locked": "ロック中",
-        "lib_typed": "入力済み {count}回",
-        "lib_not_typed": "未入力",
-        "lib_btn_close": "閉じる",
-        "ach_title": "実績とバッジ",
-        "ach_sub": "タイピングの速度、正確さ、達成度のマイルストーン",
-        "ach_counter": "{unlocked} / {total} 解除済み",
-        "ach_btn_close": "閉じる",
-        "ach_status_unlocked": "✓ 獲得済み",
-        "ach_status_locked": "ロック中",
-        "ach_goal_reached": "目標達成",
-        "ach_unit_words": "単語",
-        "ach_unit_streak": "連続",
-        "ach_unit_combo": "コンボ",
-        "ach_dedo_veloz_name": "神速の指",
-        "ach_dedo_veloz_desc": "60 WPMに到達する。",
-        "ach_cirurgico_name": "百発百中",
-        "ach_cirurgico_desc": "精度100%でいずれかのフェーズをクリアする。",
-        "ach_colecionador_name": "コレクター",
-        "ach_colecionador_desc": "ライブラリのすべての単語を解放する。",
-        "ach_mestre_combo_name": "コンボマスター",
-        "ach_mestre_combo_desc": "30連続でキー入力を成功させる。",
-        "ach_modo_furia_name": "フューリーモード",
-        "ach_modo_furia_desc": "15連続ヒットでフューリーモードを発動。",
-        "ach_mestre_tipo_name": "タイピングマスター",
-        "ach_mestre_tipo_desc": "単語を100回完全に完成させる。",
-        "settings_title": "設定",
-        "settings_sub": "ゲームとインターフェースの調整",
-        "settings_sound": "効果音",
-        "settings_sound_on": "オン",
-        "settings_sound_off": "ミュート",
-        "settings_queue": "キューの位置",
-        "settings_queue_top": "上部",
-        "settings_queue_bottom": "下部",
-        "settings_theme": "テーマ",
-        "settings_theme_dark": "ダーク",
-        "settings_theme_light": "ライト",
-        "settings_boss": "ボスバトル",
-        "settings_boss_on": "8フェーズ毎（有効）",
-        "settings_boss_off": "無効",
-        "settings_test_boss": "ボス戦テスト",
-        "settings_face_boss": "ボスと戦う",
-        "settings_lang": "言語",
-        "settings_difficulty": "難易度",
-        "settings_diff_locked_match": "プレイ中に難易度を変更することはできません",
-        "diff_easy": "イージー",
-        "diff_normal": "ノーマル",
-        "diff_hard": "ハード",
-        "diff_desc_easy": "初期速度0.5倍 • ミス加速なし • ゲージ減少なし • 5ライフ",
-        "diff_desc_normal": "初期速度1.0倍 • ミス加速なし • 通常ゲージ減少 • 3ライフ",
-        "diff_desc_hard": "初期速度1.5倍 • ミス時+0.05倍加速 • 通常ゲージ減少 • 3ライフ",
-        "settings_cat_general": "一般・インターフェース",
-        "settings_cat_boss": "ボスバトル",
-        "settings_cat_about": "アプリについて",
-        "settings_version": "現在のバージョン",
-        "settings_author": "作者",
-        "settings_btn_check_update": "確認",
-        "settings_update_latest": "最新",
-        "update_available_title": "新しいアップデートが利用可能です！",
-        "update_available_sub": "キャッシュをクリアして最新バージョンを読み込むにはクリック",
-        "update_btn_action": "更新",
-        "update_applying": "更新中...",
-        "settings_btn_back": "戻る",
-        "training_title": "トレーニング：キーボードの列",
-        "training_sub": "手元を見ずにブラインドタッチの筋肉記憶を鍛えよう",
-        "training_notice": "この練習モードでは<strong>ライフは減りません</strong>。ミスは<strong>正確度 %</strong>と<strong>WPM</strong>に反映されます。",
-        "training_btn_back": "戻る",
-        "training_btn_start": "レッスン開始 (3レッスン) →",
-        "training_btn_again": "もう一度練習",
-        "training_completed": "完了（マスター）",
-        "training_pending": "3レッスン",
-        "training_record_acc": "記録：{acc}% 正確度",
-        "boss_defeated_title": "ボス撃破！",
-        "boss_defeated_sub": "ルーンの試練を鮮やかに突破しました。",
-        "boss_defeated_prompt": "永続ボーナススキルを1つ選択してください：",
-        "boss_btn_pick": "獲得",
-        "boss_pick_skill": "獲得",
-        "boss_default_name": "ボス",
-        "fb_combo_broken": "コンボ途切れ！",
-        "fb_fury_activated": "フューリーモード発動！スコア2倍！",
-        "fb_bomb_activated": "ボム発動 (10秒)！",
-        "fb_bomb_expired": "ボム効果終了",
-        "fb_bomb_explosion": "大爆発 ({lines}列消去)！+{pts}",
-        "fb_freezer_activated": "氷結発動 (10秒)！",
-        "fb_freezer_expired": "氷結終了",
-        "fb_shield_activated": "ルーンシールド発動 (10秒)！",
-        "fb_shield_expired": "シールド効果終了",
-        "fb_shield_blocked": "ルーンシールドがダメージを防いだ！",
-        "fb_shield_error_protected": "シールドがミス入力を守った！",
-        "fb_vortex_activated": "ヴォルテックス発動 (10秒)！",
-        "fb_vortex_expired": "ヴォルテックス効果終了",
-        "fb_slowdown_activated": "スロー発動 (15秒)！",
-        "fb_slowdown_expired": "スロー効果終了",
-        "fb_slow_activated": "スロー発動 (15秒)！",
-        "fb_slow_expired": "スロー効果終了",
-        "fb_haste_activated": "スコア2倍発動 (15秒)！",
-        "fb_haste_expired": "スコア2倍終了",
-        "fb_dilation_activated": "間隔拡大 (45秒)！",
-        "fb_dilation_expired": "間隔拡大効果終了",
-        "fb_speedlock_activated": "速度固定 (1.0x / 60秒)！",
-        "fb_speedlock_expired": "速度固定終了",
-        "fb_autodestroy_activated": "コズミック・オートクリア発動 (60秒)！",
-        "fb_autodestroy_expired": "コズミック・オートクリア終了",
-        "fb_autodestroy_shattered": "⚡ 自動粉砕: {word}! +{pts}",
-        "fb_wildcard": "ワイルドカード！画面全消去！+{pts}",
-        "fb_life_recovered": "ライフ+1 回復！",
-        "fb_perfect": "パーフェクト！",
-        "hud_performance": "パフォーマンスダッシュボード",
-        "hud_total_score": "トータルスコア",
-        "hud_hits": "ヒット",
-        "hud_errors": "ミス",
-        "hud_discovered_words": "発見した言葉",
-        "hud_view_all": "すべて表示",
-        "hud_spells_hint": "ショップで購入<br/>または言葉を完成",
-        "hud_activate_kb": "発動 (キーボード)",
-        "hud_key_label": "キー",
-        "hud_max_phase": "最高フェーズ",
-        "modal_unlocked_words": "解放された単語",
-        "modal_btn_next_phase": "次のフェーズ →",
-        "modal_btn_back_training": "トレーニングメニューに戻る",
-        "shop_note": "購入ごとに価格が上昇します",
-        "shop_btn_continue": "ゲームを続ける",
-        "btn_back_to_game": "ゲームに戻る",
-        "app_loading": "ルーンデータを読み込み中...",
-        "fb_runic_dropped_zen": "⚠️ ルーンが落下しました（-精度）",
-        "fb_runic_dropped": "💔 ルーンが落下しました！",
-        "fb_time_up": "⏱️ 時間切れ！",
-        "fb_boss_enigma_dropped": "💥 謎が解けずに落下！ボスが攻撃しました！",
-        "fb_ice_cleared": "❄️ 画面クリア — 氷結解除！",
-        "fb_error_letter": "❌ 間違った文字です！",
-        "fb_error": "❌ エラー",
-        "fb_wildcard_clean": "💥 ワイルドカード！画面全消去！",
-        "fb_training_completed": "🎉 おめでとうございます！すべてのトレーニングワールドを完了しました！",
-        "fb_continue_used": "🪙 コンティニューを使用しました！フェーズを再開します...",
-        "fb_permanent_life": "+1 最大ライフ増加！",
-        "fb_continue_obtained": "🪙 +1 コンティニュートークンを獲得！",
-        "shop_all_words_unlocked": "すべての単語がすでに発見されています！",
-        "hud_skills_empty_hint": "ショップで購入<br/>または単語を完成 <strong>⚡</strong>",
-        "training_lesson_1_title": "レッスン1：キー認識",
-        "training_lesson_2_title": "レッスン2：指の交互動作",
-        "training_lesson_3_title": "レッスン3：マスターチャレンジ",
-        "training_lesson_1_name": "ホームキー",
-        "training_lesson_2_name": "交互",
-        "training_lesson_3_name": "最終チャレンジ",
-        "training_next_obj_2": "次の目標：キーを組み合わせて短い単語を作り、両手を交互に使います。",
-        "training_next_obj_3": "次の目標：完全な単語を使った流暢さと熟練度の最終チャレンジ！",
-        "training_new_record": "新記録！",
-        "training_world_mastered": "ワールド制覇",
-        "training_mastery_completed": "{world} — 完全習得！",
-        "training_lesson_completed": "{world} — {lesson}完了！",
-        "training_rank_s": "超高精度",
-        "training_rank_a": "優れた流暢さ",
-        "training_rank_b": "良好なコントロール",
-        "training_rank_c": "もっと練習しましょう",
-        "training_stat_world_progress": "ワールド進行度",
-        "training_stat_lesson_done": "レッスン {lesson}/3 完了",
-        "training_stat_accuracy_rate": "正確性",
-        "training_stat_status": "トレーニング状況",
-        "training_stat_completed": "100%完了（3/3レッスン）",
-        "training_stat_keys": "マスターしたキー",
-        "training_stat_accuracy": "今回の精度",
-        "training_stat_best_record": "最高記録（精度）",
-        "training_stat_speed": "タイピング速度（WPM）",
-        "training_stat_hits_errors": "成功 / ミス",
-        "training_hits_errs_val": "{hits}回成功 / {errors}回ミス",
-        "training_btn_next_world": "{world}へ進む →",
-        "training_btn_finish_all": "全トレーニング完了！ →",
-        "training_btn_next_lesson": "レッスン{lesson}へ進む（ルーン{runics}個） →",
-        "fb_boss_defeated": "{boss}を撃破！ +350 コイン！",
-        "modal_phase_pts": "フェーズ獲得スコア",
-        "modal_acc_bonus": "正確度ボーナス ({acc}%)",
-        "modal_penalty": "ミス（ペナルティ）",
-        "modal_net_pts": "加算スコア",
-        "modal_total_pts": "総合スコア",
-        "modal_combo_bonus": "最大コンボボーナス ({combo}×)",
-        "modal_phase_total_pts": "獲得総点数",
-        "modal_section_score": "スコア概要",
-        "modal_section_coins": "獲得コイン",
-        "modal_coins_completion": "ステージクリア",
-        "modal_boss_bonus": "ボス討伐ボーナス",
-        "modal_coins_precision": "100% 精度ボーナス",
-        "modal_coins_streak": "ノーミスクリア継続 ({streak} フェーズ)",
-        "modal_coins_phase_total": "獲得コイン合計",
-        "modal_coins_balance": "総コイン残高",
-        "hud_coins": "コイン",
-        "hud_boss_hp": "ボスHP",
-        "fb_skill_acquired": "⚡ スキル: {skill}！",
-        "fb_vortex_devour": "🌀 ヴォルテックスが {text} を消滅させた！+{pts}",
-        "fb_enigma_solved": "💥 謎解き成功！ボスHP -1！(+{pts}pts)",
-        "fb_reward_granted": "報酬獲得: {reward}！",
-        "queue_top": "上",
-        "queue_bottom": "下",
-        "queue_toggle_to_bottom": "キューを上部に配置中（クリックで下部に移動）",
-        "queue_toggle_to_top": "キューを下部に配置中（クリックで上部に移動）",
-        "theme_switch_to_light": "ライトテーマに切り替え",
-        "theme_switch_to_dark": "ダークテーマに切り替え",
-        "boss_enigma_badge": "📜 謎解き {num} / {total} • {scenario}",
-        "boss_enigma_letters": "{count}文字",
-        "boss_enigma_queue": "謎解き {num} / 3",
-        "boss_level_tag": " (Lv. {level})",
-        "boss_cyber_titan_name": "虚空の覇者 サイラリオン",
-        "boss_cyber_titan_title": "エイリアン先鋒司令官",
-        "boss_cyber_titan_scenario": "カイパーベルト（太陽系の境界）",
-        "boss_cyber_titan_scenario_desc": "サイラリオン率いる超弩級戦艦艦隊が太陽系への侵略を開始した！",
-        "boss_cyber_titan_badge": "エイリアン • ドレッドノート",
-        "boss_cyber_titan_lore": "星間侵略艦隊の総司令官であり、高出力プラズマ兵器の使い手。",
-        "boss_feral_apex_name": "軌道の征服者 ゾルコン",
-        "boss_feral_apex_title": "生体機械群の群れ主",
-        "boss_feral_apex_scenario": "海王星軌道",
-        "boss_feral_apex_scenario_desc": "ゾルコンの有機生体群が太陽系の巨大ガス惑星を包囲した！",
-        "boss_feral_apex_badge": "エイリアン • スウォーム",
-        "boss_feral_apex_lore": "宇宙艦隊をも貪り尽くす生体機械のハイブマインドを統括する。",
-        "boss_arcane_chimera_name": "反物質の女帝 ヴェスペラ",
-        "boss_arcane_chimera_title": "銀河サイキック主権者",
-        "boss_arcane_chimera_scenario": "土星の輪",
-        "boss_arcane_chimera_scenario_desc": "ヴェスペラは反物質砲を起動し、太陽系の重力障壁を打ち破ろうとしている！",
-        "boss_arcane_chimera_badge": "エイリアン • サイキック",
-        "boss_arcane_chimera_lore": "ダークエネルギーと銀河規模の精神嵐を自在に操る。",
-        "boss_abyssal_leviathan_name": "暗黒物質の先駆者 ネビュラー",
-        "boss_abyssal_leviathan_title": "宇宙影の支配体",
-        "boss_abyssal_leviathan_scenario": "木星軌道",
-        "boss_abyssal_leviathan_scenario_desc": "ネビュラーは木星の磁気圏を歪め、地球への直接攻撃態勢を整えている！",
-        "boss_abyssal_leviathan_badge": "エイリアン • シャドウ",
-        "boss_abyssal_leviathan_lore": "時空の歪みと特異点重力を意のままに操る異形体。",
-        "boss_cosmic_chronos_name": "銀河最高知性 ゼノア",
-        "boss_cosmic_chronos_title": "侵略中枢マザーブレイン",
-        "boss_cosmic_chronos_scenario": "地球・月周回軌道",
-        "boss_cosmic_chronos_scenario_desc": "ゼノアの超巨大母艦が月軌道に現れ、地球侵略の最終段階に入った！",
-        "boss_cosmic_chronos_badge": "エイリアン • マザーシップ",
-        "boss_cosmic_chronos_lore": "太陽系侵略計画を全統括するエイリアンの最高意志中枢。",
-        "boss_magma_vulcanus_name": "艦隊ブレイカー クラグソール",
-        "boss_magma_vulcanus_title": "エイリアン闘争大将軍",
-        "boss_magma_vulcanus_scenario": "小惑星帯",
-        "boss_magma_vulcanus_scenario_desc": "クラグソールの重装甲艦が小惑星を粉砕し、地球への侵略航路を切り開く！",
-        "boss_magma_vulcanus_badge": "エイリアン • ウォーロード",
-        "boss_magma_vulcanus_lore": "反物質破壊兵器を装備した冷徹な重装甲侵略戦士。",
-        "btn_continue": "ゲームを再開",
-        "btn_new_game": "新しいゲーム",
-        "btn_new_game_desc": "共有コインで最初から開始",
-        "btn_save_slots": "セーブスロット",
-        "slots_title": "セーブスロット",
-        "slots_sub": "進行状況を管理するか、新しいゲームを開始します",
-        "lbl_highscore": "ハイスコア",
-        "lbl_shared_coins": "コイン",
-        "lbl_highcoins": "最大コイン",
-        "slot_number": "スロット {slot}",
-        "slot_in_progress": "進行中",
-        "slot_empty": "空き",
-        "slot_empty_desc": "セーブデータはありません。共有コインで新しく始めましょう！",
-        "slot_btn_continue": "再開",
-        "slot_btn_new": "新しいゲーム",
-        "slot_btn_delete": "削除",
-        "slot_confirm_overwrite": "スロット {slot} を上書きして新しいゲームを開始しますか？既存の進行状況は置き換えられます。",
-        "slot_confirm_delete": "スロット {slot} のセーブデータを削除してもよろしいですか？",
-        "fb_game_saved": "ゲームの進行状況が保存されました！",
-        "fb_game_resumed": "フェーズ {phase} からゲームを再開しました！",
-        "slots_shared_wallet": "共有コインバンク",
-        "slots_close": "閉じる",
-        "slot_phase_score": "フェーズ {phase} • {score} pts",
-        "slot_date_fmt": "保存日時: {date}",
-        "confirm_new_game_title": "新しいゲームを開始しますか？",
-        "confirm_new_game_desc": "進行中のセーブデータがあります。新しいゲームを開始するとスロット {slot} が上書きされます。共有コインは引き続き利用可能です！",
-        "settings_finger_guide": "運指ビジュアルガイド",
-        "settings_finger_guide_always": "常に有効 (標準)",
-        "settings_finger_guide_training": "練習のみ",
-        "settings_finger_guide_off": "無効",
-        "vk_space": "スペース",
-        "finger_guide_title": "運指ガイド",
-        "finger_ready": "ホームポジション",
-        "finger_space_bar": "スペース",
-        "hand_left": "左手",
-        "hand_right": "右手",
-        "hand_both": "両手",
-        "finger_l_pinky": "左手小指",
-        "finger_l_ring": "左手薬指",
-        "finger_l_middle": "左手中指",
-        "finger_l_index": "左手人差指",
-        "finger_l_thumb": "左手親指",
-        "finger_r_thumb": "右手親指",
-        "finger_r_index": "右手人差指",
-        "finger_r_middle": "右手中指",
-        "finger_r_ring": "右手薬指",
-        "finger_r_pinky": "右手小指",
-        "finger_thumb": "親指",
-        "footer_privacy": "プライバシーポリシー",
-        "btn_privacy": "プライバシー",
-        "settings_privacy": "プライバシーとデータ",
-        "settings_view_privacy": "ポリシーを見る",
-        "privacy_title": "プライバシーポリシーと透明性",
-        "privacy_sub": "データ処理、ブラウザのローカルストレージ、およびGitHub Pagesインフラについて",
-        "privacy_btn_open_page": "全画面ページを開く",
-        "btn_close_privacy": "了解しました",
-        "privacy_badge_nocollect": "データ収集ゼロ",
-        "privacy_badge_local": "100% ローカル保存",
-        "privacy_badge_github": "GitHub Pages ホスティング",
-        "privacy_badge_lgpd": "LGPD & ANPD 準拠",
-        "privacy_sec_collection_title": "1. Digitinho Galaxyによる個人データ収集ゼロ",
-        "privacy_sec_collection_desc": "Digitinho Galaxyは、プレイヤーのブラウザ内で完全に動作する静的クライアントサイドWebゲームです。独自のバックエンドサーバー、リモートデータベース、登録フォーム、ユーザーアカウントシステムはありません。氏名、メールアドレスなどの個人情報を要求、収集、処理、販売することは一切ありません。",
-        "privacy_sec_storage_title": "2. 端末上のローカル保存 (HTML5 LocalStorage)",
-        "privacy_sec_storage_desc": "スコア、セーブスロット、図鑑の単語、実績、サウンド設定、難易度、テーマなどのゲーム進行状況は、すべてお使いのブラウザのローカルストレージ（localStorage）にのみ保存されます。これらのデータが外部に送信されることはなく、ブラウザの設定やゲーム内のスロット管理からいつでも消去できます。",
-        "privacy_sec_hosting_title": "3. ホスティングインフラとGitHub Pagesの技術ログ",
-        "privacy_sec_hosting_desc": "Digitinho Galaxyは、GitHub Pages（GitHub, Inc. / Microsoft運営）上に静的サイトとしてホストされています。アクセス時、GitHubのサーバーはセキュリティ、インフラ保守、不正防止を目的として、GitHubのプライバシーポリシーに従いIPアドレスなどの技術的な接続ログを自動記録する場合があります。Digitinho Galaxyの開発者がこれら未加工のIPログにアクセスしたり、個人を特定することはありません。",
-        "privacy_sec_cookies_title": "4. トラッキングCookieやサードパーティ解析ツールの不使用",
-        "privacy_sec_cookies_desc": "当ゲームでは、広告Cookie、Google Analytics、ソーシャルメディアのトラッカー、行動分析スクリプトは一切使用していません。タイピングの練習とアーケード体験に100%特化しています。",
-        "privacy_sec_lgpd_title": "5. ブラジル一般データ保護法（LGPD）およびANPD指針の遵守",
-        "privacy_sec_lgpd_desc": "ブラジルの一般データ保護法（LGPD・連邦法第13.709/2018号）および国家データ保護機関（ANPD）のガイドラインに従い、本プロジェクトはデータの最小化と透明性の原則を遵守しています。開発者が個人データを収集・処理することはないため、第三者への販売や提供も行われません。",
-        "privacy_sec_opensource_title": "6. オープンソースと透明性の検証",
-        "privacy_sec_opensource_desc": "Digitinho GalaxyはMITライセンスの下で公開されているオープンソースプロジェクトです。誰でもGitHub上で全ソースコードを検査・検証し、隠れたトラッカーや遠隔データ収集が存在しないことを確認できます。",
-        "privacy_sec_links_title": "公式リファレンスおよび規制情報",
-        "privacy_link_github": "GitHub Pages：機能とIPログについて",
-        "privacy_link_anpd": "ANPD：個人データの概念とデータ処理主体",
-        "privacy_link_lgpd": "LGPD — ブラジル一般データ保護法（連邦法第13.709/2018号）",
-        "privacy_back_game": "ゲームに戻る",
-        "privacy_updated": "最終更新：2026年10月 • Digitinho Galaxy タイピングゲーム",
-        "privacy_page_title": "Digitinho Galaxy — プライバシーポリシーと透明性",
-        "privacy_overview_title": "主なポイントの要約",
-        "privacy_contact_title": "お問い合わせと質問",
-        "privacy_contact_desc": "当ゲームはサーバーやデータ収集を持たないクライアントサイドのオープンソースプロジェクトであるため、ご質問やご提案はGitHubリポジトリのIssueよりお寄せください。",
-        "boss_alien_xylarion_name": "虚空の覇者 サイラリオン",
-        "boss_alien_xylarion_title": "エイリアン先鋒司令官",
-        "boss_alien_xylarion_scenario": "カイパーベルト（太陽系の境界）",
-        "boss_alien_xylarion_scenario_desc": "サイラリオン率いる超弩級戦艦艦隊が太陽系への侵略を開始した！",
-        "boss_alien_xylarion_badge": "エイリアン • ドレッドノート",
-        "boss_alien_xylarion_lore": "星間侵略艦隊の総司令官であり、高出力プラズマ兵器の使い手。",
-        "boss_alien_zorkon_name": "軌道の征服者 ゾルコン",
-        "boss_alien_zorkon_title": "生体機械群の群れ主",
-        "boss_alien_zorkon_scenario": "海王星軌道",
-        "boss_alien_zorkon_scenario_desc": "ゾルコンの有機生体群が太陽系の巨大ガス惑星を包囲した！",
-        "boss_alien_zorkon_badge": "エイリアン • スウォーム",
-        "boss_alien_zorkon_lore": "宇宙艦隊をも貪り尽くす生体機械のハイブマインドを統括する。",
-        "boss_alien_vespera_name": "反物質の女帝 ヴェスペラ",
-        "boss_alien_vespera_title": "銀河サイキック主権者",
-        "boss_alien_vespera_scenario": "土星の輪",
-        "boss_alien_vespera_scenario_desc": "ヴェスペラは反物質砲を起動し、太陽系の重力障壁を打ち破ろうとしている！",
-        "boss_alien_vespera_badge": "エイリアン • サイキック",
-        "boss_alien_vespera_lore": "ダークエネルギーと銀河規模の精神嵐を自在に操る。",
-        "boss_alien_kragthor_name": "艦隊ブレイカー クラグソール",
-        "boss_alien_kragthor_title": "エイリアン闘争大将軍",
-        "boss_alien_kragthor_scenario": "小惑星帯",
-        "boss_alien_kragthor_scenario_desc": "クラグソールの重装甲艦が小惑星を粉砕し、地球への侵略航路を切り開く！",
-        "boss_alien_kragthor_badge": "エイリアン • ウォーロード",
-        "boss_alien_kragthor_lore": "反物質破壊兵器を装備した冷徹な重装甲侵略戦士。",
-        "boss_alien_nebulor_name": "暗黒物質の先駆者 ネビュラー",
-        "boss_alien_nebulor_title": "宇宙影の支配体",
-        "boss_alien_nebulor_scenario": "木星軌道",
-        "boss_alien_nebulor_scenario_desc": "ネビュラーは木星の磁気圏を歪め、地球への直接攻撃態勢を整えている！",
-        "boss_alien_nebulor_badge": "エイリアン • シャドウ",
-        "boss_alien_nebulor_lore": "時空の歪みと特異点重力を意のままに操る異形体。",
-        "boss_alien_xenor_name": "銀河最高知性 ゼノア",
-        "boss_alien_xenor_title": "侵略中枢マザーブレイン",
-        "boss_alien_xenor_scenario": "地球・月周回軌道",
-        "boss_alien_xenor_scenario_desc": "ゼノアの超巨大母艦が月軌道に現れ、地球侵略の最終段階に入った！",
-        "boss_alien_xenor_badge": "エイリアン • マザーシップ",
-        "boss_alien_xenor_lore": "太陽系侵略計画を全統括するエイリアンの最高意志中枢。"
+  "ui": {
+    "app_title": "Digitinho Galaxy.",
+    "app_subtitle": "宇宙キーボードをマスターし、宇宙デブリから地球を守れ",
+    "rules_title": "遊び方とルーンのルール",
+    "rule_typing": "<strong>キーボード入力：</strong>文字、音節、単語が画面の底に落ちる前に入力します",
+    "rule_wildcard": "<strong>ワイルドカード単語：</strong>画面上のすべてのルーンを瞬時に破壊しポイントを獲得",
+    "rule_spells": "<strong>数字キー 1〜8（またはクリック）：</strong>スロー、氷結、間隔拡大、シールド、強力な魔法を発動",
+    "rule_combo": "<strong>コンボ＆フューリーモード：</strong>ノーミスの連続入力でスコアが最大8倍にアップ",
+    "rule_danger": "<strong>ライフと危険：</strong>落下直前のルーンは赤く点滅し、落ちるとライフを失います",
+    "btn_start": "プレイ",
+    "btn_training": "トレーニングモード（キー列別）",
+    "btn_zen": "禅モード（ゲームオーバーなし）",
+    "btn_timeattack": "タイムアタック (60秒)",
+    "btn_library": "ライブラリ",
+    "btn_achievements": "実績",
+    "btn_settings": "設定",
+    "btn_shop": "コズミックショップ",
+    "btn_skills_inventory": "スキル",
+    "skills_inventory_title": "コズミックアーセナル",
+    "skills_inventory_sub": "ショップで購入した永久スキル",
+    "skills_inventory_empty": "まだスキルを所持していません。コズミックショップを訪れましょう！",
+    "skills_inventory_stock": "所持数: ×{count}",
+    "start_record_label": "記録:",
+    "start_high_score": "ハイスコア: {score}",
+    "shop_btn_reroll": "再抽選",
+    "shop_reroll_cost": "{cost}",
+    "hud_infinite_mode": "エンドレスアーケード",
+    "hud_coin_farm_progress": "次のコインまで: {current} / {target} 単語",
+    "badge_new_label": "新規",
+    "badge_new_word": "今回のプレイで新しい単語",
+    "fb_coin_farmed": "+1 コズミックコイン獲得！",
+    "start_game_modes": "ゲームモード",
+    "btn_classic_short": "クラシック",
+    "btn_training_short": "トレーニング",
+    "btn_training_desc": "キー列別練習",
+    "btn_zen_short": "禅モード",
+    "btn_zen_desc": "ライフ減少なし",
+    "btn_timeattack_short": "タイムアタック",
+    "btn_timeattack_desc": "60秒勝負",
+    "btn_rules": "遊び方",
+    "btn_close_rules": "了解",
+    "hud_phase": "フェーズ",
+    "hud_zen_badge": "禅モード：ライフ減少なし",
+    "hud_training_badge": "トレーニングモード：ライフ減少なし",
+    "hud_training_lesson": "レッスン",
+    "hud_zen_lbl": "禅モード",
+    "hud_training_lbl": "トレーニング",
+    "hud_free": "自由",
+    "hud_zen_pill": "ライフ減少なし",
+    "hud_zen_pill_title": "禅モードではライフを失わず自由に練習できます",
+    "hud_training_pill_title": "トレーニングモードではライフを失わず精度と筋記憶を鍛えます",
+    "hud_lives": "ライフ",
+    "hud_accuracy": "正確度",
+    "hud_wpm": "WPM",
+    "hud_combo": "コンボ",
+    "hud_upcoming": "次の文字",
+    "hud_new_word_badge": "新しい単語",
+    "hud_spells": "スキル",
+    "hud_active": "発動中",
+    "hud_sec": "秒",
+    "pause_title": "一時停止中",
+    "pause_hint": "<kbd>ESC</kbd> キーで再開",
+    "pause_resume": "再開する",
+    "pause_library": "ライブラリ",
+    "pause_achievements": "実績",
+    "pause_settings": "設定",
+    "pause_training_menu": "トレーニングメニューに戻る",
+    "pause_main_menu": "メインメニューに戻る",
+    "confirm_exit_to_menu": "獲得したコインは保持されますが、このマッチ中に獲得したスキルは失われます。",
+    "confirm_exit_title": "メインメニューに戻りますか？",
+    "confirm_exit_cancel": "プレイを続ける",
+    "confirm_exit_confirm": "はい、戻る",
+    "countdown_hint": "指を準備してください！",
+    "countdown_go": "スタート！",
+    "modal_performance": "パフォーマンス",
+    "modal_phase_complete": "フェーズ {phase} クリア！",
+    "modal_press_continue": "ENTERまたはスペースキーで次へ",
+    "modal_btn_continue": "次へ ➔",
+    "modal_btn_shop": "ショップへ",
+    "modal_stat_score": "スコア",
+    "modal_stat_accuracy": "正確度",
+    "modal_stat_wpm": "WPM",
+    "modal_stat_combo": "最大コンボ",
+    "modal_stat_discovered": "新しく発見した単語",
+    "go_title": "ゲームオーバー",
+    "go_sub": "ルーンの旅は終わりを告げました",
+    "go_score": "マッチスコア",
+    "go_best_score": "最高記録",
+    "go_new_record_tag": "新記録！",
+    "go_final_score": "最終スコア",
+    "go_phase_reached": "到達フェーズ",
+    "go_best_combo": "ベストコンボ",
+    "go_avg_accuracy": "正確度",
+    "go_coins_earned": "獲得した総コイン",
+    "go_hits_errors": "ヒット / ミス",
+    "go_discovered_words": "発見した単語",
+    "go_use_continue": "コンティニューを使用 ({n})",
+    "go_revive_continue": "復活して継続 ({n})",
+    "go_play_again": "もう一度プレイ",
+    "go_main_menu": "メインメニュー",
+    "victory_title": "完全勝利！",
+    "victory_desc": "おめでとうございます！ルーンキーボードを極めました！",
+    "victory_play_again": "もう一度挑戦",
+    "shop_title": "スキルショップ",
+    "shop_sub": "宇宙の旅のための永続的なスキルを獲得する",
+    "shop_points": "所持ポイント：",
+    "shop_coins": "所持コイン：",
+    "shop_btn_buy": "購入",
+    "shop_btn_owned": "購入済み",
+    "shop_available": "利用可能",
+    "shop_btn_close": "閉じる",
+    "shop_confirm_exit_title": "ショップを出ますか？",
+    "shop_confirm_exit_desc": "本当にショップを出ますか？",
+    "shop_confirm_stay": "ショップに残る",
+    "shop_confirm_leave": "メインメニューに戻る",
+    "shop_insufficient_pts": "ポイントが足りません！",
+    "shop_insufficient_coins": "コインが足りません！",
+    "skill_name_freezer": "フリーズ",
+    "skill_desc_freezer": "2分ごとに10秒間、画面上のすべてのルーンを凍結します",
+    "skill_name_bomb": "ボム",
+    "skill_desc_bomb": "90秒ごとに宇宙爆発を起こし、画面内のルーンを一掃します",
+    "skill_name_shield": "ルーンシールド",
+    "skill_desc_shield": "2分ごとに10秒間、ルーン落下やミスタイプのペナルティを防ぎます",
+    "skill_name_vortex": "ヴォルテックス",
+    "skill_desc_vortex": "3分ごとに画面中央に渦が出現し、画面上の全ルーンを吸い込みます",
+    "skill_name_slowdown": "スローモーション",
+    "skill_desc_slowdown": "1分ごとに15秒間、ルーンの落下速度を50%低下させます",
+    "skill_name_haste": "ポイント2倍",
+    "skill_desc_haste": "30秒ごとに10秒間、獲得ポイントを2倍にします",
+    "skill_name_dilation": "間隔拡大",
+    "skill_desc_dilation": "ルーンの出現間隔と距離を最大{max}倍に広げます",
+    "skill_name_autodestroy": "コズミックエコー",
+    "skill_desc_autodestroy": "1分ごとに10秒間、このランで学習済みの単語を自動破壊します",
+    "boss_reward_extralife": "+1 ライフ",
+    "boss_reward_extralife_desc": "現在のランのライフを1回復または追加します",
+    "boss_reward_continue": "コンティニューコイン",
+    "boss_reward_continue_desc": "全ライフ消失時にその場で即時復活できます",
+    "boss_reward_coins_100": "+100 コイン",
+    "boss_reward_coins_100_desc": "金庫に宇宙コインを即座に+100枚獲得します",
+    "hud_level": "レベル",
+    "hud_run_perks": "発動中の能力",
+    "hud_perks_empty": "まだ能力を獲得していません。<br/>レベルアップして解放しましょう！",
+    "levelup_title": "レベルアップ！",
+    "levelup_sub": "レベル {level} に到達しました！",
+    "levelup_prompt": "このランで発動する能力を1つ選択してください：",
+    "levelup_btn_pick": "選択",
+    "fb_dilation_upgraded": "間隔拡大が最大{max}倍に強化されました！",
+    "lib_title": "ルーンライブラリ",
+    "lib_sub": "発見した単語のコレクション",
+    "lib_discovered": "発見した単語",
+    "lib_locked": "ロック中",
+    "lib_typed": "入力済み {count}回",
+    "lib_not_typed": "未入力",
+    "lib_btn_close": "閉じる",
+    "ach_title": "実績とバッジ",
+    "ach_sub": "タイピングの速度、正確さ、達成度のマイルストーン",
+    "ach_counter": "{unlocked} / {total} 解除済み",
+    "ach_btn_close": "閉じる",
+    "ach_status_unlocked": "✓ 獲得済み",
+    "ach_status_locked": "ロック中",
+    "ach_goal_reached": "目標達成",
+    "ach_unit_words": "単語",
+    "ach_unit_streak": "連続",
+    "ach_unit_combo": "コンボ",
+    "ach_dedo_veloz_name": "神速の指",
+    "ach_dedo_veloz_desc": "60 WPMに到達する。",
+    "ach_cirurgico_name": "百発百中",
+    "ach_cirurgico_desc": "精度100%でいずれかのフェーズをクリアする。",
+    "ach_colecionador_name": "コレクター",
+    "ach_colecionador_desc": "ライブラリのすべての単語を解放する。",
+    "ach_mestre_combo_name": "コンボマスター",
+    "ach_mestre_combo_desc": "30連続でキー入力を成功させる。",
+    "ach_modo_furia_name": "フューリーモード",
+    "ach_modo_furia_desc": "15連続ヒットでフューリーモードを発動。",
+    "ach_mestre_tipo_name": "タイピングマスター",
+    "ach_mestre_tipo_desc": "単語を100回完全に完成させる。",
+    "settings_title": "設定",
+    "settings_sub": "ゲームとインターフェースの調整",
+    "settings_sound": "効果音",
+    "settings_sound_on": "オン",
+    "settings_sound_off": "ミュート",
+    "settings_queue": "キューの位置",
+    "settings_queue_top": "上部",
+    "settings_queue_bottom": "下部",
+    "settings_theme": "テーマ",
+    "settings_theme_dark": "ダーク",
+    "settings_theme_light": "ライト",
+    "settings_boss": "ボスバトル",
+    "settings_boss_on": "8フェーズ毎（有効）",
+    "settings_boss_off": "無効",
+    "settings_test_boss": "ボス戦テスト",
+    "settings_face_boss": "ボスと戦う",
+    "settings_lang": "言語",
+    "settings_difficulty": "難易度",
+    "settings_diff_locked_match": "プレイ中に難易度を変更することはできません",
+    "diff_easy": "イージー",
+    "diff_normal": "ノーマル",
+    "diff_hard": "ハード",
+    "diff_desc_easy": "初期速度0.5倍 • ミス加速なし • ゲージ減少なし • 5ライフ",
+    "diff_desc_normal": "初期速度1.0倍 • ミス加速なし • 通常ゲージ減少 • 3ライフ",
+    "diff_desc_hard": "初期速度1.5倍 • ミス時+0.05倍加速 • 通常ゲージ減少 • 3ライフ",
+    "settings_cat_general": "一般・インターフェース",
+    "settings_cat_boss": "ボスバトル",
+    "settings_cat_about": "アプリについて",
+    "settings_version": "現在のバージョン",
+    "settings_author": "作者",
+    "settings_btn_check_update": "確認",
+    "settings_update_latest": "最新",
+    "update_available_title": "新しいアップデートが利用可能です！",
+    "update_available_sub": "キャッシュをクリアして最新バージョンを読み込むにはクリック",
+    "update_btn_action": "更新",
+    "update_applying": "更新中...",
+    "settings_btn_back": "戻る",
+    "training_title": "トレーニング：キーボードの列",
+    "training_sub": "手元を見ずにブラインドタッチの筋肉記憶を鍛えよう",
+    "training_notice": "この練習モードでは<strong>ライフは減りません</strong>。ミスは<strong>正確度 %</strong>と<strong>WPM</strong>に反映されます。",
+    "training_btn_back": "戻る",
+    "training_btn_start": "レッスン開始 (3レッスン) →",
+    "training_btn_again": "もう一度練習",
+    "training_completed": "完了（マスター）",
+    "training_pending": "3レッスン",
+    "training_record_acc": "記録：{acc}% 正確度",
+    "boss_defeated_title": "ボス撃破！",
+    "boss_defeated_sub": "ルーンの試練を鮮やかに突破しました。",
+    "boss_defeated_prompt": "永続ボーナススキルを1つ選択してください：",
+    "boss_btn_pick": "獲得",
+    "boss_pick_skill": "獲得",
+    "boss_default_name": "ボス",
+    "fb_combo_broken": "コンボ途切れ！",
+    "fb_fury_activated": "フューリーモード発動！スコア2倍！",
+    "fb_bomb_activated": "ボム発動 (10秒)！",
+    "fb_bomb_expired": "ボム効果終了",
+    "fb_bomb_explosion": "大爆発 ({lines}列消去)！+{pts}",
+    "fb_freezer_activated": "氷結発動 (10秒)！",
+    "fb_freezer_expired": "氷結終了",
+    "fb_shield_activated": "ルーンシールド発動 (10秒)！",
+    "fb_shield_expired": "シールド効果終了",
+    "fb_shield_blocked": "ルーンシールドがダメージを防いだ！",
+    "fb_shield_error_protected": "シールドがミス入力を守った！",
+    "fb_vortex_activated": "ヴォルテックス発動 (10秒)！",
+    "fb_vortex_expired": "ヴォルテックス効果終了",
+    "fb_slowdown_activated": "スロー発動 (15秒)！",
+    "fb_slowdown_expired": "スロー効果終了",
+    "fb_slow_activated": "スロー発動 (15秒)！",
+    "fb_slow_expired": "スロー効果終了",
+    "fb_haste_activated": "スコア2倍発動 (15秒)！",
+    "fb_haste_expired": "スコア2倍終了",
+    "fb_dilation_activated": "間隔拡大 (45秒)！",
+    "fb_dilation_expired": "間隔拡大効果終了",
+    "fb_speedlock_activated": "速度固定 (1.0x / 60秒)！",
+    "fb_speedlock_expired": "速度固定終了",
+    "fb_autodestroy_activated": "コズミック・オートクリア発動 (60秒)！",
+    "fb_autodestroy_expired": "コズミック・オートクリア終了",
+    "fb_autodestroy_shattered": "⚡ 自動粉砕: {word}! +{pts}",
+    "fb_wildcard": "ワイルドカード！画面全消去！+{pts}",
+    "fb_life_recovered": "ライフ+1 回復！",
+    "fb_perfect": "パーフェクト！",
+    "hud_performance": "パフォーマンスダッシュボード",
+    "hud_total_score": "トータルスコア",
+    "hud_hits": "ヒット",
+    "hud_errors": "ミス",
+    "hud_discovered_words": "発見した言葉",
+    "hud_view_all": "すべて表示",
+    "hud_spells_hint": "ショップで購入<br/>または言葉を完成",
+    "hud_activate_kb": "発動 (キーボード)",
+    "hud_key_label": "キー",
+    "hud_max_phase": "最高フェーズ",
+    "modal_unlocked_words": "解放された単語",
+    "modal_btn_next_phase": "次のフェーズ →",
+    "modal_btn_back_training": "トレーニングメニューに戻る",
+    "shop_note": "購入ごとに価格が上昇します",
+    "shop_btn_continue": "ゲームを続ける",
+    "btn_back_to_game": "ゲームに戻る",
+    "app_loading": "ルーンデータを読み込み中...",
+    "fb_runic_dropped_zen": "⚠️ ルーンが落下しました（-精度）",
+    "fb_runic_dropped": "💔 ルーンが落下しました！",
+    "fb_time_up": "⏱️ 時間切れ！",
+    "fb_boss_enigma_dropped": "💥 謎が解けずに落下！ボスが攻撃しました！",
+    "fb_ice_cleared": "❄️ 画面クリア — 氷結解除！",
+    "fb_error_letter": "❌ 間違った文字です！",
+    "fb_error": "❌ エラー",
+    "fb_wildcard_clean": "💥 ワイルドカード！画面全消去！",
+    "fb_training_completed": "🎉 おめでとうございます！すべてのトレーニングワールドを完了しました！",
+    "fb_continue_used": "🪙 コンティニューを使用しました！フェーズを再開します...",
+    "fb_permanent_life": "+1 最大ライフ増加！",
+    "fb_continue_obtained": "🪙 +1 コンティニュートークンを獲得！",
+    "shop_all_words_unlocked": "すべての単語がすでに発見されています！",
+    "hud_skills_empty_hint": "ショップで購入<br/>または単語を完成 <strong>⚡</strong>",
+    "training_lesson_1_title": "レッスン1：キー認識",
+    "training_lesson_2_title": "レッスン2：指の交互動作",
+    "training_lesson_3_title": "レッスン3：マスターチャレンジ",
+    "training_lesson_1_name": "ホームキー",
+    "training_lesson_2_name": "交互",
+    "training_lesson_3_name": "最終チャレンジ",
+    "training_next_obj_2": "次の目標：キーを組み合わせて短い単語を作り、両手を交互に使います。",
+    "training_next_obj_3": "次の目標：完全な単語を使った流暢さと熟練度の最終チャレンジ！",
+    "training_new_record": "新記録！",
+    "training_world_mastered": "ワールド制覇",
+    "training_mastery_completed": "{world} — 完全習得！",
+    "training_lesson_completed": "{world} — {lesson}完了！",
+    "training_rank_s": "超高精度",
+    "training_rank_a": "優れた流暢さ",
+    "training_rank_b": "良好なコントロール",
+    "training_rank_c": "もっと練習しましょう",
+    "training_stat_world_progress": "ワールド進行度",
+    "training_stat_lesson_done": "レッスン {lesson}/3 完了",
+    "training_stat_accuracy_rate": "正確性",
+    "training_stat_status": "トレーニング状況",
+    "training_stat_completed": "100%完了（3/3レッスン）",
+    "training_stat_keys": "マスターしたキー",
+    "training_stat_accuracy": "今回の精度",
+    "training_stat_best_record": "最高記録（精度）",
+    "training_stat_speed": "タイピング速度（WPM）",
+    "training_stat_hits_errors": "成功 / ミス",
+    "training_hits_errs_val": "{hits}回成功 / {errors}回ミス",
+    "training_btn_next_world": "{world}へ進む →",
+    "training_btn_finish_all": "全トレーニング完了！ →",
+    "training_btn_next_lesson": "レッスン{lesson}へ進む（ルーン{runics}個） →",
+    "fb_boss_defeated": "{boss}を撃破！ +350 コイン！",
+    "modal_phase_pts": "フェーズ獲得スコア",
+    "modal_acc_bonus": "正確度ボーナス ({acc}%)",
+    "modal_penalty": "ミス（ペナルティ）",
+    "modal_net_pts": "加算スコア",
+    "modal_total_pts": "総合スコア",
+    "modal_combo_bonus": "最大コンボボーナス ({combo}×)",
+    "modal_phase_total_pts": "獲得総点数",
+    "modal_section_score": "スコア概要",
+    "modal_section_coins": "獲得コイン",
+    "modal_coins_completion": "ステージクリア",
+    "modal_boss_bonus": "ボス討伐ボーナス",
+    "modal_coins_precision": "100% 精度ボーナス",
+    "modal_coins_streak": "ノーミスクリア継続 ({streak} フェーズ)",
+    "modal_coins_phase_total": "獲得コイン合計",
+    "modal_coins_balance": "総コイン残高",
+    "hud_coins": "コイン",
+    "hud_boss_hp": "ボスHP",
+    "fb_skill_acquired": "⚡ スキル: {skill}！",
+    "fb_vortex_devour": "🌀 ヴォルテックスが {text} を消滅させた！+{pts}",
+    "fb_enigma_solved": "💥 謎解き成功！ボスHP -1！(+{pts}pts)",
+    "fb_reward_granted": "報酬獲得: {reward}！",
+    "queue_top": "上",
+    "queue_bottom": "下",
+    "queue_toggle_to_bottom": "キューを上部に配置中（クリックで下部に移動）",
+    "queue_toggle_to_top": "キューを下部に配置中（クリックで上部に移動）",
+    "theme_switch_to_light": "ライトテーマに切り替え",
+    "theme_switch_to_dark": "ダークテーマに切り替え",
+    "boss_enigma_badge": "📜 謎解き {num} / {total} • {scenario}",
+    "boss_enigma_letters": "{count}文字",
+    "boss_enigma_queue": "謎解き {num} / 3",
+    "boss_level_tag": " (Lv. {level})",
+    "boss_cyber_titan_name": "虚空の覇者 サイラリオン",
+    "boss_cyber_titan_title": "エイリアン先鋒司令官",
+    "boss_cyber_titan_scenario": "カイパーベルト（太陽系の境界）",
+    "boss_cyber_titan_scenario_desc": "サイラリオン率いる超弩級戦艦艦隊が太陽系への侵略を開始した！",
+    "boss_cyber_titan_badge": "エイリアン • ドレッドノート",
+    "boss_cyber_titan_lore": "星間侵略艦隊の総司令官であり、高出力プラズマ兵器の使い手。",
+    "boss_feral_apex_name": "軌道の征服者 ゾルコン",
+    "boss_feral_apex_title": "生体機械群の群れ主",
+    "boss_feral_apex_scenario": "海王星軌道",
+    "boss_feral_apex_scenario_desc": "ゾルコンの有機生体群が太陽系の巨大ガス惑星を包囲した！",
+    "boss_feral_apex_badge": "エイリアン • スウォーム",
+    "boss_feral_apex_lore": "宇宙艦隊をも貪り尽くす生体機械のハイブマインドを統括する。",
+    "boss_arcane_chimera_name": "反物質の女帝 ヴェスペラ",
+    "boss_arcane_chimera_title": "銀河サイキック主権者",
+    "boss_arcane_chimera_scenario": "土星の輪",
+    "boss_arcane_chimera_scenario_desc": "ヴェスペラは反物質砲を起動し、太陽系の重力障壁を打ち破ろうとしている！",
+    "boss_arcane_chimera_badge": "エイリアン • サイキック",
+    "boss_arcane_chimera_lore": "ダークエネルギーと銀河規模の精神嵐を自在に操る。",
+    "boss_abyssal_leviathan_name": "暗黒物質の先駆者 ネビュラー",
+    "boss_abyssal_leviathan_title": "宇宙影の支配体",
+    "boss_abyssal_leviathan_scenario": "木星軌道",
+    "boss_abyssal_leviathan_scenario_desc": "ネビュラーは木星の磁気圏を歪め、地球への直接攻撃態勢を整えている！",
+    "boss_abyssal_leviathan_badge": "エイリアン • シャドウ",
+    "boss_abyssal_leviathan_lore": "時空の歪みと特異点重力を意のままに操る異形体。",
+    "boss_cosmic_chronos_name": "銀河最高知性 ゼノア",
+    "boss_cosmic_chronos_title": "侵略中枢マザーブレイン",
+    "boss_cosmic_chronos_scenario": "地球・月周回軌道",
+    "boss_cosmic_chronos_scenario_desc": "ゼノアの超巨大母艦が月軌道に現れ、地球侵略の最終段階に入った！",
+    "boss_cosmic_chronos_badge": "エイリアン • マザーシップ",
+    "boss_cosmic_chronos_lore": "太陽系侵略計画を全統括するエイリアンの最高意志中枢。",
+    "boss_magma_vulcanus_name": "艦隊ブレイカー クラグソール",
+    "boss_magma_vulcanus_title": "エイリアン闘争大将軍",
+    "boss_magma_vulcanus_scenario": "小惑星帯",
+    "boss_magma_vulcanus_scenario_desc": "クラグソールの重装甲艦が小惑星を粉砕し、地球への侵略航路を切り開く！",
+    "boss_magma_vulcanus_badge": "エイリアン • ウォーロード",
+    "boss_magma_vulcanus_lore": "反物質破壊兵器を装備した冷徹な重装甲侵略戦士。",
+    "btn_continue": "ゲームを再開",
+    "btn_new_game": "新しいゲーム",
+    "btn_new_game_desc": "共有コインで最初から開始",
+    "btn_save_slots": "セーブスロット",
+    "slots_title": "セーブスロット",
+    "slots_sub": "進行状況を管理するか、新しいゲームを開始します",
+    "lbl_highscore": "ハイスコア",
+    "lbl_shared_coins": "コイン",
+    "lbl_highcoins": "最大コイン",
+    "slot_number": "スロット {slot}",
+    "slot_in_progress": "進行中",
+    "slot_empty": "空き",
+    "slot_empty_desc": "セーブデータはありません。共有コインで新しく始めましょう！",
+    "slot_btn_continue": "再開",
+    "slot_btn_new": "新しいゲーム",
+    "slot_btn_delete": "削除",
+    "slot_confirm_overwrite": "スロット {slot} を上書きして新しいゲームを開始しますか？既存の進行状況は置き換えられます。",
+    "slot_confirm_delete": "スロット {slot} のセーブデータを削除してもよろしいですか？",
+    "fb_game_saved": "ゲームの進行状況が保存されました！",
+    "fb_game_resumed": "フェーズ {phase} からゲームを再開しました！",
+    "slots_shared_wallet": "共有コインバンク",
+    "slots_close": "閉じる",
+    "slot_phase_score": "フェーズ {phase} • {score} pts",
+    "slot_date_fmt": "保存日時: {date}",
+    "confirm_new_game_title": "新しいゲームを開始しますか？",
+    "confirm_new_game_desc": "進行中のセーブデータがあります。新しいゲームを開始するとスロット {slot} が上書きされます。共有コインは引き続き利用可能です！",
+    "settings_finger_guide": "運指ビジュアルガイド",
+    "settings_finger_guide_always": "常に有効 (標準)",
+    "settings_finger_guide_training": "練習のみ",
+    "settings_finger_guide_off": "無効",
+    "vk_space": "スペース",
+    "finger_guide_title": "運指ガイド",
+    "finger_ready": "ホームポジション",
+    "finger_space_bar": "スペース",
+    "hand_left": "左手",
+    "hand_right": "右手",
+    "hand_both": "両手",
+    "finger_l_pinky": "左手小指",
+    "finger_l_ring": "左手薬指",
+    "finger_l_middle": "左手中指",
+    "finger_l_index": "左手人差指",
+    "finger_l_thumb": "左手親指",
+    "finger_r_thumb": "右手親指",
+    "finger_r_index": "右手人差指",
+    "finger_r_middle": "右手中指",
+    "finger_r_ring": "右手薬指",
+    "finger_r_pinky": "右手小指",
+    "finger_thumb": "親指",
+    "footer_privacy": "プライバシーポリシー",
+    "btn_privacy": "プライバシー",
+    "settings_privacy": "プライバシーとデータ",
+    "settings_view_privacy": "ポリシーを見る",
+    "privacy_title": "プライバシーポリシーと透明性",
+    "privacy_sub": "データ処理、ブラウザのローカルストレージ、およびGitHub Pagesインフラについて",
+    "privacy_btn_open_page": "全画面ページを開く",
+    "btn_close_privacy": "了解しました",
+    "privacy_badge_nocollect": "データ収集ゼロ",
+    "privacy_badge_local": "100% ローカル保存",
+    "privacy_badge_github": "GitHub Pages ホスティング",
+    "privacy_badge_lgpd": "LGPD & ANPD 準拠",
+    "privacy_sec_collection_title": "1. Digitinho Galaxyによる個人データ収集ゼロ",
+    "privacy_sec_collection_desc": "Digitinho Galaxyは、プレイヤーのブラウザ内で完全に動作する静的クライアントサイドWebゲームです。独自のバックエンドサーバー、リモートデータベース、登録フォーム、ユーザーアカウントシステムはありません。氏名、メールアドレスなどの個人情報を要求、収集、処理、販売することは一切ありません。",
+    "privacy_sec_storage_title": "2. 端末上のローカル保存 (HTML5 LocalStorage)",
+    "privacy_sec_storage_desc": "スコア、セーブスロット、図鑑の単語、実績、サウンド設定、難易度、テーマなどのゲーム進行状況は、すべてお使いのブラウザのローカルストレージ（localStorage）にのみ保存されます。これらのデータが外部に送信されることはなく、ブラウザの設定やゲーム内のスロット管理からいつでも消去できます。",
+    "privacy_sec_hosting_title": "3. ホスティングインフラとGitHub Pagesの技術ログ",
+    "privacy_sec_hosting_desc": "Digitinho Galaxyは、GitHub Pages（GitHub, Inc. / Microsoft運営）上に静的サイトとしてホストされています。アクセス時、GitHubのサーバーはセキュリティ、インフラ保守、不正防止を目的として、GitHubのプライバシーポリシーに従いIPアドレスなどの技術的な接続ログを自動記録する場合があります。Digitinho Galaxyの開発者がこれら未加工のIPログにアクセスしたり、個人を特定することはありません。",
+    "privacy_sec_cookies_title": "4. トラッキングCookieやサードパーティ解析ツールの不使用",
+    "privacy_sec_cookies_desc": "当ゲームでは、広告Cookie、Google Analytics、ソーシャルメディアのトラッカー、行動分析スクリプトは一切使用していません。タイピングの練習とアーケード体験に100%特化しています。",
+    "privacy_sec_lgpd_title": "5. ブラジル一般データ保護法（LGPD）およびANPD指針の遵守",
+    "privacy_sec_lgpd_desc": "ブラジルの一般データ保護法（LGPD・連邦法第13.709/2018号）および国家データ保護機関（ANPD）のガイドラインに従い、本プロジェクトはデータの最小化と透明性の原則を遵守しています。開発者が個人データを収集・処理することはないため、第三者への販売や提供も行われません。",
+    "privacy_sec_opensource_title": "6. オープンソースと透明性の検証",
+    "privacy_sec_opensource_desc": "Digitinho GalaxyはMITライセンスの下で公開されているオープンソースプロジェクトです。誰でもGitHub上で全ソースコードを検査・検証し、隠れたトラッカーや遠隔データ収集が存在しないことを確認できます。",
+    "privacy_sec_links_title": "公式リファレンスおよび規制情報",
+    "privacy_link_github": "GitHub Pages：機能とIPログについて",
+    "privacy_link_anpd": "ANPD：個人データの概念とデータ処理主体",
+    "privacy_link_lgpd": "LGPD — ブラジル一般データ保護法（連邦法第13.709/2018号）",
+    "privacy_back_game": "ゲームに戻る",
+    "privacy_updated": "最終更新：2026年10月 • Digitinho Galaxy タイピングゲーム",
+    "privacy_page_title": "Digitinho Galaxy — プライバシーポリシーと透明性",
+    "privacy_overview_title": "主なポイントの要約",
+    "privacy_contact_title": "お問い合わせと質問",
+    "privacy_contact_desc": "当ゲームはサーバーやデータ収集を持たないクライアントサイドのオープンソースプロジェクトであるため、ご質問やご提案はGitHubリポジトリのIssueよりお寄せください。",
+    "boss_alien_xylarion_name": "虚空の覇者 サイラリオン",
+    "boss_alien_xylarion_title": "エイリアン先鋒司令官",
+    "boss_alien_xylarion_scenario": "カイパーベルト（太陽系の境界）",
+    "boss_alien_xylarion_scenario_desc": "サイラリオン率いる超弩級戦艦艦隊が太陽系への侵略を開始した！",
+    "boss_alien_xylarion_badge": "エイリアン • ドレッドノート",
+    "boss_alien_xylarion_lore": "星間侵略艦隊の総司令官であり、高出力プラズマ兵器の使い手。",
+    "boss_alien_zorkon_name": "軌道の征服者 ゾルコン",
+    "boss_alien_zorkon_title": "生体機械群の群れ主",
+    "boss_alien_zorkon_scenario": "海王星軌道",
+    "boss_alien_zorkon_scenario_desc": "ゾルコンの有機生体群が太陽系の巨大ガス惑星を包囲した！",
+    "boss_alien_zorkon_badge": "エイリアン • スウォーム",
+    "boss_alien_zorkon_lore": "宇宙艦隊をも貪り尽くす生体機械のハイブマインドを統括する。",
+    "boss_alien_vespera_name": "反物質の女帝 ヴェスペラ",
+    "boss_alien_vespera_title": "銀河サイキック主権者",
+    "boss_alien_vespera_scenario": "土星の輪",
+    "boss_alien_vespera_scenario_desc": "ヴェスペラは反物質砲を起動し、太陽系の重力障壁を打ち破ろうとしている！",
+    "boss_alien_vespera_badge": "エイリアン • サイキック",
+    "boss_alien_vespera_lore": "ダークエネルギーと銀河規模の精神嵐を自在に操る。",
+    "boss_alien_kragthor_name": "艦隊ブレイカー クラグソール",
+    "boss_alien_kragthor_title": "エイリアン闘争大将軍",
+    "boss_alien_kragthor_scenario": "小惑星帯",
+    "boss_alien_kragthor_scenario_desc": "クラグソールの重装甲艦が小惑星を粉砕し、地球への侵略航路を切り開く！",
+    "boss_alien_kragthor_badge": "エイリアン • ウォーロード",
+    "boss_alien_kragthor_lore": "反物質破壊兵器を装備した冷徹な重装甲侵略戦士。",
+    "boss_alien_nebulor_name": "暗黒物質の先駆者 ネビュラー",
+    "boss_alien_nebulor_title": "宇宙影の支配体",
+    "boss_alien_nebulor_scenario": "木星軌道",
+    "boss_alien_nebulor_scenario_desc": "ネビュラーは木星の磁気圏を歪め、地球への直接攻撃態勢を整えている！",
+    "boss_alien_nebulor_badge": "エイリアン • シャドウ",
+    "boss_alien_nebulor_lore": "時空の歪みと特異点重力を意のままに操る異形体。",
+    "boss_alien_xenor_name": "銀河最高知性 ゼノア",
+    "boss_alien_xenor_title": "侵略中枢マザーブレイン",
+    "boss_alien_xenor_scenario": "地球・月周回軌道",
+    "boss_alien_xenor_scenario_desc": "ゼノアの超巨大母艦が月軌道に現れ、地球侵略の最終段階に入った！",
+    "boss_alien_xenor_badge": "エイリアン • マザーシップ",
+    "boss_alien_xenor_lore": "太陽系侵略計画を全統括するエイリアンの最高意志中枢。",
+    "hud_perk_passive": "パッシブ",
+    "hud_perk_active_label": "アクティブ",
+    "hud_perk_recharging": "リチャージ",
+    "hud_perk_queue": "待機中",
+    "hud_perk_lvl": "Lv. {lvl}"
+  },
+  "syllables": [
+    "ka",
+    "ki",
+    "ku",
+    "ke",
+    "ko",
+    "sa",
+    "shi",
+    "su",
+    "se",
+    "so",
+    "ta",
+    "chi",
+    "tsu",
+    "te",
+    "to",
+    "na",
+    "ni",
+    "nu",
+    "ne",
+    "no",
+    "ha",
+    "hi",
+    "fu",
+    "he",
+    "ho",
+    "ma",
+    "mi",
+    "mu",
+    "me",
+    "mo",
+    "ya",
+    "yu",
+    "yo",
+    "ra",
+    "ri",
+    "ru",
+    "re",
+    "ro",
+    "wa",
+    "wo"
+  ],
+  "words": [
+    {
+      "text": "sun",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: sun"
     },
-    "syllables": [
-        "ka",
-        "ki",
-        "ku",
-        "ke",
-        "ko",
-        "sa",
-        "shi",
-        "su",
-        "se",
-        "so",
-        "ta",
-        "chi",
-        "tsu",
-        "te",
-        "to",
-        "na",
-        "ni",
-        "nu",
-        "ne",
-        "no",
-        "ha",
-        "hi",
-        "fu",
-        "he",
-        "ho",
-        "ma",
-        "mi",
-        "mu",
-        "me",
-        "mo",
-        "ya",
-        "yu",
-        "yo",
-        "ra",
-        "ri",
-        "ru",
-        "re",
-        "ro",
-        "wa",
-        "wo"
-    ],
-    "words": [
-        {
-            "text": "sun",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: sun"
-        },
-        {
-            "text": "moon",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: moon"
-        },
-        {
-            "text": "moons",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: moons"
-        },
-        {
-            "text": "sky",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: sky"
-        },
-        {
-            "text": "ray",
-            "type": "phenomenon",
-            "meaning": "宇宙・天体関連概念: ray"
-        },
-        {
-            "text": "halo",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: halo"
-        },
-        {
-            "text": "axis",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: axis"
-        },
-        {
-            "text": "phase",
-            "type": "phenomenon",
-            "meaning": "宇宙・天体関連概念: phase"
-        },
-        {
-            "text": "wave",
-            "type": "phenomenon",
-            "meaning": "宇宙・天体関連概念: wave"
-        },
-        {
-            "text": "ship",
-            "type": "tech",
-            "meaning": "宇宙・天体関連概念: ship"
-        },
-        {
-            "text": "nova",
-            "type": "phenomenon",
-            "meaning": "宇宙・天体関連概念: nova"
-        },
-        {
-            "text": "target",
-            "type": "tech",
-            "meaning": "宇宙・天体関連概念: target"
-        },
-        {
-            "text": "data",
-            "type": "tech",
-            "meaning": "宇宙・天体関連概念: data"
-        },
-        {
-            "text": "pitch",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: pitch"
-        },
-        {
-            "text": "year",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: year"
-        },
-        {
-            "text": "vacuum",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: vacuum"
-        },
-        {
-            "text": "astro",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: astro"
-        },
-        {
-            "text": "cosmos",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: cosmos"
-        },
-        {
-            "text": "mars",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: mars"
-        },
-        {
-            "text": "venus",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: venus"
-        },
-        {
-            "text": "earth",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: earth"
-        },
-        {
-            "text": "solar",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: solar"
-        },
-        {
-            "text": "probe",
-            "type": "tech",
-            "meaning": "宇宙・天体関連概念: probe"
-        },
-        {
-            "text": "radar",
-            "type": "tech",
-            "meaning": "宇宙・天体関連概念: radar"
-        },
-        {
-            "text": "magma",
-            "type": "nature",
-            "meaning": "宇宙・天体関連概念: magma"
-        },
-        {
-            "text": "cloud",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: cloud"
-        },
-        {
-            "text": "pluto",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: pluto"
-        },
-        {
-            "text": "orbit",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: orbit"
-        },
-        {
-            "text": "comet",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: comet"
-        },
-        {
-            "text": "pulsar",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: pulsar"
-        },
-        {
-            "text": "quasar",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: quasar"
-        },
-        {
-            "text": "corona",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: corona"
-        },
-        {
-            "text": "meteor",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: meteor"
-        },
-        {
-            "text": "optics",
-            "type": "tech",
-            "meaning": "宇宙・天体関連概念: optics"
-        },
-        {
-            "text": "space",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: space"
-        },
-        {
-            "text": "aurora",
-            "type": "phenomenon",
-            "meaning": "宇宙・天体関連概念: aurora"
-        },
-        {
-            "text": "zenith",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: zenith"
-        },
-        {
-            "text": "hubble",
-            "type": "tech",
-            "meaning": "宇宙・天体関連概念: hubble"
-        },
-        {
-            "text": "dust",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: dust"
-        },
-        {
-            "text": "hole",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: hole"
-        },
-        {
-            "text": "star",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: star"
-        },
-        {
-            "text": "planet",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: planet"
-        },
-        {
-            "text": "galaxy",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: galaxy"
-        },
-        {
-            "text": "galaxies",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: galaxies"
-        },
-        {
-            "text": "universe",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: universe"
-        },
-        {
-            "text": "nebula",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: nebula"
-        },
-        {
-            "text": "gravity",
-            "type": "phenomenon",
-            "meaning": "宇宙・天体関連概念: gravity"
-        },
-        {
-            "text": "supernova",
-            "type": "phenomenon",
-            "meaning": "宇宙・天体関連概念: supernova"
-        },
-        {
-            "text": "astronaut",
-            "type": "tech",
-            "meaning": "宇宙・天体関連概念: astronaut"
-        },
-        {
-            "text": "astronomy",
-            "type": "science",
-            "meaning": "宇宙・天体関連概念: astronomy"
-        },
-        {
-            "text": "exoplanet",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: exoplanet"
-        },
-        {
-            "text": "exoplanets",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: exoplanets"
-        },
-        {
-            "text": "satellite",
-            "type": "tech",
-            "meaning": "宇宙・天体関連概念: satellite"
-        },
-        {
-            "text": "constellation",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: constellation"
-        },
-        {
-            "text": "telescope",
-            "type": "tech",
-            "meaning": "宇宙・天体関連概念: telescope"
-        },
-        {
-            "text": "starship",
-            "type": "tech",
-            "meaning": "宇宙・天体関連概念: starship"
-        },
-        {
-            "text": "atmosphere",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: atmosphere"
-        },
-        {
-            "text": "magnetosphere",
-            "type": "phenomenon",
-            "meaning": "宇宙・天体関連概念: magnetosphere"
-        },
-        {
-            "text": "radiation",
-            "type": "phenomenon",
-            "meaning": "宇宙・天体関連概念: radiation"
-        },
-        {
-            "text": "spectrum",
-            "type": "science",
-            "meaning": "宇宙・天体関連概念: spectrum"
-        },
-        {
-            "text": "andromeda",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: andromeda"
-        },
-        {
-            "text": "heliosphere",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: heliosphere"
-        },
-        {
-            "text": "antimatter",
-            "type": "science",
-            "meaning": "宇宙・天体関連概念: antimatter"
-        },
-        {
-            "text": "singularity",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: singularity"
-        },
-        {
-            "text": "multiverse",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: multiverse"
-        },
-        {
-            "text": "light-year",
-            "type": "science",
-            "meaning": "宇宙・天体関連概念: light-year"
-        },
-        {
-            "text": "black-hole",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: black-hole"
-        },
-        {
-            "text": "stardust",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: stardust"
-        },
-        {
-            "text": "dark-matter",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: dark-matter"
-        },
-        {
-            "text": "dark-energy",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: dark-energy"
-        },
-        {
-            "text": "wormhole",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: wormhole"
-        },
-        {
-            "text": "speed-of-light",
-            "type": "science",
-            "meaning": "宇宙・天体関連概念: speed-of-light"
-        },
-        {
-            "text": "space-station",
-            "type": "tech",
-            "meaning": "宇宙・天体関連概念: space-station"
-        },
-        {
-            "text": "event-horizon",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: event-horizon"
-        },
-        {
-            "text": "milky-way",
-            "type": "cosmos",
-            "meaning": "宇宙・天体関連概念: milky-way"
-        }
-    ],
-    "bossWords": {
-        "alien_dreadnought": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: year"
-            }
-        ],
-        "alien_hive": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: year"
-            }
-        ],
-        "alien_psionic": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: year"
-            }
-        ],
-        "alien_warlord": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: year"
-            }
-        ],
-        "alien_darkmatter": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: year"
-            }
-        ],
-        "alien_mothership": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: year"
-            }
-        ],
-        "robot": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: year"
-            }
-        ],
-        "beast": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: year"
-            }
-        ],
-        "mythology": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: year"
-            }
-        ],
-        "volcano": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: year"
-            }
-        ],
-        "ocean": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: year"
-            }
-        ],
-        "cosmos": [
-            {
-                "text": "sun",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sun"
-            },
-            {
-                "text": "moon",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moon"
-            },
-            {
-                "text": "moons",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: moons"
-            },
-            {
-                "text": "sky",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: sky"
-            },
-            {
-                "text": "ray",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: ray"
-            },
-            {
-                "text": "halo",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: halo"
-            },
-            {
-                "text": "axis",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: axis"
-            },
-            {
-                "text": "phase",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: phase"
-            },
-            {
-                "text": "wave",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: wave"
-            },
-            {
-                "text": "ship",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: ship"
-            },
-            {
-                "text": "nova",
-                "type": "phenomenon",
-                "meaning": "宇宙・天体関連概念: nova"
-            },
-            {
-                "text": "target",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: target"
-            },
-            {
-                "text": "data",
-                "type": "tech",
-                "meaning": "宇宙・天体関連概念: data"
-            },
-            {
-                "text": "pitch",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: pitch"
-            },
-            {
-                "text": "year",
-                "type": "cosmos",
-                "meaning": "宇宙・天体関連概念: year"
-            }
-        ]
+    {
+      "text": "moon",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: moon"
     },
-    "trainingWorlds": []
+    {
+      "text": "moons",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: moons"
+    },
+    {
+      "text": "sky",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: sky"
+    },
+    {
+      "text": "ray",
+      "type": "phenomenon",
+      "meaning": "宇宙・天体関連概念: ray"
+    },
+    {
+      "text": "halo",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: halo"
+    },
+    {
+      "text": "axis",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: axis"
+    },
+    {
+      "text": "phase",
+      "type": "phenomenon",
+      "meaning": "宇宙・天体関連概念: phase"
+    },
+    {
+      "text": "wave",
+      "type": "phenomenon",
+      "meaning": "宇宙・天体関連概念: wave"
+    },
+    {
+      "text": "ship",
+      "type": "tech",
+      "meaning": "宇宙・天体関連概念: ship"
+    },
+    {
+      "text": "nova",
+      "type": "phenomenon",
+      "meaning": "宇宙・天体関連概念: nova"
+    },
+    {
+      "text": "target",
+      "type": "tech",
+      "meaning": "宇宙・天体関連概念: target"
+    },
+    {
+      "text": "data",
+      "type": "tech",
+      "meaning": "宇宙・天体関連概念: data"
+    },
+    {
+      "text": "pitch",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: pitch"
+    },
+    {
+      "text": "year",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: year"
+    },
+    {
+      "text": "vacuum",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: vacuum"
+    },
+    {
+      "text": "astro",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: astro"
+    },
+    {
+      "text": "cosmos",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: cosmos"
+    },
+    {
+      "text": "mars",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: mars"
+    },
+    {
+      "text": "venus",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: venus"
+    },
+    {
+      "text": "earth",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: earth"
+    },
+    {
+      "text": "solar",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: solar"
+    },
+    {
+      "text": "probe",
+      "type": "tech",
+      "meaning": "宇宙・天体関連概念: probe"
+    },
+    {
+      "text": "radar",
+      "type": "tech",
+      "meaning": "宇宙・天体関連概念: radar"
+    },
+    {
+      "text": "magma",
+      "type": "nature",
+      "meaning": "宇宙・天体関連概念: magma"
+    },
+    {
+      "text": "cloud",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: cloud"
+    },
+    {
+      "text": "pluto",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: pluto"
+    },
+    {
+      "text": "orbit",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: orbit"
+    },
+    {
+      "text": "comet",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: comet"
+    },
+    {
+      "text": "pulsar",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: pulsar"
+    },
+    {
+      "text": "quasar",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: quasar"
+    },
+    {
+      "text": "corona",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: corona"
+    },
+    {
+      "text": "meteor",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: meteor"
+    },
+    {
+      "text": "optics",
+      "type": "tech",
+      "meaning": "宇宙・天体関連概念: optics"
+    },
+    {
+      "text": "space",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: space"
+    },
+    {
+      "text": "aurora",
+      "type": "phenomenon",
+      "meaning": "宇宙・天体関連概念: aurora"
+    },
+    {
+      "text": "zenith",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: zenith"
+    },
+    {
+      "text": "hubble",
+      "type": "tech",
+      "meaning": "宇宙・天体関連概念: hubble"
+    },
+    {
+      "text": "dust",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: dust"
+    },
+    {
+      "text": "hole",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: hole"
+    },
+    {
+      "text": "star",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: star"
+    },
+    {
+      "text": "planet",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: planet"
+    },
+    {
+      "text": "galaxy",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: galaxy"
+    },
+    {
+      "text": "galaxies",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: galaxies"
+    },
+    {
+      "text": "universe",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: universe"
+    },
+    {
+      "text": "nebula",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: nebula"
+    },
+    {
+      "text": "gravity",
+      "type": "phenomenon",
+      "meaning": "宇宙・天体関連概念: gravity"
+    },
+    {
+      "text": "supernova",
+      "type": "phenomenon",
+      "meaning": "宇宙・天体関連概念: supernova"
+    },
+    {
+      "text": "astronaut",
+      "type": "tech",
+      "meaning": "宇宙・天体関連概念: astronaut"
+    },
+    {
+      "text": "astronomy",
+      "type": "science",
+      "meaning": "宇宙・天体関連概念: astronomy"
+    },
+    {
+      "text": "exoplanet",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: exoplanet"
+    },
+    {
+      "text": "exoplanets",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: exoplanets"
+    },
+    {
+      "text": "satellite",
+      "type": "tech",
+      "meaning": "宇宙・天体関連概念: satellite"
+    },
+    {
+      "text": "constellation",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: constellation"
+    },
+    {
+      "text": "telescope",
+      "type": "tech",
+      "meaning": "宇宙・天体関連概念: telescope"
+    },
+    {
+      "text": "starship",
+      "type": "tech",
+      "meaning": "宇宙・天体関連概念: starship"
+    },
+    {
+      "text": "atmosphere",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: atmosphere"
+    },
+    {
+      "text": "magnetosphere",
+      "type": "phenomenon",
+      "meaning": "宇宙・天体関連概念: magnetosphere"
+    },
+    {
+      "text": "radiation",
+      "type": "phenomenon",
+      "meaning": "宇宙・天体関連概念: radiation"
+    },
+    {
+      "text": "spectrum",
+      "type": "science",
+      "meaning": "宇宙・天体関連概念: spectrum"
+    },
+    {
+      "text": "andromeda",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: andromeda"
+    },
+    {
+      "text": "heliosphere",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: heliosphere"
+    },
+    {
+      "text": "antimatter",
+      "type": "science",
+      "meaning": "宇宙・天体関連概念: antimatter"
+    },
+    {
+      "text": "singularity",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: singularity"
+    },
+    {
+      "text": "multiverse",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: multiverse"
+    },
+    {
+      "text": "light-year",
+      "type": "science",
+      "meaning": "宇宙・天体関連概念: light-year"
+    },
+    {
+      "text": "black-hole",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: black-hole"
+    },
+    {
+      "text": "stardust",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: stardust"
+    },
+    {
+      "text": "dark-matter",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: dark-matter"
+    },
+    {
+      "text": "dark-energy",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: dark-energy"
+    },
+    {
+      "text": "wormhole",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: wormhole"
+    },
+    {
+      "text": "speed-of-light",
+      "type": "science",
+      "meaning": "宇宙・天体関連概念: speed-of-light"
+    },
+    {
+      "text": "space-station",
+      "type": "tech",
+      "meaning": "宇宙・天体関連概念: space-station"
+    },
+    {
+      "text": "event-horizon",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: event-horizon"
+    },
+    {
+      "text": "milky-way",
+      "type": "cosmos",
+      "meaning": "宇宙・天体関連概念: milky-way"
+    }
+  ],
+  "bossWords": {
+    "alien_dreadnought": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: year"
+      }
+    ],
+    "alien_hive": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: year"
+      }
+    ],
+    "alien_psionic": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: year"
+      }
+    ],
+    "alien_warlord": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: year"
+      }
+    ],
+    "alien_darkmatter": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: year"
+      }
+    ],
+    "alien_mothership": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: year"
+      }
+    ],
+    "robot": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: year"
+      }
+    ],
+    "beast": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: year"
+      }
+    ],
+    "mythology": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: year"
+      }
+    ],
+    "volcano": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: year"
+      }
+    ],
+    "ocean": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: year"
+      }
+    ],
+    "cosmos": [
+      {
+        "text": "sun",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sun"
+      },
+      {
+        "text": "moon",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moon"
+      },
+      {
+        "text": "moons",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: moons"
+      },
+      {
+        "text": "sky",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: sky"
+      },
+      {
+        "text": "ray",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: ray"
+      },
+      {
+        "text": "halo",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: halo"
+      },
+      {
+        "text": "axis",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: axis"
+      },
+      {
+        "text": "phase",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: phase"
+      },
+      {
+        "text": "wave",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: wave"
+      },
+      {
+        "text": "ship",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: ship"
+      },
+      {
+        "text": "nova",
+        "type": "phenomenon",
+        "meaning": "宇宙・天体関連概念: nova"
+      },
+      {
+        "text": "target",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: target"
+      },
+      {
+        "text": "data",
+        "type": "tech",
+        "meaning": "宇宙・天体関連概念: data"
+      },
+      {
+        "text": "pitch",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: pitch"
+      },
+      {
+        "text": "year",
+        "type": "cosmos",
+        "meaning": "宇宙・天体関連概念: year"
+      }
+    ]
+  },
+  "trainingWorlds": []
 }

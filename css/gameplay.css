@@ -192,17 +192,18 @@
 /* ======================================================
    ACTIVE RUN PERKS (LEVEL-UP ROGUELIKE ABILITIES)
    Strictly adheres to .agents/rules/translucent-overlays.md
+   and .agents/rules/typography-and-text-wrapping.md
    ====================================================== */
 .run-perks-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding-top: 6px;
+  gap: 8px;
+  padding-top: 4px;
   width: 100%;
 }
 
 .perk-empty-hint {
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   color: var(--t3);
   line-height: 1.5;
   text-align: center;
@@ -215,135 +216,177 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 7px;
   background: var(--glass-card);
   backdrop-filter: var(--glass-card-blur);
   -webkit-backdrop-filter: var(--glass-card-blur);
   border-radius: 14px;
-  padding: 10px 12px;
-  border: none;
+  padding: 7px 8px;
+  border: none !important;
   overflow: hidden;
   transition: background 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+  transform: none !important;
 }
 
 .run-perk-card:hover {
-  background: var(--glass-card-hover);
-  filter: brightness(1.08);
+  filter: brightness(1.10);
+  transform: none !important;
 }
 
+/* Passive skills: Always active in the run, highlighted with luminous cosmic violet/indigo */
+.run-perk-card.perk-always-active {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.26), rgba(99, 102, 241, 0.18)), var(--glass-card);
+  box-shadow: 0 0 14px rgba(168, 85, 247, 0.32);
+}
+
+.run-perk-card.perk-always-active:hover {
+  filter: brightness(1.14);
+  transform: none !important;
+}
+
+/* Active running duration (Periodic skills actively executing) */
 .run-perk-card.perk-active {
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(16, 185, 129, 0.20)), var(--glass-card);
-  box-shadow: 0 0 16px rgba(6, 182, 212, 0.35);
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.28), rgba(16, 185, 129, 0.22)), var(--glass-card);
+  box-shadow: 0 0 16px rgba(6, 182, 212, 0.40);
 }
 
+.run-perk-card.perk-active:hover {
+  filter: brightness(1.15);
+  transform: none !important;
+}
+
+/* Queued skills awaiting immediate execution */
 .run-perk-card.perk-queued {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.22), rgba(168, 85, 247, 0.18)), var(--glass-card);
-  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.24), rgba(217, 119, 6, 0.18)), var(--glass-card);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.30);
+}
+
+.run-perk-card.perk-queued:hover {
+  filter: brightness(1.12);
+  transform: none !important;
+}
+
+.run-perk-card.perk-cooldown {
+  background: var(--glass-card);
 }
 
 .perk-card-left {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   min-width: 0;
   flex: 1;
 }
 
 .perk-icon-wrap {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 10px;
   background: var(--glass-sub-card);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: none;
+  border: none !important;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
 }
 
-.perk-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-  flex: 1;
+.perk-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
 }
 
-.perk-name-row {
+.perk-svg-fallback {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+}
+
+.perk-card-info {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
+  flex: 1;
+  gap: 1px;
+  justify-content: center;
 }
 
-.perk-name {
-  font-size: 0.78rem;
-  font-weight: 800;
-  color: var(--t1);
+/* Rule 19: Strict Typography Scale & No-Wrap Word Protection */
+.perk-card-name {
+  font-size: 0.80rem;
+  font-weight: 700;
+  color: #FFFFFF;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 1.2;
 }
 
-.perk-lvl-tag {
-  font-size: 0.62rem;
-  font-weight: 800;
-  padding: 1px 5px;
-  border-radius: 6px;
-  background: rgba(99, 102, 241, 0.25);
-  color: #A5B4FC;
-  flex-shrink: 0;
-}
-
-.perk-timing {
-  font-size: 0.65rem;
-  color: var(--t3);
+.perk-card-meta {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--t2);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 1.2;
 }
 
 .perk-card-right {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  margin-left: 4px;
 }
 
+/* Level 3: Tertiary Badges */
 .perk-status-badge {
-  font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  padding: 3px 7px;
+  padding: 3px 6px;
   border-radius: 6px;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: none !important;
+  line-height: 1;
 }
 
-.perk-badge-active {
-  background: rgba(6, 182, 212, 0.28);
-  color: #38BDF8;
+.perk-badge-svg {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+}
+
+.perk-status-badge.perk-status-passive {
+  background: rgba(168, 85, 247, 0.30);
+  color: #E9D5FF;
+}
+
+.perk-status-badge.perk-status-running {
+  background: rgba(6, 182, 212, 0.32);
+  color: #67E8F9;
   box-shadow: 0 0 10px rgba(6, 182, 212, 0.45);
-  animation: rewardPulse 1.6s infinite alternate ease-in-out;
 }
 
-.perk-badge-queued {
-  background: rgba(245, 158, 11, 0.25);
-  color: #FCD34D;
+.perk-status-badge.perk-status-queued {
+  background: rgba(245, 158, 11, 0.28);
+  color: #FDE68A;
 }
 
-.perk-badge-ready {
-  background: rgba(16, 185, 129, 0.25);
-  color: #6EE7B7;
-}
-
-.perk-badge-cd {
+.perk-status-badge.perk-status-cd {
   background: var(--glass-sub-card);
   color: var(--t2);
-}
-
-.perk-badge-passive {
-  background: rgba(99, 102, 241, 0.22);
-  color: #C7D2FE;
 }
 
 /* ======================================================
@@ -614,27 +657,24 @@
 }
 
 /* ======================================================
-   BLACK HOLE EVENT HORIZON SWALLOWING & SPAGHETTIFICATION
-   (Triggered ONLY when words/letters plunge into singularity)
+   ATMOSPHERIC ENTRY IMPACT & DEFENSE DISINTEGRATION
+   (Triggered when debris breaches defense and enters Earth's atmosphere)
    ====================================================== */
 @keyframes swallowIntoBlackHole {
   0% {
-    /* Seamless continuation from progressive spaghettification reached at 80%+ */
-    transform: scale(0.38, 2.35) translateY(0);
+    transform: scale(1) translateY(0);
     opacity: 1;
-    filter: brightness(1.7);
+    filter: brightness(1.6);
   }
-  40% {
-    /* Extreme needle elongation accelerating into the singularity core */
-    transform: scale(0.20, 2.8) translateY(18px);
-    opacity: 0.85;
-    filter: brightness(2.4) drop-shadow(0 0 16px rgba(239, 68, 68, 0.95));
+  35% {
+    transform: scale(0.75, 1.1) translateY(12px);
+    opacity: 0.9;
+    filter: brightness(2.6) drop-shadow(0 0 16px rgba(239, 68, 68, 0.9));
   }
   100% {
-    /* Total consumption into the singularity void */
-    transform: scale(0.01, 3.5) translateY(54px);
+    transform: scale(0.15, 0.4) translateY(32px);
     opacity: 0;
-    filter: brightness(3.2) blur(2px);
+    filter: brightness(3.5) blur(3px);
   }
 }
 

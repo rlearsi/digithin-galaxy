@@ -550,6 +550,7 @@ const SKILLS_CONFIG = {
   freezer: {
     id: 'freezer',
     icon: '❄️',
+    image: 'assets/skills/freezer.webp',
     nameKey: 'skill_name_freezer',
     descKey: 'skill_desc_freezer',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
@@ -569,6 +570,7 @@ const SKILLS_CONFIG = {
   bomb: {
     id: 'bomb',
     icon: '💣',
+    image: 'assets/skills/bomb.webp',
     nameKey: 'skill_name_bomb',
     descKey: 'skill_desc_bomb',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
@@ -588,6 +590,7 @@ const SKILLS_CONFIG = {
   shield: {
     id: 'shield',
     icon: '🛡️',
+    image: 'assets/skills/shield.webp',
     nameKey: 'skill_name_shield',
     descKey: 'skill_desc_shield',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
@@ -603,6 +606,7 @@ const SKILLS_CONFIG = {
   vortex: {
     id: 'vortex',
     icon: '🌀',
+    image: 'assets/skills/vortex.webp',
     nameKey: 'skill_name_vortex',
     descKey: 'skill_desc_vortex',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
@@ -622,6 +626,7 @@ const SKILLS_CONFIG = {
   slowdown: {
     id: 'slowdown',
     icon: '⏱️',
+    image: 'assets/skills/slowdown.webp',
     nameKey: 'skill_name_slowdown',
     descKey: 'skill_desc_slowdown',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
@@ -643,6 +648,7 @@ const SKILLS_CONFIG = {
   haste: {
     id: 'haste',
     icon: '⚡',
+    image: 'assets/skills/haste.webp',
     nameKey: 'skill_name_haste',
     descKey: 'skill_desc_haste',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
@@ -659,6 +665,7 @@ const SKILLS_CONFIG = {
   dilation: {
     id: 'dilation',
     icon: '🌌',
+    image: 'assets/skills/dilation.webp',
     nameKey: 'skill_name_dilation',
     descKey: 'skill_desc_dilation',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
@@ -677,6 +684,7 @@ const SKILLS_CONFIG = {
   autodestroy: {
     id: 'autodestroy',
     icon: '⚡',
+    image: 'assets/skills/autodestroy.webp',
     nameKey: 'skill_name_autodestroy',
     descKey: 'skill_desc_autodestroy',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },

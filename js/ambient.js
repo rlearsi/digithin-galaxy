@@ -20,17 +20,17 @@
   let height = 0;
   let animationId = null;
 
-  // Gravitational pulse triggered when words fall into the event horizon
+  // Planetary defense impact pulse triggered when debris touches Earth's atmosphere
   let blackHolePulse = 0;
   window.triggerBlackHolePulse = function() {
     blackHolePulse = 1.0;
-    const vortex = document.getElementById('black-hole-vortex');
-    if (vortex) {
-      vortex.classList.remove('pulse');
-      void vortex.offsetWidth; // Force CSS reflow
-      vortex.classList.add('pulse');
+    const earth = document.getElementById('earth-horizon') || document.getElementById('black-hole-vortex');
+    if (earth) {
+      earth.classList.remove('pulse');
+      void earth.offsetWidth; // Force CSS reflow
+      earth.classList.add('pulse');
       setTimeout(() => {
-        vortex.classList.remove('pulse');
+        earth.classList.remove('pulse');
       }, 420);
     }
   };
