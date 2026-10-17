@@ -7,10 +7,10 @@
     "rule_wildcard": "<strong>ワイルドカード単語：</strong>画面上のすべてのルーンを瞬時に破壊しポイントを獲得",
     "rule_spells": "<strong>数字キー 1〜8（またはクリック）：</strong>スロー、氷結、間隔拡大、シールド、強力な魔法を発動",
     "rule_combo": "<strong>コンボ＆フューリーモード：</strong>ノーミスの連続入力でスコアが最大8倍にアップ",
-    "rule_danger": "<strong>ライフと危険：</strong>落下直前のルーンは赤く点滅し、落ちるとライフを失います",
+    "rule_danger": "<strong>シールドと危険：</strong>落下直前のルーンは赤く点滅し、落下するとシールドが損傷します（クラシックでは3シールド）",
     "btn_start": "プレイ",
     "btn_training": "トレーニングモード（キー列別）",
-    "btn_zen": "禅モード（ゲームオーバーなし）",
+    "btn_zen": "禅モード（シールド無制限）",
     "btn_timeattack": "タイムアタック (60秒)",
     "btn_library": "ライブラリ",
     "btn_achievements": "実績",
@@ -35,21 +35,21 @@
     "btn_training_short": "トレーニング",
     "btn_training_desc": "キー列別練習",
     "btn_zen_short": "禅モード",
-    "btn_zen_desc": "ライフ減少なし",
+    "btn_zen_desc": "シールド無制限",
     "btn_timeattack_short": "タイムアタック",
     "btn_timeattack_desc": "60秒勝負",
     "btn_rules": "遊び方",
     "btn_close_rules": "了解",
     "hud_phase": "フェーズ",
-    "hud_zen_badge": "禅モード：ライフ減少なし",
-    "hud_training_badge": "トレーニングモード：ライフ減少なし",
+    "hud_zen_badge": "禅モード：シールド無制限",
+    "hud_training_badge": "トレーニングモード：シールド保護",
     "hud_training_lesson": "レッスン",
     "hud_zen_lbl": "禅モード",
     "hud_training_lbl": "トレーニング",
-    "hud_free": "自由",
-    "hud_zen_pill": "ライフ減少なし",
-    "hud_zen_pill_title": "禅モードではライフを失わず自由に練習できます",
-    "hud_training_pill_title": "トレーニングモードではライフを失わず精度と筋記憶を鍛えます",
+    "hud_free": "無制限",
+    "hud_zen_pill": "シールド無制限",
+    "hud_zen_pill_title": "禅モードではシールドを失わず自由に練習できます",
+    "hud_training_pill_title": "トレーニングモードではシールドを失わず精度と筋記憶を鍛えます",
     "hud_shields": "シールド",
     "hud_lives": "シールド",
     "hud_accuracy": "正確度",
@@ -198,9 +198,9 @@
     "diff_easy": "イージー",
     "diff_normal": "ノーマル",
     "diff_hard": "ハード",
-    "diff_desc_easy": "初期速度0.5倍 • ミス加速なし • ゲージ減少なし • 5ライフ",
-    "diff_desc_normal": "初期速度1.0倍 • ミス加速なし • 通常ゲージ減少 • 3ライフ",
-    "diff_desc_hard": "初期速度1.5倍 • ミス時+0.05倍加速 • 通常ゲージ減少 • 3ライフ",
+    "diff_desc_easy": "初期速度0.5倍 • ミス加速なし • ゲージ減少なし • 5シールド",
+    "diff_desc_normal": "初期速度1.0倍 • ミス加速なし • 通常ゲージ減少 • 3シールド",
+    "diff_desc_hard": "初期速度1.5倍 • ミス時+0.05倍加速 • 通常ゲージ減少 • 3シールド",
     "settings_cat_general": "一般・インターフェース",
     "settings_cat_boss": "ボスバトル",
     "settings_cat_about": "アプリについて",
@@ -215,7 +215,7 @@
     "settings_btn_back": "戻る",
     "training_title": "トレーニング：キーボードの列",
     "training_sub": "手元を見ずにブラインドタッチの筋肉記憶を鍛えよう",
-    "training_notice": "この練習モードでは<strong>ライフは減りません</strong>。ミスは<strong>正確度 %</strong>と<strong>WPM</strong>に反映されます。",
+    "training_notice": "この練習モードでは<strong>シールドは減りません</strong>。入力ミスや落下したルーンは<strong>正確度 %</strong>と<strong>WPM</strong>に反映されます。",
     "training_btn_back": "戻る",
     "training_btn_start": "レッスン開始 (3レッスン) →",
     "training_btn_again": "もう一度練習",
@@ -555,1305 +555,1450 @@
   "words": [
     {
       "text": "sun",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: sun"
+      "type": "宇宙",
+      "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
     },
     {
       "text": "moon",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: moon"
+      "type": "宇宙",
+      "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
     },
     {
       "text": "moons",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: moons"
+      "type": "宇宙",
+      "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
     },
     {
       "text": "sky",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: sky"
+      "type": "宇宙",
+      "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
     },
     {
       "text": "ray",
-      "type": "phenomenon",
-      "meaning": "宇宙・天体関連概念: ray"
+      "type": "宇宙現象",
+      "meaning": "電磁エネルギーの集中した束、または放射される星の光"
     },
     {
       "text": "halo",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: halo"
+      "type": "宇宙",
+      "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
     },
     {
       "text": "axis",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: axis"
+      "type": "宇宙",
+      "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
     },
     {
       "text": "phase",
-      "type": "phenomenon",
-      "meaning": "宇宙・天体関連概念: phase"
+      "type": "宇宙現象",
+      "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
     },
     {
       "text": "wave",
-      "type": "phenomenon",
-      "meaning": "宇宙・天体関連概念: wave"
+      "type": "宇宙現象",
+      "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
     },
     {
       "text": "ship",
-      "type": "tech",
-      "meaning": "宇宙・天体関連概念: ship"
+      "type": "宇宙技術",
+      "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
     },
     {
       "text": "nova",
-      "type": "phenomenon",
-      "meaning": "宇宙・天体関連概念: nova"
+      "type": "宇宙現象",
+      "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
     },
     {
       "text": "target",
-      "type": "tech",
-      "meaning": "宇宙・天体関連概念: target"
+      "type": "宇宙技術",
+      "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
     },
     {
       "text": "data",
-      "type": "tech",
-      "meaning": "宇宙・天体関連概念: data"
+      "type": "宇宙技術",
+      "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
     },
     {
       "text": "pitch",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: pitch"
+      "type": "宇宙",
+      "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
     },
     {
       "text": "year",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: year"
+      "type": "宇宙",
+      "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
     },
     {
       "text": "vacuum",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: vacuum"
+      "type": "宇宙",
+      "meaning": "大気や物質が存在せず、静寂な宇宙の広がりが支配する真空の空間"
     },
     {
       "text": "astro",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: astro"
+      "type": "宇宙",
+      "meaning": "果てしない宇宙空間に存在するあらゆる天然の天体"
     },
     {
       "text": "cosmos",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: cosmos"
+      "type": "宇宙",
+      "meaning": "秩序と調和を持ち、無限の広がりを持つ物理的な全宇宙"
     },
     {
       "text": "mars",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: mars"
+      "type": "宇宙",
+      "meaning": "太陽から4番目の惑星であり、歴史的に「赤い惑星」として知られる火星"
     },
     {
       "text": "venus",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: venus"
+      "type": "宇宙",
+      "meaning": "太陽から2番目の惑星であり、夜空で最も明るく輝く金星"
     },
     {
       "text": "earth",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: earth"
+      "type": "宇宙",
+      "meaning": "液体の水と豊かな生命を宿す、私たちが住む青い故郷の惑星「地球」"
     },
     {
       "text": "solar",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: solar"
+      "type": "宇宙",
+      "meaning": "太陽、太陽風、コロナ放射線、およびその重力圏に関わる概念"
     },
     {
       "text": "probe",
-      "type": "tech",
-      "meaning": "宇宙・天体関連概念: probe"
+      "type": "宇宙技術",
+      "meaning": "未知の大気や天体を調査するために打ち上げられる無人科学探査機"
     },
     {
       "text": "radar",
-      "type": "tech",
-      "meaning": "宇宙・天体関連概念: radar"
+      "type": "宇宙技術",
+      "meaning": "電波を反射させて惑星表面や小惑星の地形を観測・マッピングするシステム"
     },
     {
       "text": "magma",
-      "type": "nature",
-      "meaning": "宇宙・天体関連概念: magma"
+      "type": "自然",
+      "meaning": "地質学的に活動的な惑星の地殻深部に存在する極めて高温の溶融岩石"
     },
     {
       "text": "cloud",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: cloud"
+      "type": "宇宙",
+      "meaning": "新しい星々を誕生させる水素と宇宙塵からなる高密度星間分子雲"
     },
     {
       "text": "pluto",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: pluto"
+      "type": "宇宙",
+      "meaning": "太陽系の外縁部、カイパーベルトに位置する氷の準惑星「冥王星」"
     },
     {
       "text": "orbit",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: orbit"
+      "type": "宇宙",
+      "meaning": "重力によって天体が大質量な中心天体の周囲を描く曲線軌道"
     },
     {
       "text": "comet",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: comet"
+      "type": "宇宙",
+      "meaning": "太陽に近づくと熱でガスや塵を噴き出し輝く尾を引く氷の天体「彗星」"
     },
     {
       "text": "pulsar",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: pulsar"
+      "type": "宇宙",
+      "meaning": "高速で自転し周期的な電磁パルスを宇宙へ放射する強磁性中性子星"
     },
     {
       "text": "quasar",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: quasar"
+      "type": "宇宙",
+      "meaning": "超大質量ブラックホールをエネルギー源とする極めて明るい遠方活動銀河核"
     },
     {
       "text": "corona",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: corona"
+      "type": "宇宙",
+      "meaning": "太陽大気の最外層に広がる数百万度の超高温プラズマ層「コロナ」"
     },
     {
       "text": "meteor",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: meteor"
+      "type": "宇宙",
+      "meaning": "宇宙の小片が大気圏に突入して高温摩擦で発光する流星"
     },
     {
       "text": "optics",
-      "type": "tech",
-      "meaning": "宇宙・天体関連概念: optics"
+      "type": "宇宙技術",
+      "meaning": "深宇宙探査望遠鏡で天体からの光を集光・解析する光学技術"
     },
     {
       "text": "space",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: space"
+      "type": "宇宙",
+      "meaning": "惑星、星々、銀河が漂う果てしない三次元の無限の広がり"
     },
     {
       "text": "aurora",
-      "type": "phenomenon",
-      "meaning": "宇宙・天体関連概念: aurora"
+      "type": "宇宙現象",
+      "meaning": "太陽風の荷電粒子が惑星の磁気圏と大気に衝突して輝く極光「オーロラ」"
     },
     {
       "text": "zenith",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: zenith"
+      "type": "宇宙",
+      "meaning": "観測者の頭上真上の天球上に位置する仮想の最高点「天頂」"
     },
     {
       "text": "hubble",
-      "type": "tech",
-      "meaning": "宇宙・天体関連概念: hubble"
+      "type": "宇宙技術",
+      "meaning": "人類の宇宙観を大きく変革した伝説的な軌道上宇宙望遠鏡「ハッブル」"
     },
     {
       "text": "dust",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: dust"
+      "type": "宇宙",
+      "meaning": "銀河の渦状腕全体に分散する微小な鉱物粒子と宇宙煤（宇宙塵）"
     },
     {
       "text": "hole",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: hole"
+      "type": "宇宙",
+      "meaning": "時空が特異点へと極度に歪み落ち込む強大な重力場領域"
     },
     {
       "text": "star",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: star"
+      "type": "宇宙",
+      "meaning": "中心核での熱核融合反応によって自ら光り輝く巨大なプラズマ球「恒星」"
     },
     {
       "text": "planet",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: planet"
+      "type": "宇宙",
+      "meaning": "恒星を周回し、自らの重力で球形を保ち軌道上を支配する主要天体「惑星」"
     },
     {
       "text": "galaxy",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: galaxy"
+      "type": "宇宙",
+      "meaning": "何千億もの恒星、暗黒物質、星雲が重力によって結合した巨大構造「銀河」"
     },
     {
       "text": "galaxies",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: galaxies"
+      "type": "宇宙",
+      "meaning": "宇宙の大規模構造の網の目全体に分布する無数の銀河宇宙"
     },
     {
       "text": "universe",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: universe"
+      "type": "宇宙",
+      "meaning": "物質、エネルギー、空間、時間、物理法則のすべてを含む森羅万象「全宇宙」"
     },
     {
       "text": "nebula",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: nebula"
+      "type": "宇宙",
+      "meaning": "イオン化ガス、恒星の残骸、宇宙塵が発光する広大な星間雲「星雲」"
     },
     {
       "text": "gravity",
-      "type": "phenomenon",
-      "meaning": "宇宙・天体関連概念: gravity"
+      "type": "宇宙現象",
+      "meaning": "質量やエネルギーに応じて時空を歪める宇宙の根本的な引力「重力」"
     },
     {
       "text": "supernova",
-      "type": "phenomenon",
-      "meaning": "宇宙・天体関連概念: supernova"
+      "type": "宇宙現象",
+      "meaning": "大質量星の終末期に起き、銀河全体に匹敵する光を放つ超新星爆発"
     },
     {
       "text": "astronaut",
-      "type": "tech",
-      "meaning": "宇宙・天体関連概念: astronaut"
+      "type": "宇宙技術",
+      "meaning": "軌道上や惑星間への過酷な宇宙飛行任務を遂行する訓練を受けた宇宙飛行士"
     },
     {
       "text": "astronomy",
-      "type": "science",
-      "meaning": "宇宙・天体関連概念: astronomy"
+      "type": "宇宙科学",
+      "meaning": "天体、物理的宇宙、深宇宙の法則と起源を研究する学問「天文学」"
     },
     {
       "text": "exoplanet",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: exoplanet"
+      "type": "宇宙",
+      "meaning": "私たちの太陽系外に位置し、遠くの恒星を周回する太陽系外惑星"
     },
     {
       "text": "exoplanets",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: exoplanets"
+      "type": "宇宙",
+      "meaning": "天の川銀河の遠方恒星系に存在する無数の系外惑星群"
     },
     {
       "text": "satellite",
-      "type": "tech",
-      "meaning": "宇宙・天体関連概念: satellite"
+      "type": "宇宙技術",
+      "meaning": "観測や通信のために惑星を周回する人工または天然の軌道周回衛星"
     },
     {
       "text": "constellation",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: constellation"
+      "type": "宇宙",
+      "meaning": "天文学の星図において夜空に描かれた恒星の特定の配置「星座」"
     },
     {
       "text": "telescope",
-      "type": "tech",
-      "meaning": "宇宙・天体関連概念: telescope"
+      "type": "宇宙技術",
+      "meaning": "遠方の天体からの電磁波や可視光線を集めて観測する光学望遠鏡"
     },
     {
       "text": "starship",
-      "type": "tech",
-      "meaning": "宇宙・天体関連概念: starship"
+      "type": "宇宙技術",
+      "meaning": "恒星間の広大な深淵を航行可能な先進的恒星間宇宙船「スターシップ」"
     },
     {
       "text": "atmosphere",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: atmosphere"
+      "type": "宇宙",
+      "meaning": "重力によって天体の周囲に保持されている気体の層「大気圏」"
     },
     {
       "text": "magnetosphere",
-      "type": "phenomenon",
-      "meaning": "宇宙・天体関連概念: magnetosphere"
+      "type": "宇宙現象",
+      "meaning": "高エネルギー太陽風や宇宙放射線を遮る惑星の磁気防護シールド「磁気圏」"
     },
     {
       "text": "radiation",
-      "type": "phenomenon",
-      "meaning": "宇宙・天体関連概念: radiation"
+      "type": "宇宙現象",
+      "meaning": "宇宙空間を光速で移動する高エネルギー電磁波や素粒子線「放射線」"
     },
     {
       "text": "spectrum",
-      "type": "science",
-      "meaning": "宇宙・天体関連概念: spectrum"
+      "type": "宇宙科学",
+      "meaning": "光を波長ごとに分散させ天体の温度や化学組成を解き明かす「スペクトル」"
     },
     {
       "text": "andromeda",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: andromeda"
+      "type": "宇宙",
+      "meaning": "私たちの天の川銀河と将来重力衝突する軌道にある最寄りの大型渦巻銀河"
     },
     {
       "text": "heliosphere",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: heliosphere"
+      "type": "宇宙",
+      "meaning": "太陽風によって星間空間の中に形成される巨大な磁気バブル領域「太陽圏」"
     },
     {
       "text": "antimatter",
-      "type": "science",
-      "meaning": "宇宙・天体関連概念: antimatter"
+      "type": "宇宙科学",
+      "meaning": "通常の物質と接触すると互いに強烈に対消滅する反粒子からなる「反物質」"
     },
     {
       "text": "singularity",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: singularity"
+      "type": "宇宙",
+      "meaning": "ブラックホールの中心にあり、重力密度が無限大となり物理法則が崩壊する「特異点」"
     },
     {
       "text": "multiverse",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: multiverse"
+      "type": "宇宙",
+      "meaning": "無限の時空泡や異なる物理法則を含む並行宇宙の集合概念「マルチバース」"
     },
     {
       "text": "light-year",
-      "type": "science",
-      "meaning": "宇宙・天体関連概念: light-year"
+      "type": "宇宙科学",
+      "meaning": "光が真空中を1太陽年（約9兆4600億キロ）かけて進む天文学的距離「光年」"
     },
     {
       "text": "black-hole",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: black-hole"
+      "type": "宇宙",
+      "meaning": "光さえも脱出できないほど強大な重力場を持つ極限の天体「ブラックホール」"
     },
     {
       "text": "stardust",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: stardust"
+      "type": "宇宙",
+      "meaning": "超新星爆発の残滓であり、新たな岩石惑星や生命を育む重元素の星屑"
     },
     {
       "text": "dark-matter",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: dark-matter"
+      "type": "宇宙",
+      "meaning": "光を発さず電磁波では観測できないが宇宙の質量の大部分を占める「暗黒物質」"
     },
     {
       "text": "dark-energy",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: dark-energy"
+      "type": "宇宙",
+      "meaning": "観測可能な宇宙の膨張を加速させている謎に満ちた宇宙エネルギー「暗黒エネルギー」"
     },
     {
       "text": "wormhole",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: wormhole"
+      "type": "宇宙",
+      "meaning": "離れた二つの時空領域を直結する理論上のトポロジー的短縮路「ワームホール」"
     },
     {
       "text": "speed-of-light",
-      "type": "science",
-      "meaning": "宇宙・天体関連概念: speed-of-light"
+      "type": "宇宙科学",
+      "meaning": "真空中を秒速約30万キロメートルで進む宇宙の普遍的な最高速度定数「光速」"
     },
     {
       "text": "space-station",
-      "type": "tech",
-      "meaning": "宇宙・天体関連概念: space-station"
+      "type": "宇宙技術",
+      "meaning": "科学者が滞在し微小重力環境で最先端の研究を行う有人軌道宇宙ステーション"
     },
     {
       "text": "event-horizon",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: event-horizon"
+      "type": "宇宙",
+      "meaning": "ブラックホールを取り囲み、それを超えると何者も戻れない境界「事象の地平面」"
     },
     {
       "text": "milky-way",
-      "type": "cosmos",
-      "meaning": "宇宙・天体関連概念: milky-way"
+      "type": "宇宙",
+      "meaning": "何千億もの恒星系を抱え私たちの太陽系が属する棒渦巻銀河「天の川銀河」"
     }
   ],
   "bossWords": {
     "alien_dreadnought": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sun"
+        "type": "宇宙",
+        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moon"
+        "type": "宇宙",
+        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moons"
+        "type": "宇宙",
+        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sky"
+        "type": "宇宙",
+        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: ray"
+        "type": "宇宙現象",
+        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: halo"
+        "type": "宇宙",
+        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: axis"
+        "type": "宇宙",
+        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: phase"
+        "type": "宇宙現象",
+        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: wave"
+        "type": "宇宙現象",
+        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: ship"
+        "type": "宇宙技術",
+        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: nova"
+        "type": "宇宙現象",
+        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: target"
+        "type": "宇宙技術",
+        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: data"
+        "type": "宇宙技術",
+        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: pitch"
+        "type": "宇宙",
+        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: year"
+        "type": "宇宙",
+        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
       }
     ],
     "alien_hive": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sun"
+        "type": "宇宙",
+        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moon"
+        "type": "宇宙",
+        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moons"
+        "type": "宇宙",
+        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sky"
+        "type": "宇宙",
+        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: ray"
+        "type": "宇宙現象",
+        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: halo"
+        "type": "宇宙",
+        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: axis"
+        "type": "宇宙",
+        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: phase"
+        "type": "宇宙現象",
+        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: wave"
+        "type": "宇宙現象",
+        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: ship"
+        "type": "宇宙技術",
+        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: nova"
+        "type": "宇宙現象",
+        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: target"
+        "type": "宇宙技術",
+        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: data"
+        "type": "宇宙技術",
+        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: pitch"
+        "type": "宇宙",
+        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: year"
+        "type": "宇宙",
+        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
       }
     ],
     "alien_psionic": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sun"
+        "type": "宇宙",
+        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moon"
+        "type": "宇宙",
+        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moons"
+        "type": "宇宙",
+        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sky"
+        "type": "宇宙",
+        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: ray"
+        "type": "宇宙現象",
+        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: halo"
+        "type": "宇宙",
+        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: axis"
+        "type": "宇宙",
+        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: phase"
+        "type": "宇宙現象",
+        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: wave"
+        "type": "宇宙現象",
+        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: ship"
+        "type": "宇宙技術",
+        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: nova"
+        "type": "宇宙現象",
+        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: target"
+        "type": "宇宙技術",
+        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: data"
+        "type": "宇宙技術",
+        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: pitch"
+        "type": "宇宙",
+        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: year"
+        "type": "宇宙",
+        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
       }
     ],
     "alien_warlord": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sun"
+        "type": "宇宙",
+        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moon"
+        "type": "宇宙",
+        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moons"
+        "type": "宇宙",
+        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sky"
+        "type": "宇宙",
+        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: ray"
+        "type": "宇宙現象",
+        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: halo"
+        "type": "宇宙",
+        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: axis"
+        "type": "宇宙",
+        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: phase"
+        "type": "宇宙現象",
+        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: wave"
+        "type": "宇宙現象",
+        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: ship"
+        "type": "宇宙技術",
+        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: nova"
+        "type": "宇宙現象",
+        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: target"
+        "type": "宇宙技術",
+        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: data"
+        "type": "宇宙技術",
+        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: pitch"
+        "type": "宇宙",
+        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: year"
+        "type": "宇宙",
+        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
       }
     ],
     "alien_darkmatter": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sun"
+        "type": "宇宙",
+        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moon"
+        "type": "宇宙",
+        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moons"
+        "type": "宇宙",
+        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sky"
+        "type": "宇宙",
+        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: ray"
+        "type": "宇宙現象",
+        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: halo"
+        "type": "宇宙",
+        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: axis"
+        "type": "宇宙",
+        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: phase"
+        "type": "宇宙現象",
+        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: wave"
+        "type": "宇宙現象",
+        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: ship"
+        "type": "宇宙技術",
+        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: nova"
+        "type": "宇宙現象",
+        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: target"
+        "type": "宇宙技術",
+        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: data"
+        "type": "宇宙技術",
+        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: pitch"
+        "type": "宇宙",
+        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: year"
+        "type": "宇宙",
+        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
       }
     ],
     "alien_mothership": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sun"
+        "type": "宇宙",
+        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moon"
+        "type": "宇宙",
+        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moons"
+        "type": "宇宙",
+        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sky"
+        "type": "宇宙",
+        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: ray"
+        "type": "宇宙現象",
+        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: halo"
+        "type": "宇宙",
+        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: axis"
+        "type": "宇宙",
+        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: phase"
+        "type": "宇宙現象",
+        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: wave"
+        "type": "宇宙現象",
+        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: ship"
+        "type": "宇宙技術",
+        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: nova"
+        "type": "宇宙現象",
+        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: target"
+        "type": "宇宙技術",
+        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: data"
+        "type": "宇宙技術",
+        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: pitch"
+        "type": "宇宙",
+        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: year"
+        "type": "宇宙",
+        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
       }
     ],
     "robot": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sun"
+        "type": "宇宙",
+        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moon"
+        "type": "宇宙",
+        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moons"
+        "type": "宇宙",
+        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sky"
+        "type": "宇宙",
+        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: ray"
+        "type": "宇宙現象",
+        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: halo"
+        "type": "宇宙",
+        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: axis"
+        "type": "宇宙",
+        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: phase"
+        "type": "宇宙現象",
+        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: wave"
+        "type": "宇宙現象",
+        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: ship"
+        "type": "宇宙技術",
+        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: nova"
+        "type": "宇宙現象",
+        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: target"
+        "type": "宇宙技術",
+        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: data"
+        "type": "宇宙技術",
+        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: pitch"
+        "type": "宇宙",
+        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: year"
+        "type": "宇宙",
+        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
       }
     ],
     "beast": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sun"
+        "type": "宇宙",
+        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moon"
+        "type": "宇宙",
+        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moons"
+        "type": "宇宙",
+        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sky"
+        "type": "宇宙",
+        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: ray"
+        "type": "宇宙現象",
+        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: halo"
+        "type": "宇宙",
+        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: axis"
+        "type": "宇宙",
+        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: phase"
+        "type": "宇宙現象",
+        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: wave"
+        "type": "宇宙現象",
+        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: ship"
+        "type": "宇宙技術",
+        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: nova"
+        "type": "宇宙現象",
+        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: target"
+        "type": "宇宙技術",
+        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: data"
+        "type": "宇宙技術",
+        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: pitch"
+        "type": "宇宙",
+        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: year"
+        "type": "宇宙",
+        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
       }
     ],
     "mythology": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sun"
+        "type": "宇宙",
+        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moon"
+        "type": "宇宙",
+        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moons"
+        "type": "宇宙",
+        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sky"
+        "type": "宇宙",
+        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: ray"
+        "type": "宇宙現象",
+        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: halo"
+        "type": "宇宙",
+        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: axis"
+        "type": "宇宙",
+        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: phase"
+        "type": "宇宙現象",
+        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: wave"
+        "type": "宇宙現象",
+        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: ship"
+        "type": "宇宙技術",
+        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: nova"
+        "type": "宇宙現象",
+        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: target"
+        "type": "宇宙技術",
+        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: data"
+        "type": "宇宙技術",
+        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: pitch"
+        "type": "宇宙",
+        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: year"
+        "type": "宇宙",
+        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
       }
     ],
     "volcano": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sun"
+        "type": "宇宙",
+        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moon"
+        "type": "宇宙",
+        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moons"
+        "type": "宇宙",
+        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sky"
+        "type": "宇宙",
+        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: ray"
+        "type": "宇宙現象",
+        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: halo"
+        "type": "宇宙",
+        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: axis"
+        "type": "宇宙",
+        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: phase"
+        "type": "宇宙現象",
+        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: wave"
+        "type": "宇宙現象",
+        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: ship"
+        "type": "宇宙技術",
+        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: nova"
+        "type": "宇宙現象",
+        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: target"
+        "type": "宇宙技術",
+        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: data"
+        "type": "宇宙技術",
+        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: pitch"
+        "type": "宇宙",
+        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: year"
+        "type": "宇宙",
+        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
       }
     ],
     "ocean": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sun"
+        "type": "宇宙",
+        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moon"
+        "type": "宇宙",
+        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moons"
+        "type": "宇宙",
+        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sky"
+        "type": "宇宙",
+        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: ray"
+        "type": "宇宙現象",
+        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: halo"
+        "type": "宇宙",
+        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: axis"
+        "type": "宇宙",
+        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: phase"
+        "type": "宇宙現象",
+        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: wave"
+        "type": "宇宙現象",
+        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: ship"
+        "type": "宇宙技術",
+        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: nova"
+        "type": "宇宙現象",
+        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: target"
+        "type": "宇宙技術",
+        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: data"
+        "type": "宇宙技術",
+        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: pitch"
+        "type": "宇宙",
+        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: year"
+        "type": "宇宙",
+        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
       }
     ],
     "cosmos": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sun"
+        "type": "宇宙",
+        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moon"
+        "type": "宇宙",
+        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: moons"
+        "type": "宇宙",
+        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: sky"
+        "type": "宇宙",
+        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: ray"
+        "type": "宇宙現象",
+        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: halo"
+        "type": "宇宙",
+        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: axis"
+        "type": "宇宙",
+        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: phase"
+        "type": "宇宙現象",
+        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: wave"
+        "type": "宇宙現象",
+        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: ship"
+        "type": "宇宙技術",
+        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙・天体関連概念: nova"
+        "type": "宇宙現象",
+        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: target"
+        "type": "宇宙技術",
+        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙・天体関連概念: data"
+        "type": "宇宙技術",
+        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: pitch"
+        "type": "宇宙",
+        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙・天体関連概念: year"
+        "type": "宇宙",
+        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
       }
     ]
   },
-  "trainingWorlds": []
+  "trainingWorlds": {
+    "1": {
+      "id": 1,
+      "name": "ワールド 1: ホームポジション",
+      "subtitle": "ホーム列 (A S D F G H J K L ;)",
+      "desc": "指の基準停止位置（左手ASDF、右手JKL;）の筋記憶とタイピング基礎。",
+      "icon": "🖐️",
+      "color": "#38BDF8",
+      "chars": [
+        "A",
+        "S",
+        "D",
+        "F",
+        "G",
+        "H",
+        "J",
+        "K",
+        "L",
+        ";"
+      ],
+      "words": [
+        "AS",
+        "ALL",
+        "FALL",
+        "GLAD",
+        "HALF",
+        "LAD",
+        "DASH",
+        "FLASH",
+        "GLASS",
+        "SALAD",
+        "FLASK",
+        "HALL",
+        "FLAG",
+        "LADS",
+        "FALLS",
+        "SHALL"
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "ワールド 2: 上段キー",
+      "subtitle": "上段列 (Q W E R T Y U I O P)",
+      "desc": "人差し指、中指、薬指を使ったキーボード上段キーへのリーチ練習。",
+      "icon": "⬆️",
+      "color": "#F59E0B",
+      "chars": [
+        "Q",
+        "W",
+        "E",
+        "R",
+        "T",
+        "Y",
+        "U",
+        "I",
+        "O",
+        "P"
+      ],
+      "words": [
+        "TRY",
+        "TREE",
+        "POWER",
+        "QUIET",
+        "TYPE",
+        "WRITE",
+        "ROPE",
+        "TOWER",
+        "ROUTE",
+        "POET",
+        "PORT",
+        "TRIP",
+        "WIRE",
+        "PITY",
+        "PURE",
+        "ROTE"
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "ワールド 3: 下段キー",
+      "subtitle": "下段列 (Z X C V B N M)",
+      "desc": "下段キーへの指の移動、機敏さと細やかな運動協調性のトレーニング。",
+      "icon": "⬇️",
+      "color": "#10B981",
+      "chars": [
+        "Z",
+        "X",
+        "C",
+        "V",
+        "B",
+        "N",
+        "M"
+      ],
+      "words": [
+        "MAN",
+        "CAN",
+        "VAN",
+        "BOX",
+        "MIX",
+        "ZONE",
+        "CAMP",
+        "BOMB",
+        "NAME",
+        "MINE",
+        "VIBE",
+        "CAVE",
+        "NAVY",
+        "COMB",
+        "MAZE",
+        "ZINC"
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "ワールド 4: 数字と記号",
+      "subtitle": "数字＆記号 (1 2 3 4 5 ? ! , .)",
+      "desc": "上部数字キー、疑問符、感嘆符、および必須記号の習熟トレーニング。",
+      "icon": "✨",
+      "color": "#EC4899",
+      "chars": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "?",
+        "!",
+        ",",
+        "."
+      ],
+      "words": [
+        "GO!",
+        "RUN!",
+        "HOW?",
+        "YES!",
+        "1, 2, 3",
+        "STOP.",
+        "WAIT!",
+        "WHO?",
+        "NOW.",
+        "WOW!",
+        "FAST!",
+        "GOAL!"
+      ]
+    }
+  }
 }

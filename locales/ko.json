@@ -7,10 +7,10 @@
     "rule_wildcard": "<strong>와일드카드 단어:</strong> 화면의 모든 룬을 한 번에 파괴하고 점수를 흡수합니다",
     "rule_spells": "<strong>숫자키 1~8 (또는 클릭):</strong> 슬로우, 빙결, 간격 확장, 쉴드 및 파워 마법 발동",
     "rule_combo": "<strong>콤보 & 퓨리 모드:</strong> 실수 없는 연속 입력 시 점수가 최대 8배까지 증가합니다",
-    "rule_danger": "<strong>생명 & 위험:</strong> 바닥에 근접한 룬은 빨간색으로 깜빡이며 낙하 시 생명을 잃습니다",
+    "rule_danger": "<strong>실드 & 위험:</strong> 바닥에 근접한 룬은 빨간색으로 깜빡이며 낙하 시 실드가 손상됩니다 (클래식 모드 기준 실드 3개)",
     "btn_start": "플레이",
     "btn_training": "트레이닝 모드 (키보드 열)",
-    "btn_zen": "젠 모드 (무한 생명)",
+    "btn_zen": "젠 모드 (무한 실드)",
     "btn_timeattack": "타임어택 (60초)",
     "btn_library": "라이브러리",
     "btn_achievements": "업적",
@@ -35,21 +35,21 @@
     "btn_training_short": "트레이닝",
     "btn_training_desc": "키보드 열 연습",
     "btn_zen_short": "젠 모드",
-    "btn_zen_desc": "생명 감소 없음",
+    "btn_zen_desc": "무한 실드",
     "btn_timeattack_short": "타임어택",
     "btn_timeattack_desc": "60초 질주",
     "btn_rules": "게임 방법",
     "btn_close_rules": "확인",
     "hud_phase": "단계",
-    "hud_zen_badge": "젠 모드: 생명 감소 없음",
-    "hud_training_badge": "트레이닝 모드: 생명 감소 없음",
+    "hud_zen_badge": "젠 모드: 무한 실드",
+    "hud_training_badge": "트레이닝 모드: 실드 보호",
     "hud_training_lesson": "레슨",
     "hud_zen_lbl": "젠 모드",
     "hud_training_lbl": "트레이닝",
-    "hud_free": "자유",
-    "hud_zen_pill": "생명 감소 없음",
-    "hud_zen_pill_title": "젠 모드에서는 생명을 잃지 않고 자유롭게 연습할 수 있습니다",
-    "hud_training_pill_title": "트레이닝 모드에서는 생명을 잃지 않고 정확도와 근육 기억을 기를 수 있습니다",
+    "hud_free": "무제한",
+    "hud_zen_pill": "무한 실드",
+    "hud_zen_pill_title": "젠 모드에서는 실드를 잃지 않고 자유롭게 연습할 수 있습니다",
+    "hud_training_pill_title": "트레이닝 모드에서는 실드를 잃지 않고 정확도와 근육 기억을 기를 수 있습니다",
     "hud_shields": "실드",
     "hud_lives": "실드",
     "hud_accuracy": "정확도",
@@ -94,7 +94,7 @@
     "go_best_combo": "최고 콤보",
     "go_avg_accuracy": "정확도",
     "go_coins_earned": "총 획득 코인",
-    "go_hits_errors": "적중 / 오류",
+    "go_hits_errors": "적중 / 오타",
     "go_discovered_words": "발견한 단어",
     "go_use_continue": "컨티뉴 사용 ({n})",
     "go_revive_continue": "부활하여 계속 ({n})",
@@ -166,7 +166,7 @@
     "ach_unit_combo": "콤보",
     "ach_dedo_veloz_name": "날렵한 손가락",
     "ach_dedo_veloz_desc": "60 WPM에 도달하세요.",
-    "ach_cirurgico_name": "외과의사",
+    "ach_cirurgico_name": "초정밀",
     "ach_cirurgico_desc": "100% 정확도로 단계를 완료하세요.",
     "ach_colecionador_name": "수집가",
     "ach_colecionador_desc": "라이브러리의 모든 단어를 해금하세요.",
@@ -198,9 +198,9 @@
     "diff_easy": "쉬움",
     "diff_normal": "보통",
     "diff_hard": "어려움",
-    "diff_desc_easy": "초기 속도 0.5배 • 오타 가속 없음 • 게이지 감소 없음 • 라이프 5개",
-    "diff_desc_normal": "초기 속도 1.0배 • 오타 가속 없음 • 일반 게이지 감소 • 라이프 3개",
-    "diff_desc_hard": "초기 속도 1.5배 • 오타 시 +0.05배 가속 • 일반 게이지 감소 • 라이프 3개",
+    "diff_desc_easy": "초기 속도 0.5배 • 오타 가속 없음 • 게이지 감소 없음 • 실드 5개",
+    "diff_desc_normal": "초기 속도 1.0배 • 오타 가속 없음 • 일반 게이지 감소 • 실드 3개",
+    "diff_desc_hard": "초기 속도 1.5배 • 오타 시 +0.05배 가속 • 일반 게이지 감소 • 실드 3개",
     "settings_cat_general": "일반 및 인터페이스",
     "settings_cat_boss": "보스 전투",
     "settings_cat_about": "앱 정보",
@@ -215,7 +215,7 @@
     "settings_btn_back": "뒤로가기",
     "training_title": "트레이닝: 키보드 열",
     "training_sub": "자판을 보지 않고 근육 기억을 키우세요",
-    "training_notice": "이 연습 모드에서는 <strong>생명을 잃지 않습니다</strong>. 오타 발생 시 <strong>정확도 %</strong>와 <strong>타수</strong>가 감소합니다.",
+    "training_notice": "이 연습 모드에서는 <strong>실드를 잃지 않습니다</strong>. 오타 발생 시 <strong>정확도 %</strong>와 <strong>WPM</strong>이 감소합니다.",
     "training_btn_back": "뒤로가기",
     "training_btn_start": "훈련 시작 (3레슨) →",
     "training_btn_again": "다시 훈련",
@@ -260,7 +260,7 @@
     "hud_performance": "성능 대시보드",
     "hud_total_score": "총 점수",
     "hud_hits": "적중",
-    "hud_errors": "오류",
+    "hud_errors": "오타",
     "hud_discovered_words": "발견된 단어",
     "hud_view_all": "모두 보기",
     "hud_spells_hint": "상점에서 구매<br/>또는 단어 완성",
@@ -321,7 +321,7 @@
     "fb_boss_defeated": "{boss} 처치! +350 코인!",
     "modal_phase_pts": "페이즈 획득 점수",
     "modal_acc_bonus": "정확도 보너스 ({acc}%)",
-    "modal_penalty": "오류 (페널티)",
+    "modal_penalty": "오타 (페널티)",
     "modal_net_pts": "순 추가 점수",
     "modal_total_pts": "총 점수",
     "modal_combo_bonus": "최대 콤보 보너스 ({combo}×)",
@@ -545,1305 +545,1450 @@
   "words": [
     {
       "text": "sun",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: sun"
+      "type": "우주",
+      "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
     },
     {
       "text": "moon",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: moon"
+      "type": "우주",
+      "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
     },
     {
       "text": "moons",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: moons"
+      "type": "우주",
+      "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
     },
     {
       "text": "sky",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: sky"
+      "type": "우주",
+      "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
     },
     {
       "text": "ray",
-      "type": "phenomenon",
-      "meaning": "우주 및 천체 개념: ray"
+      "type": "천체현상",
+      "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
     },
     {
       "text": "halo",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: halo"
+      "type": "우주",
+      "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
     },
     {
       "text": "axis",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: axis"
+      "type": "우주",
+      "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
     },
     {
       "text": "phase",
-      "type": "phenomenon",
-      "meaning": "우주 및 천체 개념: phase"
+      "type": "천체현상",
+      "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
     },
     {
       "text": "wave",
-      "type": "phenomenon",
-      "meaning": "우주 및 천체 개념: wave"
+      "type": "천체현상",
+      "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
     },
     {
       "text": "ship",
-      "type": "tech",
-      "meaning": "우주 및 천체 개념: ship"
+      "type": "우주기술",
+      "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
     },
     {
       "text": "nova",
-      "type": "phenomenon",
-      "meaning": "우주 및 천체 개념: nova"
+      "type": "천체현상",
+      "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
     },
     {
       "text": "target",
-      "type": "tech",
-      "meaning": "우주 및 천체 개념: target"
+      "type": "우주기술",
+      "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
     },
     {
       "text": "data",
-      "type": "tech",
-      "meaning": "우주 및 천체 개념: data"
+      "type": "우주기술",
+      "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
     },
     {
       "text": "pitch",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: pitch"
+      "type": "우주",
+      "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
     },
     {
       "text": "year",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: year"
+      "type": "우주",
+      "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
     },
     {
       "text": "vacuum",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: vacuum"
+      "type": "우주",
+      "meaning": "대기 물질이 거의 없어 고요한 우주의 광막함이 지배하는 진공"
     },
     {
       "text": "astro",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: astro"
+      "type": "우주",
+      "meaning": "끝없는 우주 공간에 존재하는 모든 자연 천체"
     },
     {
       "text": "cosmos",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: cosmos"
+      "type": "우주",
+      "meaning": "질서와 조화를 이루며 광대하게 펼쳐진 무한한 물리적 우주"
     },
     {
       "text": "mars",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: mars"
+      "type": "우주",
+      "meaning": "태양에서 4번째 행성이자 붉은 행성으로 널리 알려진 화성"
     },
     {
       "text": "venus",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: venus"
+      "type": "우주",
+      "meaning": "태양에서 2번째 행성이자 밤하늘에서 가장 밝게 빛나는 금성"
     },
     {
       "text": "earth",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: earth"
+      "type": "우주",
+      "meaning": "액체 상태의 물과 생명체가 존재하는 유일한 인류의 푸른 보금자리 지구"
     },
     {
       "text": "solar",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: solar"
+      "type": "우주",
+      "meaning": "태양, 태양풍, 코로나 복사 및 행성계 영역과 관련된 태양의 성질"
     },
     {
       "text": "probe",
-      "type": "tech",
-      "meaning": "우주 및 천체 개념: probe"
+      "type": "우주기술",
+      "meaning": "미지의 대기와 천체를 연구하기 위해 파견된 무인 과학 탐사선"
     },
     {
       "text": "radar",
-      "type": "tech",
-      "meaning": "우주 및 천체 개념: radar"
+      "type": "우주기술",
+      "meaning": "전파를 이용하여 행성 지형과 소행성을 정밀 매핑하는 탐지 시스템"
     },
     {
       "text": "magma",
-      "type": "nature",
-      "meaning": "우주 및 천체 개념: magma"
+      "type": "자연",
+      "meaning": "지질학적으로 활성화된 행성의 지각 아래 존재하는 고온의 용융 암석 마그마"
     },
     {
       "text": "cloud",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: cloud"
+      "type": "우주",
+      "meaning": "새로운 별을 탄생시키는 수소와 먼지로 이루어진 조밀한 성간 분자 구름"
     },
     {
       "text": "pluto",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: pluto"
+      "type": "우주",
+      "meaning": "태양계 외곽 카이퍼 벨트에 위치한 얼음 왜소행성 명왕성"
     },
     {
       "text": "orbit",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: orbit"
+      "type": "우주",
+      "meaning": "중력에 의해 천체가 거대한 중심 천체 주위를 도는 곡선 궤도"
     },
     {
       "text": "comet",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: comet"
+      "type": "우주",
+      "meaning": "태양열에 의해 가스를 방출하며 밝은 꼬리를 형성하는 얼음 천체 혜성"
     },
     {
       "text": "pulsar",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: pulsar"
+      "type": "우주",
+      "meaning": "빠르게 자전하며 규칙적인 전자기 펄스를 방출하는 자화된 중성자별 맥동성"
     },
     {
       "text": "quasar",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: quasar"
+      "type": "우주",
+      "meaning": "초거대 블랙홀에 의해 구동되는 매우 밝고 먼 거리의 활동 은하핵 퀘이사"
     },
     {
       "text": "corona",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: corona"
+      "type": "우주",
+      "meaning": "태양 대기의 가장 바깥쪽에 위치한 수백만 도의 고온 플라즈마 코로나"
     },
     {
       "text": "meteor",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: meteor"
+      "type": "우주",
+      "meaning": "우주 파편이 대기권에 진입할 때 고열로 빛을 내며 타오르는 유성"
     },
     {
       "text": "optics",
-      "type": "tech",
-      "meaning": "우주 및 천체 개념: optics"
+      "type": "우주기술",
+      "meaning": "심우주 망원경에서 빛을 모으고 반사하는 광학 과학 기술"
     },
     {
       "text": "space",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: space"
+      "type": "우주",
+      "meaning": "행성, 별, 은하들이 유영하는 한계 없는 3차원의 공간"
     },
     {
       "text": "aurora",
-      "type": "phenomenon",
-      "meaning": "우주 및 천체 개념: aurora"
+      "type": "천체현상",
+      "meaning": "태양풍 입자가 행성 자기장 및 대기와 충돌하여 빛나는 극광 오로라"
     },
     {
       "text": "zenith",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: zenith"
+      "type": "우주",
+      "meaning": "관측자의 머리 바로 위 천구 상에 위치한 가상의 점 천정"
     },
     {
       "text": "hubble",
-      "type": "tech",
-      "meaning": "우주 및 천체 개념: hubble"
+      "type": "우주기술",
+      "meaning": "인류의 우주 이해를 혁신한 전설적인 궤도 우주 망원경 허블"
     },
     {
       "text": "dust",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: dust"
+      "type": "우주",
+      "meaning": "은하 나선팔 전체에 흩어져 있는 미세한 광물 입자와 성간 먼지"
     },
     {
       "text": "hole",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: hole"
+      "type": "우주",
+      "meaning": "시공간이 특이점으로 붕괴하는 극단적인 중력장 영역"
     },
     {
       "text": "star",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: star"
+      "type": "우주",
+      "meaning": "중심부의 열핵융합 반응을 통해 스스로 빛을 발하는 거대한 플라즈마 항성"
     },
     {
       "text": "planet",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: planet"
+      "type": "우주",
+      "meaning": "항성을 공전하며 구형을 유지하고 궤도를 청소한 주요 천체 행성"
     },
     {
       "text": "galaxy",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: galaxy"
+      "type": "우주",
+      "meaning": "수천억 개의 항성, 암흑 물질, 성운이 중력으로 묶인 거대한 은하"
     },
     {
       "text": "galaxies",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: galaxies"
+      "type": "우주",
+      "meaning": "우주 거대 구조를 따라 분포하는 수천억 개의 은하계들"
     },
     {
       "text": "universe",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: universe"
+      "type": "우주",
+      "meaning": "모든 물리적 물질, 에너지, 시공간 및 물리 법칙을 포괄하는 전체 우주"
     },
     {
       "text": "nebula",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: nebula"
+      "type": "우주",
+      "meaning": "이온화된 가스, 항성 잔해 및 우주 먼지로 이루어진 거대한 발광 성운"
     },
     {
       "text": "gravity",
-      "type": "phenomenon",
-      "meaning": "우주 및 천체 개념: gravity"
+      "type": "천체현상",
+      "meaning": "질량과 에너지에 비례하여 시공간을 구부리는 근본적인 인력 중력"
     },
     {
       "text": "supernova",
-      "type": "phenomenon",
-      "meaning": "우주 및 천체 개념: supernova"
+      "type": "천체현상",
+      "meaning": "진화의 끝에 다다른 거대 항성이 은하 전체보다 밝게 폭발하는 초신성"
     },
     {
       "text": "astronaut",
-      "type": "tech",
-      "meaning": "우주 및 천체 개념: astronaut"
+      "type": "우주기술",
+      "meaning": "궤도 및 행성 간 임무를 수행하도록 고도로 훈련된 우주비행사"
     },
     {
       "text": "astronomy",
-      "type": "science",
-      "meaning": "우주 및 천체 개념: astronomy"
+      "type": "우주과학",
+      "meaning": "천체와 물리적 우주, 심우주의 법칙을 탐구하는 학문 천문학"
     },
     {
       "text": "exoplanet",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: exoplanet"
+      "type": "우주",
+      "meaning": "우리 태양계 너머의 먼 항성을 공전하는 외계 행성"
     },
     {
       "text": "exoplanets",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: exoplanets"
+      "type": "우주",
+      "meaning": "우리 은하 전역의 먼 항성 주위를 도는 다양한 외계 행성들"
     },
     {
       "text": "satellite",
-      "type": "tech",
-      "meaning": "우주 및 천체 개념: satellite"
+      "type": "우주기술",
+      "meaning": "연구와 통신을 위해 행성 주위를 공전하는 인공 또는 자연 위성"
     },
     {
       "text": "constellation",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: constellation"
+      "type": "우주",
+      "meaning": "천문도에 따라 밤하늘에 묶어놓은 별들의 식별 가능한 집합 별자리"
     },
     {
       "text": "telescope",
-      "type": "tech",
-      "meaning": "우주 및 천체 개념: telescope"
+      "type": "우주기술",
+      "meaning": "먼 천체에서 오는 빛과 전자기파를 모아 관측하는 망원경"
     },
     {
       "text": "starship",
-      "type": "tech",
-      "meaning": "우주 및 천체 개념: starship"
+      "type": "우주기술",
+      "meaning": "광대한 성간 공간을 가로질러 항해할 수 있는 행성간 우주선"
     },
     {
       "text": "atmosphere",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: atmosphere"
+      "type": "우주",
+      "meaning": "중력에 의해 행성이나 천체를 감싸고 있는 기체 층 대기"
     },
     {
       "text": "magnetosphere",
-      "type": "phenomenon",
-      "meaning": "우주 및 천체 개념: magnetosphere"
+      "type": "천체현상",
+      "meaning": "고에너지 태양풍과 방사선을 막아주는 행성의 자기 보호막 자기권"
     },
     {
       "text": "radiation",
-      "type": "phenomenon",
-      "meaning": "우주 및 천체 개념: radiation"
+      "type": "천체현상",
+      "meaning": "우주 공간을 가로지르는 고에너지 전자기파 또는 아원자 입자 방사선"
     },
     {
       "text": "spectrum",
-      "type": "science",
-      "meaning": "우주 및 천체 개념: spectrum"
+      "type": "우주과학",
+      "meaning": "빛을 분산시켜 천체의 온도와 화학 조성을 밝혀내는 무지개 스펙트럼"
     },
     {
       "text": "andromeda",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: andromeda"
+      "type": "우주",
+      "meaning": "우리 은하와 미래에 중력적으로 충돌할 궤도에 있는 가장 가까운 대형 나선은하"
     },
     {
       "text": "heliosphere",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: heliosphere"
+      "type": "우주",
+      "meaning": "태양풍이 성간 공간에 불어넣어 형성한 거대한 보호 거품 영역 태양권"
     },
     {
       "text": "antimatter",
-      "type": "science",
-      "meaning": "우주 및 천체 개념: antimatter"
+      "type": "우주과학",
+      "meaning": "일반 물질과 접촉하면 막대한 에너지를 내며 쌍소멸하는 반입자로 이루어진 반물질"
     },
     {
       "text": "singularity",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: singularity"
+      "type": "우주",
+      "meaning": "블랙홀 중심에서 중력 밀도가 무한대에 수렴하고 물리 법칙이 붕괴하는 중력 특이점"
     },
     {
       "text": "multiverse",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: multiverse"
+      "type": "우주",
+      "meaning": "무한한 시공간 거품과 평행 우주들의 가설적 앙상블 다중우주"
     },
     {
       "text": "light-year",
-      "type": "science",
-      "meaning": "우주 및 천체 개념: light-year"
+      "type": "우주과학",
+      "meaning": "빛이 진공 상태에서 1태양년 동안 이동하는 천문학적 거리 단위 광년"
     },
     {
       "text": "black-hole",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: black-hole"
+      "type": "우주",
+      "meaning": "빛조차 빠져나올 수 없을 정도로 중력이 극단적으로 강한 천체 블랙홀"
     },
     {
       "text": "stardust",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: stardust"
+      "type": "우주",
+      "meaning": "초신성 폭발 잔해에서 유래하여 암석 행성과 생명체의 모태가 되는 별가루"
     },
     {
       "text": "dark-matter",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: dark-matter"
+      "type": "우주",
+      "meaning": "빛을 내지 않지만 우주 질량의 대부분을 차지하는 보이지 않는 가설 물질 암흑물질"
     },
     {
       "text": "dark-energy",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: dark-energy"
+      "type": "우주",
+      "meaning": "관측 가능한 우주의 팽창을 가속시키는 미지의 척력 암흑에너지"
     },
     {
       "text": "wormhole",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: wormhole"
+      "type": "우주",
+      "meaning": "서로 떨어진 두 시공간 영역을 연결하는 이론적인 지름길 웜홀"
     },
     {
       "text": "speed-of-light",
-      "type": "science",
-      "meaning": "우주 및 천체 개념: speed-of-light"
+      "type": "우주과학",
+      "meaning": "진공 상태에서 초당 약 30만 킬로미터로 이동하는 우주의 절대 속도 상수 광속"
     },
     {
       "text": "space-station",
-      "type": "tech",
-      "meaning": "우주 및 천체 개념: space-station"
+      "type": "우주기술",
+      "meaning": "과학자들이 거주하며 무중력 과학 연구를 수행하는 대형 궤도 우주정거장"
     },
     {
       "text": "event-horizon",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: event-horizon"
+      "type": "우주",
+      "meaning": "블랙홀을 둘러싸고 있으며 빛조차 탈출할 수 없는 돌아올 수 없는 경계 사건의 지평선"
     },
     {
       "text": "milky-way",
-      "type": "cosmos",
-      "meaning": "우주 및 천체 개념: milky-way"
+      "type": "우주",
+      "meaning": "수천억 개의 항성과 행성계를 품고 있는 우리 태양계의 고향 은하수"
     }
   ],
   "bossWords": {
     "alien_dreadnought": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sun"
+        "type": "우주",
+        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moon"
+        "type": "우주",
+        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moons"
+        "type": "우주",
+        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sky"
+        "type": "우주",
+        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: ray"
+        "type": "천체현상",
+        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: halo"
+        "type": "우주",
+        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: axis"
+        "type": "우주",
+        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: phase"
+        "type": "천체현상",
+        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: wave"
+        "type": "천체현상",
+        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: ship"
+        "type": "우주기술",
+        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: nova"
+        "type": "천체현상",
+        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: target"
+        "type": "우주기술",
+        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: data"
+        "type": "우주기술",
+        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: pitch"
+        "type": "우주",
+        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: year"
+        "type": "우주",
+        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
       }
     ],
     "alien_hive": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sun"
+        "type": "우주",
+        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moon"
+        "type": "우주",
+        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moons"
+        "type": "우주",
+        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sky"
+        "type": "우주",
+        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: ray"
+        "type": "천체현상",
+        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: halo"
+        "type": "우주",
+        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: axis"
+        "type": "우주",
+        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: phase"
+        "type": "천체현상",
+        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: wave"
+        "type": "천체현상",
+        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: ship"
+        "type": "우주기술",
+        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: nova"
+        "type": "천체현상",
+        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: target"
+        "type": "우주기술",
+        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: data"
+        "type": "우주기술",
+        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: pitch"
+        "type": "우주",
+        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: year"
+        "type": "우주",
+        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
       }
     ],
     "alien_psionic": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sun"
+        "type": "우주",
+        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moon"
+        "type": "우주",
+        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moons"
+        "type": "우주",
+        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sky"
+        "type": "우주",
+        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: ray"
+        "type": "천체현상",
+        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: halo"
+        "type": "우주",
+        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: axis"
+        "type": "우주",
+        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: phase"
+        "type": "천체현상",
+        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: wave"
+        "type": "천체현상",
+        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: ship"
+        "type": "우주기술",
+        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: nova"
+        "type": "천체현상",
+        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: target"
+        "type": "우주기술",
+        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: data"
+        "type": "우주기술",
+        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: pitch"
+        "type": "우주",
+        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: year"
+        "type": "우주",
+        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
       }
     ],
     "alien_warlord": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sun"
+        "type": "우주",
+        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moon"
+        "type": "우주",
+        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moons"
+        "type": "우주",
+        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sky"
+        "type": "우주",
+        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: ray"
+        "type": "천체현상",
+        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: halo"
+        "type": "우주",
+        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: axis"
+        "type": "우주",
+        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: phase"
+        "type": "천체현상",
+        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: wave"
+        "type": "천체현상",
+        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: ship"
+        "type": "우주기술",
+        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: nova"
+        "type": "천체현상",
+        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: target"
+        "type": "우주기술",
+        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: data"
+        "type": "우주기술",
+        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: pitch"
+        "type": "우주",
+        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: year"
+        "type": "우주",
+        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
       }
     ],
     "alien_darkmatter": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sun"
+        "type": "우주",
+        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moon"
+        "type": "우주",
+        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moons"
+        "type": "우주",
+        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sky"
+        "type": "우주",
+        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: ray"
+        "type": "천체현상",
+        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: halo"
+        "type": "우주",
+        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: axis"
+        "type": "우주",
+        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: phase"
+        "type": "천체현상",
+        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: wave"
+        "type": "천체현상",
+        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: ship"
+        "type": "우주기술",
+        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: nova"
+        "type": "천체현상",
+        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: target"
+        "type": "우주기술",
+        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: data"
+        "type": "우주기술",
+        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: pitch"
+        "type": "우주",
+        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: year"
+        "type": "우주",
+        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
       }
     ],
     "alien_mothership": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sun"
+        "type": "우주",
+        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moon"
+        "type": "우주",
+        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moons"
+        "type": "우주",
+        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sky"
+        "type": "우주",
+        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: ray"
+        "type": "천체현상",
+        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: halo"
+        "type": "우주",
+        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: axis"
+        "type": "우주",
+        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: phase"
+        "type": "천체현상",
+        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: wave"
+        "type": "천체현상",
+        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: ship"
+        "type": "우주기술",
+        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: nova"
+        "type": "천체현상",
+        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: target"
+        "type": "우주기술",
+        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: data"
+        "type": "우주기술",
+        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: pitch"
+        "type": "우주",
+        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: year"
+        "type": "우주",
+        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
       }
     ],
     "robot": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sun"
+        "type": "우주",
+        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moon"
+        "type": "우주",
+        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moons"
+        "type": "우주",
+        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sky"
+        "type": "우주",
+        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: ray"
+        "type": "천체현상",
+        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: halo"
+        "type": "우주",
+        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: axis"
+        "type": "우주",
+        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: phase"
+        "type": "천체현상",
+        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: wave"
+        "type": "천체현상",
+        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: ship"
+        "type": "우주기술",
+        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: nova"
+        "type": "천체현상",
+        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: target"
+        "type": "우주기술",
+        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: data"
+        "type": "우주기술",
+        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: pitch"
+        "type": "우주",
+        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: year"
+        "type": "우주",
+        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
       }
     ],
     "beast": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sun"
+        "type": "우주",
+        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moon"
+        "type": "우주",
+        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moons"
+        "type": "우주",
+        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sky"
+        "type": "우주",
+        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: ray"
+        "type": "천체현상",
+        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: halo"
+        "type": "우주",
+        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: axis"
+        "type": "우주",
+        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: phase"
+        "type": "천체현상",
+        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: wave"
+        "type": "천체현상",
+        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: ship"
+        "type": "우주기술",
+        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: nova"
+        "type": "천체현상",
+        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: target"
+        "type": "우주기술",
+        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: data"
+        "type": "우주기술",
+        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: pitch"
+        "type": "우주",
+        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: year"
+        "type": "우주",
+        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
       }
     ],
     "mythology": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sun"
+        "type": "우주",
+        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moon"
+        "type": "우주",
+        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moons"
+        "type": "우주",
+        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sky"
+        "type": "우주",
+        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: ray"
+        "type": "천체현상",
+        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: halo"
+        "type": "우주",
+        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: axis"
+        "type": "우주",
+        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: phase"
+        "type": "천체현상",
+        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: wave"
+        "type": "천체현상",
+        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: ship"
+        "type": "우주기술",
+        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: nova"
+        "type": "천체현상",
+        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: target"
+        "type": "우주기술",
+        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: data"
+        "type": "우주기술",
+        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: pitch"
+        "type": "우주",
+        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: year"
+        "type": "우주",
+        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
       }
     ],
     "volcano": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sun"
+        "type": "우주",
+        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moon"
+        "type": "우주",
+        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moons"
+        "type": "우주",
+        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sky"
+        "type": "우주",
+        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: ray"
+        "type": "천체현상",
+        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: halo"
+        "type": "우주",
+        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: axis"
+        "type": "우주",
+        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: phase"
+        "type": "천체현상",
+        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: wave"
+        "type": "천체현상",
+        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: ship"
+        "type": "우주기술",
+        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: nova"
+        "type": "천체현상",
+        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: target"
+        "type": "우주기술",
+        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: data"
+        "type": "우주기술",
+        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: pitch"
+        "type": "우주",
+        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: year"
+        "type": "우주",
+        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
       }
     ],
     "ocean": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sun"
+        "type": "우주",
+        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moon"
+        "type": "우주",
+        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moons"
+        "type": "우주",
+        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sky"
+        "type": "우주",
+        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: ray"
+        "type": "천체현상",
+        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: halo"
+        "type": "우주",
+        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: axis"
+        "type": "우주",
+        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: phase"
+        "type": "천체현상",
+        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: wave"
+        "type": "천체현상",
+        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: ship"
+        "type": "우주기술",
+        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: nova"
+        "type": "천체현상",
+        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: target"
+        "type": "우주기술",
+        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: data"
+        "type": "우주기술",
+        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: pitch"
+        "type": "우주",
+        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: year"
+        "type": "우주",
+        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
       }
     ],
     "cosmos": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sun"
+        "type": "우주",
+        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moon"
+        "type": "우주",
+        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: moons"
+        "type": "우주",
+        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: sky"
+        "type": "우주",
+        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: ray"
+        "type": "천체현상",
+        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: halo"
+        "type": "우주",
+        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: axis"
+        "type": "우주",
+        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: phase"
+        "type": "천체현상",
+        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: wave"
+        "type": "천체현상",
+        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: ship"
+        "type": "우주기술",
+        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "우주 및 천체 개념: nova"
+        "type": "천체현상",
+        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: target"
+        "type": "우주기술",
+        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "우주 및 천체 개념: data"
+        "type": "우주기술",
+        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: pitch"
+        "type": "우주",
+        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "우주 및 천체 개념: year"
+        "type": "우주",
+        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
       }
     ]
   },
-  "trainingWorlds": []
+  "trainingWorlds": {
+    "1": {
+      "id": 1,
+      "name": "월드 1: 기본 자리",
+      "subtitle": "홈 로우 (A S D F G H J K L ;)",
+      "desc": "손가락 기본 위치(왼손 ASDF, 오른손 JKL;)의 근육 기억 및 타이핑 기초.",
+      "icon": "🖐️",
+      "color": "#38BDF8",
+      "chars": [
+        "A",
+        "S",
+        "D",
+        "F",
+        "G",
+        "H",
+        "J",
+        "K",
+        "L",
+        ";"
+      ],
+      "words": [
+        "AS",
+        "ALL",
+        "FALL",
+        "GLAD",
+        "HALF",
+        "LAD",
+        "DASH",
+        "FLASH",
+        "GLASS",
+        "SALAD",
+        "FLASK",
+        "HALL",
+        "FLAG",
+        "LADS",
+        "FALLS",
+        "SHALL"
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "월드 2: 윗줄 키",
+      "subtitle": "탑 로우 (Q W E R T Y U I O P)",
+      "desc": "검지, 중지, 약지를 상단 키로 뻗는 도달 훈련.",
+      "icon": "⬆️",
+      "color": "#F59E0B",
+      "chars": [
+        "Q",
+        "W",
+        "E",
+        "R",
+        "T",
+        "Y",
+        "U",
+        "I",
+        "O",
+        "P"
+      ],
+      "words": [
+        "TRY",
+        "TREE",
+        "POWER",
+        "QUIET",
+        "TYPE",
+        "WRITE",
+        "ROPE",
+        "TOWER",
+        "ROUTE",
+        "POET",
+        "PORT",
+        "TRIP",
+        "WIRE",
+        "PITY",
+        "PURE",
+        "ROTE"
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "월드 3: 아랫줄 키",
+      "subtitle": "바텀 로우 (Z X C V B N M)",
+      "desc": "하단 키로의 손가락 이동, 민첩성 및 미세 운동 협응력 훈련.",
+      "icon": "⬇️",
+      "color": "#10B981",
+      "chars": [
+        "Z",
+        "X",
+        "C",
+        "V",
+        "B",
+        "N",
+        "M"
+      ],
+      "words": [
+        "MAN",
+        "CAN",
+        "VAN",
+        "BOX",
+        "MIX",
+        "ZONE",
+        "CAMP",
+        "BOMB",
+        "NAME",
+        "MINE",
+        "VIBE",
+        "CAVE",
+        "NAVY",
+        "COMB",
+        "MAZE",
+        "ZINC"
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "월드 4: 숫자 및 기호",
+      "subtitle": "숫자 & 기호 (1 2 3 4 5 ? ! , .)",
+      "desc": "상단 숫자 키, 물음표, 느낌표 및 필수 문장 부호 숙련 훈련.",
+      "icon": "✨",
+      "color": "#EC4899",
+      "chars": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "?",
+        "!",
+        ",",
+        "."
+      ],
+      "words": [
+        "GO!",
+        "RUN!",
+        "HOW?",
+        "YES!",
+        "1, 2, 3",
+        "STOP.",
+        "WAIT!",
+        "WHO?",
+        "NOW.",
+        "WOW!",
+        "FAST!",
+        "GOAL!"
+      ]
+    }
+  }
 }

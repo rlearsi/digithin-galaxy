@@ -156,7 +156,9 @@ let ALL_SYLLABLES = SYLLABLE_POOLS[initLang] || SYLLABLE_POOLS.en || [];
 
 function getTrainingWorlds(lang) {
   const curLang = lang || ((typeof getLanguage === 'function') ? getLanguage() : 'en');
-  return TRAINING_WORLDS_DATA[curLang] || TRAINING_WORLDS_DATA.en || {};
+  const d = TRAINING_WORLDS_DATA[curLang];
+  if (d && !Array.isArray(d) && Object.keys(d).length > 0) return d;
+  return TRAINING_WORLDS_DATA.en || {};
 }
 
 let TRAINING_WORLDS = getTrainingWorlds(initLang);

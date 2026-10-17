@@ -7,10 +7,10 @@
     "rule_wildcard": "<strong>万能单词：</strong>瞬间摧毁屏幕上的所有符文并吸取所有点数",
     "rule_spells": "<strong>按键 1–8（或点击）：</strong>激活减速、冰冻、间距增加、护盾和强力法术",
     "rule_combo": "<strong>连击与狂暴模式：</strong>无失误连击可将得分提高至多8倍",
-    "rule_danger": "<strong>生命与危险：</strong>底部的符文会闪烁红光警报，掉落会扣除1点生命值",
+    "rule_danger": "<strong>护盾与危险：</strong>底部的符文会闪烁红光警报，掉落会损失1层护盾（经典模式下为3层护盾）",
     "btn_start": "开始游戏",
     "btn_training": "训练模式（键盘按键行）",
-    "btn_zen": "禅模式（无生命限制）",
+    "btn_zen": "禅模式（无限护盾）",
     "btn_timeattack": "限时挑战 (60秒)",
     "btn_library": "图书馆",
     "btn_achievements": "成就",
@@ -35,21 +35,21 @@
     "btn_training_short": "训练模式",
     "btn_training_desc": "按键行练习",
     "btn_zen_short": "禅模式",
-    "btn_zen_desc": "无生命限制",
+    "btn_zen_desc": "无限护盾",
     "btn_timeattack_short": "限时挑战",
     "btn_timeattack_desc": "60秒极速",
     "btn_rules": "玩法说明",
     "btn_close_rules": "知道了",
     "hud_phase": "关卡",
-    "hud_zen_badge": "禅模式：不扣除生命",
-    "hud_training_badge": "训练模式：不扣除生命",
+    "hud_zen_badge": "禅模式：无限护盾",
+    "hud_training_badge": "训练模式：护盾受保护",
     "hud_training_lesson": "课程",
     "hud_zen_lbl": "禅模式",
     "hud_training_lbl": "训练",
-    "hud_free": "自由",
-    "hud_zen_pill": "不扣除生命",
-    "hud_zen_pill_title": "禅模式下您可以自由练习而不会失去生命",
-    "hud_training_pill_title": "训练模式下您可以在不失去生命的情况下培养精准度和肌肉记忆",
+    "hud_free": "无限制",
+    "hud_zen_pill": "无限护盾",
+    "hud_zen_pill_title": "禅模式下您可以自由练习而不会损失护盾",
+    "hud_training_pill_title": "训练模式下您可以在不损失护盾的情况下培养精准度和肌肉记忆",
     "hud_shields": "护盾",
     "hud_lives": "护盾",
     "hud_accuracy": "准确率",
@@ -94,7 +94,7 @@
     "go_best_combo": "最高连击",
     "go_avg_accuracy": "准确率",
     "go_coins_earned": "获得总金币",
-    "go_hits_errors": "命中 / 错误",
+    "go_hits_errors": "命中 / 失误",
     "go_discovered_words": "已发现单词",
     "go_use_continue": "使用继续 ({n})",
     "go_revive_continue": "复活并继续 ({n})",
@@ -198,9 +198,9 @@
     "diff_easy": "简单",
     "diff_normal": "普通",
     "diff_hard": "困难",
-    "diff_desc_easy": "初始速度0.5× • 失误不加速 • 失误不扣进度 • 5条生命",
-    "diff_desc_normal": "初始速度1.0× • 失误不加速 • 正常扣除进度 • 3条生命",
-    "diff_desc_hard": "初始速度1.5× • 每次失误+0.05×加速 • 正常扣除进度 • 3条生命",
+    "diff_desc_easy": "初始速度0.5× • 失误不加速 • 失误不扣进度 • 5层护盾",
+    "diff_desc_normal": "初始速度1.0× • 失误不加速 • 正常扣除进度 • 3层护盾",
+    "diff_desc_hard": "初始速度1.5× • 每次失误+0.05×加速 • 正常扣除进度 • 3层护盾",
     "settings_cat_general": "通用与界面",
     "settings_cat_boss": "首领之战",
     "settings_cat_about": "关于应用",
@@ -215,7 +215,7 @@
     "settings_btn_back": "返回",
     "training_title": "训练模式：键盘按键行",
     "training_sub": "盲打肌肉记忆练习，无需低头看键盘",
-    "training_notice": "在此教学练习模式下<strong>不会扣除生命值</strong>。输入失误与掉落会降低你的<strong>准确率 %</strong>与<strong>WPM</strong>。",
+    "training_notice": "在此教学练习模式下<strong>不会损失护盾</strong>。输入失误与掉落会降低你的<strong>准确率 %</strong>与<strong>WPM</strong>。",
     "training_btn_back": "返回",
     "training_btn_start": "开始练习（3课） →",
     "training_btn_again": "再次练习",
@@ -260,7 +260,7 @@
     "hud_performance": "表现面板",
     "hud_total_score": "总积分",
     "hud_hits": "击中",
-    "hud_errors": "错误",
+    "hud_errors": "失误",
     "hud_discovered_words": "已探索词汇",
     "hud_view_all": "查看全部",
     "hud_spells_hint": "在商店购买<br/>或敲击完整词汇",
@@ -546,1305 +546,1450 @@
   "words": [
     {
       "text": "sun",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: sun"
+      "type": "宇宙",
+      "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
     },
     {
       "text": "moon",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: moon"
+      "type": "宇宙",
+      "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
     },
     {
       "text": "moons",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: moons"
+      "type": "宇宙",
+      "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
     },
     {
       "text": "sky",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: sky"
+      "type": "宇宙",
+      "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
     },
     {
       "text": "ray",
-      "type": "phenomenon",
-      "meaning": "宇宙与天体概念: ray"
+      "type": "天体现象",
+      "meaning": "集中的电磁能量光束或放射性的宇宙星光"
     },
     {
       "text": "halo",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: halo"
+      "type": "宇宙",
+      "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
     },
     {
       "text": "axis",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: axis"
+      "type": "宇宙",
+      "meaning": "行星或天体绕其自转的假想中心轴线"
     },
     {
       "text": "phase",
-      "type": "phenomenon",
-      "meaning": "宇宙与天体概念: phase"
+      "type": "天体现象",
+      "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
     },
     {
       "text": "wave",
-      "type": "phenomenon",
-      "meaning": "宇宙与天体概念: wave"
+      "type": "天体现象",
+      "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
     },
     {
       "text": "ship",
-      "type": "tech",
-      "meaning": "宇宙与天体概念: ship"
+      "type": "航天技术",
+      "meaning": "专为行星际航行设计的载人或自动航天飞船"
     },
     {
       "text": "nova",
-      "type": "phenomenon",
-      "meaning": "宇宙与天体概念: nova"
+      "type": "天体现象",
+      "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
     },
     {
       "text": "target",
-      "type": "tech",
-      "meaning": "宇宙与天体概念: target"
+      "type": "航天技术",
+      "meaning": "为探测器设定的轨道探索目的地或天体航路点"
     },
     {
       "text": "data",
-      "type": "tech",
-      "meaning": "宇宙与天体概念: data"
+      "type": "航天技术",
+      "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
     },
     {
       "text": "pitch",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: pitch"
+      "type": "宇宙",
+      "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
     },
     {
       "text": "year",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: year"
+      "type": "宇宙",
+      "meaning": "公转行星绕其中心恒星运行一周所需的时间"
     },
     {
       "text": "vacuum",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: vacuum"
+      "type": "宇宙",
+      "meaning": "无大气物质存在、寂静宇宙空间所占据的真空状态"
     },
     {
       "text": "astro",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: astro"
+      "type": "宇宙",
+      "meaning": "栖居于浩瀚宇宙深空中的任何天然天体"
     },
     {
       "text": "cosmos",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: cosmos"
+      "type": "宇宙",
+      "meaning": "秩序井然、和谐且浩瀚无垠的广袤物理宇宙"
     },
     {
       "text": "mars",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: mars"
+      "type": "宇宙",
+      "meaning": "距离太阳第四远的行星，闻名遐迩的“红色星球”火星"
     },
     {
       "text": "venus",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: venus"
+      "type": "宇宙",
+      "meaning": "距离太阳第二近的行星，夜空中最璀璨的天然天体金星"
     },
     {
       "text": "earth",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: earth"
+      "type": "宇宙",
+      "meaning": "人类居住的蔚蓝家园，目前唯一已知拥有液态水与生命的地球"
     },
     {
       "text": "solar",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: solar"
+      "type": "宇宙",
+      "meaning": "与太阳、太阳风、日冕辐射及其引力领域相关的太阳特性"
     },
     {
       "text": "probe",
-      "type": "tech",
-      "meaning": "宇宙与天体概念: probe"
+      "type": "航天技术",
+      "meaning": "前往未知大气与异星世界进行科学勘测的无人深空探测器"
     },
     {
       "text": "radar",
-      "type": "tech",
-      "meaning": "宇宙与天体概念: radar"
+      "type": "航天技术",
+      "meaning": "利用无线电波绘制行星地形与探测小行星的高精度雷达系统"
     },
     {
       "text": "magma",
-      "type": "nature",
-      "meaning": "宇宙与天体概念: magma"
+      "type": "自然",
+      "meaning": "地质活跃行星地壳深部极度炽热的熔融岩浆物质"
     },
     {
       "text": "cloud",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: cloud"
+      "type": "宇宙",
+      "meaning": "孕育新生恒星的由氢气与尘埃构成的致密星际分子云"
     },
     {
       "text": "pluto",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: pluto"
+      "type": "宇宙",
+      "meaning": "位于太阳系边缘柯伊伯带深处的冰质矮行星冥王星"
     },
     {
       "text": "orbit",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: orbit"
+      "type": "宇宙",
+      "meaning": "天体在引力作用下围绕大质量中心运转的弯曲空间轨道"
     },
     {
       "text": "comet",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: comet"
+      "type": "宇宙",
+      "meaning": "靠近恒星受热喷发气体与尘埃并拖着耀眼光尾的冰质彗星"
     },
     {
       "text": "pulsar",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: pulsar"
+      "type": "宇宙",
+      "meaning": "高速自转并向宇宙空间周期性扫射脉冲辐射束的高磁化中子星"
     },
     {
       "text": "quasar",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: quasar"
+      "type": "宇宙",
+      "meaning": "由超大质量黑洞驱动、极其明亮且遥远的活动星系核类星体"
     },
     {
       "text": "corona",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: corona"
+      "type": "宇宙",
+      "meaning": "太阳大气最外层温度高达数百万度的等离子体包层日冕"
     },
     {
       "text": "meteor",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: meteor"
+      "type": "宇宙",
+      "meaning": "太空碎片高速穿过大气层摩擦燃烧产生的流星光迹"
     },
     {
       "text": "optics",
-      "type": "tech",
-      "meaning": "宇宙与天体概念: optics"
+      "type": "航天技术",
+      "meaning": "深空轨道望远镜用以汇聚与解析天体辐射光线的先进光学"
     },
     {
       "text": "space",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: space"
+      "type": "宇宙",
+      "meaning": "行星、恒星与星系漫游其中、无边无际的三维空间空间"
     },
     {
       "text": "aurora",
-      "type": "phenomenon",
-      "meaning": "宇宙与天体概念: aurora"
+      "type": "天体现象",
+      "meaning": "太阳风带电粒子轰击行星磁层与高层大气激发的极光景象"
     },
     {
       "text": "zenith",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: zenith"
+      "type": "宇宙",
+      "meaning": "观测者正上方天空中的假想几何最高点“天顶”"
     },
     {
       "text": "hubble",
-      "type": "tech",
-      "meaning": "宇宙与天体概念: hubble"
+      "type": "航天技术",
+      "meaning": "彻底革新人类对宇宙认知的传奇轨道太空望远镜哈勃"
     },
     {
       "text": "dust",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: dust"
+      "type": "宇宙",
+      "meaning": "弥漫散布于星系旋臂各处的微观矿物颗粒与星际尘埃"
     },
     {
       "text": "hole",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: hole"
+      "type": "宇宙",
+      "meaning": "时空凹陷坍缩为奇点的极端超强引力场区域"
     },
     {
       "text": "star",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: star"
+      "type": "宇宙",
+      "meaning": "核心由剧烈热核聚变提供能量、自身发光发热的发光恒星"
     },
     {
       "text": "planet",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: planet"
+      "type": "宇宙",
+      "meaning": "环绕恒星运行、依靠自身引力维持球形并清空轨道的行星"
     },
     {
       "text": "galaxy",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: galaxy"
+      "type": "宇宙",
+      "meaning": "由数千亿颗恒星、暗物质和星云通过引力束缚汇聚的庞大星系"
     },
     {
       "text": "galaxies",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: galaxies"
+      "type": "宇宙",
+      "meaning": "遍布于浩瀚宇宙网各处、数以千亿计的宇宙岛星系群"
     },
     {
       "text": "universe",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: universe"
+      "type": "宇宙",
+      "meaning": "包含所有物理物质、能量、时间、空间及物理定律的宇宙万物"
     },
     {
       "text": "nebula",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: nebula"
+      "type": "宇宙",
+      "meaning": "由发光电离气体、恒星遗迹与星际尘埃构成的浩瀚星云"
     },
     {
       "text": "gravity",
-      "type": "phenomenon",
-      "meaning": "宇宙与天体概念: gravity"
+      "type": "天体现象",
+      "meaning": "根据质量与能量弯曲时空的宇宙基本引力相互作用"
     },
     {
       "text": "supernova",
-      "type": "phenomenon",
-      "meaning": "宇宙与天体概念: supernova"
+      "type": "天体现象",
+      "meaning": "垂死大质量恒星发生的极度剧烈、亮度甚至超越整个星系的超新星爆发"
     },
     {
       "text": "astronaut",
-      "type": "tech",
-      "meaning": "宇宙与天体概念: astronaut"
+      "type": "航天技术",
+      "meaning": "经受严苛专业训练、执行轨道与行星际太空任务的宇航员"
     },
     {
       "text": "astronomy",
-      "type": "science",
-      "meaning": "宇宙与天体概念: astronomy"
+      "type": "空间科学",
+      "meaning": "系统研究天体、物理宇宙与深空演化规律的基础学科天文学"
     },
     {
       "text": "exoplanet",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: exoplanet"
+      "type": "宇宙",
+      "meaning": "位于我们太阳系之外、环绕遥远恒星公转的系外行星"
     },
     {
       "text": "exoplanets",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: exoplanets"
+      "type": "宇宙",
+      "meaning": "在银河系各处围绕不同恒星运行的遥远系外异星世界群"
     },
     {
       "text": "satellite",
-      "type": "tech",
-      "meaning": "宇宙与天体概念: satellite"
+      "type": "航天技术",
+      "meaning": "为科研或通信目的环绕行星运行的人造或天然空间卫星"
     },
     {
       "text": "constellation",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: constellation"
+      "type": "宇宙",
+      "meaning": "天文学星图依据恒星在夜空中的排列所划分的星座区域"
     },
     {
       "text": "telescope",
-      "type": "tech",
-      "meaning": "宇宙与天体概念: telescope"
+      "type": "航天技术",
+      "meaning": "收集光线与电磁辐射以观测遥远深空天体的天文望远镜"
     },
     {
       "text": "starship",
-      "type": "tech",
-      "meaning": "宇宙与天体概念: starship"
+      "type": "航天技术",
+      "meaning": "具备跨越广阔恒星际深渊能力的先进星际星舰"
     },
     {
       "text": "atmosphere",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: atmosphere"
+      "type": "宇宙",
+      "meaning": "由引力维系并环绕包裹行星或天体外层的气态圈层大气层"
     },
     {
       "text": "magnetosphere",
-      "type": "phenomenon",
-      "meaning": "宇宙与天体概念: magnetosphere"
+      "type": "天体现象",
+      "meaning": "阻挡偏转高能太阳风及宇宙辐射的行星天然磁场防护罩磁层"
     },
     {
       "text": "radiation",
-      "type": "phenomenon",
-      "meaning": "宇宙与天体概念: radiation"
+      "type": "天体现象",
+      "meaning": "穿梭穿越宇宙深空的高能电磁波束或亚原子粒子辐射"
     },
     {
       "text": "spectrum",
-      "type": "science",
-      "meaning": "宇宙与天体概念: spectrum"
+      "type": "空间科学",
+      "meaning": "将光分解为波长彩虹、以此揭示天体温度与化学构成的光谱"
     },
     {
       "text": "andromeda",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: andromeda"
+      "type": "宇宙",
+      "meaning": "正沿着引力轨道飞向我们银河系、未来将发生合并的最近大螺旋星系仙女座星系"
     },
     {
       "text": "heliosphere",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: heliosphere"
+      "type": "宇宙",
+      "meaning": "由外涌太阳风在星际空间中吹拂开辟出的庞大保护气泡太阳圈"
     },
     {
       "text": "antimatter",
-      "type": "science",
-      "meaning": "宇宙与天体概念: antimatter"
+      "type": "空间科学",
+      "meaning": "由反粒子构成、与常规普通物质接触时会剧烈湮灭释放能量的反物质"
     },
     {
       "text": "singularity",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: singularity"
+      "type": "宇宙",
+      "meaning": "黑洞中心引力密度趋于无穷大、常规物理定律失效的引力奇点"
     },
     {
       "text": "multiverse",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: multiverse"
+      "type": "宇宙",
+      "meaning": "包含无穷时空气泡和无数平行维度的多重宇宙集合假说"
     },
     {
       "text": "light-year",
-      "type": "science",
-      "meaning": "宇宙与天体概念: light-year"
+      "type": "空间科学",
+      "meaning": "光线在宇宙真空中耗时一完整太阳年所行经的宏大天文距离单位光年"
     },
     {
       "text": "black-hole",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: black-hole"
+      "type": "宇宙",
+      "meaning": "引力极其强劲以致连光线也无法逃逸的极端宇宙天体黑洞"
     },
     {
       "text": "stardust",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: stardust"
+      "type": "宇宙",
+      "meaning": "超新星爆发灰烬中的重元素粒子，孕育岩石世界与生命火种的星尘"
     },
     {
       "text": "dark-matter",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: dark-matter"
+      "type": "宇宙",
+      "meaning": "不发光也无法直接观测，却占据全宇宙绝大部分质量的隐形暗物质"
     },
     {
       "text": "dark-energy",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: dark-energy"
+      "type": "宇宙",
+      "meaning": "驱动可观测时空以惊人速度加速膨胀的弥漫宇宙斥力暗能量"
     },
     {
       "text": "wormhole",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: wormhole"
+      "type": "宇宙",
+      "meaning": "将宇宙中两个迥异的时空区域直接跨越相连的理论时空捷径虫洞"
     },
     {
       "text": "speed-of-light",
-      "type": "science",
-      "meaning": "宇宙与天体概念: speed-of-light"
+      "type": "空间科学",
+      "meaning": "在真空中以每秒约30万公里恒定传播的宇宙通用物理极限光速"
     },
     {
       "text": "space-station",
-      "type": "tech",
-      "meaning": "宇宙与天体概念: space-station"
+      "type": "航天技术",
+      "meaning": "科研人员长驻并开展微重力尖端科学探索的大型近地轨道空间站"
     },
     {
       "text": "event-horizon",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: event-horizon"
+      "type": "宇宙",
+      "meaning": "环绕黑洞的不可逆转边界，越过此界后任何物质与光线皆再无可能逃逸的事件视界"
     },
     {
       "text": "milky-way",
-      "type": "cosmos",
-      "meaning": "宇宙与天体概念: milky-way"
+      "type": "宇宙",
+      "meaning": "包含数千亿颗恒星及我们太阳系所在的棒旋星系家园银河系"
     }
   ],
   "bossWords": {
     "alien_dreadnought": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sun"
+        "type": "宇宙",
+        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moon"
+        "type": "宇宙",
+        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moons"
+        "type": "宇宙",
+        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sky"
+        "type": "宇宙",
+        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: ray"
+        "type": "天体现象",
+        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: halo"
+        "type": "宇宙",
+        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: axis"
+        "type": "宇宙",
+        "meaning": "行星或天体绕其自转的假想中心轴线"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: phase"
+        "type": "天体现象",
+        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: wave"
+        "type": "天体现象",
+        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: ship"
+        "type": "航天技术",
+        "meaning": "专为行星际航行设计的载人或自动航天飞船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: nova"
+        "type": "天体现象",
+        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: target"
+        "type": "航天技术",
+        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: data"
+        "type": "航天技术",
+        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: pitch"
+        "type": "宇宙",
+        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: year"
+        "type": "宇宙",
+        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
       }
     ],
     "alien_hive": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sun"
+        "type": "宇宙",
+        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moon"
+        "type": "宇宙",
+        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moons"
+        "type": "宇宙",
+        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sky"
+        "type": "宇宙",
+        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: ray"
+        "type": "天体现象",
+        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: halo"
+        "type": "宇宙",
+        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: axis"
+        "type": "宇宙",
+        "meaning": "行星或天体绕其自转的假想中心轴线"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: phase"
+        "type": "天体现象",
+        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: wave"
+        "type": "天体现象",
+        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: ship"
+        "type": "航天技术",
+        "meaning": "专为行星际航行设计的载人或自动航天飞船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: nova"
+        "type": "天体现象",
+        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: target"
+        "type": "航天技术",
+        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: data"
+        "type": "航天技术",
+        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: pitch"
+        "type": "宇宙",
+        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: year"
+        "type": "宇宙",
+        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
       }
     ],
     "alien_psionic": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sun"
+        "type": "宇宙",
+        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moon"
+        "type": "宇宙",
+        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moons"
+        "type": "宇宙",
+        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sky"
+        "type": "宇宙",
+        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: ray"
+        "type": "天体现象",
+        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: halo"
+        "type": "宇宙",
+        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: axis"
+        "type": "宇宙",
+        "meaning": "行星或天体绕其自转的假想中心轴线"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: phase"
+        "type": "天体现象",
+        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: wave"
+        "type": "天体现象",
+        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: ship"
+        "type": "航天技术",
+        "meaning": "专为行星际航行设计的载人或自动航天飞船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: nova"
+        "type": "天体现象",
+        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: target"
+        "type": "航天技术",
+        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: data"
+        "type": "航天技术",
+        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: pitch"
+        "type": "宇宙",
+        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: year"
+        "type": "宇宙",
+        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
       }
     ],
     "alien_warlord": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sun"
+        "type": "宇宙",
+        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moon"
+        "type": "宇宙",
+        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moons"
+        "type": "宇宙",
+        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sky"
+        "type": "宇宙",
+        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: ray"
+        "type": "天体现象",
+        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: halo"
+        "type": "宇宙",
+        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: axis"
+        "type": "宇宙",
+        "meaning": "行星或天体绕其自转的假想中心轴线"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: phase"
+        "type": "天体现象",
+        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: wave"
+        "type": "天体现象",
+        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: ship"
+        "type": "航天技术",
+        "meaning": "专为行星际航行设计的载人或自动航天飞船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: nova"
+        "type": "天体现象",
+        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: target"
+        "type": "航天技术",
+        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: data"
+        "type": "航天技术",
+        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: pitch"
+        "type": "宇宙",
+        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: year"
+        "type": "宇宙",
+        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
       }
     ],
     "alien_darkmatter": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sun"
+        "type": "宇宙",
+        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moon"
+        "type": "宇宙",
+        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moons"
+        "type": "宇宙",
+        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sky"
+        "type": "宇宙",
+        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: ray"
+        "type": "天体现象",
+        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: halo"
+        "type": "宇宙",
+        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: axis"
+        "type": "宇宙",
+        "meaning": "行星或天体绕其自转的假想中心轴线"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: phase"
+        "type": "天体现象",
+        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: wave"
+        "type": "天体现象",
+        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: ship"
+        "type": "航天技术",
+        "meaning": "专为行星际航行设计的载人或自动航天飞船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: nova"
+        "type": "天体现象",
+        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: target"
+        "type": "航天技术",
+        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: data"
+        "type": "航天技术",
+        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: pitch"
+        "type": "宇宙",
+        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: year"
+        "type": "宇宙",
+        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
       }
     ],
     "alien_mothership": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sun"
+        "type": "宇宙",
+        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moon"
+        "type": "宇宙",
+        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moons"
+        "type": "宇宙",
+        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sky"
+        "type": "宇宙",
+        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: ray"
+        "type": "天体现象",
+        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: halo"
+        "type": "宇宙",
+        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: axis"
+        "type": "宇宙",
+        "meaning": "行星或天体绕其自转的假想中心轴线"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: phase"
+        "type": "天体现象",
+        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: wave"
+        "type": "天体现象",
+        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: ship"
+        "type": "航天技术",
+        "meaning": "专为行星际航行设计的载人或自动航天飞船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: nova"
+        "type": "天体现象",
+        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: target"
+        "type": "航天技术",
+        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: data"
+        "type": "航天技术",
+        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: pitch"
+        "type": "宇宙",
+        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: year"
+        "type": "宇宙",
+        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
       }
     ],
     "robot": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sun"
+        "type": "宇宙",
+        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moon"
+        "type": "宇宙",
+        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moons"
+        "type": "宇宙",
+        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sky"
+        "type": "宇宙",
+        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: ray"
+        "type": "天体现象",
+        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: halo"
+        "type": "宇宙",
+        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: axis"
+        "type": "宇宙",
+        "meaning": "行星或天体绕其自转的假想中心轴线"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: phase"
+        "type": "天体现象",
+        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: wave"
+        "type": "天体现象",
+        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: ship"
+        "type": "航天技术",
+        "meaning": "专为行星际航行设计的载人或自动航天飞船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: nova"
+        "type": "天体现象",
+        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: target"
+        "type": "航天技术",
+        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: data"
+        "type": "航天技术",
+        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: pitch"
+        "type": "宇宙",
+        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: year"
+        "type": "宇宙",
+        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
       }
     ],
     "beast": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sun"
+        "type": "宇宙",
+        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moon"
+        "type": "宇宙",
+        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moons"
+        "type": "宇宙",
+        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sky"
+        "type": "宇宙",
+        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: ray"
+        "type": "天体现象",
+        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: halo"
+        "type": "宇宙",
+        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: axis"
+        "type": "宇宙",
+        "meaning": "行星或天体绕其自转的假想中心轴线"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: phase"
+        "type": "天体现象",
+        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: wave"
+        "type": "天体现象",
+        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: ship"
+        "type": "航天技术",
+        "meaning": "专为行星际航行设计的载人或自动航天飞船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: nova"
+        "type": "天体现象",
+        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: target"
+        "type": "航天技术",
+        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: data"
+        "type": "航天技术",
+        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: pitch"
+        "type": "宇宙",
+        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: year"
+        "type": "宇宙",
+        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
       }
     ],
     "mythology": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sun"
+        "type": "宇宙",
+        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moon"
+        "type": "宇宙",
+        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moons"
+        "type": "宇宙",
+        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sky"
+        "type": "宇宙",
+        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: ray"
+        "type": "天体现象",
+        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: halo"
+        "type": "宇宙",
+        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: axis"
+        "type": "宇宙",
+        "meaning": "行星或天体绕其自转的假想中心轴线"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: phase"
+        "type": "天体现象",
+        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: wave"
+        "type": "天体现象",
+        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: ship"
+        "type": "航天技术",
+        "meaning": "专为行星际航行设计的载人或自动航天飞船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: nova"
+        "type": "天体现象",
+        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: target"
+        "type": "航天技术",
+        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: data"
+        "type": "航天技术",
+        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: pitch"
+        "type": "宇宙",
+        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: year"
+        "type": "宇宙",
+        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
       }
     ],
     "volcano": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sun"
+        "type": "宇宙",
+        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moon"
+        "type": "宇宙",
+        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moons"
+        "type": "宇宙",
+        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sky"
+        "type": "宇宙",
+        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: ray"
+        "type": "天体现象",
+        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: halo"
+        "type": "宇宙",
+        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: axis"
+        "type": "宇宙",
+        "meaning": "行星或天体绕其自转的假想中心轴线"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: phase"
+        "type": "天体现象",
+        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: wave"
+        "type": "天体现象",
+        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: ship"
+        "type": "航天技术",
+        "meaning": "专为行星际航行设计的载人或自动航天飞船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: nova"
+        "type": "天体现象",
+        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: target"
+        "type": "航天技术",
+        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: data"
+        "type": "航天技术",
+        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: pitch"
+        "type": "宇宙",
+        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: year"
+        "type": "宇宙",
+        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
       }
     ],
     "ocean": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sun"
+        "type": "宇宙",
+        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moon"
+        "type": "宇宙",
+        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moons"
+        "type": "宇宙",
+        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sky"
+        "type": "宇宙",
+        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: ray"
+        "type": "天体现象",
+        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: halo"
+        "type": "宇宙",
+        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: axis"
+        "type": "宇宙",
+        "meaning": "行星或天体绕其自转的假想中心轴线"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: phase"
+        "type": "天体现象",
+        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: wave"
+        "type": "天体现象",
+        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: ship"
+        "type": "航天技术",
+        "meaning": "专为行星际航行设计的载人或自动航天飞船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: nova"
+        "type": "天体现象",
+        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: target"
+        "type": "航天技术",
+        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: data"
+        "type": "航天技术",
+        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: pitch"
+        "type": "宇宙",
+        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: year"
+        "type": "宇宙",
+        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
       }
     ],
     "cosmos": [
       {
         "text": "sun",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sun"
+        "type": "宇宙",
+        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
       },
       {
         "text": "moon",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moon"
+        "type": "宇宙",
+        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
       },
       {
         "text": "moons",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: moons"
+        "type": "宇宙",
+        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
       },
       {
         "text": "sky",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: sky"
+        "type": "宇宙",
+        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
       },
       {
         "text": "ray",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: ray"
+        "type": "天体现象",
+        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
       },
       {
         "text": "halo",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: halo"
+        "type": "宇宙",
+        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
       },
       {
         "text": "axis",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: axis"
+        "type": "宇宙",
+        "meaning": "行星或天体绕其自转的假想中心轴线"
       },
       {
         "text": "phase",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: phase"
+        "type": "天体现象",
+        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
       },
       {
         "text": "wave",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: wave"
+        "type": "天体现象",
+        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
       },
       {
         "text": "ship",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: ship"
+        "type": "航天技术",
+        "meaning": "专为行星际航行设计的载人或自动航天飞船"
       },
       {
         "text": "nova",
-        "type": "phenomenon",
-        "meaning": "宇宙与天体概念: nova"
+        "type": "天体现象",
+        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
       },
       {
         "text": "target",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: target"
+        "type": "航天技术",
+        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
       },
       {
         "text": "data",
-        "type": "tech",
-        "meaning": "宇宙与天体概念: data"
+        "type": "航天技术",
+        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
       },
       {
         "text": "pitch",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: pitch"
+        "type": "宇宙",
+        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
       },
       {
         "text": "year",
-        "type": "cosmos",
-        "meaning": "宇宙与天体概念: year"
+        "type": "宇宙",
+        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
       }
     ]
   },
-  "trainingWorlds": []
+  "trainingWorlds": {
+    "1": {
+      "id": 1,
+      "name": "世界 1: 基准键位",
+      "subtitle": "主键行 (A S D F G H J K L ;)",
+      "desc": "掌握手指基准停靠位置（左手 ASDF，右手 JKL;）的肌肉记忆。",
+      "icon": "🖐️",
+      "color": "#38BDF8",
+      "chars": [
+        "A",
+        "S",
+        "D",
+        "F",
+        "G",
+        "H",
+        "J",
+        "K",
+        "L",
+        ";"
+      ],
+      "words": [
+        "AS",
+        "ALL",
+        "FALL",
+        "GLAD",
+        "HALF",
+        "LAD",
+        "DASH",
+        "FLASH",
+        "GLASS",
+        "SALAD",
+        "FLASK",
+        "HALL",
+        "FLAG",
+        "LADS",
+        "FALLS",
+        "SHALL"
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "世界 2: 上排键位",
+      "subtitle": "上排键 (Q W E R T Y U I O P)",
+      "desc": "练习食指、中指和无名指向上延伸敲击上方键位的敲击跨度。",
+      "icon": "⬆️",
+      "color": "#F59E0B",
+      "chars": [
+        "Q",
+        "W",
+        "E",
+        "R",
+        "T",
+        "Y",
+        "U",
+        "I",
+        "O",
+        "P"
+      ],
+      "words": [
+        "TRY",
+        "TREE",
+        "POWER",
+        "QUIET",
+        "TYPE",
+        "WRITE",
+        "ROPE",
+        "TOWER",
+        "ROUTE",
+        "POET",
+        "PORT",
+        "TRIP",
+        "WIRE",
+        "PITY",
+        "PURE",
+        "ROTE"
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "世界 3: 下排键位",
+      "subtitle": "下排键 (Z X C V B N M)",
+      "desc": "向下延伸指法灵活性、精细敲击手速与下方按键协调能力。",
+      "icon": "⬇️",
+      "color": "#10B981",
+      "chars": [
+        "Z",
+        "X",
+        "C",
+        "V",
+        "B",
+        "N",
+        "M"
+      ],
+      "words": [
+        "MAN",
+        "CAN",
+        "VAN",
+        "BOX",
+        "MIX",
+        "ZONE",
+        "CAMP",
+        "BOMB",
+        "NAME",
+        "MINE",
+        "VIBE",
+        "CAVE",
+        "NAVY",
+        "COMB",
+        "MAZE",
+        "ZINC"
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "世界 4: 数字与标点",
+      "subtitle": "数字与符号 (1 2 3 4 5 ? ! , .)",
+      "desc": "掌握数字按键、问号、感叹号与基础常用标点符号的敲击输入。",
+      "icon": "✨",
+      "color": "#EC4899",
+      "chars": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "?",
+        "!",
+        ",",
+        "."
+      ],
+      "words": [
+        "GO!",
+        "RUN!",
+        "HOW?",
+        "YES!",
+        "1, 2, 3",
+        "STOP.",
+        "WAIT!",
+        "WHO?",
+        "NOW.",
+        "WOW!",
+        "FAST!",
+        "GOAL!"
+      ]
+    }
+  }
 }
