@@ -851,50 +851,52 @@
 .black-hole-vortex {
   position: absolute;
   bottom: 0;
-  left: -2%;
-  right: -2%;
-  width: 104%;
-  height: 110px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 120px;
   pointer-events: none;
   z-index: 2;
   overflow: visible;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-/* Luminous Rayleigh scattering atmospheric glow expanding above Earth */
+/* Luminous Rayleigh scattering atmospheric halo concentric with Earth */
 .earth-atmosphere-glow {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(ellipse 92% 70% at 50% 98%, rgba(56, 189, 248, 0.40) 0%, rgba(14, 165, 233, 0.20) 42%, rgba(3, 105, 161, 0.08) 72%, transparent 100%);
-  filter: blur(8px);
+  left: 50%;
+  bottom: -708px;
+  width: 800px;
+  height: 800px;
+  margin-left: -400px;
+  border-radius: 50%;
   pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, transparent 46.5%, rgba(56, 189, 248, 0.22) 48.5%, rgba(14, 165, 233, 0.08) 50%, transparent 52%);
+  filter: blur(8px);
   animation: earthAtmosphereBreathe 4.5s ease-in-out infinite alternate;
 }
 
 @keyframes earthAtmosphereBreathe {
   0% {
-    opacity: 0.72;
-    transform: scale(0.99);
+    opacity: 0.70;
+    transform: scale(0.995);
   }
   100% {
-    opacity: 0.98;
-    transform: scale(1.02);
+    opacity: 0.95;
+    transform: scale(1.008);
   }
 }
 
 /* Concentric Planetary Defense Shield Barrier (Concentric arc with subtle pulsing glow) */
 .earth-shield-barrier {
   position: absolute;
-  bottom: 64px;
-  left: 0;
-  width: 100%;
-  height: 48px;
+  left: 50%;
+  bottom: -718px;
+  width: 820px;
+  height: 820px;
+  margin-left: -410px;
   pointer-events: none;
   z-index: 5;
   overflow: visible;
@@ -908,51 +910,90 @@
   overflow: visible;
 }
 
+/* Soft diffuse glow layer behind core line */
+.earth-shield-glow {
+  fill: none;
+  stroke: rgba(56, 189, 248, 0.40);
+  stroke-width: 4.5px;
+  filter: blur(3px);
+  animation: earthShieldGlowPulse 2.8s ease-in-out infinite alternate;
+  transition: stroke 0.25s ease, opacity 0.4s ease;
+}
+
+/* Crisp thin core defense shield line with subtle living pulse */
 .earth-shield-path {
   fill: none;
-  stroke: rgba(56, 189, 248, 0.95);
-  stroke-width: 1.8px;
+  stroke: rgba(186, 230, 253, 0.95);
+  stroke-width: 1.5px;
   stroke-linecap: round;
-  filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.85)) drop-shadow(0 0 10px rgba(14, 165, 233, 0.40));
-  animation: earthShieldPulse 3.5s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 3px rgba(56, 189, 248, 0.90)) drop-shadow(0 0 7px rgba(14, 165, 233, 0.50));
+  animation: earthShieldPulse 2.8s ease-in-out infinite alternate;
   transition: stroke 0.25s ease, filter 0.25s ease, opacity 0.4s ease;
 }
 
 @keyframes earthShieldPulse {
   0% {
-    filter: drop-shadow(0 0 3px rgba(56, 189, 248, 0.70)) drop-shadow(0 0 8px rgba(14, 165, 233, 0.30));
-    opacity: 0.85;
+    filter: drop-shadow(0 0 2px rgba(56, 189, 248, 0.65)) drop-shadow(0 0 5px rgba(14, 165, 233, 0.35));
+    opacity: 0.78;
+    stroke: rgba(186, 230, 253, 0.88);
+  }
+  50% {
+    filter: drop-shadow(0 0 4.5px rgba(224, 242, 254, 1)) drop-shadow(0 0 10px rgba(56, 189, 248, 0.80)) drop-shadow(0 0 16px rgba(14, 165, 233, 0.45));
+    opacity: 1;
+    stroke: #FFFFFF;
   }
   100% {
-    filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.95)) drop-shadow(0 0 14px rgba(56, 189, 248, 0.55));
-    opacity: 1;
+    filter: drop-shadow(0 0 2px rgba(56, 189, 248, 0.65)) drop-shadow(0 0 5px rgba(14, 165, 233, 0.35));
+    opacity: 0.78;
+    stroke: rgba(186, 230, 253, 0.88);
   }
 }
 
-.earth-shield-barrier.damaged .earth-shield-path {
-  stroke: rgba(239, 68, 68, 0.95);
-  filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.95)) drop-shadow(0 0 14px rgba(239, 68, 68, 0.60));
+@keyframes earthShieldGlowPulse {
+  0% {
+    opacity: 0.50;
+    stroke: rgba(56, 189, 248, 0.30);
+  }
+  50% {
+    opacity: 0.90;
+    stroke: rgba(56, 189, 248, 0.55);
+  }
+  100% {
+    opacity: 0.50;
+    stroke: rgba(56, 189, 248, 0.30);
+  }
+}
+
+.earth-shield-barrier.damaged .earth-shield-glow {
+  stroke: rgba(239, 68, 68, 0.60);
   animation: none;
 }
 
+.earth-shield-barrier.damaged .earth-shield-path {
+  stroke: rgba(239, 68, 68, 0.98);
+  filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.95)) drop-shadow(0 0 12px rgba(239, 68, 68, 0.60));
+  animation: none;
+}
+
+.earth-shield-barrier.depleted .earth-shield-glow,
 .earth-shield-barrier.depleted .earth-shield-path {
   opacity: 0;
   stroke: transparent;
 }
 
 .earth-horizon-wrap {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 82px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
 }
 
 .earth-globe-sphere {
   position: absolute;
-  top: 0;
+  bottom: -698px;
   left: 50%;
   width: 780px;
   height: 780px;
@@ -962,7 +1003,7 @@
   animation: earthAxisRotate 80s linear infinite;
   transform-origin: 50% 50%;
   will-change: transform;
-  filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.55)) brightness(1.04);
+  filter: drop-shadow(0 0 14px rgba(56, 189, 248, 0.40)) brightness(1.03);
 }
 
 .earth-globe-img {
@@ -983,27 +1024,21 @@
   }
 }
 
-/* Radiant atmospheric limb line along the curvature */
+/* Flat horizontal limb glow disabled in favor of circular atmospheric halo */
 .earth-limb-glow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 22px;
-  background: radial-gradient(ellipse 70% 100% at 50% 0%, rgba(186, 230, 253, 0.55) 0%, rgba(56, 189, 248, 0.28) 45%, transparent 80%);
-  pointer-events: none;
-  filter: blur(3px);
-  mix-blend-mode: screen;
+  display: none;
 }
 
 /* Planetary Defense Shield: flashes on dropped celestial debris */
 .earth-impact-shield {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 95px;
-  background: radial-gradient(ellipse 85% 75% at 50% 90%, rgba(239, 68, 68, 0.60) 0%, rgba(245, 158, 11, 0.35) 45%, transparent 75%);
+  left: 50%;
+  bottom: -718px;
+  width: 820px;
+  height: 820px;
+  margin-left: -410px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, transparent 45%, rgba(239, 68, 68, 0.55) 48.5%, rgba(245, 158, 11, 0.30) 50.5%, transparent 53%);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.1s ease-out;

@@ -16,7 +16,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="./css/variables.css?v=1.6.1" />
   <link rel="stylesheet" href="./css/components.css?v=1.0" />
-  <link rel="stylesheet" href="./css/layout.css?v=1.8" />
+  <link rel="stylesheet" href="./css/layout.css?v=1.8.1" />
   <link rel="stylesheet" href="./css/gameplay.css?v=1.7" />
   <link rel="stylesheet" href="./css/modals.css?v=1.7" />
   <link rel="stylesheet" href="./css/responsive.css?v=1.8" />
@@ -409,17 +409,17 @@
           <!-- Planet Earth Horizon Defense Rim (Protects Earth from celestial debris) -->
           <div id="earth-horizon" class="earth-horizon" aria-hidden="true">
             <div class="earth-atmosphere-glow" aria-hidden="true"></div>
-            <!-- Concentric Planetary Defense Shield Line (Arc with subtle pulsing glow) -->
+            <!-- Concentric Planetary Defense Shield Line (Concentric circular arc with pulsing glow) -->
             <div id="earth-shield-barrier" class="earth-shield-barrier" aria-hidden="true">
-              <svg class="earth-shield-svg" viewBox="0 0 1000 120" preserveAspectRatio="none">
-                <path class="earth-shield-path" d="M -20,118 Q 500,10 1020,118" />
+              <svg class="earth-shield-svg" viewBox="0 0 820 820" preserveAspectRatio="xMidYMid meet">
+                <circle class="earth-shield-glow" cx="410" cy="410" r="408" />
+                <circle class="earth-shield-path" cx="410" cy="410" r="408" />
               </svg>
             </div>
             <div class="earth-horizon-wrap" aria-hidden="true">
               <div class="earth-globe-sphere" id="earth-globe-sphere">
                 <img class="earth-globe-img" src="./assets/earth_cartoon_globe.webp" alt="Planet Earth Horizon" loading="eager" />
               </div>
-              <div class="earth-limb-glow" aria-hidden="true"></div>
             </div>
             <div class="earth-impact-shield" aria-hidden="true"></div>
           </div>
