@@ -1244,15 +1244,7 @@ function updateHUD() {
     renderRunPerks();
   }
 
-  // Shield aura visual update
-  const aura = $('shield-aura');
-  if (aura) {
-    if ((state.activeTimers?.shield || 0) > 0) {
-      aura.classList.add('active');
-    } else {
-      aura.classList.remove('active');
-    }
-  }
+
 
   // Zen / Training Mode fixed indicator toggle in HUD
   const zenFixedBadge = $('zen-fixed-badge');
@@ -1319,6 +1311,7 @@ function updateHUD() {
     if (earthShield) {
       const curShields = (state.gameMode === 'zen' || state.gameMode === 'training') ? 3 : (state.shields !== undefined ? state.shields : (state.lives || 3));
       earthShield.classList.toggle('depleted', curShields <= 0);
+      earthShield.classList.toggle('immunity-active', (state.activeTimers?.shield || 0) > 0);
     }
   }
 

@@ -419,7 +419,14 @@ function gameLoop(ts) {
   if (typeof checkFreezerAutoCancel === 'function') checkFreezerAutoCancel();
 
   const boardH = gameArea.clientHeight || 500;
+  const boardW = gameArea.clientWidth || 360;
   const items = state.activeItems;
+
+  const earthShield = document.getElementById('earth-shield-barrier');
+  const isImmunityActive = (state.activeTimers?.shield || 0) > 0;
+  if (earthShield) {
+    earthShield.classList.toggle('immunity-active', isImmunityActive);
+  }
 
   // Boss Battle safety: strictly no loose runics or words during boss confrontations
   if (state.bossBattle && state.bossBattle.active) {
@@ -448,9 +455,75 @@ function gameLoop(ts) {
 
     // Black Hole Event Horizon Suction & Gravitational Slowdown & Progressive Spaghettification
     const h = item.el.offsetHeight || 36;
+    const itemW = item.el.offsetWidth || 60;
     // O buraco negro começa a exercer atração gravitacional e distorção a partir de ~78-80% da altura da tela
     const suctionStart = boardH * 0.78;
     const swallowY = boardH - 42;      // Ponto de consumo na singularidade
+
+    // Geometria da Barreira de Escudo Planetário (raio r=408, centro Y = boardH + 308)
+    const itemCenterX = (item.x !== undefined ? item.x : item.el.offsetLeft) + (itemW / 2);
+    const boardCenterDx = itemCenterX - (boardW / 2);
+    const shieldR = 408;
+    const shieldCenterY = boardH + 308;
+    const underSqrt = Math.max(0, shieldR * shieldR - boardCenterDx * boardCenterDx);
+    const shieldBarrierY = shieldCenterY - Math.sqrt(underSqrt);
+
+    // Quando a Imunidade estiver ativa: destrói os objetos assim que tocar na barreira da imunidade
+    if (isImmunityActive && (item.y + h >= shieldBarrierY)) {
+      item.removing = true;
+      item.el.classList.remove('danger', 'in-black-hole-pull', 'typing-target', 'eco-target');
+      item.el.classList.add('shattered', 'shield-vaporized');
+      item.el.querySelectorAll('.skill-badge, .wildcard-badge, .eco-target-badge, .new-word-badge').forEach(b => b.remove());
+
+      playSound('skill');
+
+      if (typeof spawnCelestialExplosion === 'function') {
+        spawnCelestialExplosion(item.el, item.text);
+      } else if (typeof spawnParticles === 'function') {
+        spawnParticles(item.el, (item.text?.length || 3) * 2);
+      }
+
+      // Flash de absorção cósmica na barreira de escudo
+      if (earthShield) {
+        earthShield.classList.remove('shield-absorb');
+        void earthShield.offsetWidth;
+        earthShield.classList.add('shield-absorb');
+        setTimeout(() => {
+          if (earthShield) earthShield.classList.remove('shield-absorb');
+        }, 300);
+      }
+
+      const blockMsg = typeof t === 'function' ? t('fb_shield_blocked') : '🛡️ Dano bloqueado pela Imunidade!';
+      showFeedback(blockMsg, 'special');
+
+      if (item.isBossMeaning) {
+        if (state.bossBattle?.currentWord) {
+          state.bossBattle.lastDroppedWord = state.bossBattle.currentWord.text.toLowerCase();
+        }
+        state.typedBuffer = '';
+        state.speedMultiplier = 0.5;
+        setTimeout(() => {
+          item.el?.parentNode?.removeChild(item.el);
+          if (state.bossBattle?.active && !state.paused && state.lives > 0) {
+            if (typeof spawnBossMeaningBox === 'function') spawnBossMeaningBox();
+          }
+        }, 260);
+      } else {
+        setTimeout(() => item.el?.parentNode?.removeChild(item.el), 260);
+      }
+
+      // Se o buffer pertencia a este item e ele era único, limpa o buffer
+      if (state.typedBuffer && item.text && item.text.startsWith(state.typedBuffer)) {
+        const remaining = items.filter(it => !it.removing && it.id !== item.id && it.text.startsWith(state.typedBuffer));
+        if (remaining.length === 0) {
+          state.typedBuffer = '';
+          clearHighlight();
+        }
+      }
+
+      items.splice(i, 1);
+      continue;
+    }
 
     // Movimentação com Dilatação Gravitacional do Tempo e Espaguetificação Progressiva
     if (!isFrozen && !trainingHold) {

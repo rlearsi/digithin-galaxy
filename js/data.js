@@ -605,11 +605,17 @@ const SKILLS_CONFIG = {
     get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
     duration: 10000,
     interval: 120000, // 2 minutes
-    color: '#10B981',
+    color: '#A855F7',
     type: 'periodic',
     category: 'skill',
-    onActivate: () => {},
-    onExpire: () => {}
+    onActivate: () => {
+      const shield = document.getElementById('earth-shield-barrier');
+      if (shield) shield.classList.add('immunity-active');
+    },
+    onExpire: () => {
+      const shield = document.getElementById('earth-shield-barrier');
+      if (shield) shield.classList.remove('immunity-active');
+    }
   },
   vortex: {
     id: 'vortex',

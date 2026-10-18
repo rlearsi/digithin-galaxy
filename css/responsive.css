@@ -147,12 +147,7 @@
   #game-column.has-finger-guide.queue-pos-bottom::after {
     bottom: 90px;
   }
-  #game-column.has-finger-guide .shield-aura {
-    bottom: 46px;
-  }
-  #game-column.has-finger-guide.queue-pos-bottom .shield-aura {
-    bottom: 90px;
-  }
+
   #virtual-keyboard {
     padding: 6px 4px 8px;
     border-radius: 0 0 18px 18px;
@@ -178,18 +173,7 @@
   #game-column.has-virtual-keyboard.queue-pos-bottom.has-mobile-skills::after {
     bottom: 208px;
   }
-  #game-column.has-virtual-keyboard .shield-aura {
-    bottom: 128px;
-  }
-  #game-column.has-virtual-keyboard.has-mobile-skills .shield-aura {
-    bottom: 164px;
-  }
-  #game-column.has-virtual-keyboard.queue-pos-bottom .shield-aura {
-    bottom: 172px;
-  }
-  #game-column.has-virtual-keyboard.queue-pos-bottom.has-mobile-skills .shield-aura {
-    bottom: 208px;
-  }
+
 }
 
 /* Very Small Mobile Screens (max-width: 440px) */
@@ -290,18 +274,7 @@
   #game-column.has-virtual-keyboard.queue-pos-bottom.has-mobile-skills::after {
     bottom: 194px;
   }
-  #game-column.has-virtual-keyboard .shield-aura {
-    bottom: 116px;
-  }
-  #game-column.has-virtual-keyboard.has-mobile-skills .shield-aura {
-    bottom: 150px;
-  }
-  #game-column.has-virtual-keyboard.queue-pos-bottom .shield-aura {
-    bottom: 160px;
-  }
-  #game-column.has-virtual-keyboard.queue-pos-bottom.has-mobile-skills .shield-aura {
-    bottom: 194px;
-  }
+
 }
 
 /* ======================================================

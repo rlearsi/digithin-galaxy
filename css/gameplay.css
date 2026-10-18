@@ -793,6 +793,10 @@
   pointer-events: none !important;
 }
 
+.falling-item.shield-vaporized {
+  filter: drop-shadow(0 0 10px rgba(192, 132, 252, 0.95)) drop-shadow(0 0 20px rgba(168, 85, 247, 0.70)) brightness(1.8) !important;
+}
+
 /* ======================================================
    COSMIC CONFETTI & CELESTIAL FRAGMENT PARTICLES
    (Pedaços caindo tipo confete / explosão de corpos celestes)
