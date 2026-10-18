@@ -4,7 +4,7 @@
 [![Status](https://img.shields.io/badge/status-estável-10B981?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 [![Licença](https://img.shields.io/badge/licença-MIT-38BDF8?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 
-> **Digithin Galaxy** é um jogo de digitação arcade espacial moderno e roguelike, desenvolvido em **HTML5**, **CSS3 Vanilla** e **JavaScript modular**. Palavras, termos astronômicos e corpos celestes caem pela coluna central em direção a um buraco negro; o jogador digita velozmente antes que sejam tragados pelo horizonte de eventos, acumulando XP, subindo de nível com escolhas de habilidades roguelike e enfrentando 6 Comandantes Alienígenas que ameaçam o Sistema Solar.
+> **Digithin Galaxy** é um jogo de digitação arcade espacial moderno e roguelike, desenvolvido em **HTML5**, **CSS3 Vanilla** e **JavaScript modular**. Palavras, termos astronômicos e corpos celestes caem pela coluna central em direção à Terra; o jogador digita velozmente para proteger o planeta e sua barreira defensiva contra o impacto dos destroços celestes, acumulando XP, subindo de nível com escolhas de habilidades roguelike e enfrentando 6 Comandantes Alienígenas que ameaçam o Sistema Solar.
 
 ---
 
@@ -12,7 +12,7 @@
 - [1. Visão Geral](#1-visão-geral)
 - [2. Estrutura e Arquitetura do Projeto](#2-estrutura-e-arquitetura-do-projeto)
 - [3. Mecânicas do Jogo (Gameplay)](#3-mecânicas-do-jogo-gameplay)
-  - [3.1 Vocábulos Cósmicos & Horizonte da Terra](#31-vocábulos-cósmicos--horizonte-da-terra)
+  - [3.1 Vocábulos Cósmicos & Defesa da Terra](#31-vocábulos-cósmicos--defesa-da-terra)
   - [3.2 Smart Targeting do Eco Cósmico & Buffer Lock](#32-smart-targeting-do-eco-cósmico--buffer-lock)
   - [3.3 Sistema de XP e Level-Up Roguelike](#33-sistema-de-xp-e-level-up-roguelike)
   - [3.4 Escudos da Terra, Horizonte Planetário & Queda de Destroços](#34-escudos-da-terra-horizonte-planetário--queda-de-destroços)
@@ -35,7 +35,7 @@ O projeto foi projetado com forte ênfase na estética espacial arcade moderna, 
 
 - **Stack 100% Nativa:** HTML5 semântico, CSS3 Moderno (CSS Grid, Flexbox, Glassmorphism translúcido) e JavaScript Vanilla.
 - **Zero Dependências:** Funciona imediatamente no navegador via protocolo local `file:///` ou servidores locais (Apache / LAMPP / Live Server).
-- **Design Espacial Arcade:** Fundo cósmico com 200 estrelas cintilantes, estrelas cadentes, buraco negro estelar estilizado com photon sphere e disco de acreção luminoso, coluna central em vidro fosco translúcido e animação de espaguetificação gravitacional.
+- **Design Espacial Arcade:** Fundo cósmico com 200 estrelas cintilantes, estrelas cadentes, o Planeta Terra curvado no horizonte inferior com escudo orbital luminoso e atmosfera reativa, coluna central em vidro fosco translúcido e física realista de estilhaços celestes.
 - **Isolamento de Armazenamento Local:** Todas as chaves utilizam o prefixo `digithin_galaxy_` no `localStorage`, garantindo total independência de recordes, conquistas, configurações e progresso em relação a outros projetos no mesmo domínio local.
 
 ---
@@ -59,13 +59,13 @@ digithin-galaxy/
 │   ├── variables.css     # Design tokens, paleta cósmica unificada e superfícies glass
 │   ├── components.css    # Botões aeroespaciais, tags, barras de progresso e badges
 │   ├── layout.css        # Telas, HUD, colunas em vidro e posicionamento de elementos
-│   ├── gameplay.css      # Vocábulos flutuantes, buraco negro, mira cósmica e efeitos
+│   ├── gameplay.css      # Vocábulos flutuantes, horizonte da Terra, barreira de escudo e efeitos
 │   ├── modals.css        # Modais de Level-Up, pausa, biblioteca, chefão e game over
 │   └── responsive.css    # Adaptações e media queries para diferentes resoluções
 ├── locales/              # Pacotes de tradução em 7 idiomas (en, pt, fr, de, ja, ko, zh)
 └── js/
-    ├── ambient.js        # Canvas de campo estelar 2D, estrelas cintilantes e buraco negro
-    ├── audio.js          # Síntese Web Audio API (digitação, sucção, acertos, level-up)
+    ├── ambient.js        # Canvas de campo estelar 2D, estrelas cintilantes e atmosfera reativa
+    ├── audio.js          # Síntese Web Audio API (digitação, impactos, acertos, level-up)
     ├── i18n.js           # Mecanismo de internacionalização e carregador de pacotes JSON
     ├── data.js           # Constantes (CFG), vocabulário cósmico (75 palavras) e chefões
     ├── state.js          # Estado global da corrida e persistência local (digithin_galaxy_*)
@@ -84,8 +84,8 @@ digithin-galaxy/
 
 ## 3. Mecânicas do Jogo (Gameplay)
 
-### 3.1 Vocábulos Cósmicos & Buraco Negro
-Os elementos que caem do topo da tela em direção ao buraco negro são denominados **Vocábulos Cósmicos**. O jogo adota o padrão de Game UX *"Cor é Mecânica, Não Tipologia"*: todos os vocábulos comuns compartilham uma base visual serena e unificada, destacando apenas mecânicas especiais:
+### 3.1 Vocábulos Cósmicos & Defesa da Terra
+Os elementos que caem do topo da tela em direção à órbita da Terra são denominados **Vocábulos Cósmicos**. O jogador deve destruí-los velozmente antes que atinjam a atmosfera e comprometam os escudos do planeta. O jogo adota o padrão de Game UX *"Cor é Mecânica, Não Tipologia"*: todos os vocábulos comuns compartilham uma base visual serena e unificada, destacando apenas mecânicas especiais:
 
 | Tipo de Vocábulo | Visual / Identificador | XP Concedido | Descrição |
 |---|---|:---:|---|
@@ -148,7 +148,7 @@ Durante a jornada arcade, o Sistema Solar é invadido esporadicamente por um dos
 | **Nebulor** | Indigo (`#6366F1`) | Entidade Cósmica | Vórtices de matéria escura, quasars e lentes relativísticas. |
 | **Xenor** | Amber (`#F59E0B`) | Consciência Central | Singularidades, velocidade da luz e buracos de minhoca. |
 
-- O Comandante lança enigmas astronômicos em caixas de vidro fosco. Digite a resposta correta antes que ela toque o buraco negro para causar dano crítico no invasor.
+- O Comandante lança enigmas astronômicos em caixas de vidro fosco. Digite a resposta correta antes que ela atinja a atmosfera da Terra para causar dano crítico no invasor.
 - Ao derrotá-lo, o jogador escolhe uma grande recompensa: `+1 Escudo`, `+1 Ficha Continue` ou `+100 Moedas`.
 
 ---
@@ -170,8 +170,8 @@ As habilidades obtidas no Level-Up atuam automaticamente ao longo da partida, ge
 | **Dilação Espacial** | Passiva Permanente | Efeito Contínuo | Amplia o espaçamento e intervalo entre novos vocábulos gerados (2x a 5x). |
 | **Bomba Estelar** | Ativa Periódica | A cada 90s (Nv. 1 a 5) | Onda de choque estelar cujo raio expande a cada upgrade até atingir a tela toda no Nv. 5. |
 | **Escudo de Plasma** | Ativa Periódica | 10s a 50s a cada 180s | Imunidade absoluta no escudo da Terra: duração cresce de 10s (Nv. 1) a 50s (Nv. 5). |
-| **Criostase Sideral** | Ativa Periódica | 10s a cada 120s | Paralisa todos os vocábulos na esteira, suspendendo a queda em direção ao buraco negro. |
-| **Vórtice Cósmico** | Ativa Periódica | A cada 180s | Abre uma singularidade gravitacional central que suga todos os termos ativos da tela. |
+| **Criostase Sideral** | Ativa Periódica | 10s a cada 120s | Paralisa todos os vocábulos na esteira, suspendendo a queda em direção à Terra. |
+| **Vórtice Cósmico** | Ativa Periódica | A cada 180s | Abre um vórtice gravitacional temporário no centro da tela que suga todos os termos ativos da tela. |
 | **Desaceleração** | Ativa Periódica | 15s a cada 60s | Reduz a velocidade de descida dos vocábulos em 50%. |
 | **Eco Cósmico** | Ativa Periódica | 10s a cada 60s | Aniquila automaticamente termos aprendidos com mira inteligente (`.eco-target`) e buffer lock. |
 | **Pontos em Dobro** | Ativa Periódica | 10s a cada 30s | Dobra toda a pontuação recebida por digitação durante sua vigência (2x). |
