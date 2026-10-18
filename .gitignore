@@ -13,3 +13,7 @@ AGENTS.md
 ChangeLog.md
 futuramente.txt
 about.md
+
+# Python
+__pycache__/
+*.pyc

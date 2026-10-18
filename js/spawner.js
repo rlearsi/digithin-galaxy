@@ -144,8 +144,34 @@ function spawnItem() {
 
   let cls = `falling-item ${next.type}`;
   if (next.skill) cls += ' has-skill';
-  el.className   = cls;
-  el.textContent = next.text;
+  el.className = cls;
+
+  // 1. Determine celestial falling object (micro rocks for letters/syllables, concrete objects for words)
+  const objPath = (typeof getCelestialObjectForItem === 'function')
+    ? getCelestialObjectForItem(next.text, next.type)
+    : 'objects/comet';
+  const assetSrc = objPath.includes('/') ? `assets/${objPath}.webp` : `assets/objects/${objPath}.webp`;
+  el.setAttribute('data-object', objPath.replace(/^(rocks|objects)\//, ''));
+
+  // 2. Sprite visual on top (Cobalt Core style pixel art)
+  const spriteWrap = document.createElement('div');
+  spriteWrap.className = 'falling-object-sprite';
+  const spriteImg = document.createElement('img');
+  spriteImg.className = 'falling-object-img';
+  spriteImg.src = assetSrc;
+  spriteImg.alt = next.text || '';
+  spriteImg.draggable = false;
+  spriteWrap.appendChild(spriteImg);
+  el.appendChild(spriteWrap);
+
+  // 3. Name label attached directly underneath (colado no objeto, thinner font, smaller size)
+  const labelWrap = document.createElement('div');
+  labelWrap.className = 'falling-label';
+  const textSpan = document.createElement('span');
+  textSpan.className = 'falling-text';
+  textSpan.textContent = next.text;
+  labelWrap.appendChild(textSpan);
+  el.appendChild(labelWrap);
 
   // Attached badges
   if (next.skill) {

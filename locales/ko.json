@@ -544,1304 +544,1559 @@
   ],
   "words": [
     {
-      "text": "sun",
-      "type": "우주",
-      "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
+      "text": "태양",
+      "type": "cosmos",
+      "meaning": "빛과 열, 중력 에너지를 공급하는 우리 태양계의 중심 항성",
+      "asset": "sun"
     },
     {
-      "text": "moon",
-      "type": "우주",
-      "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
+      "text": "달",
+      "type": "cosmos",
+      "meaning": "지구를 공전하며 해양 조석 현상에 큰 영향을 미치는 자연 위성",
+      "asset": "moon"
     },
     {
-      "text": "moons",
-      "type": "우주",
-      "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
+      "text": "암석",
+      "type": "hazard",
+      "meaning": "우주 공간을 떠돌며 지구 방향으로 돌진하는 거대한 우주 암석",
+      "asset": "rock"
     },
     {
-      "text": "sky",
-      "type": "우주",
-      "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
+      "text": "수성",
+      "type": "cosmos",
+      "meaning": "태양에 가장 가까이 위치하며 태양계에서 가장 작은 암석형 행성",
+      "asset": "mercury"
     },
     {
-      "text": "ray",
-      "type": "천체현상",
-      "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
+      "text": "금성",
+      "type": "cosmos",
+      "meaning": "두꺼운 대기와 극심한 온실효과로 뒤덮인 밤하늘의 가장 밝은 행성",
+      "asset": "venus"
     },
     {
-      "text": "halo",
-      "type": "우주",
-      "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
+      "text": "베스타",
+      "type": "hazard",
+      "meaning": "소행성대에서 두 번째로 거대하며 거대한 충돌구를 지닌 소행성",
+      "asset": "vesta"
     },
     {
-      "text": "axis",
-      "type": "우주",
-      "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
+      "text": "화성",
+      "type": "cosmos",
+      "meaning": "붉은 산화철 먼지로 뒤덮여 있으며 태양계 최대 화산을 보유한 행성",
+      "asset": "mars"
     },
     {
-      "text": "phase",
-      "type": "천체현상",
-      "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
+      "text": "목성",
+      "type": "cosmos",
+      "meaning": "거대한 대적점 폭풍이 소용돌이치는 태양계 최대의 가스 행성",
+      "asset": "jupiter"
     },
     {
-      "text": "wave",
-      "type": "천체현상",
-      "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
+      "text": "토성",
+      "type": "cosmos",
+      "meaning": "순수한 얼음과 먼지로 이루어진 찬란한 고리를 지닌 신비로운 가스 행성",
+      "asset": "saturn"
     },
     {
-      "text": "ship",
-      "type": "우주기술",
-      "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
+      "text": "천왕성",
+      "type": "cosmos",
+      "meaning": "자전축이 옆으로 기울어진 채 메탄 구름으로 푸르게 빛나는 거대 얼음 행성",
+      "asset": "uranus"
     },
     {
-      "text": "nova",
-      "type": "천체현상",
-      "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
+      "text": "해왕성",
+      "type": "cosmos",
+      "meaning": "태양에서 가장 멀리 떨어져 음속을 초과하는 맹렬한 폭풍이 부는 푸른 행성",
+      "asset": "neptune"
     },
     {
-      "text": "target",
-      "type": "우주기술",
-      "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
+      "text": "명왕성",
+      "type": "cosmos",
+      "meaning": "카이퍼 벨트의 얼어붙은 세계로 질소 얼음의 하트 평원을 지닌 왜소행성",
+      "asset": "pluto"
     },
     {
-      "text": "data",
-      "type": "우주기술",
-      "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
+      "text": "세레스",
+      "type": "cosmos",
+      "meaning": "화성과 목성 사이 소행성대에서 가장 거대한 구형의 왜소행성",
+      "asset": "ceres"
     },
     {
-      "text": "pitch",
-      "type": "우주",
-      "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
+      "text": "타이탄",
+      "type": "cosmos",
+      "meaning": "두꺼운 질소 대기와 액체 메탄의 바다가 존재하는 토성 최대 위성",
+      "asset": "titan"
     },
     {
-      "text": "year",
-      "type": "우주",
-      "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
+      "text": "포보스",
+      "type": "cosmos",
+      "meaning": "화성 지표면에 매우 가깝게 붙어 고속으로 공전하는 울퉁불퉁한 제1위성",
+      "asset": "phobos"
     },
     {
-      "text": "vacuum",
-      "type": "우주",
-      "meaning": "대기 물질이 거의 없어 고요한 우주의 광막함이 지배하는 진공"
+      "text": "데이모스",
+      "type": "cosmos",
+      "meaning": "두꺼운 먼지층으로 덮인 채 화성 외곽을 느리게 공전하는 제2위성",
+      "asset": "deimos"
     },
     {
-      "text": "astro",
-      "type": "우주",
-      "meaning": "끝없는 우주 공간에 존재하는 모든 자연 천체"
+      "text": "유로파",
+      "type": "cosmos",
+      "meaning": "갈라진 얼음 표면 아래에 거대한 액체 바다를 품고 있는 목성의 위성",
+      "asset": "europa"
     },
     {
-      "text": "cosmos",
-      "type": "우주",
-      "meaning": "질서와 조화를 이루며 광대하게 펼쳐진 무한한 물리적 우주"
+      "text": "이오",
+      "type": "cosmos",
+      "meaning": "수백 개의 활화산에서 황을 뿜어내는 태양계에서 가장 화산활동이 활발한 위성",
+      "asset": "io"
     },
     {
-      "text": "mars",
-      "type": "우주",
-      "meaning": "태양에서 4번째 행성이자 붉은 행성으로 널리 알려진 화성"
+      "text": "트리톤",
+      "type": "cosmos",
+      "meaning": "역행 궤도로 공전하며 질소 간헐천을 분출하는 해왕성의 거대 얼음 위성",
+      "asset": "triton"
     },
     {
-      "text": "venus",
-      "type": "우주",
-      "meaning": "태양에서 2번째 행성이자 밤하늘에서 가장 밝게 빛나는 금성"
+      "text": "칼리스토",
+      "type": "cosmos",
+      "meaning": "수많은 운석 충돌구로 덮여 태양계에서 가장 오래된 표면을 지닌 목성의 위성",
+      "asset": "callisto"
     },
     {
-      "text": "earth",
-      "type": "우주",
-      "meaning": "액체 상태의 물과 생명체가 존재하는 유일한 인류의 푸른 보금자리 지구"
+      "text": "카론",
+      "type": "cosmos",
+      "meaning": "명왕성과 서로 같은 면을 마주 보며 이중 행성계를 형성하는 거대 위성",
+      "asset": "charon"
     },
     {
-      "text": "solar",
-      "type": "우주",
-      "meaning": "태양, 태양풍, 코로나 복사 및 행성계 영역과 관련된 태양의 성질"
+      "text": "엔셀라두스",
+      "type": "cosmos",
+      "meaning": "얼음 표면 틈새로 지하 바다의 수증기와 물을 우주로 뿜어내는 토성의 위성",
+      "asset": "enceladus"
     },
     {
-      "text": "probe",
-      "type": "우주기술",
-      "meaning": "미지의 대기와 천체를 연구하기 위해 파견된 무인 과학 탐사선"
+      "text": "가니메데",
+      "type": "cosmos",
+      "meaning": "수성보다도 크며 자체 자기장을 보유한 태양계 최대 크기의 위성",
+      "asset": "ganymede"
     },
     {
-      "text": "radar",
-      "type": "우주기술",
-      "meaning": "전파를 이용하여 행성 지형과 소행성을 정밀 매핑하는 탐지 시스템"
+      "text": "소행성",
+      "type": "hazard",
+      "meaning": "태양 주위를 공전하는 암석과 금속 성분의 원시 행성 파편 천체",
+      "asset": "asteroid"
     },
     {
-      "text": "magma",
-      "type": "자연",
-      "meaning": "지질학적으로 활성화된 행성의 지각 아래 존재하는 고온의 용융 암석 마그마"
+      "text": "혜성",
+      "type": "hazard",
+      "meaning": "태양에 접근할 때 얼음이 승화하여 아름다운 가스 꼬리를 남기는 천체",
+      "asset": "comet"
     },
     {
-      "text": "cloud",
-      "type": "우주",
-      "meaning": "새로운 별을 탄생시키는 수소와 먼지로 이루어진 조밀한 성간 분자 구름"
+      "text": "유성",
+      "type": "hazard",
+      "meaning": "우주 파편이 대기권에 고속으로 진입하여 마찰열로 번쩍이는 별똥별",
+      "asset": "meteor"
     },
     {
-      "text": "pluto",
-      "type": "우주",
-      "meaning": "태양계 외곽 카이퍼 벨트에 위치한 얼음 왜소행성 명왕성"
+      "text": "운석",
+      "type": "hazard",
+      "meaning": "대기권의 마찰을 뚫고 지표면에 직접 도달하여 충돌한 외계 암석",
+      "asset": "meteorite"
     },
     {
-      "text": "orbit",
-      "type": "우주",
-      "meaning": "중력에 의해 천체가 거대한 중심 천체 주위를 도는 곡선 궤도"
+      "text": "화구",
+      "type": "hazard",
+      "meaning": "대기 속에서 폭발적인 섬광을 내뿜으며 터지는 초고휘도 유성 파이어볼",
+      "asset": "bolide"
     },
     {
-      "text": "comet",
-      "type": "우주",
-      "meaning": "태양열에 의해 가스를 방출하며 밝은 꼬리를 형성하는 얼음 천체 혜성"
+      "text": "파편",
+      "type": "hazard",
+      "meaning": "천체 충돌로 인해 발생하여 궤도를 떠도는 날카로운 우주 잔해 파편",
+      "asset": "fragment"
     },
     {
-      "text": "pulsar",
-      "type": "우주",
-      "meaning": "빠르게 자전하며 규칙적인 전자기 펄스를 방출하는 자화된 중성자별 맥동성"
+      "text": "석질운석",
+      "type": "hazard",
+      "meaning": "규산염 광물을 주성분으로 구성된 우주의 단단한 암석형 운석",
+      "asset": "aerolite"
     },
     {
-      "text": "quasar",
-      "type": "우주",
-      "meaning": "초거대 블랙홀에 의해 구동되는 매우 밝고 먼 거리의 활동 은하핵 퀘이사"
+      "text": "유성체",
+      "type": "hazard",
+      "meaning": "지구 대기권에 진입하기 전 우주를 고속으로 순항하는 작은 암석 천체",
+      "asset": "meteoroid"
     },
     {
-      "text": "corona",
-      "type": "우주",
-      "meaning": "태양 대기의 가장 바깥쪽에 위치한 수백만 도의 고온 플라즈마 코로나"
+      "text": "암괴",
+      "type": "hazard",
+      "meaning": "거대한 소행성 표면에서 떨어져 나와 우주를 질주하는 거대 암괴",
+      "asset": "boulder"
     },
     {
-      "text": "meteor",
-      "type": "우주",
-      "meaning": "우주 파편이 대기권에 진입할 때 고열로 빛을 내며 타오르는 유성"
+      "text": "인공위성",
+      "type": "tech",
+      "meaning": "지구 궤도를 돌며 정밀 관측과 통신 임무를 수행하는 인공 우주 기기",
+      "asset": "satellite"
     },
     {
-      "text": "optics",
-      "type": "우주기술",
-      "meaning": "심우주 망원경에서 빛을 모으고 반사하는 광학 과학 기술"
+      "text": "탐사선",
+      "type": "tech",
+      "meaning": "미지의 행성과 심우주 개척을 위해 발사된 정밀 로봇 무인 탐사선",
+      "asset": "probe"
     },
     {
-      "text": "space",
-      "type": "우주",
-      "meaning": "행성, 별, 은하들이 유영하는 한계 없는 3차원의 공간"
+      "text": "망원경",
+      "type": "tech",
+      "meaning": "수십억 광년 떨어진 은하와 성운의 빛을 포착하는 정밀 우주 망원경",
+      "asset": "telescope"
     },
     {
-      "text": "aurora",
-      "type": "천체현상",
-      "meaning": "태양풍 입자가 행성 자기장 및 대기와 충돌하여 빛나는 극광 오로라"
+      "text": "허블",
+      "type": "tech",
+      "meaning": "수십 년간 인류의 눈이 되어 심우주를 경이롭게 담아낸 전설적인 우주망원경",
+      "asset": "hubble"
     },
     {
-      "text": "zenith",
-      "type": "우주",
-      "meaning": "관측자의 머리 바로 위 천구 상에 위치한 가상의 점 천정"
+      "text": "웹",
+      "type": "tech",
+      "meaning": "거대한 금빛 주경으로 우주 초기의 빛과 외계행성을 탐색하는 차세대 망원경",
+      "asset": "webb"
     },
     {
-      "text": "hubble",
-      "type": "우주기술",
-      "meaning": "인류의 우주 이해를 혁신한 전설적인 궤도 우주 망원경 허블"
+      "text": "보이저",
+      "type": "tech",
+      "meaning": "황금 레코드를 싣고 태양계 경계를 넘어 성간 공간으로 항해 중인 무인 탐사선",
+      "asset": "voyager"
     },
     {
-      "text": "dust",
-      "type": "우주",
-      "meaning": "은하 나선팔 전체에 흩어져 있는 미세한 광물 입자와 성간 먼지"
+      "text": "스푸트니크",
+      "type": "tech",
+      "meaning": "인류 최초로 지구 궤도를 돌며 우주 시대의 개막을 알린 금속구 인공위성",
+      "asset": "sputnik"
     },
     {
-      "text": "hole",
-      "type": "우주",
-      "meaning": "시공간이 특이점으로 붕괴하는 극단적인 중력장 영역"
+      "text": "로켓",
+      "type": "tech",
+      "meaning": "엄청난 추진력을 폭발시켜 지구 중력을 탈출하는 다단식 우주 발사체",
+      "asset": "rocket"
     },
     {
-      "text": "star",
-      "type": "우주",
-      "meaning": "중심부의 열핵융합 반응을 통해 스스로 빛을 발하는 거대한 플라즈마 항성"
+      "text": "캡슐",
+      "type": "tech",
+      "meaning": "고열의 대기권 재돌입을 견디도록 열차폐 실드를 장착한 우주선 캡슐",
+      "asset": "capsule"
     },
     {
-      "text": "planet",
-      "type": "우주",
-      "meaning": "항성을 공전하며 구형을 유지하고 궤도를 청소한 주요 천체 행성"
+      "text": "모듈",
+      "type": "tech",
+      "meaning": "도킹 포트로 연결되어 우주정거장을 확장하는 정밀 가압식 거주 모듈",
+      "asset": "module"
     },
     {
-      "text": "galaxy",
-      "type": "우주",
-      "meaning": "수천억 개의 항성, 암흑 물질, 성운이 중력으로 묶인 거대한 은하"
+      "text": "로버",
+      "type": "tech",
+      "meaning": "다양한 과학 분석 장비와 바퀴를 장착하여 행성 표면을 누비는 탐사 로버",
+      "asset": "rover"
     },
     {
-      "text": "galaxies",
-      "type": "우주",
-      "meaning": "우주 거대 구조를 따라 분포하는 수천억 개의 은하계들"
+      "text": "우주선",
+      "type": "tech",
+      "meaning": "자세 제어 추진기와 주 추진엔진으로 성간을 유영하는 유인 탐사 우주선",
+      "asset": "ship"
     },
     {
-      "text": "universe",
-      "type": "우주",
-      "meaning": "모든 물리적 물질, 에너지, 시공간 및 물리 법칙을 포괄하는 전체 우주"
+      "text": "드론",
+      "type": "tech",
+      "meaning": "자율 제어 시스템으로 소행성과 파편 궤도를 신속히 정찰하는 우주 드론",
+      "asset": "drone"
     },
     {
-      "text": "nebula",
-      "type": "우주",
-      "meaning": "이온화된 가스, 항성 잔해 및 우주 먼지로 이루어진 거대한 발광 성운"
+      "text": "성간우주선",
+      "type": "tech",
+      "meaning": "초광속 도약 드라이브를 탑재하여 성간 심연을 건너는 거대 주력함",
+      "asset": "starship"
     },
     {
-      "text": "gravity",
-      "type": "천체현상",
-      "meaning": "질량과 에너지에 비례하여 시공간을 구부리는 근본적인 인력 중력"
+      "text": "우주왕복선",
+      "type": "tech",
+      "meaning": "활주로에 무동력 활공으로 착륙하는 날개를 지닌 재사용 가능한 우주 왕복선",
+      "asset": "space_shuttle"
     },
     {
-      "text": "supernova",
-      "type": "천체현상",
-      "meaning": "진화의 끝에 다다른 거대 항성이 은하 전체보다 밝게 폭발하는 초신성"
+      "text": "우주정거장",
+      "type": "tech",
+      "meaning": "무중력 상태에서 장기간 머물며 과학 연구를 수행하는 거대 궤도 기지",
+      "asset": "space_station"
     },
     {
-      "text": "astronaut",
-      "type": "우주기술",
-      "meaning": "궤도 및 행성 간 임무를 수행하도록 고도로 훈련된 우주비행사"
+      "text": "별",
+      "type": "cosmos",
+      "meaning": "핵융합 반응의 막대한 에너지를 방출하며 우주를 환하게 밝히는 백열의 항성",
+      "asset": "star"
     },
     {
-      "text": "astronomy",
-      "type": "우주과학",
-      "meaning": "천체와 물리적 우주, 심우주의 법칙을 탐구하는 학문 천문학"
+      "text": "은하",
+      "type": "cosmos",
+      "meaning": "수천억 개의 항성과 성운들이 중심 블랙홀 주위로 모여 회전하는 은하계",
+      "asset": "galaxy"
     },
     {
-      "text": "exoplanet",
-      "type": "우주",
-      "meaning": "우리 태양계 너머의 먼 항성을 공전하는 외계 행성"
+      "text": "성운",
+      "type": "cosmos",
+      "meaning": "새로운 별들이 태어나는 찬란하고 거대한 우주 가스와 먼지의 성간 요람",
+      "asset": "nebula"
     },
     {
-      "text": "exoplanets",
-      "type": "우주",
-      "meaning": "우리 은하 전역의 먼 항성 주위를 도는 다양한 외계 행성들"
+      "text": "초신성",
+      "type": "fenomeno",
+      "meaning": "수명을 다한 거대 항성이 은하 전체보다 밝은 빛을 뿜어내며 폭발하는 현상",
+      "asset": "supernova"
     },
     {
-      "text": "satellite",
-      "type": "우주기술",
-      "meaning": "연구와 통신을 위해 행성 주위를 공전하는 인공 또는 자연 위성"
+      "text": "펄서",
+      "type": "cosmos",
+      "meaning": "초당 수백 회 회전하며 규칙적인 전자기파 펄스를 등대처럼 쏘는 중성자별",
+      "asset": "pulsar"
     },
     {
-      "text": "constellation",
-      "type": "우주",
-      "meaning": "천문도에 따라 밤하늘에 묶어놓은 별들의 식별 가능한 집합 별자리"
+      "text": "퀘이사",
+      "type": "cosmos",
+      "meaning": "초거대 블랙홀이 주변 물질을 집어삼키며 뿜어내는 우주 최강의 활동은하핵",
+      "asset": "quasar"
     },
     {
-      "text": "telescope",
-      "type": "우주기술",
-      "meaning": "먼 천체에서 오는 빛과 전자기파를 모아 관측하는 망원경"
+      "text": "마그네타",
+      "type": "cosmos",
+      "meaning": "우주에서 가장 강력한 초극강 자기장을 뿜어내는 경이로운 중성자별",
+      "asset": "magnetar"
     },
     {
-      "text": "starship",
-      "type": "우주기술",
-      "meaning": "광대한 성간 공간을 가로질러 항해할 수 있는 행성간 우주선"
+      "text": "외계행성",
+      "type": "cosmos",
+      "meaning": "우리 태양계 밖 먼 우주에서 다른 별의 주위를 공전하는 미지의 외계 행성",
+      "asset": "exoplanet"
     },
     {
-      "text": "atmosphere",
-      "type": "우주",
-      "meaning": "중력에 의해 행성이나 천체를 감싸고 있는 기체 층 대기"
+      "text": "안드로메다",
+      "type": "cosmos",
+      "meaning": "먼 미래 우리 은하와 하나로 합쳐질 운명을 지닌 거대한 나선은하",
+      "asset": "andromeda"
     },
     {
-      "text": "magnetosphere",
-      "type": "천체현상",
-      "meaning": "고에너지 태양풍과 방사선을 막아주는 행성의 자기 보호막 자기권"
+      "text": "은하수",
+      "type": "cosmos",
+      "meaning": "수천억 개의 별들이 찬란한 나선팔을 이루는 인류의 보금자리 우리은하",
+      "asset": "milky_way"
     },
     {
-      "text": "radiation",
-      "type": "천체현상",
-      "meaning": "우주 공간을 가로지르는 고에너지 전자기파 또는 아원자 입자 방사선"
+      "text": "방사선",
+      "type": "hazard",
+      "meaning": "우주 공간을 가로지르며 물질과 에너지를 이온화시키는 고에너지 입자선",
+      "asset": "radiation"
     },
     {
-      "text": "spectrum",
-      "type": "우주과학",
-      "meaning": "빛을 분산시켜 천체의 온도와 화학 조성을 밝혀내는 무지개 스펙트럼"
+      "text": "반물질",
+      "type": "hazard",
+      "meaning": "일반 물질과 접촉하는 순간 질량을 순수 에너지로 100% 폭발시키는 반입자",
+      "asset": "antimatter"
     },
     {
-      "text": "andromeda",
-      "type": "우주",
-      "meaning": "우리 은하와 미래에 중력적으로 충돌할 궤도에 있는 가장 가까운 대형 나선은하"
+      "text": "블랙홀",
+      "type": "hazard",
+      "meaning": "시공간을 무한히 왜곡시켜 빛조차 빠져나오지 못하는 우주 최강의 중력 심연",
+      "asset": "black_hole"
     },
     {
-      "text": "heliosphere",
-      "type": "우주",
-      "meaning": "태양풍이 성간 공간에 불어넣어 형성한 거대한 보호 거품 영역 태양권"
+      "text": "웜홀",
+      "type": "cosmos",
+      "meaning": "시공간을 접어 아득히 먼 두 지점을 순식간에 연결하는 가상의 우주 통로",
+      "asset": "wormhole"
     },
     {
-      "text": "antimatter",
-      "type": "우주과학",
-      "meaning": "일반 물질과 접촉하면 막대한 에너지를 내며 쌍소멸하는 반입자로 이루어진 반물질"
+      "text": "우주비행사",
+      "type": "tech",
+      "meaning": "생명유지 우주복을 입고 지구 밖 미지의 세계로 나아가는 우주 개척자",
+      "asset": "astronaut"
     },
     {
-      "text": "singularity",
-      "type": "우주",
-      "meaning": "블랙홀 중심에서 중력 밀도가 무한대에 수렴하고 물리 법칙이 붕괴하는 중력 특이점"
+      "text": "코스모너트",
+      "type": "tech",
+      "meaning": "궤도 우주선 조종과 정거장 임무를 수행하는 노련한 전문 우주 비행사",
+      "asset": "cosmonaut"
     },
     {
-      "text": "multiverse",
-      "type": "우주",
-      "meaning": "무한한 시공간 거품과 평행 우주들의 가설적 앙상블 다중우주"
+      "text": "백색왜성",
+      "type": "cosmos",
+      "meaning": "수명이 다한 별이 외피를 날려보내고 지구 크기로 응축된 초고밀도 잔해",
+      "asset": "white_dwarf"
     },
     {
-      "text": "light-year",
-      "type": "우주과학",
-      "meaning": "빛이 진공 상태에서 1태양년 동안 이동하는 천문학적 거리 단위 광년"
+      "text": "적색거성",
+      "type": "cosmos",
+      "meaning": "중심부 수소 고갈로 수백 배 팽창하여 내부 행성을 집어삼키는 노년기 항성",
+      "asset": "red_giant"
     },
     {
-      "text": "black-hole",
-      "type": "우주",
-      "meaning": "빛조차 빠져나올 수 없을 정도로 중력이 극단적으로 강한 천체 블랙홀"
+      "text": "태양탐사선",
+      "type": "tech",
+      "meaning": "초고온의 태양 대기 코로나 속으로 뛰어들어 태양풍의 비밀을 밝히는 탐사선",
+      "asset": "solar_probe"
     },
     {
-      "text": "stardust",
-      "type": "우주",
-      "meaning": "초신성 폭발 잔해에서 유래하여 암석 행성과 생명체의 모태가 되는 별가루"
+      "text": "달착륙선",
+      "type": "tech",
+      "meaning": "4개의 완충 다리로 거친 월면에 충격을 흡수하며 사뿐히 내려앉는 착륙선",
+      "asset": "lunar_module"
     },
     {
-      "text": "dark-matter",
-      "type": "우주",
-      "meaning": "빛을 내지 않지만 우주 질량의 대부분을 차지하는 보이지 않는 가설 물질 암흑물질"
+      "text": "거대소행성",
+      "type": "hazard",
+      "meaning": "충돌 시 행성 생태계를 파괴할 수 있는 수십 킬로미터급 거대 소행성",
+      "asset": "giant_asteroid"
     },
     {
-      "text": "dark-energy",
-      "type": "우주",
-      "meaning": "관측 가능한 우주의 팽창을 가속시키는 미지의 척력 암흑에너지"
+      "text": "궤도기지",
+      "type": "tech",
+      "meaning": "정지궤도에 위치하여 우주선 재보급과 정비 수리를 총괄하는 거점 기지",
+      "asset": "orbital_station"
     },
     {
-      "text": "wormhole",
-      "type": "우주",
-      "meaning": "서로 떨어진 두 시공간 영역을 연결하는 이론적인 지름길 웜홀"
+      "text": "트로이소행성",
+      "type": "hazard",
+      "meaning": "행성과 태양의 라그랑주 점에 영구히 갇혀 공전 궤도를 함께하는 소행성",
+      "asset": "trojan_asteroid"
     },
     {
-      "text": "speed-of-light",
-      "type": "우주과학",
-      "meaning": "진공 상태에서 초당 약 30만 킬로미터로 이동하는 우주의 절대 속도 상수 광속"
+      "text": "궤도망원경",
+      "type": "tech",
+      "meaning": "대기 왜곡을 피해 우주 궤도에서 가장 선명한 천체 사진을 촬영하는 망원경",
+      "asset": "orbital_telescope"
     },
     {
-      "text": "space-station",
-      "type": "우주기술",
-      "meaning": "과학자들이 거주하며 무중력 과학 연구를 수행하는 대형 궤도 우주정거장"
+      "text": "우주캡슐",
+      "type": "tech",
+      "meaning": "승무원을 우주 방사선으로부터 보호하며 물자를 수송하는 밀폐형 캡슐",
+      "asset": "space_capsule"
     },
     {
-      "text": "event-horizon",
-      "type": "우주",
-      "meaning": "블랙홀을 둘러싸고 있으며 빛조차 탈출할 수 없는 돌아올 수 없는 경계 사건의 지평선"
+      "text": "탐사차량",
+      "type": "tech",
+      "meaning": "드릴로 외계 암석을 채취하고 성분을 분석하는 6륜 구동 로봇 탐사차량",
+      "asset": "rover_vehicle"
     },
     {
-      "text": "milky-way",
-      "type": "우주",
-      "meaning": "수천억 개의 항성과 행성계를 품고 있는 우리 태양계의 고향 은하수"
+      "text": "우주화물선",
+      "type": "tech",
+      "meaning": "소행성 광산에서 채굴한 희귀 광물 컨테이너를 운송하는 초대형 우주 화물선",
+      "asset": "freighter"
     }
   ],
   "bossWords": {
     "alien_dreadnought": [
       {
-        "text": "sun",
-        "type": "우주",
-        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
+        "text": "태양",
+        "type": "cosmos",
+        "meaning": "빛과 열, 중력 에너지를 공급하는 우리 태양계의 중심 항성",
+        "asset": "sun"
       },
       {
-        "text": "moon",
-        "type": "우주",
-        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
+        "text": "암석",
+        "type": "hazard",
+        "meaning": "우주 공간을 떠돌며 지구 방향으로 돌진하는 거대한 우주 암석",
+        "asset": "rock"
       },
       {
-        "text": "moons",
-        "type": "우주",
-        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
+        "text": "수성",
+        "type": "cosmos",
+        "meaning": "태양에 가장 가까이 위치하며 태양계에서 가장 작은 암석형 행성",
+        "asset": "mercury"
       },
       {
-        "text": "sky",
-        "type": "우주",
-        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
+        "text": "금성",
+        "type": "cosmos",
+        "meaning": "두꺼운 대기와 극심한 온실효과로 뒤덮인 밤하늘의 가장 밝은 행성",
+        "asset": "venus"
       },
       {
-        "text": "ray",
-        "type": "천체현상",
-        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
+        "text": "베스타",
+        "type": "hazard",
+        "meaning": "소행성대에서 두 번째로 거대하며 거대한 충돌구를 지닌 소행성",
+        "asset": "vesta"
       },
       {
-        "text": "halo",
-        "type": "우주",
-        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
+        "text": "화성",
+        "type": "cosmos",
+        "meaning": "붉은 산화철 먼지로 뒤덮여 있으며 태양계 최대 화산을 보유한 행성",
+        "asset": "mars"
       },
       {
-        "text": "axis",
-        "type": "우주",
-        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
+        "text": "목성",
+        "type": "cosmos",
+        "meaning": "거대한 대적점 폭풍이 소용돌이치는 태양계 최대의 가스 행성",
+        "asset": "jupiter"
       },
       {
-        "text": "phase",
-        "type": "천체현상",
-        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
+        "text": "토성",
+        "type": "cosmos",
+        "meaning": "순수한 얼음과 먼지로 이루어진 찬란한 고리를 지닌 신비로운 가스 행성",
+        "asset": "saturn"
       },
       {
-        "text": "wave",
-        "type": "천체현상",
-        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
+        "text": "천왕성",
+        "type": "cosmos",
+        "meaning": "자전축이 옆으로 기울어진 채 메탄 구름으로 푸르게 빛나는 거대 얼음 행성",
+        "asset": "uranus"
       },
       {
-        "text": "ship",
-        "type": "우주기술",
-        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
+        "text": "해왕성",
+        "type": "cosmos",
+        "meaning": "태양에서 가장 멀리 떨어져 음속을 초과하는 맹렬한 폭풍이 부는 푸른 행성",
+        "asset": "neptune"
       },
       {
-        "text": "nova",
-        "type": "천체현상",
-        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
+        "text": "소행성",
+        "type": "hazard",
+        "meaning": "태양 주위를 공전하는 암석과 금속 성분의 원시 행성 파편 천체",
+        "asset": "asteroid"
       },
       {
-        "text": "target",
-        "type": "우주기술",
-        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
+        "text": "혜성",
+        "type": "hazard",
+        "meaning": "태양에 접근할 때 얼음이 승화하여 아름다운 가스 꼬리를 남기는 천체",
+        "asset": "comet"
       },
       {
-        "text": "data",
-        "type": "우주기술",
-        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
+        "text": "유성",
+        "type": "hazard",
+        "meaning": "우주 파편이 대기권에 고속으로 진입하여 마찰열로 번쩍이는 별똥별",
+        "asset": "meteor"
       },
       {
-        "text": "pitch",
-        "type": "우주",
-        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
+        "text": "운석",
+        "type": "hazard",
+        "meaning": "대기권의 마찰을 뚫고 지표면에 직접 도달하여 충돌한 외계 암석",
+        "asset": "meteorite"
       },
       {
-        "text": "year",
-        "type": "우주",
-        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
+        "text": "화구",
+        "type": "hazard",
+        "meaning": "대기 속에서 폭발적인 섬광을 내뿜으며 터지는 초고휘도 유성 파이어볼",
+        "asset": "bolide"
       }
     ],
     "alien_hive": [
       {
-        "text": "sun",
-        "type": "우주",
-        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
+        "text": "암석",
+        "type": "hazard",
+        "meaning": "우주 공간을 떠돌며 지구 방향으로 돌진하는 거대한 우주 암석",
+        "asset": "rock"
       },
       {
-        "text": "moon",
-        "type": "우주",
-        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
+        "text": "포보스",
+        "type": "cosmos",
+        "meaning": "화성 지표면에 매우 가깝게 붙어 고속으로 공전하는 울퉁불퉁한 제1위성",
+        "asset": "phobos"
       },
       {
-        "text": "moons",
-        "type": "우주",
-        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
+        "text": "데이모스",
+        "type": "cosmos",
+        "meaning": "두꺼운 먼지층으로 덮인 채 화성 외곽을 느리게 공전하는 제2위성",
+        "asset": "deimos"
       },
       {
-        "text": "sky",
-        "type": "우주",
-        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
+        "text": "소행성",
+        "type": "hazard",
+        "meaning": "태양 주위를 공전하는 암석과 금속 성분의 원시 행성 파편 천체",
+        "asset": "asteroid"
       },
       {
-        "text": "ray",
-        "type": "천체현상",
-        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
+        "text": "혜성",
+        "type": "hazard",
+        "meaning": "태양에 접근할 때 얼음이 승화하여 아름다운 가스 꼬리를 남기는 천체",
+        "asset": "comet"
       },
       {
-        "text": "halo",
-        "type": "우주",
-        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
+        "text": "유성",
+        "type": "hazard",
+        "meaning": "우주 파편이 대기권에 고속으로 진입하여 마찰열로 번쩍이는 별똥별",
+        "asset": "meteor"
       },
       {
-        "text": "axis",
-        "type": "우주",
-        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
+        "text": "운석",
+        "type": "hazard",
+        "meaning": "대기권의 마찰을 뚫고 지표면에 직접 도달하여 충돌한 외계 암석",
+        "asset": "meteorite"
       },
       {
-        "text": "phase",
-        "type": "천체현상",
-        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
+        "text": "화구",
+        "type": "hazard",
+        "meaning": "대기 속에서 폭발적인 섬광을 내뿜으며 터지는 초고휘도 유성 파이어볼",
+        "asset": "bolide"
       },
       {
-        "text": "wave",
-        "type": "천체현상",
-        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
+        "text": "파편",
+        "type": "hazard",
+        "meaning": "천체 충돌로 인해 발생하여 궤도를 떠도는 날카로운 우주 잔해 파편",
+        "asset": "fragment"
       },
       {
-        "text": "ship",
-        "type": "우주기술",
-        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
+        "text": "석질운석",
+        "type": "hazard",
+        "meaning": "규산염 광물을 주성분으로 구성된 우주의 단단한 암석형 운석",
+        "asset": "aerolite"
       },
       {
-        "text": "nova",
-        "type": "천체현상",
-        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
+        "text": "유성체",
+        "type": "hazard",
+        "meaning": "지구 대기권에 진입하기 전 우주를 고속으로 순항하는 작은 암석 천체",
+        "asset": "meteoroid"
       },
       {
-        "text": "target",
-        "type": "우주기술",
-        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
+        "text": "암괴",
+        "type": "hazard",
+        "meaning": "거대한 소행성 표면에서 떨어져 나와 우주를 질주하는 거대 암괴",
+        "asset": "boulder"
       },
       {
-        "text": "data",
-        "type": "우주기술",
-        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
+        "text": "거대소행성",
+        "type": "hazard",
+        "meaning": "충돌 시 행성 생태계를 파괴할 수 있는 수십 킬로미터급 거대 소행성",
+        "asset": "giant_asteroid"
       },
       {
-        "text": "pitch",
-        "type": "우주",
-        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
+        "text": "트로이소행성",
+        "type": "hazard",
+        "meaning": "행성과 태양의 라그랑주 점에 영구히 갇혀 공전 궤도를 함께하는 소행성",
+        "asset": "trojan_asteroid"
       },
       {
-        "text": "year",
-        "type": "우주",
-        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
+        "text": "드론",
+        "type": "tech",
+        "meaning": "자율 제어 시스템으로 소행성과 파편 궤도를 신속히 정찰하는 우주 드론",
+        "asset": "drone"
       }
     ],
     "alien_psionic": [
       {
-        "text": "sun",
-        "type": "우주",
-        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
+        "text": "성운",
+        "type": "cosmos",
+        "meaning": "새로운 별들이 태어나는 찬란하고 거대한 우주 가스와 먼지의 성간 요람",
+        "asset": "nebula"
       },
       {
-        "text": "moon",
-        "type": "우주",
-        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
+        "text": "초신성",
+        "type": "fenomeno",
+        "meaning": "수명을 다한 거대 항성이 은하 전체보다 밝은 빛을 뿜어내며 폭발하는 현상",
+        "asset": "supernova"
       },
       {
-        "text": "moons",
-        "type": "우주",
-        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
+        "text": "펄서",
+        "type": "cosmos",
+        "meaning": "초당 수백 회 회전하며 규칙적인 전자기파 펄스를 등대처럼 쏘는 중성자별",
+        "asset": "pulsar"
       },
       {
-        "text": "sky",
-        "type": "우주",
-        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
+        "text": "퀘이사",
+        "type": "cosmos",
+        "meaning": "초거대 블랙홀이 주변 물질을 집어삼키며 뿜어내는 우주 최강의 활동은하핵",
+        "asset": "quasar"
       },
       {
-        "text": "ray",
-        "type": "천체현상",
-        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
+        "text": "마그네타",
+        "type": "cosmos",
+        "meaning": "우주에서 가장 강력한 초극강 자기장을 뿜어내는 경이로운 중성자별",
+        "asset": "magnetar"
       },
       {
-        "text": "halo",
-        "type": "우주",
-        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
+        "text": "외계행성",
+        "type": "cosmos",
+        "meaning": "우리 태양계 밖 먼 우주에서 다른 별의 주위를 공전하는 미지의 외계 행성",
+        "asset": "exoplanet"
       },
       {
-        "text": "axis",
-        "type": "우주",
-        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
+        "text": "안드로메다",
+        "type": "cosmos",
+        "meaning": "먼 미래 우리 은하와 하나로 합쳐질 운명을 지닌 거대한 나선은하",
+        "asset": "andromeda"
       },
       {
-        "text": "phase",
-        "type": "천체현상",
-        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
+        "text": "은하수",
+        "type": "cosmos",
+        "meaning": "수천억 개의 별들이 찬란한 나선팔을 이루는 인류의 보금자리 우리은하",
+        "asset": "milky_way"
       },
       {
-        "text": "wave",
-        "type": "천체현상",
-        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
+        "text": "방사선",
+        "type": "hazard",
+        "meaning": "우주 공간을 가로지르며 물질과 에너지를 이온화시키는 고에너지 입자선",
+        "asset": "radiation"
       },
       {
-        "text": "ship",
-        "type": "우주기술",
-        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
+        "text": "반물질",
+        "type": "hazard",
+        "meaning": "일반 물질과 접촉하는 순간 질량을 순수 에너지로 100% 폭발시키는 반입자",
+        "asset": "antimatter"
       },
       {
-        "text": "nova",
-        "type": "천체현상",
-        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
+        "text": "블랙홀",
+        "type": "hazard",
+        "meaning": "시공간을 무한히 왜곡시켜 빛조차 빠져나오지 못하는 우주 최강의 중력 심연",
+        "asset": "black_hole"
       },
       {
-        "text": "target",
-        "type": "우주기술",
-        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
+        "text": "웜홀",
+        "type": "cosmos",
+        "meaning": "시공간을 접어 아득히 먼 두 지점을 순식간에 연결하는 가상의 우주 통로",
+        "asset": "wormhole"
       },
       {
-        "text": "data",
-        "type": "우주기술",
-        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
+        "text": "백색왜성",
+        "type": "cosmos",
+        "meaning": "수명이 다한 별이 외피를 날려보내고 지구 크기로 응축된 초고밀도 잔해",
+        "asset": "white_dwarf"
       },
       {
-        "text": "pitch",
-        "type": "우주",
-        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
+        "text": "적색거성",
+        "type": "cosmos",
+        "meaning": "중심부 수소 고갈로 수백 배 팽창하여 내부 행성을 집어삼키는 노년기 항성",
+        "asset": "red_giant"
       },
       {
-        "text": "year",
-        "type": "우주",
-        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
+        "text": "별",
+        "type": "cosmos",
+        "meaning": "핵융합 반응의 막대한 에너지를 방출하며 우주를 환하게 밝히는 백열의 항성",
+        "asset": "star"
       }
     ],
     "alien_warlord": [
       {
-        "text": "sun",
-        "type": "우주",
-        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
+        "text": "로켓",
+        "type": "tech",
+        "meaning": "엄청난 추진력을 폭발시켜 지구 중력을 탈출하는 다단식 우주 발사체",
+        "asset": "rocket"
       },
       {
-        "text": "moon",
-        "type": "우주",
-        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
+        "text": "캡슐",
+        "type": "tech",
+        "meaning": "고열의 대기권 재돌입을 견디도록 열차폐 실드를 장착한 우주선 캡슐",
+        "asset": "capsule"
       },
       {
-        "text": "moons",
-        "type": "우주",
-        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
+        "text": "모듈",
+        "type": "tech",
+        "meaning": "도킹 포트로 연결되어 우주정거장을 확장하는 정밀 가압식 거주 모듈",
+        "asset": "module"
       },
       {
-        "text": "sky",
-        "type": "우주",
-        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
+        "text": "로버",
+        "type": "tech",
+        "meaning": "다양한 과학 분석 장비와 바퀴를 장착하여 행성 표면을 누비는 탐사 로버",
+        "asset": "rover"
       },
       {
-        "text": "ray",
-        "type": "천체현상",
-        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
+        "text": "우주선",
+        "type": "tech",
+        "meaning": "자세 제어 추진기와 주 추진엔진으로 성간을 유영하는 유인 탐사 우주선",
+        "asset": "ship"
       },
       {
-        "text": "halo",
-        "type": "우주",
-        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
+        "text": "드론",
+        "type": "tech",
+        "meaning": "자율 제어 시스템으로 소행성과 파편 궤도를 신속히 정찰하는 우주 드론",
+        "asset": "drone"
       },
       {
-        "text": "axis",
-        "type": "우주",
-        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
+        "text": "성간우주선",
+        "type": "tech",
+        "meaning": "초광속 도약 드라이브를 탑재하여 성간 심연을 건너는 거대 주력함",
+        "asset": "starship"
       },
       {
-        "text": "phase",
-        "type": "천체현상",
-        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
+        "text": "우주왕복선",
+        "type": "tech",
+        "meaning": "활주로에 무동력 활공으로 착륙하는 날개를 지닌 재사용 가능한 우주 왕복선",
+        "asset": "space_shuttle"
       },
       {
-        "text": "wave",
-        "type": "천체현상",
-        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
+        "text": "우주정거장",
+        "type": "tech",
+        "meaning": "무중력 상태에서 장기간 머물며 과학 연구를 수행하는 거대 궤도 기지",
+        "asset": "space_station"
       },
       {
-        "text": "ship",
-        "type": "우주기술",
-        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
+        "text": "우주비행사",
+        "type": "tech",
+        "meaning": "생명유지 우주복을 입고 지구 밖 미지의 세계로 나아가는 우주 개척자",
+        "asset": "astronaut"
       },
       {
-        "text": "nova",
-        "type": "천체현상",
-        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
+        "text": "코스모너트",
+        "type": "tech",
+        "meaning": "궤도 우주선 조종과 정거장 임무를 수행하는 노련한 전문 우주 비행사",
+        "asset": "cosmonaut"
       },
       {
-        "text": "target",
-        "type": "우주기술",
-        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
+        "text": "태양탐사선",
+        "type": "tech",
+        "meaning": "초고온의 태양 대기 코로나 속으로 뛰어들어 태양풍의 비밀을 밝히는 탐사선",
+        "asset": "solar_probe"
       },
       {
-        "text": "data",
-        "type": "우주기술",
-        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
+        "text": "달착륙선",
+        "type": "tech",
+        "meaning": "4개의 완충 다리로 거친 월면에 충격을 흡수하며 사뿐히 내려앉는 착륙선",
+        "asset": "lunar_module"
       },
       {
-        "text": "pitch",
-        "type": "우주",
-        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
+        "text": "우주캡슐",
+        "type": "tech",
+        "meaning": "승무원을 우주 방사선으로부터 보호하며 물자를 수송하는 밀폐형 캡슐",
+        "asset": "space_capsule"
       },
       {
-        "text": "year",
-        "type": "우주",
-        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
+        "text": "우주화물선",
+        "type": "tech",
+        "meaning": "소행성 광산에서 채굴한 희귀 광물 컨테이너를 운송하는 초대형 우주 화물선",
+        "asset": "freighter"
       }
     ],
     "alien_darkmatter": [
       {
-        "text": "sun",
-        "type": "우주",
-        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
+        "text": "펄서",
+        "type": "cosmos",
+        "meaning": "초당 수백 회 회전하며 규칙적인 전자기파 펄스를 등대처럼 쏘는 중성자별",
+        "asset": "pulsar"
       },
       {
-        "text": "moon",
-        "type": "우주",
-        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
+        "text": "퀘이사",
+        "type": "cosmos",
+        "meaning": "초거대 블랙홀이 주변 물질을 집어삼키며 뿜어내는 우주 최강의 활동은하핵",
+        "asset": "quasar"
       },
       {
-        "text": "moons",
-        "type": "우주",
-        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
+        "text": "마그네타",
+        "type": "cosmos",
+        "meaning": "우주에서 가장 강력한 초극강 자기장을 뿜어내는 경이로운 중성자별",
+        "asset": "magnetar"
       },
       {
-        "text": "sky",
-        "type": "우주",
-        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
+        "text": "방사선",
+        "type": "hazard",
+        "meaning": "우주 공간을 가로지르며 물질과 에너지를 이온화시키는 고에너지 입자선",
+        "asset": "radiation"
       },
       {
-        "text": "ray",
-        "type": "천체현상",
-        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
+        "text": "반물질",
+        "type": "hazard",
+        "meaning": "일반 물질과 접촉하는 순간 질량을 순수 에너지로 100% 폭발시키는 반입자",
+        "asset": "antimatter"
       },
       {
-        "text": "halo",
-        "type": "우주",
-        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
+        "text": "블랙홀",
+        "type": "hazard",
+        "meaning": "시공간을 무한히 왜곡시켜 빛조차 빠져나오지 못하는 우주 최강의 중력 심연",
+        "asset": "black_hole"
       },
       {
-        "text": "axis",
-        "type": "우주",
-        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
+        "text": "웜홀",
+        "type": "cosmos",
+        "meaning": "시공간을 접어 아득히 먼 두 지점을 순식간에 연결하는 가상의 우주 통로",
+        "asset": "wormhole"
       },
       {
-        "text": "phase",
-        "type": "천체현상",
-        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
+        "text": "성운",
+        "type": "cosmos",
+        "meaning": "새로운 별들이 태어나는 찬란하고 거대한 우주 가스와 먼지의 성간 요람",
+        "asset": "nebula"
       },
       {
-        "text": "wave",
-        "type": "천체현상",
-        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
+        "text": "초신성",
+        "type": "fenomeno",
+        "meaning": "수명을 다한 거대 항성이 은하 전체보다 밝은 빛을 뿜어내며 폭발하는 현상",
+        "asset": "supernova"
       },
       {
-        "text": "ship",
-        "type": "우주기술",
-        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
+        "text": "소행성",
+        "type": "hazard",
+        "meaning": "태양 주위를 공전하는 암석과 금속 성분의 원시 행성 파편 천체",
+        "asset": "asteroid"
       },
       {
-        "text": "nova",
-        "type": "천체현상",
-        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
+        "text": "화구",
+        "type": "hazard",
+        "meaning": "대기 속에서 폭발적인 섬광을 내뿜으며 터지는 초고휘도 유성 파이어볼",
+        "asset": "bolide"
       },
       {
-        "text": "target",
-        "type": "우주기술",
-        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
+        "text": "파편",
+        "type": "hazard",
+        "meaning": "천체 충돌로 인해 발생하여 궤도를 떠도는 날카로운 우주 잔해 파편",
+        "asset": "fragment"
       },
       {
-        "text": "data",
-        "type": "우주기술",
-        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
+        "text": "백색왜성",
+        "type": "cosmos",
+        "meaning": "수명이 다한 별이 외피를 날려보내고 지구 크기로 응축된 초고밀도 잔해",
+        "asset": "white_dwarf"
       },
       {
-        "text": "pitch",
-        "type": "우주",
-        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
+        "text": "적색거성",
+        "type": "cosmos",
+        "meaning": "중심부 수소 고갈로 수백 배 팽창하여 내부 행성을 집어삼키는 노년기 항성",
+        "asset": "red_giant"
       },
       {
-        "text": "year",
-        "type": "우주",
-        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
+        "text": "거대소행성",
+        "type": "hazard",
+        "meaning": "충돌 시 행성 생태계를 파괴할 수 있는 수십 킬로미터급 거대 소행성",
+        "asset": "giant_asteroid"
       }
     ],
     "alien_mothership": [
       {
-        "text": "sun",
-        "type": "우주",
-        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
+        "text": "성간우주선",
+        "type": "tech",
+        "meaning": "초광속 도약 드라이브를 탑재하여 성간 심연을 건너는 거대 주력함",
+        "asset": "starship"
       },
       {
-        "text": "moon",
-        "type": "우주",
-        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
+        "text": "우주왕복선",
+        "type": "tech",
+        "meaning": "활주로에 무동력 활공으로 착륙하는 날개를 지닌 재사용 가능한 우주 왕복선",
+        "asset": "space_shuttle"
       },
       {
-        "text": "moons",
-        "type": "우주",
-        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
+        "text": "우주정거장",
+        "type": "tech",
+        "meaning": "무중력 상태에서 장기간 머물며 과학 연구를 수행하는 거대 궤도 기지",
+        "asset": "space_station"
       },
       {
-        "text": "sky",
-        "type": "우주",
-        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
+        "text": "궤도기지",
+        "type": "tech",
+        "meaning": "정지궤도에 위치하여 우주선 재보급과 정비 수리를 총괄하는 거점 기지",
+        "asset": "orbital_station"
       },
       {
-        "text": "ray",
-        "type": "천체현상",
-        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
+        "text": "궤도망원경",
+        "type": "tech",
+        "meaning": "대기 왜곡을 피해 우주 궤도에서 가장 선명한 천체 사진을 촬영하는 망원경",
+        "asset": "orbital_telescope"
       },
       {
-        "text": "halo",
-        "type": "우주",
-        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
+        "text": "우주캡슐",
+        "type": "tech",
+        "meaning": "승무원을 우주 방사선으로부터 보호하며 물자를 수송하는 밀폐형 캡슐",
+        "asset": "space_capsule"
       },
       {
-        "text": "axis",
-        "type": "우주",
-        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
+        "text": "탐사차량",
+        "type": "tech",
+        "meaning": "드릴로 외계 암석을 채취하고 성분을 분석하는 6륜 구동 로봇 탐사차량",
+        "asset": "rover_vehicle"
       },
       {
-        "text": "phase",
-        "type": "천체현상",
-        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
+        "text": "우주화물선",
+        "type": "tech",
+        "meaning": "소행성 광산에서 채굴한 희귀 광물 컨테이너를 운송하는 초대형 우주 화물선",
+        "asset": "freighter"
       },
       {
-        "text": "wave",
-        "type": "천체현상",
-        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
+        "text": "인공위성",
+        "type": "tech",
+        "meaning": "지구 궤도를 돌며 정밀 관측과 통신 임무를 수행하는 인공 우주 기기",
+        "asset": "satellite"
       },
       {
-        "text": "ship",
-        "type": "우주기술",
-        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
+        "text": "탐사선",
+        "type": "tech",
+        "meaning": "미지의 행성과 심우주 개척을 위해 발사된 정밀 로봇 무인 탐사선",
+        "asset": "probe"
       },
       {
-        "text": "nova",
-        "type": "천체현상",
-        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
+        "text": "망원경",
+        "type": "tech",
+        "meaning": "수십억 광년 떨어진 은하와 성운의 빛을 포착하는 정밀 우주 망원경",
+        "asset": "telescope"
       },
       {
-        "text": "target",
-        "type": "우주기술",
-        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
+        "text": "허블",
+        "type": "tech",
+        "meaning": "수십 년간 인류의 눈이 되어 심우주를 경이롭게 담아낸 전설적인 우주망원경",
+        "asset": "hubble"
       },
       {
-        "text": "data",
-        "type": "우주기술",
-        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
+        "text": "웹",
+        "type": "tech",
+        "meaning": "거대한 금빛 주경으로 우주 초기의 빛과 외계행성을 탐색하는 차세대 망원경",
+        "asset": "webb"
       },
       {
-        "text": "pitch",
-        "type": "우주",
-        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
+        "text": "보이저",
+        "type": "tech",
+        "meaning": "황금 레코드를 싣고 태양계 경계를 넘어 성간 공간으로 항해 중인 무인 탐사선",
+        "asset": "voyager"
       },
       {
-        "text": "year",
-        "type": "우주",
-        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
+        "text": "스푸트니크",
+        "type": "tech",
+        "meaning": "인류 최초로 지구 궤도를 돌며 우주 시대의 개막을 알린 금속구 인공위성",
+        "asset": "sputnik"
       }
     ],
     "robot": [
       {
-        "text": "sun",
-        "type": "우주",
-        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
+        "text": "인공위성",
+        "type": "tech",
+        "meaning": "지구 궤도를 돌며 정밀 관측과 통신 임무를 수행하는 인공 우주 기기",
+        "asset": "satellite"
       },
       {
-        "text": "moon",
-        "type": "우주",
-        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
+        "text": "탐사선",
+        "type": "tech",
+        "meaning": "미지의 행성과 심우주 개척을 위해 발사된 정밀 로봇 무인 탐사선",
+        "asset": "probe"
       },
       {
-        "text": "moons",
-        "type": "우주",
-        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
+        "text": "망원경",
+        "type": "tech",
+        "meaning": "수십억 광년 떨어진 은하와 성운의 빛을 포착하는 정밀 우주 망원경",
+        "asset": "telescope"
       },
       {
-        "text": "sky",
-        "type": "우주",
-        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
+        "text": "허블",
+        "type": "tech",
+        "meaning": "수십 년간 인류의 눈이 되어 심우주를 경이롭게 담아낸 전설적인 우주망원경",
+        "asset": "hubble"
       },
       {
-        "text": "ray",
-        "type": "천체현상",
-        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
+        "text": "웹",
+        "type": "tech",
+        "meaning": "거대한 금빛 주경으로 우주 초기의 빛과 외계행성을 탐색하는 차세대 망원경",
+        "asset": "webb"
       },
       {
-        "text": "halo",
-        "type": "우주",
-        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
+        "text": "보이저",
+        "type": "tech",
+        "meaning": "황금 레코드를 싣고 태양계 경계를 넘어 성간 공간으로 항해 중인 무인 탐사선",
+        "asset": "voyager"
       },
       {
-        "text": "axis",
-        "type": "우주",
-        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
+        "text": "스푸트니크",
+        "type": "tech",
+        "meaning": "인류 최초로 지구 궤도를 돌며 우주 시대의 개막을 알린 금속구 인공위성",
+        "asset": "sputnik"
       },
       {
-        "text": "phase",
-        "type": "천체현상",
-        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
+        "text": "로켓",
+        "type": "tech",
+        "meaning": "엄청난 추진력을 폭발시켜 지구 중력을 탈출하는 다단식 우주 발사체",
+        "asset": "rocket"
       },
       {
-        "text": "wave",
-        "type": "천체현상",
-        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
+        "text": "캡슐",
+        "type": "tech",
+        "meaning": "고열의 대기권 재돌입을 견디도록 열차폐 실드를 장착한 우주선 캡슐",
+        "asset": "capsule"
       },
       {
-        "text": "ship",
-        "type": "우주기술",
-        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
+        "text": "모듈",
+        "type": "tech",
+        "meaning": "도킹 포트로 연결되어 우주정거장을 확장하는 정밀 가압식 거주 모듈",
+        "asset": "module"
       },
       {
-        "text": "nova",
-        "type": "천체현상",
-        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
+        "text": "로버",
+        "type": "tech",
+        "meaning": "다양한 과학 분석 장비와 바퀴를 장착하여 행성 표면을 누비는 탐사 로버",
+        "asset": "rover"
       },
       {
-        "text": "target",
-        "type": "우주기술",
-        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
+        "text": "우주선",
+        "type": "tech",
+        "meaning": "자세 제어 추진기와 주 추진엔진으로 성간을 유영하는 유인 탐사 우주선",
+        "asset": "ship"
       },
       {
-        "text": "data",
-        "type": "우주기술",
-        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
+        "text": "드론",
+        "type": "tech",
+        "meaning": "자율 제어 시스템으로 소행성과 파편 궤도를 신속히 정찰하는 우주 드론",
+        "asset": "drone"
       },
       {
-        "text": "pitch",
-        "type": "우주",
-        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
+        "text": "궤도망원경",
+        "type": "tech",
+        "meaning": "대기 왜곡을 피해 우주 궤도에서 가장 선명한 천체 사진을 촬영하는 망원경",
+        "asset": "orbital_telescope"
       },
       {
-        "text": "year",
-        "type": "우주",
-        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
+        "text": "탐사차량",
+        "type": "tech",
+        "meaning": "드릴로 외계 암석을 채취하고 성분을 분석하는 6륜 구동 로봇 탐사차량",
+        "asset": "rover_vehicle"
       }
     ],
     "beast": [
       {
-        "text": "sun",
-        "type": "우주",
-        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
+        "text": "암석",
+        "type": "hazard",
+        "meaning": "우주 공간을 떠돌며 지구 방향으로 돌진하는 거대한 우주 암석",
+        "asset": "rock"
       },
       {
-        "text": "moon",
-        "type": "우주",
-        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
+        "text": "소행성",
+        "type": "hazard",
+        "meaning": "태양 주위를 공전하는 암석과 금속 성분의 원시 행성 파편 천체",
+        "asset": "asteroid"
       },
       {
-        "text": "moons",
-        "type": "우주",
-        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
+        "text": "혜성",
+        "type": "hazard",
+        "meaning": "태양에 접근할 때 얼음이 승화하여 아름다운 가스 꼬리를 남기는 천체",
+        "asset": "comet"
       },
       {
-        "text": "sky",
-        "type": "우주",
-        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
+        "text": "유성",
+        "type": "hazard",
+        "meaning": "우주 파편이 대기권에 고속으로 진입하여 마찰열로 번쩍이는 별똥별",
+        "asset": "meteor"
       },
       {
-        "text": "ray",
-        "type": "천체현상",
-        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
+        "text": "운석",
+        "type": "hazard",
+        "meaning": "대기권의 마찰을 뚫고 지표면에 직접 도달하여 충돌한 외계 암석",
+        "asset": "meteorite"
       },
       {
-        "text": "halo",
-        "type": "우주",
-        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
+        "text": "화구",
+        "type": "hazard",
+        "meaning": "대기 속에서 폭발적인 섬광을 내뿜으며 터지는 초고휘도 유성 파이어볼",
+        "asset": "bolide"
       },
       {
-        "text": "axis",
-        "type": "우주",
-        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
+        "text": "파편",
+        "type": "hazard",
+        "meaning": "천체 충돌로 인해 발생하여 궤도를 떠도는 날카로운 우주 잔해 파편",
+        "asset": "fragment"
       },
       {
-        "text": "phase",
-        "type": "천체현상",
-        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
+        "text": "석질운석",
+        "type": "hazard",
+        "meaning": "규산염 광물을 주성분으로 구성된 우주의 단단한 암석형 운석",
+        "asset": "aerolite"
       },
       {
-        "text": "wave",
-        "type": "천체현상",
-        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
+        "text": "유성체",
+        "type": "hazard",
+        "meaning": "지구 대기권에 진입하기 전 우주를 고속으로 순항하는 작은 암석 천체",
+        "asset": "meteoroid"
       },
       {
-        "text": "ship",
-        "type": "우주기술",
-        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
+        "text": "암괴",
+        "type": "hazard",
+        "meaning": "거대한 소행성 표면에서 떨어져 나와 우주를 질주하는 거대 암괴",
+        "asset": "boulder"
       },
       {
-        "text": "nova",
-        "type": "천체현상",
-        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
+        "text": "거대소행성",
+        "type": "hazard",
+        "meaning": "충돌 시 행성 생태계를 파괴할 수 있는 수십 킬로미터급 거대 소행성",
+        "asset": "giant_asteroid"
       },
       {
-        "text": "target",
-        "type": "우주기술",
-        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
+        "text": "트로이소행성",
+        "type": "hazard",
+        "meaning": "행성과 태양의 라그랑주 점에 영구히 갇혀 공전 궤도를 함께하는 소행성",
+        "asset": "trojan_asteroid"
       },
       {
-        "text": "data",
-        "type": "우주기술",
-        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
+        "text": "타이탄",
+        "type": "cosmos",
+        "meaning": "두꺼운 질소 대기와 액체 메탄의 바다가 존재하는 토성 최대 위성",
+        "asset": "titan"
       },
       {
-        "text": "pitch",
-        "type": "우주",
-        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
+        "text": "포보스",
+        "type": "cosmos",
+        "meaning": "화성 지표면에 매우 가깝게 붙어 고속으로 공전하는 울퉁불퉁한 제1위성",
+        "asset": "phobos"
       },
       {
-        "text": "year",
-        "type": "우주",
-        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
+        "text": "데이모스",
+        "type": "cosmos",
+        "meaning": "두꺼운 먼지층으로 덮인 채 화성 외곽을 느리게 공전하는 제2위성",
+        "asset": "deimos"
       }
     ],
     "mythology": [
       {
-        "text": "sun",
-        "type": "우주",
-        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
+        "text": "태양",
+        "type": "cosmos",
+        "meaning": "빛과 열, 중력 에너지를 공급하는 우리 태양계의 중심 항성",
+        "asset": "sun"
       },
       {
-        "text": "moon",
-        "type": "우주",
-        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
+        "text": "달",
+        "type": "cosmos",
+        "meaning": "지구를 공전하며 해양 조석 현상에 큰 영향을 미치는 자연 위성",
+        "asset": "moon"
       },
       {
-        "text": "moons",
-        "type": "우주",
-        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
+        "text": "수성",
+        "type": "cosmos",
+        "meaning": "태양에 가장 가까이 위치하며 태양계에서 가장 작은 암석형 행성",
+        "asset": "mercury"
       },
       {
-        "text": "sky",
-        "type": "우주",
-        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
+        "text": "금성",
+        "type": "cosmos",
+        "meaning": "두꺼운 대기와 극심한 온실효과로 뒤덮인 밤하늘의 가장 밝은 행성",
+        "asset": "venus"
       },
       {
-        "text": "ray",
-        "type": "천체현상",
-        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
+        "text": "베스타",
+        "type": "hazard",
+        "meaning": "소행성대에서 두 번째로 거대하며 거대한 충돌구를 지닌 소행성",
+        "asset": "vesta"
       },
       {
-        "text": "halo",
-        "type": "우주",
-        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
+        "text": "화성",
+        "type": "cosmos",
+        "meaning": "붉은 산화철 먼지로 뒤덮여 있으며 태양계 최대 화산을 보유한 행성",
+        "asset": "mars"
       },
       {
-        "text": "axis",
-        "type": "우주",
-        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
+        "text": "목성",
+        "type": "cosmos",
+        "meaning": "거대한 대적점 폭풍이 소용돌이치는 태양계 최대의 가스 행성",
+        "asset": "jupiter"
       },
       {
-        "text": "phase",
-        "type": "천체현상",
-        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
+        "text": "토성",
+        "type": "cosmos",
+        "meaning": "순수한 얼음과 먼지로 이루어진 찬란한 고리를 지닌 신비로운 가스 행성",
+        "asset": "saturn"
       },
       {
-        "text": "wave",
-        "type": "천체현상",
-        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
+        "text": "천왕성",
+        "type": "cosmos",
+        "meaning": "자전축이 옆으로 기울어진 채 메탄 구름으로 푸르게 빛나는 거대 얼음 행성",
+        "asset": "uranus"
       },
       {
-        "text": "ship",
-        "type": "우주기술",
-        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
+        "text": "해왕성",
+        "type": "cosmos",
+        "meaning": "태양에서 가장 멀리 떨어져 음속을 초과하는 맹렬한 폭풍이 부는 푸른 행성",
+        "asset": "neptune"
       },
       {
-        "text": "nova",
-        "type": "천체현상",
-        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
+        "text": "명왕성",
+        "type": "cosmos",
+        "meaning": "카이퍼 벨트의 얼어붙은 세계로 질소 얼음의 하트 평원을 지닌 왜소행성",
+        "asset": "pluto"
       },
       {
-        "text": "target",
-        "type": "우주기술",
-        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
+        "text": "세레스",
+        "type": "cosmos",
+        "meaning": "화성과 목성 사이 소행성대에서 가장 거대한 구형의 왜소행성",
+        "asset": "ceres"
       },
       {
-        "text": "data",
-        "type": "우주기술",
-        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
+        "text": "타이탄",
+        "type": "cosmos",
+        "meaning": "두꺼운 질소 대기와 액체 메탄의 바다가 존재하는 토성 최대 위성",
+        "asset": "titan"
       },
       {
-        "text": "pitch",
-        "type": "우주",
-        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
+        "text": "유로파",
+        "type": "cosmos",
+        "meaning": "갈라진 얼음 표면 아래에 거대한 액체 바다를 품고 있는 목성의 위성",
+        "asset": "europa"
       },
       {
-        "text": "year",
-        "type": "우주",
-        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
+        "text": "이오",
+        "type": "cosmos",
+        "meaning": "수백 개의 활화산에서 황을 뿜어내는 태양계에서 가장 화산활동이 활발한 위성",
+        "asset": "io"
       }
     ],
     "volcano": [
       {
-        "text": "sun",
-        "type": "우주",
-        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
+        "text": "화성",
+        "type": "cosmos",
+        "meaning": "붉은 산화철 먼지로 뒤덮여 있으며 태양계 최대 화산을 보유한 행성",
+        "asset": "mars"
       },
       {
-        "text": "moon",
-        "type": "우주",
-        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
+        "text": "이오",
+        "type": "cosmos",
+        "meaning": "수백 개의 활화산에서 황을 뿜어내는 태양계에서 가장 화산활동이 활발한 위성",
+        "asset": "io"
       },
       {
-        "text": "moons",
-        "type": "우주",
-        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
+        "text": "유성",
+        "type": "hazard",
+        "meaning": "우주 파편이 대기권에 고속으로 진입하여 마찰열로 번쩍이는 별똥별",
+        "asset": "meteor"
       },
       {
-        "text": "sky",
-        "type": "우주",
-        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
+        "text": "운석",
+        "type": "hazard",
+        "meaning": "대기권의 마찰을 뚫고 지표면에 직접 도달하여 충돌한 외계 암석",
+        "asset": "meteorite"
       },
       {
-        "text": "ray",
-        "type": "천체현상",
-        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
+        "text": "화구",
+        "type": "hazard",
+        "meaning": "대기 속에서 폭발적인 섬광을 내뿜으며 터지는 초고휘도 유성 파이어볼",
+        "asset": "bolide"
       },
       {
-        "text": "halo",
-        "type": "우주",
-        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
+        "text": "파편",
+        "type": "hazard",
+        "meaning": "천체 충돌로 인해 발생하여 궤도를 떠도는 날카로운 우주 잔해 파편",
+        "asset": "fragment"
       },
       {
-        "text": "axis",
-        "type": "우주",
-        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
+        "text": "석질운석",
+        "type": "hazard",
+        "meaning": "규산염 광물을 주성분으로 구성된 우주의 단단한 암석형 운석",
+        "asset": "aerolite"
       },
       {
-        "text": "phase",
-        "type": "천체현상",
-        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
+        "text": "방사선",
+        "type": "hazard",
+        "meaning": "우주 공간을 가로지르며 물질과 에너지를 이온화시키는 고에너지 입자선",
+        "asset": "radiation"
       },
       {
-        "text": "wave",
-        "type": "천체현상",
-        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
+        "text": "반물질",
+        "type": "hazard",
+        "meaning": "일반 물질과 접촉하는 순간 질량을 순수 에너지로 100% 폭발시키는 반입자",
+        "asset": "antimatter"
       },
       {
-        "text": "ship",
-        "type": "우주기술",
-        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
+        "text": "적색거성",
+        "type": "cosmos",
+        "meaning": "중심부 수소 고갈로 수백 배 팽창하여 내부 행성을 집어삼키는 노년기 항성",
+        "asset": "red_giant"
       },
       {
-        "text": "nova",
-        "type": "천체현상",
-        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
+        "text": "암석",
+        "type": "hazard",
+        "meaning": "우주 공간을 떠돌며 지구 방향으로 돌진하는 거대한 우주 암석",
+        "asset": "rock"
       },
       {
-        "text": "target",
-        "type": "우주기술",
-        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
+        "text": "소행성",
+        "type": "hazard",
+        "meaning": "태양 주위를 공전하는 암석과 금속 성분의 원시 행성 파편 천체",
+        "asset": "asteroid"
       },
       {
-        "text": "data",
-        "type": "우주기술",
-        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
+        "text": "유성체",
+        "type": "hazard",
+        "meaning": "지구 대기권에 진입하기 전 우주를 고속으로 순항하는 작은 암석 천체",
+        "asset": "meteoroid"
       },
       {
-        "text": "pitch",
-        "type": "우주",
-        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
+        "text": "암괴",
+        "type": "hazard",
+        "meaning": "거대한 소행성 표면에서 떨어져 나와 우주를 질주하는 거대 암괴",
+        "asset": "boulder"
       },
       {
-        "text": "year",
-        "type": "우주",
-        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
+        "text": "거대소행성",
+        "type": "hazard",
+        "meaning": "충돌 시 행성 생태계를 파괴할 수 있는 수십 킬로미터급 거대 소행성",
+        "asset": "giant_asteroid"
       }
     ],
     "ocean": [
       {
-        "text": "sun",
-        "type": "우주",
-        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
+        "text": "베스타",
+        "type": "hazard",
+        "meaning": "소행성대에서 두 번째로 거대하며 거대한 충돌구를 지닌 소행성",
+        "asset": "vesta"
       },
       {
-        "text": "moon",
-        "type": "우주",
-        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
+        "text": "타이탄",
+        "type": "cosmos",
+        "meaning": "두꺼운 질소 대기와 액체 메탄의 바다가 존재하는 토성 최대 위성",
+        "asset": "titan"
       },
       {
-        "text": "moons",
-        "type": "우주",
-        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
+        "text": "유로파",
+        "type": "cosmos",
+        "meaning": "갈라진 얼음 표면 아래에 거대한 액체 바다를 품고 있는 목성의 위성",
+        "asset": "europa"
       },
       {
-        "text": "sky",
-        "type": "우주",
-        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
+        "text": "트리톤",
+        "type": "cosmos",
+        "meaning": "역행 궤도로 공전하며 질소 간헐천을 분출하는 해왕성의 거대 얼음 위성",
+        "asset": "triton"
       },
       {
-        "text": "ray",
-        "type": "천체현상",
-        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
+        "text": "엔셀라두스",
+        "type": "cosmos",
+        "meaning": "얼음 표면 틈새로 지하 바다의 수증기와 물을 우주로 뿜어내는 토성의 위성",
+        "asset": "enceladus"
       },
       {
-        "text": "halo",
-        "type": "우주",
-        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
+        "text": "가니메데",
+        "type": "cosmos",
+        "meaning": "수성보다도 크며 자체 자기장을 보유한 태양계 최대 크기의 위성",
+        "asset": "ganymede"
       },
       {
-        "text": "axis",
-        "type": "우주",
-        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
+        "text": "해왕성",
+        "type": "cosmos",
+        "meaning": "태양에서 가장 멀리 떨어져 음속을 초과하는 맹렬한 폭풍이 부는 푸른 행성",
+        "asset": "neptune"
       },
       {
-        "text": "phase",
-        "type": "천체현상",
-        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
+        "text": "혜성",
+        "type": "hazard",
+        "meaning": "태양에 접근할 때 얼음이 승화하여 아름다운 가스 꼬리를 남기는 천체",
+        "asset": "comet"
       },
       {
-        "text": "wave",
-        "type": "천체현상",
-        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
+        "text": "파편",
+        "type": "hazard",
+        "meaning": "천체 충돌로 인해 발생하여 궤도를 떠도는 날카로운 우주 잔해 파편",
+        "asset": "fragment"
       },
       {
-        "text": "ship",
-        "type": "우주기술",
-        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
+        "text": "인공위성",
+        "type": "tech",
+        "meaning": "지구 궤도를 돌며 정밀 관측과 통신 임무를 수행하는 인공 우주 기기",
+        "asset": "satellite"
       },
       {
-        "text": "nova",
-        "type": "천체현상",
-        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
+        "text": "탐사선",
+        "type": "tech",
+        "meaning": "미지의 행성과 심우주 개척을 위해 발사된 정밀 로봇 무인 탐사선",
+        "asset": "probe"
       },
       {
-        "text": "target",
-        "type": "우주기술",
-        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
+        "text": "우주선",
+        "type": "tech",
+        "meaning": "자세 제어 추진기와 주 추진엔진으로 성간을 유영하는 유인 탐사 우주선",
+        "asset": "ship"
       },
       {
-        "text": "data",
-        "type": "우주기술",
-        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
+        "text": "우주정거장",
+        "type": "tech",
+        "meaning": "무중력 상태에서 장기간 머물며 과학 연구를 수행하는 거대 궤도 기지",
+        "asset": "space_station"
       },
       {
-        "text": "pitch",
-        "type": "우주",
-        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
+        "text": "우주화물선",
+        "type": "tech",
+        "meaning": "소행성 광산에서 채굴한 희귀 광물 컨테이너를 운송하는 초대형 우주 화물선",
+        "asset": "freighter"
       },
       {
-        "text": "year",
-        "type": "우주",
-        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
+        "text": "달",
+        "type": "cosmos",
+        "meaning": "지구를 공전하며 해양 조석 현상에 큰 영향을 미치는 자연 위성",
+        "asset": "moon"
       }
     ],
     "cosmos": [
       {
-        "text": "sun",
-        "type": "우주",
-        "meaning": "빛과 열, 중력적 안정성을 제공하는 태양계 중심의 항성"
+        "text": "별",
+        "type": "cosmos",
+        "meaning": "핵융합 반응의 막대한 에너지를 방출하며 우주를 환하게 밝히는 백열의 항성",
+        "asset": "star"
       },
       {
-        "text": "moon",
-        "type": "우주",
-        "meaning": "지구를 공전하며 조석 간만의 차를 일으키고 자전축을 안정시키는 위성"
+        "text": "은하",
+        "type": "cosmos",
+        "meaning": "수천억 개의 항성과 성운들이 중심 블랙홀 주위로 모여 회전하는 은하계",
+        "asset": "galaxy"
       },
       {
-        "text": "moons",
-        "type": "우주",
-        "meaning": "우주 공간에서 행성과 소행성을 공전하는 암석 또는 얼음 위성들"
+        "text": "성운",
+        "type": "cosmos",
+        "meaning": "새로운 별들이 태어나는 찬란하고 거대한 우주 가스와 먼지의 성간 요람",
+        "asset": "nebula"
       },
       {
-        "text": "sky",
-        "type": "우주",
-        "meaning": "지표면에서 보이는 천구로, 별과 별자리가 반짝이는 공간"
+        "text": "초신성",
+        "type": "fenomeno",
+        "meaning": "수명을 다한 거대 항성이 은하 전체보다 밝은 빛을 뿜어내며 폭발하는 현상",
+        "asset": "supernova"
       },
       {
-        "text": "ray",
-        "type": "천체현상",
-        "meaning": "집중된 전자기 에너지의 광선 또는 방출되는 별빛"
+        "text": "펄서",
+        "type": "cosmos",
+        "meaning": "초당 수백 회 회전하며 규칙적인 전자기파 펄스를 등대처럼 쏘는 중성자별",
+        "asset": "pulsar"
       },
       {
-        "text": "halo",
-        "type": "우주",
-        "meaning": "천체나 은하를 둘러싼 가스와 별들로 이루어진 은은하게 빛나는 고리"
+        "text": "퀘이사",
+        "type": "cosmos",
+        "meaning": "초거대 블랙홀이 주변 물질을 집어삼키며 뿜어내는 우주 최강의 활동은하핵",
+        "asset": "quasar"
       },
       {
-        "text": "axis",
-        "type": "우주",
-        "meaning": "행성이나 천체가 자전하는 중심이 되는 가상의 중심축"
+        "text": "마그네타",
+        "type": "cosmos",
+        "meaning": "우주에서 가장 강력한 초극강 자기장을 뿜어내는 경이로운 중성자별",
+        "asset": "magnetar"
       },
       {
-        "text": "phase",
-        "type": "천체현상",
-        "meaning": "지구에서 관측되는 달이나 행성의 햇빛을 받는 부분의 겉보기 위상"
+        "text": "외계행성",
+        "type": "cosmos",
+        "meaning": "우리 태양계 밖 먼 우주에서 다른 별의 주위를 공전하는 미지의 외계 행성",
+        "asset": "exoplanet"
       },
       {
-        "text": "wave",
-        "type": "천체현상",
-        "meaning": "시공간의 잔물결인 중력파와 같이 전파되는 에너지의 파동"
+        "text": "안드로메다",
+        "type": "cosmos",
+        "meaning": "먼 미래 우리 은하와 하나로 합쳐질 운명을 지닌 거대한 나선은하",
+        "asset": "andromeda"
       },
       {
-        "text": "ship",
-        "type": "우주기술",
-        "meaning": "행성 간 항행을 위해 설계된 유인 또는 무인 우주선"
+        "text": "은하수",
+        "type": "cosmos",
+        "meaning": "수천억 개의 별들이 찬란한 나선팔을 이루는 인류의 보금자리 우리은하",
+        "asset": "milky_way"
       },
       {
-        "text": "nova",
-        "type": "천체현상",
-        "meaning": "급격한 열핵융합으로 갑자기 밝기가 폭발적으로 증가하는 신성"
+        "text": "블랙홀",
+        "type": "hazard",
+        "meaning": "시공간을 무한히 왜곡시켜 빛조차 빠져나오지 못하는 우주 최강의 중력 심연",
+        "asset": "black_hole"
       },
       {
-        "text": "target",
-        "type": "우주기술",
-        "meaning": "우주 탐사선의 궤도 목표 지점 또는 천체 경유지"
+        "text": "웜홀",
+        "type": "cosmos",
+        "meaning": "시공간을 접어 아득히 먼 두 지점을 순식간에 연결하는 가상의 우주 통로",
+        "asset": "wormhole"
       },
       {
-        "text": "data",
-        "type": "우주기술",
-        "meaning": "우주 망원경과 탐사선이 광대한 우주 공간에서 수집한 과학 원격측정 데이터"
+        "text": "백색왜성",
+        "type": "cosmos",
+        "meaning": "수명이 다한 별이 외피를 날려보내고 지구 크기로 응축된 초고밀도 잔해",
+        "asset": "white_dwarf"
       },
       {
-        "text": "pitch",
-        "type": "우주",
-        "meaning": "은하와 은하 사이의 심연에 펼쳐진 깊고 완전한 암흑"
+        "text": "적색거성",
+        "type": "cosmos",
+        "meaning": "중심부 수소 고갈로 수백 배 팽창하여 내부 행성을 집어삼키는 노년기 항성",
+        "asset": "red_giant"
       },
       {
-        "text": "year",
-        "type": "우주",
-        "meaning": "공전하는 행성이 중심 항성을 완전히 한 바퀴 도는 데 걸리는 시간"
+        "text": "태양",
+        "type": "cosmos",
+        "meaning": "빛과 열, 중력 에너지를 공급하는 우리 태양계의 중심 항성",
+        "asset": "sun"
       }
     ]
   },

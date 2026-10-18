@@ -552,377 +552,452 @@
     {
       "text": "soleil",
       "type": "cosmos",
-      "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité"
+      "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité",
+      "asset": "sun"
     },
     {
       "text": "lune",
       "type": "cosmos",
-      "meaning": "Satellite naturel en orbite autour de la Terre régissant les marées océaniques"
+      "meaning": "Satellite naturel en orbite autour de la Terre influençant les marées",
+      "asset": "moon"
     },
     {
-      "text": "lunes",
+      "text": "roche",
+      "type": "hazard",
+      "meaning": "Fragment rocheux spatial errant voyageant à travers le cosmos vers la Terre",
+      "asset": "rock"
+    },
+    {
+      "text": "mercure",
       "type": "cosmos",
-      "meaning": "Satellites naturels rocheux ou glacés en orbite autour des planètes"
-    },
-    {
-      "text": "ciel",
-      "type": "cosmos",
-      "meaning": "Voûte céleste visible depuis la surface où scintillent étoiles et constellations"
-    },
-    {
-      "text": "rayon",
-      "type": "phenomene",
-      "meaning": "Faisceau concentré d'énergie électromagnétique ou lumière stellaire"
-    },
-    {
-      "text": "halo",
-      "type": "cosmos",
-      "meaning": "Anneau lumineux diffus de gaz et d'étoiles autour des corps célestes"
-    },
-    {
-      "text": "axe",
-      "type": "cosmos",
-      "meaning": "Ligne imaginaire autour de laquelle une planète ou un astre effectue sa rotation"
-    },
-    {
-      "text": "phase",
-      "type": "phenomene",
-      "meaning": "Aspect apparent de la partie éclairée d'une lune ou planète vue depuis la Terre"
-    },
-    {
-      "text": "onde",
-      "type": "phenomene",
-      "meaning": "Propagation ondulatoire d'énergie telle que les ondes gravitationnelles"
-    },
-    {
-      "text": "vaisseau",
-      "type": "tech",
-      "meaning": "Véhicule d'exploration aérospatiale conçu pour les voyages interplanétaires"
-    },
-    {
-      "text": "nova",
-      "type": "phenomene",
-      "meaning": "Explosion thermonucléaire stellaire augmentant soudainement d'éclat"
-    },
-    {
-      "text": "cible",
-      "type": "tech",
-      "meaning": "Destination orbitale ou astre sélectionné pour les sondes d'exploration"
-    },
-    {
-      "text": "donnee",
-      "type": "tech",
-      "meaning": "Informations télémétriques recueillies par les télescopes spatiaux"
-    },
-    {
-      "text": "abime",
-      "type": "cosmos",
-      "meaning": "L'obscurité profonde et impénétrable des vides intergalactiques"
-    },
-    {
-      "text": "annee",
-      "type": "cosmos",
-      "meaning": "Durée nécessaire à une planète pour accomplir une révolution orbitale"
-    },
-    {
-      "text": "vide",
-      "type": "cosmos",
-      "meaning": "Espace dépourvu de matière où règne le silence absolu du cosmos"
-    },
-    {
-      "text": "astre",
-      "type": "cosmos",
-      "meaning": "Tout corps céleste naturel peuplant l'immensité de l'espace cosmique"
-    },
-    {
-      "text": "cosmos",
-      "type": "cosmos",
-      "meaning": "L'univers ordonné, harmonieux et infini dans toute son étendue physique"
-    },
-    {
-      "text": "mars",
-      "type": "cosmos",
-      "meaning": "La quatrième planète du système solaire, réputée comme la Planète Rouge"
+      "meaning": "La plus petite planète du système solaire et la plus proche du Soleil",
+      "asset": "mercury"
     },
     {
       "text": "venus",
       "type": "cosmos",
-      "meaning": "La deuxième planète du système solaire, l'astre le plus brillant du ciel nocturne"
+      "meaning": "Deuxième planète du système solaire à l'effet de serre extrême et étouffant",
+      "asset": "venus"
     },
     {
-      "text": "terre",
+      "text": "vesta",
+      "type": "hazard",
+      "meaning": "Le deuxième plus gros astéroïde de la ceinture arborant un cratère d'impact titanesque",
+      "asset": "vesta"
+    },
+    {
+      "text": "mars",
       "type": "cosmos",
-      "meaning": "Notre planète rocheuse bleue, seul havre de vie et d'eau liquide connu"
+      "meaning": "La planète rouge couverte d'oxyde de fer et abritant le mont Olympe",
+      "asset": "mars"
     },
     {
-      "text": "solaire",
+      "text": "jupiter",
       "type": "cosmos",
-      "meaning": "Relatif au Soleil, à son rayonnement thermique et au vent stellaire"
+      "meaning": "Le géant gazeux colossal réputé pour sa Grande Tache Rouge tourbillonnante",
+      "asset": "jupiter"
     },
     {
-      "text": "sonde",
-      "type": "tech",
-      "meaning": "Vaisseau spatial automatique envoyé explorer des mondes inexplorés"
-    },
-    {
-      "text": "radar",
-      "type": "tech",
-      "meaning": "Système de détection radioélectrique cartographiant le relief céleste"
-    },
-    {
-      "text": "magma",
-      "type": "nature",
-      "meaning": "Roche en fusion à très haute température sous la croûte planétaire"
-    },
-    {
-      "text": "nuage",
+      "text": "saturne",
       "type": "cosmos",
-      "meaning": "Nuage moléculaire dense d'hydrogène et de poussière berceau d'étoiles"
+      "meaning": "Le magnifique géant gazeux ceint de spectaculaires anneaux de glace scintillants",
+      "asset": "saturn"
+    },
+    {
+      "text": "uranus",
+      "type": "cosmos",
+      "meaning": "Géante de glace aux teintes cyan tournant sur son flanc dans un froid extrême",
+      "asset": "uranus"
+    },
+    {
+      "text": "neptune",
+      "type": "cosmos",
+      "meaning": "La planète la plus lointaine balayée par des vents supersoniques furieux",
+      "asset": "neptune"
     },
     {
       "text": "pluton",
       "type": "cosmos",
-      "meaning": "Planète naine glacée située dans la ceinture de Kuiper aux confins du système"
+      "meaning": "Planète naine glacée de la ceinture de Kuiper arborant un cœur d'azote",
+      "asset": "pluto"
     },
     {
-      "text": "orbite",
+      "text": "ceres",
       "type": "cosmos",
-      "meaning": "Trajectoire gravitationnelle fermée qu'un astre parcourt autour d'un centre"
+      "meaning": "Le plus grand objet de la ceinture d'astéroïdes entre Mars et Jupiter",
+      "asset": "ceres"
+    },
+    {
+      "text": "titan",
+      "type": "cosmos",
+      "meaning": "Plus grand satellite de Saturne abritant des lacs et mers de méthane liquide",
+      "asset": "titan"
+    },
+    {
+      "text": "phobos",
+      "type": "cosmos",
+      "meaning": "Lune intérieure irrégulière de Mars orbitant très près de la planète rouge",
+      "asset": "phobos"
+    },
+    {
+      "text": "deimos",
+      "type": "cosmos",
+      "meaning": "La plus petite lune extérieure de Mars ressemblant à un astéroïde sombre",
+      "asset": "deimos"
+    },
+    {
+      "text": "europe",
+      "type": "cosmos",
+      "meaning": "Lune glacée de Jupiter dissimulant un océan sous sa banquise fracturée",
+      "asset": "europa"
+    },
+    {
+      "text": "io",
+      "type": "cosmos",
+      "meaning": "Le corps le plus volcanique du système solaire criblé de geysers de soufre",
+      "asset": "io"
+    },
+    {
+      "text": "triton",
+      "type": "cosmos",
+      "meaning": "Lune glacée rétrograde de Neptune crachant des geysers d'azote liquide",
+      "asset": "triton"
+    },
+    {
+      "text": "callisto",
+      "type": "cosmos",
+      "meaning": "Monde criblé de cratères de Jupiter arborant la surface la plus ancienne",
+      "asset": "callisto"
+    },
+    {
+      "text": "charon",
+      "type": "cosmos",
+      "meaning": "Compagnon colossal de Pluton formant un système gravitationnel double synchronisé",
+      "asset": "charon"
+    },
+    {
+      "text": "encelade",
+      "type": "cosmos",
+      "meaning": "Lune étincelante de Saturne projetant des geysers d'eau vers l'espace",
+      "asset": "enceladus"
+    },
+    {
+      "text": "ganymede",
+      "type": "cosmos",
+      "meaning": "La plus grande lune du système solaire surpassant la planète Mercure",
+      "asset": "ganymede"
+    },
+    {
+      "text": "asteroide",
+      "type": "hazard",
+      "meaning": "Corps rocheux et métallique vestige de la formation des planètes",
+      "asset": "asteroid"
     },
     {
       "text": "comete",
-      "type": "cosmos",
-      "meaning": "Corps céleste glacé développant une traîne brillante à l'approche du Soleil"
-    },
-    {
-      "text": "pulsar",
-      "type": "cosmos",
-      "meaning": "Étoile à neutrons magnétique en rotation rapide émettant des faisceaux réguliers"
-    },
-    {
-      "text": "quasar",
-      "type": "cosmos",
-      "meaning": "Noyau galactique actif lointain et hyperlumineux alimenté par un trou noir géant"
-    },
-    {
-      "text": "couronne",
-      "type": "cosmos",
-      "meaning": "Atmosphère externe de plasma solaire atteignant des millions de degrés"
+      "type": "hazard",
+      "meaning": "Corps glacé développant une splendide chevelure lumineuse à l'approche du Soleil",
+      "asset": "comet"
     },
     {
       "text": "meteore",
-      "type": "cosmos",
-      "meaning": "Traînée lumineuse produite par la combustion d'un météoroïde dans l'air"
+      "type": "hazard",
+      "meaning": "Traînée lumineuse fulgurante produite par l'incinération d'un débris céleste",
+      "asset": "meteor"
     },
     {
-      "text": "optique",
-      "type": "tech",
-      "meaning": "Science de la lumière et des miroirs embarqués sur les télescopes orbitaux"
+      "text": "meteorite",
+      "type": "hazard",
+      "meaning": "Roc spatial rescapé de la rentrée atmosphérique percutant la surface",
+      "asset": "meteorite"
     },
     {
-      "text": "espace",
-      "type": "cosmos",
-      "meaning": "L'étendue tridimensionnelle sans limites où dérivent galaxies et planètes"
+      "text": "bolide",
+      "type": "hazard",
+      "meaning": "Météore exceptionnellement brillant explosant dans une boule de feu cataclysmique",
+      "asset": "bolide"
     },
     {
-      "text": "aurore",
-      "type": "phenomene",
-      "meaning": "Lumière céleste polaire générée par l'impact du vent solaire sur la magnétosphère"
+      "text": "fragment",
+      "type": "hazard",
+      "meaning": "Éclat tranchant né d'une collision orbitale menaçant la Terre",
+      "asset": "fragment"
     },
     {
-      "text": "zenith",
-      "type": "cosmos",
-      "meaning": "Point imaginaire de la sphère céleste situé directement au-dessus de l'observateur"
+      "text": "aerolithe",
+      "type": "hazard",
+      "meaning": "Météorite pierreuse composée principalement de minéraux silicatés",
+      "asset": "aerolite"
     },
     {
-      "text": "hubble",
-      "type": "tech",
-      "meaning": "Célèbre télescope spatial orbital ayant révolutionné l'astronomie contemporaine"
+      "text": "meteoroide",
+      "type": "hazard",
+      "meaning": "Petit corps rocheux sillonnant l'espace avant son entrée atmosphérique",
+      "asset": "meteoroid"
     },
     {
-      "text": "poussiere",
-      "type": "cosmos",
-      "meaning": "Micro-grains minéraux interstellaires dispersés dans les bras galactiques"
-    },
-    {
-      "text": "abysse",
-      "type": "cosmos",
-      "meaning": "Puits gravitationnel extrême courbant le continuum de l'espace-temps"
-    },
-    {
-      "text": "etoile",
-      "type": "cosmos",
-      "meaning": "Sphère colossale de plasma alimentée par la fusion thermonucléaire en son cœur"
-    },
-    {
-      "text": "planete",
-      "type": "cosmos",
-      "meaning": "Corps céleste massif en orbite stellaire ayant nettoyé son voisinage orbital"
-    },
-    {
-      "text": "galaxie",
-      "type": "cosmos",
-      "meaning": "Gigantesque assemblage gravitationnel de milliards d'étoiles et de nébuleuses"
-    },
-    {
-      "text": "galaxies",
-      "type": "cosmos",
-      "meaning": "Milliards d'îles stellaires cosmiques réparties à travers la toile de l'univers"
-    },
-    {
-      "text": "univers",
-      "type": "cosmos",
-      "meaning": "L'ensemble de toute la matière, l'énergie, l'espace, le temps et les lois physiques"
-    },
-    {
-      "text": "nebuleuse",
-      "type": "cosmos",
-      "meaning": "Vaste nuage interstellaire de gaz ionisé et de résidus stellaires en expansion"
-    },
-    {
-      "text": "gravite",
-      "type": "phenomene",
-      "meaning": "Force fondamentale d'attraction mutuelle s'exerçant entre toutes les masses"
-    },
-    {
-      "text": "supernova",
-      "type": "phenomene",
-      "meaning": "Explosion cataclysmique d'une étoile massive surpassant l'éclat d'une galaxie"
-    },
-    {
-      "text": "astronaute",
-      "type": "tech",
-      "meaning": "Navigateur professionnel formé aux missions spatiales en impesanteur"
-    },
-    {
-      "text": "astronomie",
-      "type": "science",
-      "meaning": "Science observant et expliquant la nature et l'évolution des corps célestes"
-    },
-    {
-      "text": "exoplanete",
-      "type": "cosmos",
-      "meaning": "Planète en orbite autour d'une étoile située hors de notre système solaire"
-    },
-    {
-      "text": "exoplanetes",
-      "type": "cosmos",
-      "meaning": "Mondes lointains orbitant autour de soleils étrangers dans la galaxie"
+      "text": "rocher",
+      "type": "hazard",
+      "meaning": "Bloc de roche massif éjecté de la surface d'un astéroïde menaçant",
+      "asset": "boulder"
     },
     {
       "text": "satellite",
       "type": "tech",
-      "meaning": "Corps naturel ou artificiel gravitant régulièrement autour d'une planète"
+      "meaning": "Appareil orbital déployant antennes et capteurs autour de notre planète",
+      "asset": "satellite"
     },
     {
-      "text": "constellation",
-      "type": "cosmos",
-      "meaning": "Figure imaginaire formée par un groupe d'étoiles sur la voûte nocturne"
+      "text": "sonde",
+      "type": "tech",
+      "meaning": "Véhicule robotique inhabité envoyé sonder les confins du système solaire",
+      "asset": "probe"
     },
     {
       "text": "telescope",
       "type": "tech",
-      "meaning": "Instrument d'optique astronomique collectant la lumière des astres lointains"
+      "meaning": "Instrument d'observation optique captant la lueur des astres lointains",
+      "asset": "telescope"
+    },
+    {
+      "text": "hubble",
+      "type": "tech",
+      "meaning": "Le célèbre télescope spatial qui a révolutionné notre regard sur l'univers",
+      "asset": "hubble"
+    },
+    {
+      "text": "webb",
+      "type": "tech",
+      "meaning": "L'observatoire infrarouge de pointe traquant les premières lueurs du cosmos",
+      "asset": "webb"
+    },
+    {
+      "text": "voyager",
+      "type": "tech",
+      "meaning": "La sonde légendaire devenue le premier artefact humain dans l'espace interstellaire",
+      "asset": "voyager"
+    },
+    {
+      "text": "spoutnik",
+      "type": "tech",
+      "meaning": "La sphère métallique pionnière qui ouvrit officiellement l'ère spatiale",
+      "asset": "sputnik"
+    },
+    {
+      "text": "fusee",
+      "type": "tech",
+      "meaning": "Puissant propulseur crachant des flammes incandescentes pour quitter l'orbite",
+      "asset": "rocket"
+    },
+    {
+      "text": "capsule",
+      "type": "tech",
+      "meaning": "Habitacle pressurisé profilé doté d'un bouclier thermique de rentrée",
+      "asset": "capsule"
+    },
+    {
+      "text": "module",
+      "type": "tech",
+      "meaning": "Compartiment structural pressurisé d'un complexe orbital modulaire",
+      "asset": "module"
+    },
+    {
+      "text": "rover",
+      "type": "tech",
+      "meaning": "Véhicule motorisé autonome conçu pour arpenter les sols d'autres mondes",
+      "asset": "rover"
+    },
+    {
+      "text": "vaisseau",
+      "type": "tech",
+      "meaning": "Vaisseau d'exploration interstellaire propulsé par réacteurs à plasma",
+      "asset": "ship"
+    },
+    {
+      "text": "drone",
+      "type": "tech",
+      "meaning": "Engin éclaireur autonome ultra-léger traquant les anomalies orbitales",
+      "asset": "drone"
     },
     {
       "text": "astronef",
       "type": "tech",
-      "meaning": "Vaisseau interstellaire conçu pour traverser les gouffres de l'espace profond"
+      "meaning": "Croiseur interstellaire lourd doté de propulseurs à distorsion de pointe",
+      "asset": "starship"
     },
     {
-      "text": "atmosphere",
-      "type": "cosmos",
-      "meaning": "Enveloppe gazeuse protectrice maintenue par gravité autour d'une planète"
-    },
-    {
-      "text": "magnetosphere",
-      "type": "phenomene",
-      "meaning": "Bouclier magnétique planétaire déviant le vent solaire et les radiations"
-    },
-    {
-      "text": "radiation",
-      "type": "phenomene",
-      "meaning": "Énergie électromagnétique ou particules subatomiques traversant le vide"
-    },
-    {
-      "text": "spectre",
-      "type": "science",
-      "meaning": "Décomposition de la lumière révélant la composition chimique des étoiles"
-    },
-    {
-      "text": "andromede",
-      "type": "cosmos",
-      "meaning": "La plus proche grande galaxie spirale destinée à fusionner avec la nôtre"
-    },
-    {
-      "text": "heliosphere",
-      "type": "cosmos",
-      "meaning": "Bulle géante sculptée dans l'espace interstellaire par le vent solaire"
-    },
-    {
-      "text": "antimatiere",
-      "type": "science",
-      "meaning": "Matière constituée d'antiparticules s'annihilant violemment au contact de la matière"
-    },
-    {
-      "text": "singularite",
-      "type": "cosmos",
-      "meaning": "Cœur d'un trou noir où la densité gravitationnelle tend vers l'infini"
-    },
-    {
-      "text": "multivers",
-      "type": "cosmos",
-      "meaning": "Ensemble hypothétique d'univers parallèles coexistant dans d'autres dimensions"
-    },
-    {
-      "text": "annee-lumiere",
-      "type": "science",
-      "meaning": "Distance prodigieuse parcourue par un photon dans le vide en une année"
-    },
-    {
-      "text": "trou-noir",
-      "type": "cosmos",
-      "meaning": "Région de l'espace à gravité si phénoménale que rien, pas même la lumière, ne s'échappe"
-    },
-    {
-      "text": "poussiere-stellaire",
-      "type": "cosmos",
-      "meaning": "Cendres de supernovas ensemençant la création de nouvelles planètes"
-    },
-    {
-      "text": "matiere-noire",
-      "type": "cosmos",
-      "meaning": "Matière invisible et mystérieuse constituant l'essentiel de la masse galactique"
-    },
-    {
-      "text": "energie-noire",
-      "type": "cosmos",
-      "meaning": "Force répulsive omniprésente accélérant l'expansion de l'univers observable"
-    },
-    {
-      "text": "trou-de-ver",
-      "type": "cosmos",
-      "meaning": "Raccourci théorique dans l'espace-temps reliant deux régions distantes"
-    },
-    {
-      "text": "vitesse-lumiere",
-      "type": "science",
-      "meaning": "Constante de vitesse universelle de trois cent mille kilomètres par seconde"
+      "text": "navette",
+      "type": "tech",
+      "meaning": "Navette spatiale ailée réutilisable atterrissant en vol plané sur Terre",
+      "asset": "space_shuttle"
     },
     {
       "text": "station-spatiale",
       "type": "tech",
-      "meaning": "Complexe orbital habitable où les chercheurs vivent et mènent leurs expériences"
+      "meaning": "Immense habitat orbital permanent accueillant des astronautes chercheurs",
+      "asset": "space_station"
     },
     {
-      "text": "horizon-evenements",
+      "text": "etoile",
       "type": "cosmos",
-      "meaning": "Frontière de non-retour absolue entourant la singularité d'un trou noir"
+      "meaning": "Fournaise cosmique de plasma incandescent entretenue par la fusion nucléaire",
+      "asset": "star"
+    },
+    {
+      "text": "galaxie",
+      "type": "cosmos",
+      "meaning": "Tourbillon gravitationnel réunissant des centaines de milliards d'étoiles",
+      "asset": "galaxy"
+    },
+    {
+      "text": "nebuleuse",
+      "type": "cosmos",
+      "meaning": "Gigantesque nuage cosmique de gaz luminescent berceau de nouveaux mondes",
+      "asset": "nebula"
+    },
+    {
+      "text": "supernova",
+      "type": "fenomeno",
+      "meaning": "Déflagration cosmique titanesque d'une étoile agonisante illuminant l'espace",
+      "asset": "supernova"
+    },
+    {
+      "text": "pulsar",
+      "type": "cosmos",
+      "meaning": "Étoile à neutrons hyperdense balayant l'espace de faisceaux réguliers",
+      "asset": "pulsar"
+    },
+    {
+      "text": "quasar",
+      "type": "cosmos",
+      "meaning": "Noyau galactique primordial éblouissant alimenté par un trou noir vorace",
+      "asset": "quasar"
+    },
+    {
+      "text": "magnetar",
+      "type": "cosmos",
+      "meaning": "Étoile à neutrons dotée du champ magnétique le plus dévastateur du cosmos",
+      "asset": "magnetar"
+    },
+    {
+      "text": "exoplanete",
+      "type": "cosmos",
+      "meaning": "Monde lointain tournoyant en orbite autour d'une étoile étrangère",
+      "asset": "exoplanet"
+    },
+    {
+      "text": "andromede",
+      "type": "cosmos",
+      "meaning": "La galaxie spirale géante voisine marchant vers une future fusion cosmique",
+      "asset": "andromeda"
     },
     {
       "text": "voie-lactee",
       "type": "cosmos",
-      "meaning": "Notre galaxie natale spirale abritant des centaines de milliards d'étoiles"
+      "meaning": "Notre galaxie spirale nourricière étirant ses bras d'étoiles scintillantes",
+      "asset": "milky_way"
+    },
+    {
+      "text": "rayonnement",
+      "type": "hazard",
+      "meaning": "Flux intense de particules énergétiques et rayons ionisants fendant l'espace",
+      "asset": "radiation"
+    },
+    {
+      "text": "antimatiere",
+      "type": "hazard",
+      "meaning": "Matière inversée produisant une annihilation énergétique pure au contact de la matière",
+      "asset": "antimatter"
+    },
+    {
+      "text": "trou-noir",
+      "type": "hazard",
+      "meaning": "Abîme gravitationnel impénétrable d'où même la lumière ne peut jamais fuir",
+      "asset": "black_hole"
+    },
+    {
+      "text": "trou-de-ver",
+      "type": "cosmos",
+      "meaning": "Pont spatio-temporel reliant instantanément deux points distants du cosmos",
+      "asset": "wormhole"
+    },
+    {
+      "text": "astronaute",
+      "type": "tech",
+      "meaning": "Pionnier des étoiles équipé d'une combinaison pressurisée en apesanteur",
+      "asset": "astronaut"
+    },
+    {
+      "text": "cosmonaute",
+      "type": "tech",
+      "meaning": "Pilote spatial chevronné manœuvrant les modules de vol en orbite",
+      "asset": "cosmonaut"
+    },
+    {
+      "text": "naine-blanche",
+      "type": "cosmos",
+      "meaning": "Cadavre stellaire compact et incandescent vestige d'une étoile éteinte",
+      "asset": "white_dwarf"
+    },
+    {
+      "text": "geante-rouge",
+      "type": "cosmos",
+      "meaning": "Étoile colossale en fin de vie enflée au point d'engloutir les planètes proches",
+      "asset": "red_giant"
+    },
+    {
+      "text": "sonde-solaire",
+      "type": "tech",
+      "meaning": "Vaisseau blindé plongeant audacieusement au cœur de la fournaise de la couronne",
+      "asset": "solar_probe"
+    },
+    {
+      "text": "module-lunaire",
+      "type": "tech",
+      "meaning": "Vaisseau d'alunissage à pattes rétractables conçu pour toucher le régolithe",
+      "asset": "lunar_module"
+    },
+    {
+      "text": "asteroide-geant",
+      "type": "hazard",
+      "meaning": "Monolithe spatial démesuré capable de provoquer une extinction planétaire",
+      "asset": "giant_asteroid"
+    },
+    {
+      "text": "base-orbitale",
+      "type": "tech",
+      "meaning": "Bastion stellaire géostationnaire ravitaillant les flottes interplanétaires",
+      "asset": "orbital_station"
+    },
+    {
+      "text": "asteroide-troyen",
+      "type": "hazard",
+      "meaning": "Astéroïde prisonnier des points de Lagrange équilibrés par la gravité",
+      "asset": "trojan_asteroid"
+    },
+    {
+      "text": "telescope-orbital",
+      "type": "tech",
+      "meaning": "Observatoire orbital s'affranchissant des turbulences de l'atmosphère",
+      "asset": "orbital_telescope"
+    },
+    {
+      "text": "capsule-spatiale",
+      "type": "tech",
+      "meaning": "Habitacle de transport et sauvetage spatial conçu pour les longs voyages",
+      "asset": "space_capsule"
+    },
+    {
+      "text": "vehicule-rover",
+      "type": "tech",
+      "meaning": "Plateforme mobile scientifique forant le sol pour déceler des minéraux",
+      "asset": "rover_vehicle"
+    },
+    {
+      "text": "cargo-spatial",
+      "type": "tech",
+      "meaning": "Mastodonte cargo de l'espace acheminant des minerais précieux de colonie en colonie",
+      "asset": "freighter"
     }
   ],
   "bossWords": {
@@ -930,924 +1005,1104 @@
       {
         "text": "soleil",
         "type": "cosmos",
-        "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité"
+        "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité",
+        "asset": "sun"
       },
       {
-        "text": "lune",
+        "text": "roche",
+        "type": "hazard",
+        "meaning": "Fragment rocheux spatial errant voyageant à travers le cosmos vers la Terre",
+        "asset": "rock"
+      },
+      {
+        "text": "mercure",
         "type": "cosmos",
-        "meaning": "Satellite naturel en orbite autour de la Terre régissant les marées océaniques"
+        "meaning": "La plus petite planète du système solaire et la plus proche du Soleil",
+        "asset": "mercury"
       },
       {
-        "text": "lunes",
+        "text": "venus",
         "type": "cosmos",
-        "meaning": "Satellites naturels rocheux ou glacés en orbite autour des planètes"
+        "meaning": "Deuxième planète du système solaire à l'effet de serre extrême et étouffant",
+        "asset": "venus"
       },
       {
-        "text": "ciel",
+        "text": "vesta",
+        "type": "hazard",
+        "meaning": "Le deuxième plus gros astéroïde de la ceinture arborant un cratère d'impact titanesque",
+        "asset": "vesta"
+      },
+      {
+        "text": "mars",
         "type": "cosmos",
-        "meaning": "Voûte céleste visible depuis la surface où scintillent étoiles et constellations"
+        "meaning": "La planète rouge couverte d'oxyde de fer et abritant le mont Olympe",
+        "asset": "mars"
       },
       {
-        "text": "rayon",
-        "type": "phenomene",
-        "meaning": "Faisceau concentré d'énergie électromagnétique ou lumière stellaire"
-      },
-      {
-        "text": "halo",
+        "text": "jupiter",
         "type": "cosmos",
-        "meaning": "Anneau lumineux diffus de gaz et d'étoiles autour des corps célestes"
+        "meaning": "Le géant gazeux colossal réputé pour sa Grande Tache Rouge tourbillonnante",
+        "asset": "jupiter"
       },
       {
-        "text": "axe",
+        "text": "saturne",
         "type": "cosmos",
-        "meaning": "Ligne imaginaire autour de laquelle une planète ou un astre effectue sa rotation"
+        "meaning": "Le magnifique géant gazeux ceint de spectaculaires anneaux de glace scintillants",
+        "asset": "saturn"
       },
       {
-        "text": "phase",
-        "type": "phenomene",
-        "meaning": "Aspect apparent de la partie éclairée d'une lune ou planète vue depuis la Terre"
-      },
-      {
-        "text": "onde",
-        "type": "phenomene",
-        "meaning": "Propagation ondulatoire d'énergie telle que les ondes gravitationnelles"
-      },
-      {
-        "text": "vaisseau",
-        "type": "tech",
-        "meaning": "Véhicule d'exploration aérospatiale conçu pour les voyages interplanétaires"
-      },
-      {
-        "text": "nova",
-        "type": "phenomene",
-        "meaning": "Explosion thermonucléaire stellaire augmentant soudainement d'éclat"
-      },
-      {
-        "text": "cible",
-        "type": "tech",
-        "meaning": "Destination orbitale ou astre sélectionné pour les sondes d'exploration"
-      },
-      {
-        "text": "donnee",
-        "type": "tech",
-        "meaning": "Informations télémétriques recueillies par les télescopes spatiaux"
-      },
-      {
-        "text": "abime",
+        "text": "uranus",
         "type": "cosmos",
-        "meaning": "L'obscurité profonde et impénétrable des vides intergalactiques"
+        "meaning": "Géante de glace aux teintes cyan tournant sur son flanc dans un froid extrême",
+        "asset": "uranus"
       },
       {
-        "text": "annee",
+        "text": "neptune",
         "type": "cosmos",
-        "meaning": "Durée nécessaire à une planète pour accomplir une révolution orbitale"
+        "meaning": "La planète la plus lointaine balayée par des vents supersoniques furieux",
+        "asset": "neptune"
+      },
+      {
+        "text": "asteroide",
+        "type": "hazard",
+        "meaning": "Corps rocheux et métallique vestige de la formation des planètes",
+        "asset": "asteroid"
+      },
+      {
+        "text": "comete",
+        "type": "hazard",
+        "meaning": "Corps glacé développant une splendide chevelure lumineuse à l'approche du Soleil",
+        "asset": "comet"
+      },
+      {
+        "text": "meteore",
+        "type": "hazard",
+        "meaning": "Traînée lumineuse fulgurante produite par l'incinération d'un débris céleste",
+        "asset": "meteor"
+      },
+      {
+        "text": "meteorite",
+        "type": "hazard",
+        "meaning": "Roc spatial rescapé de la rentrée atmosphérique percutant la surface",
+        "asset": "meteorite"
+      },
+      {
+        "text": "bolide",
+        "type": "hazard",
+        "meaning": "Météore exceptionnellement brillant explosant dans une boule de feu cataclysmique",
+        "asset": "bolide"
       }
     ],
     "alien_hive": [
       {
-        "text": "soleil",
+        "text": "roche",
+        "type": "hazard",
+        "meaning": "Fragment rocheux spatial errant voyageant à travers le cosmos vers la Terre",
+        "asset": "rock"
+      },
+      {
+        "text": "phobos",
         "type": "cosmos",
-        "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité"
+        "meaning": "Lune intérieure irrégulière de Mars orbitant très près de la planète rouge",
+        "asset": "phobos"
       },
       {
-        "text": "lune",
+        "text": "deimos",
         "type": "cosmos",
-        "meaning": "Satellite naturel en orbite autour de la Terre régissant les marées océaniques"
+        "meaning": "La plus petite lune extérieure de Mars ressemblant à un astéroïde sombre",
+        "asset": "deimos"
       },
       {
-        "text": "lunes",
-        "type": "cosmos",
-        "meaning": "Satellites naturels rocheux ou glacés en orbite autour des planètes"
+        "text": "asteroide",
+        "type": "hazard",
+        "meaning": "Corps rocheux et métallique vestige de la formation des planètes",
+        "asset": "asteroid"
       },
       {
-        "text": "ciel",
-        "type": "cosmos",
-        "meaning": "Voûte céleste visible depuis la surface où scintillent étoiles et constellations"
+        "text": "comete",
+        "type": "hazard",
+        "meaning": "Corps glacé développant une splendide chevelure lumineuse à l'approche du Soleil",
+        "asset": "comet"
       },
       {
-        "text": "rayon",
-        "type": "phenomene",
-        "meaning": "Faisceau concentré d'énergie électromagnétique ou lumière stellaire"
+        "text": "meteore",
+        "type": "hazard",
+        "meaning": "Traînée lumineuse fulgurante produite par l'incinération d'un débris céleste",
+        "asset": "meteor"
       },
       {
-        "text": "halo",
-        "type": "cosmos",
-        "meaning": "Anneau lumineux diffus de gaz et d'étoiles autour des corps célestes"
+        "text": "meteorite",
+        "type": "hazard",
+        "meaning": "Roc spatial rescapé de la rentrée atmosphérique percutant la surface",
+        "asset": "meteorite"
       },
       {
-        "text": "axe",
-        "type": "cosmos",
-        "meaning": "Ligne imaginaire autour de laquelle une planète ou un astre effectue sa rotation"
+        "text": "bolide",
+        "type": "hazard",
+        "meaning": "Météore exceptionnellement brillant explosant dans une boule de feu cataclysmique",
+        "asset": "bolide"
       },
       {
-        "text": "phase",
-        "type": "phenomene",
-        "meaning": "Aspect apparent de la partie éclairée d'une lune ou planète vue depuis la Terre"
+        "text": "fragment",
+        "type": "hazard",
+        "meaning": "Éclat tranchant né d'une collision orbitale menaçant la Terre",
+        "asset": "fragment"
       },
       {
-        "text": "onde",
-        "type": "phenomene",
-        "meaning": "Propagation ondulatoire d'énergie telle que les ondes gravitationnelles"
+        "text": "aerolithe",
+        "type": "hazard",
+        "meaning": "Météorite pierreuse composée principalement de minéraux silicatés",
+        "asset": "aerolite"
       },
       {
-        "text": "vaisseau",
+        "text": "meteoroide",
+        "type": "hazard",
+        "meaning": "Petit corps rocheux sillonnant l'espace avant son entrée atmosphérique",
+        "asset": "meteoroid"
+      },
+      {
+        "text": "rocher",
+        "type": "hazard",
+        "meaning": "Bloc de roche massif éjecté de la surface d'un astéroïde menaçant",
+        "asset": "boulder"
+      },
+      {
+        "text": "asteroide-geant",
+        "type": "hazard",
+        "meaning": "Monolithe spatial démesuré capable de provoquer une extinction planétaire",
+        "asset": "giant_asteroid"
+      },
+      {
+        "text": "asteroide-troyen",
+        "type": "hazard",
+        "meaning": "Astéroïde prisonnier des points de Lagrange équilibrés par la gravité",
+        "asset": "trojan_asteroid"
+      },
+      {
+        "text": "drone",
         "type": "tech",
-        "meaning": "Véhicule d'exploration aérospatiale conçu pour les voyages interplanétaires"
-      },
-      {
-        "text": "nova",
-        "type": "phenomene",
-        "meaning": "Explosion thermonucléaire stellaire augmentant soudainement d'éclat"
-      },
-      {
-        "text": "cible",
-        "type": "tech",
-        "meaning": "Destination orbitale ou astre sélectionné pour les sondes d'exploration"
-      },
-      {
-        "text": "donnee",
-        "type": "tech",
-        "meaning": "Informations télémétriques recueillies par les télescopes spatiaux"
-      },
-      {
-        "text": "abime",
-        "type": "cosmos",
-        "meaning": "L'obscurité profonde et impénétrable des vides intergalactiques"
-      },
-      {
-        "text": "annee",
-        "type": "cosmos",
-        "meaning": "Durée nécessaire à une planète pour accomplir une révolution orbitale"
+        "meaning": "Engin éclaireur autonome ultra-léger traquant les anomalies orbitales",
+        "asset": "drone"
       }
     ],
     "alien_psionic": [
       {
-        "text": "soleil",
+        "text": "nebuleuse",
         "type": "cosmos",
-        "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité"
+        "meaning": "Gigantesque nuage cosmique de gaz luminescent berceau de nouveaux mondes",
+        "asset": "nebula"
       },
       {
-        "text": "lune",
+        "text": "supernova",
+        "type": "fenomeno",
+        "meaning": "Déflagration cosmique titanesque d'une étoile agonisante illuminant l'espace",
+        "asset": "supernova"
+      },
+      {
+        "text": "pulsar",
         "type": "cosmos",
-        "meaning": "Satellite naturel en orbite autour de la Terre régissant les marées océaniques"
+        "meaning": "Étoile à neutrons hyperdense balayant l'espace de faisceaux réguliers",
+        "asset": "pulsar"
       },
       {
-        "text": "lunes",
+        "text": "quasar",
         "type": "cosmos",
-        "meaning": "Satellites naturels rocheux ou glacés en orbite autour des planètes"
+        "meaning": "Noyau galactique primordial éblouissant alimenté par un trou noir vorace",
+        "asset": "quasar"
       },
       {
-        "text": "ciel",
+        "text": "magnetar",
         "type": "cosmos",
-        "meaning": "Voûte céleste visible depuis la surface où scintillent étoiles et constellations"
+        "meaning": "Étoile à neutrons dotée du champ magnétique le plus dévastateur du cosmos",
+        "asset": "magnetar"
       },
       {
-        "text": "rayon",
-        "type": "phenomene",
-        "meaning": "Faisceau concentré d'énergie électromagnétique ou lumière stellaire"
-      },
-      {
-        "text": "halo",
+        "text": "exoplanete",
         "type": "cosmos",
-        "meaning": "Anneau lumineux diffus de gaz et d'étoiles autour des corps célestes"
+        "meaning": "Monde lointain tournoyant en orbite autour d'une étoile étrangère",
+        "asset": "exoplanet"
       },
       {
-        "text": "axe",
+        "text": "andromede",
         "type": "cosmos",
-        "meaning": "Ligne imaginaire autour de laquelle une planète ou un astre effectue sa rotation"
+        "meaning": "La galaxie spirale géante voisine marchant vers une future fusion cosmique",
+        "asset": "andromeda"
       },
       {
-        "text": "phase",
-        "type": "phenomene",
-        "meaning": "Aspect apparent de la partie éclairée d'une lune ou planète vue depuis la Terre"
-      },
-      {
-        "text": "onde",
-        "type": "phenomene",
-        "meaning": "Propagation ondulatoire d'énergie telle que les ondes gravitationnelles"
-      },
-      {
-        "text": "vaisseau",
-        "type": "tech",
-        "meaning": "Véhicule d'exploration aérospatiale conçu pour les voyages interplanétaires"
-      },
-      {
-        "text": "nova",
-        "type": "phenomene",
-        "meaning": "Explosion thermonucléaire stellaire augmentant soudainement d'éclat"
-      },
-      {
-        "text": "cible",
-        "type": "tech",
-        "meaning": "Destination orbitale ou astre sélectionné pour les sondes d'exploration"
-      },
-      {
-        "text": "donnee",
-        "type": "tech",
-        "meaning": "Informations télémétriques recueillies par les télescopes spatiaux"
-      },
-      {
-        "text": "abime",
+        "text": "voie-lactee",
         "type": "cosmos",
-        "meaning": "L'obscurité profonde et impénétrable des vides intergalactiques"
+        "meaning": "Notre galaxie spirale nourricière étirant ses bras d'étoiles scintillantes",
+        "asset": "milky_way"
       },
       {
-        "text": "annee",
+        "text": "rayonnement",
+        "type": "hazard",
+        "meaning": "Flux intense de particules énergétiques et rayons ionisants fendant l'espace",
+        "asset": "radiation"
+      },
+      {
+        "text": "antimatiere",
+        "type": "hazard",
+        "meaning": "Matière inversée produisant une annihilation énergétique pure au contact de la matière",
+        "asset": "antimatter"
+      },
+      {
+        "text": "trou-noir",
+        "type": "hazard",
+        "meaning": "Abîme gravitationnel impénétrable d'où même la lumière ne peut jamais fuir",
+        "asset": "black_hole"
+      },
+      {
+        "text": "trou-de-ver",
         "type": "cosmos",
-        "meaning": "Durée nécessaire à une planète pour accomplir une révolution orbitale"
+        "meaning": "Pont spatio-temporel reliant instantanément deux points distants du cosmos",
+        "asset": "wormhole"
+      },
+      {
+        "text": "naine-blanche",
+        "type": "cosmos",
+        "meaning": "Cadavre stellaire compact et incandescent vestige d'une étoile éteinte",
+        "asset": "white_dwarf"
+      },
+      {
+        "text": "geante-rouge",
+        "type": "cosmos",
+        "meaning": "Étoile colossale en fin de vie enflée au point d'engloutir les planètes proches",
+        "asset": "red_giant"
+      },
+      {
+        "text": "etoile",
+        "type": "cosmos",
+        "meaning": "Fournaise cosmique de plasma incandescent entretenue par la fusion nucléaire",
+        "asset": "star"
       }
     ],
     "alien_warlord": [
       {
-        "text": "soleil",
-        "type": "cosmos",
-        "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité"
+        "text": "fusee",
+        "type": "tech",
+        "meaning": "Puissant propulseur crachant des flammes incandescentes pour quitter l'orbite",
+        "asset": "rocket"
       },
       {
-        "text": "lune",
-        "type": "cosmos",
-        "meaning": "Satellite naturel en orbite autour de la Terre régissant les marées océaniques"
+        "text": "capsule",
+        "type": "tech",
+        "meaning": "Habitacle pressurisé profilé doté d'un bouclier thermique de rentrée",
+        "asset": "capsule"
       },
       {
-        "text": "lunes",
-        "type": "cosmos",
-        "meaning": "Satellites naturels rocheux ou glacés en orbite autour des planètes"
+        "text": "module",
+        "type": "tech",
+        "meaning": "Compartiment structural pressurisé d'un complexe orbital modulaire",
+        "asset": "module"
       },
       {
-        "text": "ciel",
-        "type": "cosmos",
-        "meaning": "Voûte céleste visible depuis la surface où scintillent étoiles et constellations"
-      },
-      {
-        "text": "rayon",
-        "type": "phenomene",
-        "meaning": "Faisceau concentré d'énergie électromagnétique ou lumière stellaire"
-      },
-      {
-        "text": "halo",
-        "type": "cosmos",
-        "meaning": "Anneau lumineux diffus de gaz et d'étoiles autour des corps célestes"
-      },
-      {
-        "text": "axe",
-        "type": "cosmos",
-        "meaning": "Ligne imaginaire autour de laquelle une planète ou un astre effectue sa rotation"
-      },
-      {
-        "text": "phase",
-        "type": "phenomene",
-        "meaning": "Aspect apparent de la partie éclairée d'une lune ou planète vue depuis la Terre"
-      },
-      {
-        "text": "onde",
-        "type": "phenomene",
-        "meaning": "Propagation ondulatoire d'énergie telle que les ondes gravitationnelles"
+        "text": "rover",
+        "type": "tech",
+        "meaning": "Véhicule motorisé autonome conçu pour arpenter les sols d'autres mondes",
+        "asset": "rover"
       },
       {
         "text": "vaisseau",
         "type": "tech",
-        "meaning": "Véhicule d'exploration aérospatiale conçu pour les voyages interplanétaires"
+        "meaning": "Vaisseau d'exploration interstellaire propulsé par réacteurs à plasma",
+        "asset": "ship"
       },
       {
-        "text": "nova",
-        "type": "phenomene",
-        "meaning": "Explosion thermonucléaire stellaire augmentant soudainement d'éclat"
-      },
-      {
-        "text": "cible",
+        "text": "drone",
         "type": "tech",
-        "meaning": "Destination orbitale ou astre sélectionné pour les sondes d'exploration"
+        "meaning": "Engin éclaireur autonome ultra-léger traquant les anomalies orbitales",
+        "asset": "drone"
       },
       {
-        "text": "donnee",
+        "text": "astronef",
         "type": "tech",
-        "meaning": "Informations télémétriques recueillies par les télescopes spatiaux"
+        "meaning": "Croiseur interstellaire lourd doté de propulseurs à distorsion de pointe",
+        "asset": "starship"
       },
       {
-        "text": "abime",
-        "type": "cosmos",
-        "meaning": "L'obscurité profonde et impénétrable des vides intergalactiques"
+        "text": "navette",
+        "type": "tech",
+        "meaning": "Navette spatiale ailée réutilisable atterrissant en vol plané sur Terre",
+        "asset": "space_shuttle"
       },
       {
-        "text": "annee",
-        "type": "cosmos",
-        "meaning": "Durée nécessaire à une planète pour accomplir une révolution orbitale"
+        "text": "station-spatiale",
+        "type": "tech",
+        "meaning": "Immense habitat orbital permanent accueillant des astronautes chercheurs",
+        "asset": "space_station"
+      },
+      {
+        "text": "astronaute",
+        "type": "tech",
+        "meaning": "Pionnier des étoiles équipé d'une combinaison pressurisée en apesanteur",
+        "asset": "astronaut"
+      },
+      {
+        "text": "cosmonaute",
+        "type": "tech",
+        "meaning": "Pilote spatial chevronné manœuvrant les modules de vol en orbite",
+        "asset": "cosmonaut"
+      },
+      {
+        "text": "sonde-solaire",
+        "type": "tech",
+        "meaning": "Vaisseau blindé plongeant audacieusement au cœur de la fournaise de la couronne",
+        "asset": "solar_probe"
+      },
+      {
+        "text": "module-lunaire",
+        "type": "tech",
+        "meaning": "Vaisseau d'alunissage à pattes rétractables conçu pour toucher le régolithe",
+        "asset": "lunar_module"
+      },
+      {
+        "text": "capsule-spatiale",
+        "type": "tech",
+        "meaning": "Habitacle de transport et sauvetage spatial conçu pour les longs voyages",
+        "asset": "space_capsule"
+      },
+      {
+        "text": "cargo-spatial",
+        "type": "tech",
+        "meaning": "Mastodonte cargo de l'espace acheminant des minerais précieux de colonie en colonie",
+        "asset": "freighter"
       }
     ],
     "alien_darkmatter": [
       {
-        "text": "soleil",
+        "text": "pulsar",
         "type": "cosmos",
-        "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité"
+        "meaning": "Étoile à neutrons hyperdense balayant l'espace de faisceaux réguliers",
+        "asset": "pulsar"
       },
       {
-        "text": "lune",
+        "text": "quasar",
         "type": "cosmos",
-        "meaning": "Satellite naturel en orbite autour de la Terre régissant les marées océaniques"
+        "meaning": "Noyau galactique primordial éblouissant alimenté par un trou noir vorace",
+        "asset": "quasar"
       },
       {
-        "text": "lunes",
+        "text": "magnetar",
         "type": "cosmos",
-        "meaning": "Satellites naturels rocheux ou glacés en orbite autour des planètes"
+        "meaning": "Étoile à neutrons dotée du champ magnétique le plus dévastateur du cosmos",
+        "asset": "magnetar"
       },
       {
-        "text": "ciel",
+        "text": "rayonnement",
+        "type": "hazard",
+        "meaning": "Flux intense de particules énergétiques et rayons ionisants fendant l'espace",
+        "asset": "radiation"
+      },
+      {
+        "text": "antimatiere",
+        "type": "hazard",
+        "meaning": "Matière inversée produisant une annihilation énergétique pure au contact de la matière",
+        "asset": "antimatter"
+      },
+      {
+        "text": "trou-noir",
+        "type": "hazard",
+        "meaning": "Abîme gravitationnel impénétrable d'où même la lumière ne peut jamais fuir",
+        "asset": "black_hole"
+      },
+      {
+        "text": "trou-de-ver",
         "type": "cosmos",
-        "meaning": "Voûte céleste visible depuis la surface où scintillent étoiles et constellations"
+        "meaning": "Pont spatio-temporel reliant instantanément deux points distants du cosmos",
+        "asset": "wormhole"
       },
       {
-        "text": "rayon",
-        "type": "phenomene",
-        "meaning": "Faisceau concentré d'énergie électromagnétique ou lumière stellaire"
-      },
-      {
-        "text": "halo",
+        "text": "nebuleuse",
         "type": "cosmos",
-        "meaning": "Anneau lumineux diffus de gaz et d'étoiles autour des corps célestes"
+        "meaning": "Gigantesque nuage cosmique de gaz luminescent berceau de nouveaux mondes",
+        "asset": "nebula"
       },
       {
-        "text": "axe",
+        "text": "supernova",
+        "type": "fenomeno",
+        "meaning": "Déflagration cosmique titanesque d'une étoile agonisante illuminant l'espace",
+        "asset": "supernova"
+      },
+      {
+        "text": "asteroide",
+        "type": "hazard",
+        "meaning": "Corps rocheux et métallique vestige de la formation des planètes",
+        "asset": "asteroid"
+      },
+      {
+        "text": "bolide",
+        "type": "hazard",
+        "meaning": "Météore exceptionnellement brillant explosant dans une boule de feu cataclysmique",
+        "asset": "bolide"
+      },
+      {
+        "text": "fragment",
+        "type": "hazard",
+        "meaning": "Éclat tranchant né d'une collision orbitale menaçant la Terre",
+        "asset": "fragment"
+      },
+      {
+        "text": "naine-blanche",
         "type": "cosmos",
-        "meaning": "Ligne imaginaire autour de laquelle une planète ou un astre effectue sa rotation"
+        "meaning": "Cadavre stellaire compact et incandescent vestige d'une étoile éteinte",
+        "asset": "white_dwarf"
       },
       {
-        "text": "phase",
-        "type": "phenomene",
-        "meaning": "Aspect apparent de la partie éclairée d'une lune ou planète vue depuis la Terre"
-      },
-      {
-        "text": "onde",
-        "type": "phenomene",
-        "meaning": "Propagation ondulatoire d'énergie telle que les ondes gravitationnelles"
-      },
-      {
-        "text": "vaisseau",
-        "type": "tech",
-        "meaning": "Véhicule d'exploration aérospatiale conçu pour les voyages interplanétaires"
-      },
-      {
-        "text": "nova",
-        "type": "phenomene",
-        "meaning": "Explosion thermonucléaire stellaire augmentant soudainement d'éclat"
-      },
-      {
-        "text": "cible",
-        "type": "tech",
-        "meaning": "Destination orbitale ou astre sélectionné pour les sondes d'exploration"
-      },
-      {
-        "text": "donnee",
-        "type": "tech",
-        "meaning": "Informations télémétriques recueillies par les télescopes spatiaux"
-      },
-      {
-        "text": "abime",
+        "text": "geante-rouge",
         "type": "cosmos",
-        "meaning": "L'obscurité profonde et impénétrable des vides intergalactiques"
+        "meaning": "Étoile colossale en fin de vie enflée au point d'engloutir les planètes proches",
+        "asset": "red_giant"
       },
       {
-        "text": "annee",
-        "type": "cosmos",
-        "meaning": "Durée nécessaire à une planète pour accomplir une révolution orbitale"
+        "text": "asteroide-geant",
+        "type": "hazard",
+        "meaning": "Monolithe spatial démesuré capable de provoquer une extinction planétaire",
+        "asset": "giant_asteroid"
       }
     ],
     "alien_mothership": [
       {
-        "text": "soleil",
-        "type": "cosmos",
-        "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité"
-      },
-      {
-        "text": "lune",
-        "type": "cosmos",
-        "meaning": "Satellite naturel en orbite autour de la Terre régissant les marées océaniques"
-      },
-      {
-        "text": "lunes",
-        "type": "cosmos",
-        "meaning": "Satellites naturels rocheux ou glacés en orbite autour des planètes"
-      },
-      {
-        "text": "ciel",
-        "type": "cosmos",
-        "meaning": "Voûte céleste visible depuis la surface où scintillent étoiles et constellations"
-      },
-      {
-        "text": "rayon",
-        "type": "phenomene",
-        "meaning": "Faisceau concentré d'énergie électromagnétique ou lumière stellaire"
-      },
-      {
-        "text": "halo",
-        "type": "cosmos",
-        "meaning": "Anneau lumineux diffus de gaz et d'étoiles autour des corps célestes"
-      },
-      {
-        "text": "axe",
-        "type": "cosmos",
-        "meaning": "Ligne imaginaire autour de laquelle une planète ou un astre effectue sa rotation"
-      },
-      {
-        "text": "phase",
-        "type": "phenomene",
-        "meaning": "Aspect apparent de la partie éclairée d'une lune ou planète vue depuis la Terre"
-      },
-      {
-        "text": "onde",
-        "type": "phenomene",
-        "meaning": "Propagation ondulatoire d'énergie telle que les ondes gravitationnelles"
-      },
-      {
-        "text": "vaisseau",
+        "text": "astronef",
         "type": "tech",
-        "meaning": "Véhicule d'exploration aérospatiale conçu pour les voyages interplanétaires"
+        "meaning": "Croiseur interstellaire lourd doté de propulseurs à distorsion de pointe",
+        "asset": "starship"
       },
       {
-        "text": "nova",
-        "type": "phenomene",
-        "meaning": "Explosion thermonucléaire stellaire augmentant soudainement d'éclat"
-      },
-      {
-        "text": "cible",
+        "text": "navette",
         "type": "tech",
-        "meaning": "Destination orbitale ou astre sélectionné pour les sondes d'exploration"
+        "meaning": "Navette spatiale ailée réutilisable atterrissant en vol plané sur Terre",
+        "asset": "space_shuttle"
       },
       {
-        "text": "donnee",
+        "text": "station-spatiale",
         "type": "tech",
-        "meaning": "Informations télémétriques recueillies par les télescopes spatiaux"
+        "meaning": "Immense habitat orbital permanent accueillant des astronautes chercheurs",
+        "asset": "space_station"
       },
       {
-        "text": "abime",
-        "type": "cosmos",
-        "meaning": "L'obscurité profonde et impénétrable des vides intergalactiques"
+        "text": "base-orbitale",
+        "type": "tech",
+        "meaning": "Bastion stellaire géostationnaire ravitaillant les flottes interplanétaires",
+        "asset": "orbital_station"
       },
       {
-        "text": "annee",
-        "type": "cosmos",
-        "meaning": "Durée nécessaire à une planète pour accomplir une révolution orbitale"
+        "text": "telescope-orbital",
+        "type": "tech",
+        "meaning": "Observatoire orbital s'affranchissant des turbulences de l'atmosphère",
+        "asset": "orbital_telescope"
+      },
+      {
+        "text": "capsule-spatiale",
+        "type": "tech",
+        "meaning": "Habitacle de transport et sauvetage spatial conçu pour les longs voyages",
+        "asset": "space_capsule"
+      },
+      {
+        "text": "vehicule-rover",
+        "type": "tech",
+        "meaning": "Plateforme mobile scientifique forant le sol pour déceler des minéraux",
+        "asset": "rover_vehicle"
+      },
+      {
+        "text": "cargo-spatial",
+        "type": "tech",
+        "meaning": "Mastodonte cargo de l'espace acheminant des minerais précieux de colonie en colonie",
+        "asset": "freighter"
+      },
+      {
+        "text": "satellite",
+        "type": "tech",
+        "meaning": "Appareil orbital déployant antennes et capteurs autour de notre planète",
+        "asset": "satellite"
+      },
+      {
+        "text": "sonde",
+        "type": "tech",
+        "meaning": "Véhicule robotique inhabité envoyé sonder les confins du système solaire",
+        "asset": "probe"
+      },
+      {
+        "text": "telescope",
+        "type": "tech",
+        "meaning": "Instrument d'observation optique captant la lueur des astres lointains",
+        "asset": "telescope"
+      },
+      {
+        "text": "hubble",
+        "type": "tech",
+        "meaning": "Le célèbre télescope spatial qui a révolutionné notre regard sur l'univers",
+        "asset": "hubble"
+      },
+      {
+        "text": "webb",
+        "type": "tech",
+        "meaning": "L'observatoire infrarouge de pointe traquant les premières lueurs du cosmos",
+        "asset": "webb"
+      },
+      {
+        "text": "voyager",
+        "type": "tech",
+        "meaning": "La sonde légendaire devenue le premier artefact humain dans l'espace interstellaire",
+        "asset": "voyager"
+      },
+      {
+        "text": "spoutnik",
+        "type": "tech",
+        "meaning": "La sphère métallique pionnière qui ouvrit officiellement l'ère spatiale",
+        "asset": "sputnik"
       }
     ],
     "robot": [
       {
-        "text": "soleil",
-        "type": "cosmos",
-        "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité"
+        "text": "satellite",
+        "type": "tech",
+        "meaning": "Appareil orbital déployant antennes et capteurs autour de notre planète",
+        "asset": "satellite"
       },
       {
-        "text": "lune",
-        "type": "cosmos",
-        "meaning": "Satellite naturel en orbite autour de la Terre régissant les marées océaniques"
+        "text": "sonde",
+        "type": "tech",
+        "meaning": "Véhicule robotique inhabité envoyé sonder les confins du système solaire",
+        "asset": "probe"
       },
       {
-        "text": "lunes",
-        "type": "cosmos",
-        "meaning": "Satellites naturels rocheux ou glacés en orbite autour des planètes"
+        "text": "telescope",
+        "type": "tech",
+        "meaning": "Instrument d'observation optique captant la lueur des astres lointains",
+        "asset": "telescope"
       },
       {
-        "text": "ciel",
-        "type": "cosmos",
-        "meaning": "Voûte céleste visible depuis la surface où scintillent étoiles et constellations"
+        "text": "hubble",
+        "type": "tech",
+        "meaning": "Le célèbre télescope spatial qui a révolutionné notre regard sur l'univers",
+        "asset": "hubble"
       },
       {
-        "text": "rayon",
-        "type": "phenomene",
-        "meaning": "Faisceau concentré d'énergie électromagnétique ou lumière stellaire"
+        "text": "webb",
+        "type": "tech",
+        "meaning": "L'observatoire infrarouge de pointe traquant les premières lueurs du cosmos",
+        "asset": "webb"
       },
       {
-        "text": "halo",
-        "type": "cosmos",
-        "meaning": "Anneau lumineux diffus de gaz et d'étoiles autour des corps célestes"
+        "text": "voyager",
+        "type": "tech",
+        "meaning": "La sonde légendaire devenue le premier artefact humain dans l'espace interstellaire",
+        "asset": "voyager"
       },
       {
-        "text": "axe",
-        "type": "cosmos",
-        "meaning": "Ligne imaginaire autour de laquelle une planète ou un astre effectue sa rotation"
+        "text": "spoutnik",
+        "type": "tech",
+        "meaning": "La sphère métallique pionnière qui ouvrit officiellement l'ère spatiale",
+        "asset": "sputnik"
       },
       {
-        "text": "phase",
-        "type": "phenomene",
-        "meaning": "Aspect apparent de la partie éclairée d'une lune ou planète vue depuis la Terre"
+        "text": "fusee",
+        "type": "tech",
+        "meaning": "Puissant propulseur crachant des flammes incandescentes pour quitter l'orbite",
+        "asset": "rocket"
       },
       {
-        "text": "onde",
-        "type": "phenomene",
-        "meaning": "Propagation ondulatoire d'énergie telle que les ondes gravitationnelles"
+        "text": "capsule",
+        "type": "tech",
+        "meaning": "Habitacle pressurisé profilé doté d'un bouclier thermique de rentrée",
+        "asset": "capsule"
+      },
+      {
+        "text": "module",
+        "type": "tech",
+        "meaning": "Compartiment structural pressurisé d'un complexe orbital modulaire",
+        "asset": "module"
+      },
+      {
+        "text": "rover",
+        "type": "tech",
+        "meaning": "Véhicule motorisé autonome conçu pour arpenter les sols d'autres mondes",
+        "asset": "rover"
       },
       {
         "text": "vaisseau",
         "type": "tech",
-        "meaning": "Véhicule d'exploration aérospatiale conçu pour les voyages interplanétaires"
+        "meaning": "Vaisseau d'exploration interstellaire propulsé par réacteurs à plasma",
+        "asset": "ship"
       },
       {
-        "text": "nova",
-        "type": "phenomene",
-        "meaning": "Explosion thermonucléaire stellaire augmentant soudainement d'éclat"
-      },
-      {
-        "text": "cible",
+        "text": "drone",
         "type": "tech",
-        "meaning": "Destination orbitale ou astre sélectionné pour les sondes d'exploration"
+        "meaning": "Engin éclaireur autonome ultra-léger traquant les anomalies orbitales",
+        "asset": "drone"
       },
       {
-        "text": "donnee",
+        "text": "telescope-orbital",
         "type": "tech",
-        "meaning": "Informations télémétriques recueillies par les télescopes spatiaux"
+        "meaning": "Observatoire orbital s'affranchissant des turbulences de l'atmosphère",
+        "asset": "orbital_telescope"
       },
       {
-        "text": "abime",
-        "type": "cosmos",
-        "meaning": "L'obscurité profonde et impénétrable des vides intergalactiques"
-      },
-      {
-        "text": "annee",
-        "type": "cosmos",
-        "meaning": "Durée nécessaire à une planète pour accomplir une révolution orbitale"
+        "text": "vehicule-rover",
+        "type": "tech",
+        "meaning": "Plateforme mobile scientifique forant le sol pour déceler des minéraux",
+        "asset": "rover_vehicle"
       }
     ],
     "beast": [
       {
-        "text": "soleil",
+        "text": "roche",
+        "type": "hazard",
+        "meaning": "Fragment rocheux spatial errant voyageant à travers le cosmos vers la Terre",
+        "asset": "rock"
+      },
+      {
+        "text": "asteroide",
+        "type": "hazard",
+        "meaning": "Corps rocheux et métallique vestige de la formation des planètes",
+        "asset": "asteroid"
+      },
+      {
+        "text": "comete",
+        "type": "hazard",
+        "meaning": "Corps glacé développant une splendide chevelure lumineuse à l'approche du Soleil",
+        "asset": "comet"
+      },
+      {
+        "text": "meteore",
+        "type": "hazard",
+        "meaning": "Traînée lumineuse fulgurante produite par l'incinération d'un débris céleste",
+        "asset": "meteor"
+      },
+      {
+        "text": "meteorite",
+        "type": "hazard",
+        "meaning": "Roc spatial rescapé de la rentrée atmosphérique percutant la surface",
+        "asset": "meteorite"
+      },
+      {
+        "text": "bolide",
+        "type": "hazard",
+        "meaning": "Météore exceptionnellement brillant explosant dans une boule de feu cataclysmique",
+        "asset": "bolide"
+      },
+      {
+        "text": "fragment",
+        "type": "hazard",
+        "meaning": "Éclat tranchant né d'une collision orbitale menaçant la Terre",
+        "asset": "fragment"
+      },
+      {
+        "text": "aerolithe",
+        "type": "hazard",
+        "meaning": "Météorite pierreuse composée principalement de minéraux silicatés",
+        "asset": "aerolite"
+      },
+      {
+        "text": "meteoroide",
+        "type": "hazard",
+        "meaning": "Petit corps rocheux sillonnant l'espace avant son entrée atmosphérique",
+        "asset": "meteoroid"
+      },
+      {
+        "text": "rocher",
+        "type": "hazard",
+        "meaning": "Bloc de roche massif éjecté de la surface d'un astéroïde menaçant",
+        "asset": "boulder"
+      },
+      {
+        "text": "asteroide-geant",
+        "type": "hazard",
+        "meaning": "Monolithe spatial démesuré capable de provoquer une extinction planétaire",
+        "asset": "giant_asteroid"
+      },
+      {
+        "text": "asteroide-troyen",
+        "type": "hazard",
+        "meaning": "Astéroïde prisonnier des points de Lagrange équilibrés par la gravité",
+        "asset": "trojan_asteroid"
+      },
+      {
+        "text": "titan",
         "type": "cosmos",
-        "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité"
+        "meaning": "Plus grand satellite de Saturne abritant des lacs et mers de méthane liquide",
+        "asset": "titan"
       },
       {
-        "text": "lune",
+        "text": "phobos",
         "type": "cosmos",
-        "meaning": "Satellite naturel en orbite autour de la Terre régissant les marées océaniques"
+        "meaning": "Lune intérieure irrégulière de Mars orbitant très près de la planète rouge",
+        "asset": "phobos"
       },
       {
-        "text": "lunes",
+        "text": "deimos",
         "type": "cosmos",
-        "meaning": "Satellites naturels rocheux ou glacés en orbite autour des planètes"
-      },
-      {
-        "text": "ciel",
-        "type": "cosmos",
-        "meaning": "Voûte céleste visible depuis la surface où scintillent étoiles et constellations"
-      },
-      {
-        "text": "rayon",
-        "type": "phenomene",
-        "meaning": "Faisceau concentré d'énergie électromagnétique ou lumière stellaire"
-      },
-      {
-        "text": "halo",
-        "type": "cosmos",
-        "meaning": "Anneau lumineux diffus de gaz et d'étoiles autour des corps célestes"
-      },
-      {
-        "text": "axe",
-        "type": "cosmos",
-        "meaning": "Ligne imaginaire autour de laquelle une planète ou un astre effectue sa rotation"
-      },
-      {
-        "text": "phase",
-        "type": "phenomene",
-        "meaning": "Aspect apparent de la partie éclairée d'une lune ou planète vue depuis la Terre"
-      },
-      {
-        "text": "onde",
-        "type": "phenomene",
-        "meaning": "Propagation ondulatoire d'énergie telle que les ondes gravitationnelles"
-      },
-      {
-        "text": "vaisseau",
-        "type": "tech",
-        "meaning": "Véhicule d'exploration aérospatiale conçu pour les voyages interplanétaires"
-      },
-      {
-        "text": "nova",
-        "type": "phenomene",
-        "meaning": "Explosion thermonucléaire stellaire augmentant soudainement d'éclat"
-      },
-      {
-        "text": "cible",
-        "type": "tech",
-        "meaning": "Destination orbitale ou astre sélectionné pour les sondes d'exploration"
-      },
-      {
-        "text": "donnee",
-        "type": "tech",
-        "meaning": "Informations télémétriques recueillies par les télescopes spatiaux"
-      },
-      {
-        "text": "abime",
-        "type": "cosmos",
-        "meaning": "L'obscurité profonde et impénétrable des vides intergalactiques"
-      },
-      {
-        "text": "annee",
-        "type": "cosmos",
-        "meaning": "Durée nécessaire à une planète pour accomplir une révolution orbitale"
+        "meaning": "La plus petite lune extérieure de Mars ressemblant à un astéroïde sombre",
+        "asset": "deimos"
       }
     ],
     "mythology": [
       {
         "text": "soleil",
         "type": "cosmos",
-        "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité"
+        "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité",
+        "asset": "sun"
       },
       {
         "text": "lune",
         "type": "cosmos",
-        "meaning": "Satellite naturel en orbite autour de la Terre régissant les marées océaniques"
+        "meaning": "Satellite naturel en orbite autour de la Terre influençant les marées",
+        "asset": "moon"
       },
       {
-        "text": "lunes",
+        "text": "mercure",
         "type": "cosmos",
-        "meaning": "Satellites naturels rocheux ou glacés en orbite autour des planètes"
+        "meaning": "La plus petite planète du système solaire et la plus proche du Soleil",
+        "asset": "mercury"
       },
       {
-        "text": "ciel",
+        "text": "venus",
         "type": "cosmos",
-        "meaning": "Voûte céleste visible depuis la surface où scintillent étoiles et constellations"
+        "meaning": "Deuxième planète du système solaire à l'effet de serre extrême et étouffant",
+        "asset": "venus"
       },
       {
-        "text": "rayon",
-        "type": "phenomene",
-        "meaning": "Faisceau concentré d'énergie électromagnétique ou lumière stellaire"
+        "text": "vesta",
+        "type": "hazard",
+        "meaning": "Le deuxième plus gros astéroïde de la ceinture arborant un cratère d'impact titanesque",
+        "asset": "vesta"
       },
       {
-        "text": "halo",
+        "text": "mars",
         "type": "cosmos",
-        "meaning": "Anneau lumineux diffus de gaz et d'étoiles autour des corps célestes"
+        "meaning": "La planète rouge couverte d'oxyde de fer et abritant le mont Olympe",
+        "asset": "mars"
       },
       {
-        "text": "axe",
+        "text": "jupiter",
         "type": "cosmos",
-        "meaning": "Ligne imaginaire autour de laquelle une planète ou un astre effectue sa rotation"
+        "meaning": "Le géant gazeux colossal réputé pour sa Grande Tache Rouge tourbillonnante",
+        "asset": "jupiter"
       },
       {
-        "text": "phase",
-        "type": "phenomene",
-        "meaning": "Aspect apparent de la partie éclairée d'une lune ou planète vue depuis la Terre"
-      },
-      {
-        "text": "onde",
-        "type": "phenomene",
-        "meaning": "Propagation ondulatoire d'énergie telle que les ondes gravitationnelles"
-      },
-      {
-        "text": "vaisseau",
-        "type": "tech",
-        "meaning": "Véhicule d'exploration aérospatiale conçu pour les voyages interplanétaires"
-      },
-      {
-        "text": "nova",
-        "type": "phenomene",
-        "meaning": "Explosion thermonucléaire stellaire augmentant soudainement d'éclat"
-      },
-      {
-        "text": "cible",
-        "type": "tech",
-        "meaning": "Destination orbitale ou astre sélectionné pour les sondes d'exploration"
-      },
-      {
-        "text": "donnee",
-        "type": "tech",
-        "meaning": "Informations télémétriques recueillies par les télescopes spatiaux"
-      },
-      {
-        "text": "abime",
+        "text": "saturne",
         "type": "cosmos",
-        "meaning": "L'obscurité profonde et impénétrable des vides intergalactiques"
+        "meaning": "Le magnifique géant gazeux ceint de spectaculaires anneaux de glace scintillants",
+        "asset": "saturn"
       },
       {
-        "text": "annee",
+        "text": "uranus",
         "type": "cosmos",
-        "meaning": "Durée nécessaire à une planète pour accomplir une révolution orbitale"
+        "meaning": "Géante de glace aux teintes cyan tournant sur son flanc dans un froid extrême",
+        "asset": "uranus"
+      },
+      {
+        "text": "neptune",
+        "type": "cosmos",
+        "meaning": "La planète la plus lointaine balayée par des vents supersoniques furieux",
+        "asset": "neptune"
+      },
+      {
+        "text": "pluton",
+        "type": "cosmos",
+        "meaning": "Planète naine glacée de la ceinture de Kuiper arborant un cœur d'azote",
+        "asset": "pluto"
+      },
+      {
+        "text": "ceres",
+        "type": "cosmos",
+        "meaning": "Le plus grand objet de la ceinture d'astéroïdes entre Mars et Jupiter",
+        "asset": "ceres"
+      },
+      {
+        "text": "titan",
+        "type": "cosmos",
+        "meaning": "Plus grand satellite de Saturne abritant des lacs et mers de méthane liquide",
+        "asset": "titan"
+      },
+      {
+        "text": "europe",
+        "type": "cosmos",
+        "meaning": "Lune glacée de Jupiter dissimulant un océan sous sa banquise fracturée",
+        "asset": "europa"
+      },
+      {
+        "text": "io",
+        "type": "cosmos",
+        "meaning": "Le corps le plus volcanique du système solaire criblé de geysers de soufre",
+        "asset": "io"
       }
     ],
     "volcano": [
       {
-        "text": "soleil",
+        "text": "mars",
         "type": "cosmos",
-        "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité"
+        "meaning": "La planète rouge couverte d'oxyde de fer et abritant le mont Olympe",
+        "asset": "mars"
       },
       {
-        "text": "lune",
+        "text": "io",
         "type": "cosmos",
-        "meaning": "Satellite naturel en orbite autour de la Terre régissant les marées océaniques"
+        "meaning": "Le corps le plus volcanique du système solaire criblé de geysers de soufre",
+        "asset": "io"
       },
       {
-        "text": "lunes",
+        "text": "meteore",
+        "type": "hazard",
+        "meaning": "Traînée lumineuse fulgurante produite par l'incinération d'un débris céleste",
+        "asset": "meteor"
+      },
+      {
+        "text": "meteorite",
+        "type": "hazard",
+        "meaning": "Roc spatial rescapé de la rentrée atmosphérique percutant la surface",
+        "asset": "meteorite"
+      },
+      {
+        "text": "bolide",
+        "type": "hazard",
+        "meaning": "Météore exceptionnellement brillant explosant dans une boule de feu cataclysmique",
+        "asset": "bolide"
+      },
+      {
+        "text": "fragment",
+        "type": "hazard",
+        "meaning": "Éclat tranchant né d'une collision orbitale menaçant la Terre",
+        "asset": "fragment"
+      },
+      {
+        "text": "aerolithe",
+        "type": "hazard",
+        "meaning": "Météorite pierreuse composée principalement de minéraux silicatés",
+        "asset": "aerolite"
+      },
+      {
+        "text": "rayonnement",
+        "type": "hazard",
+        "meaning": "Flux intense de particules énergétiques et rayons ionisants fendant l'espace",
+        "asset": "radiation"
+      },
+      {
+        "text": "antimatiere",
+        "type": "hazard",
+        "meaning": "Matière inversée produisant une annihilation énergétique pure au contact de la matière",
+        "asset": "antimatter"
+      },
+      {
+        "text": "geante-rouge",
         "type": "cosmos",
-        "meaning": "Satellites naturels rocheux ou glacés en orbite autour des planètes"
+        "meaning": "Étoile colossale en fin de vie enflée au point d'engloutir les planètes proches",
+        "asset": "red_giant"
       },
       {
-        "text": "ciel",
-        "type": "cosmos",
-        "meaning": "Voûte céleste visible depuis la surface où scintillent étoiles et constellations"
+        "text": "roche",
+        "type": "hazard",
+        "meaning": "Fragment rocheux spatial errant voyageant à travers le cosmos vers la Terre",
+        "asset": "rock"
       },
       {
-        "text": "rayon",
-        "type": "phenomene",
-        "meaning": "Faisceau concentré d'énergie électromagnétique ou lumière stellaire"
+        "text": "asteroide",
+        "type": "hazard",
+        "meaning": "Corps rocheux et métallique vestige de la formation des planètes",
+        "asset": "asteroid"
       },
       {
-        "text": "halo",
-        "type": "cosmos",
-        "meaning": "Anneau lumineux diffus de gaz et d'étoiles autour des corps célestes"
+        "text": "meteoroide",
+        "type": "hazard",
+        "meaning": "Petit corps rocheux sillonnant l'espace avant son entrée atmosphérique",
+        "asset": "meteoroid"
       },
       {
-        "text": "axe",
-        "type": "cosmos",
-        "meaning": "Ligne imaginaire autour de laquelle une planète ou un astre effectue sa rotation"
+        "text": "rocher",
+        "type": "hazard",
+        "meaning": "Bloc de roche massif éjecté de la surface d'un astéroïde menaçant",
+        "asset": "boulder"
       },
       {
-        "text": "phase",
-        "type": "phenomene",
-        "meaning": "Aspect apparent de la partie éclairée d'une lune ou planète vue depuis la Terre"
-      },
-      {
-        "text": "onde",
-        "type": "phenomene",
-        "meaning": "Propagation ondulatoire d'énergie telle que les ondes gravitationnelles"
-      },
-      {
-        "text": "vaisseau",
-        "type": "tech",
-        "meaning": "Véhicule d'exploration aérospatiale conçu pour les voyages interplanétaires"
-      },
-      {
-        "text": "nova",
-        "type": "phenomene",
-        "meaning": "Explosion thermonucléaire stellaire augmentant soudainement d'éclat"
-      },
-      {
-        "text": "cible",
-        "type": "tech",
-        "meaning": "Destination orbitale ou astre sélectionné pour les sondes d'exploration"
-      },
-      {
-        "text": "donnee",
-        "type": "tech",
-        "meaning": "Informations télémétriques recueillies par les télescopes spatiaux"
-      },
-      {
-        "text": "abime",
-        "type": "cosmos",
-        "meaning": "L'obscurité profonde et impénétrable des vides intergalactiques"
-      },
-      {
-        "text": "annee",
-        "type": "cosmos",
-        "meaning": "Durée nécessaire à une planète pour accomplir une révolution orbitale"
+        "text": "asteroide-geant",
+        "type": "hazard",
+        "meaning": "Monolithe spatial démesuré capable de provoquer une extinction planétaire",
+        "asset": "giant_asteroid"
       }
     ],
     "ocean": [
       {
-        "text": "soleil",
+        "text": "vesta",
+        "type": "hazard",
+        "meaning": "Le deuxième plus gros astéroïde de la ceinture arborant un cratère d'impact titanesque",
+        "asset": "vesta"
+      },
+      {
+        "text": "titan",
         "type": "cosmos",
-        "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité"
+        "meaning": "Plus grand satellite de Saturne abritant des lacs et mers de méthane liquide",
+        "asset": "titan"
       },
       {
-        "text": "lune",
+        "text": "europe",
         "type": "cosmos",
-        "meaning": "Satellite naturel en orbite autour de la Terre régissant les marées océaniques"
+        "meaning": "Lune glacée de Jupiter dissimulant un océan sous sa banquise fracturée",
+        "asset": "europa"
       },
       {
-        "text": "lunes",
+        "text": "triton",
         "type": "cosmos",
-        "meaning": "Satellites naturels rocheux ou glacés en orbite autour des planètes"
+        "meaning": "Lune glacée rétrograde de Neptune crachant des geysers d'azote liquide",
+        "asset": "triton"
       },
       {
-        "text": "ciel",
+        "text": "encelade",
         "type": "cosmos",
-        "meaning": "Voûte céleste visible depuis la surface où scintillent étoiles et constellations"
+        "meaning": "Lune étincelante de Saturne projetant des geysers d'eau vers l'espace",
+        "asset": "enceladus"
       },
       {
-        "text": "rayon",
-        "type": "phenomene",
-        "meaning": "Faisceau concentré d'énergie électromagnétique ou lumière stellaire"
-      },
-      {
-        "text": "halo",
+        "text": "ganymede",
         "type": "cosmos",
-        "meaning": "Anneau lumineux diffus de gaz et d'étoiles autour des corps célestes"
+        "meaning": "La plus grande lune du système solaire surpassant la planète Mercure",
+        "asset": "ganymede"
       },
       {
-        "text": "axe",
+        "text": "neptune",
         "type": "cosmos",
-        "meaning": "Ligne imaginaire autour de laquelle une planète ou un astre effectue sa rotation"
+        "meaning": "La planète la plus lointaine balayée par des vents supersoniques furieux",
+        "asset": "neptune"
       },
       {
-        "text": "phase",
-        "type": "phenomene",
-        "meaning": "Aspect apparent de la partie éclairée d'une lune ou planète vue depuis la Terre"
+        "text": "comete",
+        "type": "hazard",
+        "meaning": "Corps glacé développant une splendide chevelure lumineuse à l'approche du Soleil",
+        "asset": "comet"
       },
       {
-        "text": "onde",
-        "type": "phenomene",
-        "meaning": "Propagation ondulatoire d'énergie telle que les ondes gravitationnelles"
+        "text": "fragment",
+        "type": "hazard",
+        "meaning": "Éclat tranchant né d'une collision orbitale menaçant la Terre",
+        "asset": "fragment"
+      },
+      {
+        "text": "satellite",
+        "type": "tech",
+        "meaning": "Appareil orbital déployant antennes et capteurs autour de notre planète",
+        "asset": "satellite"
+      },
+      {
+        "text": "sonde",
+        "type": "tech",
+        "meaning": "Véhicule robotique inhabité envoyé sonder les confins du système solaire",
+        "asset": "probe"
       },
       {
         "text": "vaisseau",
         "type": "tech",
-        "meaning": "Véhicule d'exploration aérospatiale conçu pour les voyages interplanétaires"
+        "meaning": "Vaisseau d'exploration interstellaire propulsé par réacteurs à plasma",
+        "asset": "ship"
       },
       {
-        "text": "nova",
-        "type": "phenomene",
-        "meaning": "Explosion thermonucléaire stellaire augmentant soudainement d'éclat"
-      },
-      {
-        "text": "cible",
+        "text": "station-spatiale",
         "type": "tech",
-        "meaning": "Destination orbitale ou astre sélectionné pour les sondes d'exploration"
+        "meaning": "Immense habitat orbital permanent accueillant des astronautes chercheurs",
+        "asset": "space_station"
       },
       {
-        "text": "donnee",
+        "text": "cargo-spatial",
         "type": "tech",
-        "meaning": "Informations télémétriques recueillies par les télescopes spatiaux"
+        "meaning": "Mastodonte cargo de l'espace acheminant des minerais précieux de colonie en colonie",
+        "asset": "freighter"
       },
       {
-        "text": "abime",
+        "text": "lune",
         "type": "cosmos",
-        "meaning": "L'obscurité profonde et impénétrable des vides intergalactiques"
-      },
-      {
-        "text": "annee",
-        "type": "cosmos",
-        "meaning": "Durée nécessaire à une planète pour accomplir une révolution orbitale"
+        "meaning": "Satellite naturel en orbite autour de la Terre influençant les marées",
+        "asset": "moon"
       }
     ],
     "cosmos": [
       {
+        "text": "etoile",
+        "type": "cosmos",
+        "meaning": "Fournaise cosmique de plasma incandescent entretenue par la fusion nucléaire",
+        "asset": "star"
+      },
+      {
+        "text": "galaxie",
+        "type": "cosmos",
+        "meaning": "Tourbillon gravitationnel réunissant des centaines de milliards d'étoiles",
+        "asset": "galaxy"
+      },
+      {
+        "text": "nebuleuse",
+        "type": "cosmos",
+        "meaning": "Gigantesque nuage cosmique de gaz luminescent berceau de nouveaux mondes",
+        "asset": "nebula"
+      },
+      {
+        "text": "supernova",
+        "type": "fenomeno",
+        "meaning": "Déflagration cosmique titanesque d'une étoile agonisante illuminant l'espace",
+        "asset": "supernova"
+      },
+      {
+        "text": "pulsar",
+        "type": "cosmos",
+        "meaning": "Étoile à neutrons hyperdense balayant l'espace de faisceaux réguliers",
+        "asset": "pulsar"
+      },
+      {
+        "text": "quasar",
+        "type": "cosmos",
+        "meaning": "Noyau galactique primordial éblouissant alimenté par un trou noir vorace",
+        "asset": "quasar"
+      },
+      {
+        "text": "magnetar",
+        "type": "cosmos",
+        "meaning": "Étoile à neutrons dotée du champ magnétique le plus dévastateur du cosmos",
+        "asset": "magnetar"
+      },
+      {
+        "text": "exoplanete",
+        "type": "cosmos",
+        "meaning": "Monde lointain tournoyant en orbite autour d'une étoile étrangère",
+        "asset": "exoplanet"
+      },
+      {
+        "text": "andromede",
+        "type": "cosmos",
+        "meaning": "La galaxie spirale géante voisine marchant vers une future fusion cosmique",
+        "asset": "andromeda"
+      },
+      {
+        "text": "voie-lactee",
+        "type": "cosmos",
+        "meaning": "Notre galaxie spirale nourricière étirant ses bras d'étoiles scintillantes",
+        "asset": "milky_way"
+      },
+      {
+        "text": "trou-noir",
+        "type": "hazard",
+        "meaning": "Abîme gravitationnel impénétrable d'où même la lumière ne peut jamais fuir",
+        "asset": "black_hole"
+      },
+      {
+        "text": "trou-de-ver",
+        "type": "cosmos",
+        "meaning": "Pont spatio-temporel reliant instantanément deux points distants du cosmos",
+        "asset": "wormhole"
+      },
+      {
+        "text": "naine-blanche",
+        "type": "cosmos",
+        "meaning": "Cadavre stellaire compact et incandescent vestige d'une étoile éteinte",
+        "asset": "white_dwarf"
+      },
+      {
+        "text": "geante-rouge",
+        "type": "cosmos",
+        "meaning": "Étoile colossale en fin de vie enflée au point d'engloutir les planètes proches",
+        "asset": "red_giant"
+      },
+      {
         "text": "soleil",
         "type": "cosmos",
-        "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité"
-      },
-      {
-        "text": "lune",
-        "type": "cosmos",
-        "meaning": "Satellite naturel en orbite autour de la Terre régissant les marées océaniques"
-      },
-      {
-        "text": "lunes",
-        "type": "cosmos",
-        "meaning": "Satellites naturels rocheux ou glacés en orbite autour des planètes"
-      },
-      {
-        "text": "ciel",
-        "type": "cosmos",
-        "meaning": "Voûte céleste visible depuis la surface où scintillent étoiles et constellations"
-      },
-      {
-        "text": "rayon",
-        "type": "phenomene",
-        "meaning": "Faisceau concentré d'énergie électromagnétique ou lumière stellaire"
-      },
-      {
-        "text": "halo",
-        "type": "cosmos",
-        "meaning": "Anneau lumineux diffus de gaz et d'étoiles autour des corps célestes"
-      },
-      {
-        "text": "axe",
-        "type": "cosmos",
-        "meaning": "Ligne imaginaire autour de laquelle une planète ou un astre effectue sa rotation"
-      },
-      {
-        "text": "phase",
-        "type": "phenomene",
-        "meaning": "Aspect apparent de la partie éclairée d'une lune ou planète vue depuis la Terre"
-      },
-      {
-        "text": "onde",
-        "type": "phenomene",
-        "meaning": "Propagation ondulatoire d'énergie telle que les ondes gravitationnelles"
-      },
-      {
-        "text": "vaisseau",
-        "type": "tech",
-        "meaning": "Véhicule d'exploration aérospatiale conçu pour les voyages interplanétaires"
-      },
-      {
-        "text": "nova",
-        "type": "phenomene",
-        "meaning": "Explosion thermonucléaire stellaire augmentant soudainement d'éclat"
-      },
-      {
-        "text": "cible",
-        "type": "tech",
-        "meaning": "Destination orbitale ou astre sélectionné pour les sondes d'exploration"
-      },
-      {
-        "text": "donnee",
-        "type": "tech",
-        "meaning": "Informations télémétriques recueillies par les télescopes spatiaux"
-      },
-      {
-        "text": "abime",
-        "type": "cosmos",
-        "meaning": "L'obscurité profonde et impénétrable des vides intergalactiques"
-      },
-      {
-        "text": "annee",
-        "type": "cosmos",
-        "meaning": "Durée nécessaire à une planète pour accomplir une révolution orbitale"
+        "meaning": "Étoile centrale de notre système solaire fournissant lumière, chaleur et gravité",
+        "asset": "sun"
       }
     ]
   },

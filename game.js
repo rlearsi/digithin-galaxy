@@ -716,7 +716,12 @@ function highlightBuffer() {
       }
       const matched = state.typedBuffer;
       const rest = item.text.slice(matched.length);
-      item.el.innerHTML = `<span class="m">${matched}</span>${rest}`;
+      const textSpan = item.el.querySelector('.falling-text');
+      if (textSpan) {
+        textSpan.innerHTML = `<span class="m">${matched}</span>${rest}`;
+      } else {
+        item.el.innerHTML = `<span class="m">${matched}</span>${rest}`;
+      }
       attachItemBadges(item);
     } else {
       item.el.classList.remove('typing-target');
@@ -731,7 +736,12 @@ function clearHighlight() {
   state.activeItems.forEach(item => {
     if (item.removing) return;
     item.el.classList.remove('typing-target');
-    item.el.textContent = item.text;
+    const textSpan = item.el.querySelector('.falling-text');
+    if (textSpan) {
+      textSpan.textContent = item.text;
+    } else {
+      item.el.textContent = item.text;
+    }
     attachItemBadges(item);
   });
   if (typeof updateEcoTargetingIndicator === 'function') {

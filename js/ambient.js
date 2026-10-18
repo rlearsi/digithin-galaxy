@@ -138,14 +138,14 @@
       lightGrad.addColorStop(1, '#FCE7F3');
       ctx.fillStyle = lightGrad;
     } else {
-      // Dark Mode (Default): Deep Obsidian Cosmic Black
+      // Dark Mode (Default): Deep Cosmic Purple & Nebula (Cobalt Core aesthetic)
       const darkGrad = ctx.createRadialGradient(
-        width * 0.5, height * 0.75, 100,
+        width * 0.5, height * 0.45, 60,
         width * 0.5, height * 0.5, Math.max(width, height)
       );
-      darkGrad.addColorStop(0, '#030712');   // Very faint horizon radiance
-      darkGrad.addColorStop(0.45, '#010206'); // Deep nocturnal void
-      darkGrad.addColorStop(1, '#000002');   // Absolute deep space black
+      darkGrad.addColorStop(0, '#261247');    // Luminous deep cosmic violet
+      darkGrad.addColorStop(0.5, '#190A32');  // Nocturnal dark purple
+      darkGrad.addColorStop(1, '#110524');    // Deepest space violet
       ctx.fillStyle = darkGrad;
     }
     ctx.fillRect(0, 0, width, height);

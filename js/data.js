@@ -381,6 +381,7 @@ const BOSS_DEFS = [
     id: 'alien_xylarion',
     type: 'alien_dreadnought',
     icon: '🛸',
+    image: 'assets/bosses/alien_xylarion.webp',
     color: '#06B6D4',
     lives: 3,
     maxLives: 3,
@@ -395,6 +396,7 @@ const BOSS_DEFS = [
     id: 'alien_zorkon',
     type: 'alien_hive',
     icon: '👾',
+    image: 'assets/bosses/alien_zorkon.webp',
     color: '#10B981',
     lives: 3,
     maxLives: 3,
@@ -409,6 +411,7 @@ const BOSS_DEFS = [
     id: 'alien_vespera',
     type: 'alien_psionic',
     icon: '🔮',
+    image: 'assets/bosses/alien_vespera.webp',
     color: '#A855F7',
     lives: 3,
     maxLives: 3,
@@ -423,6 +426,7 @@ const BOSS_DEFS = [
     id: 'alien_kragthor',
     type: 'alien_warlord',
     icon: '⚔️',
+    image: 'assets/bosses/alien_kragthor.webp',
     color: '#EF4444',
     lives: 3,
     maxLives: 3,
@@ -437,6 +441,7 @@ const BOSS_DEFS = [
     id: 'alien_nebulor',
     type: 'alien_darkmatter',
     icon: '🌌',
+    image: 'assets/bosses/alien_nebulor.webp',
     color: '#6366F1',
     lives: 3,
     maxLives: 3,
@@ -451,6 +456,7 @@ const BOSS_DEFS = [
     id: 'alien_xenor',
     type: 'alien_mothership',
     icon: '👑',
+    image: 'assets/bosses/alien_xenor.webp',
     color: '#F59E0B',
     lives: 3,
     maxLives: 3,
@@ -808,4 +814,65 @@ const ACHIEVEMENTS = [
 function wordPts(text) {
   return (text || '').length * 3;
 }
+
+// ================================================
+// CELESTIAL FALLING OBJECTS CATALOG & MAPPING
+// ================================================
+// CELESTIAL OBJECT RESOLUTION (Cobalt Core Retro Pixel Art)
+// Letters and syllables -> tiny rock fragments (assets/rocks/rock1..rock5.webp)
+// Words -> 75 concrete celestial objects (assets/objects/<key>.webp)
+// ================================================
+const CELESTIAL_WORD_ASSETS = [
+  'sun', 'moon', 'rock', 'mercury', 'venus', 'vesta', 'mars', 'jupiter', 'saturn', 'uranus',
+  'neptune', 'pluto', 'ceres', 'titan', 'phobos', 'deimos', 'europa', 'io', 'triton', 'callisto',
+  'charon', 'enceladus', 'ganymede', 'asteroid', 'comet', 'meteor', 'meteorite', 'bolide', 'fragment', 'aerolite',
+  'meteoroid', 'boulder', 'satellite', 'probe', 'telescope', 'hubble', 'webb', 'voyager', 'sputnik', 'rocket',
+  'capsule', 'module', 'rover', 'ship', 'drone', 'starship', 'space_shuttle', 'space_station', 'star', 'galaxy',
+  'nebula', 'supernova', 'pulsar', 'quasar', 'magnetar', 'exoplanet', 'andromeda', 'milky_way', 'radiation', 'antimatter',
+  'black_hole', 'wormhole', 'astronaut', 'cosmonaut', 'white_dwarf', 'red_giant', 'solar_probe', 'lunar_module', 'giant_asteroid', 'orbital_station',
+  'trojan_asteroid', 'orbital_telescope', 'space_capsule', 'rover_vehicle', 'freighter'
+];
+
+function getCelestialObjectForItem(text, type) {
+  if (!text) return 'rocks/rock1';
+  const clean = String(text).trim().toLowerCase();
+
+  // 1. Letters and syllables -> Micro rock fragments
+  if (type === 'letter' || type === 'syllable') {
+    let hash = 0;
+    for (let i = 0; i < clean.length; i++) {
+      hash = (hash * 31 + clean.charCodeAt(i)) & 0xffffffff;
+    }
+    const rockNum = (Math.abs(hash) % 5) + 1;
+    return `rocks/rock${rockNum}`;
+  }
+
+  // 2. Wildcard emergency bomb items (BOOM, BANG, NOVA, WARP, CHAOS) -> Detonation Plasma Bomb!
+  if (type === 'wildcard' || clean === 'bang' || clean === 'boom' || clean === 'nova' || clean === 'warp' || clean === 'chaos') {
+    return 'objects/wildcard_bomb';
+  }
+
+  // 3. Direct lookup in canonical word pools (returns word.asset)
+  if (typeof findWordConcept === 'function') {
+    const concept = findWordConcept(clean);
+    if (concept && typeof concept.index === 'number' && concept.index >= 0 && concept.index < CELESTIAL_WORD_ASSETS.length) {
+      return `objects/${CELESTIAL_WORD_ASSETS[concept.index]}`;
+    }
+  }
+
+  // 3. Check active WORD_POOL or window.GAME_DATA_WORDS
+  if (typeof WORD_POOL !== 'undefined' && Array.isArray(WORD_POOL)) {
+    const found = WORD_POOL.find(w => w && w.text && w.text.toLowerCase() === clean);
+    if (found && found.asset) return `objects/${found.asset}`;
+  }
+
+  // 4. Fallback hash across the 75 concrete objects
+  let hash = 0;
+  for (let i = 0; i < clean.length; i++) {
+    hash = (hash * 31 + clean.charCodeAt(i)) & 0xffffffff;
+  }
+  const idx = Math.abs(hash) % CELESTIAL_WORD_ASSETS.length;
+  return `objects/${CELESTIAL_WORD_ASSETS[idx]}`;
+}
+
 

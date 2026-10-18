@@ -545,1304 +545,1559 @@
   ],
   "words": [
     {
-      "text": "sun",
-      "type": "宇宙",
-      "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
+      "text": "太阳",
+      "type": "cosmos",
+      "meaning": "太阳系中心的恒星，提供光、热和强大的引力支持",
+      "asset": "sun"
     },
     {
-      "text": "moon",
-      "type": "宇宙",
-      "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
+      "text": "月球",
+      "type": "cosmos",
+      "meaning": "环绕地球运行并影响海洋潮汐涨落的天然卫星",
+      "asset": "moon"
     },
     {
-      "text": "moons",
-      "type": "宇宙",
-      "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
+      "text": "岩石",
+      "type": "hazard",
+      "meaning": "在宇宙深空中漫游并朝地球方向坠落的坚硬空间岩石",
+      "asset": "rock"
     },
     {
-      "text": "sky",
-      "type": "宇宙",
-      "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
+      "text": "水星",
+      "type": "cosmos",
+      "meaning": "距离太阳最近且体积最小的炙热岩石行星",
+      "asset": "mercury"
     },
     {
-      "text": "ray",
-      "type": "天体现象",
-      "meaning": "集中的电磁能量光束或放射性的宇宙星光"
+      "text": "金星",
+      "type": "cosmos",
+      "meaning": "拥有浓厚大气层和极度温室效应的明亮行星",
+      "asset": "venus"
     },
     {
-      "text": "halo",
-      "type": "宇宙",
-      "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
+      "text": "灶神星",
+      "type": "hazard",
+      "meaning": "小行星带中质量第二大且南极拥有巨大撞击坑的著名原行星",
+      "asset": "vesta"
     },
     {
-      "text": "axis",
-      "type": "宇宙",
-      "meaning": "行星或天体绕其自转的假想中心轴线"
+      "text": "火星",
+      "type": "cosmos",
+      "meaning": "表面覆盖氧化铁红沙并拥有太阳系最高火山的红色行星",
+      "asset": "mars"
     },
     {
-      "text": "phase",
-      "type": "天体现象",
-      "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
+      "text": "木星",
+      "type": "cosmos",
+      "meaning": "拥有著名大红斑风暴的太阳系最大气态巨行星",
+      "asset": "jupiter"
     },
     {
-      "text": "wave",
-      "type": "天体现象",
-      "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
+      "text": "土星",
+      "type": "cosmos",
+      "meaning": "拥有绚丽而宽广冰尘光环系统的壮美气态巨行星",
+      "asset": "saturn"
     },
     {
-      "text": "ship",
-      "type": "航天技术",
-      "meaning": "专为行星际航行设计的载人或自动航天飞船"
+      "text": "天王星",
+      "type": "cosmos",
+      "meaning": "自转轴极度倾斜并散发青蓝色光辉的冰巨星",
+      "asset": "uranus"
     },
     {
-      "text": "nova",
-      "type": "天体现象",
-      "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
+      "text": "海王星",
+      "type": "cosmos",
+      "meaning": "太阳系最外层且伴随超音速狂暴飓风的深蓝色冰巨星",
+      "asset": "neptune"
     },
     {
-      "text": "target",
-      "type": "航天技术",
-      "meaning": "为探测器设定的轨道探索目的地或天体航路点"
+      "text": "冥王星",
+      "type": "cosmos",
+      "meaning": "位于柯伊伯带且拥有著名心形氮冰平原的冰封矮行星",
+      "asset": "pluto"
     },
     {
-      "text": "data",
-      "type": "航天技术",
-      "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
+      "text": "谷神星",
+      "type": "cosmos",
+      "meaning": "位于火星与木星之间小行星带中体积最大的球形矮行星",
+      "asset": "ceres"
     },
     {
-      "text": "pitch",
-      "type": "宇宙",
-      "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
+      "text": "土卫六",
+      "type": "cosmos",
+      "meaning": "拥有浓厚大气层与液态甲烷海洋的土星最大卫星",
+      "asset": "titan"
     },
     {
-      "text": "year",
-      "type": "宇宙",
-      "meaning": "公转行星绕其中心恒星运行一周所需的时间"
+      "text": "火卫一",
+      "type": "cosmos",
+      "meaning": "外形不规则且以极近距离快速掠过火星表面的天然卫星",
+      "asset": "phobos"
     },
     {
-      "text": "vacuum",
-      "type": "宇宙",
-      "meaning": "无大气物质存在、寂静宇宙空间所占据的真空状态"
+      "text": "火卫二",
+      "type": "cosmos",
+      "meaning": "表面覆盖厚厚尘埃且在火星较远轨道缓缓运行的较小卫星",
+      "asset": "deimos"
     },
     {
-      "text": "astro",
-      "type": "宇宙",
-      "meaning": "栖居于浩瀚宇宙深空中的任何天然天体"
+      "text": "木卫二",
+      "type": "cosmos",
+      "meaning": "在纵横交错的冰原外壳下隐藏着温暖巨大海洋的木星卫星",
+      "asset": "europa"
     },
     {
-      "text": "cosmos",
-      "type": "宇宙",
-      "meaning": "秩序井然、和谐且浩瀚无垠的广袤物理宇宙"
+      "text": "木卫一",
+      "type": "cosmos",
+      "meaning": "表面分布数百座剧烈喷发硫磺火山的太阳系地质活动最活跃卫星",
+      "asset": "io"
     },
     {
-      "text": "mars",
-      "type": "宇宙",
-      "meaning": "距离太阳第四远的行星，闻名遐迩的“红色星球”火星"
+      "text": "海卫一",
+      "type": "cosmos",
+      "meaning": "沿逆行轨道环绕海王星并喷发液氮间歇泉的冰冷巨大卫星",
+      "asset": "triton"
     },
     {
-      "text": "venus",
-      "type": "宇宙",
-      "meaning": "距离太阳第二近的行星，夜空中最璀璨的天然天体金星"
+      "text": "木卫四",
+      "type": "cosmos",
+      "meaning": "布满古老撞击坑且完整保留太阳系原始地貌的木星死寂卫星",
+      "asset": "callisto"
     },
     {
-      "text": "earth",
-      "type": "宇宙",
-      "meaning": "人类居住的蔚蓝家园，目前唯一已知拥有液态水与生命的地球"
+      "text": "冥卫一",
+      "type": "cosmos",
+      "meaning": "与冥王星互相潮汐锁定并共同绕质心旋转的巨大伴星",
+      "asset": "charon"
     },
     {
-      "text": "solar",
-      "type": "宇宙",
-      "meaning": "与太阳、太阳风、日冕辐射及其引力领域相关的太阳特性"
+      "text": "土卫二",
+      "type": "cosmos",
+      "meaning": "表面反射强烈并从冰裂缝向太空喷射液态水汽羽流的土星冰卫星",
+      "asset": "enceladus"
     },
     {
-      "text": "probe",
-      "type": "航天技术",
-      "meaning": "前往未知大气与异星世界进行科学勘测的无人深空探测器"
+      "text": "木卫三",
+      "type": "cosmos",
+      "meaning": "体积超越水星且拥有独立磁场的全太阳系最大天然卫星",
+      "asset": "ganymede"
     },
     {
-      "text": "radar",
-      "type": "航天技术",
-      "meaning": "利用无线电波绘制行星地形与探测小行星的高精度雷达系统"
+      "text": "小行星",
+      "type": "hazard",
+      "meaning": "在太空中运行且由岩石和金属组成的太阳系早期残留天体",
+      "asset": "asteroid"
     },
     {
-      "text": "magma",
-      "type": "自然",
-      "meaning": "地质活跃行星地壳深部极度炽热的熔融岩浆物质"
+      "text": "彗星",
+      "type": "hazard",
+      "meaning": "接近太阳时冰雪升华并拖出长长辉光彗尾的冰冷天体",
+      "asset": "comet"
     },
     {
-      "text": "cloud",
-      "type": "宇宙",
-      "meaning": "孕育新生恒星的由氢气与尘埃构成的致密星际分子云"
+      "text": "流星",
+      "type": "hazard",
+      "meaning": "宇宙尘埃或碎片高速冲入大气层剧烈燃烧划过的绚丽光迹",
+      "asset": "meteor"
     },
     {
-      "text": "pluto",
-      "type": "宇宙",
-      "meaning": "位于太阳系边缘柯伊伯带深处的冰质矮行星冥王星"
+      "text": "陨石",
+      "type": "hazard",
+      "meaning": "穿越大气层灼热摩擦后幸存并最终撞击行星地表的宇宙岩体",
+      "asset": "meteorite"
     },
     {
-      "text": "orbit",
-      "type": "宇宙",
-      "meaning": "天体在引力作用下围绕大质量中心运转的弯曲空间轨道"
+      "text": "火流星",
+      "type": "hazard",
+      "meaning": "在大气层中发生轰鸣巨响剧烈爆炸的极其明亮特大火球",
+      "asset": "bolide"
     },
     {
-      "text": "comet",
-      "type": "宇宙",
-      "meaning": "靠近恒星受热喷发气体与尘埃并拖着耀眼光尾的冰质彗星"
+      "text": "碎片",
+      "type": "hazard",
+      "meaning": "天体高速碰撞撞击产生的在危险轨道上飞行的坚硬碎块",
+      "asset": "fragment"
     },
     {
-      "text": "pulsar",
-      "type": "宇宙",
-      "meaning": "高速自转并向宇宙空间周期性扫射脉冲辐射束的高磁化中子星"
+      "text": "石陨石",
+      "type": "hazard",
+      "meaning": "主要由硅酸盐矿物组成的岩石质地外天体陨落块",
+      "asset": "aerolite"
     },
     {
-      "text": "quasar",
-      "type": "宇宙",
-      "meaning": "由超大质量黑洞驱动、极其明亮且遥远的活动星系核类星体"
+      "text": "流星体",
+      "type": "hazard",
+      "meaning": "在进入行星大气层之前在空间轨道高速穿梭的微小岩体",
+      "asset": "meteoroid"
     },
     {
-      "text": "corona",
-      "type": "宇宙",
-      "meaning": "太阳大气最外层温度高达数百万度的等离子体包层日冕"
+      "text": "巨石",
+      "type": "hazard",
+      "meaning": "从巨大小行星表面剥落崩塌并向外飞溅的沉重天体岩块",
+      "asset": "boulder"
     },
     {
-      "text": "meteor",
-      "type": "宇宙",
-      "meaning": "太空碎片高速穿过大气层摩擦燃烧产生的流星光迹"
+      "text": "卫星",
+      "type": "tech",
+      "meaning": "在预定轨道上不知疲倦运行的人造通讯与科学观测航天器",
+      "asset": "satellite"
     },
     {
-      "text": "optics",
-      "type": "航天技术",
-      "meaning": "深空轨道望远镜用以汇聚与解析天体辐射光线的先进光学"
+      "text": "探测器",
+      "type": "tech",
+      "meaning": "飞往遥远行星与深空执行无人科学探测使命的自动化太空飞行器",
+      "asset": "probe"
     },
     {
-      "text": "space",
-      "type": "宇宙",
-      "meaning": "行星、恒星与星系漫游其中、无边无际的三维空间空间"
+      "text": "望远镜",
+      "type": "tech",
+      "meaning": "捕获宇宙深处星系与微弱星光的尖端光学天文观测设备",
+      "asset": "telescope"
     },
     {
-      "text": "aurora",
-      "type": "天体现象",
-      "meaning": "太阳风带电粒子轰击行星磁层与高层大气激发的极光景象"
+      "text": "哈勃",
+      "type": "tech",
+      "meaning": "彻底颠覆人类对宇宙深空认知并运行数十年的传奇太空望远镜",
+      "asset": "hubble"
     },
     {
-      "text": "zenith",
-      "type": "宇宙",
-      "meaning": "观测者正上方天空中的假想几何最高点“天顶”"
+      "text": "韦伯",
+      "type": "tech",
+      "meaning": "配备巨大黄金镜面捕捉宇宙初生微光与系外大气的先进红外太空望远镜",
+      "asset": "webb"
     },
     {
-      "text": "hubble",
-      "type": "航天技术",
-      "meaning": "彻底革新人类对宇宙认知的传奇轨道太空望远镜哈勃"
+      "text": "旅行者",
+      "type": "tech",
+      "meaning": "携带镀金唱片并已飞出太阳系疆界进入星际空间的宏大探测先驱",
+      "asset": "voyager"
     },
     {
-      "text": "dust",
-      "type": "宇宙",
-      "meaning": "弥漫散布于星系旋臂各处的微观矿物颗粒与星际尘埃"
+      "text": "伴侣号",
+      "type": "tech",
+      "meaning": "成功进入地球轨道并开启人类太空探索全新纪元的开创性人造卫星",
+      "asset": "sputnik"
     },
     {
-      "text": "hole",
-      "type": "宇宙",
-      "meaning": "时空凹陷坍缩为奇点的极端超强引力场区域"
+      "text": "火箭",
+      "type": "tech",
+      "meaning": "依靠狂暴尾喷推力克服行星重力并冲向苍穹的多级太空推进运载载具",
+      "asset": "rocket"
     },
     {
-      "text": "star",
-      "type": "宇宙",
-      "meaning": "核心由剧烈热核聚变提供能量、自身发光发热的发光恒星"
+      "text": "太空舱",
+      "type": "tech",
+      "meaning": "配备坚固防热盾以抵御剧烈大气再入超高温摩擦的密闭式航天乘员舱",
+      "asset": "capsule"
     },
     {
-      "text": "planet",
-      "type": "宇宙",
-      "meaning": "环绕恒星运行、依靠自身引力维持球形并清空轨道的行星"
+      "text": "舱段",
+      "type": "tech",
+      "meaning": "通过标准化气密对接口拼接扩展空间站功能的加压结构单元",
+      "asset": "module"
     },
     {
-      "text": "galaxy",
-      "type": "宇宙",
-      "meaning": "由数千亿颗恒星、暗物质和星云通过引力束缚汇聚的庞大星系"
+      "text": "漫游车",
+      "type": "tech",
+      "meaning": "配备多地形驱动轮与科学探测机械臂的自动化地外行星巡视车",
+      "asset": "rover"
     },
     {
-      "text": "galaxies",
-      "type": "宇宙",
-      "meaning": "遍布于浩瀚宇宙网各处、数以千亿计的宇宙岛星系群"
+      "text": "飞船",
+      "type": "tech",
+      "meaning": "配备姿态控制喷口与强大主推进引擎穿梭于太空间隙的航天载具",
+      "asset": "ship"
     },
     {
-      "text": "universe",
-      "type": "宇宙",
-      "meaning": "包含所有物理物质、能量、时间、空间及物理定律的宇宙万物"
+      "text": "无人机",
+      "type": "tech",
+      "meaning": "搭载智能光学传感器并在空间轨道自主进行危险侦察的小型无人机",
+      "asset": "drone"
     },
     {
-      "text": "nebula",
-      "type": "宇宙",
-      "meaning": "由发光电离气体、恒星遗迹与星际尘埃构成的浩瀚星云"
+      "text": "星舰",
+      "type": "tech",
+      "meaning": "装载尖端曲速引擎可跨越恒星系深邃鸿沟的巨型主力星际巡洋战舰",
+      "asset": "starship"
     },
     {
-      "text": "gravity",
-      "type": "天体现象",
-      "meaning": "根据质量与能量弯曲时空的宇宙基本引力相互作用"
+      "text": "航天飞机",
+      "type": "tech",
+      "meaning": "完成轨道任务后凭借宽大机翼在大气中滑翔降落跑道的可重复使用航天器",
+      "asset": "space_shuttle"
     },
     {
-      "text": "supernova",
-      "type": "天体现象",
-      "meaning": "垂死大质量恒星发生的极度剧烈、亮度甚至超越整个星系的超新星爆发"
+      "text": "空间站",
+      "type": "tech",
+      "meaning": "常年驻留微重力轨道并为航天员提供科研与生活保障的巨型轨道复合基地",
+      "asset": "space_station"
     },
     {
-      "text": "astronaut",
-      "type": "航天技术",
-      "meaning": "经受严苛专业训练、执行轨道与行星际太空任务的宇航员"
+      "text": "恒星",
+      "type": "cosmos",
+      "meaning": "由核心剧烈热核聚变反应持续供能并向宇宙辐射刺目光热的等离子体天体",
+      "asset": "star"
     },
     {
-      "text": "astronomy",
-      "type": "空间科学",
-      "meaning": "系统研究天体、物理宇宙与深空演化规律的基础学科天文学"
+      "text": "星系",
+      "type": "cosmos",
+      "meaning": "由千百亿颗恒星、气体云与暗物质受万有引力紧密维系的浩瀚宇宙岛",
+      "asset": "galaxy"
     },
     {
-      "text": "exoplanet",
-      "type": "宇宙",
-      "meaning": "位于我们太阳系之外、环绕遥远恒星公转的系外行星"
+      "text": "星云",
+      "type": "cosmos",
+      "meaning": "弥漫于星际空间中孕育全新恒星胚胎与绚丽色彩的璀璨气体尘埃云",
+      "asset": "nebula"
     },
     {
-      "text": "exoplanets",
-      "type": "宇宙",
-      "meaning": "在银河系各处围绕不同恒星运行的遥远系外异星世界群"
+      "text": "超新星",
+      "type": "fenomeno",
+      "meaning": "大质量恒星演化末期发生剧烈大坍缩并短暂照亮整个星系的毁灭性大爆炸",
+      "asset": "supernova"
     },
     {
-      "text": "satellite",
-      "type": "航天技术",
-      "meaning": "为科研或通信目的环绕行星运行的人造或天然空间卫星"
+      "text": "脉冲星",
+      "type": "cosmos",
+      "meaning": "疯狂自转并如宇宙灯塔般向两极周期性扫射高能辐射束的超致密中子星",
+      "asset": "pulsar"
     },
     {
-      "text": "constellation",
-      "type": "宇宙",
-      "meaning": "天文学星图依据恒星在夜空中的排列所划分的星座区域"
+      "text": "类星体",
+      "type": "cosmos",
+      "meaning": "由处于早期宇宙的贪婪超大质量黑洞吸积盘驱动的高能极亮天体核心",
+      "asset": "quasar"
     },
     {
-      "text": "telescope",
-      "type": "航天技术",
-      "meaning": "收集光线与电磁辐射以观测遥远深空天体的天文望远镜"
+      "text": "磁星",
+      "type": "cosmos",
+      "meaning": "具备足以撕碎任何分子原子结构的宇宙极限强磁场的极端致密中子星",
+      "asset": "magnetar"
     },
     {
-      "text": "starship",
-      "type": "航天技术",
-      "meaning": "具备跨越广阔恒星际深渊能力的先进星际星舰"
+      "text": "系外行星",
+      "type": "cosmos",
+      "meaning": "在太阳系之外环绕其他恒星公转的神秘而遥远的地外行星",
+      "asset": "exoplanet"
     },
     {
-      "text": "atmosphere",
-      "type": "宇宙",
-      "meaning": "由引力维系并环绕包裹行星或天体外层的气态圈层大气层"
+      "text": "仙女座",
+      "type": "cosmos",
+      "meaning": "正以惊人速度向银河系迎面扑来并在数十亿年后发生大碰撞的巨型螺旋星系",
+      "asset": "andromeda"
     },
     {
-      "text": "magnetosphere",
-      "type": "天体现象",
-      "meaning": "阻挡偏转高能太阳风及宇宙辐射的行星天然磁场防护罩磁层"
+      "text": "银河",
+      "type": "cosmos",
+      "meaning": "横跨浩瀚夜空并孕育了太阳系与数千亿恒星的璀璨旋臂母星系",
+      "asset": "milky_way"
     },
     {
-      "text": "radiation",
-      "type": "天体现象",
-      "meaning": "穿梭穿越宇宙深空的高能电磁波束或亚原子粒子辐射"
+      "text": "辐射",
+      "type": "hazard",
+      "meaning": "穿透寂静太空并能电离物质的高能亚原子粒子流与电磁辐射线",
+      "asset": "radiation"
     },
     {
-      "text": "spectrum",
-      "type": "空间科学",
-      "meaning": "将光分解为波长彩虹、以此揭示天体温度与化学构成的光谱"
+      "text": "反物质",
+      "type": "hazard",
+      "meaning": "与常规正物质粒子接触便会以百分之百质能转换发生剧烈湮灭的神秘镜像物质",
+      "asset": "antimatter"
     },
     {
-      "text": "andromeda",
-      "type": "宇宙",
-      "meaning": "正沿着引力轨道飞向我们银河系、未来将发生合并的最近大螺旋星系仙女座星系"
+      "text": "黑洞",
+      "type": "hazard",
+      "meaning": "中心引力强大到连宇宙最快的光子也无法逃逸的极端时空坍缩深渊",
+      "asset": "black_hole"
     },
     {
-      "text": "heliosphere",
-      "type": "宇宙",
-      "meaning": "由外涌太阳风在星际空间中吹拂开辟出的庞大保护气泡太阳圈"
+      "text": "虫洞",
+      "type": "cosmos",
+      "meaning": "弯曲时空纤维并在瞬间连通宇宙两个遥远维度的爱因斯坦-罗森桥时空隧道",
+      "asset": "wormhole"
     },
     {
-      "text": "antimatter",
-      "type": "空间科学",
-      "meaning": "由反粒子构成、与常规普通物质接触时会剧烈湮灭释放能量的反物质"
+      "text": "宇航员",
+      "type": "tech",
+      "meaning": "身穿高可靠生命保障舱外航天服并远征茫茫星海的勇敢太空探索者",
+      "asset": "astronaut"
     },
     {
-      "text": "singularity",
-      "type": "宇宙",
-      "meaning": "黑洞中心引力密度趋于无穷大、常规物理定律失效的引力奇点"
+      "text": "航天员",
+      "type": "tech",
+      "meaning": "操纵复杂飞船航电系统并执行严酷长期空间飞行的专业航天领航员",
+      "asset": "cosmonaut"
     },
     {
-      "text": "multiverse",
-      "type": "宇宙",
-      "meaning": "包含无穷时空气泡和无数平行维度的多重宇宙集合假说"
+      "text": "白矮星",
+      "type": "cosmos",
+      "meaning": "中低质量恒星褪去外层气体外壳后遗留下的地球大小致密炽热恒星遗骸",
+      "asset": "white_dwarf"
     },
     {
-      "text": "light-year",
-      "type": "空间科学",
-      "meaning": "光线在宇宙真空中耗时一完整太阳年所行经的宏大天文距离单位光年"
+      "text": "红巨星",
+      "type": "cosmos",
+      "meaning": "核心氢燃料耗尽后剧烈膨胀数百倍并吞噬内侧近地行星的垂暮巨型恒星",
+      "asset": "red_giant"
     },
     {
-      "text": "black-hole",
-      "type": "宇宙",
-      "meaning": "引力极其强劲以致连光线也无法逃逸的极端宇宙天体黑洞"
+      "text": "太阳探测器",
+      "type": "tech",
+      "meaning": "装配重型碳复合防热盾深入数百万度日冕炽热海洋的先锋科考探测器",
+      "asset": "solar_probe"
     },
     {
-      "text": "stardust",
-      "type": "宇宙",
-      "meaning": "超新星爆发灰烬中的重元素粒子，孕育岩石世界与生命火种的星尘"
+      "text": "登月舱",
+      "type": "tech",
+      "meaning": "伸展四条缓冲着陆腿并在月面环形山月壤上平稳实施软着陆的登月飞船",
+      "asset": "lunar_module"
     },
     {
-      "text": "dark-matter",
-      "type": "宇宙",
-      "meaning": "不发光也无法直接观测，却占据全宇宙绝大部分质量的隐形暗物质"
+      "text": "巨大小行星",
+      "type": "hazard",
+      "meaning": "一旦正面撞击便能触发全球物种大灭绝的百公里级巨型空间岩石巨兽",
+      "asset": "giant_asteroid"
     },
     {
-      "text": "dark-energy",
-      "type": "宇宙",
-      "meaning": "驱动可观测时空以惊人速度加速膨胀的弥漫宇宙斥力暗能量"
+      "text": "轨道基地",
+      "type": "tech",
+      "meaning": "牢牢锚定在地球静止轨道上为大型舰队提供补给与维修支持的太空枢纽堡垒",
+      "asset": "orbital_station"
     },
     {
-      "text": "wormhole",
-      "type": "宇宙",
-      "meaning": "将宇宙中两个迥异的时空区域直接跨越相连的理论时空捷径虫洞"
+      "text": "特洛伊小行星",
+      "type": "hazard",
+      "meaning": "在行星与恒星形成的拉格朗日平衡点附近保持稳定同步轨道的特殊小行星",
+      "asset": "trojan_asteroid"
     },
     {
-      "text": "speed-of-light",
-      "type": "空间科学",
-      "meaning": "在真空中以每秒约30万公里恒定传播的宇宙通用物理极限光速"
+      "text": "轨道望远镜",
+      "type": "tech",
+      "meaning": "彻底摆脱大气扰动模糊并在真空中拍摄极端锐利宇宙细节的轨道天文镜",
+      "asset": "orbital_telescope"
     },
     {
-      "text": "space-station",
-      "type": "航天技术",
-      "meaning": "科研人员长驻并开展微重力尖端科学探索的大型近地轨道空间站"
+      "text": "空间太空舱",
+      "type": "tech",
+      "meaning": "专为载人深空穿梭与紧急逃逸设计的高气密高强度模块化运输乘员舱",
+      "asset": "space_capsule"
     },
     {
-      "text": "event-horizon",
-      "type": "宇宙",
-      "meaning": "环绕黑洞的不可逆转边界，越过此界后任何物质与光线皆再无可能逃逸的事件视界"
+      "text": "巡视漫游车",
+      "type": "tech",
+      "meaning": "搭载地质取样钻机与光谱仪在荒凉地外地表实地采样的重型全地形巡视车",
+      "asset": "rover_vehicle"
     },
     {
-      "text": "milky-way",
-      "type": "宇宙",
-      "meaning": "包含数千亿颗恒星及我们太阳系所在的棒旋星系家园银河系"
+      "text": "太空货船",
+      "type": "tech",
+      "meaning": "穿行于采矿星带与太空定居点之间运送海量稀有矿石集装箱的重型星际货轮",
+      "asset": "freighter"
     }
   ],
   "bossWords": {
     "alien_dreadnought": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
+        "text": "太阳",
+        "type": "cosmos",
+        "meaning": "太阳系中心的恒星，提供光、热和强大的引力支持",
+        "asset": "sun"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
+        "text": "岩石",
+        "type": "hazard",
+        "meaning": "在宇宙深空中漫游并朝地球方向坠落的坚硬空间岩石",
+        "asset": "rock"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
+        "text": "水星",
+        "type": "cosmos",
+        "meaning": "距离太阳最近且体积最小的炙热岩石行星",
+        "asset": "mercury"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
+        "text": "金星",
+        "type": "cosmos",
+        "meaning": "拥有浓厚大气层和极度温室效应的明亮行星",
+        "asset": "venus"
       },
       {
-        "text": "ray",
-        "type": "天体现象",
-        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
+        "text": "灶神星",
+        "type": "hazard",
+        "meaning": "小行星带中质量第二大且南极拥有巨大撞击坑的著名原行星",
+        "asset": "vesta"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
+        "text": "火星",
+        "type": "cosmos",
+        "meaning": "表面覆盖氧化铁红沙并拥有太阳系最高火山的红色行星",
+        "asset": "mars"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "行星或天体绕其自转的假想中心轴线"
+        "text": "木星",
+        "type": "cosmos",
+        "meaning": "拥有著名大红斑风暴的太阳系最大气态巨行星",
+        "asset": "jupiter"
       },
       {
-        "text": "phase",
-        "type": "天体现象",
-        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
+        "text": "土星",
+        "type": "cosmos",
+        "meaning": "拥有绚丽而宽广冰尘光环系统的壮美气态巨行星",
+        "asset": "saturn"
       },
       {
-        "text": "wave",
-        "type": "天体现象",
-        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
+        "text": "天王星",
+        "type": "cosmos",
+        "meaning": "自转轴极度倾斜并散发青蓝色光辉的冰巨星",
+        "asset": "uranus"
       },
       {
-        "text": "ship",
-        "type": "航天技术",
-        "meaning": "专为行星际航行设计的载人或自动航天飞船"
+        "text": "海王星",
+        "type": "cosmos",
+        "meaning": "太阳系最外层且伴随超音速狂暴飓风的深蓝色冰巨星",
+        "asset": "neptune"
       },
       {
-        "text": "nova",
-        "type": "天体现象",
-        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
+        "text": "小行星",
+        "type": "hazard",
+        "meaning": "在太空中运行且由岩石和金属组成的太阳系早期残留天体",
+        "asset": "asteroid"
       },
       {
-        "text": "target",
-        "type": "航天技术",
-        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
+        "text": "彗星",
+        "type": "hazard",
+        "meaning": "接近太阳时冰雪升华并拖出长长辉光彗尾的冰冷天体",
+        "asset": "comet"
       },
       {
-        "text": "data",
-        "type": "航天技术",
-        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
+        "text": "流星",
+        "type": "hazard",
+        "meaning": "宇宙尘埃或碎片高速冲入大气层剧烈燃烧划过的绚丽光迹",
+        "asset": "meteor"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
+        "text": "陨石",
+        "type": "hazard",
+        "meaning": "穿越大气层灼热摩擦后幸存并最终撞击行星地表的宇宙岩体",
+        "asset": "meteorite"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
+        "text": "火流星",
+        "type": "hazard",
+        "meaning": "在大气层中发生轰鸣巨响剧烈爆炸的极其明亮特大火球",
+        "asset": "bolide"
       }
     ],
     "alien_hive": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
+        "text": "岩石",
+        "type": "hazard",
+        "meaning": "在宇宙深空中漫游并朝地球方向坠落的坚硬空间岩石",
+        "asset": "rock"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
+        "text": "火卫一",
+        "type": "cosmos",
+        "meaning": "外形不规则且以极近距离快速掠过火星表面的天然卫星",
+        "asset": "phobos"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
+        "text": "火卫二",
+        "type": "cosmos",
+        "meaning": "表面覆盖厚厚尘埃且在火星较远轨道缓缓运行的较小卫星",
+        "asset": "deimos"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
+        "text": "小行星",
+        "type": "hazard",
+        "meaning": "在太空中运行且由岩石和金属组成的太阳系早期残留天体",
+        "asset": "asteroid"
       },
       {
-        "text": "ray",
-        "type": "天体现象",
-        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
+        "text": "彗星",
+        "type": "hazard",
+        "meaning": "接近太阳时冰雪升华并拖出长长辉光彗尾的冰冷天体",
+        "asset": "comet"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
+        "text": "流星",
+        "type": "hazard",
+        "meaning": "宇宙尘埃或碎片高速冲入大气层剧烈燃烧划过的绚丽光迹",
+        "asset": "meteor"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "行星或天体绕其自转的假想中心轴线"
+        "text": "陨石",
+        "type": "hazard",
+        "meaning": "穿越大气层灼热摩擦后幸存并最终撞击行星地表的宇宙岩体",
+        "asset": "meteorite"
       },
       {
-        "text": "phase",
-        "type": "天体现象",
-        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
+        "text": "火流星",
+        "type": "hazard",
+        "meaning": "在大气层中发生轰鸣巨响剧烈爆炸的极其明亮特大火球",
+        "asset": "bolide"
       },
       {
-        "text": "wave",
-        "type": "天体现象",
-        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
+        "text": "碎片",
+        "type": "hazard",
+        "meaning": "天体高速碰撞撞击产生的在危险轨道上飞行的坚硬碎块",
+        "asset": "fragment"
       },
       {
-        "text": "ship",
-        "type": "航天技术",
-        "meaning": "专为行星际航行设计的载人或自动航天飞船"
+        "text": "石陨石",
+        "type": "hazard",
+        "meaning": "主要由硅酸盐矿物组成的岩石质地外天体陨落块",
+        "asset": "aerolite"
       },
       {
-        "text": "nova",
-        "type": "天体现象",
-        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
+        "text": "流星体",
+        "type": "hazard",
+        "meaning": "在进入行星大气层之前在空间轨道高速穿梭的微小岩体",
+        "asset": "meteoroid"
       },
       {
-        "text": "target",
-        "type": "航天技术",
-        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
+        "text": "巨石",
+        "type": "hazard",
+        "meaning": "从巨大小行星表面剥落崩塌并向外飞溅的沉重天体岩块",
+        "asset": "boulder"
       },
       {
-        "text": "data",
-        "type": "航天技术",
-        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
+        "text": "巨大小行星",
+        "type": "hazard",
+        "meaning": "一旦正面撞击便能触发全球物种大灭绝的百公里级巨型空间岩石巨兽",
+        "asset": "giant_asteroid"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
+        "text": "特洛伊小行星",
+        "type": "hazard",
+        "meaning": "在行星与恒星形成的拉格朗日平衡点附近保持稳定同步轨道的特殊小行星",
+        "asset": "trojan_asteroid"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
+        "text": "无人机",
+        "type": "tech",
+        "meaning": "搭载智能光学传感器并在空间轨道自主进行危险侦察的小型无人机",
+        "asset": "drone"
       }
     ],
     "alien_psionic": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
+        "text": "星云",
+        "type": "cosmos",
+        "meaning": "弥漫于星际空间中孕育全新恒星胚胎与绚丽色彩的璀璨气体尘埃云",
+        "asset": "nebula"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
+        "text": "超新星",
+        "type": "fenomeno",
+        "meaning": "大质量恒星演化末期发生剧烈大坍缩并短暂照亮整个星系的毁灭性大爆炸",
+        "asset": "supernova"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
+        "text": "脉冲星",
+        "type": "cosmos",
+        "meaning": "疯狂自转并如宇宙灯塔般向两极周期性扫射高能辐射束的超致密中子星",
+        "asset": "pulsar"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
+        "text": "类星体",
+        "type": "cosmos",
+        "meaning": "由处于早期宇宙的贪婪超大质量黑洞吸积盘驱动的高能极亮天体核心",
+        "asset": "quasar"
       },
       {
-        "text": "ray",
-        "type": "天体现象",
-        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
+        "text": "磁星",
+        "type": "cosmos",
+        "meaning": "具备足以撕碎任何分子原子结构的宇宙极限强磁场的极端致密中子星",
+        "asset": "magnetar"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
+        "text": "系外行星",
+        "type": "cosmos",
+        "meaning": "在太阳系之外环绕其他恒星公转的神秘而遥远的地外行星",
+        "asset": "exoplanet"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "行星或天体绕其自转的假想中心轴线"
+        "text": "仙女座",
+        "type": "cosmos",
+        "meaning": "正以惊人速度向银河系迎面扑来并在数十亿年后发生大碰撞的巨型螺旋星系",
+        "asset": "andromeda"
       },
       {
-        "text": "phase",
-        "type": "天体现象",
-        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
+        "text": "银河",
+        "type": "cosmos",
+        "meaning": "横跨浩瀚夜空并孕育了太阳系与数千亿恒星的璀璨旋臂母星系",
+        "asset": "milky_way"
       },
       {
-        "text": "wave",
-        "type": "天体现象",
-        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
+        "text": "辐射",
+        "type": "hazard",
+        "meaning": "穿透寂静太空并能电离物质的高能亚原子粒子流与电磁辐射线",
+        "asset": "radiation"
       },
       {
-        "text": "ship",
-        "type": "航天技术",
-        "meaning": "专为行星际航行设计的载人或自动航天飞船"
+        "text": "反物质",
+        "type": "hazard",
+        "meaning": "与常规正物质粒子接触便会以百分之百质能转换发生剧烈湮灭的神秘镜像物质",
+        "asset": "antimatter"
       },
       {
-        "text": "nova",
-        "type": "天体现象",
-        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
+        "text": "黑洞",
+        "type": "hazard",
+        "meaning": "中心引力强大到连宇宙最快的光子也无法逃逸的极端时空坍缩深渊",
+        "asset": "black_hole"
       },
       {
-        "text": "target",
-        "type": "航天技术",
-        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
+        "text": "虫洞",
+        "type": "cosmos",
+        "meaning": "弯曲时空纤维并在瞬间连通宇宙两个遥远维度的爱因斯坦-罗森桥时空隧道",
+        "asset": "wormhole"
       },
       {
-        "text": "data",
-        "type": "航天技术",
-        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
+        "text": "白矮星",
+        "type": "cosmos",
+        "meaning": "中低质量恒星褪去外层气体外壳后遗留下的地球大小致密炽热恒星遗骸",
+        "asset": "white_dwarf"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
+        "text": "红巨星",
+        "type": "cosmos",
+        "meaning": "核心氢燃料耗尽后剧烈膨胀数百倍并吞噬内侧近地行星的垂暮巨型恒星",
+        "asset": "red_giant"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
+        "text": "恒星",
+        "type": "cosmos",
+        "meaning": "由核心剧烈热核聚变反应持续供能并向宇宙辐射刺目光热的等离子体天体",
+        "asset": "star"
       }
     ],
     "alien_warlord": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
+        "text": "火箭",
+        "type": "tech",
+        "meaning": "依靠狂暴尾喷推力克服行星重力并冲向苍穹的多级太空推进运载载具",
+        "asset": "rocket"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
+        "text": "太空舱",
+        "type": "tech",
+        "meaning": "配备坚固防热盾以抵御剧烈大气再入超高温摩擦的密闭式航天乘员舱",
+        "asset": "capsule"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
+        "text": "舱段",
+        "type": "tech",
+        "meaning": "通过标准化气密对接口拼接扩展空间站功能的加压结构单元",
+        "asset": "module"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
+        "text": "漫游车",
+        "type": "tech",
+        "meaning": "配备多地形驱动轮与科学探测机械臂的自动化地外行星巡视车",
+        "asset": "rover"
       },
       {
-        "text": "ray",
-        "type": "天体现象",
-        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
+        "text": "飞船",
+        "type": "tech",
+        "meaning": "配备姿态控制喷口与强大主推进引擎穿梭于太空间隙的航天载具",
+        "asset": "ship"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
+        "text": "无人机",
+        "type": "tech",
+        "meaning": "搭载智能光学传感器并在空间轨道自主进行危险侦察的小型无人机",
+        "asset": "drone"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "行星或天体绕其自转的假想中心轴线"
+        "text": "星舰",
+        "type": "tech",
+        "meaning": "装载尖端曲速引擎可跨越恒星系深邃鸿沟的巨型主力星际巡洋战舰",
+        "asset": "starship"
       },
       {
-        "text": "phase",
-        "type": "天体现象",
-        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
+        "text": "航天飞机",
+        "type": "tech",
+        "meaning": "完成轨道任务后凭借宽大机翼在大气中滑翔降落跑道的可重复使用航天器",
+        "asset": "space_shuttle"
       },
       {
-        "text": "wave",
-        "type": "天体现象",
-        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
+        "text": "空间站",
+        "type": "tech",
+        "meaning": "常年驻留微重力轨道并为航天员提供科研与生活保障的巨型轨道复合基地",
+        "asset": "space_station"
       },
       {
-        "text": "ship",
-        "type": "航天技术",
-        "meaning": "专为行星际航行设计的载人或自动航天飞船"
+        "text": "宇航员",
+        "type": "tech",
+        "meaning": "身穿高可靠生命保障舱外航天服并远征茫茫星海的勇敢太空探索者",
+        "asset": "astronaut"
       },
       {
-        "text": "nova",
-        "type": "天体现象",
-        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
+        "text": "航天员",
+        "type": "tech",
+        "meaning": "操纵复杂飞船航电系统并执行严酷长期空间飞行的专业航天领航员",
+        "asset": "cosmonaut"
       },
       {
-        "text": "target",
-        "type": "航天技术",
-        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
+        "text": "太阳探测器",
+        "type": "tech",
+        "meaning": "装配重型碳复合防热盾深入数百万度日冕炽热海洋的先锋科考探测器",
+        "asset": "solar_probe"
       },
       {
-        "text": "data",
-        "type": "航天技术",
-        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
+        "text": "登月舱",
+        "type": "tech",
+        "meaning": "伸展四条缓冲着陆腿并在月面环形山月壤上平稳实施软着陆的登月飞船",
+        "asset": "lunar_module"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
+        "text": "空间太空舱",
+        "type": "tech",
+        "meaning": "专为载人深空穿梭与紧急逃逸设计的高气密高强度模块化运输乘员舱",
+        "asset": "space_capsule"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
+        "text": "太空货船",
+        "type": "tech",
+        "meaning": "穿行于采矿星带与太空定居点之间运送海量稀有矿石集装箱的重型星际货轮",
+        "asset": "freighter"
       }
     ],
     "alien_darkmatter": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
+        "text": "脉冲星",
+        "type": "cosmos",
+        "meaning": "疯狂自转并如宇宙灯塔般向两极周期性扫射高能辐射束的超致密中子星",
+        "asset": "pulsar"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
+        "text": "类星体",
+        "type": "cosmos",
+        "meaning": "由处于早期宇宙的贪婪超大质量黑洞吸积盘驱动的高能极亮天体核心",
+        "asset": "quasar"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
+        "text": "磁星",
+        "type": "cosmos",
+        "meaning": "具备足以撕碎任何分子原子结构的宇宙极限强磁场的极端致密中子星",
+        "asset": "magnetar"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
+        "text": "辐射",
+        "type": "hazard",
+        "meaning": "穿透寂静太空并能电离物质的高能亚原子粒子流与电磁辐射线",
+        "asset": "radiation"
       },
       {
-        "text": "ray",
-        "type": "天体现象",
-        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
+        "text": "反物质",
+        "type": "hazard",
+        "meaning": "与常规正物质粒子接触便会以百分之百质能转换发生剧烈湮灭的神秘镜像物质",
+        "asset": "antimatter"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
+        "text": "黑洞",
+        "type": "hazard",
+        "meaning": "中心引力强大到连宇宙最快的光子也无法逃逸的极端时空坍缩深渊",
+        "asset": "black_hole"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "行星或天体绕其自转的假想中心轴线"
+        "text": "虫洞",
+        "type": "cosmos",
+        "meaning": "弯曲时空纤维并在瞬间连通宇宙两个遥远维度的爱因斯坦-罗森桥时空隧道",
+        "asset": "wormhole"
       },
       {
-        "text": "phase",
-        "type": "天体现象",
-        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
+        "text": "星云",
+        "type": "cosmos",
+        "meaning": "弥漫于星际空间中孕育全新恒星胚胎与绚丽色彩的璀璨气体尘埃云",
+        "asset": "nebula"
       },
       {
-        "text": "wave",
-        "type": "天体现象",
-        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
+        "text": "超新星",
+        "type": "fenomeno",
+        "meaning": "大质量恒星演化末期发生剧烈大坍缩并短暂照亮整个星系的毁灭性大爆炸",
+        "asset": "supernova"
       },
       {
-        "text": "ship",
-        "type": "航天技术",
-        "meaning": "专为行星际航行设计的载人或自动航天飞船"
+        "text": "小行星",
+        "type": "hazard",
+        "meaning": "在太空中运行且由岩石和金属组成的太阳系早期残留天体",
+        "asset": "asteroid"
       },
       {
-        "text": "nova",
-        "type": "天体现象",
-        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
+        "text": "火流星",
+        "type": "hazard",
+        "meaning": "在大气层中发生轰鸣巨响剧烈爆炸的极其明亮特大火球",
+        "asset": "bolide"
       },
       {
-        "text": "target",
-        "type": "航天技术",
-        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
+        "text": "碎片",
+        "type": "hazard",
+        "meaning": "天体高速碰撞撞击产生的在危险轨道上飞行的坚硬碎块",
+        "asset": "fragment"
       },
       {
-        "text": "data",
-        "type": "航天技术",
-        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
+        "text": "白矮星",
+        "type": "cosmos",
+        "meaning": "中低质量恒星褪去外层气体外壳后遗留下的地球大小致密炽热恒星遗骸",
+        "asset": "white_dwarf"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
+        "text": "红巨星",
+        "type": "cosmos",
+        "meaning": "核心氢燃料耗尽后剧烈膨胀数百倍并吞噬内侧近地行星的垂暮巨型恒星",
+        "asset": "red_giant"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
+        "text": "巨大小行星",
+        "type": "hazard",
+        "meaning": "一旦正面撞击便能触发全球物种大灭绝的百公里级巨型空间岩石巨兽",
+        "asset": "giant_asteroid"
       }
     ],
     "alien_mothership": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
+        "text": "星舰",
+        "type": "tech",
+        "meaning": "装载尖端曲速引擎可跨越恒星系深邃鸿沟的巨型主力星际巡洋战舰",
+        "asset": "starship"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
+        "text": "航天飞机",
+        "type": "tech",
+        "meaning": "完成轨道任务后凭借宽大机翼在大气中滑翔降落跑道的可重复使用航天器",
+        "asset": "space_shuttle"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
+        "text": "空间站",
+        "type": "tech",
+        "meaning": "常年驻留微重力轨道并为航天员提供科研与生活保障的巨型轨道复合基地",
+        "asset": "space_station"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
+        "text": "轨道基地",
+        "type": "tech",
+        "meaning": "牢牢锚定在地球静止轨道上为大型舰队提供补给与维修支持的太空枢纽堡垒",
+        "asset": "orbital_station"
       },
       {
-        "text": "ray",
-        "type": "天体现象",
-        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
+        "text": "轨道望远镜",
+        "type": "tech",
+        "meaning": "彻底摆脱大气扰动模糊并在真空中拍摄极端锐利宇宙细节的轨道天文镜",
+        "asset": "orbital_telescope"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
+        "text": "空间太空舱",
+        "type": "tech",
+        "meaning": "专为载人深空穿梭与紧急逃逸设计的高气密高强度模块化运输乘员舱",
+        "asset": "space_capsule"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "行星或天体绕其自转的假想中心轴线"
+        "text": "巡视漫游车",
+        "type": "tech",
+        "meaning": "搭载地质取样钻机与光谱仪在荒凉地外地表实地采样的重型全地形巡视车",
+        "asset": "rover_vehicle"
       },
       {
-        "text": "phase",
-        "type": "天体现象",
-        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
+        "text": "太空货船",
+        "type": "tech",
+        "meaning": "穿行于采矿星带与太空定居点之间运送海量稀有矿石集装箱的重型星际货轮",
+        "asset": "freighter"
       },
       {
-        "text": "wave",
-        "type": "天体现象",
-        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
+        "text": "卫星",
+        "type": "tech",
+        "meaning": "在预定轨道上不知疲倦运行的人造通讯与科学观测航天器",
+        "asset": "satellite"
       },
       {
-        "text": "ship",
-        "type": "航天技术",
-        "meaning": "专为行星际航行设计的载人或自动航天飞船"
+        "text": "探测器",
+        "type": "tech",
+        "meaning": "飞往遥远行星与深空执行无人科学探测使命的自动化太空飞行器",
+        "asset": "probe"
       },
       {
-        "text": "nova",
-        "type": "天体现象",
-        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
+        "text": "望远镜",
+        "type": "tech",
+        "meaning": "捕获宇宙深处星系与微弱星光的尖端光学天文观测设备",
+        "asset": "telescope"
       },
       {
-        "text": "target",
-        "type": "航天技术",
-        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
+        "text": "哈勃",
+        "type": "tech",
+        "meaning": "彻底颠覆人类对宇宙深空认知并运行数十年的传奇太空望远镜",
+        "asset": "hubble"
       },
       {
-        "text": "data",
-        "type": "航天技术",
-        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
+        "text": "韦伯",
+        "type": "tech",
+        "meaning": "配备巨大黄金镜面捕捉宇宙初生微光与系外大气的先进红外太空望远镜",
+        "asset": "webb"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
+        "text": "旅行者",
+        "type": "tech",
+        "meaning": "携带镀金唱片并已飞出太阳系疆界进入星际空间的宏大探测先驱",
+        "asset": "voyager"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
+        "text": "伴侣号",
+        "type": "tech",
+        "meaning": "成功进入地球轨道并开启人类太空探索全新纪元的开创性人造卫星",
+        "asset": "sputnik"
       }
     ],
     "robot": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
+        "text": "卫星",
+        "type": "tech",
+        "meaning": "在预定轨道上不知疲倦运行的人造通讯与科学观测航天器",
+        "asset": "satellite"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
+        "text": "探测器",
+        "type": "tech",
+        "meaning": "飞往遥远行星与深空执行无人科学探测使命的自动化太空飞行器",
+        "asset": "probe"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
+        "text": "望远镜",
+        "type": "tech",
+        "meaning": "捕获宇宙深处星系与微弱星光的尖端光学天文观测设备",
+        "asset": "telescope"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
+        "text": "哈勃",
+        "type": "tech",
+        "meaning": "彻底颠覆人类对宇宙深空认知并运行数十年的传奇太空望远镜",
+        "asset": "hubble"
       },
       {
-        "text": "ray",
-        "type": "天体现象",
-        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
+        "text": "韦伯",
+        "type": "tech",
+        "meaning": "配备巨大黄金镜面捕捉宇宙初生微光与系外大气的先进红外太空望远镜",
+        "asset": "webb"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
+        "text": "旅行者",
+        "type": "tech",
+        "meaning": "携带镀金唱片并已飞出太阳系疆界进入星际空间的宏大探测先驱",
+        "asset": "voyager"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "行星或天体绕其自转的假想中心轴线"
+        "text": "伴侣号",
+        "type": "tech",
+        "meaning": "成功进入地球轨道并开启人类太空探索全新纪元的开创性人造卫星",
+        "asset": "sputnik"
       },
       {
-        "text": "phase",
-        "type": "天体现象",
-        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
+        "text": "火箭",
+        "type": "tech",
+        "meaning": "依靠狂暴尾喷推力克服行星重力并冲向苍穹的多级太空推进运载载具",
+        "asset": "rocket"
       },
       {
-        "text": "wave",
-        "type": "天体现象",
-        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
+        "text": "太空舱",
+        "type": "tech",
+        "meaning": "配备坚固防热盾以抵御剧烈大气再入超高温摩擦的密闭式航天乘员舱",
+        "asset": "capsule"
       },
       {
-        "text": "ship",
-        "type": "航天技术",
-        "meaning": "专为行星际航行设计的载人或自动航天飞船"
+        "text": "舱段",
+        "type": "tech",
+        "meaning": "通过标准化气密对接口拼接扩展空间站功能的加压结构单元",
+        "asset": "module"
       },
       {
-        "text": "nova",
-        "type": "天体现象",
-        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
+        "text": "漫游车",
+        "type": "tech",
+        "meaning": "配备多地形驱动轮与科学探测机械臂的自动化地外行星巡视车",
+        "asset": "rover"
       },
       {
-        "text": "target",
-        "type": "航天技术",
-        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
+        "text": "飞船",
+        "type": "tech",
+        "meaning": "配备姿态控制喷口与强大主推进引擎穿梭于太空间隙的航天载具",
+        "asset": "ship"
       },
       {
-        "text": "data",
-        "type": "航天技术",
-        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
+        "text": "无人机",
+        "type": "tech",
+        "meaning": "搭载智能光学传感器并在空间轨道自主进行危险侦察的小型无人机",
+        "asset": "drone"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
+        "text": "轨道望远镜",
+        "type": "tech",
+        "meaning": "彻底摆脱大气扰动模糊并在真空中拍摄极端锐利宇宙细节的轨道天文镜",
+        "asset": "orbital_telescope"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
+        "text": "巡视漫游车",
+        "type": "tech",
+        "meaning": "搭载地质取样钻机与光谱仪在荒凉地外地表实地采样的重型全地形巡视车",
+        "asset": "rover_vehicle"
       }
     ],
     "beast": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
+        "text": "岩石",
+        "type": "hazard",
+        "meaning": "在宇宙深空中漫游并朝地球方向坠落的坚硬空间岩石",
+        "asset": "rock"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
+        "text": "小行星",
+        "type": "hazard",
+        "meaning": "在太空中运行且由岩石和金属组成的太阳系早期残留天体",
+        "asset": "asteroid"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
+        "text": "彗星",
+        "type": "hazard",
+        "meaning": "接近太阳时冰雪升华并拖出长长辉光彗尾的冰冷天体",
+        "asset": "comet"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
+        "text": "流星",
+        "type": "hazard",
+        "meaning": "宇宙尘埃或碎片高速冲入大气层剧烈燃烧划过的绚丽光迹",
+        "asset": "meteor"
       },
       {
-        "text": "ray",
-        "type": "天体现象",
-        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
+        "text": "陨石",
+        "type": "hazard",
+        "meaning": "穿越大气层灼热摩擦后幸存并最终撞击行星地表的宇宙岩体",
+        "asset": "meteorite"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
+        "text": "火流星",
+        "type": "hazard",
+        "meaning": "在大气层中发生轰鸣巨响剧烈爆炸的极其明亮特大火球",
+        "asset": "bolide"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "行星或天体绕其自转的假想中心轴线"
+        "text": "碎片",
+        "type": "hazard",
+        "meaning": "天体高速碰撞撞击产生的在危险轨道上飞行的坚硬碎块",
+        "asset": "fragment"
       },
       {
-        "text": "phase",
-        "type": "天体现象",
-        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
+        "text": "石陨石",
+        "type": "hazard",
+        "meaning": "主要由硅酸盐矿物组成的岩石质地外天体陨落块",
+        "asset": "aerolite"
       },
       {
-        "text": "wave",
-        "type": "天体现象",
-        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
+        "text": "流星体",
+        "type": "hazard",
+        "meaning": "在进入行星大气层之前在空间轨道高速穿梭的微小岩体",
+        "asset": "meteoroid"
       },
       {
-        "text": "ship",
-        "type": "航天技术",
-        "meaning": "专为行星际航行设计的载人或自动航天飞船"
+        "text": "巨石",
+        "type": "hazard",
+        "meaning": "从巨大小行星表面剥落崩塌并向外飞溅的沉重天体岩块",
+        "asset": "boulder"
       },
       {
-        "text": "nova",
-        "type": "天体现象",
-        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
+        "text": "巨大小行星",
+        "type": "hazard",
+        "meaning": "一旦正面撞击便能触发全球物种大灭绝的百公里级巨型空间岩石巨兽",
+        "asset": "giant_asteroid"
       },
       {
-        "text": "target",
-        "type": "航天技术",
-        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
+        "text": "特洛伊小行星",
+        "type": "hazard",
+        "meaning": "在行星与恒星形成的拉格朗日平衡点附近保持稳定同步轨道的特殊小行星",
+        "asset": "trojan_asteroid"
       },
       {
-        "text": "data",
-        "type": "航天技术",
-        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
+        "text": "土卫六",
+        "type": "cosmos",
+        "meaning": "拥有浓厚大气层与液态甲烷海洋的土星最大卫星",
+        "asset": "titan"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
+        "text": "火卫一",
+        "type": "cosmos",
+        "meaning": "外形不规则且以极近距离快速掠过火星表面的天然卫星",
+        "asset": "phobos"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
+        "text": "火卫二",
+        "type": "cosmos",
+        "meaning": "表面覆盖厚厚尘埃且在火星较远轨道缓缓运行的较小卫星",
+        "asset": "deimos"
       }
     ],
     "mythology": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
+        "text": "太阳",
+        "type": "cosmos",
+        "meaning": "太阳系中心的恒星，提供光、热和强大的引力支持",
+        "asset": "sun"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
+        "text": "月球",
+        "type": "cosmos",
+        "meaning": "环绕地球运行并影响海洋潮汐涨落的天然卫星",
+        "asset": "moon"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
+        "text": "水星",
+        "type": "cosmos",
+        "meaning": "距离太阳最近且体积最小的炙热岩石行星",
+        "asset": "mercury"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
+        "text": "金星",
+        "type": "cosmos",
+        "meaning": "拥有浓厚大气层和极度温室效应的明亮行星",
+        "asset": "venus"
       },
       {
-        "text": "ray",
-        "type": "天体现象",
-        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
+        "text": "灶神星",
+        "type": "hazard",
+        "meaning": "小行星带中质量第二大且南极拥有巨大撞击坑的著名原行星",
+        "asset": "vesta"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
+        "text": "火星",
+        "type": "cosmos",
+        "meaning": "表面覆盖氧化铁红沙并拥有太阳系最高火山的红色行星",
+        "asset": "mars"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "行星或天体绕其自转的假想中心轴线"
+        "text": "木星",
+        "type": "cosmos",
+        "meaning": "拥有著名大红斑风暴的太阳系最大气态巨行星",
+        "asset": "jupiter"
       },
       {
-        "text": "phase",
-        "type": "天体现象",
-        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
+        "text": "土星",
+        "type": "cosmos",
+        "meaning": "拥有绚丽而宽广冰尘光环系统的壮美气态巨行星",
+        "asset": "saturn"
       },
       {
-        "text": "wave",
-        "type": "天体现象",
-        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
+        "text": "天王星",
+        "type": "cosmos",
+        "meaning": "自转轴极度倾斜并散发青蓝色光辉的冰巨星",
+        "asset": "uranus"
       },
       {
-        "text": "ship",
-        "type": "航天技术",
-        "meaning": "专为行星际航行设计的载人或自动航天飞船"
+        "text": "海王星",
+        "type": "cosmos",
+        "meaning": "太阳系最外层且伴随超音速狂暴飓风的深蓝色冰巨星",
+        "asset": "neptune"
       },
       {
-        "text": "nova",
-        "type": "天体现象",
-        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
+        "text": "冥王星",
+        "type": "cosmos",
+        "meaning": "位于柯伊伯带且拥有著名心形氮冰平原的冰封矮行星",
+        "asset": "pluto"
       },
       {
-        "text": "target",
-        "type": "航天技术",
-        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
+        "text": "谷神星",
+        "type": "cosmos",
+        "meaning": "位于火星与木星之间小行星带中体积最大的球形矮行星",
+        "asset": "ceres"
       },
       {
-        "text": "data",
-        "type": "航天技术",
-        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
+        "text": "土卫六",
+        "type": "cosmos",
+        "meaning": "拥有浓厚大气层与液态甲烷海洋的土星最大卫星",
+        "asset": "titan"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
+        "text": "木卫二",
+        "type": "cosmos",
+        "meaning": "在纵横交错的冰原外壳下隐藏着温暖巨大海洋的木星卫星",
+        "asset": "europa"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
+        "text": "木卫一",
+        "type": "cosmos",
+        "meaning": "表面分布数百座剧烈喷发硫磺火山的太阳系地质活动最活跃卫星",
+        "asset": "io"
       }
     ],
     "volcano": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
+        "text": "火星",
+        "type": "cosmos",
+        "meaning": "表面覆盖氧化铁红沙并拥有太阳系最高火山的红色行星",
+        "asset": "mars"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
+        "text": "木卫一",
+        "type": "cosmos",
+        "meaning": "表面分布数百座剧烈喷发硫磺火山的太阳系地质活动最活跃卫星",
+        "asset": "io"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
+        "text": "流星",
+        "type": "hazard",
+        "meaning": "宇宙尘埃或碎片高速冲入大气层剧烈燃烧划过的绚丽光迹",
+        "asset": "meteor"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
+        "text": "陨石",
+        "type": "hazard",
+        "meaning": "穿越大气层灼热摩擦后幸存并最终撞击行星地表的宇宙岩体",
+        "asset": "meteorite"
       },
       {
-        "text": "ray",
-        "type": "天体现象",
-        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
+        "text": "火流星",
+        "type": "hazard",
+        "meaning": "在大气层中发生轰鸣巨响剧烈爆炸的极其明亮特大火球",
+        "asset": "bolide"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
+        "text": "碎片",
+        "type": "hazard",
+        "meaning": "天体高速碰撞撞击产生的在危险轨道上飞行的坚硬碎块",
+        "asset": "fragment"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "行星或天体绕其自转的假想中心轴线"
+        "text": "石陨石",
+        "type": "hazard",
+        "meaning": "主要由硅酸盐矿物组成的岩石质地外天体陨落块",
+        "asset": "aerolite"
       },
       {
-        "text": "phase",
-        "type": "天体现象",
-        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
+        "text": "辐射",
+        "type": "hazard",
+        "meaning": "穿透寂静太空并能电离物质的高能亚原子粒子流与电磁辐射线",
+        "asset": "radiation"
       },
       {
-        "text": "wave",
-        "type": "天体现象",
-        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
+        "text": "反物质",
+        "type": "hazard",
+        "meaning": "与常规正物质粒子接触便会以百分之百质能转换发生剧烈湮灭的神秘镜像物质",
+        "asset": "antimatter"
       },
       {
-        "text": "ship",
-        "type": "航天技术",
-        "meaning": "专为行星际航行设计的载人或自动航天飞船"
+        "text": "红巨星",
+        "type": "cosmos",
+        "meaning": "核心氢燃料耗尽后剧烈膨胀数百倍并吞噬内侧近地行星的垂暮巨型恒星",
+        "asset": "red_giant"
       },
       {
-        "text": "nova",
-        "type": "天体现象",
-        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
+        "text": "岩石",
+        "type": "hazard",
+        "meaning": "在宇宙深空中漫游并朝地球方向坠落的坚硬空间岩石",
+        "asset": "rock"
       },
       {
-        "text": "target",
-        "type": "航天技术",
-        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
+        "text": "小行星",
+        "type": "hazard",
+        "meaning": "在太空中运行且由岩石和金属组成的太阳系早期残留天体",
+        "asset": "asteroid"
       },
       {
-        "text": "data",
-        "type": "航天技术",
-        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
+        "text": "流星体",
+        "type": "hazard",
+        "meaning": "在进入行星大气层之前在空间轨道高速穿梭的微小岩体",
+        "asset": "meteoroid"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
+        "text": "巨石",
+        "type": "hazard",
+        "meaning": "从巨大小行星表面剥落崩塌并向外飞溅的沉重天体岩块",
+        "asset": "boulder"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
+        "text": "巨大小行星",
+        "type": "hazard",
+        "meaning": "一旦正面撞击便能触发全球物种大灭绝的百公里级巨型空间岩石巨兽",
+        "asset": "giant_asteroid"
       }
     ],
     "ocean": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
+        "text": "灶神星",
+        "type": "hazard",
+        "meaning": "小行星带中质量第二大且南极拥有巨大撞击坑的著名原行星",
+        "asset": "vesta"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
+        "text": "土卫六",
+        "type": "cosmos",
+        "meaning": "拥有浓厚大气层与液态甲烷海洋的土星最大卫星",
+        "asset": "titan"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
+        "text": "木卫二",
+        "type": "cosmos",
+        "meaning": "在纵横交错的冰原外壳下隐藏着温暖巨大海洋的木星卫星",
+        "asset": "europa"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
+        "text": "海卫一",
+        "type": "cosmos",
+        "meaning": "沿逆行轨道环绕海王星并喷发液氮间歇泉的冰冷巨大卫星",
+        "asset": "triton"
       },
       {
-        "text": "ray",
-        "type": "天体现象",
-        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
+        "text": "土卫二",
+        "type": "cosmos",
+        "meaning": "表面反射强烈并从冰裂缝向太空喷射液态水汽羽流的土星冰卫星",
+        "asset": "enceladus"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
+        "text": "木卫三",
+        "type": "cosmos",
+        "meaning": "体积超越水星且拥有独立磁场的全太阳系最大天然卫星",
+        "asset": "ganymede"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "行星或天体绕其自转的假想中心轴线"
+        "text": "海王星",
+        "type": "cosmos",
+        "meaning": "太阳系最外层且伴随超音速狂暴飓风的深蓝色冰巨星",
+        "asset": "neptune"
       },
       {
-        "text": "phase",
-        "type": "天体现象",
-        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
+        "text": "彗星",
+        "type": "hazard",
+        "meaning": "接近太阳时冰雪升华并拖出长长辉光彗尾的冰冷天体",
+        "asset": "comet"
       },
       {
-        "text": "wave",
-        "type": "天体现象",
-        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
+        "text": "碎片",
+        "type": "hazard",
+        "meaning": "天体高速碰撞撞击产生的在危险轨道上飞行的坚硬碎块",
+        "asset": "fragment"
       },
       {
-        "text": "ship",
-        "type": "航天技术",
-        "meaning": "专为行星际航行设计的载人或自动航天飞船"
+        "text": "卫星",
+        "type": "tech",
+        "meaning": "在预定轨道上不知疲倦运行的人造通讯与科学观测航天器",
+        "asset": "satellite"
       },
       {
-        "text": "nova",
-        "type": "天体现象",
-        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
+        "text": "探测器",
+        "type": "tech",
+        "meaning": "飞往遥远行星与深空执行无人科学探测使命的自动化太空飞行器",
+        "asset": "probe"
       },
       {
-        "text": "target",
-        "type": "航天技术",
-        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
+        "text": "飞船",
+        "type": "tech",
+        "meaning": "配备姿态控制喷口与强大主推进引擎穿梭于太空间隙的航天载具",
+        "asset": "ship"
       },
       {
-        "text": "data",
-        "type": "航天技术",
-        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
+        "text": "空间站",
+        "type": "tech",
+        "meaning": "常年驻留微重力轨道并为航天员提供科研与生活保障的巨型轨道复合基地",
+        "asset": "space_station"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
+        "text": "太空货船",
+        "type": "tech",
+        "meaning": "穿行于采矿星带与太空定居点之间运送海量稀有矿石集装箱的重型星际货轮",
+        "asset": "freighter"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
+        "text": "月球",
+        "type": "cosmos",
+        "meaning": "环绕地球运行并影响海洋潮汐涨落的天然卫星",
+        "asset": "moon"
       }
     ],
     "cosmos": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太阳系中心的恒星，提供光热并维持太阳系的引力稳定"
+        "text": "恒星",
+        "type": "cosmos",
+        "meaning": "由核心剧烈热核聚变反应持续供能并向宇宙辐射刺目光热的等离子体天体",
+        "asset": "star"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "环绕地球运行的天然卫星，引发海洋潮汐并稳定地轴倾角"
+        "text": "星系",
+        "type": "cosmos",
+        "meaning": "由千百亿颗恒星、气体云与暗物质受万有引力紧密维系的浩瀚宇宙岛",
+        "asset": "galaxy"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "在太空中环绕行星和小行星运行的天然岩石或冰质卫星群"
+        "text": "星云",
+        "type": "cosmos",
+        "meaning": "弥漫于星际空间中孕育全新恒星胚胎与绚丽色彩的璀璨气体尘埃云",
+        "asset": "nebula"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "从地表仰望所见的天球穹顶，群星与星座闪耀其中"
+        "text": "超新星",
+        "type": "fenomeno",
+        "meaning": "大质量恒星演化末期发生剧烈大坍缩并短暂照亮整个星系的毁灭性大爆炸",
+        "asset": "supernova"
       },
       {
-        "text": "ray",
-        "type": "天体现象",
-        "meaning": "集中的电磁能量光束或放射性的宇宙星光"
+        "text": "脉冲星",
+        "type": "cosmos",
+        "meaning": "疯狂自转并如宇宙灯塔般向两极周期性扫射高能辐射束的超致密中子星",
+        "asset": "pulsar"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "环绕天体和星系的发光漫射气体与恒星环状结构"
+        "text": "类星体",
+        "type": "cosmos",
+        "meaning": "由处于早期宇宙的贪婪超大质量黑洞吸积盘驱动的高能极亮天体核心",
+        "asset": "quasar"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "行星或天体绕其自转的假想中心轴线"
+        "text": "磁星",
+        "type": "cosmos",
+        "meaning": "具备足以撕碎任何分子原子结构的宇宙极限强磁场的极端致密中子星",
+        "asset": "magnetar"
       },
       {
-        "text": "phase",
-        "type": "天体现象",
-        "meaning": "从地球观测到的月球或行星受阳光照射部分的盈亏位相"
+        "text": "系外行星",
+        "type": "cosmos",
+        "meaning": "在太阳系之外环绕其他恒星公转的神秘而遥远的地外行星",
+        "asset": "exoplanet"
       },
       {
-        "text": "wave",
-        "type": "天体现象",
-        "meaning": "如时空涟漪引力波般在宇宙中传播的能量振荡波动"
+        "text": "仙女座",
+        "type": "cosmos",
+        "meaning": "正以惊人速度向银河系迎面扑来并在数十亿年后发生大碰撞的巨型螺旋星系",
+        "asset": "andromeda"
       },
       {
-        "text": "ship",
-        "type": "航天技术",
-        "meaning": "专为行星际航行设计的载人或自动航天飞船"
+        "text": "银河",
+        "type": "cosmos",
+        "meaning": "横跨浩瀚夜空并孕育了太阳系与数千亿恒星的璀璨旋臂母星系",
+        "asset": "milky_way"
       },
       {
-        "text": "nova",
-        "type": "天体现象",
-        "meaning": "剧烈热核爆发导致亮度急剧增强的恒星爆发新星"
+        "text": "黑洞",
+        "type": "hazard",
+        "meaning": "中心引力强大到连宇宙最快的光子也无法逃逸的极端时空坍缩深渊",
+        "asset": "black_hole"
       },
       {
-        "text": "target",
-        "type": "航天技术",
-        "meaning": "为探测器设定的轨道探索目的地或天体航路点"
+        "text": "虫洞",
+        "type": "cosmos",
+        "meaning": "弯曲时空纤维并在瞬间连通宇宙两个遥远维度的爱因斯坦-罗森桥时空隧道",
+        "asset": "wormhole"
       },
       {
-        "text": "data",
-        "type": "航天技术",
-        "meaning": "空间望远镜穿越宇宙空间收集的科学遥测数据"
+        "text": "白矮星",
+        "type": "cosmos",
+        "meaning": "中低质量恒星褪去外层气体外壳后遗留下的地球大小致密炽热恒星遗骸",
+        "asset": "white_dwarf"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "星系间深渊虚空中极致深沉的深邃黑暗"
+        "text": "红巨星",
+        "type": "cosmos",
+        "meaning": "核心氢燃料耗尽后剧烈膨胀数百倍并吞噬内侧近地行星的垂暮巨型恒星",
+        "asset": "red_giant"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "公转行星绕其中心恒星运行一周所需的时间"
+        "text": "太阳",
+        "type": "cosmos",
+        "meaning": "太阳系中心的恒星，提供光、热和强大的引力支持",
+        "asset": "sun"
       }
     ]
   },

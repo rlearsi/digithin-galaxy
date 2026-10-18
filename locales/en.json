@@ -552,377 +552,452 @@
     {
       "text": "sun",
       "type": "cosmos",
-      "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+      "meaning": "Central star of our solar system providing light, heat and gravitational pull",
+      "asset": "sun"
     },
     {
       "text": "moon",
       "type": "cosmos",
-      "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+      "meaning": "Natural satellite orbiting the Earth influencing oceanic tidal forces",
+      "asset": "moon"
     },
     {
-      "text": "moons",
+      "text": "rock",
+      "type": "hazard",
+      "meaning": "Wandering space rock fragment travelling through the cosmos towards Earth",
+      "asset": "rock"
+    },
+    {
+      "text": "mercury",
       "type": "cosmos",
-      "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-    },
-    {
-      "text": "sky",
-      "type": "cosmos",
-      "meaning": "The celestial vault visible from surface where stars and constellations shine"
-    },
-    {
-      "text": "ray",
-      "type": "phenomenon",
-      "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-    },
-    {
-      "text": "halo",
-      "type": "cosmos",
-      "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-    },
-    {
-      "text": "axis",
-      "type": "cosmos",
-      "meaning": "Imaginary central line around which a planet or celestial body rotates"
-    },
-    {
-      "text": "phase",
-      "type": "phenomenon",
-      "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-    },
-    {
-      "text": "wave",
-      "type": "phenomenon",
-      "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-    },
-    {
-      "text": "ship",
-      "type": "tech",
-      "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-    },
-    {
-      "text": "nova",
-      "type": "phenomenon",
-      "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-    },
-    {
-      "text": "target",
-      "type": "tech",
-      "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-    },
-    {
-      "text": "data",
-      "type": "tech",
-      "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-    },
-    {
-      "text": "pitch",
-      "type": "cosmos",
-      "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-    },
-    {
-      "text": "year",
-      "type": "cosmos",
-      "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
-    },
-    {
-      "text": "vacuum",
-      "type": "cosmos",
-      "meaning": "Space devoid of atmospheric matter where the silent expanse of the cosmos reigns"
-    },
-    {
-      "text": "astro",
-      "type": "cosmos",
-      "meaning": "Any natural celestial body that inhabits the endless cosmic arena"
-    },
-    {
-      "text": "cosmos",
-      "type": "cosmos",
-      "meaning": "The ordered, harmonious, and infinite physical universe in all its vastness"
-    },
-    {
-      "text": "mars",
-      "type": "cosmos",
-      "meaning": "The fourth planet from the sun, famously known across history as the Red Planet"
+      "meaning": "The smallest planet in the solar system and closest to the searing Sun",
+      "asset": "mercury"
     },
     {
       "text": "venus",
       "type": "cosmos",
-      "meaning": "The second planet from the sun, the brightest celestial beacon in night sky"
+      "meaning": "The second planet from the Sun with dense atmosphere and runaway greenhouse heat",
+      "asset": "venus"
     },
     {
-      "text": "earth",
+      "text": "vesta",
+      "type": "hazard",
+      "meaning": "The second most massive asteroid in the belt featuring a colossal south polar impact crater",
+      "asset": "vesta"
+    },
+    {
+      "text": "mars",
       "type": "cosmos",
-      "meaning": "Our blue terrestrial home planet, the only known oasis of living liquid water"
+      "meaning": "The red planet coated in iron oxide dust and home to giant Olympus Mons",
+      "asset": "mars"
     },
     {
-      "text": "solar",
+      "text": "jupiter",
       "type": "cosmos",
-      "meaning": "Relating to the Sun, its stellar wind, coronal radiation and planetary domain"
+      "meaning": "The colossal gas giant of our system featuring the iconic Great Red Spot",
+      "asset": "jupiter"
     },
     {
-      "text": "probe",
-      "type": "tech",
-      "meaning": "Uncrewed scientific spacecraft sent to study uncharted atmospheres and worlds"
-    },
-    {
-      "text": "radar",
-      "type": "tech",
-      "meaning": "Radio-frequency detection system used to map planetary terrain and asteroids"
-    },
-    {
-      "text": "magma",
-      "type": "nature",
-      "meaning": "Extremely hot molten rock beneath the crust of geologically active planets"
-    },
-    {
-      "text": "cloud",
+      "text": "saturn",
       "type": "cosmos",
-      "meaning": "Dense interstellar molecular cloud of hydrogen and dust birthing new stars"
+      "meaning": "The striking gas giant adorned with majestic rings of pure ice and cosmic dust",
+      "asset": "saturn"
+    },
+    {
+      "text": "uranus",
+      "type": "cosmos",
+      "meaning": "A cyan ice giant rotating on its side wrapped in chilling methane clouds",
+      "asset": "uranus"
+    },
+    {
+      "text": "neptune",
+      "type": "cosmos",
+      "meaning": "The farthest planet from the Sun swept by the fiercest supersonic storms",
+      "asset": "neptune"
     },
     {
       "text": "pluto",
       "type": "cosmos",
-      "meaning": "Icy dwarf planet situated within the Kuiper Belt at the edge of the solar system"
+      "meaning": "Dwarf planet in the Kuiper Belt featuring a vast nitrogen ice heart plain",
+      "asset": "pluto"
     },
     {
-      "text": "orbit",
+      "text": "ceres",
       "type": "cosmos",
-      "meaning": "Curved gravitational path that a celestial body traces around a massive center"
+      "meaning": "The largest asteroid belt object between Mars and Jupiter classified as dwarf planet",
+      "asset": "ceres"
+    },
+    {
+      "text": "titan",
+      "type": "cosmos",
+      "meaning": "Saturn's largest moon cloaked in thick atmosphere and seas of liquid methane",
+      "asset": "titan"
+    },
+    {
+      "text": "phobos",
+      "type": "cosmos",
+      "meaning": "Irregular inner moon of Mars speeding in an orbit dangerously close to the surface",
+      "asset": "phobos"
+    },
+    {
+      "text": "deimos",
+      "type": "cosmos",
+      "meaning": "The smaller and outermost moon of Mars resembling a dark cratered asteroid",
+      "asset": "deimos"
+    },
+    {
+      "text": "europa",
+      "type": "cosmos",
+      "meaning": "Jupiter's icy moon concealing a vast liquid ocean beneath its fractured crust",
+      "asset": "europa"
+    },
+    {
+      "text": "io",
+      "type": "cosmos",
+      "meaning": "The most volcanically active body in our system covered in erupting sulfur plumes",
+      "asset": "io"
+    },
+    {
+      "text": "triton",
+      "type": "cosmos",
+      "meaning": "Neptune's frigid retrograde moon spewing cryovolcanic nitrogen geysers",
+      "asset": "triton"
+    },
+    {
+      "text": "callisto",
+      "type": "cosmos",
+      "meaning": "Jupiter's heavily cratered moon preserving the oldest ancient surface in the system",
+      "asset": "callisto"
+    },
+    {
+      "text": "charon",
+      "type": "cosmos",
+      "meaning": "Pluto's massive companion moon forming a mutually locked binary dwarf system",
+      "asset": "charon"
+    },
+    {
+      "text": "enceladus",
+      "type": "cosmos",
+      "meaning": "Saturn's reflective moon venting subsurface ocean plumes directly into space",
+      "asset": "enceladus"
+    },
+    {
+      "text": "ganymede",
+      "type": "cosmos",
+      "meaning": "The largest moon in the entire solar system exceeding Mercury in size",
+      "asset": "ganymede"
+    },
+    {
+      "text": "asteroid",
+      "type": "hazard",
+      "meaning": "Rocky and metallic planetary leftover traversing orbits around the Sun",
+      "asset": "asteroid"
     },
     {
       "text": "comet",
-      "type": "cosmos",
-      "meaning": "Icy celestial traveler that outgasses a radiant glowing tail near stellar heat"
-    },
-    {
-      "text": "pulsar",
-      "type": "cosmos",
-      "meaning": "Rapidly rotating magnetized neutron star sweeping rhythmic beams across space"
-    },
-    {
-      "text": "quasar",
-      "type": "cosmos",
-      "meaning": "Extremely luminous distant active galactic nucleus powered by a supermassive black hole"
-    },
-    {
-      "text": "corona",
-      "type": "cosmos",
-      "meaning": "The outermost, million-degree plasma envelope of the solar atmosphere"
+      "type": "hazard",
+      "meaning": "Icy cosmic snowball that outgasses a glowing tail when approaching solar heat",
+      "asset": "comet"
     },
     {
       "text": "meteor",
-      "type": "cosmos",
-      "meaning": "Streak of light produced when a space fragment incinerates in an atmosphere"
+      "type": "hazard",
+      "meaning": "Streak of ionized light ignited as a space fragment incinerates in atmosphere",
+      "asset": "meteor"
     },
     {
-      "text": "optics",
-      "type": "tech",
-      "meaning": "The science of light and reflection harnessed by deep space orbital telescopes"
+      "text": "meteorite",
+      "type": "hazard",
+      "meaning": "Extraterrestrial rock survivor that endures atmospheric entry and strikes ground",
+      "asset": "meteorite"
     },
     {
-      "text": "space",
-      "type": "cosmos",
-      "meaning": "The boundless three-dimensional expanse where planets, stars, and galaxies drift"
+      "text": "bolide",
+      "type": "hazard",
+      "meaning": "Extremely bright exploding fireball meteor detonating in the sky",
+      "asset": "bolide"
     },
     {
-      "text": "aurora",
-      "type": "phenomenon",
-      "meaning": "Ethereal atmospheric light display ignited by solar wind particles hitting magnetosphere"
+      "text": "fragment",
+      "type": "hazard",
+      "meaning": "Collision shrapnel piece navigating a dangerous orbital path through space",
+      "asset": "fragment"
     },
     {
-      "text": "zenith",
-      "type": "cosmos",
-      "meaning": "The imaginary celestial point located directly overhead of an observer"
+      "text": "aerolite",
+      "type": "hazard",
+      "meaning": "Stony meteorite composed mainly of silicate minerals and ancient rock",
+      "asset": "aerolite"
     },
     {
-      "text": "hubble",
-      "type": "tech",
-      "meaning": "Legendary orbital space observatory that revolutionized human understanding of the cosmos"
+      "text": "meteoroid",
+      "type": "hazard",
+      "meaning": "Small rocky celestial body traveling in space before atmospheric encounter",
+      "asset": "meteoroid"
     },
     {
-      "text": "dust",
-      "type": "cosmos",
-      "meaning": "Microscopic mineral grains and cosmic soot dispersed throughout galactic spirals"
-    },
-    {
-      "text": "hole",
-      "type": "cosmos",
-      "meaning": "Extreme region of gravitational curvature collapsing spacetime into a singularity"
-    },
-    {
-      "text": "star",
-      "type": "cosmos",
-      "meaning": "Luminous sphere of incandescent plasma powered by thermonuclear fusion at its core"
-    },
-    {
-      "text": "planet",
-      "type": "cosmos",
-      "meaning": "Major spherical celestial body orbiting a star that has cleared its orbital path"
-    },
-    {
-      "text": "galaxy",
-      "type": "cosmos",
-      "meaning": "Colossal gravitationally bound system of billions of stars, dark matter, and nebulae"
-    },
-    {
-      "text": "galaxies",
-      "type": "cosmos",
-      "meaning": "Billions of cosmic island universes distributed throughout the cosmic web"
-    },
-    {
-      "text": "universe",
-      "type": "cosmos",
-      "meaning": "The totality of all physical matter, energy, space, time, and physical laws"
-    },
-    {
-      "text": "nebula",
-      "type": "cosmos",
-      "meaning": "Vast interstellar cloud of glowing ionized gas, stellar remnants, and cosmic dust"
-    },
-    {
-      "text": "gravity",
-      "type": "phenomenon",
-      "meaning": "Fundamental attractive force bending spacetime proportional to mass and energy"
-    },
-    {
-      "text": "supernova",
-      "type": "phenomenon",
-      "meaning": "Colossal explosion of a dying massive star briefly outshining entire galaxies"
-    },
-    {
-      "text": "astronaut",
-      "type": "tech",
-      "meaning": "Highly trained spacefarer traveling into orbital and interplanetary missions"
-    },
-    {
-      "text": "astronomy",
-      "type": "science",
-      "meaning": "The scientific discipline studying celestial bodies, physical cosmos, and deep space"
-    },
-    {
-      "text": "exoplanet",
-      "type": "cosmos",
-      "meaning": "A planet orbiting a distant star situated outside our local solar system"
-    },
-    {
-      "text": "exoplanets",
-      "type": "cosmos",
-      "meaning": "Alien worlds revolving around distant stars across the Milky Way galaxy"
+      "text": "boulder",
+      "type": "hazard",
+      "meaning": "Colossal rocky monolith dislodged from the surface of a giant asteroid",
+      "asset": "boulder"
     },
     {
       "text": "satellite",
       "type": "tech",
-      "meaning": "Artificial or natural celestial orbiter circling a planet for research and comms"
+      "meaning": "Orbital technological spacecraft relaying sensors and data around Earth",
+      "asset": "satellite"
     },
     {
-      "text": "constellation",
-      "type": "cosmos",
-      "meaning": "Recognizable stellar grouping mapped across the night sky by astronomical chart"
+      "text": "probe",
+      "type": "tech",
+      "meaning": "Unmanned robotic spacecraft deployed to explore distant extraterrestrial frontiers",
+      "asset": "probe"
     },
     {
       "text": "telescope",
       "type": "tech",
-      "meaning": "Optical instrument gathering light and radiation to observe distant celestial bodies"
+      "meaning": "Precision optical instrument capturing cosmic light from distant galaxies",
+      "asset": "telescope"
+    },
+    {
+      "text": "hubble",
+      "type": "tech",
+      "meaning": "The iconic orbital space telescope that revolutionized human view of deep cosmos",
+      "asset": "hubble"
+    },
+    {
+      "text": "webb",
+      "type": "tech",
+      "meaning": "The premier infrared space observatory peering back at the universe's dawn",
+      "asset": "webb"
+    },
+    {
+      "text": "voyager",
+      "type": "tech",
+      "meaning": "The interstellar messenger probe that ventured beyond our solar threshold",
+      "asset": "voyager"
+    },
+    {
+      "text": "sputnik",
+      "type": "tech",
+      "meaning": "The historical metal satellite that heralded the dawn of human space exploration",
+      "asset": "sputnik"
+    },
+    {
+      "text": "rocket",
+      "type": "tech",
+      "meaning": "Mighty reaction thruster vehicle roaring upwards to overcome planetary gravity",
+      "asset": "rocket"
+    },
+    {
+      "text": "capsule",
+      "type": "tech",
+      "meaning": "Pressurized aerodynamic craft fitted with heat shields for orbital re-entry",
+      "asset": "capsule"
+    },
+    {
+      "text": "module",
+      "type": "tech",
+      "meaning": "Interchangeable structural compartment of an expanding orbital base",
+      "asset": "module"
+    },
+    {
+      "text": "rover",
+      "type": "tech",
+      "meaning": "Automated wheeled exploration rover roving alien dusty surface terrains",
+      "asset": "rover"
+    },
+    {
+      "text": "ship",
+      "type": "tech",
+      "meaning": "Spacefaring vessel navigated by maneuvering thrusters across the solar sea",
+      "asset": "ship"
+    },
+    {
+      "text": "drone",
+      "type": "tech",
+      "meaning": "Lightweight autonomous scout craft scanning orbital paths for hazards",
+      "asset": "drone"
     },
     {
       "text": "starship",
       "type": "tech",
-      "meaning": "Interplanetary spacecraft capable of navigating across vast interstellar gulfs"
+      "meaning": "Colossal long-range star cruiser outfitted with advanced stellar warp drives",
+      "asset": "starship"
     },
     {
-      "text": "atmosphere",
-      "type": "cosmos",
-      "meaning": "Gaseous envelope retained by gravity surrounding a planet or celestial sphere"
-    },
-    {
-      "text": "magnetosphere",
-      "type": "phenomenon",
-      "meaning": "Magnetic planetary shield deflecting high-energy solar winds and radiation"
-    },
-    {
-      "text": "radiation",
-      "type": "phenomenon",
-      "meaning": "High-energy electromagnetic waves or subatomic particles traversing the cosmos"
-    },
-    {
-      "text": "spectrum",
-      "type": "science",
-      "meaning": "The rainbow dispersion of light revealing temperature and chemical composition"
-    },
-    {
-      "text": "andromeda",
-      "type": "cosmos",
-      "meaning": "The nearest major spiral galaxy heading on a gravitational collision course with ours"
-    },
-    {
-      "text": "heliosphere",
-      "type": "cosmos",
-      "meaning": "Enormous protective bubble carved in interstellar space by outward solar winds"
-    },
-    {
-      "text": "antimatter",
-      "type": "science",
-      "meaning": "Matter composed of antiparticles that violently annihilates on contact with normal matter"
-    },
-    {
-      "text": "singularity",
-      "type": "cosmos",
-      "meaning": "Center of a black hole where gravitational density approaches infinity and physics breaks"
-    },
-    {
-      "text": "multiverse",
-      "type": "cosmos",
-      "meaning": "Theoretical ensemble of parallel universes containing infinite spacetime bubbles"
-    },
-    {
-      "text": "light-year",
-      "type": "science",
-      "meaning": "Astronomical distance traveled by a beam of light in vacuum over one solar year"
-    },
-    {
-      "text": "black-hole",
-      "type": "cosmos",
-      "meaning": "Cosmic region whose gravitational field is so intense that nothing, not even light, escapes"
-    },
-    {
-      "text": "stardust",
-      "type": "cosmos",
-      "meaning": "Supernova ash and heavy elements that seed the formation of rocky worlds and life"
-    },
-    {
-      "text": "dark-matter",
-      "type": "cosmos",
-      "meaning": "Hypothetical invisible substance comprising the majority of matter in the universe"
-    },
-    {
-      "text": "dark-energy",
-      "type": "cosmos",
-      "meaning": "Pervasive cosmic force driving the accelerating expansion of observable spacetime"
-    },
-    {
-      "text": "wormhole",
-      "type": "cosmos",
-      "meaning": "Theoretical topological shortcut connecting disparate regions of spacetime"
-    },
-    {
-      "text": "speed-of-light",
-      "type": "science",
-      "meaning": "Universal velocity constant of 300,000 kilometers per second in cosmic vacuum"
+      "text": "shuttle",
+      "type": "tech",
+      "meaning": "Reusable delta-wing orbiter capable of gliding back down to runway touchdown",
+      "asset": "space_shuttle"
     },
     {
       "text": "space-station",
       "type": "tech",
-      "meaning": "Habitable artificial orbital satellite where scientists live and conduct zero-g research"
+      "meaning": "Permanent orbital habitat housing scientific crew members in microgravity",
+      "asset": "space_station"
     },
     {
-      "text": "event-horizon",
+      "text": "star",
       "type": "cosmos",
-      "meaning": "The point of no return threshold enclosing a black hole beyond which nothing escapes"
+      "meaning": "Luminous celestial sphere of blistering plasma powered by nuclear fusion core",
+      "asset": "star"
+    },
+    {
+      "text": "galaxy",
+      "type": "cosmos",
+      "meaning": "Colossal gravitational whirlpool uniting hundreds of billions of shining stars",
+      "asset": "galaxy"
+    },
+    {
+      "text": "nebula",
+      "type": "cosmos",
+      "meaning": "Monumental interstellar cradle of dust and glowing gas where baby stars ignite",
+      "asset": "nebula"
+    },
+    {
+      "text": "supernova",
+      "type": "fenomeno",
+      "meaning": "Cataclysmic stellar detonation briefly outshining the light of entire galaxies",
+      "asset": "supernova"
+    },
+    {
+      "text": "pulsar",
+      "type": "cosmos",
+      "meaning": "Hyperdense neutron star spinning wildly and sweeping beams of rhythmic radiation",
+      "asset": "pulsar"
+    },
+    {
+      "text": "quasar",
+      "type": "cosmos",
+      "meaning": "Primeval luminous galaxy core fed by an insatiable supermassive black hole",
+      "asset": "quasar"
+    },
+    {
+      "text": "magnetar",
+      "type": "cosmos",
+      "meaning": "Exotic neutron star boasting the most terrifying magnetic fields in nature",
+      "asset": "magnetar"
+    },
+    {
+      "text": "exoplanet",
+      "type": "cosmos",
+      "meaning": "Alien planet traversing an alien orbit around a foreign stellar sun",
+      "asset": "exoplanet"
+    },
+    {
+      "text": "andromeda",
+      "type": "cosmos",
+      "meaning": "Our colossal spiral sister galaxy hurtling towards mutual cosmic convergence",
+      "asset": "andromeda"
     },
     {
       "text": "milky-way",
       "type": "cosmos",
-      "meaning": "Our home barred spiral galaxy holding hundreds of billions of suns and solar systems"
+      "meaning": "Our sparkling spiral mother galaxy cradle sheltering hundreds of billions of suns",
+      "asset": "milky_way"
+    },
+    {
+      "text": "radiation",
+      "type": "hazard",
+      "meaning": "High-energy particles and electromagnetic rays streaming through the stellar expanse",
+      "asset": "radiation"
+    },
+    {
+      "text": "antimatter",
+      "type": "hazard",
+      "meaning": "Mirrored particle substance triggering complete explosive annihilation upon contact",
+      "asset": "antimatter"
+    },
+    {
+      "text": "black-hole",
+      "type": "hazard",
+      "meaning": "Gravitational abyss with gravity so fierce that not even light photons can escape",
+      "asset": "black_hole"
+    },
+    {
+      "text": "wormhole",
+      "type": "cosmos",
+      "meaning": "Spacetime bridge warping the cosmic fabric to link two distant sectors instantly",
+      "asset": "wormhole"
+    },
+    {
+      "text": "astronaut",
+      "type": "tech",
+      "meaning": "Trained space voyager clad in pressurized EVA gear exploring beyond Earth",
+      "asset": "astronaut"
+    },
+    {
+      "text": "cosmonaut",
+      "type": "tech",
+      "meaning": "Certified cosmic navigator steering space vessels through orbital currents",
+      "asset": "cosmonaut"
+    },
+    {
+      "text": "white-dwarf",
+      "type": "cosmos",
+      "meaning": "Dense glowing cinder core left behind after a sun shedding outer gas layers",
+      "asset": "white_dwarf"
+    },
+    {
+      "text": "red-giant",
+      "type": "cosmos",
+      "meaning": "Elderly swelling star bloated to monstrous proportions swallowing inner planets",
+      "asset": "red_giant"
+    },
+    {
+      "text": "solar-probe",
+      "type": "tech",
+      "meaning": "Heat-shielded probe diving deep into the blistering solar corona atmosphere",
+      "asset": "solar_probe"
+    },
+    {
+      "text": "lunar-module",
+      "type": "tech",
+      "meaning": "Spidery lander craft engineered to touch down gently on cratered lunar soil",
+      "asset": "lunar_module"
+    },
+    {
+      "text": "giant-asteroid",
+      "type": "hazard",
+      "meaning": "Multi-kilometer space megastructure rock capable of extinction-level impacts",
+      "asset": "giant_asteroid"
+    },
+    {
+      "text": "orbital-base",
+      "type": "tech",
+      "meaning": "Geostationary space hub station managing heavy starship docking and refuel",
+      "asset": "orbital_station"
+    },
+    {
+      "text": "trojan-asteroid",
+      "type": "hazard",
+      "meaning": "Rock locked in gravitational balance at planetary Lagrange orbital pockets",
+      "asset": "trojan_asteroid"
+    },
+    {
+      "text": "orbital-telescope",
+      "type": "tech",
+      "meaning": "Atmosphere-free celestial spyglass photographing pristine cosmic depths",
+      "asset": "orbital_telescope"
+    },
+    {
+      "text": "space-capsule",
+      "type": "tech",
+      "meaning": "Autonomous crew transport capsule engineered for robust interplanetary transit",
+      "asset": "space_capsule"
+    },
+    {
+      "text": "rover-vehicle",
+      "type": "tech",
+      "meaning": "Robotic all-terrain planetary crawler drilling rock cores on alien surfaces",
+      "asset": "rover_vehicle"
+    },
+    {
+      "text": "space-freighter",
+      "type": "tech",
+      "meaning": "Massive interstellar merchant hauler shipping raw mineral ore containers",
+      "asset": "freighter"
     }
   ],
   "bossWords": {
@@ -930,924 +1005,1104 @@
       {
         "text": "sun",
         "type": "cosmos",
-        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+        "meaning": "Central star of our solar system providing light, heat and gravitational pull",
+        "asset": "sun"
       },
       {
-        "text": "moon",
+        "text": "rock",
+        "type": "hazard",
+        "meaning": "Wandering space rock fragment travelling through the cosmos towards Earth",
+        "asset": "rock"
+      },
+      {
+        "text": "mercury",
         "type": "cosmos",
-        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+        "meaning": "The smallest planet in the solar system and closest to the searing Sun",
+        "asset": "mercury"
       },
       {
-        "text": "moons",
+        "text": "venus",
         "type": "cosmos",
-        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+        "meaning": "The second planet from the Sun with dense atmosphere and runaway greenhouse heat",
+        "asset": "venus"
       },
       {
-        "text": "sky",
+        "text": "vesta",
+        "type": "hazard",
+        "meaning": "The second most massive asteroid in the belt featuring a colossal south polar impact crater",
+        "asset": "vesta"
+      },
+      {
+        "text": "mars",
         "type": "cosmos",
-        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+        "meaning": "The red planet coated in iron oxide dust and home to giant Olympus Mons",
+        "asset": "mars"
       },
       {
-        "text": "ray",
-        "type": "phenomenon",
-        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-      },
-      {
-        "text": "halo",
+        "text": "jupiter",
         "type": "cosmos",
-        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+        "meaning": "The colossal gas giant of our system featuring the iconic Great Red Spot",
+        "asset": "jupiter"
       },
       {
-        "text": "axis",
+        "text": "saturn",
         "type": "cosmos",
-        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+        "meaning": "The striking gas giant adorned with majestic rings of pure ice and cosmic dust",
+        "asset": "saturn"
       },
       {
-        "text": "phase",
-        "type": "phenomenon",
-        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-      },
-      {
-        "text": "wave",
-        "type": "phenomenon",
-        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-      },
-      {
-        "text": "ship",
-        "type": "tech",
-        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-      },
-      {
-        "text": "nova",
-        "type": "phenomenon",
-        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-      },
-      {
-        "text": "target",
-        "type": "tech",
-        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-      },
-      {
-        "text": "data",
-        "type": "tech",
-        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-      },
-      {
-        "text": "pitch",
+        "text": "uranus",
         "type": "cosmos",
-        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+        "meaning": "A cyan ice giant rotating on its side wrapped in chilling methane clouds",
+        "asset": "uranus"
       },
       {
-        "text": "year",
+        "text": "neptune",
         "type": "cosmos",
-        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+        "meaning": "The farthest planet from the Sun swept by the fiercest supersonic storms",
+        "asset": "neptune"
+      },
+      {
+        "text": "asteroid",
+        "type": "hazard",
+        "meaning": "Rocky and metallic planetary leftover traversing orbits around the Sun",
+        "asset": "asteroid"
+      },
+      {
+        "text": "comet",
+        "type": "hazard",
+        "meaning": "Icy cosmic snowball that outgasses a glowing tail when approaching solar heat",
+        "asset": "comet"
+      },
+      {
+        "text": "meteor",
+        "type": "hazard",
+        "meaning": "Streak of ionized light ignited as a space fragment incinerates in atmosphere",
+        "asset": "meteor"
+      },
+      {
+        "text": "meteorite",
+        "type": "hazard",
+        "meaning": "Extraterrestrial rock survivor that endures atmospheric entry and strikes ground",
+        "asset": "meteorite"
+      },
+      {
+        "text": "bolide",
+        "type": "hazard",
+        "meaning": "Extremely bright exploding fireball meteor detonating in the sky",
+        "asset": "bolide"
       }
     ],
     "alien_hive": [
       {
-        "text": "sun",
+        "text": "rock",
+        "type": "hazard",
+        "meaning": "Wandering space rock fragment travelling through the cosmos towards Earth",
+        "asset": "rock"
+      },
+      {
+        "text": "phobos",
         "type": "cosmos",
-        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+        "meaning": "Irregular inner moon of Mars speeding in an orbit dangerously close to the surface",
+        "asset": "phobos"
       },
       {
-        "text": "moon",
+        "text": "deimos",
         "type": "cosmos",
-        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+        "meaning": "The smaller and outermost moon of Mars resembling a dark cratered asteroid",
+        "asset": "deimos"
       },
       {
-        "text": "moons",
-        "type": "cosmos",
-        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+        "text": "asteroid",
+        "type": "hazard",
+        "meaning": "Rocky and metallic planetary leftover traversing orbits around the Sun",
+        "asset": "asteroid"
       },
       {
-        "text": "sky",
-        "type": "cosmos",
-        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+        "text": "comet",
+        "type": "hazard",
+        "meaning": "Icy cosmic snowball that outgasses a glowing tail when approaching solar heat",
+        "asset": "comet"
       },
       {
-        "text": "ray",
-        "type": "phenomenon",
-        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+        "text": "meteor",
+        "type": "hazard",
+        "meaning": "Streak of ionized light ignited as a space fragment incinerates in atmosphere",
+        "asset": "meteor"
       },
       {
-        "text": "halo",
-        "type": "cosmos",
-        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+        "text": "meteorite",
+        "type": "hazard",
+        "meaning": "Extraterrestrial rock survivor that endures atmospheric entry and strikes ground",
+        "asset": "meteorite"
       },
       {
-        "text": "axis",
-        "type": "cosmos",
-        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+        "text": "bolide",
+        "type": "hazard",
+        "meaning": "Extremely bright exploding fireball meteor detonating in the sky",
+        "asset": "bolide"
       },
       {
-        "text": "phase",
-        "type": "phenomenon",
-        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+        "text": "fragment",
+        "type": "hazard",
+        "meaning": "Collision shrapnel piece navigating a dangerous orbital path through space",
+        "asset": "fragment"
       },
       {
-        "text": "wave",
-        "type": "phenomenon",
-        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+        "text": "aerolite",
+        "type": "hazard",
+        "meaning": "Stony meteorite composed mainly of silicate minerals and ancient rock",
+        "asset": "aerolite"
       },
       {
-        "text": "ship",
+        "text": "meteoroid",
+        "type": "hazard",
+        "meaning": "Small rocky celestial body traveling in space before atmospheric encounter",
+        "asset": "meteoroid"
+      },
+      {
+        "text": "boulder",
+        "type": "hazard",
+        "meaning": "Colossal rocky monolith dislodged from the surface of a giant asteroid",
+        "asset": "boulder"
+      },
+      {
+        "text": "giant-asteroid",
+        "type": "hazard",
+        "meaning": "Multi-kilometer space megastructure rock capable of extinction-level impacts",
+        "asset": "giant_asteroid"
+      },
+      {
+        "text": "trojan-asteroid",
+        "type": "hazard",
+        "meaning": "Rock locked in gravitational balance at planetary Lagrange orbital pockets",
+        "asset": "trojan_asteroid"
+      },
+      {
+        "text": "drone",
         "type": "tech",
-        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-      },
-      {
-        "text": "nova",
-        "type": "phenomenon",
-        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-      },
-      {
-        "text": "target",
-        "type": "tech",
-        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-      },
-      {
-        "text": "data",
-        "type": "tech",
-        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-      },
-      {
-        "text": "pitch",
-        "type": "cosmos",
-        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-      },
-      {
-        "text": "year",
-        "type": "cosmos",
-        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+        "meaning": "Lightweight autonomous scout craft scanning orbital paths for hazards",
+        "asset": "drone"
       }
     ],
     "alien_psionic": [
       {
-        "text": "sun",
+        "text": "nebula",
         "type": "cosmos",
-        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+        "meaning": "Monumental interstellar cradle of dust and glowing gas where baby stars ignite",
+        "asset": "nebula"
       },
       {
-        "text": "moon",
+        "text": "supernova",
+        "type": "fenomeno",
+        "meaning": "Cataclysmic stellar detonation briefly outshining the light of entire galaxies",
+        "asset": "supernova"
+      },
+      {
+        "text": "pulsar",
         "type": "cosmos",
-        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+        "meaning": "Hyperdense neutron star spinning wildly and sweeping beams of rhythmic radiation",
+        "asset": "pulsar"
       },
       {
-        "text": "moons",
+        "text": "quasar",
         "type": "cosmos",
-        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+        "meaning": "Primeval luminous galaxy core fed by an insatiable supermassive black hole",
+        "asset": "quasar"
       },
       {
-        "text": "sky",
+        "text": "magnetar",
         "type": "cosmos",
-        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+        "meaning": "Exotic neutron star boasting the most terrifying magnetic fields in nature",
+        "asset": "magnetar"
       },
       {
-        "text": "ray",
-        "type": "phenomenon",
-        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-      },
-      {
-        "text": "halo",
+        "text": "exoplanet",
         "type": "cosmos",
-        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+        "meaning": "Alien planet traversing an alien orbit around a foreign stellar sun",
+        "asset": "exoplanet"
       },
       {
-        "text": "axis",
+        "text": "andromeda",
         "type": "cosmos",
-        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+        "meaning": "Our colossal spiral sister galaxy hurtling towards mutual cosmic convergence",
+        "asset": "andromeda"
       },
       {
-        "text": "phase",
-        "type": "phenomenon",
-        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-      },
-      {
-        "text": "wave",
-        "type": "phenomenon",
-        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-      },
-      {
-        "text": "ship",
-        "type": "tech",
-        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-      },
-      {
-        "text": "nova",
-        "type": "phenomenon",
-        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-      },
-      {
-        "text": "target",
-        "type": "tech",
-        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-      },
-      {
-        "text": "data",
-        "type": "tech",
-        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-      },
-      {
-        "text": "pitch",
+        "text": "milky-way",
         "type": "cosmos",
-        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+        "meaning": "Our sparkling spiral mother galaxy cradle sheltering hundreds of billions of suns",
+        "asset": "milky_way"
       },
       {
-        "text": "year",
+        "text": "radiation",
+        "type": "hazard",
+        "meaning": "High-energy particles and electromagnetic rays streaming through the stellar expanse",
+        "asset": "radiation"
+      },
+      {
+        "text": "antimatter",
+        "type": "hazard",
+        "meaning": "Mirrored particle substance triggering complete explosive annihilation upon contact",
+        "asset": "antimatter"
+      },
+      {
+        "text": "black-hole",
+        "type": "hazard",
+        "meaning": "Gravitational abyss with gravity so fierce that not even light photons can escape",
+        "asset": "black_hole"
+      },
+      {
+        "text": "wormhole",
         "type": "cosmos",
-        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+        "meaning": "Spacetime bridge warping the cosmic fabric to link two distant sectors instantly",
+        "asset": "wormhole"
+      },
+      {
+        "text": "white-dwarf",
+        "type": "cosmos",
+        "meaning": "Dense glowing cinder core left behind after a sun shedding outer gas layers",
+        "asset": "white_dwarf"
+      },
+      {
+        "text": "red-giant",
+        "type": "cosmos",
+        "meaning": "Elderly swelling star bloated to monstrous proportions swallowing inner planets",
+        "asset": "red_giant"
+      },
+      {
+        "text": "star",
+        "type": "cosmos",
+        "meaning": "Luminous celestial sphere of blistering plasma powered by nuclear fusion core",
+        "asset": "star"
       }
     ],
     "alien_warlord": [
       {
-        "text": "sun",
-        "type": "cosmos",
-        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+        "text": "rocket",
+        "type": "tech",
+        "meaning": "Mighty reaction thruster vehicle roaring upwards to overcome planetary gravity",
+        "asset": "rocket"
       },
       {
-        "text": "moon",
-        "type": "cosmos",
-        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+        "text": "capsule",
+        "type": "tech",
+        "meaning": "Pressurized aerodynamic craft fitted with heat shields for orbital re-entry",
+        "asset": "capsule"
       },
       {
-        "text": "moons",
-        "type": "cosmos",
-        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+        "text": "module",
+        "type": "tech",
+        "meaning": "Interchangeable structural compartment of an expanding orbital base",
+        "asset": "module"
       },
       {
-        "text": "sky",
-        "type": "cosmos",
-        "meaning": "The celestial vault visible from surface where stars and constellations shine"
-      },
-      {
-        "text": "ray",
-        "type": "phenomenon",
-        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-      },
-      {
-        "text": "halo",
-        "type": "cosmos",
-        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-      },
-      {
-        "text": "axis",
-        "type": "cosmos",
-        "meaning": "Imaginary central line around which a planet or celestial body rotates"
-      },
-      {
-        "text": "phase",
-        "type": "phenomenon",
-        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-      },
-      {
-        "text": "wave",
-        "type": "phenomenon",
-        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+        "text": "rover",
+        "type": "tech",
+        "meaning": "Automated wheeled exploration rover roving alien dusty surface terrains",
+        "asset": "rover"
       },
       {
         "text": "ship",
         "type": "tech",
-        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+        "meaning": "Spacefaring vessel navigated by maneuvering thrusters across the solar sea",
+        "asset": "ship"
       },
       {
-        "text": "nova",
-        "type": "phenomenon",
-        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-      },
-      {
-        "text": "target",
+        "text": "drone",
         "type": "tech",
-        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+        "meaning": "Lightweight autonomous scout craft scanning orbital paths for hazards",
+        "asset": "drone"
       },
       {
-        "text": "data",
+        "text": "starship",
         "type": "tech",
-        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+        "meaning": "Colossal long-range star cruiser outfitted with advanced stellar warp drives",
+        "asset": "starship"
       },
       {
-        "text": "pitch",
-        "type": "cosmos",
-        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+        "text": "shuttle",
+        "type": "tech",
+        "meaning": "Reusable delta-wing orbiter capable of gliding back down to runway touchdown",
+        "asset": "space_shuttle"
       },
       {
-        "text": "year",
-        "type": "cosmos",
-        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+        "text": "space-station",
+        "type": "tech",
+        "meaning": "Permanent orbital habitat housing scientific crew members in microgravity",
+        "asset": "space_station"
+      },
+      {
+        "text": "astronaut",
+        "type": "tech",
+        "meaning": "Trained space voyager clad in pressurized EVA gear exploring beyond Earth",
+        "asset": "astronaut"
+      },
+      {
+        "text": "cosmonaut",
+        "type": "tech",
+        "meaning": "Certified cosmic navigator steering space vessels through orbital currents",
+        "asset": "cosmonaut"
+      },
+      {
+        "text": "solar-probe",
+        "type": "tech",
+        "meaning": "Heat-shielded probe diving deep into the blistering solar corona atmosphere",
+        "asset": "solar_probe"
+      },
+      {
+        "text": "lunar-module",
+        "type": "tech",
+        "meaning": "Spidery lander craft engineered to touch down gently on cratered lunar soil",
+        "asset": "lunar_module"
+      },
+      {
+        "text": "space-capsule",
+        "type": "tech",
+        "meaning": "Autonomous crew transport capsule engineered for robust interplanetary transit",
+        "asset": "space_capsule"
+      },
+      {
+        "text": "space-freighter",
+        "type": "tech",
+        "meaning": "Massive interstellar merchant hauler shipping raw mineral ore containers",
+        "asset": "freighter"
       }
     ],
     "alien_darkmatter": [
       {
-        "text": "sun",
+        "text": "pulsar",
         "type": "cosmos",
-        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+        "meaning": "Hyperdense neutron star spinning wildly and sweeping beams of rhythmic radiation",
+        "asset": "pulsar"
       },
       {
-        "text": "moon",
+        "text": "quasar",
         "type": "cosmos",
-        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+        "meaning": "Primeval luminous galaxy core fed by an insatiable supermassive black hole",
+        "asset": "quasar"
       },
       {
-        "text": "moons",
+        "text": "magnetar",
         "type": "cosmos",
-        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+        "meaning": "Exotic neutron star boasting the most terrifying magnetic fields in nature",
+        "asset": "magnetar"
       },
       {
-        "text": "sky",
+        "text": "radiation",
+        "type": "hazard",
+        "meaning": "High-energy particles and electromagnetic rays streaming through the stellar expanse",
+        "asset": "radiation"
+      },
+      {
+        "text": "antimatter",
+        "type": "hazard",
+        "meaning": "Mirrored particle substance triggering complete explosive annihilation upon contact",
+        "asset": "antimatter"
+      },
+      {
+        "text": "black-hole",
+        "type": "hazard",
+        "meaning": "Gravitational abyss with gravity so fierce that not even light photons can escape",
+        "asset": "black_hole"
+      },
+      {
+        "text": "wormhole",
         "type": "cosmos",
-        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+        "meaning": "Spacetime bridge warping the cosmic fabric to link two distant sectors instantly",
+        "asset": "wormhole"
       },
       {
-        "text": "ray",
-        "type": "phenomenon",
-        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-      },
-      {
-        "text": "halo",
+        "text": "nebula",
         "type": "cosmos",
-        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+        "meaning": "Monumental interstellar cradle of dust and glowing gas where baby stars ignite",
+        "asset": "nebula"
       },
       {
-        "text": "axis",
+        "text": "supernova",
+        "type": "fenomeno",
+        "meaning": "Cataclysmic stellar detonation briefly outshining the light of entire galaxies",
+        "asset": "supernova"
+      },
+      {
+        "text": "asteroid",
+        "type": "hazard",
+        "meaning": "Rocky and metallic planetary leftover traversing orbits around the Sun",
+        "asset": "asteroid"
+      },
+      {
+        "text": "bolide",
+        "type": "hazard",
+        "meaning": "Extremely bright exploding fireball meteor detonating in the sky",
+        "asset": "bolide"
+      },
+      {
+        "text": "fragment",
+        "type": "hazard",
+        "meaning": "Collision shrapnel piece navigating a dangerous orbital path through space",
+        "asset": "fragment"
+      },
+      {
+        "text": "white-dwarf",
         "type": "cosmos",
-        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+        "meaning": "Dense glowing cinder core left behind after a sun shedding outer gas layers",
+        "asset": "white_dwarf"
       },
       {
-        "text": "phase",
-        "type": "phenomenon",
-        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-      },
-      {
-        "text": "wave",
-        "type": "phenomenon",
-        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-      },
-      {
-        "text": "ship",
-        "type": "tech",
-        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-      },
-      {
-        "text": "nova",
-        "type": "phenomenon",
-        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-      },
-      {
-        "text": "target",
-        "type": "tech",
-        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-      },
-      {
-        "text": "data",
-        "type": "tech",
-        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-      },
-      {
-        "text": "pitch",
+        "text": "red-giant",
         "type": "cosmos",
-        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+        "meaning": "Elderly swelling star bloated to monstrous proportions swallowing inner planets",
+        "asset": "red_giant"
       },
       {
-        "text": "year",
-        "type": "cosmos",
-        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+        "text": "giant-asteroid",
+        "type": "hazard",
+        "meaning": "Multi-kilometer space megastructure rock capable of extinction-level impacts",
+        "asset": "giant_asteroid"
       }
     ],
     "alien_mothership": [
       {
-        "text": "sun",
-        "type": "cosmos",
-        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
-      },
-      {
-        "text": "moon",
-        "type": "cosmos",
-        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
-      },
-      {
-        "text": "moons",
-        "type": "cosmos",
-        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-      },
-      {
-        "text": "sky",
-        "type": "cosmos",
-        "meaning": "The celestial vault visible from surface where stars and constellations shine"
-      },
-      {
-        "text": "ray",
-        "type": "phenomenon",
-        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-      },
-      {
-        "text": "halo",
-        "type": "cosmos",
-        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-      },
-      {
-        "text": "axis",
-        "type": "cosmos",
-        "meaning": "Imaginary central line around which a planet or celestial body rotates"
-      },
-      {
-        "text": "phase",
-        "type": "phenomenon",
-        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-      },
-      {
-        "text": "wave",
-        "type": "phenomenon",
-        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-      },
-      {
-        "text": "ship",
+        "text": "starship",
         "type": "tech",
-        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+        "meaning": "Colossal long-range star cruiser outfitted with advanced stellar warp drives",
+        "asset": "starship"
       },
       {
-        "text": "nova",
-        "type": "phenomenon",
-        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-      },
-      {
-        "text": "target",
+        "text": "shuttle",
         "type": "tech",
-        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+        "meaning": "Reusable delta-wing orbiter capable of gliding back down to runway touchdown",
+        "asset": "space_shuttle"
       },
       {
-        "text": "data",
+        "text": "space-station",
         "type": "tech",
-        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+        "meaning": "Permanent orbital habitat housing scientific crew members in microgravity",
+        "asset": "space_station"
       },
       {
-        "text": "pitch",
-        "type": "cosmos",
-        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+        "text": "orbital-base",
+        "type": "tech",
+        "meaning": "Geostationary space hub station managing heavy starship docking and refuel",
+        "asset": "orbital_station"
       },
       {
-        "text": "year",
-        "type": "cosmos",
-        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+        "text": "orbital-telescope",
+        "type": "tech",
+        "meaning": "Atmosphere-free celestial spyglass photographing pristine cosmic depths",
+        "asset": "orbital_telescope"
+      },
+      {
+        "text": "space-capsule",
+        "type": "tech",
+        "meaning": "Autonomous crew transport capsule engineered for robust interplanetary transit",
+        "asset": "space_capsule"
+      },
+      {
+        "text": "rover-vehicle",
+        "type": "tech",
+        "meaning": "Robotic all-terrain planetary crawler drilling rock cores on alien surfaces",
+        "asset": "rover_vehicle"
+      },
+      {
+        "text": "space-freighter",
+        "type": "tech",
+        "meaning": "Massive interstellar merchant hauler shipping raw mineral ore containers",
+        "asset": "freighter"
+      },
+      {
+        "text": "satellite",
+        "type": "tech",
+        "meaning": "Orbital technological spacecraft relaying sensors and data around Earth",
+        "asset": "satellite"
+      },
+      {
+        "text": "probe",
+        "type": "tech",
+        "meaning": "Unmanned robotic spacecraft deployed to explore distant extraterrestrial frontiers",
+        "asset": "probe"
+      },
+      {
+        "text": "telescope",
+        "type": "tech",
+        "meaning": "Precision optical instrument capturing cosmic light from distant galaxies",
+        "asset": "telescope"
+      },
+      {
+        "text": "hubble",
+        "type": "tech",
+        "meaning": "The iconic orbital space telescope that revolutionized human view of deep cosmos",
+        "asset": "hubble"
+      },
+      {
+        "text": "webb",
+        "type": "tech",
+        "meaning": "The premier infrared space observatory peering back at the universe's dawn",
+        "asset": "webb"
+      },
+      {
+        "text": "voyager",
+        "type": "tech",
+        "meaning": "The interstellar messenger probe that ventured beyond our solar threshold",
+        "asset": "voyager"
+      },
+      {
+        "text": "sputnik",
+        "type": "tech",
+        "meaning": "The historical metal satellite that heralded the dawn of human space exploration",
+        "asset": "sputnik"
       }
     ],
     "robot": [
       {
-        "text": "sun",
-        "type": "cosmos",
-        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+        "text": "satellite",
+        "type": "tech",
+        "meaning": "Orbital technological spacecraft relaying sensors and data around Earth",
+        "asset": "satellite"
       },
       {
-        "text": "moon",
-        "type": "cosmos",
-        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+        "text": "probe",
+        "type": "tech",
+        "meaning": "Unmanned robotic spacecraft deployed to explore distant extraterrestrial frontiers",
+        "asset": "probe"
       },
       {
-        "text": "moons",
-        "type": "cosmos",
-        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+        "text": "telescope",
+        "type": "tech",
+        "meaning": "Precision optical instrument capturing cosmic light from distant galaxies",
+        "asset": "telescope"
       },
       {
-        "text": "sky",
-        "type": "cosmos",
-        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+        "text": "hubble",
+        "type": "tech",
+        "meaning": "The iconic orbital space telescope that revolutionized human view of deep cosmos",
+        "asset": "hubble"
       },
       {
-        "text": "ray",
-        "type": "phenomenon",
-        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+        "text": "webb",
+        "type": "tech",
+        "meaning": "The premier infrared space observatory peering back at the universe's dawn",
+        "asset": "webb"
       },
       {
-        "text": "halo",
-        "type": "cosmos",
-        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+        "text": "voyager",
+        "type": "tech",
+        "meaning": "The interstellar messenger probe that ventured beyond our solar threshold",
+        "asset": "voyager"
       },
       {
-        "text": "axis",
-        "type": "cosmos",
-        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+        "text": "sputnik",
+        "type": "tech",
+        "meaning": "The historical metal satellite that heralded the dawn of human space exploration",
+        "asset": "sputnik"
       },
       {
-        "text": "phase",
-        "type": "phenomenon",
-        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+        "text": "rocket",
+        "type": "tech",
+        "meaning": "Mighty reaction thruster vehicle roaring upwards to overcome planetary gravity",
+        "asset": "rocket"
       },
       {
-        "text": "wave",
-        "type": "phenomenon",
-        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+        "text": "capsule",
+        "type": "tech",
+        "meaning": "Pressurized aerodynamic craft fitted with heat shields for orbital re-entry",
+        "asset": "capsule"
+      },
+      {
+        "text": "module",
+        "type": "tech",
+        "meaning": "Interchangeable structural compartment of an expanding orbital base",
+        "asset": "module"
+      },
+      {
+        "text": "rover",
+        "type": "tech",
+        "meaning": "Automated wheeled exploration rover roving alien dusty surface terrains",
+        "asset": "rover"
       },
       {
         "text": "ship",
         "type": "tech",
-        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+        "meaning": "Spacefaring vessel navigated by maneuvering thrusters across the solar sea",
+        "asset": "ship"
       },
       {
-        "text": "nova",
-        "type": "phenomenon",
-        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-      },
-      {
-        "text": "target",
+        "text": "drone",
         "type": "tech",
-        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+        "meaning": "Lightweight autonomous scout craft scanning orbital paths for hazards",
+        "asset": "drone"
       },
       {
-        "text": "data",
+        "text": "orbital-telescope",
         "type": "tech",
-        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+        "meaning": "Atmosphere-free celestial spyglass photographing pristine cosmic depths",
+        "asset": "orbital_telescope"
       },
       {
-        "text": "pitch",
-        "type": "cosmos",
-        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-      },
-      {
-        "text": "year",
-        "type": "cosmos",
-        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+        "text": "rover-vehicle",
+        "type": "tech",
+        "meaning": "Robotic all-terrain planetary crawler drilling rock cores on alien surfaces",
+        "asset": "rover_vehicle"
       }
     ],
     "beast": [
       {
-        "text": "sun",
+        "text": "rock",
+        "type": "hazard",
+        "meaning": "Wandering space rock fragment travelling through the cosmos towards Earth",
+        "asset": "rock"
+      },
+      {
+        "text": "asteroid",
+        "type": "hazard",
+        "meaning": "Rocky and metallic planetary leftover traversing orbits around the Sun",
+        "asset": "asteroid"
+      },
+      {
+        "text": "comet",
+        "type": "hazard",
+        "meaning": "Icy cosmic snowball that outgasses a glowing tail when approaching solar heat",
+        "asset": "comet"
+      },
+      {
+        "text": "meteor",
+        "type": "hazard",
+        "meaning": "Streak of ionized light ignited as a space fragment incinerates in atmosphere",
+        "asset": "meteor"
+      },
+      {
+        "text": "meteorite",
+        "type": "hazard",
+        "meaning": "Extraterrestrial rock survivor that endures atmospheric entry and strikes ground",
+        "asset": "meteorite"
+      },
+      {
+        "text": "bolide",
+        "type": "hazard",
+        "meaning": "Extremely bright exploding fireball meteor detonating in the sky",
+        "asset": "bolide"
+      },
+      {
+        "text": "fragment",
+        "type": "hazard",
+        "meaning": "Collision shrapnel piece navigating a dangerous orbital path through space",
+        "asset": "fragment"
+      },
+      {
+        "text": "aerolite",
+        "type": "hazard",
+        "meaning": "Stony meteorite composed mainly of silicate minerals and ancient rock",
+        "asset": "aerolite"
+      },
+      {
+        "text": "meteoroid",
+        "type": "hazard",
+        "meaning": "Small rocky celestial body traveling in space before atmospheric encounter",
+        "asset": "meteoroid"
+      },
+      {
+        "text": "boulder",
+        "type": "hazard",
+        "meaning": "Colossal rocky monolith dislodged from the surface of a giant asteroid",
+        "asset": "boulder"
+      },
+      {
+        "text": "giant-asteroid",
+        "type": "hazard",
+        "meaning": "Multi-kilometer space megastructure rock capable of extinction-level impacts",
+        "asset": "giant_asteroid"
+      },
+      {
+        "text": "trojan-asteroid",
+        "type": "hazard",
+        "meaning": "Rock locked in gravitational balance at planetary Lagrange orbital pockets",
+        "asset": "trojan_asteroid"
+      },
+      {
+        "text": "titan",
         "type": "cosmos",
-        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+        "meaning": "Saturn's largest moon cloaked in thick atmosphere and seas of liquid methane",
+        "asset": "titan"
       },
       {
-        "text": "moon",
+        "text": "phobos",
         "type": "cosmos",
-        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+        "meaning": "Irregular inner moon of Mars speeding in an orbit dangerously close to the surface",
+        "asset": "phobos"
       },
       {
-        "text": "moons",
+        "text": "deimos",
         "type": "cosmos",
-        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-      },
-      {
-        "text": "sky",
-        "type": "cosmos",
-        "meaning": "The celestial vault visible from surface where stars and constellations shine"
-      },
-      {
-        "text": "ray",
-        "type": "phenomenon",
-        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-      },
-      {
-        "text": "halo",
-        "type": "cosmos",
-        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-      },
-      {
-        "text": "axis",
-        "type": "cosmos",
-        "meaning": "Imaginary central line around which a planet or celestial body rotates"
-      },
-      {
-        "text": "phase",
-        "type": "phenomenon",
-        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-      },
-      {
-        "text": "wave",
-        "type": "phenomenon",
-        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-      },
-      {
-        "text": "ship",
-        "type": "tech",
-        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-      },
-      {
-        "text": "nova",
-        "type": "phenomenon",
-        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-      },
-      {
-        "text": "target",
-        "type": "tech",
-        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-      },
-      {
-        "text": "data",
-        "type": "tech",
-        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-      },
-      {
-        "text": "pitch",
-        "type": "cosmos",
-        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-      },
-      {
-        "text": "year",
-        "type": "cosmos",
-        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+        "meaning": "The smaller and outermost moon of Mars resembling a dark cratered asteroid",
+        "asset": "deimos"
       }
     ],
     "mythology": [
       {
         "text": "sun",
         "type": "cosmos",
-        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+        "meaning": "Central star of our solar system providing light, heat and gravitational pull",
+        "asset": "sun"
       },
       {
         "text": "moon",
         "type": "cosmos",
-        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+        "meaning": "Natural satellite orbiting the Earth influencing oceanic tidal forces",
+        "asset": "moon"
       },
       {
-        "text": "moons",
+        "text": "mercury",
         "type": "cosmos",
-        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+        "meaning": "The smallest planet in the solar system and closest to the searing Sun",
+        "asset": "mercury"
       },
       {
-        "text": "sky",
+        "text": "venus",
         "type": "cosmos",
-        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+        "meaning": "The second planet from the Sun with dense atmosphere and runaway greenhouse heat",
+        "asset": "venus"
       },
       {
-        "text": "ray",
-        "type": "phenomenon",
-        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+        "text": "vesta",
+        "type": "hazard",
+        "meaning": "The second most massive asteroid in the belt featuring a colossal south polar impact crater",
+        "asset": "vesta"
       },
       {
-        "text": "halo",
+        "text": "mars",
         "type": "cosmos",
-        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+        "meaning": "The red planet coated in iron oxide dust and home to giant Olympus Mons",
+        "asset": "mars"
       },
       {
-        "text": "axis",
+        "text": "jupiter",
         "type": "cosmos",
-        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+        "meaning": "The colossal gas giant of our system featuring the iconic Great Red Spot",
+        "asset": "jupiter"
       },
       {
-        "text": "phase",
-        "type": "phenomenon",
-        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-      },
-      {
-        "text": "wave",
-        "type": "phenomenon",
-        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-      },
-      {
-        "text": "ship",
-        "type": "tech",
-        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-      },
-      {
-        "text": "nova",
-        "type": "phenomenon",
-        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-      },
-      {
-        "text": "target",
-        "type": "tech",
-        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-      },
-      {
-        "text": "data",
-        "type": "tech",
-        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-      },
-      {
-        "text": "pitch",
+        "text": "saturn",
         "type": "cosmos",
-        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
+        "meaning": "The striking gas giant adorned with majestic rings of pure ice and cosmic dust",
+        "asset": "saturn"
       },
       {
-        "text": "year",
+        "text": "uranus",
         "type": "cosmos",
-        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+        "meaning": "A cyan ice giant rotating on its side wrapped in chilling methane clouds",
+        "asset": "uranus"
+      },
+      {
+        "text": "neptune",
+        "type": "cosmos",
+        "meaning": "The farthest planet from the Sun swept by the fiercest supersonic storms",
+        "asset": "neptune"
+      },
+      {
+        "text": "pluto",
+        "type": "cosmos",
+        "meaning": "Dwarf planet in the Kuiper Belt featuring a vast nitrogen ice heart plain",
+        "asset": "pluto"
+      },
+      {
+        "text": "ceres",
+        "type": "cosmos",
+        "meaning": "The largest asteroid belt object between Mars and Jupiter classified as dwarf planet",
+        "asset": "ceres"
+      },
+      {
+        "text": "titan",
+        "type": "cosmos",
+        "meaning": "Saturn's largest moon cloaked in thick atmosphere and seas of liquid methane",
+        "asset": "titan"
+      },
+      {
+        "text": "europa",
+        "type": "cosmos",
+        "meaning": "Jupiter's icy moon concealing a vast liquid ocean beneath its fractured crust",
+        "asset": "europa"
+      },
+      {
+        "text": "io",
+        "type": "cosmos",
+        "meaning": "The most volcanically active body in our system covered in erupting sulfur plumes",
+        "asset": "io"
       }
     ],
     "volcano": [
       {
-        "text": "sun",
+        "text": "mars",
         "type": "cosmos",
-        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+        "meaning": "The red planet coated in iron oxide dust and home to giant Olympus Mons",
+        "asset": "mars"
       },
       {
-        "text": "moon",
+        "text": "io",
         "type": "cosmos",
-        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+        "meaning": "The most volcanically active body in our system covered in erupting sulfur plumes",
+        "asset": "io"
       },
       {
-        "text": "moons",
+        "text": "meteor",
+        "type": "hazard",
+        "meaning": "Streak of ionized light ignited as a space fragment incinerates in atmosphere",
+        "asset": "meteor"
+      },
+      {
+        "text": "meteorite",
+        "type": "hazard",
+        "meaning": "Extraterrestrial rock survivor that endures atmospheric entry and strikes ground",
+        "asset": "meteorite"
+      },
+      {
+        "text": "bolide",
+        "type": "hazard",
+        "meaning": "Extremely bright exploding fireball meteor detonating in the sky",
+        "asset": "bolide"
+      },
+      {
+        "text": "fragment",
+        "type": "hazard",
+        "meaning": "Collision shrapnel piece navigating a dangerous orbital path through space",
+        "asset": "fragment"
+      },
+      {
+        "text": "aerolite",
+        "type": "hazard",
+        "meaning": "Stony meteorite composed mainly of silicate minerals and ancient rock",
+        "asset": "aerolite"
+      },
+      {
+        "text": "radiation",
+        "type": "hazard",
+        "meaning": "High-energy particles and electromagnetic rays streaming through the stellar expanse",
+        "asset": "radiation"
+      },
+      {
+        "text": "antimatter",
+        "type": "hazard",
+        "meaning": "Mirrored particle substance triggering complete explosive annihilation upon contact",
+        "asset": "antimatter"
+      },
+      {
+        "text": "red-giant",
         "type": "cosmos",
-        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+        "meaning": "Elderly swelling star bloated to monstrous proportions swallowing inner planets",
+        "asset": "red_giant"
       },
       {
-        "text": "sky",
-        "type": "cosmos",
-        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+        "text": "rock",
+        "type": "hazard",
+        "meaning": "Wandering space rock fragment travelling through the cosmos towards Earth",
+        "asset": "rock"
       },
       {
-        "text": "ray",
-        "type": "phenomenon",
-        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
+        "text": "asteroid",
+        "type": "hazard",
+        "meaning": "Rocky and metallic planetary leftover traversing orbits around the Sun",
+        "asset": "asteroid"
       },
       {
-        "text": "halo",
-        "type": "cosmos",
-        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+        "text": "meteoroid",
+        "type": "hazard",
+        "meaning": "Small rocky celestial body traveling in space before atmospheric encounter",
+        "asset": "meteoroid"
       },
       {
-        "text": "axis",
-        "type": "cosmos",
-        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+        "text": "boulder",
+        "type": "hazard",
+        "meaning": "Colossal rocky monolith dislodged from the surface of a giant asteroid",
+        "asset": "boulder"
       },
       {
-        "text": "phase",
-        "type": "phenomenon",
-        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-      },
-      {
-        "text": "wave",
-        "type": "phenomenon",
-        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-      },
-      {
-        "text": "ship",
-        "type": "tech",
-        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-      },
-      {
-        "text": "nova",
-        "type": "phenomenon",
-        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-      },
-      {
-        "text": "target",
-        "type": "tech",
-        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-      },
-      {
-        "text": "data",
-        "type": "tech",
-        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-      },
-      {
-        "text": "pitch",
-        "type": "cosmos",
-        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-      },
-      {
-        "text": "year",
-        "type": "cosmos",
-        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+        "text": "giant-asteroid",
+        "type": "hazard",
+        "meaning": "Multi-kilometer space megastructure rock capable of extinction-level impacts",
+        "asset": "giant_asteroid"
       }
     ],
     "ocean": [
       {
-        "text": "sun",
+        "text": "vesta",
+        "type": "hazard",
+        "meaning": "The second most massive asteroid in the belt featuring a colossal south polar impact crater",
+        "asset": "vesta"
+      },
+      {
+        "text": "titan",
         "type": "cosmos",
-        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
+        "meaning": "Saturn's largest moon cloaked in thick atmosphere and seas of liquid methane",
+        "asset": "titan"
       },
       {
-        "text": "moon",
+        "text": "europa",
         "type": "cosmos",
-        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
+        "meaning": "Jupiter's icy moon concealing a vast liquid ocean beneath its fractured crust",
+        "asset": "europa"
       },
       {
-        "text": "moons",
+        "text": "triton",
         "type": "cosmos",
-        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
+        "meaning": "Neptune's frigid retrograde moon spewing cryovolcanic nitrogen geysers",
+        "asset": "triton"
       },
       {
-        "text": "sky",
+        "text": "enceladus",
         "type": "cosmos",
-        "meaning": "The celestial vault visible from surface where stars and constellations shine"
+        "meaning": "Saturn's reflective moon venting subsurface ocean plumes directly into space",
+        "asset": "enceladus"
       },
       {
-        "text": "ray",
-        "type": "phenomenon",
-        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-      },
-      {
-        "text": "halo",
+        "text": "ganymede",
         "type": "cosmos",
-        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
+        "meaning": "The largest moon in the entire solar system exceeding Mercury in size",
+        "asset": "ganymede"
       },
       {
-        "text": "axis",
+        "text": "neptune",
         "type": "cosmos",
-        "meaning": "Imaginary central line around which a planet or celestial body rotates"
+        "meaning": "The farthest planet from the Sun swept by the fiercest supersonic storms",
+        "asset": "neptune"
       },
       {
-        "text": "phase",
-        "type": "phenomenon",
-        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
+        "text": "comet",
+        "type": "hazard",
+        "meaning": "Icy cosmic snowball that outgasses a glowing tail when approaching solar heat",
+        "asset": "comet"
       },
       {
-        "text": "wave",
-        "type": "phenomenon",
-        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
+        "text": "fragment",
+        "type": "hazard",
+        "meaning": "Collision shrapnel piece navigating a dangerous orbital path through space",
+        "asset": "fragment"
+      },
+      {
+        "text": "satellite",
+        "type": "tech",
+        "meaning": "Orbital technological spacecraft relaying sensors and data around Earth",
+        "asset": "satellite"
+      },
+      {
+        "text": "probe",
+        "type": "tech",
+        "meaning": "Unmanned robotic spacecraft deployed to explore distant extraterrestrial frontiers",
+        "asset": "probe"
       },
       {
         "text": "ship",
         "type": "tech",
-        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
+        "meaning": "Spacefaring vessel navigated by maneuvering thrusters across the solar sea",
+        "asset": "ship"
       },
       {
-        "text": "nova",
-        "type": "phenomenon",
-        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-      },
-      {
-        "text": "target",
+        "text": "space-station",
         "type": "tech",
-        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
+        "meaning": "Permanent orbital habitat housing scientific crew members in microgravity",
+        "asset": "space_station"
       },
       {
-        "text": "data",
+        "text": "space-freighter",
         "type": "tech",
-        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
+        "meaning": "Massive interstellar merchant hauler shipping raw mineral ore containers",
+        "asset": "freighter"
       },
       {
-        "text": "pitch",
+        "text": "moon",
         "type": "cosmos",
-        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-      },
-      {
-        "text": "year",
-        "type": "cosmos",
-        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+        "meaning": "Natural satellite orbiting the Earth influencing oceanic tidal forces",
+        "asset": "moon"
       }
     ],
     "cosmos": [
       {
+        "text": "star",
+        "type": "cosmos",
+        "meaning": "Luminous celestial sphere of blistering plasma powered by nuclear fusion core",
+        "asset": "star"
+      },
+      {
+        "text": "galaxy",
+        "type": "cosmos",
+        "meaning": "Colossal gravitational whirlpool uniting hundreds of billions of shining stars",
+        "asset": "galaxy"
+      },
+      {
+        "text": "nebula",
+        "type": "cosmos",
+        "meaning": "Monumental interstellar cradle of dust and glowing gas where baby stars ignite",
+        "asset": "nebula"
+      },
+      {
+        "text": "supernova",
+        "type": "fenomeno",
+        "meaning": "Cataclysmic stellar detonation briefly outshining the light of entire galaxies",
+        "asset": "supernova"
+      },
+      {
+        "text": "pulsar",
+        "type": "cosmos",
+        "meaning": "Hyperdense neutron star spinning wildly and sweeping beams of rhythmic radiation",
+        "asset": "pulsar"
+      },
+      {
+        "text": "quasar",
+        "type": "cosmos",
+        "meaning": "Primeval luminous galaxy core fed by an insatiable supermassive black hole",
+        "asset": "quasar"
+      },
+      {
+        "text": "magnetar",
+        "type": "cosmos",
+        "meaning": "Exotic neutron star boasting the most terrifying magnetic fields in nature",
+        "asset": "magnetar"
+      },
+      {
+        "text": "exoplanet",
+        "type": "cosmos",
+        "meaning": "Alien planet traversing an alien orbit around a foreign stellar sun",
+        "asset": "exoplanet"
+      },
+      {
+        "text": "andromeda",
+        "type": "cosmos",
+        "meaning": "Our colossal spiral sister galaxy hurtling towards mutual cosmic convergence",
+        "asset": "andromeda"
+      },
+      {
+        "text": "milky-way",
+        "type": "cosmos",
+        "meaning": "Our sparkling spiral mother galaxy cradle sheltering hundreds of billions of suns",
+        "asset": "milky_way"
+      },
+      {
+        "text": "black-hole",
+        "type": "hazard",
+        "meaning": "Gravitational abyss with gravity so fierce that not even light photons can escape",
+        "asset": "black_hole"
+      },
+      {
+        "text": "wormhole",
+        "type": "cosmos",
+        "meaning": "Spacetime bridge warping the cosmic fabric to link two distant sectors instantly",
+        "asset": "wormhole"
+      },
+      {
+        "text": "white-dwarf",
+        "type": "cosmos",
+        "meaning": "Dense glowing cinder core left behind after a sun shedding outer gas layers",
+        "asset": "white_dwarf"
+      },
+      {
+        "text": "red-giant",
+        "type": "cosmos",
+        "meaning": "Elderly swelling star bloated to monstrous proportions swallowing inner planets",
+        "asset": "red_giant"
+      },
+      {
         "text": "sun",
         "type": "cosmos",
-        "meaning": "Central star of our solar system providing light, heat and gravitational stability"
-      },
-      {
-        "text": "moon",
-        "type": "cosmos",
-        "meaning": "Natural satellite orbiting the Earth that drives ocean tides and stabilizes axial tilt"
-      },
-      {
-        "text": "moons",
-        "type": "cosmos",
-        "meaning": "Natural rocky or icy satellites orbiting planets and asteroids in space"
-      },
-      {
-        "text": "sky",
-        "type": "cosmos",
-        "meaning": "The celestial vault visible from surface where stars and constellations shine"
-      },
-      {
-        "text": "ray",
-        "type": "phenomenon",
-        "meaning": "Concentrated beam of electromagnetic energy or radiant cosmic starlight"
-      },
-      {
-        "text": "halo",
-        "type": "cosmos",
-        "meaning": "Luminous diffuse ring of gas and stars surrounding celestial bodies and galaxies"
-      },
-      {
-        "text": "axis",
-        "type": "cosmos",
-        "meaning": "Imaginary central line around which a planet or celestial body rotates"
-      },
-      {
-        "text": "phase",
-        "type": "phenomenon",
-        "meaning": "Apparent shape of the sunlit portion of a moon or planet as seen from Earth"
-      },
-      {
-        "text": "wave",
-        "type": "phenomenon",
-        "meaning": "Propagating oscillation of energy such as gravitational ripples in spacetime"
-      },
-      {
-        "text": "ship",
-        "type": "tech",
-        "meaning": "Crewed or automated aerospace vessel engineered for interplanetary travel"
-      },
-      {
-        "text": "nova",
-        "type": "phenomenon",
-        "meaning": "Brilliant thermonuclear stellar outburst that suddenly flares in brightness"
-      },
-      {
-        "text": "target",
-        "type": "tech",
-        "meaning": "Orbital destination or celestial waypoint designated for probe exploration"
-      },
-      {
-        "text": "data",
-        "type": "tech",
-        "meaning": "Scientific telemetry collected across cosmic distances by space telescopes"
-      },
-      {
-        "text": "pitch",
-        "type": "cosmos",
-        "meaning": "The utter and unyielding darkness of deep intergalactic abyssal voids"
-      },
-      {
-        "text": "year",
-        "type": "cosmos",
-        "meaning": "Time required for an orbiting planet to complete one full revolution around its star"
+        "meaning": "Central star of our solar system providing light, heat and gravitational pull",
+        "asset": "sun"
       }
     ]
   },

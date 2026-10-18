@@ -554,1304 +554,1559 @@
   ],
   "words": [
     {
-      "text": "sun",
-      "type": "宇宙",
-      "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
+      "text": "たいよう",
+      "type": "cosmos",
+      "meaning": "光と熱と重力エネルギーを供給する太陽系の中心星",
+      "asset": "sun"
     },
     {
-      "text": "moon",
-      "type": "宇宙",
-      "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
+      "text": "つき",
+      "type": "cosmos",
+      "meaning": "地球を周回し潮汐現象に強い影響を与える天然の衛星",
+      "asset": "moon"
     },
     {
-      "text": "moons",
-      "type": "宇宙",
-      "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
+      "text": "いわ",
+      "type": "hazard",
+      "meaning": "宇宙空間を漂流し地球方向へ飛来する巨大な宇宙岩石",
+      "asset": "rock"
     },
     {
-      "text": "sky",
-      "type": "宇宙",
-      "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
+      "text": "すいせい",
+      "type": "cosmos",
+      "meaning": "太陽に最も近く猛烈な熱と寒冷に晒される太陽系最小の惑星",
+      "asset": "mercury"
     },
     {
-      "text": "ray",
-      "type": "宇宙現象",
-      "meaning": "電磁エネルギーの集中した束、または放射される星の光"
+      "text": "きんせい",
+      "type": "cosmos",
+      "meaning": "厚い硫酸の大気と猛烈な温室効果を持つ夜空で最も明るい惑星",
+      "asset": "venus"
     },
     {
-      "text": "halo",
-      "type": "宇宙",
-      "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
+      "text": "ベスタ",
+      "type": "hazard",
+      "meaning": "小惑星帯で2番目に巨大な質量を持ち巨大クレーターが刻まれた小惑星",
+      "asset": "vesta"
     },
     {
-      "text": "axis",
-      "type": "宇宙",
-      "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
+      "text": "かせい",
+      "type": "cosmos",
+      "meaning": "酸化鉄の赤い砂塵に覆われ太陽系最大の火山オリンポス山を擁する惑星",
+      "asset": "mars"
     },
     {
-      "text": "phase",
-      "type": "宇宙現象",
-      "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
+      "text": "もくせい",
+      "type": "cosmos",
+      "meaning": "巨大な大赤斑の嵐が渦巻く太陽系最大の圧倒的なガス巨大惑星",
+      "asset": "jupiter"
     },
     {
-      "text": "wave",
-      "type": "宇宙現象",
-      "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
+      "text": "どせい",
+      "type": "cosmos",
+      "meaning": "氷と塵粒子で構成された美しい環をまとう壮麗なガス巨大惑星",
+      "asset": "saturn"
     },
     {
-      "text": "ship",
-      "type": "宇宙技術",
-      "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
+      "text": "てんのうせい",
+      "type": "cosmos",
+      "meaning": "極端に傾いた自転軸を持ちメタン氷の青緑色に輝く氷巨大惑星",
+      "asset": "uranus"
     },
     {
-      "text": "nova",
-      "type": "宇宙現象",
-      "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
+      "text": "かいおうせい",
+      "type": "cosmos",
+      "meaning": "太陽系最遠の深青色の世界で音速を超える超高速嵐が吹き荒れる惑星",
+      "asset": "neptune"
     },
     {
-      "text": "target",
-      "type": "宇宙技術",
-      "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
+      "text": "めいおうせい",
+      "type": "cosmos",
+      "meaning": "カイパーベルトに位置し窒素氷のハート型平原が広がる準惑星",
+      "asset": "pluto"
     },
     {
-      "text": "data",
-      "type": "宇宙技術",
-      "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
+      "text": "ケレス",
+      "type": "cosmos",
+      "meaning": "火星と木星の間の小惑星帯に位置する最大の天体であり球状の準惑星",
+      "asset": "ceres"
     },
     {
-      "text": "pitch",
-      "type": "宇宙",
-      "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
+      "text": "タイタン",
+      "type": "cosmos",
+      "meaning": "濃密な大気と液体メタンの湖や海を湛えた土星最大の巨大衛星",
+      "asset": "titan"
     },
     {
-      "text": "year",
-      "type": "宇宙",
-      "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
+      "text": "フォボス",
+      "type": "cosmos",
+      "meaning": "火星の地表近くを高速で周回する凹凸に富んだ不規則形状の第1衛星",
+      "asset": "phobos"
     },
     {
-      "text": "vacuum",
-      "type": "宇宙",
-      "meaning": "大気や物質が存在せず、静寂な宇宙の広がりが支配する真空の空間"
+      "text": "ダイモス",
+      "type": "cosmos",
+      "meaning": "滑らかな塵の層に覆われた火星の外側をゆっくり周回する第2衛星",
+      "asset": "deimos"
     },
     {
-      "text": "astro",
-      "type": "宇宙",
-      "meaning": "果てしない宇宙空間に存在するあらゆる天然の天体"
+      "text": "エウロパ",
+      "type": "cosmos",
+      "meaning": "ひび割れた氷殻の地下深くに広大な液体の海を隠し持つ木星の氷衛星",
+      "asset": "europa"
     },
     {
-      "text": "cosmos",
-      "type": "宇宙",
-      "meaning": "秩序と調和を持ち、無限の広がりを持つ物理的な全宇宙"
+      "text": "イオ",
+      "type": "cosmos",
+      "meaning": "数百もの活火山から硫黄を噴き上げる太陽系で最も火山活動が激しい衛星",
+      "asset": "io"
     },
     {
-      "text": "mars",
-      "type": "宇宙",
-      "meaning": "太陽から4番目の惑星であり、歴史的に「赤い惑星」として知られる火星"
+      "text": "トリトン",
+      "type": "cosmos",
+      "meaning": "逆行軌道を描き液体窒素の氷の火山間欠泉を噴出する海王星最大の衛星",
+      "asset": "triton"
     },
     {
-      "text": "venus",
-      "type": "宇宙",
-      "meaning": "太陽から2番目の惑星であり、夜空で最も明るく輝く金星"
+      "text": "カリスト",
+      "type": "cosmos",
+      "meaning": "太陽系で最もクレーター密度が高く太古の痕跡をそのまま留める木星の衛星",
+      "asset": "callisto"
     },
     {
-      "text": "earth",
-      "type": "宇宙",
-      "meaning": "液体の水と豊かな生命を宿す、私たちが住む青い故郷の惑星「地球」"
+      "text": "カロン",
+      "type": "cosmos",
+      "meaning": "冥王星と互いに潮汐固定され二重天体システムを形成する巨大な衛星",
+      "asset": "charon"
     },
     {
-      "text": "solar",
-      "type": "宇宙",
-      "meaning": "太陽、太陽風、コロナ放射線、およびその重力圏に関わる概念"
+      "text": "エンケラドス",
+      "type": "cosmos",
+      "meaning": "南極の虎の縞模様の裂け目から氷と水蒸気の噴煙を宇宙へ放つ土星の氷衛星",
+      "asset": "enceladus"
     },
     {
-      "text": "probe",
-      "type": "宇宙技術",
-      "meaning": "未知の大気や天体を調査するために打ち上げられる無人科学探査機"
+      "text": "ガニメデ",
+      "type": "cosmos",
+      "meaning": "惑星水星をも上回る大きさを誇り固有の磁場を持つ太陽系最大の巨大衛星",
+      "asset": "ganymede"
     },
     {
-      "text": "radar",
-      "type": "宇宙技術",
-      "meaning": "電波を反射させて惑星表面や小惑星の地形を観測・マッピングするシステム"
+      "text": "しょうわくせい",
+      "type": "hazard",
+      "meaning": "惑星形成期の残り屑であり金属や岩石で構成された太陽周回天体",
+      "asset": "asteroid"
     },
     {
-      "text": "magma",
-      "type": "自然",
-      "meaning": "地質学的に活動的な惑星の地殻深部に存在する極めて高温の溶融岩石"
+      "text": "すいせい",
+      "type": "hazard",
+      "meaning": "太陽熱によって氷が昇華し美しく輝くガスと塵の尾を引く彗星",
+      "asset": "comet"
     },
     {
-      "text": "cloud",
-      "type": "宇宙",
-      "meaning": "新しい星々を誕生させる水素と宇宙塵からなる高密度星間分子雲"
+      "text": "りゅうせい",
+      "type": "hazard",
+      "meaning": "大気圏への突入摩擦によって発光し夜空を一瞬で切り裂く流れ星",
+      "asset": "meteor"
     },
     {
-      "text": "pluto",
-      "type": "宇宙",
-      "meaning": "太陽系の外縁部、カイパーベルトに位置する氷の準惑星「冥王星」"
+      "text": "いんせき",
+      "type": "hazard",
+      "meaning": "大気圏の超高温を耐え抜いて地表へと衝突した実物の地球外岩石",
+      "asset": "meteorite"
     },
     {
-      "text": "orbit",
-      "type": "宇宙",
-      "meaning": "重力によって天体が大質量な中心天体の周囲を描く曲線軌道"
+      "text": "かきゅう",
+      "type": "hazard",
+      "meaning": "大気中で轟音と共に激しく大爆発を起こす極めて高輝度な巨大火球",
+      "asset": "bolide"
     },
     {
-      "text": "comet",
-      "type": "宇宙",
-      "meaning": "太陽に近づくと熱でガスや塵を噴き出し輝く尾を引く氷の天体「彗星」"
+      "text": "はへん",
+      "type": "hazard",
+      "meaning": "宇宙衝突によって飛散し危険な突入軌道をとる鋭利な破片",
+      "asset": "fragment"
     },
     {
-      "text": "pulsar",
-      "type": "宇宙",
-      "meaning": "高速で自転し周期的な電磁パルスを宇宙へ放射する強磁性中性子星"
+      "text": "せきしついんせき",
+      "type": "hazard",
+      "meaning": "ケイ酸塩鉱物を主成分とする太古の石質隕石",
+      "asset": "aerolite"
     },
     {
-      "text": "quasar",
-      "type": "宇宙",
-      "meaning": "超大質量ブラックホールをエネルギー源とする極めて明るい遠方活動銀河核"
+      "text": "りゅうせいたい",
+      "type": "hazard",
+      "meaning": "大気圏へ突入する前に深宇宙を高速で飛行している小さな母岩天体",
+      "asset": "meteoroid"
     },
     {
-      "text": "corona",
-      "type": "宇宙",
-      "meaning": "太陽大気の最外層に広がる数百万度の超高温プラズマ層「コロナ」"
+      "text": "きょせき",
+      "type": "hazard",
+      "meaning": "巨大な母小惑星から剥ぎ取られ突進してくる高密度の岩塊",
+      "asset": "boulder"
     },
     {
-      "text": "meteor",
-      "type": "宇宙",
-      "meaning": "宇宙の小片が大気圏に突入して高温摩擦で発光する流星"
+      "text": "じんこうえいせい",
+      "type": "tech",
+      "meaning": "軌道上で観測機器や通信アンテナを展開し地球を周回する人工天体",
+      "asset": "satellite"
     },
     {
-      "text": "optics",
-      "type": "宇宙技術",
-      "meaning": "深宇宙探査望遠鏡で天体からの光を集光・解析する光学技術"
+      "text": "たんさき",
+      "type": "tech",
+      "meaning": "未踏の惑星や深宇宙の科学探査のために派遣される自律型無人探査機",
+      "asset": "probe"
     },
     {
-      "text": "space",
-      "type": "宇宙",
-      "meaning": "惑星、星々、銀河が漂う果てしない三次元の無限の広がり"
+      "text": "ぼうえんきょう",
+      "type": "tech",
+      "meaning": "遥か彼方の星雲や銀河の深遠な光を集光して結像する光学観測装置",
+      "asset": "telescope"
     },
     {
-      "text": "aurora",
-      "type": "宇宙現象",
-      "meaning": "太陽風の荷電粒子が惑星の磁気圏と大気に衝突して輝く極光「オーロラ」"
+      "text": "ハッブル",
+      "type": "tech",
+      "meaning": "長年にわたり宇宙深部の鮮明な映像を地球へ届け続けた伝説の宇宙望遠鏡",
+      "asset": "hubble"
     },
     {
-      "text": "zenith",
-      "type": "宇宙",
-      "meaning": "観測者の頭上真上の天球上に位置する仮想の最高点「天頂」"
+      "text": "ウェッブ",
+      "type": "tech",
+      "meaning": "黄金の六角形主鏡で宇宙黎明期の光を捉える最新鋭赤外線宇宙望遠鏡",
+      "asset": "webb"
     },
     {
-      "text": "hubble",
-      "type": "宇宙技術",
-      "meaning": "人類の宇宙観を大きく変革した伝説的な軌道上宇宙望遠鏡「ハッブル」"
+      "text": "ボイジャー",
+      "type": "tech",
+      "meaning": "ゴールデンレコードを携え太陽系境界面を越えて恒星間航行を続ける探査機",
+      "asset": "voyager"
     },
     {
-      "text": "dust",
-      "type": "宇宙",
-      "meaning": "銀河の渦状腕全体に分散する微小な鉱物粒子と宇宙煤（宇宙塵）"
+      "text": "スプートニク",
+      "type": "tech",
+      "meaning": "人類史上初めて地球周回軌道への投入に成功した記念碑的第一号人工衛星",
+      "asset": "sputnik"
     },
     {
-      "text": "hole",
-      "type": "宇宙",
-      "meaning": "時空が特異点へと極度に歪み落ち込む強大な重力場領域"
+      "text": "ロケット",
+      "type": "tech",
+      "meaning": "強烈な推進燃焼エネルギーで地球の重力を振り切る巨大打ち上げ機",
+      "asset": "rocket"
     },
     {
-      "text": "star",
-      "type": "宇宙",
-      "meaning": "中心核での熱核融合反応によって自ら光り輝く巨大なプラズマ球「恒星」"
+      "text": "カプセル",
+      "type": "tech",
+      "meaning": "強固な耐熱シールドを備え大気圏再突入を可能にする与圧式帰還カプセル",
+      "asset": "capsule"
     },
     {
-      "text": "planet",
-      "type": "宇宙",
-      "meaning": "恒星を周回し、自らの重力で球形を保ち軌道上を支配する主要天体「惑星」"
+      "text": "モジュール",
+      "type": "tech",
+      "meaning": "ドッキングポートを備え軌道上基地を拡張する機能単位ブロック",
+      "asset": "module"
     },
     {
-      "text": "galaxy",
-      "type": "宇宙",
-      "meaning": "何千億もの恒星、暗黒物質、星雲が重力によって結合した巨大構造「銀河」"
+      "text": "ローバー",
+      "type": "tech",
+      "meaning": "不整地踏破タイヤと分析アームを備え地球外の荒野を走破する探査車",
+      "asset": "rover"
     },
     {
-      "text": "galaxies",
-      "type": "宇宙",
-      "meaning": "宇宙の大規模構造の網の目全体に分布する無数の銀河宇宙"
+      "text": "うちゅうせん",
+      "type": "tech",
+      "meaning": "恒星間推進エンジンと姿勢制御スラスターを備えた有人宇宙船",
+      "asset": "ship"
     },
     {
-      "text": "universe",
-      "type": "宇宙",
-      "meaning": "物質、エネルギー、空間、時間、物理法則のすべてを含む森羅万象「全宇宙」"
+      "text": "ドローン",
+      "type": "tech",
+      "meaning": "自律AIセンサーで周囲を哨戒し小惑星帯の危険を索敵する探査ドローン",
+      "asset": "drone"
     },
     {
-      "text": "nebula",
-      "type": "宇宙",
-      "meaning": "イオン化ガス、恒星の残骸、宇宙塵が発光する広大な星間雲「星雲」"
+      "text": "せいかんせん",
+      "type": "tech",
+      "meaning": "光速域航行を可能にするワープ機関を搭載した超長距離大型星間巡洋艦",
+      "asset": "starship"
     },
     {
-      "text": "gravity",
-      "type": "宇宙現象",
-      "meaning": "質量やエネルギーに応じて時空を歪める宇宙の根本的な引力「重力」"
+      "text": "スペースシャトル",
+      "type": "tech",
+      "meaning": "大気圏再突入後に巨大な翼で滑空着陸する再使用型軌道宇宙往還機",
+      "asset": "space_shuttle"
     },
     {
-      "text": "supernova",
-      "type": "宇宙現象",
-      "meaning": "大質量星の終末期に起き、銀河全体に匹敵する光を放つ超新星爆発"
+      "text": "うちゅうステーション",
+      "type": "tech",
+      "meaning": "微小重力環境下で各国の科学者が長期滞在研究を行う巨大複合宇宙基地",
+      "asset": "space_station"
     },
     {
-      "text": "astronaut",
-      "type": "宇宙技術",
-      "meaning": "軌道上や惑星間への過酷な宇宙飛行任務を遂行する訓練を受けた宇宙飛行士"
+      "text": "ほし",
+      "type": "cosmos",
+      "meaning": "中心核の激しい熱核融合反応によって眩い光と熱を放ち続ける恒星",
+      "asset": "star"
     },
     {
-      "text": "astronomy",
-      "type": "宇宙科学",
-      "meaning": "天体、物理的宇宙、深宇宙の法則と起源を研究する学問「天文学」"
+      "text": "ぎんが",
+      "type": "cosmos",
+      "meaning": "数千億もの星々と星間物質が巨大な重力で束ねられた壮麗な回転渦巻銀河",
+      "asset": "galaxy"
     },
     {
-      "text": "exoplanet",
-      "type": "宇宙",
-      "meaning": "私たちの太陽系外に位置し、遠くの恒星を周回する太陽系外惑星"
+      "text": "せいうん",
+      "type": "cosmos",
+      "meaning": "息をのむほど鮮やかなガスと星間塵が漂い新たな恒星が誕生する星雲",
+      "asset": "nebula"
     },
     {
-      "text": "exoplanets",
-      "type": "宇宙",
-      "meaning": "天の川銀河の遠方恒星系に存在する無数の系外惑星群"
+      "text": "ちょうしんせい",
+      "type": "fenomeno",
+      "meaning": "一生を終えた大質量星が銀河全体の明るさを凌駕して大爆発する現象",
+      "asset": "supernova"
     },
     {
-      "text": "satellite",
-      "type": "宇宙技術",
-      "meaning": "観測や通信のために惑星を周回する人工または天然の軌道周回衛星"
+      "text": "パルサー",
+      "type": "cosmos",
+      "meaning": "超高速で自転し規則正しい電波パルスを灯台のように放つ超高密度中性子星",
+      "asset": "pulsar"
     },
     {
-      "text": "constellation",
-      "type": "宇宙",
-      "meaning": "天文学の星図において夜空に描かれた恒星の特定の配置「星座」"
+      "text": "クエーサー",
+      "type": "cosmos",
+      "meaning": "超大質量ブラックホールの降着円盤から莫大なエネルギーを放つ活動銀河核",
+      "asset": "quasar"
     },
     {
-      "text": "telescope",
-      "type": "宇宙技術",
-      "meaning": "遠方の天体からの電磁波や可視光線を集めて観測する光学望遠鏡"
+      "text": "マグネター",
+      "type": "cosmos",
+      "meaning": "原子構造すら引き裂く宇宙最強の超極限磁場をまとう特殊な中性子星",
+      "asset": "magnetar"
     },
     {
-      "text": "starship",
-      "type": "宇宙技術",
-      "meaning": "恒星間の広大な深淵を航行可能な先進的恒星間宇宙船「スターシップ」"
+      "text": "けいがいわくせい",
+      "type": "cosmos",
+      "meaning": "太陽系の彼方で別の恒星の周りを周回する遥かなる未知の系外惑星",
+      "asset": "exoplanet"
     },
     {
-      "text": "atmosphere",
-      "type": "宇宙",
-      "meaning": "重力によって天体の周囲に保持されている気体の層「大気圏」"
+      "text": "アンドロメダ",
+      "type": "cosmos",
+      "meaning": "我々の銀河系と将来合体する運命にある夜空で最も雄大な隣接渦巻銀河",
+      "asset": "andromeda"
     },
     {
-      "text": "magnetosphere",
-      "type": "宇宙現象",
-      "meaning": "高エネルギー太陽風や宇宙放射線を遮る惑星の磁気防護シールド「磁気圏」"
+      "text": "あまのがわ",
+      "type": "cosmos",
+      "meaning": "夜空を白い河のように横切り太陽系が属する我らの母なる天の川銀河",
+      "asset": "milky_way"
     },
     {
-      "text": "radiation",
-      "type": "宇宙現象",
-      "meaning": "宇宙空間を光速で移動する高エネルギー電磁波や素粒子線「放射線」"
+      "text": "ほうしゃせん",
+      "type": "hazard",
+      "meaning": "宇宙空間を音もなく貫通し物質をイオン化する高エネルギー放射線",
+      "asset": "radiation"
     },
     {
-      "text": "spectrum",
-      "type": "宇宙科学",
-      "meaning": "光を波長ごとに分散させ天体の温度や化学組成を解き明かす「スペクトル」"
+      "text": "はんぶっしつ",
+      "type": "hazard",
+      "meaning": "通常物質と接触した瞬間に純粋な光エネルギーへと対消滅する鏡像物質",
+      "asset": "antimatter"
     },
     {
-      "text": "andromeda",
-      "type": "宇宙",
-      "meaning": "私たちの天の川銀河と将来重力衝突する軌道にある最寄りの大型渦巻銀河"
+      "text": "ブラックホール",
+      "type": "hazard",
+      "meaning": "無限の重力で時空を歪め光すら脱出できない暗黒の究極天体",
+      "asset": "black_hole"
     },
     {
-      "text": "heliosphere",
-      "type": "宇宙",
-      "meaning": "太陽風によって星間空間の中に形成される巨大な磁気バブル領域「太陽圏」"
+      "text": "ワームホール",
+      "type": "cosmos",
+      "meaning": "時空の布地を折り畳み遥か遠方の宇宙同士を直結する理論上の時空トンネル",
+      "asset": "wormhole"
     },
     {
-      "text": "antimatter",
-      "type": "宇宙科学",
-      "meaning": "通常の物質と接触すると互いに強烈に対消滅する反粒子からなる「反物質」"
+      "text": "うちゅうひこうし",
+      "type": "tech",
+      "meaning": "船外活動宇宙服を身にまとい漆黒の宇宙空間で作業を行う勇敢な探検者",
+      "asset": "astronaut"
     },
     {
-      "text": "singularity",
-      "type": "宇宙",
-      "meaning": "ブラックホールの中心にあり、重力密度が無限大となり物理法則が崩壊する「特異点」"
+      "text": "コスモノート",
+      "type": "tech",
+      "meaning": "数々の過酷な軌道飛行訓練を乗り越え船団を指揮する宇宙航行士",
+      "asset": "cosmonaut"
     },
     {
-      "text": "multiverse",
-      "type": "宇宙",
-      "meaning": "無限の時空泡や異なる物理法則を含む並行宇宙の集合概念「マルチバース」"
+      "text": "はくしょくわいせい",
+      "type": "cosmos",
+      "meaning": "外層を放出した恒星の燃え滓であり地球大に凝縮された超高密度な残骸",
+      "asset": "white_dwarf"
     },
     {
-      "text": "light-year",
-      "type": "宇宙科学",
-      "meaning": "光が真空中を1太陽年（約9兆4600億キロ）かけて進む天文学的距離「光年」"
+      "text": "せきしょくきょせい",
+      "type": "cosmos",
+      "meaning": "燃料が尽きかけ数百倍に巨大化して周囲の惑星を飲み込む晩年の巨星",
+      "asset": "red_giant"
     },
     {
-      "text": "black-hole",
-      "type": "宇宙",
-      "meaning": "光さえも脱出できないほど強大な重力場を持つ極限の天体「ブラックホール」"
+      "text": "たいようたんさき",
+      "type": "tech",
+      "meaning": "特殊カーボン耐熱盾で灼熱のコロナに突入し太陽嵐の源流を解明する探査機",
+      "asset": "solar_probe"
     },
     {
-      "text": "stardust",
-      "type": "宇宙",
-      "meaning": "超新星爆発の残滓であり、新たな岩石惑星や生命を育む重元素の星屑"
+      "text": "つきちゃくりくせん",
+      "type": "tech",
+      "meaning": "4本の着陸脚を展開してクレーターだらけの月面へ軟着陸する着陸船",
+      "asset": "lunar_module"
     },
     {
-      "text": "dark-matter",
-      "type": "宇宙",
-      "meaning": "光を発さず電磁波では観測できないが宇宙の質量の大部分を占める「暗黒物質」"
+      "text": "きょだいしょうわくせい",
+      "type": "hazard",
+      "meaning": "直撃すれば惑星規模の大絶滅を引き起こす直径数十キロの怪物小惑星",
+      "asset": "giant_asteroid"
     },
     {
-      "text": "dark-energy",
-      "type": "宇宙",
-      "meaning": "観測可能な宇宙の膨張を加速させている謎に満ちた宇宙エネルギー「暗黒エネルギー」"
+      "text": "きどうきし",
+      "type": "tech",
+      "meaning": "静止軌道上に固定され船団への補給や整備修理を統括する巨大軌道要塞基地",
+      "asset": "orbital_station"
     },
     {
-      "text": "wormhole",
-      "type": "宇宙",
-      "meaning": "離れた二つの時空領域を直結する理論上のトポロジー的短縮路「ワームホール」"
+      "text": "トロヤぐんしょうわくせい",
+      "type": "hazard",
+      "meaning": "惑星と太陽のラグランジュ点に長年捕らわれ安定軌道を保つ小惑星",
+      "asset": "trojan_asteroid"
     },
     {
-      "text": "speed-of-light",
-      "type": "宇宙科学",
-      "meaning": "真空中を秒速約30万キロメートルで進む宇宙の普遍的な最高速度定数「光速」"
+      "text": "きどうぼうえんきょう",
+      "type": "tech",
+      "meaning": "大気の揺らぎを完全に排除した軌道上から銀河を鮮明に捉える観測鏡",
+      "asset": "orbital_telescope"
     },
     {
-      "text": "space-station",
-      "type": "宇宙技術",
-      "meaning": "科学者が滞在し微小重力環境で最先端の研究を行う有人軌道宇宙ステーション"
+      "text": "うちゅうカプセル",
+      "type": "tech",
+      "meaning": "乗組員を安全に保護し惑星間を往還する高強度気密宇宙カプセル",
+      "asset": "space_capsule"
     },
     {
-      "text": "event-horizon",
-      "type": "宇宙",
-      "meaning": "ブラックホールを取り囲み、それを超えると何者も戻れない境界「事象の地平面」"
+      "text": "たんさしゃ",
+      "type": "tech",
+      "meaning": "ドリルと質量分析器を搭載し異星の岩石を破砕調査する全地形対応探査車両",
+      "asset": "rover_vehicle"
     },
     {
-      "text": "milky-way",
-      "type": "宇宙",
-      "meaning": "何千億もの恒星系を抱え私たちの太陽系が属する棒渦巻銀河「天の川銀河」"
+      "text": "かくもつせん",
+      "type": "tech",
+      "meaning": "採掘基地から精錬鉱石コンテナを大量に惑星間輸送する超大型宇宙貨物船",
+      "asset": "freighter"
     }
   ],
   "bossWords": {
     "alien_dreadnought": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
+        "text": "たいよう",
+        "type": "cosmos",
+        "meaning": "光と熱と重力エネルギーを供給する太陽系の中心星",
+        "asset": "sun"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
+        "text": "いわ",
+        "type": "hazard",
+        "meaning": "宇宙空間を漂流し地球方向へ飛来する巨大な宇宙岩石",
+        "asset": "rock"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
+        "text": "すいせい",
+        "type": "cosmos",
+        "meaning": "太陽に最も近く猛烈な熱と寒冷に晒される太陽系最小の惑星",
+        "asset": "mercury"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
+        "text": "きんせい",
+        "type": "cosmos",
+        "meaning": "厚い硫酸の大気と猛烈な温室効果を持つ夜空で最も明るい惑星",
+        "asset": "venus"
       },
       {
-        "text": "ray",
-        "type": "宇宙現象",
-        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
+        "text": "ベスタ",
+        "type": "hazard",
+        "meaning": "小惑星帯で2番目に巨大な質量を持ち巨大クレーターが刻まれた小惑星",
+        "asset": "vesta"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
+        "text": "かせい",
+        "type": "cosmos",
+        "meaning": "酸化鉄の赤い砂塵に覆われ太陽系最大の火山オリンポス山を擁する惑星",
+        "asset": "mars"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
+        "text": "もくせい",
+        "type": "cosmos",
+        "meaning": "巨大な大赤斑の嵐が渦巻く太陽系最大の圧倒的なガス巨大惑星",
+        "asset": "jupiter"
       },
       {
-        "text": "phase",
-        "type": "宇宙現象",
-        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
+        "text": "どせい",
+        "type": "cosmos",
+        "meaning": "氷と塵粒子で構成された美しい環をまとう壮麗なガス巨大惑星",
+        "asset": "saturn"
       },
       {
-        "text": "wave",
-        "type": "宇宙現象",
-        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
+        "text": "てんのうせい",
+        "type": "cosmos",
+        "meaning": "極端に傾いた自転軸を持ちメタン氷の青緑色に輝く氷巨大惑星",
+        "asset": "uranus"
       },
       {
-        "text": "ship",
-        "type": "宇宙技術",
-        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
+        "text": "かいおうせい",
+        "type": "cosmos",
+        "meaning": "太陽系最遠の深青色の世界で音速を超える超高速嵐が吹き荒れる惑星",
+        "asset": "neptune"
       },
       {
-        "text": "nova",
-        "type": "宇宙現象",
-        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
+        "text": "しょうわくせい",
+        "type": "hazard",
+        "meaning": "惑星形成期の残り屑であり金属や岩石で構成された太陽周回天体",
+        "asset": "asteroid"
       },
       {
-        "text": "target",
-        "type": "宇宙技術",
-        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
+        "text": "すいせい",
+        "type": "hazard",
+        "meaning": "太陽熱によって氷が昇華し美しく輝くガスと塵の尾を引く彗星",
+        "asset": "comet"
       },
       {
-        "text": "data",
-        "type": "宇宙技術",
-        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
+        "text": "りゅうせい",
+        "type": "hazard",
+        "meaning": "大気圏への突入摩擦によって発光し夜空を一瞬で切り裂く流れ星",
+        "asset": "meteor"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
+        "text": "いんせき",
+        "type": "hazard",
+        "meaning": "大気圏の超高温を耐え抜いて地表へと衝突した実物の地球外岩石",
+        "asset": "meteorite"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
+        "text": "かきゅう",
+        "type": "hazard",
+        "meaning": "大気中で轟音と共に激しく大爆発を起こす極めて高輝度な巨大火球",
+        "asset": "bolide"
       }
     ],
     "alien_hive": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
+        "text": "いわ",
+        "type": "hazard",
+        "meaning": "宇宙空間を漂流し地球方向へ飛来する巨大な宇宙岩石",
+        "asset": "rock"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
+        "text": "フォボス",
+        "type": "cosmos",
+        "meaning": "火星の地表近くを高速で周回する凹凸に富んだ不規則形状の第1衛星",
+        "asset": "phobos"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
+        "text": "ダイモス",
+        "type": "cosmos",
+        "meaning": "滑らかな塵の層に覆われた火星の外側をゆっくり周回する第2衛星",
+        "asset": "deimos"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
+        "text": "しょうわくせい",
+        "type": "hazard",
+        "meaning": "惑星形成期の残り屑であり金属や岩石で構成された太陽周回天体",
+        "asset": "asteroid"
       },
       {
-        "text": "ray",
-        "type": "宇宙現象",
-        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
+        "text": "すいせい",
+        "type": "hazard",
+        "meaning": "太陽熱によって氷が昇華し美しく輝くガスと塵の尾を引く彗星",
+        "asset": "comet"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
+        "text": "りゅうせい",
+        "type": "hazard",
+        "meaning": "大気圏への突入摩擦によって発光し夜空を一瞬で切り裂く流れ星",
+        "asset": "meteor"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
+        "text": "いんせき",
+        "type": "hazard",
+        "meaning": "大気圏の超高温を耐え抜いて地表へと衝突した実物の地球外岩石",
+        "asset": "meteorite"
       },
       {
-        "text": "phase",
-        "type": "宇宙現象",
-        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
+        "text": "かきゅう",
+        "type": "hazard",
+        "meaning": "大気中で轟音と共に激しく大爆発を起こす極めて高輝度な巨大火球",
+        "asset": "bolide"
       },
       {
-        "text": "wave",
-        "type": "宇宙現象",
-        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
+        "text": "はへん",
+        "type": "hazard",
+        "meaning": "宇宙衝突によって飛散し危険な突入軌道をとる鋭利な破片",
+        "asset": "fragment"
       },
       {
-        "text": "ship",
-        "type": "宇宙技術",
-        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
+        "text": "せきしついんせき",
+        "type": "hazard",
+        "meaning": "ケイ酸塩鉱物を主成分とする太古の石質隕石",
+        "asset": "aerolite"
       },
       {
-        "text": "nova",
-        "type": "宇宙現象",
-        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
+        "text": "りゅうせいたい",
+        "type": "hazard",
+        "meaning": "大気圏へ突入する前に深宇宙を高速で飛行している小さな母岩天体",
+        "asset": "meteoroid"
       },
       {
-        "text": "target",
-        "type": "宇宙技術",
-        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
+        "text": "きょせき",
+        "type": "hazard",
+        "meaning": "巨大な母小惑星から剥ぎ取られ突進してくる高密度の岩塊",
+        "asset": "boulder"
       },
       {
-        "text": "data",
-        "type": "宇宙技術",
-        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
+        "text": "きょだいしょうわくせい",
+        "type": "hazard",
+        "meaning": "直撃すれば惑星規模の大絶滅を引き起こす直径数十キロの怪物小惑星",
+        "asset": "giant_asteroid"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
+        "text": "トロヤぐんしょうわくせい",
+        "type": "hazard",
+        "meaning": "惑星と太陽のラグランジュ点に長年捕らわれ安定軌道を保つ小惑星",
+        "asset": "trojan_asteroid"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
+        "text": "ドローン",
+        "type": "tech",
+        "meaning": "自律AIセンサーで周囲を哨戒し小惑星帯の危険を索敵する探査ドローン",
+        "asset": "drone"
       }
     ],
     "alien_psionic": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
+        "text": "せいうん",
+        "type": "cosmos",
+        "meaning": "息をのむほど鮮やかなガスと星間塵が漂い新たな恒星が誕生する星雲",
+        "asset": "nebula"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
+        "text": "ちょうしんせい",
+        "type": "fenomeno",
+        "meaning": "一生を終えた大質量星が銀河全体の明るさを凌駕して大爆発する現象",
+        "asset": "supernova"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
+        "text": "パルサー",
+        "type": "cosmos",
+        "meaning": "超高速で自転し規則正しい電波パルスを灯台のように放つ超高密度中性子星",
+        "asset": "pulsar"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
+        "text": "クエーサー",
+        "type": "cosmos",
+        "meaning": "超大質量ブラックホールの降着円盤から莫大なエネルギーを放つ活動銀河核",
+        "asset": "quasar"
       },
       {
-        "text": "ray",
-        "type": "宇宙現象",
-        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
+        "text": "マグネター",
+        "type": "cosmos",
+        "meaning": "原子構造すら引き裂く宇宙最強の超極限磁場をまとう特殊な中性子星",
+        "asset": "magnetar"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
+        "text": "けいがいわくせい",
+        "type": "cosmos",
+        "meaning": "太陽系の彼方で別の恒星の周りを周回する遥かなる未知の系外惑星",
+        "asset": "exoplanet"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
+        "text": "アンドロメダ",
+        "type": "cosmos",
+        "meaning": "我々の銀河系と将来合体する運命にある夜空で最も雄大な隣接渦巻銀河",
+        "asset": "andromeda"
       },
       {
-        "text": "phase",
-        "type": "宇宙現象",
-        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
+        "text": "あまのがわ",
+        "type": "cosmos",
+        "meaning": "夜空を白い河のように横切り太陽系が属する我らの母なる天の川銀河",
+        "asset": "milky_way"
       },
       {
-        "text": "wave",
-        "type": "宇宙現象",
-        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
+        "text": "ほうしゃせん",
+        "type": "hazard",
+        "meaning": "宇宙空間を音もなく貫通し物質をイオン化する高エネルギー放射線",
+        "asset": "radiation"
       },
       {
-        "text": "ship",
-        "type": "宇宙技術",
-        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
+        "text": "はんぶっしつ",
+        "type": "hazard",
+        "meaning": "通常物質と接触した瞬間に純粋な光エネルギーへと対消滅する鏡像物質",
+        "asset": "antimatter"
       },
       {
-        "text": "nova",
-        "type": "宇宙現象",
-        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
+        "text": "ブラックホール",
+        "type": "hazard",
+        "meaning": "無限の重力で時空を歪め光すら脱出できない暗黒の究極天体",
+        "asset": "black_hole"
       },
       {
-        "text": "target",
-        "type": "宇宙技術",
-        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
+        "text": "ワームホール",
+        "type": "cosmos",
+        "meaning": "時空の布地を折り畳み遥か遠方の宇宙同士を直結する理論上の時空トンネル",
+        "asset": "wormhole"
       },
       {
-        "text": "data",
-        "type": "宇宙技術",
-        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
+        "text": "はくしょくわいせい",
+        "type": "cosmos",
+        "meaning": "外層を放出した恒星の燃え滓であり地球大に凝縮された超高密度な残骸",
+        "asset": "white_dwarf"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
+        "text": "せきしょくきょせい",
+        "type": "cosmos",
+        "meaning": "燃料が尽きかけ数百倍に巨大化して周囲の惑星を飲み込む晩年の巨星",
+        "asset": "red_giant"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
+        "text": "ほし",
+        "type": "cosmos",
+        "meaning": "中心核の激しい熱核融合反応によって眩い光と熱を放ち続ける恒星",
+        "asset": "star"
       }
     ],
     "alien_warlord": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
+        "text": "ロケット",
+        "type": "tech",
+        "meaning": "強烈な推進燃焼エネルギーで地球の重力を振り切る巨大打ち上げ機",
+        "asset": "rocket"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
+        "text": "カプセル",
+        "type": "tech",
+        "meaning": "強固な耐熱シールドを備え大気圏再突入を可能にする与圧式帰還カプセル",
+        "asset": "capsule"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
+        "text": "モジュール",
+        "type": "tech",
+        "meaning": "ドッキングポートを備え軌道上基地を拡張する機能単位ブロック",
+        "asset": "module"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
+        "text": "ローバー",
+        "type": "tech",
+        "meaning": "不整地踏破タイヤと分析アームを備え地球外の荒野を走破する探査車",
+        "asset": "rover"
       },
       {
-        "text": "ray",
-        "type": "宇宙現象",
-        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
+        "text": "うちゅうせん",
+        "type": "tech",
+        "meaning": "恒星間推進エンジンと姿勢制御スラスターを備えた有人宇宙船",
+        "asset": "ship"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
+        "text": "ドローン",
+        "type": "tech",
+        "meaning": "自律AIセンサーで周囲を哨戒し小惑星帯の危険を索敵する探査ドローン",
+        "asset": "drone"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
+        "text": "せいかんせん",
+        "type": "tech",
+        "meaning": "光速域航行を可能にするワープ機関を搭載した超長距離大型星間巡洋艦",
+        "asset": "starship"
       },
       {
-        "text": "phase",
-        "type": "宇宙現象",
-        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
+        "text": "スペースシャトル",
+        "type": "tech",
+        "meaning": "大気圏再突入後に巨大な翼で滑空着陸する再使用型軌道宇宙往還機",
+        "asset": "space_shuttle"
       },
       {
-        "text": "wave",
-        "type": "宇宙現象",
-        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
+        "text": "うちゅうステーション",
+        "type": "tech",
+        "meaning": "微小重力環境下で各国の科学者が長期滞在研究を行う巨大複合宇宙基地",
+        "asset": "space_station"
       },
       {
-        "text": "ship",
-        "type": "宇宙技術",
-        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
+        "text": "うちゅうひこうし",
+        "type": "tech",
+        "meaning": "船外活動宇宙服を身にまとい漆黒の宇宙空間で作業を行う勇敢な探検者",
+        "asset": "astronaut"
       },
       {
-        "text": "nova",
-        "type": "宇宙現象",
-        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
+        "text": "コスモノート",
+        "type": "tech",
+        "meaning": "数々の過酷な軌道飛行訓練を乗り越え船団を指揮する宇宙航行士",
+        "asset": "cosmonaut"
       },
       {
-        "text": "target",
-        "type": "宇宙技術",
-        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
+        "text": "たいようたんさき",
+        "type": "tech",
+        "meaning": "特殊カーボン耐熱盾で灼熱のコロナに突入し太陽嵐の源流を解明する探査機",
+        "asset": "solar_probe"
       },
       {
-        "text": "data",
-        "type": "宇宙技術",
-        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
+        "text": "つきちゃくりくせん",
+        "type": "tech",
+        "meaning": "4本の着陸脚を展開してクレーターだらけの月面へ軟着陸する着陸船",
+        "asset": "lunar_module"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
+        "text": "うちゅうカプセル",
+        "type": "tech",
+        "meaning": "乗組員を安全に保護し惑星間を往還する高強度気密宇宙カプセル",
+        "asset": "space_capsule"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
+        "text": "かくもつせん",
+        "type": "tech",
+        "meaning": "採掘基地から精錬鉱石コンテナを大量に惑星間輸送する超大型宇宙貨物船",
+        "asset": "freighter"
       }
     ],
     "alien_darkmatter": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
+        "text": "パルサー",
+        "type": "cosmos",
+        "meaning": "超高速で自転し規則正しい電波パルスを灯台のように放つ超高密度中性子星",
+        "asset": "pulsar"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
+        "text": "クエーサー",
+        "type": "cosmos",
+        "meaning": "超大質量ブラックホールの降着円盤から莫大なエネルギーを放つ活動銀河核",
+        "asset": "quasar"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
+        "text": "マグネター",
+        "type": "cosmos",
+        "meaning": "原子構造すら引き裂く宇宙最強の超極限磁場をまとう特殊な中性子星",
+        "asset": "magnetar"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
+        "text": "ほうしゃせん",
+        "type": "hazard",
+        "meaning": "宇宙空間を音もなく貫通し物質をイオン化する高エネルギー放射線",
+        "asset": "radiation"
       },
       {
-        "text": "ray",
-        "type": "宇宙現象",
-        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
+        "text": "はんぶっしつ",
+        "type": "hazard",
+        "meaning": "通常物質と接触した瞬間に純粋な光エネルギーへと対消滅する鏡像物質",
+        "asset": "antimatter"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
+        "text": "ブラックホール",
+        "type": "hazard",
+        "meaning": "無限の重力で時空を歪め光すら脱出できない暗黒の究極天体",
+        "asset": "black_hole"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
+        "text": "ワームホール",
+        "type": "cosmos",
+        "meaning": "時空の布地を折り畳み遥か遠方の宇宙同士を直結する理論上の時空トンネル",
+        "asset": "wormhole"
       },
       {
-        "text": "phase",
-        "type": "宇宙現象",
-        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
+        "text": "せいうん",
+        "type": "cosmos",
+        "meaning": "息をのむほど鮮やかなガスと星間塵が漂い新たな恒星が誕生する星雲",
+        "asset": "nebula"
       },
       {
-        "text": "wave",
-        "type": "宇宙現象",
-        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
+        "text": "ちょうしんせい",
+        "type": "fenomeno",
+        "meaning": "一生を終えた大質量星が銀河全体の明るさを凌駕して大爆発する現象",
+        "asset": "supernova"
       },
       {
-        "text": "ship",
-        "type": "宇宙技術",
-        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
+        "text": "しょうわくせい",
+        "type": "hazard",
+        "meaning": "惑星形成期の残り屑であり金属や岩石で構成された太陽周回天体",
+        "asset": "asteroid"
       },
       {
-        "text": "nova",
-        "type": "宇宙現象",
-        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
+        "text": "かきゅう",
+        "type": "hazard",
+        "meaning": "大気中で轟音と共に激しく大爆発を起こす極めて高輝度な巨大火球",
+        "asset": "bolide"
       },
       {
-        "text": "target",
-        "type": "宇宙技術",
-        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
+        "text": "はへん",
+        "type": "hazard",
+        "meaning": "宇宙衝突によって飛散し危険な突入軌道をとる鋭利な破片",
+        "asset": "fragment"
       },
       {
-        "text": "data",
-        "type": "宇宙技術",
-        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
+        "text": "はくしょくわいせい",
+        "type": "cosmos",
+        "meaning": "外層を放出した恒星の燃え滓であり地球大に凝縮された超高密度な残骸",
+        "asset": "white_dwarf"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
+        "text": "せきしょくきょせい",
+        "type": "cosmos",
+        "meaning": "燃料が尽きかけ数百倍に巨大化して周囲の惑星を飲み込む晩年の巨星",
+        "asset": "red_giant"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
+        "text": "きょだいしょうわくせい",
+        "type": "hazard",
+        "meaning": "直撃すれば惑星規模の大絶滅を引き起こす直径数十キロの怪物小惑星",
+        "asset": "giant_asteroid"
       }
     ],
     "alien_mothership": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
+        "text": "せいかんせん",
+        "type": "tech",
+        "meaning": "光速域航行を可能にするワープ機関を搭載した超長距離大型星間巡洋艦",
+        "asset": "starship"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
+        "text": "スペースシャトル",
+        "type": "tech",
+        "meaning": "大気圏再突入後に巨大な翼で滑空着陸する再使用型軌道宇宙往還機",
+        "asset": "space_shuttle"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
+        "text": "うちゅうステーション",
+        "type": "tech",
+        "meaning": "微小重力環境下で各国の科学者が長期滞在研究を行う巨大複合宇宙基地",
+        "asset": "space_station"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
+        "text": "きどうきし",
+        "type": "tech",
+        "meaning": "静止軌道上に固定され船団への補給や整備修理を統括する巨大軌道要塞基地",
+        "asset": "orbital_station"
       },
       {
-        "text": "ray",
-        "type": "宇宙現象",
-        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
+        "text": "きどうぼうえんきょう",
+        "type": "tech",
+        "meaning": "大気の揺らぎを完全に排除した軌道上から銀河を鮮明に捉える観測鏡",
+        "asset": "orbital_telescope"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
+        "text": "うちゅうカプセル",
+        "type": "tech",
+        "meaning": "乗組員を安全に保護し惑星間を往還する高強度気密宇宙カプセル",
+        "asset": "space_capsule"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
+        "text": "たんさしゃ",
+        "type": "tech",
+        "meaning": "ドリルと質量分析器を搭載し異星の岩石を破砕調査する全地形対応探査車両",
+        "asset": "rover_vehicle"
       },
       {
-        "text": "phase",
-        "type": "宇宙現象",
-        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
+        "text": "かくもつせん",
+        "type": "tech",
+        "meaning": "採掘基地から精錬鉱石コンテナを大量に惑星間輸送する超大型宇宙貨物船",
+        "asset": "freighter"
       },
       {
-        "text": "wave",
-        "type": "宇宙現象",
-        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
+        "text": "じんこうえいせい",
+        "type": "tech",
+        "meaning": "軌道上で観測機器や通信アンテナを展開し地球を周回する人工天体",
+        "asset": "satellite"
       },
       {
-        "text": "ship",
-        "type": "宇宙技術",
-        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
+        "text": "たんさき",
+        "type": "tech",
+        "meaning": "未踏の惑星や深宇宙の科学探査のために派遣される自律型無人探査機",
+        "asset": "probe"
       },
       {
-        "text": "nova",
-        "type": "宇宙現象",
-        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
+        "text": "ぼうえんきょう",
+        "type": "tech",
+        "meaning": "遥か彼方の星雲や銀河の深遠な光を集光して結像する光学観測装置",
+        "asset": "telescope"
       },
       {
-        "text": "target",
-        "type": "宇宙技術",
-        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
+        "text": "ハッブル",
+        "type": "tech",
+        "meaning": "長年にわたり宇宙深部の鮮明な映像を地球へ届け続けた伝説の宇宙望遠鏡",
+        "asset": "hubble"
       },
       {
-        "text": "data",
-        "type": "宇宙技術",
-        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
+        "text": "ウェッブ",
+        "type": "tech",
+        "meaning": "黄金の六角形主鏡で宇宙黎明期の光を捉える最新鋭赤外線宇宙望遠鏡",
+        "asset": "webb"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
+        "text": "ボイジャー",
+        "type": "tech",
+        "meaning": "ゴールデンレコードを携え太陽系境界面を越えて恒星間航行を続ける探査機",
+        "asset": "voyager"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
+        "text": "スプートニク",
+        "type": "tech",
+        "meaning": "人類史上初めて地球周回軌道への投入に成功した記念碑的第一号人工衛星",
+        "asset": "sputnik"
       }
     ],
     "robot": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
+        "text": "じんこうえいせい",
+        "type": "tech",
+        "meaning": "軌道上で観測機器や通信アンテナを展開し地球を周回する人工天体",
+        "asset": "satellite"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
+        "text": "たんさき",
+        "type": "tech",
+        "meaning": "未踏の惑星や深宇宙の科学探査のために派遣される自律型無人探査機",
+        "asset": "probe"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
+        "text": "ぼうえんきょう",
+        "type": "tech",
+        "meaning": "遥か彼方の星雲や銀河の深遠な光を集光して結像する光学観測装置",
+        "asset": "telescope"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
+        "text": "ハッブル",
+        "type": "tech",
+        "meaning": "長年にわたり宇宙深部の鮮明な映像を地球へ届け続けた伝説の宇宙望遠鏡",
+        "asset": "hubble"
       },
       {
-        "text": "ray",
-        "type": "宇宙現象",
-        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
+        "text": "ウェッブ",
+        "type": "tech",
+        "meaning": "黄金の六角形主鏡で宇宙黎明期の光を捉える最新鋭赤外線宇宙望遠鏡",
+        "asset": "webb"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
+        "text": "ボイジャー",
+        "type": "tech",
+        "meaning": "ゴールデンレコードを携え太陽系境界面を越えて恒星間航行を続ける探査機",
+        "asset": "voyager"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
+        "text": "スプートニク",
+        "type": "tech",
+        "meaning": "人類史上初めて地球周回軌道への投入に成功した記念碑的第一号人工衛星",
+        "asset": "sputnik"
       },
       {
-        "text": "phase",
-        "type": "宇宙現象",
-        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
+        "text": "ロケット",
+        "type": "tech",
+        "meaning": "強烈な推進燃焼エネルギーで地球の重力を振り切る巨大打ち上げ機",
+        "asset": "rocket"
       },
       {
-        "text": "wave",
-        "type": "宇宙現象",
-        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
+        "text": "カプセル",
+        "type": "tech",
+        "meaning": "強固な耐熱シールドを備え大気圏再突入を可能にする与圧式帰還カプセル",
+        "asset": "capsule"
       },
       {
-        "text": "ship",
-        "type": "宇宙技術",
-        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
+        "text": "モジュール",
+        "type": "tech",
+        "meaning": "ドッキングポートを備え軌道上基地を拡張する機能単位ブロック",
+        "asset": "module"
       },
       {
-        "text": "nova",
-        "type": "宇宙現象",
-        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
+        "text": "ローバー",
+        "type": "tech",
+        "meaning": "不整地踏破タイヤと分析アームを備え地球外の荒野を走破する探査車",
+        "asset": "rover"
       },
       {
-        "text": "target",
-        "type": "宇宙技術",
-        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
+        "text": "うちゅうせん",
+        "type": "tech",
+        "meaning": "恒星間推進エンジンと姿勢制御スラスターを備えた有人宇宙船",
+        "asset": "ship"
       },
       {
-        "text": "data",
-        "type": "宇宙技術",
-        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
+        "text": "ドローン",
+        "type": "tech",
+        "meaning": "自律AIセンサーで周囲を哨戒し小惑星帯の危険を索敵する探査ドローン",
+        "asset": "drone"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
+        "text": "きどうぼうえんきょう",
+        "type": "tech",
+        "meaning": "大気の揺らぎを完全に排除した軌道上から銀河を鮮明に捉える観測鏡",
+        "asset": "orbital_telescope"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
+        "text": "たんさしゃ",
+        "type": "tech",
+        "meaning": "ドリルと質量分析器を搭載し異星の岩石を破砕調査する全地形対応探査車両",
+        "asset": "rover_vehicle"
       }
     ],
     "beast": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
+        "text": "いわ",
+        "type": "hazard",
+        "meaning": "宇宙空間を漂流し地球方向へ飛来する巨大な宇宙岩石",
+        "asset": "rock"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
+        "text": "しょうわくせい",
+        "type": "hazard",
+        "meaning": "惑星形成期の残り屑であり金属や岩石で構成された太陽周回天体",
+        "asset": "asteroid"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
+        "text": "すいせい",
+        "type": "hazard",
+        "meaning": "太陽熱によって氷が昇華し美しく輝くガスと塵の尾を引く彗星",
+        "asset": "comet"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
+        "text": "りゅうせい",
+        "type": "hazard",
+        "meaning": "大気圏への突入摩擦によって発光し夜空を一瞬で切り裂く流れ星",
+        "asset": "meteor"
       },
       {
-        "text": "ray",
-        "type": "宇宙現象",
-        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
+        "text": "いんせき",
+        "type": "hazard",
+        "meaning": "大気圏の超高温を耐え抜いて地表へと衝突した実物の地球外岩石",
+        "asset": "meteorite"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
+        "text": "かきゅう",
+        "type": "hazard",
+        "meaning": "大気中で轟音と共に激しく大爆発を起こす極めて高輝度な巨大火球",
+        "asset": "bolide"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
+        "text": "はへん",
+        "type": "hazard",
+        "meaning": "宇宙衝突によって飛散し危険な突入軌道をとる鋭利な破片",
+        "asset": "fragment"
       },
       {
-        "text": "phase",
-        "type": "宇宙現象",
-        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
+        "text": "せきしついんせき",
+        "type": "hazard",
+        "meaning": "ケイ酸塩鉱物を主成分とする太古の石質隕石",
+        "asset": "aerolite"
       },
       {
-        "text": "wave",
-        "type": "宇宙現象",
-        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
+        "text": "りゅうせいたい",
+        "type": "hazard",
+        "meaning": "大気圏へ突入する前に深宇宙を高速で飛行している小さな母岩天体",
+        "asset": "meteoroid"
       },
       {
-        "text": "ship",
-        "type": "宇宙技術",
-        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
+        "text": "きょせき",
+        "type": "hazard",
+        "meaning": "巨大な母小惑星から剥ぎ取られ突進してくる高密度の岩塊",
+        "asset": "boulder"
       },
       {
-        "text": "nova",
-        "type": "宇宙現象",
-        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
+        "text": "きょだいしょうわくせい",
+        "type": "hazard",
+        "meaning": "直撃すれば惑星規模の大絶滅を引き起こす直径数十キロの怪物小惑星",
+        "asset": "giant_asteroid"
       },
       {
-        "text": "target",
-        "type": "宇宙技術",
-        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
+        "text": "トロヤぐんしょうわくせい",
+        "type": "hazard",
+        "meaning": "惑星と太陽のラグランジュ点に長年捕らわれ安定軌道を保つ小惑星",
+        "asset": "trojan_asteroid"
       },
       {
-        "text": "data",
-        "type": "宇宙技術",
-        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
+        "text": "タイタン",
+        "type": "cosmos",
+        "meaning": "濃密な大気と液体メタンの湖や海を湛えた土星最大の巨大衛星",
+        "asset": "titan"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
+        "text": "フォボス",
+        "type": "cosmos",
+        "meaning": "火星の地表近くを高速で周回する凹凸に富んだ不規則形状の第1衛星",
+        "asset": "phobos"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
+        "text": "ダイモス",
+        "type": "cosmos",
+        "meaning": "滑らかな塵の層に覆われた火星の外側をゆっくり周回する第2衛星",
+        "asset": "deimos"
       }
     ],
     "mythology": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
+        "text": "たいよう",
+        "type": "cosmos",
+        "meaning": "光と熱と重力エネルギーを供給する太陽系の中心星",
+        "asset": "sun"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
+        "text": "つき",
+        "type": "cosmos",
+        "meaning": "地球を周回し潮汐現象に強い影響を与える天然の衛星",
+        "asset": "moon"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
+        "text": "すいせい",
+        "type": "cosmos",
+        "meaning": "太陽に最も近く猛烈な熱と寒冷に晒される太陽系最小の惑星",
+        "asset": "mercury"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
+        "text": "きんせい",
+        "type": "cosmos",
+        "meaning": "厚い硫酸の大気と猛烈な温室効果を持つ夜空で最も明るい惑星",
+        "asset": "venus"
       },
       {
-        "text": "ray",
-        "type": "宇宙現象",
-        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
+        "text": "ベスタ",
+        "type": "hazard",
+        "meaning": "小惑星帯で2番目に巨大な質量を持ち巨大クレーターが刻まれた小惑星",
+        "asset": "vesta"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
+        "text": "かせい",
+        "type": "cosmos",
+        "meaning": "酸化鉄の赤い砂塵に覆われ太陽系最大の火山オリンポス山を擁する惑星",
+        "asset": "mars"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
+        "text": "もくせい",
+        "type": "cosmos",
+        "meaning": "巨大な大赤斑の嵐が渦巻く太陽系最大の圧倒的なガス巨大惑星",
+        "asset": "jupiter"
       },
       {
-        "text": "phase",
-        "type": "宇宙現象",
-        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
+        "text": "どせい",
+        "type": "cosmos",
+        "meaning": "氷と塵粒子で構成された美しい環をまとう壮麗なガス巨大惑星",
+        "asset": "saturn"
       },
       {
-        "text": "wave",
-        "type": "宇宙現象",
-        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
+        "text": "てんのうせい",
+        "type": "cosmos",
+        "meaning": "極端に傾いた自転軸を持ちメタン氷の青緑色に輝く氷巨大惑星",
+        "asset": "uranus"
       },
       {
-        "text": "ship",
-        "type": "宇宙技術",
-        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
+        "text": "かいおうせい",
+        "type": "cosmos",
+        "meaning": "太陽系最遠の深青色の世界で音速を超える超高速嵐が吹き荒れる惑星",
+        "asset": "neptune"
       },
       {
-        "text": "nova",
-        "type": "宇宙現象",
-        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
+        "text": "めいおうせい",
+        "type": "cosmos",
+        "meaning": "カイパーベルトに位置し窒素氷のハート型平原が広がる準惑星",
+        "asset": "pluto"
       },
       {
-        "text": "target",
-        "type": "宇宙技術",
-        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
+        "text": "ケレス",
+        "type": "cosmos",
+        "meaning": "火星と木星の間の小惑星帯に位置する最大の天体であり球状の準惑星",
+        "asset": "ceres"
       },
       {
-        "text": "data",
-        "type": "宇宙技術",
-        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
+        "text": "タイタン",
+        "type": "cosmos",
+        "meaning": "濃密な大気と液体メタンの湖や海を湛えた土星最大の巨大衛星",
+        "asset": "titan"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
+        "text": "エウロパ",
+        "type": "cosmos",
+        "meaning": "ひび割れた氷殻の地下深くに広大な液体の海を隠し持つ木星の氷衛星",
+        "asset": "europa"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
+        "text": "イオ",
+        "type": "cosmos",
+        "meaning": "数百もの活火山から硫黄を噴き上げる太陽系で最も火山活動が激しい衛星",
+        "asset": "io"
       }
     ],
     "volcano": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
+        "text": "かせい",
+        "type": "cosmos",
+        "meaning": "酸化鉄の赤い砂塵に覆われ太陽系最大の火山オリンポス山を擁する惑星",
+        "asset": "mars"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
+        "text": "イオ",
+        "type": "cosmos",
+        "meaning": "数百もの活火山から硫黄を噴き上げる太陽系で最も火山活動が激しい衛星",
+        "asset": "io"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
+        "text": "りゅうせい",
+        "type": "hazard",
+        "meaning": "大気圏への突入摩擦によって発光し夜空を一瞬で切り裂く流れ星",
+        "asset": "meteor"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
+        "text": "いんせき",
+        "type": "hazard",
+        "meaning": "大気圏の超高温を耐え抜いて地表へと衝突した実物の地球外岩石",
+        "asset": "meteorite"
       },
       {
-        "text": "ray",
-        "type": "宇宙現象",
-        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
+        "text": "かきゅう",
+        "type": "hazard",
+        "meaning": "大気中で轟音と共に激しく大爆発を起こす極めて高輝度な巨大火球",
+        "asset": "bolide"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
+        "text": "はへん",
+        "type": "hazard",
+        "meaning": "宇宙衝突によって飛散し危険な突入軌道をとる鋭利な破片",
+        "asset": "fragment"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
+        "text": "せきしついんせき",
+        "type": "hazard",
+        "meaning": "ケイ酸塩鉱物を主成分とする太古の石質隕石",
+        "asset": "aerolite"
       },
       {
-        "text": "phase",
-        "type": "宇宙現象",
-        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
+        "text": "ほうしゃせん",
+        "type": "hazard",
+        "meaning": "宇宙空間を音もなく貫通し物質をイオン化する高エネルギー放射線",
+        "asset": "radiation"
       },
       {
-        "text": "wave",
-        "type": "宇宙現象",
-        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
+        "text": "はんぶっしつ",
+        "type": "hazard",
+        "meaning": "通常物質と接触した瞬間に純粋な光エネルギーへと対消滅する鏡像物質",
+        "asset": "antimatter"
       },
       {
-        "text": "ship",
-        "type": "宇宙技術",
-        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
+        "text": "せきしょくきょせい",
+        "type": "cosmos",
+        "meaning": "燃料が尽きかけ数百倍に巨大化して周囲の惑星を飲み込む晩年の巨星",
+        "asset": "red_giant"
       },
       {
-        "text": "nova",
-        "type": "宇宙現象",
-        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
+        "text": "いわ",
+        "type": "hazard",
+        "meaning": "宇宙空間を漂流し地球方向へ飛来する巨大な宇宙岩石",
+        "asset": "rock"
       },
       {
-        "text": "target",
-        "type": "宇宙技術",
-        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
+        "text": "しょうわくせい",
+        "type": "hazard",
+        "meaning": "惑星形成期の残り屑であり金属や岩石で構成された太陽周回天体",
+        "asset": "asteroid"
       },
       {
-        "text": "data",
-        "type": "宇宙技術",
-        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
+        "text": "りゅうせいたい",
+        "type": "hazard",
+        "meaning": "大気圏へ突入する前に深宇宙を高速で飛行している小さな母岩天体",
+        "asset": "meteoroid"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
+        "text": "きょせき",
+        "type": "hazard",
+        "meaning": "巨大な母小惑星から剥ぎ取られ突進してくる高密度の岩塊",
+        "asset": "boulder"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
+        "text": "きょだいしょうわくせい",
+        "type": "hazard",
+        "meaning": "直撃すれば惑星規模の大絶滅を引き起こす直径数十キロの怪物小惑星",
+        "asset": "giant_asteroid"
       }
     ],
     "ocean": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
+        "text": "ベスタ",
+        "type": "hazard",
+        "meaning": "小惑星帯で2番目に巨大な質量を持ち巨大クレーターが刻まれた小惑星",
+        "asset": "vesta"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
+        "text": "タイタン",
+        "type": "cosmos",
+        "meaning": "濃密な大気と液体メタンの湖や海を湛えた土星最大の巨大衛星",
+        "asset": "titan"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
+        "text": "エウロパ",
+        "type": "cosmos",
+        "meaning": "ひび割れた氷殻の地下深くに広大な液体の海を隠し持つ木星の氷衛星",
+        "asset": "europa"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
+        "text": "トリトン",
+        "type": "cosmos",
+        "meaning": "逆行軌道を描き液体窒素の氷の火山間欠泉を噴出する海王星最大の衛星",
+        "asset": "triton"
       },
       {
-        "text": "ray",
-        "type": "宇宙現象",
-        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
+        "text": "エンケラドス",
+        "type": "cosmos",
+        "meaning": "南極の虎の縞模様の裂け目から氷と水蒸気の噴煙を宇宙へ放つ土星の氷衛星",
+        "asset": "enceladus"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
+        "text": "ガニメデ",
+        "type": "cosmos",
+        "meaning": "惑星水星をも上回る大きさを誇り固有の磁場を持つ太陽系最大の巨大衛星",
+        "asset": "ganymede"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
+        "text": "かいおうせい",
+        "type": "cosmos",
+        "meaning": "太陽系最遠の深青色の世界で音速を超える超高速嵐が吹き荒れる惑星",
+        "asset": "neptune"
       },
       {
-        "text": "phase",
-        "type": "宇宙現象",
-        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
+        "text": "すいせい",
+        "type": "hazard",
+        "meaning": "太陽熱によって氷が昇華し美しく輝くガスと塵の尾を引く彗星",
+        "asset": "comet"
       },
       {
-        "text": "wave",
-        "type": "宇宙現象",
-        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
+        "text": "はへん",
+        "type": "hazard",
+        "meaning": "宇宙衝突によって飛散し危険な突入軌道をとる鋭利な破片",
+        "asset": "fragment"
       },
       {
-        "text": "ship",
-        "type": "宇宙技術",
-        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
+        "text": "じんこうえいせい",
+        "type": "tech",
+        "meaning": "軌道上で観測機器や通信アンテナを展開し地球を周回する人工天体",
+        "asset": "satellite"
       },
       {
-        "text": "nova",
-        "type": "宇宙現象",
-        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
+        "text": "たんさき",
+        "type": "tech",
+        "meaning": "未踏の惑星や深宇宙の科学探査のために派遣される自律型無人探査機",
+        "asset": "probe"
       },
       {
-        "text": "target",
-        "type": "宇宙技術",
-        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
+        "text": "うちゅうせん",
+        "type": "tech",
+        "meaning": "恒星間推進エンジンと姿勢制御スラスターを備えた有人宇宙船",
+        "asset": "ship"
       },
       {
-        "text": "data",
-        "type": "宇宙技術",
-        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
+        "text": "うちゅうステーション",
+        "type": "tech",
+        "meaning": "微小重力環境下で各国の科学者が長期滞在研究を行う巨大複合宇宙基地",
+        "asset": "space_station"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
+        "text": "かくもつせん",
+        "type": "tech",
+        "meaning": "採掘基地から精錬鉱石コンテナを大量に惑星間輸送する超大型宇宙貨物船",
+        "asset": "freighter"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
+        "text": "つき",
+        "type": "cosmos",
+        "meaning": "地球を周回し潮汐現象に強い影響を与える天然の衛星",
+        "asset": "moon"
       }
     ],
     "cosmos": [
       {
-        "text": "sun",
-        "type": "宇宙",
-        "meaning": "太陽系の中心に位置し、光、熱、重力的安定性をもたらす恒星"
+        "text": "ほし",
+        "type": "cosmos",
+        "meaning": "中心核の激しい熱核融合反応によって眩い光と熱を放ち続ける恒星",
+        "asset": "star"
       },
       {
-        "text": "moon",
-        "type": "宇宙",
-        "meaning": "地球を周回し、海の潮汐を起こし地軸の傾きを安定させる天然の衛星"
+        "text": "ぎんが",
+        "type": "cosmos",
+        "meaning": "数千億もの星々と星間物質が巨大な重力で束ねられた壮麗な回転渦巻銀河",
+        "asset": "galaxy"
       },
       {
-        "text": "moons",
-        "type": "宇宙",
-        "meaning": "宇宙空間で惑星や小惑星を周回する岩石や氷でできた天然の衛星群"
+        "text": "せいうん",
+        "type": "cosmos",
+        "meaning": "息をのむほど鮮やかなガスと星間塵が漂い新たな恒星が誕生する星雲",
+        "asset": "nebula"
       },
       {
-        "text": "sky",
-        "type": "宇宙",
-        "meaning": "地表から見上げられる天球であり、恒星や星座が輝く空間"
+        "text": "ちょうしんせい",
+        "type": "fenomeno",
+        "meaning": "一生を終えた大質量星が銀河全体の明るさを凌駕して大爆発する現象",
+        "asset": "supernova"
       },
       {
-        "text": "ray",
-        "type": "宇宙現象",
-        "meaning": "電磁エネルギーの集中した束、または放射される星の光"
+        "text": "パルサー",
+        "type": "cosmos",
+        "meaning": "超高速で自転し規則正しい電波パルスを灯台のように放つ超高密度中性子星",
+        "asset": "pulsar"
       },
       {
-        "text": "halo",
-        "type": "宇宙",
-        "meaning": "天体や銀河を取り巻くガスや星による光り輝く淡いリング状構造"
+        "text": "クエーサー",
+        "type": "cosmos",
+        "meaning": "超大質量ブラックホールの降着円盤から莫大なエネルギーを放つ活動銀河核",
+        "asset": "quasar"
       },
       {
-        "text": "axis",
-        "type": "宇宙",
-        "meaning": "惑星や天体が自転を行う中心となる仮想の直線"
+        "text": "マグネター",
+        "type": "cosmos",
+        "meaning": "原子構造すら引き裂く宇宙最強の超極限磁場をまとう特殊な中性子星",
+        "asset": "magnetar"
       },
       {
-        "text": "phase",
-        "type": "宇宙現象",
-        "meaning": "地球から観察される月や惑星の太陽光に照らされた部分の満ち欠け"
+        "text": "けいがいわくせい",
+        "type": "cosmos",
+        "meaning": "太陽系の彼方で別の恒星の周りを周回する遥かなる未知の系外惑星",
+        "asset": "exoplanet"
       },
       {
-        "text": "wave",
-        "type": "宇宙現象",
-        "meaning": "時空のさざ波である重力波のように空間を伝播するエネルギーの振動"
+        "text": "アンドロメダ",
+        "type": "cosmos",
+        "meaning": "我々の銀河系と将来合体する運命にある夜空で最も雄大な隣接渦巻銀河",
+        "asset": "andromeda"
       },
       {
-        "text": "ship",
-        "type": "宇宙技術",
-        "meaning": "惑星間航行のために設計された有人または無人の宇宙探査船"
+        "text": "あまのがわ",
+        "type": "cosmos",
+        "meaning": "夜空を白い河のように横切り太陽系が属する我らの母なる天の川銀河",
+        "asset": "milky_way"
       },
       {
-        "text": "nova",
-        "type": "宇宙現象",
-        "meaning": "急激に核融合を起こし突然輝きを増す恒星の爆発現象"
+        "text": "ブラックホール",
+        "type": "hazard",
+        "meaning": "無限の重力で時空を歪め光すら脱出できない暗黒の究極天体",
+        "asset": "black_hole"
       },
       {
-        "text": "target",
-        "type": "宇宙技術",
-        "meaning": "宇宙探査機によって目指される軌道上の目的地や天体中継点"
+        "text": "ワームホール",
+        "type": "cosmos",
+        "meaning": "時空の布地を折り畳み遥か遠方の宇宙同士を直結する理論上の時空トンネル",
+        "asset": "wormhole"
       },
       {
-        "text": "data",
-        "type": "宇宙技術",
-        "meaning": "宇宙望遠鏡や探査機によって広大な宇宙空間から収集される科学テレメトリ"
+        "text": "はくしょくわいせい",
+        "type": "cosmos",
+        "meaning": "外層を放出した恒星の燃え滓であり地球大に凝縮された超高密度な残骸",
+        "asset": "white_dwarf"
       },
       {
-        "text": "pitch",
-        "type": "宇宙",
-        "meaning": "銀河と銀河の間の広大な虚空に広がる完全な深淵の漆黒"
+        "text": "せきしょくきょせい",
+        "type": "cosmos",
+        "meaning": "燃料が尽きかけ数百倍に巨大化して周囲の惑星を飲み込む晩年の巨星",
+        "asset": "red_giant"
       },
       {
-        "text": "year",
-        "type": "宇宙",
-        "meaning": "惑星が中心の恒星の周囲を1周公転するために必要な時間"
+        "text": "たいよう",
+        "type": "cosmos",
+        "meaning": "光と熱と重力エネルギーを供給する太陽系の中心星",
+        "asset": "sun"
       }
     ]
   },

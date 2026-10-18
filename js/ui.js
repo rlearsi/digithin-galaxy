@@ -218,7 +218,7 @@ function renderSkillsInventoryModal() {
     card.className = 'skills-inventory-card';
     card.innerHTML = `
       <div class="skills-card-icon" style="--item-clr: ${def.color || 'var(--accent-primary)'}">
-        <span>${def.icon || '⚡'}</span>
+        ${def.image ? `<img src="${def.image}" class="skill-pixel-img" alt="" draggable="false" />` : `<span>${def.icon || '⚡'}</span>`}
       </div>
       <div class="skills-card-body">
         <div class="skills-card-header">
@@ -1652,7 +1652,7 @@ function createSkillPill(slot, idx, def) {
   pill.innerHTML = `
     <kbd class="sp-key-badge">${idx + 1}</kbd>
     <div class="sp-main">
-      <span class="sp-icon">${def.icon}</span>
+      <span class="sp-icon">${def.image ? `<img src="${def.image}" class="sp-icon-img" alt="" draggable="false" />` : def.icon}</span>
       <div class="sp-info">
         <span class="sp-name">${sName}</span>
         <span class="sp-dur-text"></span>
@@ -1764,7 +1764,11 @@ function renderQueue() {
       cls += ' qi-new-word';
     }
     el.className = cls;
-    el.textContent = qi.text;
+    const objPath = (typeof getCelestialObjectForItem === 'function')
+      ? getCelestialObjectForItem(qi.text, qi.type)
+      : 'objects/comet';
+    const assetSrc = objPath.includes('/') ? `assets/${objPath}.webp` : `assets/objects/${objPath}.webp`;
+    el.innerHTML = `<img src="${assetSrc}" alt="" class="qi-object-icon" draggable="false" /><span>${qi.text}</span>`;
     queueItemsEl.appendChild(el);
   }
 }
@@ -1813,7 +1817,11 @@ function animateQueueShift() {
           cls += ' qi-new-word';
         }
         newEl.className = cls;
-        newEl.textContent = qi.text;
+        const objPath = (typeof getCelestialObjectForItem === 'function')
+          ? getCelestialObjectForItem(qi.text, qi.type)
+          : 'objects/comet';
+        const assetSrc = objPath.includes('/') ? `assets/${objPath}.webp` : `assets/objects/${objPath}.webp`;
+        newEl.innerHTML = `<img src="${assetSrc}" alt="" class="qi-object-icon" draggable="false" /><span>${qi.text}</span>`;
         queueItemsEl.appendChild(newEl);
         setTimeout(() => {
           if (newEl.parentNode) newEl.classList.remove('qi-entering');
@@ -2715,6 +2723,33 @@ if (typeof applyMobileInputRestrictions === 'function') applyMobileInputRestrict
 // BOSS BATTLE UI RENDERING (MONSTER / ROBOT WITH LIVES: |||)
 // ============================================================
 function getBossSpriteSvg(boss) {
+  const bId = boss?.id || '';
+  const type = boss?.type || 'alien_dreadnought';
+  const imgMap = {
+    alien_xylarion: 'assets/bosses/alien_xylarion.webp',
+    alien_dreadnought: 'assets/bosses/alien_xylarion.webp',
+    robot: 'assets/bosses/alien_xylarion.webp',
+    alien_zorkon: 'assets/bosses/alien_zorkon.webp',
+    alien_hive: 'assets/bosses/alien_zorkon.webp',
+    beast: 'assets/bosses/alien_zorkon.webp',
+    alien_vespera: 'assets/bosses/alien_vespera.webp',
+    alien_psionic: 'assets/bosses/alien_vespera.webp',
+    mythology: 'assets/bosses/alien_vespera.webp',
+    alien_kragthor: 'assets/bosses/alien_kragthor.webp',
+    alien_warlord: 'assets/bosses/alien_kragthor.webp',
+    volcano: 'assets/bosses/alien_kragthor.webp',
+    alien_nebulor: 'assets/bosses/alien_nebulor.webp',
+    alien_darkmatter: 'assets/bosses/alien_nebulor.webp',
+    ocean: 'assets/bosses/alien_nebulor.webp',
+    alien_xenor: 'assets/bosses/alien_xenor.webp',
+    alien_mothership: 'assets/bosses/alien_xenor.webp',
+    cosmos: 'assets/bosses/alien_xenor.webp'
+  };
+  const src = boss?.image || imgMap[bId] || imgMap[type] || 'assets/bosses/alien_xylarion.webp';
+  return `<img src="${src}" alt="Alien Boss" class="boss-pixel-avatar" draggable="false" />`;
+}
+
+function _legacyBossSvg(boss) {
   const type = boss?.type || 'alien_dreadnought';
   const primaryColor = boss?.color || '#06B6D4';
 
@@ -3398,6 +3433,8 @@ function updateStartScreenUI() {
 
   if (window.AVAILABLE_UPDATE_VERSION && typeof showUpdateNotification === 'function') {
     showUpdateNotification();
+  } else if (typeof checkForAppUpdate === 'function') {
+    checkForAppUpdate();
   }
 }
 
@@ -3706,14 +3743,32 @@ window.checkForAppUpdate = checkForAppUpdate;
 window.applyAppUpdate = applyAppUpdate;
 window.simulateUpdateAvailable = simulateUpdateAvailable;
 
-// Trigger check on load
+// Trigger check on load and attach proactive update listeners
 if (typeof document !== 'undefined') {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => { checkForAppUpdate(); }, 1200);
+      setTimeout(() => { checkForAppUpdate(); }, 800);
     });
   } else {
-    setTimeout(() => { checkForAppUpdate(); }, 1200);
+    setTimeout(() => { checkForAppUpdate(); }, 800);
   }
+
+  // Check whenever user focuses the tab or switches back to it
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+      checkForAppUpdate();
+    }
+  });
+  window.addEventListener('focus', () => {
+    checkForAppUpdate();
+  });
+
+  // Background heartbeat every 30s on the home screen
+  setInterval(() => {
+    const screenStart = document.getElementById('screen-start');
+    if (screenStart && screenStart.classList.contains('active')) {
+      checkForAppUpdate();
+    }
+  }, 30000);
 }
 

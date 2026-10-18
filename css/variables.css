@@ -17,61 +17,53 @@
 :root {
   --theme: 'dark';
 
-  /* Frosted Glass Surfaces (Translucent glass with cosmic refraction) */
-  --glass-surface: rgba(4, 7, 18, 0.45);
-  --glass-sidebar: rgba(4, 7, 18, 0.38);
-  --glass-column: rgba(2, 5, 15, 0.04);
-  --glass-queue: rgba(4, 7, 18, 0.50);
+  /* Frosted Glass Surfaces (Cobalt Core Style Cosmic Violet Refraction) */
+  --glass-surface: rgba(26, 12, 48, 0.55);
+  --glass-sidebar: rgba(22, 10, 42, 0.52);
+  --glass-column: rgba(18, 8, 35, 0.12);
+  --glass-queue: rgba(26, 12, 48, 0.62);
 
   /* Frosted Glass Cards (Luminous Translucent Glass & Zero Borders) */
-  --glass-card: rgba(255, 255, 255, 0.16);
-  --glass-card-hover: rgba(255, 255, 255, 0.24);
+  --glass-card: rgba(255, 255, 255, 0.14);
+  --glass-card-hover: rgba(255, 255, 255, 0.22);
   --glass-card-border: transparent;
   --glass-card-blur: blur(20px) saturate(180%);
-  --glass-sub-card: rgba(0, 0, 0, 0.35);
+  --glass-sub-card: rgba(15, 6, 30, 0.45);
 
-  --glass-pill: rgba(255, 255, 255, 0.08);
-  --glass-btn-sec: rgba(255, 255, 255, 0.09);
-  --glass-hover: rgba(255, 255, 255, 0.12);
+  --glass-pill: rgba(255, 255, 255, 0.09);
+  --glass-btn-sec: rgba(255, 255, 255, 0.10);
+  --glass-hover: rgba(255, 255, 255, 0.15);
   --glass-border: transparent;
   --glass-inner-border: transparent;
-  --glass-highlight: rgba(255, 255, 255, 0.12);
-  --shadow-glass: 0 16px 40px rgba(0, 0, 0, 0.35);
+  --glass-highlight: rgba(255, 255, 255, 0.14);
+  --shadow-glass: 0 16px 40px rgba(0, 0, 0, 0.40);
 
   --modal-bg: var(--glass-surface);
-  --pause-backdrop: rgba(0, 0, 0, 0.05);
-  --modal-backdrop: rgba(0, 0, 0, 0.08);
+  --pause-backdrop: rgba(15, 6, 30, 0.25);
+  --modal-backdrop: rgba(15, 6, 30, 0.35);
 
   /* Padrão Clean Glass Overlay (Contagem Regressiva, Pause e Modais com Fundo Visível) */
-  --overlay-backdrop: rgba(0, 0, 0, 0.05);
+  --overlay-backdrop: rgba(15, 6, 30, 0.25);
   --overlay-backdrop-blur: blur(2px);
   --overlay-box-bg: var(--glass-surface);
   --overlay-box-blur: blur(24px) saturate(200%);
 
   /* Clean Typography Colors */
   --t1: #F8FAFC;
-  --t2: #94A3B8;
-  --t3: #64748B;
-  --t4: #475569;
+  --t2: #E2D4F0;
+  --t3: #94A3B8;
+  --t4: #64748B;
 
-  /* Saturated Joyful Palette */
-  --accent-primary: #4F46E5;
-  /* Vivid Indigo */
-  --accent-primary-hover: #6366F1;
-  --accent-cyan: #00A8FF;
-  /* Saturated Sky Cyan */
-  --accent-emerald: #2ED573;
-  /* Saturated Mint Emerald */
-  --accent-coral: #FF4757;
-  /* Saturated Coral Red */
-  --accent-orange: #FF793F;
-  /* Saturated Sunset Orange */
-  --accent-purple: #7C3AED;
-  /* Saturated Royal Purple */
-  --accent-pink: #EC4899;
-  /* Saturated Electric Pink */
-  --accent-amber: #FFA502;
-  /* Saturated Sunny Amber */
+  /* Cobalt Core Space Neon Palette */
+  --accent-primary: #8B5CF6;
+  --accent-primary-hover: #A855F7;
+  --accent-cyan: #00E5FF;
+  --accent-emerald: #10B981;
+  --accent-coral: #F43F5E;
+  --accent-orange: #FB923C;
+  --accent-purple: #C084FC;
+  --accent-pink: #E040FB;
+  --accent-amber: #FBBF24;
 
   /* Vocábulos: 100% Base Unificada Limpa (Padrão de Excelência Game UX) */
   --tile-base-bg: #2563EB;

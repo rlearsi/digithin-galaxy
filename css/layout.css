@@ -1003,7 +1003,7 @@
   animation: earthAxisRotate 80s linear infinite;
   transform-origin: 50% 50%;
   will-change: transform;
-  filter: drop-shadow(0 0 14px rgba(56, 189, 248, 0.40)) brightness(1.03);
+  filter: drop-shadow(0 0 16px rgba(0, 229, 255, 0.45)) brightness(1.05);
 }
 
 .earth-globe-img {
@@ -1013,6 +1013,9 @@
   display: block;
   user-select: none;
   pointer-events: none;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }
 
 @keyframes earthAxisRotate {
@@ -1165,38 +1168,38 @@
 }
 
 .qi {
-  font-weight: 700;
-  font-size: 0.74rem;
-  padding: 5px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 0.72rem;
+  padding: 3px 8px;
   border-radius: var(--r-pill);
   white-space: nowrap;
   border: none;
   color: #FFFFFF;
+  background: rgba(38, 16, 72, 0.75);
+  box-shadow: inset 0 0 0 1px rgba(192, 132, 252, 0.25);
   transition: opacity 0.25s ease, margin-left 0.24s cubic-bezier(0.4, 0, 0.2, 1), transform 0.24s ease;
   flex-shrink: 0;
   will-change: margin-left, opacity, transform;
 }
 .qi.letter {
-  width: 28px;
-  min-width: 28px;
-  max-width: 28px;
-  height: 28px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  padding: 0;
+  min-width: 24px;
+  padding: 3px 6px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--tile-letter-bg);
+  background: rgba(38, 16, 72, 0.75);
   flex-shrink: 0;
 }
-.qi.syllable { border-radius: var(--r-pill); background: var(--tile-syl-bg); flex-shrink: 0; }
-.qi.word     { border-radius: var(--r-pill); background: var(--tile-word-bg); flex-shrink: 0; }
-.qi.wildcard { border-radius: var(--r-pill); background: var(--tile-wild-bg); flex-shrink: 0; }
+.qi.syllable { border-radius: var(--r-pill); background: rgba(38, 16, 72, 0.75); flex-shrink: 0; }
+.qi.word     { border-radius: var(--r-pill); background: rgba(38, 16, 72, 0.75); flex-shrink: 0; }
+.qi.wildcard { border-radius: var(--r-pill); background: rgba(139, 92, 246, 0.75); flex-shrink: 0; }
 .qi.has-skill-q {
-  background: var(--tile-magic-bg) !important;
-  outline: 2px solid var(--accent-amber);
-  box-shadow: 0 0 10px rgba(217, 70, 239, 0.7);
+  background: rgba(224, 64, 251, 0.6) !important;
+  box-shadow: inset 0 0 0 1px var(--accent-amber), 0 0 10px rgba(217, 70, 239, 0.7);
   flex-shrink: 0;
 }
 

@@ -56,7 +56,22 @@
 }
 .sp-icon {
   font-size: 1.15rem;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+}
+.sp-icon-img,
+.skill-pixel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 .sp-info {
   display: flex;
@@ -390,60 +405,113 @@
 }
 
 /* ======================================================
-   FALLING ITEMS (VOCÁBULOS) — MODERN MAP MARKERS
+   FALLING ITEMS (CELESTIAL OBJECTS & ATTACHED LABELS)
+   Retro 16-bit Pixel Art Style (Cobalt Core Aesthetic)
    ====================================================== */
 .falling-item {
   position: absolute;
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border-radius: var(--r-pill);
+  justify-content: flex-start;
+  gap: 0px;
+  background: transparent !important;
+  box-shadow: none !important;
   border: none !important;
-  font-weight: 800;
-  white-space: nowrap;
   cursor: default;
   will-change: top;
   user-select: none;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-  color: #FFFFFF;
   transition: transform 0.1s ease;
+  z-index: 5;
 }
 
-/* Saturated Map Marker Badges - Clean Unified Base */
-.falling-item.letter {
-  font-size: 1.25rem;
+/* 1. Falling Celestial Object Sprite (36px - 44px) */
+.falling-object-sprite {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  padding: 0;
-  background: var(--tile-letter-bg);
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+  animation: celestialHover 3.2s ease-in-out infinite alternate;
 }
-.falling-item.syllable {
-  font-size: 1.05rem;
-  padding: 6px 16px;
-  border-radius: var(--r-pill);
-  background: var(--tile-syl-bg);
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+
+@keyframes celestialHover {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  50%  { transform: translateY(-2px) rotate(1.5deg); }
+  100% { transform: translateY(0px) rotate(-1.5deg); }
 }
-.falling-item.word {
-  font-size: 0.95rem;
-  padding: 7px 18px;
-  border-radius: var(--r-pill);
-  letter-spacing: 0.03em;
-  background: var(--tile-word-bg);
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+
+.falling-object-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  pointer-events: none;
 }
-.falling-item.has-skill {
-  background: var(--tile-magic-bg) !important;
-  box-shadow: 0 0 16px rgba(217, 70, 239, 0.65), 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+
+/* 2. Attached Name Label Underneath (Colado no objeto, mais fino, fonte menor) */
+.falling-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -4px; /* colado diretamente embaixo do objeto */
+  background: rgba(18, 7, 34, 0.88);
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  border-radius: 999px;
+  padding: 2px 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(192, 132, 252, 0.28);
+  pointer-events: none;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
 }
-.falling-item.wildcard {
-  font-size: 0.98rem;
-  padding: 7px 18px;
-  border-radius: var(--r-pill);
-  background: var(--tile-wild-bg);
-  box-shadow: 0 0 14px rgba(139, 92, 246, 0.5);
+
+.falling-text {
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 0.74rem;   /* fonte menor */
+  font-weight: 500;     /* traço mais fino */
+  letter-spacing: 0.05em;
+  color: #F8FAFC;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.falling-item.letter .falling-object-sprite,
+.falling-item.syllable .falling-object-sprite {
+  width: 28px;
+  height: 28px;
+}
+
+.falling-item.letter .falling-text {
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.falling-item.letter .falling-label {
+  padding: 2px 7px;
+  min-width: 20px;
+}
+
+.falling-item.syllable .falling-text {
+  font-size: 0.76rem;
+  font-weight: 500;
+}
+
+.falling-item.word .falling-text {
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.falling-item.has-skill .falling-label {
+  box-shadow: 0 0 10px rgba(224, 64, 251, 0.6), inset 0 0 0 1px rgba(224, 64, 251, 0.7) !important;
+}
+
+.falling-item.wildcard .falling-label {
+  box-shadow: 0 0 10px rgba(192, 132, 252, 0.6), inset 0 0 0 1px rgba(192, 132, 252, 0.7) !important;
 }
 
 /* Eco Cósmico Smart Targeting Indicator */
@@ -558,28 +626,38 @@
 }
 
 /* Typing Buffer Highlights & Status */
+/* Typing Buffer Highlights & Status */
 .falling-item.typing-target {
-  transform: scale(1.06);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  transform: scale(1.08);
+}
+.falling-item.typing-target .falling-label {
+  background: rgba(38, 16, 72, 0.96);
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.65), inset 0 0 0 1px #00E5FF;
 }
 .falling-item .m {
-  background: rgba(255, 255, 255, 0.28);
-  border-radius: 4px;
-  padding: 0 2px;
+  color: #00E5FF;
+  font-weight: 700;
+  text-shadow: 0 0 6px rgba(0, 229, 255, 0.85);
+  padding: 0 1px;
 }
-.falling-item.frozen {
-  filter: saturate(0.6) brightness(1.15);
-  background: #0284C7 !important;
+.falling-item.frozen .falling-object-sprite {
+  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.85)) brightness(1.25);
 }
-.falling-item.danger {
-  background: var(--tile-danger-bg, #DC2626) !important;
-  box-shadow: 0 0 18px rgba(220, 38, 38, 0.9), 0 0 32px rgba(255, 30, 64, 0.6) !important;
+.falling-item.frozen .falling-label {
+  background: rgba(2, 132, 199, 0.92) !important;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.8) !important;
+}
+.falling-item.danger .falling-object-sprite {
+  filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.95)) brightness(1.2);
   animation: dangerPulse 0.32s infinite alternate ease-in-out !important;
 }
+.falling-item.danger .falling-label {
+  background: rgba(185, 28, 28, 0.92) !important;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.9) !important;
+}
 
-.falling-item.in-black-hole-pull {
-  box-shadow: 0 0 16px rgba(56, 189, 248, 0.65), 0 6px 18px rgba(0, 0, 0, 0.4) !important;
-  filter: brightness(1.12) !important;
+.falling-item.in-black-hole-pull .falling-object-sprite {
+  filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.75)) brightness(1.15) !important;
 }
 
 .falling-item.training-near {
@@ -951,11 +1029,32 @@
 }
 
 .boss-sprite {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.boss-pixel-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+}
+
+.qi-object-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  flex-shrink: 0;
+  vertical-align: middle;
 }
 
 .boss-svg-char {
