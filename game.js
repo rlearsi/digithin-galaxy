@@ -525,11 +525,11 @@ function gameLoop(ts) {
       continue;
     }
 
-    // Movimentação com Dilatação Gravitacional do Tempo e Espaguetificação Progressiva
+    // Movimentação dos objetos (com dilatação gravitacional e espaguetificação estritamente fora do treinamento)
     if (!isFrozen && !trainingHold) {
       const spd = item.baseSpeed || CFG.baseSpeed;
       let gravFactor = 1.0;
-      if (item.y + h >= suctionStart) {
+      if (state.gameMode !== 'training' && (item.y + h >= suctionStart)) {
         // Progresso normalizado de entrada no poço gravitacional (0.0 no início dos 80% até 1.0 na boca)
         const pullProgress = Math.min(1, Math.max(0, (item.y + h - suctionStart) / (swallowY - suctionStart)));
 
@@ -548,23 +548,26 @@ function gameLoop(ts) {
       item.el.style.top = item.y + 'px';
     }
 
-    // Sinalizador de perigo e aura de sucção gravitacional
-    const dangerCls = state.gameMode === 'training' ? 'training-near' : 'danger';
-    if (item.y + h >= suctionStart + 15) {
-      item.el.classList.add(dangerCls);
+    // Sinalizador de perigo e aura de sucção gravitacional (apenas fora do treinamento)
+    if (state.gameMode !== 'training') {
+      if (item.y + h >= suctionStart + 15) {
+        item.el.classList.add('danger');
+      } else {
+        item.el.classList.remove('danger');
+      }
+
+      if (item.y + h >= suctionStart) {
+        item.el.classList.add('in-black-hole-pull');
+      } else {
+        item.el.classList.remove('in-black-hole-pull');
+      }
     } else {
-      item.el.classList.remove(dangerCls);
+      item.el.classList.remove('danger', 'in-black-hole-pull');
     }
 
-    if (item.y + h >= suctionStart) {
-      item.el.classList.add('in-black-hole-pull');
-    } else {
-      item.el.classList.remove('in-black-hole-pull');
-    }
-
-    // Modo Treinamento: trava no fundo sem destruir
-    if (state.gameMode === 'training' && (item.y + h >= boardH - 24)) {
-      item.y = boardH - 24 - h;
+    // Modo Treinamento: trava ao tocar na linha do escudo azul sem destruir
+    if (state.gameMode === 'training' && (item.y + h >= shieldBarrierY)) {
+      item.y = shieldBarrierY - h;
       item.el.style.top = item.y + 'px';
       item.el.style.transform = '';
       item.landed = true;
@@ -574,7 +577,7 @@ function gameLoop(ts) {
       continue;
     }
 
-    // Fall into the Black Hole Event Horizon (Gravitational Spaghettification Swallowing)
+    // Fall into the Black Hole Event Horizon (Gravitational Spaghettification Swallowing) - apenas fora do treinamento
     const swallowThreshold = item.isBossMeaning ? (boardH - 35) : (boardH - 45);
     if (state.gameMode !== 'training' && (item.y + h >= swallowThreshold)) {
       item.removing = true;

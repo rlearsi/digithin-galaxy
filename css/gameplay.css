@@ -660,49 +660,54 @@
   filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.75)) brightness(1.15) !important;
 }
 
-.falling-item.training-near {
-  background: #FFFFFF !important;
-  color: #0F172A !important;
-  box-shadow: none !important;
-  border: none !important;
-  text-shadow: none !important;
-}
-.falling-item.training-near * {
-  color: #0F172A !important;
-  text-shadow: none !important;
-}
-
+/* Training Landed Object Destaque (100% transparent container, NO square image background) */
 .falling-item.training-landed {
   border: none !important;
   box-shadow: none !important;
-  background: #FFFFFF !important;
-  color: #0F172A !important;
-  text-shadow: none !important;
-  z-index: 20;
+  background: transparent !important;
+  z-index: 25;
   animation: trainingLandedPulse 0.9s infinite alternate ease-in-out !important;
 }
-.falling-item.training-landed * {
-  color: #0F172A !important;
-  text-shadow: none !important;
+
+.falling-item.training-landed .falling-object-sprite {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.85)) brightness(1.2) !important;
 }
 
-/* Ripple waves: soft translucent fills expanding and fading (no borders, no glow) */
-.falling-item.training-landed::before,
-.falling-item.training-landed::after {
+.falling-item.training-landed .falling-label {
+  position: relative;
+  border: none !important;
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.65) !important;
+  z-index: 1;
+}
+
+.falling-item.training-landed .falling-label * {
+  color: #0F172A !important;
+  text-shadow: none !important;
+  font-weight: 700 !important;
+}
+
+/* Ripple waves on the label pill (smooth pill expansion, no square outlines) */
+.falling-item.training-landed .falling-label::before,
+.falling-item.training-landed .falling-label::after {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.40);
   z-index: -1;
   pointer-events: none;
   animation: trainingRipple 1.8s ease-out infinite;
 }
-.falling-item.training-landed::after {
+.falling-item.training-landed .falling-label::after {
   animation-delay: 0.9s;
 }
 @keyframes trainingRipple {
-  0%   { transform: scale(1);   opacity: 0.6; }
+  0%   { transform: scale(1);   opacity: 0.65; }
   100% { transform: scale(2.2); opacity: 0; }
 }
 
