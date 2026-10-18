@@ -2134,22 +2134,21 @@
         ";"
       ],
       "words": [
-        "AS",
-        "ALL",
-        "FALL",
-        "GLAD",
-        "HALF",
-        "LAD",
-        "DASH",
-        "FLASH",
-        "GLASS",
-        "SALAD",
-        "FLASK",
-        "HALL",
-        "FLAG",
-        "LADS",
-        "FALLS",
-        "SHALL"
+        "SUN",
+        "MOON",
+        "GALAXY",
+        "STAR",
+        "PROBE",
+        "PULSAR",
+        "QUASAR",
+        "CAPSULE",
+        "RADIATION",
+        "ROCK",
+        "VESTA",
+        "PHOBOS",
+        "CALLISTO",
+        "ANDROMEDA",
+        "GANYMEDE"
       ]
     },
     "2": {
@@ -2172,22 +2171,21 @@
         "P"
       ],
       "words": [
-        "TRY",
-        "TREE",
-        "POWER",
-        "QUIET",
-        "TYPE",
-        "WRITE",
-        "ROPE",
-        "TOWER",
-        "ROUTE",
-        "POET",
-        "PORT",
-        "TRIP",
-        "WIRE",
-        "PITY",
-        "PURE",
-        "ROTE"
+        "IO",
+        "JUPITER",
+        "METEOR",
+        "METEORITE",
+        "EUROPA",
+        "TITAN",
+        "ROVER",
+        "MERCURY",
+        "TELESCOPE",
+        "ROCKET",
+        "NEPTUNE",
+        "PLUTO",
+        "ASTEROID",
+        "AEROLITE",
+        "TRITON"
       ]
     },
     "3": {
@@ -2207,22 +2205,21 @@
         "M"
       ],
       "words": [
-        "MAN",
-        "CAN",
-        "VAN",
-        "BOX",
-        "MIX",
-        "ZONE",
-        "CAMP",
-        "BOMB",
-        "NAME",
-        "MINE",
-        "VIBE",
-        "CAVE",
-        "NAVY",
-        "COMB",
-        "MAZE",
-        "ZINC"
+        "WEBB",
+        "SHIP",
+        "VENUS",
+        "COMET",
+        "HUBBLE",
+        "COSMONAUT",
+        "CHARON",
+        "NEBULA",
+        "MAGNETAR",
+        "ENCELADUS",
+        "STARSHIP",
+        "SUPERNOVA",
+        "FRAGMENT",
+        "DRONE",
+        "MARS"
       ]
     },
     "4": {
@@ -2244,18 +2241,16 @@
         "."
       ],
       "words": [
-        "GO!",
-        "RUN!",
-        "HOW?",
-        "YES!",
-        "1, 2, 3",
-        "STOP.",
-        "WAIT!",
-        "WHO?",
-        "NOW.",
-        "WOW!",
-        "FAST!",
-        "GOAL!"
+        "SUPERNOVA!",
+        "BLACK-HOLE?",
+        "COMET!",
+        "ASTEROID?",
+        "APOLLO-11",
+        "VOYAGER-1",
+        "SPUTNIK-1",
+        "STAR-10",
+        "GALAXY!",
+        "SOLAR-PROBE"
       ]
     }
   }

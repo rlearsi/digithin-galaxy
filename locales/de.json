@@ -2123,20 +2123,21 @@
         "Ä"
       ],
       "words": [
-        "ALS",
-        "FALL",
-        "GLAS",
-        "HALB",
-        "SAAL",
-        "FAHL",
-        "JAGD",
-        "KAHN",
-        "LAGE",
-        "SCHAL",
-        "DACH",
-        "FACH",
-        "HALS",
-        "SCHAF"
+        "SONNE",
+        "MOND",
+        "GALAXIE",
+        "STERN",
+        "SONDE",
+        "PULSAR",
+        "QUASAR",
+        "KAPSEL",
+        "STRAHLUNG",
+        "FELSEN",
+        "VESTA",
+        "PHOBOS",
+        "KALLISTO",
+        "ANDROMEDA",
+        "GANYMED"
       ]
     },
     "2": {
@@ -2160,19 +2161,21 @@
         "Ü"
       ],
       "words": [
-        "WERT",
-        "ZEIT",
-        "TURM",
-        "ROTE",
-        "WORT",
-        "POST",
-        "WEIT",
-        "RUHE",
-        "TOPF",
-        "TOUR",
-        "WIRT",
-        "ZUG",
-        "TREU"
+        "IO",
+        "JUPITER",
+        "METEOR",
+        "METEORIT",
+        "EUROPA",
+        "TITAN",
+        "ROVER",
+        "MERKUR",
+        "TELESKOP",
+        "RAKETE",
+        "NEPTUN",
+        "PLUTO",
+        "ASTEROID",
+        "AEROLITH",
+        "TRITON"
       ]
     },
     "3": {
@@ -2192,18 +2195,21 @@
         "M"
       ],
       "words": [
-        "MAN",
-        "BAHN",
-        "NACH",
-        "VON",
-        "BUCH",
-        "NAME",
-        "MEIN",
-        "MOND",
-        "ZINK",
-        "CAMP",
-        "MAIS",
-        "NAVE"
+        "WEBB",
+        "RAUMSCHIFF",
+        "VENUS",
+        "KOMET",
+        "HUBBLE",
+        "KOSMONAUT",
+        "CHARON",
+        "NEBEL",
+        "MAGNETAR",
+        "ENCELADUS",
+        "STERNENSCHIFF",
+        "SUPERNOVA",
+        "FRAGMENT",
+        "DROHNE",
+        "MARS"
       ]
     },
     "4": {

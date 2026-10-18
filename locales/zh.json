@@ -2129,22 +2129,21 @@
         ";"
       ],
       "words": [
-        "AS",
-        "ALL",
-        "FALL",
-        "GLAD",
-        "HALF",
-        "LAD",
-        "DASH",
-        "FLASH",
-        "GLASS",
-        "SALAD",
-        "FLASK",
-        "HALL",
-        "FLAG",
-        "LADS",
-        "FALLS",
-        "SHALL"
+        "太阳",
+        "月球",
+        "星系",
+        "恒星",
+        "探测器",
+        "脉冲星",
+        "类星体",
+        "太空舱",
+        "辐射",
+        "岩石",
+        "灶神星",
+        "火卫一",
+        "木卫四",
+        "仙女座",
+        "木卫三"
       ]
     },
     "2": {
@@ -2167,22 +2166,21 @@
         "P"
       ],
       "words": [
-        "TRY",
-        "TREE",
-        "POWER",
-        "QUIET",
-        "TYPE",
-        "WRITE",
-        "ROPE",
-        "TOWER",
-        "ROUTE",
-        "POET",
-        "PORT",
-        "TRIP",
-        "WIRE",
-        "PITY",
-        "PURE",
-        "ROTE"
+        "木卫一",
+        "木星",
+        "流星",
+        "陨石",
+        "木卫二",
+        "土卫六",
+        "漫游车",
+        "水星",
+        "望远镜",
+        "火箭",
+        "海王星",
+        "冥王星",
+        "小行星",
+        "石陨石",
+        "海卫一"
       ]
     },
     "3": {
@@ -2202,22 +2200,21 @@
         "M"
       ],
       "words": [
-        "MAN",
-        "CAN",
-        "VAN",
-        "BOX",
-        "MIX",
-        "ZONE",
-        "CAMP",
-        "BOMB",
-        "NAME",
-        "MINE",
-        "VIBE",
-        "CAVE",
-        "NAVY",
-        "COMB",
-        "MAZE",
-        "ZINC"
+        "韦伯",
+        "飞船",
+        "金星",
+        "彗星",
+        "哈勃",
+        "航天员",
+        "冥卫一",
+        "星云",
+        "磁星",
+        "土卫二",
+        "星舰",
+        "超新星",
+        "碎片",
+        "无人机",
+        "火星"
       ]
     },
     "4": {
@@ -2239,18 +2236,16 @@
         "."
       ],
       "words": [
-        "GO!",
-        "RUN!",
-        "HOW?",
-        "YES!",
-        "1, 2, 3",
-        "STOP.",
-        "WAIT!",
-        "WHO?",
-        "NOW.",
-        "WOW!",
-        "FAST!",
-        "GOAL!"
+        "SUPERNOVA!",
+        "BLACK-HOLE?",
+        "COMET!",
+        "ASTEROID?",
+        "APOLLO-11",
+        "VOYAGER-1",
+        "SPUTNIK-1",
+        "STAR-10",
+        "GALAXY!",
+        "SOLAR-PROBE"
       ]
     }
   }

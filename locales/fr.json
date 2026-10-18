@@ -2134,18 +2134,21 @@
         "M"
       ],
       "words": [
-        "DES",
-        "LES",
-        "MAL",
-        "FILS",
-        "SACS",
-        "DAME",
-        "FLIC",
-        "MARS",
-        "LAME",
-        "GALA",
-        "HALLE",
-        "FLASH"
+        "SOLEIL",
+        "LUNE",
+        "GALAXIE",
+        "ETOILE",
+        "SONDE",
+        "PULSAR",
+        "QUASAR",
+        "CAPSULE",
+        "RAYONNEMENT",
+        "ROCHE",
+        "VESTA",
+        "PHOBOS",
+        "CALLISTO",
+        "ANDROMEDE",
+        "GANYMEDE"
       ]
     },
     "2": {
@@ -2168,17 +2171,21 @@
         "P"
       ],
       "words": [
-        "POUR",
-        "TOUR",
-        "PRIX",
-        "ROUE",
-        "PORT",
-        "PRET",
-        "PEUR",
-        "ROSE",
-        "VOIE",
-        "PAPIER",
-        "ROUTE"
+        "IO",
+        "JUPITER",
+        "METEORE",
+        "METEORITE",
+        "EUROPE",
+        "TITAN",
+        "ROVER",
+        "MERCURE",
+        "TELESCOPE",
+        "FUSEE",
+        "NEPTUNE",
+        "PLUTON",
+        "ASTEROIDE",
+        "AEROLITHE",
+        "TRITON"
       ]
     },
     "3": {
@@ -2197,16 +2204,21 @@
         "N"
       ],
       "words": [
-        "BON",
-        "VOIX",
-        "VENT",
-        "NOIR",
-        "BAIN",
-        "CUBE",
-        "VAPEUR",
-        "CAVE",
-        "NAVRE",
-        "BANC"
+        "WEBB",
+        "VAISSEAU",
+        "VENUS",
+        "COMETE",
+        "HUBBLE",
+        "COSMONAUTE",
+        "CHARON",
+        "NEBULEUSE",
+        "MAGNETAR",
+        "ENCELADE",
+        "ASTRONEF",
+        "SUPERNOVA",
+        "FRAGMENT",
+        "DRONE",
+        "MARS"
       ]
     },
     "4": {

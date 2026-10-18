@@ -2128,22 +2128,21 @@
         ";"
       ],
       "words": [
-        "AS",
-        "ALL",
-        "FALL",
-        "GLAD",
-        "HALF",
-        "LAD",
-        "DASH",
-        "FLASH",
-        "GLASS",
-        "SALAD",
-        "FLASK",
-        "HALL",
-        "FLAG",
-        "LADS",
-        "FALLS",
-        "SHALL"
+        "태양",
+        "달",
+        "은하",
+        "별",
+        "탐사선",
+        "펄서",
+        "퀘이사",
+        "캡슐",
+        "방사선",
+        "암석",
+        "베스타",
+        "포보스",
+        "칼리스토",
+        "안드로메다",
+        "가니메데"
       ]
     },
     "2": {
@@ -2166,22 +2165,21 @@
         "P"
       ],
       "words": [
-        "TRY",
-        "TREE",
-        "POWER",
-        "QUIET",
-        "TYPE",
-        "WRITE",
-        "ROPE",
-        "TOWER",
-        "ROUTE",
-        "POET",
-        "PORT",
-        "TRIP",
-        "WIRE",
-        "PITY",
-        "PURE",
-        "ROTE"
+        "이오",
+        "목성",
+        "유성",
+        "운석",
+        "유로파",
+        "타이탄",
+        "로버",
+        "수성",
+        "망원경",
+        "로켓",
+        "해왕성",
+        "명왕성",
+        "소행성",
+        "석질운석",
+        "트리톤"
       ]
     },
     "3": {
@@ -2201,22 +2199,21 @@
         "M"
       ],
       "words": [
-        "MAN",
-        "CAN",
-        "VAN",
-        "BOX",
-        "MIX",
-        "ZONE",
-        "CAMP",
-        "BOMB",
-        "NAME",
-        "MINE",
-        "VIBE",
-        "CAVE",
-        "NAVY",
-        "COMB",
-        "MAZE",
-        "ZINC"
+        "웹",
+        "우주선",
+        "금성",
+        "혜성",
+        "허블",
+        "코스모너트",
+        "카론",
+        "성운",
+        "마그네타",
+        "엔셀라두스",
+        "성간우주선",
+        "초신성",
+        "파편",
+        "드론",
+        "화성"
       ]
     },
     "4": {
@@ -2238,18 +2235,16 @@
         "."
       ],
       "words": [
-        "GO!",
-        "RUN!",
-        "HOW?",
-        "YES!",
-        "1, 2, 3",
-        "STOP.",
-        "WAIT!",
-        "WHO?",
-        "NOW.",
-        "WOW!",
-        "FAST!",
-        "GOAL!"
+        "SUPERNOVA!",
+        "BLACK-HOLE?",
+        "COMET!",
+        "ASTEROID?",
+        "APOLLO-11",
+        "VOYAGER-1",
+        "SPUTNIK-1",
+        "STAR-10",
+        "GALAXY!",
+        "SOLAR-PROBE"
       ]
     }
   }
