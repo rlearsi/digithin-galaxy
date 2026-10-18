@@ -116,6 +116,14 @@ function applyChosenLevelUpSkill(skillId) {
     scheduleSpawn();
   }
   updateHUD();
+
+  // If excess XP carries over to trigger consecutive level-ups
+  if (state.currentXp >= state.xpRequired) {
+    state.currentXp -= state.xpRequired;
+    state.level = (state.level || 1) + 1;
+    state.xpRequired = getRequiredXpForLevel(state.level);
+    triggerLevelUp();
+  }
 }
 
 // ============================================================

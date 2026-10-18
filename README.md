@@ -1,6 +1,6 @@
 # 🌌 Digithin Galaxy — Jogo de Digitação Arcade Espacial
 
-[![Versão](https://img.shields.io/badge/versão-v1.11-8B5CF6?style=for-the-badge&logo=gamepad)](ChangeLog.md)
+[![Versão](https://img.shields.io/badge/versão-v1.12-8B5CF6?style=for-the-badge&logo=gamepad)](ChangeLog.md)
 [![Status](https://img.shields.io/badge/status-estável-10B981?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 [![Licença](https://img.shields.io/badge/licença-MIT-38BDF8?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 

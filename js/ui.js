@@ -1214,7 +1214,7 @@ function updateHUD() {
   } else {
     // Sistema de XP e Level: barra no topo representa o XP ganho
     const curXp = state.currentXp || 0;
-    const reqXp = state.xpRequired || 50;
+    const reqXp = state.xpRequired || 10;
     const pct = Math.min(100, Math.max(0, (curXp / reqXp) * 100));
     if (progressFill) progressFill.style.width = pct + '%';
     if (progressText) {

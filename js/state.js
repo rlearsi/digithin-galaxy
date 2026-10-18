@@ -70,7 +70,7 @@ function changeDifficulty(diff) {
 
 function getRequiredXpForLevel(lvl) {
   const l = Math.max(1, parseInt(lvl, 10) || 1);
-  return Math.round(35 + Math.pow(l, 1.55) * 15);
+  return Math.round(7 + Math.pow(l, 1.55) * 3);
 }
 
 function defaultState() {
