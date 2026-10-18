@@ -45,11 +45,11 @@ function triggerLevelUp() {
   showFeedback(lvlMsg, 'special');
 
   // Build pool of eligible level-up skills:
-  // Exclude 'dilation' if already at maxLevel (4)
+  // Exclude skills that have reached their maxLevel
   const eligibleSkills = SKILLS_LIST.filter(s => {
-    if (s.id === 'dilation') {
-      const curLvl = state.runPerks?.dilation || 0;
-      return curLvl < (s.maxLevel || 4);
+    const curLvl = state.runPerks?.[s.id] || 0;
+    if (s.maxLevel && curLvl >= s.maxLevel) {
+      return false;
     }
     return true;
   });
@@ -73,6 +73,20 @@ function applyChosenLevelUpSkill(skillId) {
     const maxMultiplier = Math.min(5, 1 + curLevel);
     const msg = typeof t === 'function' ? t('fb_dilation_upgraded', { max: maxMultiplier }) : `Spacing upgraded up to ${maxMultiplier}!`;
     showFeedback(msg, 'special');
+  } else if (skillId === 'shield') {
+    const curLevel = state.runPerks.shield;
+    const dur = Math.min(5, curLevel) * 10;
+    const msg = typeof t === 'function'
+      ? t('fb_shield_upgraded', { dur, level: curLevel })
+      : `🛡️ Imunidade Nv. ${curLevel} (${dur}s)!`;
+    showFeedback(msg, 'special');
+  } else if (skillId === 'bomb') {
+    const curLevel = state.runPerks.bomb;
+    const isMax = curLevel >= 5;
+    const msg = typeof t === 'function'
+      ? t('fb_bomb_upgraded', { level: curLevel })
+      : (isMax ? `💣 Bomba Nv. ${curLevel} (MÁX)!` : `💣 Bomba Nv. ${curLevel}!`);
+    showFeedback(msg, 'special');
   } else {
     // For periodic skills:
     // If acquiring for the first time, give quick first-trigger in 3s so the player enjoys it immediately!
@@ -82,7 +96,7 @@ function applyChosenLevelUpSkill(skillId) {
     const skillName = (typeof t === 'function' && t(`skill_name_${skillId}`) !== `skill_name_${skillId}`)
       ? t(`skill_name_${skillId}`)
       : (def?.name || skillId);
-    const msg = typeof t === 'function' ? `⚡ ${skillName}!` : `⚡ ${skillName}!`;
+    const msg = `⚡ ${skillName}!`;
     showFeedback(msg, 'special');
   }
 
@@ -176,7 +190,12 @@ function firePeriodicSkill(skillId) {
   if (!def) return;
 
   state.activeSkill = skillId;
-  state.activeTimers[skillId] = def.duration || 10000;
+  let duration = def.duration || 10000;
+  if (skillId === 'shield') {
+    const lvl = Math.min(5, Math.max(1, state.runPerks?.shield || 1));
+    duration = lvl * 10000; // Nv 1: 10s, Nv 2: 20s, Nv 3: 30s, Nv 4: 40s, Nv 5: 50s
+  }
+  state.activeTimers[skillId] = duration;
 
   if (typeof def.onActivate === 'function') {
     def.onActivate(state);
@@ -191,10 +210,10 @@ function firePeriodicSkill(skillId) {
   const skillName = (typeof t === 'function' && t(`skill_name_${skillId}`) !== `skill_name_${skillId}`)
     ? t(`skill_name_${skillId}`)
     : (def.name || skillId);
-  const durSec = Math.round((def.duration || 10000) / 1000);
+  const durSec = Math.round(duration / 1000);
   const activateMsgKey = `fb_${skillId}_activated`;
-  const msg = (typeof t === 'function' && t(activateMsgKey) !== activateMsgKey)
-    ? t(activateMsgKey)
+  const msg = (typeof t === 'function' && t(activateMsgKey, { dur: durSec }) !== activateMsgKey)
+    ? t(activateMsgKey, { dur: durSec })
     : `⚡ ${skillName} (${durSec}s)!`;
 
   showFeedback(msg, 'special');
@@ -233,17 +252,67 @@ function triggerScreenBombExplosion() {
   const gRect = gameArea.getBoundingClientRect();
   const cx = gRect.width / 2;
   const cy = gRect.height / 2;
-  const radius = Math.max(cx, cy) * 1.5;
+  const bombLvl = Math.min(5, Math.max(1, state.runPerks?.bomb || 1));
+  const isFullScreen = (bombLvl >= 5);
+
+  let radius;
+  if (isFullScreen) {
+    radius = Math.max(cx, cy) * 1.5;
+  } else {
+    // Escala progressiva do raio de Nv 1 a Nv 4:
+    // Nv 1: raio compacto central (~25% da diagonal do tabuleiro)
+    // Nv 2: raio intermediário (~44%)
+    // Nv 3: raio amplo (~63%)
+    // Nv 4: quase a tela toda (~82%)
+    // Nv 5: tela toda (100%+)
+    const baseRadius = Math.hypot(cx, cy);
+    const fraction = 0.25 + (bombLvl - 1) * 0.19;
+    radius = Math.round(baseRadius * fraction);
+  }
 
   if (typeof createExplosionRing === 'function') {
-    createExplosionRing(cx, cy, radius, true);
+    createExplosionRing(cx, cy, radius, isFullScreen);
   }
 
   let extraPts = 0;
   let totalChars = 0;
+  const hitItems = [];
+  const remainingItems = [];
 
   state.activeItems.forEach(item => {
     if (item.removing) return;
+
+    let isHit = false;
+    if (isFullScreen) {
+      isHit = true;
+    } else {
+      let itemX = item.x;
+      let itemY = item.y;
+      let itemW = 60;
+      let itemH = 36;
+      if (item.el) {
+        const iRect = item.el.getBoundingClientRect();
+        itemX = (iRect.left - gRect.left) + iRect.width / 2;
+        itemY = (iRect.top - gRect.top) + iRect.height / 2;
+        itemW = iRect.width;
+        itemH = iRect.height;
+      }
+      const dist = Math.hypot(itemX - cx, itemY - cy);
+      if (dist <= (radius + Math.max(itemW, itemH) / 2)) {
+        isHit = true;
+      }
+    }
+
+    if (isHit) {
+      hitItems.push(item);
+    } else {
+      remainingItems.push(item);
+    }
+  });
+
+  state.activeItems = remainingItems;
+
+  hitItems.forEach(item => {
     item.removing = true;
     item.el?.classList.add('shattered');
     const pts = item.type === 'letter' ? 1 : item.type === 'syllable' ? 3 : wordPts(item.text);
@@ -257,14 +326,29 @@ function triggerScreenBombExplosion() {
     setTimeout(() => item.el?.parentNode?.removeChild(item.el), 280);
   });
 
-  state.activeItems = [];
+  // Limpa buffer de digitação se o alvo digitado foi destruído e não há outro equivalente
+  if (state.typedBuffer && hitItems.some(it => it.text && it.text.startsWith(state.typedBuffer))) {
+    const stillHasPrefix = state.activeItems.some(it => !it.removing && it.text && it.text.startsWith(state.typedBuffer));
+    if (!stillHasPrefix) {
+      state.typedBuffer = '';
+      if (typeof clearHighlight === 'function') clearHighlight();
+    }
+  }
 
   if (extraPts > 0) {
     if ((state.activeTimers?.haste || 0) > 0) extraPts = Math.floor(extraPts * 2);
     state.phasePts += extraPts;
     state.totalScore = (state.totalScore || 0) + extraPts;
     addPlayerXp(Math.max(10, totalChars * 2));
-    const msg = typeof t === 'function' ? t('fb_bomb_explosion', { lines: 5, pts: extraPts }) : `💥 Cosmic Blast! +${extraPts}`;
+    const msg = typeof t === 'function'
+      ? t('fb_bomb_explosion', { lines: hitItems.length, pts: extraPts, lvl: bombLvl })
+      : `💥 Cosmic Blast! +${extraPts}`;
+    showFeedback(msg, 'special');
+  } else if (!isFullScreen) {
+    const shockwaveKey = 'fb_bomb_shockwave';
+    const msg = typeof t === 'function' && t(shockwaveKey, { lvl: bombLvl }) !== shockwaveKey
+      ? t(shockwaveKey, { lvl: bombLvl })
+      : `💥 Onda de Choque Nv. ${bombLvl}!`;
     showFeedback(msg, 'special');
   }
 

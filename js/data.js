@@ -582,9 +582,13 @@ const SKILLS_CONFIG = {
     nameKey: 'skill_name_bomb',
     descKey: 'skill_desc_bomb',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
-    get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
+    get desc() {
+      const lvl = (typeof state !== 'undefined' && state?.runPerks?.bomb) ? state.runPerks.bomb : 1;
+      return (typeof t === 'function') ? t(this.descKey, { level: lvl, max: 5 }) : '';
+    },
     duration: 2500,
     interval: 90000, // 1.5 minutes
+    maxLevel: 5,
     color: '#FF4757',
     type: 'periodic',
     category: 'skill',
@@ -602,9 +606,14 @@ const SKILLS_CONFIG = {
     nameKey: 'skill_name_shield',
     descKey: 'skill_desc_shield',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
-    get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
+    get desc() {
+      const lvl = (typeof state !== 'undefined' && state?.runPerks?.shield) ? state.runPerks.shield : 1;
+      const dur = Math.min(5, Math.max(1, lvl)) * 10;
+      return (typeof t === 'function') ? t(this.descKey, { duration: dur, level: lvl, max: 5 }) : '';
+    },
     duration: 10000,
-    interval: 120000, // 2 minutes
+    interval: 180000, // 3 minutes
+    maxLevel: 5,
     color: '#A855F7',
     type: 'periodic',
     category: 'skill',

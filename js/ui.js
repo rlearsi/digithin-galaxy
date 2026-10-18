@@ -1420,9 +1420,14 @@ function renderRunPerks() {
        isRunning ? ' perk-active' :
        isQueued ? ' perk-queued' : ' perk-cooldown');
 
-    const lvlPrefix = (typeof t === 'function' && t('hud_perk_lvl', { lvl: lvl }) !== 'hud_perk_lvl')
-      ? t('hud_perk_lvl', { lvl: lvl })
-      : `Nv. ${lvl}`;
+    const isMaxLvl = Boolean(def.maxLevel && lvl >= def.maxLevel);
+    const lvlPrefix = isMaxLvl
+      ? ((typeof t === 'function' && t('hud_perk_lvl_max', { lvl: lvl }) !== 'hud_perk_lvl_max')
+          ? t('hud_perk_lvl_max', { lvl: lvl })
+          : `Nv. ${lvl} (MÁX)`)
+      : ((typeof t === 'function' && t('hud_perk_lvl', { lvl: lvl }) !== 'hud_perk_lvl')
+          ? t('hud_perk_lvl', { lvl: lvl })
+          : `Nv. ${lvl}`);
     let subTypeTxt = '';
     let statusBadgeHtml = '';
 
@@ -3291,6 +3296,11 @@ function showLevelUpModal(choices, onPick) {
     if (skill.id === 'dilation') {
       const maxMultiplier = Math.min(5, 1 + nextLevel);
       sDesc = typeof t === 'function' ? t(skill.descKey, { max: maxMultiplier }) : `Spacing up to ${maxMultiplier}`;
+    } else if (skill.id === 'shield') {
+      const dur = Math.min(5, nextLevel) * 10;
+      sDesc = typeof t === 'function' ? t(skill.descKey, { duration: dur, level: nextLevel, max: 5 }) : `Immunity for ${dur}s`;
+    } else if (skill.id === 'bomb') {
+      sDesc = typeof t === 'function' ? t(skill.descKey, { level: nextLevel, max: 5 }) : `Explosion radius level ${nextLevel}`;
     } else {
       sDesc = (typeof t === 'function' && t(skill.descKey) !== skill.descKey)
         ? t(skill.descKey)
@@ -3304,7 +3314,14 @@ function showLevelUpModal(choices, onPick) {
     card.style.setProperty('--item-clr', skill.color || 'var(--accent-primary)');
 
     const pickTxt = typeof t === 'function' && t('levelup_btn_pick') ? t('levelup_btn_pick') : 'Choose';
-    const tagTxt = isUpgrade ? `Nv. ${nextLevel} (Upgrade)` : 'NOVA';
+    const isMax = (nextLevel >= (skill.maxLevel || 99));
+    const lvlStr = typeof t === 'function' && t('hud_perk_lvl', { lvl: nextLevel }) !== 'hud_perk_lvl'
+      ? t('hud_perk_lvl', { lvl: nextLevel })
+      : `Nv. ${nextLevel}`;
+    const maxStr = typeof t === 'function' && t('hud_perk_max') !== 'hud_perk_max' ? t('hud_perk_max') : 'MÁX';
+    const upStr = typeof t === 'function' && t('hud_perk_upgrade') !== 'hud_perk_upgrade' ? t('hud_perk_upgrade') : 'Upgrade';
+    const newStr = typeof t === 'function' && t('hud_perk_new') !== 'hud_perk_new' ? t('hud_perk_new') : 'NOVA';
+    const tagTxt = isUpgrade ? `${lvlStr} (${isMax ? maxStr : upStr})` : newStr;
 
     card.innerHTML = `
       <kbd class="card-key-hint" aria-hidden="true">${index + 1}</kbd>
