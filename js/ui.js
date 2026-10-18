@@ -1897,6 +1897,86 @@ function syncDebrisCanvasSize() {
   return true;
 }
 
+// Paletas fallback fiéis aos pixel arts dos assets básicos caso o sprite ainda não tenha carregado
+const FALLBACK_SPRITE_PALETTES = {
+  'rocks/rock1': ['#94A3B8', '#475569', '#E2E8F0', '#1E293B', '#CBD5E1'],
+  'rocks/rock2': ['#C084FC', '#1E293B', '#F8FAFC', '#9333EA', '#7C3AED'],
+  'rocks/rock3': ['#00E5FF', '#38BDF8', '#1E142D', '#0284C7', '#E0F2FE'],
+  'rocks/rock4': ['#C084FC', '#475569', '#E2D4F0', '#6B21A8', '#94A3B8'],
+  'rocks/rock5': ['#D97706', '#9A3412', '#FEF08A', '#78350F', '#F59E0B'],
+  'objects/wildcard_bomb': ['#EF4444', '#F59E0B', '#FEE2E2', '#7F1D1D', '#F97316']
+};
+
+const spritePaletteCache = new Map();
+let spriteExtractCanvas = null;
+let spriteExtractCtx = null;
+
+function getPaletteForFallingObject(el) {
+  if (!el) return ['#94A3B8', '#475569', '#38BDF8', '#E2E8F0'];
+
+  const imgEl = el.querySelector('img.falling-object-img') || el.querySelector('img');
+  const dataObj = el.getAttribute('data-object') || '';
+
+  // 1. Checa cache pelo src da imagem ou data-object
+  const src = imgEl ? (imgEl.currentSrc || imgEl.src) : '';
+  if (src && spritePaletteCache.has(src)) {
+    return spritePaletteCache.get(src);
+  }
+  if (dataObj && spritePaletteCache.has(dataObj)) {
+    return spritePaletteCache.get(dataObj);
+  }
+
+  // 2. Extrai paleta real dos pixels desenhados no sprite pixel art
+  if (imgEl && imgEl.complete && imgEl.naturalWidth > 0) {
+    try {
+      if (!spriteExtractCanvas) {
+        spriteExtractCanvas = document.createElement('canvas');
+        spriteExtractCtx = spriteExtractCanvas.getContext('2d', { willReadFrequently: true });
+      }
+      const w = imgEl.naturalWidth;
+      const h = imgEl.naturalHeight;
+      spriteExtractCanvas.width = w;
+      spriteExtractCanvas.height = h;
+      spriteExtractCtx.clearRect(0, 0, w, h);
+      spriteExtractCtx.drawImage(imgEl, 0, 0, w, h);
+
+      const imgData = spriteExtractCtx.getImageData(0, 0, w, h).data;
+      const colorCounts = new Map();
+
+      for (let i = 0; i < imgData.length; i += 4) {
+        const a = imgData[i + 3];
+        if (a < 50) continue; // ignora pixels transparentes
+        const r = imgData[i];
+        const g = imgData[i + 1];
+        const b = imgData[i + 2];
+        const hex = '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
+        colorCounts.set(hex, (colorCounts.get(hex) || 0) + 1);
+      }
+
+      if (colorCounts.size > 0) {
+        // Ordena pelas cores mais presentes no pixel art
+        const sorted = [...colorCounts.entries()].sort((a, b) => b[1] - a[1]);
+        const extracted = sorted.map(e => e[0]);
+        if (src) spritePaletteCache.set(src, extracted);
+        if (dataObj) spritePaletteCache.set(dataObj, extracted);
+        return extracted;
+      }
+    } catch (e) {
+      // Ignora erro de leitura em caso de restrição e segue para fallback
+    }
+  }
+
+  // 3. Fallbacks tabelados por data-object (ex: 'rock1', 'rocks/rock1')
+  if (dataObj) {
+    if (FALLBACK_SPRITE_PALETTES[dataObj]) return FALLBACK_SPRITE_PALETTES[dataObj];
+    if (FALLBACK_SPRITE_PALETTES['rocks/' + dataObj]) return FALLBACK_SPRITE_PALETTES['rocks/' + dataObj];
+    if (FALLBACK_SPRITE_PALETTES['objects/' + dataObj]) return FALLBACK_SPRITE_PALETTES['objects/' + dataObj];
+  }
+
+  // 4. Fallback padrão cósmico sóbrio mineral
+  return ['#94A3B8', '#475569', '#38BDF8', '#64748B', '#E2E8F0', '#1E293B'];
+}
+
 function spawnCelestialExplosion(el, text) {
   if (!el) return;
   const gameAreaEl = document.getElementById('game-area');
@@ -1910,26 +1990,49 @@ function spawnCelestialExplosion(el, text) {
   const cx = (r.left + r.width / 2) - gRect.left;
   const cy = (r.top + r.height / 2) - gRect.top;
 
-  const len = typeof text === 'string' ? text.length : (el.textContent?.trim()?.length || 4);
-  const count = Math.min(48, Math.max(26, Math.floor(len * 4.6)));
+  const cleanText = (typeof text === 'string' ? text : (el.textContent || '')).trim();
+  const len = cleanText.length || 4;
+  const isLetter = el.classList?.contains('letter') || len <= 1;
+  const isSyllable = el.classList?.contains('syllable') || (!isLetter && len <= 3);
+  const isWildcard = el.classList?.contains('wildcard');
 
-  const colors = [
-    '#38BDF8', // Celestial Cyan
-    '#60A5FA', // Astral Blue
-    '#F472B6', // Nebula Pink
-    '#C084FC', // Cosmic Violet
-    '#FBBF24', // Starlight Gold
-    '#34D399', // Aurora Emerald
-    '#FFFFFF', // Pure Starlight White
-    '#FB923C'  // Stellar Amber
-  ];
+  // Quantidade de destroços e micro-faíscas calibrada de acordo com o tamanho do vocábulo
+  let count;
+  let sparkCount;
+  let baseSize;
 
+  if (isWildcard) {
+    count = 34 + Math.floor(Math.random() * 6);
+    sparkCount = 18 + Math.floor(Math.random() * 5);
+    baseSize = 4.5;
+  } else if (isLetter) {
+    // Letra única: poucos destroços (5 a 7) para manter foco limpo e compacto
+    count = 5 + Math.floor(Math.random() * 3);
+    sparkCount = 4 + Math.floor(Math.random() * 3);
+    baseSize = 3.2;
+  } else if (isSyllable) {
+    // Sílabas (2 ou 3 letras): destroços moderados (8 a 11)
+    count = 8 + Math.floor(Math.random() * 4);
+    sparkCount = 6 + Math.floor(Math.random() * 3);
+    baseSize = 3.8;
+  } else {
+    // Palavras: escala progressiva aumentando à medida que o vocábulo for maior
+    const scaledCount = Math.round(10 + len * 1.8);
+    count = Math.min(36, Math.max(14, scaledCount + (Math.floor(Math.random() * 5) - 2)));
+    sparkCount = Math.min(20, Math.max(8, Math.round(6 + len * 1.1)));
+    baseSize = 4.5;
+  }
+
+  // Paleta de cores extraída fielmente dos pixels reais do sprite pixel art do objeto
+  const colors = getPaletteForFallingObject(el);
   const shapes = ['shard', 'rect', 'diamond', 'chip', 'orb'];
 
   for (let i = 0; i < count; i++) {
     const shape = shapes[Math.floor(Math.random() * shapes.length)];
     const color = colors[Math.floor(Math.random() * colors.length)];
-    const sz = shape === 'orb' ? (3.5 + Math.random() * 3.5) : (4.5 + Math.random() * 5.5);
+    const sz = shape === 'orb'
+      ? (baseSize * 0.8 + Math.random() * 2.5)
+      : (baseSize + Math.random() * (isLetter ? 3.0 : 4.5));
 
     // Dispersão inicial ao longo da largura da palavra
     const xOffset = (Math.random() - 0.5) * (r.width * 0.9);
@@ -1938,7 +2041,7 @@ function spawnCelestialExplosion(el, text) {
 
     // Explosão em arco: impulso inicial para cima e para os lados (-150 a -30 graus)
     const angle = -Math.PI / 2 + (Math.random() - 0.5) * 2.2;
-    const speed = 70 + Math.random() * 160;
+    const speed = (isLetter ? 60 : 70) + Math.random() * (isLetter ? 120 : 160);
     const vx = Math.cos(angle) * speed;
     const vy = Math.sin(angle) * speed * 0.75 - 35;
 
@@ -1962,16 +2065,16 @@ function spawnCelestialExplosion(el, text) {
     });
   }
 
-  // Anel de faíscas cósmicas no centro da detonação
-  for (let s = 0; s < 14; s++) {
+  // Anel de micro-faíscas cósmicas no centro da detonação
+  for (let s = 0; s < sparkCount; s++) {
     const sparkAngle = Math.random() * Math.PI * 2;
-    const sparkSpd = 50 + Math.random() * 130;
+    const sparkSpd = (isLetter ? 40 : 50) + Math.random() * (isLetter ? 70 : 120);
     microSparks.push({
       x: cx,
       y: cy,
       vx: Math.cos(sparkAngle) * sparkSpd,
       vy: Math.sin(sparkAngle) * sparkSpd,
-      size: 2.0 + Math.random() * 2.5,
+      size: (isLetter ? 1.5 : 2.0) + Math.random() * (isLetter ? 1.8 : 2.4),
       color: colors[Math.floor(Math.random() * colors.length)],
       alpha: 1.0,
       decay: 2.6 + Math.random() * 2.4
