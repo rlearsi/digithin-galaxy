@@ -412,7 +412,7 @@ function buyShopItem(skillId, price) {
     // Unlock 3 random locked words from pool
     const unlockedTexts = new Set(((state?.unlockedWords) || []).map(w => (w.text || '').toLowerCase()));
     const eligiblePool  = (typeof getWordPoolForDifficulty === 'function')
-      ? getWordPoolForDifficulty(WORD_POOL, state?.difficulty)
+      ? getWordPoolForDifficulty(WORD_POOL, state?.difficulty, state?.level)
       : WORD_POOL;
     const lockedPool    = eligiblePool.filter(w => !unlockedTexts.has((w.text || '').toLowerCase()));
     const picked        = shuffle(lockedPool).slice(0, 3);

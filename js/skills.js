@@ -37,6 +37,11 @@ function triggerLevelUp() {
   clearTimeout(state.spawnTimer);
   state.spawnTimer = null;
 
+  // Desbloqueia novas palavras cósmicas motoramente correspondentes ao patamar do novo nível
+  if (typeof checkAndUnlockLevelWords === 'function') {
+    checkAndUnlockLevelWords(state.level);
+  }
+
   if (typeof playSound === 'function') {
     playSound('level_up');
   }

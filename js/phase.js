@@ -402,11 +402,16 @@ function showPhaseModal() {
   let toUnlock = [];
   if (state.phase >= 2) {
     const eligiblePool = (typeof getWordPoolForDifficulty === 'function')
-      ? getWordPoolForDifficulty(WORD_POOL, state.difficulty)
+      ? getWordPoolForDifficulty(WORD_POOL, state.difficulty, state.level)
       : WORD_POOL;
     const pool = eligiblePool.filter(w => !state.unlockedWords.find(u => u.text === w.text));
     toUnlock = shuffle(pool).slice(0, CFG.wordsPerPhase);
-    toUnlock.forEach(w => state.unlockedWords.push({ ...w, phase: state.phase }));
+    toUnlock.forEach(w => {
+      state.unlockedWords.push({ ...w, phase: state.phase });
+      if (typeof addPermanentUnlockedWord === 'function') {
+        addPermanentUnlockedWord(w);
+      }
+    });
 
     // Garante >= 3 palavras do chefão do ciclo (8 fases) para que ele sempre tenha significados
     if (typeof unlockBossCycleWords === 'function') {

@@ -29,9 +29,13 @@ function showBiblioteca() {
   if (!grid || !badge) return;
   grid.innerHTML = '';
 
+  const permWords = (typeof getPermanentUnlockedWords === 'function') ? getPermanentUnlockedWords() : [];
   const unlockedMap = {};
+  permWords.forEach(w => {
+    if (w && w.text) unlockedMap[w.text.toLowerCase()] = w;
+  });
   state.unlockedWords?.forEach(w => {
-    unlockedMap[w.text.toLowerCase()] = w;
+    if (w && w.text) unlockedMap[w.text.toLowerCase()] = w;
   });
 
   const totalWords    = WORD_POOL.length;

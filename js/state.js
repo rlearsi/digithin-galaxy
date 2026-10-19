@@ -80,16 +80,17 @@ function defaultState() {
   const permWords = (typeof getPermanentUnlockedWords === 'function') ? getPermanentUnlockedWords() : [];
   const permStats = (typeof getPermanentWordStats === 'function') ? getPermanentWordStats() : {};
 
-  // Initial unlocked words fallback: se estiver vazio, carrega palavras da dificuldade
-  let initialWords = [...permWords];
-  if (initialWords.length === 0 && typeof WORD_POOL !== 'undefined' && WORD_POOL.length > 0) {
-    const basePool = (typeof getWordPoolForDifficulty === 'function')
-      ? getWordPoolForDifficulty(WORD_POOL, diffKey)
-      : WORD_POOL;
-    initialWords = basePool.slice(0, 10);
-    if (typeof savePermanentUnlockedWords === 'function') {
-      savePermanentUnlockedWords(initialWords);
-    }
+  // Initial unlocked words para a corrida: inicia com palavras introdutórias (Tier 1) motoramente acessíveis
+  let initialWords = [];
+  if (typeof WORD_POOL !== 'undefined' && WORD_POOL.length > 0) {
+    const tier1Words = WORD_POOL.filter(w => (typeof getWordDifficultyTier === 'function') ? getWordDifficultyTier(w.text) === 1 : (w.text.length <= 5));
+    const pool = tier1Words.length >= 8 ? tier1Words : WORD_POOL.slice(0, 15);
+    initialWords = (typeof shuffle === 'function') ? shuffle(pool).slice(0, 12) : pool.slice(0, 12);
+    initialWords.forEach(w => {
+      if (typeof addPermanentUnlockedWord === 'function') {
+        addPermanentUnlockedWord(w);
+      }
+    });
   }
 
   return {

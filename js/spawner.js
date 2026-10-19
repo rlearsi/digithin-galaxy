@@ -24,14 +24,71 @@ function decideSpawnType() {
   }
 
   // 3. Após 20 vocábulos: começa a exibir palavras completas, intercalando com algumas letras e sílabas
+  // A frequência de palavras aumenta organicamente conforme o nível roguelike do jogador sobe
   const r = Math.random();
-  if (r < 0.55 && state.unlockedWords && state.unlockedWords.length > 0) {
+  const lvl = (typeof state !== 'undefined' && state?.level) ? state.level : 1;
+  const wordChance = Math.min(0.75, 0.55 + (lvl - 1) * 0.03); // Nv 1: 55%, Nv 3: 61%, Nv 5: 67%, Nv 7+: 73%
+  if (r < wordChance && state.unlockedWords && state.unlockedWords.length > 0) {
     return 'word';
   }
-  if (r < 0.80) {
+  if (r < (wordChance + 0.20)) {
     return 'syllable';
   }
   return 'letter';
+}
+
+/**
+ * Seleciona palavras ponderadas pelo nível Roguelike do jogador,
+ * priorizando termos mais acessíveis no início e termos complexos em níveis avançados,
+ * além de evitar repetições imediatas do mesmo vocábulo na esteira.
+ */
+function pickWeightedWordByLevel(pool, level = 1, lastWordText = '') {
+  if (!pool || pool.length === 0) return null;
+  if (pool.length === 1) return pool[0];
+
+  // Anti-repetição imediata: se possível, não repete a mesma palavra duas vezes seguidas
+  let filtered = pool;
+  if (lastWordText && pool.length > 1) {
+    const cleanLast = String(lastWordText).toUpperCase();
+    const withoutLast = pool.filter(w => (w.text || '').toUpperCase() !== cleanLast);
+    if (withoutLast.length > 0) filtered = withoutLast;
+  }
+
+  const lvl = Math.max(1, parseInt(level || 1, 10));
+
+  // Tiers de palavras e seus pesos dinâmicos de acordo com o nível Roguelike
+  let weights;
+  if (lvl <= 2) {
+    weights = { 1: 85, 2: 15, 3: 0, 4: 0, 5: 0 };
+  } else if (lvl <= 4) {
+    weights = { 1: 30, 2: 55, 3: 15, 4: 0, 5: 0 };
+  } else if (lvl <= 6) {
+    weights = { 1: 15, 2: 35, 3: 35, 4: 15, 5: 0 };
+  } else if (lvl <= 8) {
+    weights = { 1: 10, 2: 20, 3: 35, 4: 25, 5: 10 };
+  } else {
+    weights = { 1: 5, 2: 15, 3: 25, 4: 30, 5: 25 };
+  }
+
+  let totalWeight = 0;
+  const weightedList = filtered.map(w => {
+    const tier = (typeof getWordDifficultyTier === 'function') ? getWordDifficultyTier(w.text) : 1;
+    const wgt = weights[tier] !== undefined ? weights[tier] : 10;
+    totalWeight += wgt;
+    return { word: w, weight: wgt };
+  });
+
+  if (totalWeight <= 0) return pick(filtered);
+
+  let rnd = Math.random() * totalWeight;
+  for (const item of weightedList) {
+    rnd -= item.weight;
+    if (rnd <= 0) {
+      return item.word;
+    }
+  }
+
+  return weightedList[weightedList.length - 1].word;
 }
 
 function genQueueItem() {
@@ -75,19 +132,23 @@ function genQueueItem() {
       text = randLetter();
       return { text, type: 'letter', skill: null };
     }
-    const maxLen = (typeof getMaxWordLengthForDifficulty === 'function')
-      ? getMaxWordLengthForDifficulty(state.difficulty)
-      : Infinity;
-    const eligibleWords = state.unlockedWords.filter(w => (w.text || '').length <= maxLen);
-    const candidatePool = eligibleWords.length > 0 ? eligibleWords : state.unlockedWords;
-    const chosenWord = pick(candidatePool);
-    text = chosenWord.text.toUpperCase();
-    const meaning = chosenWord.meaning || '';
-    // Rare chance to contain bonus XP surge
-    if (Math.random() < CFG.wordSkillChance) {
-      skill = { id: 'bonus_xp', name: '+25 XP' };
+    const candidatePool = (typeof getWordPoolForDifficulty === 'function')
+      ? getWordPoolForDifficulty(state.unlockedWords, state.difficulty, state.level)
+      : state.unlockedWords;
+    const pool = candidatePool.length > 0 ? candidatePool : state.unlockedWords;
+    const chosenWord = pickWeightedWordByLevel(pool, state.level, state.lastSpawnedWordText);
+    if (chosenWord && chosenWord.text) {
+      state.lastSpawnedWordText = chosenWord.text;
+      text = chosenWord.text.toUpperCase();
+      const meaning = chosenWord.meaning || '';
+      // Rare chance to contain bonus XP surge
+      if (Math.random() < CFG.wordSkillChance) {
+        skill = { id: 'bonus_xp', name: '+25 XP' };
+      }
+      return { text, type, skill, meaning };
     }
-    return { text, type, skill, meaning };
+    text = randLetter();
+    return { text, type: 'letter', skill: null };
   }
   return { text, type, skill };
 }

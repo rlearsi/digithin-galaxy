@@ -66,19 +66,171 @@ const DIFFICULTY_CONFIG = {
   },
 };
 
-// Limites e filtros de tamanho de palavras por dificuldade
-function getMaxWordLengthForDifficulty(difficulty) {
-  const diff = difficulty || (typeof state !== 'undefined' && state.difficulty) || 'normal';
-  if (diff === 'easy') return 4;   // Fácil: palavras de no máximo 4 letras
-  if (diff === 'normal') return 6; // Normal: palavras de até 6 letras
-  return Infinity;                 // Difícil: sem limite de tamanho (palavras complexas e longas)
+// Tabela de mapeamento rápido de teclas para dedos (digitação touch typing QWERTY)
+const KEY_FINGER_TABLE = {
+  // Mão Esquerda: Mindinho (dedo mais fraco e periférico)
+  'Q': 'L_pinky', 'A': 'L_pinky', 'Z': 'L_pinky', '1': 'L_pinky',
+  'Á': 'L_pinky', 'À': 'L_pinky', 'Â': 'L_pinky', 'Ã': 'L_pinky', 'Ä': 'L_pinky', 'Å': 'L_pinky', 'Æ': 'L_pinky',
+  // Mão Esquerda: Anelar
+  'W': 'L_ring', 'S': 'L_ring', 'X': 'L_ring', '2': 'L_ring',
+  // Mão Esquerda: Médio
+  'E': 'L_middle', 'D': 'L_middle', 'C': 'L_middle', '3': 'L_middle',
+  'É': 'L_middle', 'È': 'L_middle', 'Ê': 'L_middle', 'Ë': 'L_middle',
+  // Mão Esquerda: Indicador
+  'R': 'L_index', 'T': 'L_index', 'F': 'L_index', 'G': 'L_index', 'V': 'L_index', 'B': 'L_index', '4': 'L_index', '5': 'L_index',
+  // Polegares (Espaço)
+  ' ': 'thumb',
+  // Mão Direita: Indicador
+  'Y': 'R_index', 'U': 'R_index', 'H': 'R_index', 'J': 'R_index', 'N': 'R_index', 'M': 'R_index', '6': 'R_index', '7': 'R_index',
+  'Ú': 'R_index', 'Ù': 'R_index', 'Ü': 'R_index', 'Û': 'R_index', 'Ñ': 'R_index',
+  // Mão Direita: Médio
+  'I': 'R_middle', 'K': 'R_middle', ',': 'R_middle', '8': 'R_middle',
+  'Í': 'R_middle', 'Ì': 'R_middle', 'Î': 'R_middle', 'Ï': 'R_middle',
+  // Mão Direita: Anelar
+  'O': 'R_ring', 'L': 'R_ring', '.': 'R_ring', '9': 'R_ring',
+  'Ó': 'R_ring', 'Ò': 'R_ring', 'Ô': 'R_ring', 'Õ': 'R_ring', 'Ö': 'R_ring', 'Œ': 'R_ring',
+  // Mão Direita: Mindinho (periférico)
+  'P': 'R_pinky', 'Ç': 'R_pinky', '0': 'R_pinky', '-': 'R_pinky', ';': 'R_pinky', '/': 'R_pinky', 'ß': 'R_pinky'
+};
+
+/**
+ * Calcula a dificuldade motora real de digitação de uma palavra:
+ * - Quantidade de dedos distintos necessários para digitar
+ * - Uso de dedos menos repetidos e periféricos (mindinho e anelar)
+ * - Frequência de alternância de dedos e mãos
+ * - Comprimento total da palavra
+ */
+function calcWordTypingDifficulty(text) {
+  if (!text) return 1;
+  const clean = String(text).toUpperCase();
+  const fingers = new Set();
+  const hands = new Set();
+  let pinkyRingWeight = 0;
+  let switches = 0;
+  let lastFinger = null;
+
+  for (let i = 0; i < clean.length; i++) {
+    const ch = clean[i];
+    const fingerId = KEY_FINGER_TABLE[ch] || 'R_pinky';
+    fingers.add(fingerId);
+    if (fingerId.startsWith('L_')) hands.add('L');
+    else if (fingerId.startsWith('R_')) hands.add('R');
+
+    if (fingerId.includes('pinky')) {
+      pinkyRingWeight += 1.3;
+    } else if (fingerId.includes('ring')) {
+      pinkyRingWeight += 1.0;
+    }
+
+    if (lastFinger && lastFinger !== fingerId) {
+      switches++;
+    }
+    lastFinger = fingerId;
+  }
+
+  const len = clean.length;
+  const uniqueFingers = fingers.size;
+  const handBonus = hands.size > 1 ? 1.5 : 0.5;
+
+  // Score composto de destreza motora
+  return (len * 0.8) + (uniqueFingers * 1.5) + (pinkyRingWeight * 0.8) + (switches * 0.5) + handBonus;
 }
 
-function getWordPoolForDifficulty(pool, difficulty) {
+/**
+ * Mapeia a pontuação motora em 5 Tiers Roguelike:
+ * Tier 1 (Lv. 1-2): simples, 3-5 letras, 2-3 dedos (sol, lua, io, marte, rover, nave, rocha...)
+ * Tier 2 (Lv. 3-4): básico, 4-6 letras (venus, ceres, vesta, plutao, cometa, sonda, fobos...)
+ * Tier 3 (Lv. 5-6): intermediário, 6-8 letras (estrela, jupiter, saturno, europa, pulsar, capsula...)
+ * Tier 4 (Lv. 7-8): avançado, 7-10 letras (satelite, radiacao, nebulosa, supernova, astronauta, exoplaneta...)
+ * Tier 5 (Lv. 9+): mestre / termos compostos (telescopio, ana-branca, buraco-negro, estacao-espacial...)
+ */
+function getWordDifficultyTier(text) {
+  const score = calcWordTypingDifficulty(text);
+  if (score < 16) return 1;
+  if (score < 21) return 2;
+  if (score < 25) return 3;
+  if (score < 30) return 4;
+  return 5;
+}
+
+function getWordDifficultyTierForLevel(level) {
+  const lvl = Math.max(1, parseInt(level || 1, 10));
+  if (lvl <= 2) return 1;
+  if (lvl <= 4) return 2;
+  if (lvl <= 6) return 3;
+  if (lvl <= 8) return 4;
+  return 5;
+}
+
+// Limites e filtros de tamanho e complexidade de palavras por dificuldade
+function getMaxWordLengthForDifficulty(difficulty, playerLevel = 1) {
+  const diff = difficulty || (typeof state !== 'undefined' && state.difficulty) || 'normal';
+  if (diff === 'easy') return 5;
+  return Infinity; // Normal e Difícil utilizam progressão dinâmica por Nível Roguelike
+}
+
+function getWordPoolForDifficulty(pool, difficulty, playerLevel = 1) {
   const p = pool || (typeof WORD_POOL !== 'undefined' ? WORD_POOL : []);
-  const maxLen = getMaxWordLengthForDifficulty(difficulty);
-  if (!isFinite(maxLen)) return p;
-  return p.filter(w => (w.text || '').length <= maxLen);
+  const diff = difficulty || (typeof state !== 'undefined' && state?.difficulty) || 'normal';
+  const lvl = Math.max(1, parseInt(playerLevel || (typeof state !== 'undefined' && state?.level) || 1, 10));
+
+  if (diff === 'easy') {
+    return p.filter(w => getWordDifficultyTier(w.text) <= 2);
+  }
+
+  if (diff === 'normal') {
+    let maxTier = 1;
+    if (lvl >= 8) maxTier = 5;
+    else if (lvl >= 6) maxTier = 4;
+    else if (lvl >= 4) maxTier = 3;
+    else if (lvl >= 2) maxTier = 2;
+    return p.filter(w => getWordDifficultyTier(w.text) <= maxTier);
+  }
+
+  // Difícil: todos os tiers disponíveis
+  return p;
+}
+
+/**
+ * Desbloqueia dinamicamente novas palavras cósmicas quando o jogador atinge um novo nível Roguelike
+ */
+function checkAndUnlockLevelWords(newLevel) {
+  if (typeof state === 'undefined' || !state || state.gameMode === 'training') return [];
+  const pool = (typeof WORD_POOL !== 'undefined' && Array.isArray(WORD_POOL)) ? WORD_POOL : [];
+  if (pool.length === 0) return [];
+
+  if (!Array.isArray(state.unlockedWords)) {
+    state.unlockedWords = [];
+  }
+
+  const currentUnlocked = new Set(state.unlockedWords.map(w => (w.text || '').toLowerCase()));
+  const targetTier = getWordDifficultyTierForLevel(newLevel);
+
+  // Palavras elegíveis do tier correspondente ao novo nível
+  const tierCandidates = pool.filter(w => {
+    if (!w || !w.text) return false;
+    const lower = w.text.toLowerCase();
+    if (currentUnlocked.has(lower)) return false;
+    const t = getWordDifficultyTier(w.text);
+    return t === targetTier || (newLevel >= 5 && t <= targetTier);
+  });
+
+  if (tierCandidates.length === 0) return [];
+
+  // Desbloqueia de 2 a 3 palavras novas para a órbita da corrida
+  const countToUnlock = Math.min(tierCandidates.length, 2 + (newLevel % 2));
+  const picked = (typeof shuffle === 'function')
+    ? shuffle(tierCandidates).slice(0, countToUnlock)
+    : tierCandidates.slice(0, countToUnlock);
+
+  picked.forEach(w => {
+    state.unlockedWords.push({ ...w, phase: state.phase || 1, unlockedAtLevel: newLevel });
+    if (typeof addPermanentUnlockedWord === 'function') {
+      addPermanentUnlockedWord(w);
+    }
+  });
+
+  return picked;
 }
 
 // Phase goal: Phase 1 = 10, Phase 2 = 20, Phase 3 = 30, Phase 4 = 40, Phase 5 = 50, Phase 6 = 60... (+10 per phase)
@@ -1046,6 +1198,15 @@ function getCelestialObjectForItem(text, type) {
   }
   const idx = Math.abs(hash) % CELESTIAL_WORD_ASSETS.length;
   return `objects/${CELESTIAL_WORD_ASSETS[idx]}`;
+}
+
+if (typeof window !== 'undefined') {
+  window.calcWordTypingDifficulty = calcWordTypingDifficulty;
+  window.getWordDifficultyTier = getWordDifficultyTier;
+  window.getWordDifficultyTierForLevel = getWordDifficultyTierForLevel;
+  window.getMaxWordLengthForDifficulty = getMaxWordLengthForDifficulty;
+  window.getWordPoolForDifficulty = getWordPoolForDifficulty;
+  window.checkAndUnlockLevelWords = checkAndUnlockLevelWords;
 }
 
 
