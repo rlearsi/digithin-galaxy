@@ -51,13 +51,19 @@ function getLearnedWords() {
   return Array.from(learnedMap.values());
 }
 
-const BOSS_THEME_INDICES = {
-  robot:     [30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
-  beast:     [0, 7, 15, 23, 26, 28],
-  mythology: [14, 19, 20],
-  ocean:     [10, 22, 29],
-  cosmos:    [12, 13, 18],
-  volcano:   [4, 8, 11, 21],
+const BOSS_THEME_INDICES = (typeof BOSS_THEMATIC_INDICES !== 'undefined') ? BOSS_THEMATIC_INDICES : {
+  alien_dreadnought: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 23, 24, 25, 26, 27],
+  alien_hive:        [2, 14, 15, 23, 24, 25, 26, 27, 28, 29, 30, 31, 68, 70, 44],
+  alien_psionic:     [50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 64, 65, 48],
+  alien_warlord:     [39, 40, 41, 42, 43, 44, 45, 46, 47, 62, 63, 66, 67, 72, 74],
+  alien_darkmatter:  [52, 53, 54, 58, 59, 60, 61, 50, 51, 23, 27, 28, 64, 65, 68],
+  alien_mothership:  [45, 46, 47, 69, 71, 72, 73, 74, 32, 33, 34, 35, 36, 37, 38],
+  robot:             [32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 71, 73],
+  beast:             [2, 23, 24, 25, 26, 27, 28, 29, 30, 31, 68, 70, 13, 14, 15],
+  mythology:         [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17],
+  volcano:           [6, 17, 25, 26, 27, 28, 29, 58, 59, 65, 2, 23, 30, 31, 68],
+  ocean:             [5, 13, 16, 18, 21, 22, 10, 24, 28, 32, 33, 43, 47, 74, 1],
+  cosmos:            [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 60, 61, 64, 65, 0]
 };
 
 function getWordConceptIndex(text) {

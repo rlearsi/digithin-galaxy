@@ -6,6 +6,7 @@ with the 75 concrete space objects and synchronized bossWords.
 
 import json
 import os
+import re
 
 CONCEPTS = [
     {
@@ -874,15 +875,20 @@ def update_locale(lang_code, base_path):
         })
     data["words"] = words_list
 
-    # 2. Build bossWords list
-    boss_words = {}
-    for boss_type, indices in BOSS_THEMATIC_INDICES.items():
-        boss_words[boss_type] = [words_list[idx] for idx in indices]
-    data["bossWords"] = boss_words
+    # 2. Build bossWords list referencing word indices (Single Source of Truth)
+    data["bossWords"] = BOSS_THEMATIC_INDICES
+
+    raw_json = json.dumps(data, ensure_ascii=False, indent=2)
+    # Format bossWords index arrays onto a single line each for clean visual readability
+    formatted_json = re.sub(
+        r'\[\s+([0-9,\s]+?)\s+\]',
+        lambda m: '[' + ', '.join(x.strip().rstrip(',') for x in m.group(1).split() if x.strip()) + ']',
+        raw_json
+    ) + '\n'
 
     with open(file_path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"Updated {file_path}: 75 words and {len(boss_words)} boss word sets.")
+        f.write(formatted_json)
+    print(f"Updated {file_path}: 75 words and {len(BOSS_THEMATIC_INDICES)} boss word index sets (single source of truth).")
 
 def main():
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

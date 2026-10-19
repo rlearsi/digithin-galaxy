@@ -102,7 +102,29 @@ function calcPhaseCompletionCoins(phase) {
 // ================================================
 const SYLLABLE_POOLS = {};
 const WORD_POOLS = {};
+// Central Single Source of Truth for Boss Thematic Vocabulary partitions (15 indices each referencing WORD_POOLS)
+const BOSS_THEMATIC_INDICES = {
+  alien_dreadnought: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 23, 24, 25, 26, 27],
+  alien_hive:        [2, 14, 15, 23, 24, 25, 26, 27, 28, 29, 30, 31, 68, 70, 44],
+  alien_psionic:     [50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 64, 65, 48],
+  alien_warlord:     [39, 40, 41, 42, 43, 44, 45, 46, 47, 62, 63, 66, 67, 72, 74],
+  alien_darkmatter:  [52, 53, 54, 58, 59, 60, 61, 50, 51, 23, 27, 28, 64, 65, 68],
+  alien_mothership:  [45, 46, 47, 69, 71, 72, 73, 74, 32, 33, 34, 35, 36, 37, 38],
+  robot:             [32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 71, 73],
+  beast:             [2, 23, 24, 25, 26, 27, 28, 29, 30, 31, 68, 70, 13, 14, 15],
+  mythology:         [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17],
+  volcano:           [6, 17, 25, 26, 27, 28, 29, 58, 59, 65, 2, 23, 30, 31, 68],
+  ocean:             [5, 13, 16, 18, 21, 22, 10, 24, 28, 32, 33, 43, 47, 74, 1],
+  cosmos:            [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 60, 61, 64, 65, 0]
+};
+
 const BOSS_WORDS_BY_TYPE = {
+  alien_dreadnought: {},
+  alien_hive: {},
+  alien_psionic: {},
+  alien_warlord: {},
+  alien_darkmatter: {},
+  alien_mothership: {},
   robot: {},
   beast: {},
   mythology: {},
@@ -130,10 +152,38 @@ function initGameLanguageData() {
       WORD_POOLS[lang] = wordsObj.en.words;
     }
 
-    if (data.bossWords) {
-      Object.keys(data.bossWords).forEach(type => {
+    // Resolve boss words (indices referencing WORD_POOLS, asset strings, or legacy objects)
+    const pool = WORD_POOLS[lang] || (wordsObj.en && wordsObj.en.words) || [];
+    const bossMap = (data.bossWords && Object.keys(data.bossWords).length > 0) ? data.bossWords : BOSS_THEMATIC_INDICES;
+
+    if (bossMap && typeof bossMap === 'object') {
+      Object.keys(bossMap).forEach(type => {
         if (!BOSS_WORDS_BY_TYPE[type]) BOSS_WORDS_BY_TYPE[type] = {};
-        BOSS_WORDS_BY_TYPE[type][lang] = data.bossWords[type];
+        const entries = bossMap[type];
+        if (Array.isArray(entries)) {
+          BOSS_WORDS_BY_TYPE[type][lang] = entries.map(item => {
+            if (typeof item === 'number') {
+              return pool[item] || null;
+            }
+            if (typeof item === 'string') {
+              const lower = item.toLowerCase();
+              return pool.find(w => (w.asset && w.asset.toLowerCase() === lower) || (w.text && w.text.toLowerCase() === lower)) || null;
+            }
+            return item; // Legacy object format { text, meaning, type, asset }
+          }).filter(Boolean);
+        } else {
+          BOSS_WORDS_BY_TYPE[type][lang] = [];
+        }
+      });
+    }
+
+    // Synchronize window.GAME_DATA_WORDS[lang].bossWords with the resolved objects for complete parity
+    if (wordsObj[lang]) {
+      if (!wordsObj[lang].bossWords || typeof wordsObj[lang].bossWords !== 'object') {
+        wordsObj[lang].bossWords = {};
+      }
+      Object.keys(BOSS_WORDS_BY_TYPE).forEach(type => {
+        wordsObj[lang].bossWords[type] = BOSS_WORDS_BY_TYPE[type][lang] || [];
       });
     }
 
@@ -212,7 +262,7 @@ function findWordConcept(text) {
   }
 
   // 3. Check thematic boss vocabulary across all boss archetypes and languages
-  const bossTypes = ['robot', 'beast', 'mythology', 'ocean', 'cosmos', 'volcano'];
+  const bossTypes = (typeof BOSS_WORDS_BY_TYPE !== 'undefined') ? Object.keys(BOSS_WORDS_BY_TYPE) : [];
   if (typeof BOSS_WORDS_BY_TYPE !== 'undefined') {
     for (const bType of bossTypes) {
       const dict = BOSS_WORDS_BY_TYPE[bType];

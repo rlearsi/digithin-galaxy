@@ -33,8 +33,8 @@ locales/
 
    * `"ui"`: All user interface strings (buttons, HUD labels, modal titles, rules, privacy policy).
    * `"syllables"`: Common syllables for falling cosmic tokens in your language.
-   * `"words"`: Cosmic, astronomical and astrophysics vocabulary words with categories and dictionary meanings (`text`, `type`, `meaning`).
-   * `"bossWords"`: Thematic dialogue, names and concepts for the 6 Alien Invader Commanders (`xylarion`, `zorkon`, `vespera`, `kragthor`, `nebulor`, `xenor`).
+   * `"words"`: The single source of truth for all 75 cosmic, astronomical and astrophysics vocabulary words with categories, dictionary meanings and visual assets (`text`, `type`, `meaning`, `asset`).
+   * `"bossWords"`: Thematic mapping of boss commanders and battle archetypes (`alien_dreadnought`, `alien_hive`, `alien_psionic`, `alien_warlord`, `alien_darkmatter`, `alien_mothership`, `robot`, `beast`, `mythology`, `volcano`, `ocean`, `cosmos`) referencing indices in the `"words"` list, reusing vocabulary with zero text duplication.
    * `"trainingWorlds"`: The 4 keyboard training worlds adapted for your keyboard layout (Home Row, Top Row, Bottom Row, Accents/Symbols).
 
 3. **Register the language code:**  
