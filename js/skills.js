@@ -120,7 +120,8 @@ function applyChosenLevelUpSkill(skillId) {
   }
 
   if (typeof playSound === 'function') {
-    playSound('skill');
+    const sfxKey = (skillId === 'bomb') ? 'bomb' : `skill_${skillId}`;
+    playSound(sfxKey);
   }
 
   if (typeof renderRunPerks === 'function') {
@@ -241,7 +242,10 @@ function firePeriodicSkill(skillId) {
   }
 
   if (skillId !== 'bomb') {
-    if (typeof playSound === 'function') playSound('skill');
+    if (skillId !== 'vortex') {
+      const sfxKey = `skill_${skillId}`;
+      if (typeof playSound === 'function') playSound(sfxKey);
+    }
 
     const skillName = (typeof t === 'function' && t(`skill_name_${skillId}`) !== `skill_name_${skillId}`)
       ? t(`skill_name_${skillId}`)
@@ -269,8 +273,8 @@ function onSkillExpired(skillId) {
     clearEcoTargetingIndicator();
   }
 
-  // Habilidade instantânea (bomb) já exibiu seu feedback de impacto e não precisa de mensagem de expiração
-  if (skillId !== 'bomb') {
+  // Habilidades instantâneas (bomb, vortex) já exibiram seu feedback de impacto e não precisam de mensagem de expiração
+  if (skillId !== 'bomb' && skillId !== 'vortex') {
     const expireMsgKey = `fb_${skillId}_expired`;
     const msg = (typeof t === 'function' && t(expireMsgKey) !== expireMsgKey)
       ? t(expireMsgKey)
@@ -400,7 +404,7 @@ function triggerScreenBombExplosion() {
 
 function triggerVortexScreenSuck() {
   if (!gameArea || (state.bossBattle && state.bossBattle.active)) return;
-  playSound('skill');
+  playSound('skill_vortex');
 
   let extraPts = 0;
   let totalChars = 0;
@@ -457,7 +461,7 @@ function triggerAutodestroyLearnedWord() {
   victim.el.classList.remove('eco-target');
   victim.el.querySelector('.eco-target-badge')?.remove();
   victim.el.classList.add('shattered');
-  playSound('skill');
+  playSound('word');
 
   if (typeof spawnCelestialExplosion === 'function') {
     spawnCelestialExplosion(victim.el, victim.text);

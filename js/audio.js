@@ -85,6 +85,165 @@ function playSound(type) {
         [659, 784, 988, 1319, 1568].forEach((f, i) => osc(f, 'sine', i * 0.05, 0.2, 0.1));
         break;
 
+      // 1. CRIOSTASE SIDERAL (Gelo estalando e cristalizando)
+      case 'skill_freezer': {
+        const iceFreqs = [3200, 2400, 3800, 1900, 4200];
+        iceFreqs.forEach((f, i) => {
+          const delay = i * 0.032;
+          const o = ctx.createOscillator(), g = ctx.createGain();
+          o.type = 'triangle';
+          o.frequency.setValueAtTime(f, t + delay);
+          o.frequency.exponentialRampToValueAtTime(f * 0.55, t + delay + 0.07);
+          g.gain.setValueAtTime(0.001, t + delay);
+          g.gain.linearRampToValueAtTime(0.19, t + delay + 0.003);
+          g.gain.exponentialRampToValueAtTime(0.001, t + delay + 0.08);
+          o.connect(g); g.connect(ctx.destination);
+          o.start(t + delay); o.stop(t + delay + 0.09);
+        });
+        const oSub = ctx.createOscillator(), gSub = ctx.createGain();
+        oSub.type = 'sine';
+        oSub.frequency.setValueAtTime(380, t);
+        oSub.frequency.linearRampToValueAtTime(140, t + 0.26);
+        gSub.gain.setValueAtTime(0.12, t);
+        gSub.gain.exponentialRampToValueAtTime(0.001, t + 0.26);
+        oSub.connect(gSub); gSub.connect(ctx.destination);
+        oSub.start(t); oSub.stop(t + 0.28);
+        break;
+      }
+
+      // 2. XP EM DOBRO (Arpejo duplo ascendente dourado e ressonante)
+      case 'skill_haste': {
+        const xpNotes = [523.25, 659.25, 783.99, 1046.5, 1318.51, 1567.98];
+        xpNotes.forEach((f, i) => {
+          const delay = i * 0.04;
+          const o = ctx.createOscillator(), g = ctx.createGain();
+          o.type = 'sine';
+          o.frequency.setValueAtTime(f, t + delay);
+          g.gain.setValueAtTime(0.001, t + delay);
+          g.gain.linearRampToValueAtTime(0.16, t + delay + 0.006);
+          g.gain.exponentialRampToValueAtTime(0.001, t + delay + 0.22);
+          o.connect(g); g.connect(ctx.destination);
+          o.start(t + delay); o.stop(t + delay + 0.24);
+        });
+        const oShine = ctx.createOscillator(), gShine = ctx.createGain();
+        oShine.type = 'triangle';
+        oShine.frequency.setValueAtTime(2093.0, t + 0.22);
+        gShine.gain.setValueAtTime(0.001, t + 0.22);
+        gShine.gain.linearRampToValueAtTime(0.14, t + 0.23);
+        gShine.gain.exponentialRampToValueAtTime(0.001, t + 0.45);
+        oShine.connect(gShine); gShine.connect(ctx.destination);
+        oShine.start(t + 0.22); oShine.stop(t + 0.46);
+        break;
+      }
+
+      // 3. DILAÇÃO ESPACIAL (Som elástico de algo se esticando / warp cósmico)
+      case 'skill_dilation': {
+        const o = ctx.createOscillator(), g = ctx.createGain(), filter = ctx.createBiquadFilter();
+        o.type = 'sawtooth';
+        filter.type = 'bandpass';
+        filter.Q.value = 3.5;
+        o.frequency.setValueAtTime(130, t);
+        o.frequency.exponentialRampToValueAtTime(90, t + 0.1);
+        o.frequency.exponentialRampToValueAtTime(480, t + 0.42);
+        filter.frequency.setValueAtTime(260, t);
+        filter.frequency.exponentialRampToValueAtTime(1250, t + 0.42);
+        g.gain.setValueAtTime(0.001, t);
+        g.gain.linearRampToValueAtTime(0.24, t + 0.04);
+        g.gain.exponentialRampToValueAtTime(0.001, t + 0.45);
+        o.connect(filter); filter.connect(g); g.connect(ctx.destination);
+        o.start(t); o.stop(t + 0.46);
+        break;
+      }
+
+      // 4. VÓRTICE CÓSMICO (Vórtice / furacão gravitacional rotativo se abrindo)
+      case 'skill_vortex': {
+        const o1 = ctx.createOscillator(), o2 = ctx.createOscillator();
+        const g = ctx.createGain(), f = ctx.createBiquadFilter();
+        o1.type = 'sawtooth';
+        o2.type = 'triangle';
+        f.type = 'lowpass';
+        o1.frequency.setValueAtTime(340, t);
+        o1.frequency.exponentialRampToValueAtTime(60, t + 0.46);
+        o2.frequency.setValueAtTime(348, t);
+        o2.frequency.exponentialRampToValueAtTime(65, t + 0.46);
+        f.frequency.setValueAtTime(950, t);
+        f.frequency.exponentialRampToValueAtTime(150, t + 0.48);
+        g.gain.setValueAtTime(0.001, t);
+        g.gain.linearRampToValueAtTime(0.28, t + 0.06);
+        g.gain.exponentialRampToValueAtTime(0.001, t + 0.48);
+        o1.connect(f); o2.connect(f);
+        f.connect(g); g.connect(ctx.destination);
+        o1.start(t); o2.start(t);
+        o1.stop(t + 0.5); o2.stop(t + 0.5);
+        break;
+      }
+
+      // 5. ESCUDO DE PLASMA (Barreira energética defletora se erguendo)
+      case 'skill_shield': {
+        const o = ctx.createOscillator(), g = ctx.createGain();
+        o.type = 'triangle';
+        o.frequency.setValueAtTime(220, t);
+        o.frequency.linearRampToValueAtTime(440, t + 0.1);
+        o.frequency.setValueAtTime(660, t + 0.16);
+        g.gain.setValueAtTime(0.001, t);
+        g.gain.linearRampToValueAtTime(0.22, t + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.001, t + 0.36);
+        o.connect(g); g.connect(ctx.destination);
+        o.start(t); o.stop(t + 0.38);
+        break;
+      }
+
+      // 6. DESACELERAÇÃO (Distorção temporal desacelerando em pitch sweep)
+      case 'skill_slowdown': {
+        const o = ctx.createOscillator(), g = ctx.createGain(), f = ctx.createBiquadFilter();
+        o.type = 'sine';
+        f.type = 'lowpass';
+        o.frequency.setValueAtTime(780, t);
+        o.frequency.exponentialRampToValueAtTime(180, t + 0.4);
+        f.frequency.setValueAtTime(850, t);
+        f.frequency.linearRampToValueAtTime(210, t + 0.4);
+        g.gain.setValueAtTime(0.001, t);
+        g.gain.linearRampToValueAtTime(0.22, t + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.001, t + 0.42);
+        o.connect(f); f.connect(g); g.connect(ctx.destination);
+        o.start(t); o.stop(t + 0.44);
+        break;
+      }
+
+      // 7. ECO CÓSMICO (Sonar astronômico / pulso de mira de autodestruição)
+      case 'skill_autodestroy': {
+        const pings = [1174.66, 1479.98, 1760.0];
+        pings.forEach((f, i) => {
+          const delay = i * 0.07;
+          const o = ctx.createOscillator(), g = ctx.createGain();
+          o.type = 'sine';
+          o.frequency.setValueAtTime(f, t + delay);
+          g.gain.setValueAtTime(0.001, t + delay);
+          g.gain.linearRampToValueAtTime(0.18, t + delay + 0.008);
+          g.gain.exponentialRampToValueAtTime(0.001, t + delay + 0.13);
+          o.connect(g); g.connect(ctx.destination);
+          o.start(t + delay); o.stop(t + delay + 0.15);
+        });
+        break;
+      }
+
+      // 8. DECODIFICADOR CÓSMICO (Bipe digital de decodificação de dados)
+      case 'skill_decoder': {
+        const bleeps = [1318.5, 1661.2, 1975.5, 2637.0];
+        bleeps.forEach((f, i) => {
+          const delay = i * 0.045;
+          const o = ctx.createOscillator(), g = ctx.createGain();
+          o.type = 'sawtooth';
+          o.frequency.setValueAtTime(f, t + delay);
+          g.gain.setValueAtTime(0.001, t + delay);
+          g.gain.linearRampToValueAtTime(0.12, t + delay + 0.004);
+          g.gain.exponentialRampToValueAtTime(0.001, t + delay + 0.06);
+          o.connect(g); g.connect(ctx.destination);
+          o.start(t + delay); o.stop(t + delay + 0.07);
+        });
+        break;
+      }
+
       case 'buy':
         [440, 550, 660].forEach((f, i) => osc(f, 'sine', i * 0.055, 0.18, 0.12));
         break;
