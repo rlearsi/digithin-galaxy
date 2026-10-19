@@ -200,6 +200,8 @@
     "settings_lang": "Sprache",
     "settings_difficulty": "Schwierigkeit",
     "settings_diff_locked_match": "Schwierigkeit kann während einer Partie nicht geändert werden",
+    "settings_opt_prev": "Vorherige",
+    "settings_opt_next": "Nächste",
     "diff_easy": "Leicht",
     "diff_normal": "Mittel",
     "diff_hard": "Schwer",

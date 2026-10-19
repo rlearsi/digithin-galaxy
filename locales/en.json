@@ -200,6 +200,8 @@
     "settings_lang": "Language",
     "settings_difficulty": "Difficulty",
     "settings_diff_locked_match": "Difficulty cannot be changed during a match",
+    "settings_opt_prev": "Previous",
+    "settings_opt_next": "Next",
     "diff_easy": "Easy",
     "diff_normal": "Medium",
     "diff_hard": "Hard",

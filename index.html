@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="./css/components.css?v=1.21.3" />
   <link rel="stylesheet" href="./css/layout.css?v=1.21.5" />
   <link rel="stylesheet" href="./css/gameplay.css?v=1.19.1" />
-  <link rel="stylesheet" href="./css/modals.css?v=1.7" />
+  <link rel="stylesheet" href="./css/modals.css?v=1.23" />
   <link rel="stylesheet" href="./css/responsive.css?v=1.10.1" />
 </head>
 
@@ -1466,25 +1466,41 @@
           <!-- Setting: Language / Idioma -->
           <div class="settings-opt-row">
             <span class="settings-opt-label" data-i18n="settings_lang">Language / Idioma</span>
-            <select id="settings-lang-select" class="settings-opt-select" onchange="changeLanguage(this.value)">
-              <option value="en">English (US)</option>
-              <option value="pt">Português (BR)</option>
-              <option value="fr">Français</option>
-              <option value="de">Deutsch</option>
-              <option value="ja">日本語</option>
-              <option value="ko">한국어</option>
-              <option value="zh">简体中文</option>
-            </select>
+            <div class="settings-stepper" id="settings-stepper-lang" role="group" aria-label="Language">
+              <button type="button" class="stepper-nav-btn stepper-prev" onclick="stepLanguage(-1)" aria-label="Previous" data-i18n-aria-label="settings_opt_prev" title="Previous">
+                <svg class="stepper-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button type="button" class="stepper-display-btn" onclick="stepLanguage(1)" aria-label="Cycle language" title="Cycle language">
+                <span class="stepper-val-text" id="settings-lang-val">Português (BR)</span>
+              </button>
+              <button type="button" class="stepper-nav-btn stepper-next" onclick="stepLanguage(1)" aria-label="Next" data-i18n-aria-label="settings_opt_next" title="Next">
+                <svg class="stepper-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
           </div>
 
           <!-- Setting: Difficulty / Dificuldade -->
           <div class="settings-opt-row">
             <span class="settings-opt-label" data-i18n="settings_difficulty">Difficulty</span>
-            <select id="settings-difficulty-select" class="settings-opt-select" onchange="changeDifficulty(this.value)">
-              <option value="easy" data-i18n="diff_easy">Fácil</option>
-              <option value="normal" data-i18n="diff_normal">Médio</option>
-              <option value="hard" data-i18n="diff_hard">Difícil</option>
-            </select>
+            <div class="settings-stepper" id="settings-stepper-difficulty" role="group" aria-label="Difficulty">
+              <button type="button" class="stepper-nav-btn stepper-prev" onclick="stepDifficulty(-1)" aria-label="Previous" data-i18n-aria-label="settings_opt_prev" title="Previous">
+                <svg class="stepper-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button type="button" class="stepper-display-btn" onclick="stepDifficulty(1)" aria-label="Cycle difficulty" title="Cycle difficulty">
+                <span class="stepper-val-text" id="settings-difficulty-val">Médio</span>
+              </button>
+              <button type="button" class="stepper-nav-btn stepper-next" onclick="stepDifficulty(1)" aria-label="Next" data-i18n-aria-label="settings_opt_next" title="Next">
+                <svg class="stepper-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
           </div>
 
           <!-- Setting: Sound SFX -->
@@ -1505,16 +1521,24 @@
             </button>
           </div>
 
-
           <!-- Setting: Visual Finger Guide -->
           <div class="settings-opt-row">
             <span class="settings-opt-label" data-i18n="settings_finger_guide">Visual Finger Guide</span>
-            <select id="settings-finger-guide-select" class="settings-opt-select"
-              onchange="changeFingerGuideSetting(this.value)">
-              <option value="always" data-i18n="settings_finger_guide_always">Always Active (Default)</option>
-              <option value="training" data-i18n="settings_finger_guide_training">Training Only</option>
-              <option value="off" data-i18n="settings_finger_guide_off">Disabled</option>
-            </select>
+            <div class="settings-stepper" id="settings-stepper-finger-guide" role="group" aria-label="Visual Finger Guide">
+              <button type="button" class="stepper-nav-btn stepper-prev" onclick="stepFingerGuide(-1)" aria-label="Previous" data-i18n-aria-label="settings_opt_prev" title="Previous">
+                <svg class="stepper-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button type="button" class="stepper-display-btn" onclick="stepFingerGuide(1)" aria-label="Cycle finger guide" title="Cycle finger guide">
+                <span class="stepper-val-text" id="settings-finger-guide-val">Sempre Ativo (Padrão)</span>
+              </button>
+              <button type="button" class="stepper-nav-btn stepper-next" onclick="stepFingerGuide(1)" aria-label="Next" data-i18n-aria-label="settings_opt_next" title="Next">
+                <svg class="stepper-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -1656,10 +1680,10 @@
   <!-- Modular Scripts with Cache Busting -->
   <script src="./js/ambient.js?v=1.9"></script>
   <script src="./js/audio.js?v=1.19.1"></script>
-  <script src="./js/i18n.js?v=1.21"></script>
+  <script src="./js/i18n.js?v=1.23.1"></script>
   <script src="./js/data.js?v=1.21"></script>
   <script src="./js/state.js?v=1.21"></script>
-  <script src="./js/ui.js?v=1.22"></script>
+  <script src="./js/ui.js?v=1.23.1"></script>
   <script src="./js/keyboard.js?v=1.22"></script>
   <script src="./js/hud.js?v=1.22"></script>
   <script src="./js/skills-hud.js?v=1.22"></script>

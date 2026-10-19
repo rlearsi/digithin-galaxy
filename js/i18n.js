@@ -213,9 +213,34 @@ async function setLanguage(lang) {
   applyTranslations();
 }
 
+const SUPPORTED_LANGUAGE_OPTIONS = [
+  { code: 'en', label: 'English (US)' },
+  { code: 'pt', label: 'Português (BR)' },
+  { code: 'fr', label: 'Français' },
+  { code: 'de', label: 'Deutsch' },
+  { code: 'ja', label: '日本語' },
+  { code: 'ko', label: '한국어' },
+  { code: 'zh', label: '简体中文' }
+];
+
 async function changeLanguage(lang) {
   await setLanguage(lang);
 }
+
+async function stepLanguage(direction = 1) {
+  const currentLang = typeof getLanguage === 'function' ? getLanguage() : 'pt';
+  const currentIndex = SUPPORTED_LANGUAGE_OPTIONS.findIndex(item => item.code === currentLang);
+  const safeIndex = currentIndex >= 0 ? currentIndex : 1;
+  const nextIndex = (safeIndex + direction + SUPPORTED_LANGUAGE_OPTIONS.length) % SUPPORTED_LANGUAGE_OPTIONS.length;
+  const nextLang = SUPPORTED_LANGUAGE_OPTIONS[nextIndex].code;
+  if (typeof playSound === 'function') {
+    try { playSound('click'); } catch (_) {}
+  }
+  await changeLanguage(nextLang);
+}
+
+window.SUPPORTED_LANGUAGE_OPTIONS = SUPPORTED_LANGUAGE_OPTIONS;
+window.stepLanguage = stepLanguage;
 
 function applyTranslations() {
   const lang = getLanguage();
@@ -232,6 +257,22 @@ function applyTranslations() {
         el.innerHTML = translation;
       }
     }
+  });
+
+  // Translate dynamic aria-labels and titles
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+    const key = el.getAttribute('data-i18n-aria-label');
+    const translation = t(key);
+    if (translation && translation !== key) {
+      el.setAttribute('aria-label', translation);
+      el.setAttribute('title', translation);
+    }
+  });
+
+  // Sync settings language stepper
+  const langObj = SUPPORTED_LANGUAGE_OPTIONS.find(l => l.code === lang) || SUPPORTED_LANGUAGE_OPTIONS[1];
+  document.querySelectorAll('#settings-lang-val, .settings-lang-val').forEach(el => {
+    el.textContent = langObj.label;
   });
 
   // Sync settings dropdown

@@ -200,6 +200,8 @@
     "settings_lang": "Idioma",
     "settings_difficulty": "Dificuldade",
     "settings_diff_locked_match": "Não é possível alterar a dificuldade durante uma partida",
+    "settings_opt_prev": "Anterior",
+    "settings_opt_next": "Próximo",
     "diff_easy": "Fácil",
     "diff_normal": "Médio",
     "diff_hard": "Difícil",

@@ -200,6 +200,8 @@
     "settings_lang": "言語",
     "settings_difficulty": "難易度",
     "settings_diff_locked_match": "プレイ中に難易度を変更することはできません",
+    "settings_opt_prev": "前へ",
+    "settings_opt_next": "次へ",
     "diff_easy": "イージー",
     "diff_normal": "ノーマル",
     "diff_hard": "ハード",

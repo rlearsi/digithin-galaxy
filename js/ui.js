@@ -243,6 +243,64 @@ function renderSkillsInventoryModal() {
 }
 
 // ============================================================
+// SETTINGS CONSTANTS & STEPPERS
+// ============================================================
+const SUPPORTED_DIFFICULTIES = [
+  { key: 'easy', i18nKey: 'diff_easy', fallback: 'Fácil' },
+  { key: 'normal', i18nKey: 'diff_normal', fallback: 'Médio' },
+  { key: 'hard', i18nKey: 'diff_hard', fallback: 'Difícil' }
+];
+
+function stepDifficulty(direction = 1) {
+  const inMatch = typeof isMatchInProgress === 'function' ? isMatchInProgress() : false;
+  if (inMatch) {
+    if (typeof playSound === 'function') {
+      try { playSound('error'); } catch (_) {}
+    }
+    return;
+  }
+  const currentDiff = typeof getDifficulty === 'function' ? getDifficulty() : 'normal';
+  const currentIndex = SUPPORTED_DIFFICULTIES.findIndex(d => d.key === currentDiff);
+  const safeIndex = currentIndex >= 0 ? currentIndex : 1;
+  const nextIndex = (safeIndex + direction + SUPPORTED_DIFFICULTIES.length) % SUPPORTED_DIFFICULTIES.length;
+  const nextDiff = SUPPORTED_DIFFICULTIES[nextIndex].key;
+  if (typeof playSound === 'function') {
+    try { playSound('click'); } catch (_) {}
+  }
+  if (typeof changeDifficulty === 'function') {
+    changeDifficulty(nextDiff);
+  }
+}
+
+const SUPPORTED_FINGER_GUIDES = [
+  { key: 'always', i18nKey: 'settings_finger_guide_always', fallback: 'Sempre Ativo (Padrão)' },
+  { key: 'training', i18nKey: 'settings_finger_guide_training', fallback: 'Modo Treino' },
+  { key: 'off', i18nKey: 'settings_finger_guide_off', fallback: 'Desativado' }
+];
+
+function stepFingerGuide(direction = 1) {
+  const currentMode = typeof getFingerGuideSetting === 'function' ? getFingerGuideSetting() : 'always';
+  const currentIndex = SUPPORTED_FINGER_GUIDES.findIndex(f => f.key === currentMode);
+  const safeIndex = currentIndex >= 0 ? currentIndex : 0;
+  const nextIndex = (safeIndex + direction + SUPPORTED_FINGER_GUIDES.length) % SUPPORTED_FINGER_GUIDES.length;
+  const nextMode = SUPPORTED_FINGER_GUIDES[nextIndex].key;
+  if (typeof playSound === 'function') {
+    try { playSound('click'); } catch (_) {}
+  }
+  if (typeof changeFingerGuideSetting === 'function') {
+    changeFingerGuideSetting(nextMode);
+  }
+  if (typeof updateSettingsUI === 'function') {
+    updateSettingsUI();
+  }
+}
+
+window.SUPPORTED_DIFFICULTIES = SUPPORTED_DIFFICULTIES;
+window.stepDifficulty = stepDifficulty;
+window.SUPPORTED_FINGER_GUIDES = SUPPORTED_FINGER_GUIDES;
+window.stepFingerGuide = stepFingerGuide;
+
+// ============================================================
 // QUEUE POSITION MANAGEMENT (Top [default] / Bottom)
 // ============================================================
 function initQueuePosition() {
@@ -323,28 +381,53 @@ function updateSettingsUI() {
     settingsQueueVal.innerHTML = `${iconSvg} <span>${label}</span>`;
   }
 
+  // Sync Language Stepper & Dropdown
+  const currentLang = typeof getLanguage === 'function' ? getLanguage() : 'pt';
+  const langObj = (window.SUPPORTED_LANGUAGE_OPTIONS || []).find(l => l.code === currentLang);
+  const langVal = $('settings-lang-val');
+  if (langVal && langObj) {
+    langVal.textContent = langObj.label;
+  }
   const langSelect = $('settings-lang-select');
-  if (langSelect && typeof getLanguage === 'function') {
-    langSelect.value = getLanguage();
+  if (langSelect) {
+    langSelect.value = currentLang;
   }
 
+  // Sync Difficulty Stepper & Dropdown
   const inMatch = typeof isMatchInProgress === 'function' ? isMatchInProgress() : false;
+  const currentDiff = typeof getDifficulty === 'function' ? getDifficulty() : 'normal';
+  const diffObj = SUPPORTED_DIFFICULTIES.find(d => d.key === currentDiff) || SUPPORTED_DIFFICULTIES[1];
+  const diffVal = $('settings-difficulty-val');
+  if (diffVal) {
+    diffVal.textContent = typeof t === 'function' ? t(diffObj.i18nKey) : diffObj.fallback;
+  }
+  const diffStepper = $('settings-stepper-difficulty');
+  if (diffStepper) {
+    diffStepper.classList.toggle('is-disabled', inMatch);
+    const lockTitle = inMatch ? (typeof t === 'function' ? t('settings_diff_locked_match') : 'Locked during match') : '';
+    diffStepper.title = lockTitle;
+    diffStepper.querySelectorAll('button').forEach(btn => {
+      btn.disabled = inMatch;
+      btn.title = lockTitle;
+    });
+  }
   const diffSelect = $('settings-difficulty-select');
   if (diffSelect) {
-    if (typeof getDifficulty === 'function') {
-      diffSelect.value = getDifficulty();
-    }
+    diffSelect.value = currentDiff;
     diffSelect.disabled = inMatch;
-    if (inMatch) {
-      diffSelect.title = typeof t === 'function' ? t('settings_diff_locked_match') : '';
-    } else {
-      diffSelect.title = '';
-    }
+    diffSelect.title = inMatch ? (typeof t === 'function' ? t('settings_diff_locked_match') : '') : '';
   }
 
+  // Sync Finger Guide Stepper & Dropdown
+  const currentFingerMode = typeof getFingerGuideSetting === 'function' ? getFingerGuideSetting() : 'always';
+  const fingerObj = SUPPORTED_FINGER_GUIDES.find(f => f.key === currentFingerMode) || SUPPORTED_FINGER_GUIDES[0];
+  const fingerVal = $('settings-finger-guide-val');
+  if (fingerVal) {
+    fingerVal.textContent = typeof t === 'function' ? t(fingerObj.i18nKey) : fingerObj.fallback;
+  }
   const fingerSelect = $('settings-finger-guide-select');
-  if (fingerSelect && typeof getFingerGuideSetting === 'function') {
-    fingerSelect.value = getFingerGuideSetting();
+  if (fingerSelect) {
+    fingerSelect.value = currentFingerMode;
   }
 }
 

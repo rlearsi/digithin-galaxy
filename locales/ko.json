@@ -200,6 +200,8 @@
     "settings_lang": "언어",
     "settings_difficulty": "난이도",
     "settings_diff_locked_match": "게임 진행 중에는 난이도를 변경할 수 없습니다",
+    "settings_opt_prev": "이전",
+    "settings_opt_next": "다음",
     "diff_easy": "쉬움",
     "diff_normal": "보통",
     "diff_hard": "어려움",

@@ -204,6 +204,8 @@
   font-weight: 700;
   color: var(--t1);
   text-align: left;
+  flex: 1;
+  min-width: 0;
 }
 .settings-opt-toggle,
 .pause-opt-toggle,
@@ -223,11 +225,13 @@
   user-select: none;
   outline: none;
   font-family: inherit;
+  transform: none !important;
 }
 .settings-opt-toggle:hover,
 .pause-opt-toggle:hover,
 .settings-opt-select:not(:disabled):hover {
   background: var(--glass-hover);
+  filter: brightness(1.12);
 }
 .settings-opt-select:disabled {
   background: var(--glass-sub-card);
@@ -253,6 +257,132 @@
 }
 .settings-opt-toggle.is-muted {
   opacity: 0.65;
+}
+
+/* ======================================================
+   SETTINGS HORIZONTAL STEPPER SELECTOR
+   Modern horizontal carousel/stepper control
+   ====================================================== */
+.settings-stepper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--glass-btn-sec);
+  border-radius: var(--r-pill);
+  border: none !important;
+  box-shadow: none !important;
+  padding: 3px 4px;
+  min-width: 170px;
+  max-width: 230px;
+  user-select: none;
+  box-sizing: border-box;
+  transition: background 0.2s ease, filter 0.2s ease;
+  transform: none !important;
+  flex-shrink: 0;
+}
+
+.settings-stepper:hover {
+  background: var(--glass-card-hover);
+}
+
+.settings-stepper .stepper-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--r-pill);
+  background: transparent;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--t2);
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  outline: none;
+  transition: background 0.2s ease, color 0.2s ease, filter 0.2s ease;
+  transform: none !important;
+}
+
+.settings-stepper .stepper-nav-btn:hover:not(:disabled) {
+  background: var(--glass-hover);
+  color: var(--t1);
+  filter: brightness(1.15);
+}
+
+.settings-stepper .stepper-nav-btn:active:not(:disabled) {
+  filter: brightness(1.25);
+}
+
+.settings-stepper .stepper-display-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--t1);
+  font-size: 0.80rem;
+  font-weight: 800;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 4px 6px;
+  flex: 1;
+  min-width: 0;
+  border-radius: 8px;
+  outline: none;
+  transition: background 0.2s ease, color 0.2s ease, filter 0.2s ease;
+  transform: none !important;
+}
+
+.settings-stepper .stepper-display-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+  filter: brightness(1.12);
+}
+
+[data-theme="light"] .settings-stepper .stepper-display-btn:hover:not(:disabled) {
+  background: rgba(15, 23, 42, 0.06);
+}
+
+.settings-stepper .stepper-val-text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  width: 100%;
+}
+
+.settings-stepper .stepper-icon {
+  display: block;
+  pointer-events: none;
+}
+
+/* Disabled state (Strict adherence to Rule 7: 100% text opacity, no dark boxes) */
+.settings-stepper.is-disabled {
+  background: var(--glass-sub-card);
+  cursor: not-allowed;
+  filter: none;
+}
+
+.settings-stepper.is-disabled .stepper-nav-btn,
+.settings-stepper.is-disabled .stepper-display-btn {
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+
+.settings-stepper.is-disabled .stepper-nav-btn {
+  color: #64748B;
+  opacity: 0.45;
+}
+
+.settings-stepper.is-disabled .stepper-val-text {
+  color: #94A3B8;
+  opacity: 1 !important;
+}
+
+[data-theme="light"] .settings-stepper.is-disabled .stepper-val-text {
+  color: #475569;
 }
 
 .settings-opt-badge {
