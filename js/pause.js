@@ -32,6 +32,7 @@ function confirmGoToMainMenu() {
 }
 
 function executeExitToMainMenu() {
+  if (typeof stopBossBgm === 'function') stopBossBgm(false);
   cancelExitConfirm();
   if (typeof saveGameProgress === 'function') saveGameProgress();
   goToMainMenu();
@@ -60,6 +61,7 @@ function pauseGame() {
 
   state.escPaused = true;
   state.paused    = true;
+  if (typeof pauseBossBgm === 'function') pauseBossBgm();
   if (typeof resetPauseView === 'function') resetPauseView();
   if (pauseOverlay) pauseOverlay.classList.remove('hidden');
   cancelAnimationFrame(state.rafId);
@@ -80,6 +82,7 @@ function resumeGame() {
     state.paused = false;
     state.lastTs = null;
     state.rafId  = requestAnimationFrame(gameLoop);
+    if (typeof resumeBossBgm === 'function') resumeBossBgm();
     if (!state.bossBattle || !state.bossBattle.active) {
       scheduleSpawn();
     } else {

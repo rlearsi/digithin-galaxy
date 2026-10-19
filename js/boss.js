@@ -282,6 +282,9 @@ function beginBossPhase() {
   renderBossHud(state.bossBattle.boss, state.bossBattle.boss.lives, state.bossBattle.boss.maxLives || 3);
   renderQueue();
   playSound('bossSpawn');
+  if (typeof startBossBgm === 'function') {
+    startBossBgm();
+  }
 
   const currentLang = typeof getLanguage === 'function' ? getLanguage() : 'en';
   const bossName = (typeof t === 'function' && state.bossBattle.boss?.nameKey && t(state.bossBattle.boss.nameKey) !== state.bossBattle.boss.nameKey)
@@ -647,6 +650,9 @@ function defeatBoss() {
   state.paused = true;
   cancelAnimationFrame(state.rafId);
   clearTimeout(state.spawnTimer);
+  if (typeof stopBossBgm === 'function') {
+    stopBossBgm(true);
+  }
 
   // Regra 5: chefão derrotado = +350 moedas (+35 precisão se 0 erros)
   const bossBonusCoins = 350;
@@ -731,6 +737,9 @@ function grantBossReward(reward) {
 }
 
 function continueAfterBossVictory() {
+  if (typeof stopBossBgm === 'function') {
+    stopBossBgm(false);
+  }
   hideBossHud();
   if (typeof hideAlienSpaceInvader === 'function') {
     hideAlienSpaceInvader();

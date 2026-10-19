@@ -3144,6 +3144,9 @@ function showAlienSpaceInvader(boss, remainingLives = 3, maxLives = 3) {
 }
 
 function hideAlienSpaceInvader() {
+  if (typeof stopBossBgm === 'function') {
+    stopBossBgm(true);
+  }
   const invader = $('alien-space-invader');
   if (!invader) return;
   invader.classList.add('alien-retreat');
