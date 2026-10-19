@@ -321,7 +321,6 @@ function updateSettingsUI() {
       : (typeof t === 'function' ? t('settings_queue_bottom') : 'Bottom');
     settingsQueueVal.innerHTML = `${iconSvg} <span>${label}</span>`;
   }
-  updateBossBattlesUI();
 
   const langSelect = $('settings-lang-select');
   if (langSelect && typeof getLanguage === 'function') {
@@ -349,34 +348,7 @@ function updateSettingsUI() {
 }
 
 function isBossBattlesEnabled() {
-  const saved = localStorage.getItem('digithin_galaxy_boss_enabled');
-  return saved === null ? true : saved === 'true';
-}
-
-function toggleBossBattlesSetting() {
-  const current = isBossBattlesEnabled();
-  const next = !current;
-  localStorage.setItem('digithin_galaxy_boss_enabled', String(next));
-  updateBossBattlesUI();
-  return next;
-}
-
-function updateBossBattlesUI() {
-  const isEnabled = isBossBattlesEnabled();
-  const btn = $('settings-boss-btn');
-  const val = $('settings-boss-val');
-  if (val) {
-    const iconSvg = isEnabled
-      ? `<svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6"/><path d="m16 16 4 4"/><path d="m19 21 2-2"/></svg>`
-      : `<svg class="btn-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`;
-    const label = isEnabled
-      ? (typeof t === 'function' ? t('settings_boss_on') : 'Every 10 Phases (Active)')
-      : (typeof t === 'function' ? t('settings_boss_off') : 'Disabled');
-    val.innerHTML = `${iconSvg} <span>${label}</span>`;
-  }
-  if (btn) {
-    btn.classList.toggle('is-disabled', !isEnabled);
-  }
+  return true;
 }
 
 // ============================================================
@@ -1741,17 +1713,12 @@ function renderQueue() {
   }
   if (!queueItemsEl) return;
   queueItemsEl.innerHTML = '';
+  const queueBar = $('queue-bar');
   if (state.bossBattle && state.bossBattle.active) {
-    const qb = document.createElement('div');
-    qb.className = 'queue-boss-indicator';
-    qb.style.cssText = 'color:var(--accent-amber);font-weight:800;font-size:0.75rem;display:flex;align-items:center;gap:6px;padding:4px 8px;letter-spacing:0.03em;';
-    const bossHpLbl = typeof t === 'function' ? t('hud_boss_hp') : 'BOSS HP';
-    const enigmaIdx = (state.bossBattle.meaningIndex || 0) + 1;
-    const enigmaLbl = typeof t === 'function' ? t('boss_enigma_queue', { num: enigmaIdx }) : `ENIGMA ${enigmaIdx} / 3`;
-    qb.innerHTML = `⚔️ ${enigmaLbl} &bull; ${bossHpLbl}: ${state.bossBattle.boss?.lives || 0}/3`;
-    queueItemsEl.appendChild(qb);
+    if (queueBar) queueBar.classList.add('hidden');
     return;
   }
+  if (queueBar) queueBar.classList.remove('hidden');
   const show = Math.min(state.spawnQueue.length, 6);
   for (let i = 0; i < show; i++) {
     const qi = state.spawnQueue[i];
@@ -1924,6 +1891,20 @@ function getPaletteForFallingObject(el) {
   }
   if (dataObj && spritePaletteCache.has(dataObj)) {
     return spritePaletteCache.get(dataObj);
+  }
+
+  // 1.1 Extrai paleta nativa de pixel art caso seja SVG inline (ex: Chefões Alienígenas)
+  const svgRects = el.querySelectorAll('svg rect[fill]');
+  if (svgRects && svgRects.length > 0) {
+    const fills = new Set();
+    svgRects.forEach(r => {
+      const f = r.getAttribute('fill');
+      if (f && f !== 'none' && f !== 'transparent') fills.add(f.toUpperCase());
+    });
+    if (fills.size > 0) {
+      const extractedSvgColors = Array.from(fills);
+      return extractedSvgColors;
+    }
   }
 
   // 2. Extrai paleta real dos pixels desenhados no sprite pixel art
@@ -2825,328 +2806,443 @@ if (typeof applyMobileInputRestrictions === 'function') applyMobileInputRestrict
 // ============================================================
 function getBossSpriteSvg(boss) {
   const bId = boss?.id || '';
-  const type = boss?.type || 'alien_dreadnought';
-  const imgMap = {
-    alien_xylarion: 'assets/bosses/alien_xylarion.webp',
-    alien_dreadnought: 'assets/bosses/alien_xylarion.webp',
-    robot: 'assets/bosses/alien_xylarion.webp',
-    alien_zorkon: 'assets/bosses/alien_zorkon.webp',
-    alien_hive: 'assets/bosses/alien_zorkon.webp',
-    beast: 'assets/bosses/alien_zorkon.webp',
-    alien_vespera: 'assets/bosses/alien_vespera.webp',
-    alien_psionic: 'assets/bosses/alien_vespera.webp',
-    mythology: 'assets/bosses/alien_vespera.webp',
-    alien_kragthor: 'assets/bosses/alien_kragthor.webp',
-    alien_warlord: 'assets/bosses/alien_kragthor.webp',
-    volcano: 'assets/bosses/alien_kragthor.webp',
-    alien_nebulor: 'assets/bosses/alien_nebulor.webp',
-    alien_darkmatter: 'assets/bosses/alien_nebulor.webp',
-    ocean: 'assets/bosses/alien_nebulor.webp',
-    alien_xenor: 'assets/bosses/alien_xenor.webp',
-    alien_mothership: 'assets/bosses/alien_xenor.webp',
-    cosmos: 'assets/bosses/alien_xenor.webp'
-  };
-  const src = boss?.image || imgMap[bId] || imgMap[type] || 'assets/bosses/alien_xylarion.webp';
-  return `<img src="${src}" alt="Alien Boss" class="boss-pixel-avatar" draggable="false" />`;
-}
+  const type = boss?.type || '';
+  const species = boss?.species || '';
 
-function _legacyBossSvg(boss) {
-  const type = boss?.type || 'alien_dreadnought';
-  const primaryColor = boss?.color || '#06B6D4';
-
-  if (type === 'alien_dreadnought' || type === 'robot') {
-    // 1. Alien Dreadnought Commander: Xylarion (Cyan #06B6D4)
+  // 1. Zorkon — Alien Lagarto Menta/Esmeralda (Verde fofo com olhão expressivo)
+  if (bId === 'alien_zorkon' || type === 'alien_hive' || species === 'reptilian_lizard' || type === 'beast') {
     return `
-      <svg class="boss-svg-char" viewBox="0 0 80 80" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="alienDreadMetal" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#334155" />
-            <stop offset="50%" stop-color="#0F172A" />
-            <stop offset="100%" stop-color="#020617" />
-          </linearGradient>
-          <linearGradient id="alienCyanPlasma" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#06B6D4" />
-            <stop offset="50%" stop-color="#38BDF8" />
-            <stop offset="100%" stop-color="#06B6D4" />
-          </linearGradient>
-          <filter id="alienGlow" x="-25%" y="-25%" width="150%" height="150%">
-            <feGaussianBlur stdDeviation="2.5" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-        </defs>
-        <polygon points="10,24 2,42 18,38 24,28" fill="#1E293B" stroke="${primaryColor}" stroke-width="1.4" />
-        <polygon points="70,24 78,42 62,38 56,28" fill="#1E293B" stroke="${primaryColor}" stroke-width="1.4" />
-        <line x1="6" y1="40" x2="16" y2="38" stroke="#38BDF8" stroke-width="2" filter="url(#alienGlow)" />
-        <line x1="74" y1="40" x2="64" y2="38" stroke="#38BDF8" stroke-width="2" filter="url(#alienGlow)" />
-        <line x1="32" y1="14" x2="22" y2="4" stroke="${primaryColor}" stroke-width="2" stroke-linecap="round" />
-        <circle cx="21" cy="3" r="2.5" fill="#38BDF8" filter="url(#alienGlow)" />
-        <line x1="48" y1="14" x2="58" y2="4" stroke="${primaryColor}" stroke-width="2" stroke-linecap="round" />
-        <circle cx="59" cy="3" r="2.5" fill="#38BDF8" filter="url(#alienGlow)" />
-        <polygon points="40,8 60,20 54,48 40,56 26,48 20,20" fill="url(#alienDreadMetal)" stroke="${primaryColor}" stroke-width="2" />
-        <ellipse cx="40" cy="24" rx="7" ry="4" fill="#030712" stroke="#0284C7" stroke-width="1" />
-        <ellipse cx="40" cy="24" rx="5" ry="2.5" fill="url(#alienCyanPlasma)" filter="url(#alienGlow)" />
-        <circle cx="40" cy="24" r="1.5" fill="#FFFFFF" />
-        <polygon points="27,32 35,30 33,36 26,35" fill="#38BDF8" filter="url(#alienGlow)" />
-        <polygon points="53,32 45,30 47,36 54,35" fill="#38BDF8" filter="url(#alienGlow)" />
-        <path d="M 32 44 L 40 50 L 48 44" stroke="${primaryColor}" stroke-width="2" fill="none" stroke-linecap="round" />
-        <path d="M 28 54 L 52 54 L 58 70 L 22 70 Z" fill="url(#alienDreadMetal)" stroke="${primaryColor}" stroke-width="1.8" />
-        <circle cx="40" cy="62" r="6" fill="#0284C7" />
-        <circle cx="40" cy="62" r="4.5" fill="#38BDF8" filter="url(#alienGlow)" />
-        <circle cx="40" cy="62" r="1.8" fill="#FFFFFF" />
-        <ellipse cx="32" cy="72" rx="4" ry="2" fill="#38BDF8" opacity="0.9" filter="url(#alienGlow)" />
-        <ellipse cx="48" cy="72" rx="4" ry="2" fill="#38BDF8" opacity="0.9" filter="url(#alienGlow)" />
-      </svg>
-    `;
-  } else if (type === 'alien_hive' || type === 'beast') {
-    // 2. Alien Hive Conqueror: Zorkon (Toxic Emerald #10B981)
-    return `
-      <svg class="boss-svg-char" viewBox="0 0 80 80" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="alienHiveSkin" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#064E3B" />
-            <stop offset="50%" stop-color="#022C22" />
-            <stop offset="100%" stop-color="#011812" />
-          </linearGradient>
-          <filter id="hiveGlow" x="-25%" y="-25%" width="150%" height="150%">
-            <feGaussianBlur stdDeviation="2.5" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-        </defs>
-        <path d="M 18 32 Q 8 46 14 62 Q 22 58 24 46" fill="#065F46" stroke="#10B981" stroke-width="1.5" />
-        <path d="M 62 32 Q 72 46 66 62 Q 58 58 56 46" fill="#065F46" stroke="#10B981" stroke-width="1.5" />
-        <path d="M 28 14 Q 18 2 12 6 Q 16 16 26 18" fill="#047857" stroke="#34D399" stroke-width="1.2" />
-        <path d="M 52 14 Q 62 2 68 6 Q 64 16 54 18" fill="#047857" stroke="#34D399" stroke-width="1.2" />
-        <ellipse cx="40" cy="28" rx="20" ry="18" fill="url(#alienHiveSkin)" stroke="#10B981" stroke-width="2" />
-        <ellipse cx="30" cy="24" rx="4.5" ry="3.5" fill="#34D399" filter="url(#hiveGlow)" />
-        <ellipse cx="50" cy="24" rx="4.5" ry="3.5" fill="#34D399" filter="url(#hiveGlow)" />
-        <circle cx="30" cy="24" r="1.5" fill="#FFFFFF" />
-        <circle cx="50" cy="24" r="1.5" fill="#FFFFFF" />
-        <circle cx="24" cy="31" r="2.5" fill="#10B981" filter="url(#hiveGlow)" />
-        <circle cx="56" cy="31" r="2.5" fill="#10B981" filter="url(#hiveGlow)" />
-        <polygon points="34,36 40,42 46,36 40,39" fill="#34D399" filter="url(#hiveGlow)" />
-        <polygon points="33,40 37,40 35,46" fill="#FFFFFF" />
-        <polygon points="43,40 47,40 45,46" fill="#FFFFFF" />
-        <path d="M 26 50 L 54 50 L 60 68 L 20 68 Z" fill="url(#alienHiveSkin)" stroke="#10B981" stroke-width="1.8" />
-        <circle cx="40" cy="59" r="6" fill="#047857" />
-        <circle cx="40" cy="59" r="4.5" fill="#34D399" filter="url(#hiveGlow)" />
-        <circle cx="40" cy="59" r="2" fill="#FFFFFF" />
-      </svg>
-    `;
-  } else if (type === 'alien_psionic' || type === 'mythology') {
-    // 3. Alien Psionic Empress: Vespera (Plasma Violet #A855F7)
-    return `
-      <svg class="boss-svg-char" viewBox="0 0 80 80" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="psionicSkin" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#581C87" />
-            <stop offset="50%" stop-color="#3B0764" />
-            <stop offset="100%" stop-color="#1E0338" />
-          </linearGradient>
-          <filter id="psionicGlow" x="-25%" y="-25%" width="150%" height="150%">
-            <feGaussianBlur stdDeviation="3" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-        </defs>
-        <circle cx="12" cy="18" r="3.5" fill="#C084FC" filter="url(#psionicGlow)" />
-        <circle cx="12" cy="18" r="1.5" fill="#FFFFFF" />
-        <circle cx="68" cy="18" r="3.5" fill="#C084FC" filter="url(#psionicGlow)" />
-        <circle cx="68" cy="18" r="1.5" fill="#FFFFFF" />
-        <circle cx="40" cy="4" r="3.8" fill="#F472B6" filter="url(#psionicGlow)" />
-        <circle cx="40" cy="4" r="1.6" fill="#FFFFFF" />
-        <path d="M 26 22 Q 14 6 6 10 Q 14 22 22 28 Z" fill="#7E22CE" stroke="#A855F7" stroke-width="1.6" />
-        <path d="M 54 22 Q 66 6 74 10 Q 66 22 58 28 Z" fill="#7E22CE" stroke="#A855F7" stroke-width="1.6" />
-        <polygon points="24,18 56,18 62,38 48,52 32,52 18,38" fill="url(#psionicSkin)" stroke="#A855F7" stroke-width="2" />
-        <ellipse cx="40" cy="22" rx="4.5" ry="3.5" fill="#E879F9" filter="url(#psionicGlow)" />
-        <circle cx="40" cy="22" r="1.5" fill="#FFFFFF" />
-        <polygon points="26,32 36,32 34,37 26,36" fill="#F472B6" filter="url(#psionicGlow)" />
-        <polygon points="54,32 44,32 46,37 54,36" fill="#F472B6" filter="url(#psionicGlow)" />
-        <circle cx="31" cy="34" r="1.2" fill="#FFFFFF" />
-        <circle cx="49" cy="34" r="1.2" fill="#FFFFFF" />
-        <path d="M 28 52 L 52 52 L 58 68 L 22 68 Z" fill="url(#psionicSkin)" stroke="#A855F7" stroke-width="1.8" />
-        <polygon points="40,56 47,63 40,70 33,63" fill="#C084FC" filter="url(#psionicGlow)" />
-        <polygon points="40,58 44,63 40,68 36,63" fill="#FFFFFF" />
-      </svg>
-    `;
-  } else if (type === 'alien_warlord' || type === 'volcano') {
-    // 4. Alien Warlord Fleet Breaker: Kragthor (Crimson #EF4444)
-    return `
-      <svg class="boss-svg-char" viewBox="0 0 80 80" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="warlordArmor" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#7F1D1D" />
-            <stop offset="50%" stop-color="#450A0A" />
-            <stop offset="100%" stop-color="#1F0404" />
-          </linearGradient>
-          <filter id="warlordGlow" x="-25%" y="-25%" width="150%" height="150%">
-            <feGaussianBlur stdDeviation="2.5" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-        </defs>
-        <polygon points="18,34 4,28 10,48 24,44" fill="#991B1B" stroke="#EF4444" stroke-width="1.6" />
-        <polygon points="62,34 76,28 70,48 56,44" fill="#991B1B" stroke="#EF4444" stroke-width="1.6" />
-        <polygon points="12,28 2,16 16,24" fill="#B91C1C" />
-        <polygon points="68,28 78,16 64,24" fill="#B91C1C" />
-        <polygon points="40,6 60,18 56,46 40,54 24,46 20,18" fill="url(#warlordArmor)" stroke="#EF4444" stroke-width="2" />
-        <path d="M 26 22 L 40 28 L 54 22" stroke="#EF4444" stroke-width="2.5" fill="none" stroke-linecap="round" />
-        <polygon points="26,30 37,30 35,35 25,33" fill="#F87171" filter="url(#warlordGlow)" />
-        <polygon points="54,30 43,30 45,35 55,33" fill="#F87171" filter="url(#warlordGlow)" />
-        <circle cx="31" cy="32" r="1.2" fill="#FFFFFF" />
-        <circle cx="49" cy="32" r="1.2" fill="#FFFFFF" />
-        <line x1="32" y1="42" x2="48" y2="42" stroke="#EF4444" stroke-width="2" stroke-linecap="round" />
-        <line x1="35" y1="46" x2="45" y2="46" stroke="#F87171" stroke-width="1.6" stroke-linecap="round" />
-        <path d="M 26 54 L 54 54 L 62 70 L 18 70 Z" fill="url(#warlordArmor)" stroke="#EF4444" stroke-width="1.8" />
-        <circle cx="40" cy="62" r="6" fill="#7F1D1D" />
-        <circle cx="40" cy="62" r="4.5" fill="#EF4444" filter="url(#warlordGlow)" />
-        <circle cx="40" cy="62" r="2" fill="#FDE047" />
-      </svg>
-    `;
-  } else if (type === 'alien_darkmatter' || type === 'ocean') {
-    // 5. Alien Dark Matter Herald: Nebulor (Cosmic Indigo #6366F1)
-    return `
-      <svg class="boss-svg-char" viewBox="0 0 80 80" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="darkmatterSkin" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#312E81" />
-            <stop offset="50%" stop-color="#1E1B4B" />
-            <stop offset="100%" stop-color="#0F0C29" />
-          </linearGradient>
-          <filter id="darkmatterGlow" x="-25%" y="-25%" width="150%" height="150%">
-            <feGaussianBlur stdDeviation="3" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-        </defs>
-        <ellipse cx="40" cy="36" rx="34" ry="12" fill="none" stroke="#818CF8" stroke-width="1.6" transform="rotate(-12 40 36)" opacity="0.8" filter="url(#darkmatterGlow)" />
-        <line x1="40" y1="2" x2="40" y2="12" stroke="#A5B4FC" stroke-width="2.2" stroke-linecap="round" filter="url(#darkmatterGlow)" />
-        <circle cx="40" cy="2" r="2" fill="#FFFFFF" />
-        <line x1="18" y1="12" x2="26" y2="18" stroke="#818CF8" stroke-width="1.8" stroke-linecap="round" />
-        <circle cx="17" cy="11" r="1.5" fill="#C7D2FE" />
-        <line x1="62" y1="12" x2="54" y2="18" stroke="#818CF8" stroke-width="1.8" stroke-linecap="round" />
-        <circle cx="63" cy="11" r="1.5" fill="#C7D2FE" />
-        <circle cx="40" cy="34" r="18" fill="url(#darkmatterSkin)" stroke="#818CF8" stroke-width="2" />
-        <ellipse cx="32" cy="32" rx="4.5" ry="3" fill="#A5B4FC" filter="url(#darkmatterGlow)" />
-        <ellipse cx="48" cy="32" rx="4.5" ry="3" fill="#A5B4FC" filter="url(#darkmatterGlow)" />
-        <circle cx="32" cy="32" r="1.5" fill="#000000" />
-        <circle cx="48" cy="32" r="1.5" fill="#000000" />
-        <path d="M 28 50 L 52 50 L 56 68 L 24 68 Z" fill="url(#darkmatterSkin)" stroke="#818CF8" stroke-width="1.8" />
-        <circle cx="40" cy="59" r="6" fill="#000000" stroke="#818CF8" stroke-width="1.5" filter="url(#darkmatterGlow)" />
-        <circle cx="40" cy="59" r="2" fill="#FFFFFF" />
-      </svg>
-    `;
-  } else {
-    // 6. Alien Intergalactic Mothership Mind: Xenor (Solar Amber #F59E0B)
-    return `
-      <svg class="boss-svg-char" viewBox="0 0 80 80" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="mothershipGold" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#D97706" />
-            <stop offset="50%" stop-color="#92400E" />
-            <stop offset="100%" stop-color="#451A03" />
-          </linearGradient>
-          <filter id="solarGlow" x="-25%" y="-25%" width="150%" height="150%">
-            <feGaussianBlur stdDeviation="3" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-        </defs>
-        <ellipse cx="40" cy="38" rx="35" ry="9" fill="none" stroke="#FBBF24" stroke-width="2" transform="rotate(-18 40 38)" opacity="0.9" filter="url(#solarGlow)" />
-        <ellipse cx="40" cy="38" rx="35" ry="9" fill="none" stroke="#FEF08A" stroke-width="1" transform="rotate(-18 40 38)" stroke-dasharray="4 2" />
-        <line x1="40" y1="2" x2="40" y2="10" stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round" filter="url(#solarGlow)" />
-        <line x1="22" y1="8" x2="28" y2="16" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" />
-        <line x1="58" y1="8" x2="52" y2="16" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" />
-        <circle cx="40" cy="32" r="19" fill="url(#mothershipGold)" stroke="#FBBF24" stroke-width="2" />
-        <circle cx="40" cy="32" r="8" fill="#451A03" stroke="#FBBF24" stroke-width="1.5" />
-        <circle cx="40" cy="32" r="5.5" fill="#FEF08A" filter="url(#solarGlow)" />
-        <circle cx="40" cy="32" r="2.5" fill="#F59E0B" />
-        <circle cx="40" cy="32" r="1" fill="#FFFFFF" />
-        <path d="M 28 50 L 52 50 L 58 68 L 22 68 Z" fill="url(#mothershipGold)" stroke="#FBBF24" stroke-width="1.8" />
-        <circle cx="40" cy="59" r="6" fill="#F59E0B" filter="url(#solarGlow)" />
-        <circle cx="40" cy="59" r="3" fill="#FEF08A" />
-        <circle cx="40" cy="59" r="1.2" fill="#FFFFFF" />
+      <svg class="boss-pixel-avatar-svg" viewBox="0 0 24 24" width="100%" height="100%" shape-rendering="crispEdges" style="background:transparent;display:block;">
+        <g fill="#064E3B">
+          <rect x="6" y="3" width="2" height="3" />
+          <rect x="14" y="3" width="2" height="3" />
+          <rect x="7" y="5" width="8" height="1" />
+          <rect x="5" y="6" width="2" height="1" />
+          <rect x="15" y="6" width="2" height="1" />
+          <rect x="4" y="7" width="1" height="9" />
+          <rect x="17" y="7" width="1" height="3" />
+          <rect x="18" y="10" width="1" height="5" />
+          <rect x="19" y="12" width="1" height="2" />
+          <rect x="5" y="16" width="1" height="1" />
+          <rect x="17" y="15" width="1" height="1" />
+          <rect x="6" y="16" width="11" height="1" />
+          <rect x="5" y="17" width="1" height="4" />
+          <rect x="17" y="17" width="1" height="4" />
+          <rect x="6" y="21" width="11" height="1" />
+        </g>
+        <g fill="#22C55E">
+          <rect x="5" y="13" width="1" height="3" />
+          <rect x="6" y="15" width="11" height="1" />
+          <rect x="16" y="13" width="2" height="2" />
+        </g>
+        <g fill="#4ADE80">
+          <rect x="6" y="4" width="2" height="2" />
+          <rect x="14" y="4" width="2" height="2" />
+          <rect x="7" y="6" width="8" height="1" />
+          <rect x="5" y="7" width="12" height="3" />
+          <rect x="5" y="10" width="13" height="3" />
+          <rect x="6" y="13" width="10" height="2" />
+          <rect x="18" y="12" width="1" height="2" />
+        </g>
+        <rect x="8" y="8" width="5" height="5" fill="#FFFFFF" />
+        <rect x="9" y="9" width="4" height="4" fill="#0F172A" />
+        <rect x="9" y="9" width="2" height="2" fill="#FFFFFF" />
+        <rect x="11" y="11" width="1" height="1" fill="#FFFFFF" />
+        <rect x="17" y="11" width="1" height="1" fill="#064E3B" />
+        <rect x="14" y="14" width="2" height="1" fill="#064E3B" />
+        <rect x="6" y="17" width="11" height="4" fill="#64748B" />
+        <rect x="8" y="18" width="7" height="2" fill="#94A3B8" />
+        <rect x="11" y="18" width="1" height="2" fill="#38BDF8" />
       </svg>
     `;
   }
+
+  // 2. Vespera — Alien Lagarto Lavanda/Roxo com Chifrinho no Nariz
+  if (bId === 'alien_vespera' || type === 'alien_psionic' || type === 'mythology') {
+    return `
+      <svg class="boss-pixel-avatar-svg" viewBox="0 0 24 24" width="100%" height="100%" shape-rendering="crispEdges" style="background:transparent;display:block;">
+        <g fill="#2E1065">
+          <rect x="4" y="5" width="2" height="2" />
+          <rect x="3" y="7" width="2" height="2" />
+          <rect x="2" y="9" width="2" height="2" />
+          <rect x="7" y="4" width="6" height="1" />
+          <rect x="6" y="5" width="1" height="1" />
+          <rect x="13" y="5" width="2" height="1" />
+          <rect x="15" y="6" width="1" height="3" />
+          <rect x="16" y="8" width="1" height="2" />
+          <rect x="4" y="11" width="1" height="5" />
+          <rect x="19" y="10" width="1" height="2" />
+          <rect x="18" y="12" width="1" height="2" />
+          <rect x="17" y="14" width="1" height="2" />
+          <rect x="5" y="16" width="12" height="1" />
+          <rect x="4" y="17" width="1" height="4" />
+          <rect x="17" y="17" width="1" height="4" />
+          <rect x="5" y="21" width="12" height="1" />
+        </g>
+        <rect x="5" y="6" width="1" height="1" fill="#DDD6FE" />
+        <rect x="4" y="8" width="1" height="1" fill="#DDD6FE" />
+        <rect x="3" y="10" width="1" height="1" fill="#DDD6FE" />
+        <g fill="#A78BFA">
+          <rect x="7" y="5" width="6" height="1" />
+          <rect x="6" y="6" width="9" height="3" />
+          <rect x="5" y="9" width="11" height="4" />
+          <rect x="5" y="13" width="12" height="2" />
+          <rect x="6" y="15" width="10" height="1" />
+        </g>
+        <g fill="#7C3AED">
+          <rect x="5" y="11" width="1" height="4" />
+          <rect x="6" y="15" width="10" height="1" />
+        </g>
+        <rect x="17" y="10" width="2" height="2" fill="#F5F3FF" />
+        <rect x="19" y="10" width="1" height="1" fill="#FFFFFF" />
+        <rect x="17" y="12" width="1" height="1" fill="#C7D2FE" />
+        <rect x="8" y="8" width="5" height="5" fill="#FFFFFF" />
+        <rect x="9" y="9" width="4" height="4" fill="#3B0764" />
+        <rect x="8" y="7" width="5" height="1" fill="#2E1065" />
+        <rect x="9" y="9" width="2" height="2" fill="#FFFFFF" />
+        <rect x="11" y="11" width="1" height="1" fill="#FFFFFF" />
+        <rect x="14" y="14" width="2" height="1" fill="#2E1065" />
+        <rect x="5" y="17" width="12" height="4" fill="#DB2777" />
+        <rect x="7" y="18" width="8" height="2" fill="#F472B6" />
+      </svg>
+    `;
+  }
+
+  // 3. Xylarion — Alien Lagarto Azul Celeste com Cachecol Vermelho
+  if (bId === 'alien_xylarion' || type === 'alien_dreadnought' || type === 'robot') {
+    return `
+      <svg class="boss-pixel-avatar-svg" viewBox="0 0 24 24" width="100%" height="100%" shape-rendering="crispEdges" style="background:transparent;display:block;">
+        <g fill="#082F49">
+          <rect x="7" y="3" width="2" height="2" />
+          <rect x="10" y="3" width="2" height="2" />
+          <rect x="13" y="4" width="2" height="2" />
+          <rect x="5" y="5" width="2" height="2" />
+          <rect x="15" y="5" width="2" height="2" />
+          <rect x="4" y="7" width="1" height="8" />
+          <rect x="17" y="7" width="1" height="3" />
+          <rect x="18" y="10" width="1" height="4" />
+          <rect x="17" y="14" width="1" height="2" />
+          <rect x="5" y="15" width="12" height="1" />
+        </g>
+        <rect x="7" y="4" width="2" height="1" fill="#BAE6FD" />
+        <rect x="10" y="4" width="2" height="1" fill="#BAE6FD" />
+        <rect x="13" y="5" width="2" height="1" fill="#BAE6FD" />
+        <g fill="#38BDF8">
+          <rect x="6" y="5" width="9" height="2" />
+          <rect x="5" y="7" width="12" height="3" />
+          <rect x="5" y="10" width="13" height="4" />
+          <rect x="6" y="14" width="11" height="1" />
+        </g>
+        <g fill="#0284C7">
+          <rect x="5" y="12" width="1" height="3" />
+          <rect x="6" y="14" width="11" height="1" />
+        </g>
+        <rect x="8" y="8" width="5" height="5" fill="#FFFFFF" />
+        <rect x="9" y="9" width="4" height="4" fill="#0F172A" />
+        <rect x="9" y="9" width="2" height="2" fill="#FFFFFF" />
+        <rect x="11" y="11" width="1" height="1" fill="#FFFFFF" />
+        <rect x="17" y="11" width="1" height="1" fill="#082F49" />
+        <rect x="14" y="13" width="2" height="1" fill="#082F49" />
+        <g fill="#082F49">
+          <rect x="4" y="16" width="1" height="5" />
+          <rect x="17" y="16" width="1" height="5" />
+          <rect x="5" y="21" width="12" height="1" />
+        </g>
+        <rect x="5" y="16" width="12" height="5" fill="#EF4444" />
+        <rect x="7" y="18" width="8" height="2" fill="#DC2626" />
+        <rect x="9" y="19" width="4" height="2" fill="#B91C1C" />
+      </svg>
+    `;
+  }
+
+  // 4. Kragthor — Alien Lagarto Coral/Vermelho com Chifrinhos Amarelos
+  if (bId === 'alien_kragthor' || type === 'alien_warlord' || type === 'volcano') {
+    return `
+      <svg class="boss-pixel-avatar-svg" viewBox="0 0 24 24" width="100%" height="100%" shape-rendering="crispEdges" style="background:transparent;display:block;">
+        <rect x="6" y="2" width="2" height="3" fill="#FDE047" />
+        <rect x="14" y="2" width="2" height="3" fill="#FDE047" />
+        <g fill="#4C0519">
+          <rect x="6" y="1" width="2" height="1" />
+          <rect x="14" y="1" width="2" height="1" />
+          <rect x="8" y="4" width="6" height="1" />
+          <rect x="5" y="5" width="2" height="1" />
+          <rect x="15" y="5" width="2" height="1" />
+          <rect x="4" y="6" width="1" height="10" />
+          <rect x="17" y="6" width="1" height="4" />
+          <rect x="18" y="10" width="1" height="4" />
+          <rect x="17" y="14" width="1" height="2" />
+          <rect x="5" y="16" width="12" height="1" />
+          <rect x="4" y="17" width="1" height="4" />
+          <rect x="17" y="17" width="1" height="4" />
+          <rect x="5" y="21" width="12" height="1" />
+        </g>
+        <g fill="#FB7185">
+          <rect x="7" y="5" width="8" height="1" />
+          <rect x="5" y="6" width="12" height="4" />
+          <rect x="5" y="10" width="13" height="4" />
+          <rect x="6" y="14" width="11" height="2" />
+        </g>
+        <g fill="#E11D48">
+          <rect x="5" y="12" width="1" height="4" />
+          <rect x="6" y="15" width="11" height="1" />
+        </g>
+        <rect x="6" y="12" width="2" height="1" fill="#FDA4AF" />
+        <rect x="15" y="12" width="2" height="1" fill="#FDA4AF" />
+        <rect x="8" y="8" width="5" height="5" fill="#FFFFFF" />
+        <rect x="9" y="9" width="4" height="4" fill="#4C0519" />
+        <rect x="9" y="9" width="2" height="2" fill="#FFFFFF" />
+        <rect x="11" y="11" width="1" height="1" fill="#FFFFFF" />
+        <rect x="17" y="11" width="1" height="1" fill="#4C0519" />
+        <rect x="14" y="13" width="2" height="1" fill="#4C0519" />
+        <rect x="5" y="17" width="12" height="4" fill="#475569" />
+        <rect x="7" y="18" width="8" height="2" fill="#64748B" />
+        <rect x="10" y="18" width="2" height="2" fill="#FDE047" />
+      </svg>
+    `;
+  }
+
+  // 5. Nebulor — Alien Lagarto Índigo Estelar
+  if (bId === 'alien_nebulor' || type === 'alien_darkmatter' || type === 'ocean') {
+    return `
+      <svg class="boss-pixel-avatar-svg" viewBox="0 0 24 24" width="100%" height="100%" shape-rendering="crispEdges" style="background:transparent;display:block;">
+        <rect x="8" y="3" width="1" height="2" fill="#FDE047" />
+        <rect x="13" y="3" width="1" height="2" fill="#FDE047" />
+        <g fill="#1E1B4B">
+          <rect x="7" y="4" width="8" height="1" />
+          <rect x="5" y="5" width="2" height="2" />
+          <rect x="15" y="5" width="2" height="2" />
+          <rect x="4" y="7" width="1" height="9" />
+          <rect x="17" y="7" width="1" height="3" />
+          <rect x="18" y="10" width="1" height="4" />
+          <rect x="17" y="14" width="1" height="2" />
+          <rect x="5" y="16" width="12" height="1" />
+          <rect x="4" y="17" width="1" height="4" />
+          <rect x="17" y="17" width="1" height="4" />
+          <rect x="5" y="21" width="12" height="1" />
+        </g>
+        <g fill="#818CF8">
+          <rect x="7" y="5" width="8" height="2" />
+          <rect x="5" y="7" width="12" height="3" />
+          <rect x="5" y="10" width="13" height="4" />
+          <rect x="6" y="14" width="11" height="2" />
+        </g>
+        <g fill="#4F46E5">
+          <rect x="5" y="12" width="1" height="4" />
+          <rect x="6" y="15" width="11" height="1" />
+        </g>
+        <rect x="8" y="8" width="5" height="5" fill="#FFFFFF" />
+        <rect x="9" y="9" width="4" height="4" fill="#0F172A" />
+        <rect x="9" y="9" width="2" height="2" fill="#FFFFFF" />
+        <rect x="11" y="11" width="1" height="1" fill="#FFFFFF" />
+        <rect x="17" y="11" width="1" height="1" fill="#1E1B4B" />
+        <rect x="14" y="13" width="2" height="1" fill="#1E1B4B" />
+        <rect x="5" y="17" width="12" height="4" fill="#22D3EE" />
+        <rect x="7" y="18" width="8" height="2" fill="#06B6D4" />
+      </svg>
+    `;
+  }
+
+  // 6. Xenor / Padrão — Alien Lagarto Dourado Solar
+  return `
+    <svg class="boss-pixel-avatar-svg" viewBox="0 0 24 24" width="100%" height="100%" shape-rendering="crispEdges" style="background:transparent;display:block;">
+      <rect x="7" y="3" width="2" height="2" fill="#FEF08A" />
+      <rect x="10" y="2" width="2" height="3" fill="#FEF08A" />
+      <rect x="13" y="3" width="2" height="2" fill="#FEF08A" />
+      <g fill="#451A03">
+        <rect x="6" y="4" width="1" height="1" />
+        <rect x="15" y="4" width="1" height="1" />
+        <rect x="5" y="5" width="1" height="2" />
+        <rect x="16" y="5" width="1" height="2" />
+        <rect x="4" y="7" width="1" height="9" />
+        <rect x="17" y="7" width="1" height="3" />
+        <rect x="18" y="10" width="1" height="4" />
+        <rect x="17" y="14" width="1" height="2" />
+        <rect x="5" y="16" width="12" height="1" />
+        <rect x="4" y="17" width="1" height="4" />
+        <rect x="17" y="17" width="1" height="4" />
+        <rect x="5" y="21" width="12" height="1" />
+      </g>
+      <g fill="#FBBF24">
+        <rect x="6" y="5" width="10" height="2" />
+        <rect x="5" y="7" width="12" height="3" />
+        <rect x="5" y="10" width="13" height="4" />
+        <rect x="6" y="14" width="11" height="2" />
+      </g>
+      <g fill="#D97706">
+        <rect x="5" y="12" width="1" height="4" />
+        <rect x="6" y="15" width="11" height="1" />
+      </g>
+      <rect x="8" y="8" width="5" height="5" fill="#FFFFFF" />
+      <rect x="9" y="9" width="4" height="4" fill="#451A03" />
+      <rect x="9" y="9" width="2" height="2" fill="#FFFFFF" />
+      <rect x="11" y="11" width="1" height="1" fill="#FFFFFF" />
+      <rect x="17" y="11" width="1" height="1" fill="#451A03" />
+      <rect x="14" y="13" width="2" height="1" fill="#451A03" />
+      <rect x="5" y="17" width="12" height="4" fill="#7C3AED" />
+      <rect x="7" y="18" width="8" height="2" fill="#A78BFA" />
+    </svg>
+  `;
 }
 
+// ============================================================
+// ALIEN SPACE INVADER VISUAL MANAGEMENT
+// ============================================================
+// ALIEN SPACE INVADER VISUAL MANAGEMENT (CLEAN SINGLE MOB)
+// ============================================================
+function renderBossHearts(remainingLives = 3, maxLives = 3) {
+  const container = $('alien-space-hearts');
+  if (!container) return;
+  container.innerHTML = '';
+  for (let i = 0; i < maxLives; i++) {
+    const isAlive = i < remainingLives;
+    const heartWrap = document.createElement('span');
+    heartWrap.className = `alien-heart-icon ${isAlive ? 'alive' : 'lost'}`;
+    heartWrap.setAttribute('title', isAlive ? 'HP' : 'Lost');
+    heartWrap.innerHTML = `
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+    `;
+    container.appendChild(heartWrap);
+  }
+}
+
+function showAlienSpaceInvader(boss, remainingLives = 3, maxLives = 3) {
+  const invader = $('alien-space-invader');
+  const sprite = $('alien-space-sprite');
+  const titleEl = $('alien-space-title');
+  if (!invader) return;
+
+  // 1. Título do boss acima do ícone ao centro
+  if (titleEl && boss) {
+    const lang = (typeof getLanguage === 'function') ? getLanguage() : 'en';
+    const isPt = lang === 'pt';
+    const name = (typeof t === 'function' && boss.nameKey && t(boss.nameKey) !== boss.nameKey)
+      ? boss.name
+      : (isPt ? (boss.namePt || boss.name) : (boss.name || boss.namePt));
+    titleEl.textContent = name || 'Alien Invader';
+  }
+
+  // 2. Apenas 1 desenho do boss na tela (ícone pixel art ao centro)
+  if (sprite && boss) {
+    sprite.innerHTML = getBossSpriteSvg(boss);
+  }
+
+  // 3. Barra de vida com 3 corações abaixo do boss
+  renderBossHearts(remainingLives, maxLives);
+
+  const clr = boss?.color || '#06B6D4';
+  invader.style.setProperty('--alien-theme-color', clr);
+
+  invader.classList.remove('hidden', 'alien-throw', 'alien-damaged', 'alien-retreat');
+  void invader.offsetWidth;
+  invader.classList.add('alien-surge');
+
+  // Oculta a barra de próximos para manter a tela limpa
+  const queueBar = $('queue-bar');
+  if (queueBar) queueBar.classList.add('hidden');
+}
+
+function hideAlienSpaceInvader() {
+  const invader = $('alien-space-invader');
+  if (!invader) return;
+  invader.classList.add('alien-retreat');
+  setTimeout(() => {
+    invader.classList.add('hidden');
+    invader.classList.remove('alien-surge', 'alien-throw', 'alien-damaged', 'alien-retreat');
+  }, 450);
+
+  // Restaura a barra de próximos
+  const queueBar = $('queue-bar');
+  if (queueBar) queueBar.classList.remove('hidden');
+}
+
+function animateAlienThrow() {
+  const invader = $('alien-space-invader');
+  if (!invader || invader.classList.contains('hidden')) return;
+  invader.classList.remove('alien-throw');
+  void invader.offsetWidth;
+  invader.classList.add('alien-throw');
+  setTimeout(() => invader.classList.remove('alien-throw'), 650);
+}
+
+function animateAlienDamaged() {
+  const invader = $('alien-space-invader');
+  if (!invader || invader.classList.contains('hidden')) return;
+  invader.classList.add('alien-damaged');
+  setTimeout(() => invader.classList.remove('alien-damaged'), 500);
+}
+
+/**
+ * Destrói o boss em partículas cósmicas (exatamente como os objetos caindo),
+ * ocultando elementos de interface e executando o callback após a dispersão dos fragmentos.
+ */
+function explodeAlienBoss(onComplete) {
+  const invader = $('alien-space-invader');
+  const craft = invader?.querySelector('.alien-space-craft') || invader;
+  const hearts = $('alien-space-hearts');
+  const title = $('alien-space-title');
+
+  if (hearts) hearts.style.display = 'none';
+  if (title) title.style.display = 'none';
+
+  if (craft) {
+    // Toca efeito sonoro de impacto e destruição
+    if (typeof playSound === 'function') {
+      playSound('hit');
+    }
+
+    // Detona explosões densas de partículas celestes usando a paleta exata de pixels do boss
+    if (typeof spawnCelestialExplosion === 'function') {
+      spawnCelestialExplosion(craft, 'ALIEN_BOSS_DEFEAT');
+      setTimeout(() => {
+        if (craft) spawnCelestialExplosion(craft, 'ALIEN_BOSS_DEFEAT');
+      }, 70);
+      setTimeout(() => {
+        if (craft) spawnCelestialExplosion(craft, 'ALIEN_BOSS_DEFEAT');
+      }, 140);
+    }
+
+    craft.style.opacity = '0';
+    craft.style.transform = 'scale(0.15)';
+    craft.style.transition = 'opacity 0.28s ease, transform 0.28s ease';
+  }
+
+  // Após alguns milissegundos de partículas caindo e explodindo na tela, conclui a sequência
+  setTimeout(() => {
+    if (invader) {
+      invader.classList.add('hidden');
+      if (craft) {
+        craft.style.opacity = '';
+        craft.style.transform = '';
+        craft.style.transition = '';
+      }
+      if (hearts) hearts.style.display = '';
+      if (title) title.style.display = '';
+    }
+    if (typeof onComplete === 'function') {
+      onComplete();
+    }
+  }, 700);
+}
 
 function renderBossHud(boss, remainingLives = 3, maxLives = 3) {
-  if (!bossHud) return;
-  bossHud.classList.remove('hidden');
+  // O retângulo horizontal do topo foi removido permanentemente
+  if (bossHud) bossHud.classList.add('hidden');
 
-  // Trigger surge entrance animation
-  bossHud.classList.remove('boss-surge');
-  void bossHud.offsetWidth;
-  bossHud.classList.add('boss-surge');
-
-  const lang = (typeof getLanguage === 'function') ? getLanguage() : 'en';
-  const isPt = lang === 'pt';
-  const name = (typeof t === 'function' && boss.nameKey && t(boss.nameKey) !== boss.nameKey)
-    ? boss.name
-    : (isPt ? (boss.namePt || boss.name) : (boss.name || boss.namePt));
-  const scenario = (typeof t === 'function' && boss.scenarioKey && t(boss.scenarioKey) !== boss.scenarioKey)
-    ? (boss.scenario || '')
-    : (isPt ? (boss.scenarioPt || boss.scenario || '') : (boss.scenario || boss.scenarioPt || ''));
-  const badgeLabel = (typeof t === 'function' && boss.badgeKey && t(boss.badgeKey) !== boss.badgeKey)
-    ? boss.badgeText
-    : (isPt ? (boss.badgeTextPt || boss.badgeText) : (boss.badgeText || boss.badgeTextPt));
-  const desc = (typeof t === 'function' && boss.scenarioDescKey && t(boss.scenarioDescKey) !== boss.scenarioDescKey)
-    ? (boss.scenarioDesc || boss.lore || boss.title || '')
-    : (isPt ? (boss.scenarioDescPt || boss.lorePt || boss.titlePt || '') : (boss.scenarioDesc || boss.lore || boss.title || ''));
-
-  if (bossName) bossName.textContent = name || (typeof t === 'function' ? t('boss_default_name') : 'Boss');
-  if (bossDesc) bossDesc.textContent = scenario ? (desc ? `${scenario} — ${desc}` : scenario) : (desc || '');
-
-  const badgeEl = $('boss-badge');
-  if (badgeEl) {
-    const scUp = scenario ? ` • ${scenario.toUpperCase()}` : '';
-    badgeEl.textContent = `${badgeLabel || (typeof t === 'function' ? t('boss_default_name').toUpperCase() : 'BOSS')}${scUp}`;
-    const clr = boss.color || '#06B6D4';
-    badgeEl.style.background = `linear-gradient(135deg, ${clr}, #3B82F6)`;
-    badgeEl.style.boxShadow = `0 0 10px ${clr}55`;
-  }
-
-  // Inject animated custom SVG according to boss type
-  const spriteEl = $('boss-sprite');
-  if (spriteEl) {
-    spriteEl.innerHTML = getBossSpriteSvg(boss);
-  }
-
-  // Set glowing aura around figure wrap according to boss theme color
-  const figureWrap = $('boss-figure-wrap');
-  if (figureWrap && boss.color) {
-    figureWrap.style.boxShadow = `0 0 18px ${boss.color}55`;
-  }
-
-  // Render health points: |||
-  const barsContainer = $('boss-hp-bars');
-  const textEl = $('boss-hp-text');
-
-  if (barsContainer) {
-    barsContainer.innerHTML = '';
-    for (let i = 0; i < maxLives; i++) {
-      const bar = document.createElement('span');
-      bar.className = `boss-hp-bar ${i < remainingLives ? 'active' : 'depleted'}`;
-      bar.textContent = '|';
-      barsContainer.appendChild(bar);
-    }
-  }
-
-  if (textEl) {
-    let str = '';
-    for (let i = 0; i < maxLives; i++) {
-      str += (i < remainingLives ? '|' : '·');
-    }
-    textEl.textContent = str;
-    textEl.className = `boss-hp-text ${remainingLives === 1 ? 'critical' : remainingLives === 0 ? 'dead' : ''}`;
-  }
+  // Atualiza diretamente o único alien central no céu com título e 3 corações
+  showAlienSpaceInvader(boss, remainingLives, maxLives);
 }
 
 function hideBossHud() {
   if (bossHud) bossHud.classList.add('hidden');
+  hideAlienSpaceInvader();
 }
 
 function flashBossDamage() {
-  if (!bossHud) return;
-  bossHud.classList.add('boss-damaged');
-  setTimeout(() => bossHud.classList.remove('boss-damaged'), 450);
+  if (typeof animateAlienDamaged === 'function') {
+    animateAlienDamaged();
+  }
 }
 
 function renderBossMeaningSlots(boxEl, targetWord, typedBuffer) {

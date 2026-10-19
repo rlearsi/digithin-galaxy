@@ -322,6 +322,8 @@
     "training_btn_finish_all": "모든 트레이닝 완료! →",
     "training_btn_next_lesson": "레슨 {lesson}(으)로 이동 (룬 {runics}개) →",
     "fb_boss_defeated": "{boss} 처치! +350 코인!",
+    "fb_boss_invasion": "⚠️ 외계인 침공: {boss}이(가) 지구를 공격하고 있습니다!",
+    "boss_alien_throw_msg": "외계 침략자가 지구를 향해 공격 발사체를 던졌습니다!",
     "modal_phase_pts": "페이즈 획득 점수",
     "modal_acc_bonus": "정확도 보너스 ({acc}%)",
     "modal_penalty": "오타 (페널티)",

@@ -322,6 +322,8 @@
     "training_btn_finish_all": "Finish All Trainings! →",
     "training_btn_next_lesson": "Advance to Lesson {lesson} ({runics} runics) →",
     "fb_boss_defeated": "{boss} DEFEATED! +350 COINS!",
+    "fb_boss_invasion": "⚠️ ALIEN INVASION: {boss} IS ATTACKING EARTH!",
+    "boss_alien_throw_msg": "The alien invader hurled an assault projectile at Earth!",
     "modal_phase_pts": "Points Earned in Phase",
     "modal_acc_bonus": "Accuracy Bonus ({acc}%)",
     "modal_penalty": "Errors (Penalty)",

@@ -951,27 +951,9 @@
 }
 
 /* ======================================================
-   BOSS BATTLE HUD & BANNER
+   BOSS BATTLE HUD & BANNER (REMOVIDO EM FAVOR DO MOB CENTRALIZADO)
    ====================================================== */
 .boss-hud {
-  position: relative;
-  z-index: 25;
-  width: 100%;
-  background: var(--glass-card);
-  backdrop-filter: blur(24px) saturate(200%);
-  -webkit-backdrop-filter: blur(24px) saturate(200%);
-  border-radius: 16px;
-  padding: 10px 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  border: none;
-  box-shadow: none;
-  margin-bottom: 8px;
-  overflow: hidden;
-}
-.boss-hud.hidden {
   display: none !important;
 }
 
@@ -1025,16 +1007,16 @@
 .boss-figure-wrap {
   width: 52px;
   height: 52px;
-  border-radius: 14px;
-  background: var(--glass-sub-card);
-  border: none;
+  border-radius: 0;
+  background: transparent !important;
+  border: none !important;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   position: relative;
   animation: bossFloat 2.8s ease-in-out infinite alternate;
-  box-shadow: 0 0 16px rgba(6, 182, 212, 0.3);
+  box-shadow: none !important;
 }
 
 .boss-sprite {
@@ -1043,6 +1025,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent !important;
+}
+
+.boss-pixel-avatar-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  shape-rendering: crispEdges;
+  background: transparent !important;
+  filter: none !important;
 }
 
 .boss-pixel-avatar {
@@ -1052,7 +1047,7 @@
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+  filter: none;
 }
 
 .qi-object-icon {
@@ -1142,13 +1137,24 @@
 .boss-badge {
   font-size: 0.62rem;
   font-weight: 800;
-  padding: 2px 7px;
-  border-radius: 6px;
-  background: linear-gradient(135deg, #06B6D4, #3B82F6);
+  padding: 3px 8px;
+  border-radius: 4px;
   color: #FFFFFF;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  box-shadow: 0 0 8px rgba(6, 182, 212, 0.4);
+  border: none !important;
+  box-shadow: none !important;
+  /* Dithering retro quadriculado 4x4 em Pixel Art (sem gradientes lisos) */
+  background-color: var(--badge-boss-color, #2563EB);
+  background-image:
+    linear-gradient(45deg, rgba(0, 0, 0, 0.24) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(0, 0, 0, 0.24) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.24) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.24) 75%);
+  background-size: 4px 4px;
+  background-position: 0 0, 0 2px, 2px -2px, -2px 0px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 .boss-desc {
@@ -1375,4 +1381,200 @@
   border: none;
   box-shadow: none;
   transform: translateY(-2px) scale(1.08);
+}
+
+/* ======================================================
+   ALIEN SPACE INVADER (CLEAN SINGLE MOB WITH TITLE & HEARTS)
+   ====================================================== */
+.alien-space-invader {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: 90%;
+  z-index: 22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  animation: alienSpaceFloat 3.4s ease-in-out infinite alternate;
+  filter: none !important;
+  background: transparent !important;
+  transition: opacity 0.35s ease;
+}
+
+.alien-space-invader.hidden {
+  display: none !important;
+}
+
+/* 4. Título do boss acima do ícone, ao centro */
+.alien-space-title {
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+  white-space: nowrap;
+  margin-bottom: 2px;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* 3. Ícone do boss no centro (mais alto) */
+.alien-space-craft {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+}
+
+.alien-space-sprite {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+}
+
+.alien-space-sprite svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  shape-rendering: crispEdges;
+  background: transparent !important;
+  filter: none !important;
+}
+
+/* 5. Barra de vida do boss (3 corações) abaixo do boss */
+.alien-space-hearts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 3px;
+}
+
+.alien-heart-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.alien-heart-icon.alive {
+  color: #EF4444;
+  transform: scale(1);
+  filter: drop-shadow(0 1px 3px rgba(239, 68, 68, 0.45));
+}
+
+.alien-heart-icon.lost {
+  color: rgba(255, 255, 255, 0.22);
+  transform: scale(0.85);
+  opacity: 0.45;
+  filter: none;
+}
+
+/* Entrance from Deep Space */
+.alien-space-invader.alien-surge {
+  animation: alienInvasionSurge 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes alienInvasionSurge {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-60px) scale(0.2);
+    filter: brightness(2.6) drop-shadow(0 0 28px var(--alien-theme-color, #06B6D4));
+  }
+  65% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(8px) scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+/* Idle Hover in Space */
+@keyframes alienSpaceFloat {
+  0% {
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-7px) scale(1.04);
+  }
+}
+
+/* Alien throwing/launching object at Earth */
+.alien-space-invader.alien-throw {
+  animation: alienThrowLaunch 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes alienThrowLaunch {
+  0% {
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  30% {
+    transform: translateX(-50%) translateY(-10px) scale(0.92);
+    filter: brightness(1.4) drop-shadow(0 0 20px var(--alien-theme-color, #06B6D4));
+  }
+  60% {
+    transform: translateX(-50%) translateY(12px) scale(1.14);
+    filter: brightness(1.8) drop-shadow(0 0 28px #FFFFFF);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+/* Alien damaged by player typing counter-attack */
+.alien-space-invader.alien-damaged {
+  animation: alienHitStagger 0.45s ease forwards;
+}
+
+@keyframes alienHitStagger {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    filter: drop-shadow(0 0 16px var(--alien-theme-color, #06B6D4));
+  }
+  20% {
+    transform: translateX(-50%) translateY(-6px) scale(1.18) rotate(-8deg);
+    filter: brightness(2.4) drop-shadow(0 0 24px #EF4444);
+  }
+  45% {
+    transform: translateX(-50%) translateY(4px) scale(0.88) rotate(6deg);
+  }
+  70% {
+    transform: translateX(-50%) scale(1.06) rotate(-3deg);
+  }
+}
+
+/* Alien retreat / defeat collapse */
+.alien-space-invader.alien-retreat {
+  animation: alienRetreatEscape 0.5s ease-in forwards;
+}
+
+@keyframes alienRetreatEscape {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  40% {
+    transform: translateX(-50%) scale(1.2);
+    filter: brightness(2.5) drop-shadow(0 0 30px #EF4444);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-80px) scale(0.1);
+  }
 }

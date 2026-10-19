@@ -322,6 +322,8 @@
     "training_btn_finish_all": "完成所有训练！ →",
     "training_btn_next_lesson": "进入第 {lesson} 课（{runics} 符文） →",
     "fb_boss_defeated": "{boss} 已击败！+350 金币！",
+    "fb_boss_invasion": "⚠️ 外星入侵：{boss} 正在攻击地球！",
+    "boss_alien_throw_msg": "外星入侵者向地球投掷了突击弹！",
     "modal_phase_pts": "本阶段获得点数",
     "modal_acc_bonus": "准确率加成 ({acc}%)",
     "modal_penalty": "失误（惩罚）",

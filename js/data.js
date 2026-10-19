@@ -395,7 +395,8 @@ const BOSS_DEFS = [
   {
     id: 'alien_zorkon',
     type: 'alien_hive',
-    icon: '👾',
+    icon: '🦎',
+    species: 'reptilian_lizard',
     image: 'assets/bosses/alien_zorkon.webp',
     color: '#10B981',
     lives: 3,

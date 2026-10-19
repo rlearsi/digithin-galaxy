@@ -322,6 +322,8 @@
     "training_btn_finish_all": "Alle Trainings abschließen! →",
     "training_btn_next_lesson": "Weiter zu Lektion {lesson} ({runics} Runen) →",
     "fb_boss_defeated": "{boss} BESIEGT! +350 MÜNZEN!",
+    "fb_boss_invasion": "⚠️ ALIEN-INVASION: {boss} GREIFT DIE ERDE AN!",
+    "boss_alien_throw_msg": "Der Alien-Invasor hat ein Angriffsgeschoß auf die Erde abgefeuert!",
     "modal_phase_pts": "Punkte in der Phase erzielt",
     "modal_acc_bonus": "Genauigkeitsbonus ({acc}%)",
     "modal_penalty": "Fehler (Strafe)",

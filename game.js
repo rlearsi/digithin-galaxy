@@ -501,7 +501,7 @@ function gameLoop(ts) {
           state.bossBattle.lastDroppedWord = state.bossBattle.currentWord.text.toLowerCase();
         }
         state.typedBuffer = '';
-        state.speedMultiplier = 0.5;
+        state.speedMultiplier = 1.0;
         setTimeout(() => {
           item.el?.parentNode?.removeChild(item.el);
           if (state.bossBattle?.active && !state.paused && state.lives > 0) {
@@ -598,7 +598,7 @@ function gameLoop(ts) {
           state.bossBattle.lastDroppedWord = state.bossBattle.currentWord.text.toLowerCase();
         }
         state.typedBuffer = '';
-        state.speedMultiplier = 0.5; // Garante velocidade fixa
+        state.speedMultiplier = 1.0; // Garante velocidade fixa em 1.0x
         setTimeout(() => {
           item.el?.parentNode?.removeChild(item.el);
           if (state.bossBattle?.active && !state.paused && state.lives > 0) {
@@ -923,6 +923,8 @@ function completeItem(item) {
     const key = item.text.toLowerCase();
     if (!state.runWordsLearned) state.runWordsLearned = new Set();
     state.runWordsLearned.add(key);
+    if (!state.runWordsSeen) state.runWordsSeen = new Set();
+    state.runWordsSeen.add(key);
 
     // Remove micro-badge de palavra nova de quaisquer outras instâncias ativas desse termo
     state.activeItems.forEach(otherItem => {
@@ -960,6 +962,20 @@ function completeItem(item) {
         if (typeof playSound === 'function') playSound('buy');
         const coinMsg = typeof t === 'function' ? t('fb_coin_farmed') : '+1 Coin farmed! 🪙';
         showFeedback(coinMsg, 'success');
+      }
+    }
+
+    // Requisito 2: Surgimento aleatório de Alien Boss vindo do espaço para atacar a Terra
+    if (state.gameMode !== 'training' && (!state.bossBattle || !state.bossBattle.active)) {
+      const passedCount = Math.max(state.runWordsLearned?.size || 0, state.runWordsSeen?.size || 0);
+      if (passedCount >= 3) {
+        if (typeof state.alienInvasionCountdown === 'undefined' || state.alienInvasionCountdown === null) {
+          state.alienInvasionCountdown = 16 + Math.floor(Math.random() * 8);
+        }
+        state.alienInvasionCountdown--;
+        if (state.alienInvasionCountdown <= 0 && typeof triggerAlienBossInvasion === 'function') {
+          triggerAlienBossInvasion();
+        }
       }
     }
 

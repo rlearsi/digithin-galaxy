@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="./css/variables.css?v=1.9" />
   <link rel="stylesheet" href="./css/components.css?v=1.0" />
   <link rel="stylesheet" href="./css/layout.css?v=1.15.1" />
-  <link rel="stylesheet" href="./css/gameplay.css?v=1.15" />
+  <link rel="stylesheet" href="./css/gameplay.css?v=1.16.3" />
   <link rel="stylesheet" href="./css/modals.css?v=1.7" />
   <link rel="stylesheet" href="./css/responsive.css?v=1.10.1" />
 </head>
@@ -368,40 +368,15 @@
 
       <!-- Game column (Tetris-style) -->
       <div id="game-column">
-        <!-- Boss Battle HUD Banner (Active on Boss phases) -->
-        <div id="boss-hud" class="boss-hud hidden">
-          <div class="boss-hud-top-laser"></div>
-          <div class="boss-hud-main">
-            <!-- Animated Monster / Robot Visual at the top -->
-            <div id="boss-figure-wrap" class="boss-figure-wrap" title="Guardian Boss">
-              <div id="boss-sprite" class="boss-sprite">
-                <!-- SVG / Animated Monster/Robot injected dynamically -->
-                <span id="boss-avatar" class="boss-avatar">🤖</span>
-              </div>
-              <div class="boss-thruster-flame"></div>
-            </div>
-            <div class="boss-info">
-              <div class="boss-title-row">
-                <span id="boss-name" class="boss-name">Cyber-Titan Lexis</span>
-                <span id="boss-badge" class="boss-badge">BOSS • ROBOT</span>
-              </div>
-              <div id="boss-desc" class="boss-desc">Solve the 3 runic riddles to defeat the guardian!</div>
-            </div>
-          </div>
-          <!-- Boss Health Points: ||| -->
-          <div class="boss-lives-col">
-            <div class="boss-lives-label">HEALTH POINTS:</div>
-            <div class="boss-hp-wrapper">
-              <div id="boss-hp-bars" class="boss-hp-bars" title="Boss HP">
-                <span class="boss-hp-bar active" data-idx="0">|</span>
-                <span class="boss-hp-bar active" data-idx="1">|</span>
-                <span class="boss-hp-bar active" data-idx="2">|</span>
-              </div>
-              <span id="boss-hp-text" class="boss-hp-text">|||</span>
-            </div>
-          </div>
-        </div>
         <div id="game-area">
+          <!-- Alien Space Invader (Título no topo, ícone pixel art ao centro e 3 corações abaixo) -->
+          <div id="alien-space-invader" class="alien-space-invader hidden" aria-hidden="true">
+            <div id="alien-space-title" class="alien-space-title">Alien Invader</div>
+            <div class="alien-space-craft">
+              <div id="alien-space-sprite" class="alien-space-sprite"></div>
+            </div>
+            <div id="alien-space-hearts" class="alien-space-hearts" aria-label="Boss HP"></div>
+          </div>
           <!-- Canvas para destroços cósmicos e partículas de explosão caindo até o final da tela -->
           <canvas id="debris-canvas" class="debris-canvas" aria-hidden="true"></canvas>
           <!-- Horizontal Black Hole Accretion Vortex (Event Horizon Mouth) -->
@@ -1543,30 +1518,7 @@
           </div>
         </div>
 
-        <!-- Grupo 2: Batalhas de Chefão -->
-        <div class="settings-group-card">
-          <div class="settings-group-header">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14.5 17.5 3 6V3h3l11.5 11.5" />
-              <path d="m13 19 6-6" />
-              <path d="m16 16 4 4" />
-              <path d="m19 21 2-2" />
-            </svg>
-            <span data-i18n="settings_cat_boss">Boss Battles</span>
-          </div>
-
-          <!-- Setting: Boss Battles Toggle -->
-          <div class="settings-opt-row">
-            <span class="settings-opt-label" data-i18n="settings_boss">Boss Battles</span>
-            <button id="settings-boss-btn" class="settings-opt-toggle" onclick="toggleBossBattlesSetting()"
-              type="button" title="Enable or disable boss battles every 8 phases">
-              <span id="settings-boss-val">Every 10 Phases (Active)</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Grupo 3: Sobre o App -->
+        <!-- Grupo 2: Sobre o App -->
         <div class="settings-group-card">
           <div class="settings-group-header">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -1705,17 +1657,17 @@
   <script src="./js/ambient.js?v=1.9"></script>
   <script src="./js/audio.js?v=1.0"></script>
   <script src="./js/i18n.js?v=1.1"></script>
-  <script src="./js/data.js?v=1.11"></script>
-  <script src="./js/state.js?v=1.12"></script>
-  <script src="./js/ui.js?v=1.15.1"></script>
+  <script src="./js/data.js?v=1.16"></script>
+  <script src="./js/state.js?v=1.16.4"></script>
+  <script src="./js/ui.js?v=1.16.4"></script>
   <script src="./js/shop.js?v=1.8"></script>
   <script src="./js/library.js?v=1.0"></script>
-  <script src="./js/spawner.js?v=1.9.1"></script>
+  <script src="./js/spawner.js?v=1.16.4"></script>
   <script src="./js/skills.js?v=1.12"></script>
-  <script src="./js/boss.js?v=1.8"></script>
+  <script src="./js/boss.js?v=1.16.4"></script>
   <script src="./js/pause.js?v=1.0"></script>
   <script src="./js/phase.js?v=1.3"></script>
-  <script src="./game.js?v=1.15.1"></script>
+  <script src="./game.js?v=1.16.4"></script>
   <script src="./js/input.js?v=1.4"></script>
 </body>
 

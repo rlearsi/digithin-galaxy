@@ -322,6 +322,8 @@
     "training_btn_finish_all": "Concluir Todos os Treinos! →",
     "training_btn_next_lesson": "Avançar para Lição {lesson} ({runics} rúnicos) →",
     "fb_boss_defeated": "{boss} DERROTADO! +350 MOEDAS!",
+    "fb_boss_invasion": "⚠️ INVASÃO ALIENÍGENA: {boss} ESTÁ ATACANDO A TERRA!",
+    "boss_alien_throw_msg": "O invasor alienígena arremessou um projétil contra a Terra!",
     "modal_phase_pts": "Pontos Conquistados na Fase",
     "modal_acc_bonus": "Bônus de Precisão ({acc}%)",
     "modal_penalty": "Erros (penalidade)",

@@ -322,6 +322,8 @@
     "training_btn_finish_all": "全トレーニング完了！ →",
     "training_btn_next_lesson": "レッスン{lesson}へ進む（ルーン{runics}個） →",
     "fb_boss_defeated": "{boss}を撃破！ +350 コイン！",
+    "fb_boss_invasion": "⚠️ エイリアン襲来: {boss} が地球を攻撃しています！",
+    "boss_alien_throw_msg": "エイリアンの侵略者が地球に向けて攻撃弾を投擲しました！",
     "modal_phase_pts": "フェーズ獲得スコア",
     "modal_acc_bonus": "正確度ボーナス ({acc}%)",
     "modal_penalty": "ミス（ペナルティ）",

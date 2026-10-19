@@ -1,6 +1,6 @@
 # 🌌 Digithin Galaxy — Jogo de Digitação Arcade Espacial
 
-[![Versão](https://img.shields.io/badge/versão-v1.15.1-8B5CF6?style=for-the-badge&logo=gamepad)](ChangeLog.md)
+[![Versão](https://img.shields.io/badge/versão-v1.16.4-8B5CF6?style=for-the-badge&logo=gamepad)](ChangeLog.md)
 [![Status](https://img.shields.io/badge/status-estável-10B981?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 [![Licença](https://img.shields.io/badge/licença-MIT-38BDF8?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 
@@ -136,20 +136,26 @@ Digitações consecutivas sem erros ativam o multiplicador de pontuação:
 
 ---
 
-### 3.6 Batalhas Contra Comandantes Alienígenas
-Durante a jornada arcade, o Sistema Solar é invadido esporadicamente por um dos **6 Comandantes Invasores Alienígenas**:
+### 3.6 Batalhas Contra Comandantes Alienígenas (Invasão do Espaço)
+Durante a corrida contínua, aliens invasores surgem aleatoriamente vindo das profundezas do espaço sideral para atacar o planeta Terra. Cada um dos **6 Comandantes Alienígenas** possui visual estilizado e características morfológicas únicas:
 
-| Comandante Invasor | Arquétipo Visual | Ameaça Alienígena | Domínio de Enigmas |
+| Comandante Invasor | Estilo & Características Únicas | Ameaça Alienígena | Domínio de Enigmas |
 |:---|:---:|:---|:---|
-| **Xylarion** | Cyan (`#06B6D4`) | Vanguarda Alienígena | Radares orbitais, sondas, naves batedoras e vácuo. |
-| **Zorkon** | Emerald (`#10B981`) | Enxame Biomecânico | Colmeias cósmicas, bio-drones e matéria adaptativa. |
-| **Vespera** | Violet (`#A855F7`) | Soberana Psiônica | Ondas psíquicas, hiperspaço e tempestades estelares. |
-| **Kragthor** | Crimson (`#EF4444`) | General Belicista | Frotas de guerra, canhões estelares e supernovas. |
-| **Nebulor** | Indigo (`#6366F1`) | Entidade Cósmica | Vórtices de matéria escura, quasars e lentes relativísticas. |
-| **Xenor** | Amber (`#F59E0B`) | Consciência Central | Singularidades, velocidade da luz e buracos de minhoca. |
+| **Zorkon** | **Lagarto / Réptil Cósmico** (`#10B981`) — Escamas esmeralda, crista de espinhos dorsais, olhos dourados com pupila vertical e língua bífida. | Enxame Biomecânico | Colmeias cósmicas, bio-drones e matéria adaptativa. |
+| **Vespera** | **Psíquica com Cabelos de Tentáculos** (`#A855F7`) — Cabelos longos ondulantes de energia cósmica/plasma e terceiro olho místico. | Soberana Psiônica | Ondas psíquicas, hiperspaço e tempestades estelares. |
+| **Xylarion** | **Ciborgue com Cabos e Visor** (`#06B6D4`) — Mechas de fibra ótica azulada, visor laser biomecânico e antenas mecatrônicas. | Vanguarda Alienígena | Radares orbitais, sondas, naves batedoras e vácuo. |
+| **Kragthor** | **Brutamontes com Chifres e Magma** (`#EF4444`) — Chifres curvados gigantes, juba/cabelo em chamas de magma e mandíbula pesada. | General Belicista | Frotas de guerra, canhões estelares e supernovas. |
+| **Nebulor** | **Sombra com Cabelos de Névoa Estelar** (`#6366F1`) — Capuz espectral, filamentos de poeira cósmica ondulantes e 4 olhos hipnóticos. | Entidade Cósmica | Vórtices de matéria escura, quasars e lentes relativísticas. |
+| **Xenor** | **Imperador com Cabelo de Fogo Solar** (`#F59E0B`) — Cabelos flamejantes dourados formando uma coroa radiante imperial. | Consciência Central | Singularidades, velocidade da luz e buracos de minhoca. |
 
-- O Comandante lança enigmas astronômicos em caixas de vidro fosco. Digite a resposta correta antes que ela atinja a atmosfera da Terra para causar dano crítico no invasor.
-- Ao derrotá-lo, o jogador escolhe uma grande recompensa: `+1 Escudo`, `+1 Ficha Continue` ou `+100 Moedas`.
+- **Dinâmica de Ataque à Terra:** O Alien surge no céu espacial e executa animações de arremesso, jogando projéteis com enigmas em direção à Terra.
+- **Velocidade dos Enigmas:** Mantida confortavelmente lenta e fixa em $1\times$ durante toda a batalha com o Alien.
+- **Contra-ataque da Terra:** A cada palavra correta digitada pelo jogador, o projétil se estilhaça e um raio de plasma sobe da Terra causando dano crítico (-1 Vida) no Alien.
+- **Escolha de Habilidades Especiais:** Ao derrotar o Alien, o jogador escolhe entre 3 recompensas de prestígio:
+  1. 🔄 **+1 Continue:** Ficha de ressurreição instantânea para a partida.
+  2. 🛡️ **+1 Escudo:** Restaura ou amplia a barreira defensiva planetária da Terra.
+  3. 🪙 **+100 Moedas:** +100 moedas cósmicas instantâneas adicionadas à carteira do jogador.
+- **Restauração de Velocidade:** Ao final da batalha, a velocidade do jogo retorna suavemente ao padrão anterior da corrida.
 
 ---
 

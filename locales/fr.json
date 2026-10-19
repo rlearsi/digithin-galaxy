@@ -322,6 +322,8 @@
     "training_btn_finish_all": "Terminer tous les entraînements ! →",
     "training_btn_next_lesson": "Passer à la leçon {lesson} ({runics} runes) →",
     "fb_boss_defeated": "{boss} VAINCU ! +350 PIÈCES !",
+    "fb_boss_invasion": "⚠️ INVASION EXTRATERRESTRE : {boss} ATTAQUE LA TERRE !",
+    "boss_alien_throw_msg": "L'envahisseur extraterrestre a lancé un projectile d'assaut vers la Terre !",
     "modal_phase_pts": "Points gagnés dans la phase",
     "modal_acc_bonus": "Bonus de précision ({acc}%)",
     "modal_penalty": "Erreurs (pénalité)",

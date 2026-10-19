@@ -133,6 +133,13 @@ function spawnItem() {
   refillQueue();
   const next = state.spawnQueue.shift();
   refillQueue();
+
+  // Registra palavras que surgiram e passaram na tela na partida atual
+  if (next && next.type === 'word' && next.text) {
+    if (!state.runWordsSeen) state.runWordsSeen = new Set();
+    state.runWordsSeen.add(next.text.toLowerCase());
+  }
+
   if (typeof animateQueueShift === 'function') {
     animateQueueShift();
   } else {

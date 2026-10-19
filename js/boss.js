@@ -90,17 +90,39 @@ function getBossWordPool(bossType) {
   const basePool = (typeof WORD_POOLS !== 'undefined' && WORD_POOLS[lang])
     ? WORD_POOLS[lang]
     : (typeof WORD_POOL !== 'undefined' ? WORD_POOL : []);
-  const map = new Map();
+
+  // Mapeia todas as palavras com seus significados traduzidos no idioma ativo
+  const dictMap = new Map();
   basePool.forEach(w => {
-    if (w && w.text && w.meaning) map.set(w.text.toLowerCase(), w);
+    if (w && w.text && w.meaning) dictMap.set(w.text.toLowerCase(), w);
   });
-  (state.unlockedWords || []).forEach(w => {
-    if (w && w.text && w.meaning) map.set(w.text.toLowerCase(), w);
-  });
-  getLearnedWords().forEach(w => {
-    if (w && w.text && w.meaning) map.set(w.text.toLowerCase(), w);
-  });
-  return shuffle(Array.from(map.values()));
+
+  const passedWords = [];
+  const seen = new Set();
+
+  // 1. Palavras que o jogador completou/aprendeu nesta partida específica
+  if (state && state.runWordsLearned) {
+    state.runWordsLearned.forEach(key => {
+      const lower = String(key).toLowerCase();
+      if (!seen.has(lower) && dictMap.has(lower)) {
+        seen.add(lower);
+        passedWords.push(dictMap.get(lower));
+      }
+    });
+  }
+
+  // 2. Palavras que passaram na tela na partida atual (surgiram como objetos caindo)
+  if (state && state.runWordsSeen) {
+    state.runWordsSeen.forEach(key => {
+      const lower = String(key).toLowerCase();
+      if (!seen.has(lower) && dictMap.has(lower)) {
+        seen.add(lower);
+        passedWords.push(dictMap.get(lower));
+      }
+    });
+  }
+
+  return shuffle(passedWords);
 }
 
 /**
@@ -163,20 +185,28 @@ function unlockBossCycleWords(phase) {
 
 function canTriggerBossBattle() {
   if (!state || state.gameMode === 'training') return false;
-  try {
-    const bossSetting = localStorage.getItem('digithin_galaxy_boss_battles');
-    if (bossSetting === 'off') return false;
-  } catch (_) {}
-
-  if (state.pendingBoss && state.pendingBossPhase === state.phase) return true;
-
-  // Boss aparece de forma aleatória a cada intervalo de 8 fases
-  const p = state.phase || 1;
-  return (p >= 8 && p % 8 === 0);
+  return Boolean(state.pendingBossInvasion);
 }
 
 function getBossForPhase(phase) {
   return getRandomBoss(1);
+}
+
+/**
+ * Triggers a random Alien Boss invasion from outer space to attack Earth
+ */
+function triggerAlienBossInvasion(overrideBoss) {
+  if (!state || state.bossBattle?.active || state.paused || state.gameMode === 'training') return;
+  const pool = getBossWordPool();
+  if (pool.length < 3) {
+    // Adia a invasão até que o jogador digite e aprenda mais palavras na run atual
+    state.alienInvasionCountdown = 10 + Math.floor(Math.random() * 6);
+    return;
+  }
+  state.pendingBossInvasion = false;
+  const candidateBoss = overrideBoss || getRandomBoss(1);
+  state.pendingBoss = candidateBoss;
+  beginBossPhase();
 }
 
 function beginBossPhase() {
@@ -189,19 +219,22 @@ function beginBossPhase() {
   stray?.forEach(el => el.parentNode?.removeChild(el));
   state.activeItems = [];
 
-  // Chefão sorteado aleatoriamente
-  const candidateBoss = (state.pendingBoss && state.pendingBossPhase === state.phase)
-    ? state.pendingBoss
-    : getBossForPhase(state.phase);
+  // Salva a velocidade atual da run antes do chefão (Requisitos 5 e 6)
+  if (typeof state.preBossSpeed === 'undefined' || state.preBossSpeed === null) {
+    state.preBossSpeed = state.speedMultiplier || 1.0;
+  }
+
+  // Chefão alienígena sorteado aleatoriamente
+  const candidateBoss = state.pendingBoss || getRandomBoss(1);
   const bossType = candidateBoss?.type || 'robot';
 
-  // Pool temático GARANTIDO (>= 3 significados do chefão do ciclo)
+  // Pool temático de vocábulos cósmicos
   const themedMatches = getBossWordPool(bossType);
 
-  // Defesa extra: só ocorreria se o idioma ativo não tivesse vocabulário temático suficiente.
   if (themedMatches.length === 0) {
     if (typeof hideBossHud === 'function') hideBossHud();
     if (state.bossBattle) state.bossBattle.active = false;
+    state.speedMultiplier = state.preBossSpeed || 1.0;
     state.progress        = 0;
     state.hitsPhase       = 0;
     state.errorsPhase     = 0;
@@ -238,8 +271,8 @@ function beginBossPhase() {
   state.hitsPhase       = 0;
   state.errorsPhase     = 0;
   state.phasePts        = 0;
-  // Regra 1: Velocidade padrão dos significados que caem nos chefões é fixa em 0.5x para qualquer dificuldade.
-  state.speedMultiplier = 0.5;
+  // Requisito 5: Velocidade dos significados do boss mais lento (1x fixo)
+  state.speedMultiplier = 1.0;
   state.combo           = 0;
   state.phaseComplete   = false;
   state.paused          = false;
@@ -251,18 +284,16 @@ function beginBossPhase() {
   playSound('bossSpawn');
 
   const currentLang = typeof getLanguage === 'function' ? getLanguage() : 'en';
-  const bossIcon = state.bossBattle.boss.icon || '👾';
   const bossName = (typeof t === 'function' && state.bossBattle.boss?.nameKey && t(state.bossBattle.boss.nameKey) !== state.bossBattle.boss.nameKey)
     ? state.bossBattle.boss.name
     : ((currentLang === 'pt' && state.bossBattle.boss?.namePt)
       ? state.bossBattle.boss.namePt
       : (state.bossBattle.boss?.name || (typeof t === 'function' ? t('boss_default_name') : 'Boss')));
-  const scenarioName = (typeof t === 'function' && state.bossBattle.boss?.scenarioKey && t(state.bossBattle.boss.scenarioKey) !== state.bossBattle.boss.scenarioKey)
-    ? state.bossBattle.boss.scenario
-    : ((currentLang === 'pt' && state.bossBattle.boss?.scenarioPt)
-      ? state.bossBattle.boss.scenarioPt
-      : (state.bossBattle.boss?.scenario || 'Scenario'));
-  showFeedback(`${bossIcon} ${bossName.toUpperCase()} • ${scenarioName.toUpperCase()}!`, 'special');
+
+  const invasionMsg = (typeof t === 'function')
+    ? t('fb_boss_invasion', { boss: bossName.toUpperCase() })
+    : `⚠️ ALIEN INVASION: ${bossName.toUpperCase()} IS ATTACKING EARTH!`;
+  showFeedback(invasionMsg, 'special');
 
   state.lastTs = null;
   state.rafId  = requestAnimationFrame(gameLoop);
@@ -272,7 +303,7 @@ function beginBossPhase() {
     if (state.bossBattle?.active && !state.paused) {
       spawnBossMeaningBox();
     }
-  }, 900);
+  }, 950);
 }
 
 function pickNextBossWord() {
@@ -328,8 +359,13 @@ function spawnBossMeaningBox() {
   state.bossBattle.currentWord = wordObj;
   const targetWord = wordObj.text.toUpperCase();
   state.typedBuffer = '';
-  // Regra 1: Velocidade fixa de 0.5x
-  state.speedMultiplier = 0.5;
+  // Requisito 5: Velocidade dos significados do boss fixo em 1x
+  state.speedMultiplier = 1.0;
+
+  // Animação do alien arremessando o objeto em direção à Terra
+  if (typeof animateAlienThrow === 'function') {
+    animateAlienThrow();
+  }
 
   const el = document.createElement('div');
   let cls = 'boss-meaning-box';
@@ -496,8 +532,8 @@ function handleBossLetterTyped(char) {
     playSound('error');
     showFeedback(typeof t === 'function' ? t('fb_error_letter') : '❌ Wrong letter!', 'error');
 
-    // Regra 1: Velocidade é fixa em 0.5x mesmo em caso de erro
-    state.speedMultiplier = 0.5;
+    // Requisito 5: Velocidade é fixa em 1.0x mesmo em caso de erro
+    state.speedMultiplier = 1.0;
 
     if (boxItem.el) {
       boxItem.el.classList.add('bmb-error');
@@ -515,14 +551,15 @@ function handleBossLetterTyped(char) {
 }
 
 function completeBossMeaning() {
-  const boxItem = state.bossBattle.boxItem;
+  const boxItem = state.bossBattle?.boxItem;
   if (!boxItem) return;
 
+  const targetWord = (state.bossBattle?.currentWord?.text || boxItem.text || '').toUpperCase();
   boxItem.removing = true;
   boxItem.el.classList.add('shattered');
   if (typeof spawnCelestialExplosion === 'function') {
     spawnCelestialExplosion(boxItem.el, targetWord);
-  } else {
+  } else if (typeof spawnParticles === 'function') {
     spawnParticles(boxItem.el, 16);
   }
 
@@ -624,22 +661,6 @@ function defeatBoss() {
 
   updateHUD();
 
-  playSound('bossDefeat');
-  launchConfetti();
-
-  const currentLang = typeof getLanguage === 'function' ? getLanguage() : 'en';
-  const bossName = (typeof t === 'function' && state.bossBattle.boss?.nameKey && t(state.bossBattle.boss.nameKey) !== state.bossBattle.boss.nameKey)
-    ? state.bossBattle.boss.name
-    : ((currentLang === 'pt' && state.bossBattle.boss?.namePt)
-      ? state.bossBattle.boss.namePt
-      : (state.bossBattle.boss?.name || (typeof t === 'function' ? t('boss_default_name') : 'Boss')));
-
-  const victoryMsg = typeof t === 'function'
-    ? t('fb_boss_defeated', { boss: bossName.toUpperCase() })
-    : `${bossName.toUpperCase()} DEFEATED! +350 COINS!`;
-
-  showFeedback(victoryMsg, 'special');
-
   if (state.bossBattle?.boss?.type) {
     if (!state.defeatedBossTypes) state.defeatedBossTypes = [];
     if (!state.defeatedBossTypes.includes(state.bossBattle.boss.type)) {
@@ -649,20 +670,44 @@ function defeatBoss() {
   state.pendingBoss = null;
   state.pendingBossPhase = null;
 
-  // Ao vencer o boss, jogador escolhe entre as 3 recompensas exclusivas de boss
-  const rewardPool = [
-    BOSS_REWARDS_CONFIG.extralife,
-    BOSS_REWARDS_CONFIG.continue,
-    BOSS_REWARDS_CONFIG.coins_100
-  ];
+  const onExplosionComplete = () => {
+    playSound('bossDefeat');
+    launchConfetti();
 
-  setTimeout(() => {
+    const currentLang = typeof getLanguage === 'function' ? getLanguage() : 'en';
+    const bossName = (typeof t === 'function' && state.bossBattle.boss?.nameKey && t(state.bossBattle.boss.nameKey) !== state.bossBattle.boss.nameKey)
+      ? state.bossBattle.boss.name
+      : ((currentLang === 'pt' && state.bossBattle.boss?.namePt)
+        ? state.bossBattle.boss.namePt
+        : (state.bossBattle.boss?.name || (typeof t === 'function' ? t('boss_default_name') : 'Boss')));
+
+    const victoryMsg = typeof t === 'function'
+      ? t('fb_boss_defeated', { boss: bossName.toUpperCase() })
+      : `${bossName.toUpperCase()} DEFEATED! +350 COINS!`;
+
+    showFeedback(victoryMsg, 'special');
+
+    // Ao vencer o boss, jogador escolhe entre as 3 recompensas exclusivas de boss
+    const rewardPool = [
+      BOSS_REWARDS_CONFIG.extralife,
+      BOSS_REWARDS_CONFIG.continue,
+      BOSS_REWARDS_CONFIG.coins_100
+    ];
+
     showBossRewardModal(rewardPool, (chosenReward) => {
       stopConfetti();
       grantBossReward(chosenReward);
       continueAfterBossVictory();
     });
-  }, 650);
+  };
+
+  // 1. Destrói o boss em partículas cósmicas (como acontece com os objetos caindo)
+  // 2. Após alguns milissegundos de explosão e dispersão de partículas, exibe a mensagem de vitória e as 3 opções
+  if (typeof explodeAlienBoss === 'function') {
+    explodeAlienBoss(onExplosionComplete);
+  } else {
+    setTimeout(onExplosionComplete, 650);
+  }
 }
 
 function grantBossReward(reward) {
@@ -687,12 +732,34 @@ function grantBossReward(reward) {
 
 function continueAfterBossVictory() {
   hideBossHud();
+  if (typeof hideAlienSpaceInvader === 'function') {
+    hideAlienSpaceInvader();
+  }
   state.pendingBoss = null;
   state.pendingBossPhase = null;
+  if (state.bossBattle) {
+    state.bossBattle.active = false;
+  }
   state.phaseComplete = false;
-  state.paused = true;
-  state.phase++;
-  beginPhase();
+
+  // Requisito 6: velocidade volta ao padrão da run anterior ao final
+  const diffCfg = (typeof getDifficultyConfig === 'function') ? getDifficultyConfig() : { initialSpeed: 1.0 };
+  state.speedMultiplier = state.preBossSpeed || diffCfg.initialSpeed || 1.0;
+  state.preBossSpeed = null;
+
+  // Agenda a próxima invasão alienígena aleatória na partida contínua
+  state.alienInvasionCountdown = 16 + Math.floor(Math.random() * 10);
+
+  // Retoma o fluxo contínuo normal do jogo sem reiniciar fase
+  clearArea();
+  refillQueue();
+  renderQueue();
+  state.typedBuffer = '';
+  state.paused = false;
+  state.lastTs = null;
+  state.rafId = requestAnimationFrame(gameLoop);
+  scheduleSpawn();
+  updateHUD();
 }
 
 let currentBossTestIndex = 0;
@@ -738,6 +805,10 @@ function testBossBattle(phaseOverride) {
     matchingInPool.forEach(w => {
       const key = w.text.toLowerCase();
       if (!state.wordStats[key]) state.wordStats[key] = { count: 1 };
+      if (!state.runWordsLearned) state.runWordsLearned = new Set();
+      state.runWordsLearned.add(key);
+      if (!state.runWordsSeen) state.runWordsSeen = new Set();
+      state.runWordsSeen.add(key);
       if (!state.unlockedWords.find(u => u.text.toLowerCase() === key)) {
         state.unlockedWords.push({ ...w, phase: state.phase });
       }
@@ -783,6 +854,10 @@ function startBossTest() {
     state.unlockedWords.push({ ...w, phase: 1 });
     const key = w.text.toLowerCase();
     if (!state.wordStats[key]) state.wordStats[key] = { count: 1 };
+    if (!state.runWordsLearned) state.runWordsLearned = new Set();
+    state.runWordsLearned.add(key);
+    if (!state.runWordsSeen) state.runWordsSeen = new Set();
+    state.runWordsSeen.add(key);
   });
 
   screenStart.classList.remove('active');

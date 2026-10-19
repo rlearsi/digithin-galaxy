@@ -139,6 +139,7 @@ function defaultState() {
     unlockedWords:     initialWords,
     wordStats:         { ...permStats },
     runWordsLearned:   new Set(), // Palavras completadas nesta run (utilizado para Palavra Nova vs Aprendida e Eco Cósmico)
+    runWordsSeen:      new Set(), // Todas as palavras que passaram/surgiram nesta partida específica
     skillSlots:        [],
     activeTimers:      {},
     vortexAccum:       0,
