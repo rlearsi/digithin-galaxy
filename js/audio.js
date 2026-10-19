@@ -536,6 +536,359 @@ const NORMAL_SPACE_TRACK = {
   ]
 };
 
+// ------------------------------------------------------------
+// 2b. SELECTABLE CALM AMBIENT TRACKS (NORMAL GAMEPLAY WITHOUT BOSS)
+// Each track: 8 chords x 16 steps (16th notes) = 128-step loop with a
+// through-composed melody (no repeated 4-bar phrase), layered bass,
+// pad, arpeggio and lead voices; optional echo bus / soft percussion.
+// Tokens: note name (e.g. C5), '.' = rest. Bass tokens: r=root f=fifth o=octave.
+// ------------------------------------------------------------
+function noteFreq(name) {
+  if (NOTE_FREQS[name]) return NOTE_FREQS[name];
+  const m = /^([A-G])([#b]?)(\d)$/.exec(name || '');
+  if (!m) return 0;
+  const base = { C: 0, D: 2, E: 4, F: 5, G: 7, A: 9, B: 11 }[m[1]];
+  const acc = m[2] === '#' ? 1 : (m[2] === 'b' ? -1 : 0);
+  const midi = 12 * (parseInt(m[3], 10) + 1) + base + acc;
+  return 440 * Math.pow(2, (midi - 69) / 12);
+}
+
+function _seq(str) {
+  return str.trim().split(/\s+/).map(tok => (tok === '.' ? null : tok));
+}
+
+function _buildAmbientTrack(def) {
+  return {
+    bpm: def.bpm,
+    bass: def.bass,
+    pad: def.pad,
+    lead: def.lead,
+    arp: def.arp || null,
+    echo: def.echo || null,
+    perc: def.perc || null,
+    prog: def.prog.map(p => ({ root: p[0], notes: p[1].trim().split(/\s+/) })),
+    bassPat: _seq(def.bassPat),
+    arpPat: def.arpPat ? _seq(def.arpPat) : null,
+    melody: _seq(def.melody)
+  };
+}
+
+const AMBIENT_TRACKS = {
+  // Aurora Lullaby — C major music-box over a gentle harp arpeggio
+  aurora_lullaby: _buildAmbientTrack({
+    bpm: 68,
+    bass: { wave: 'sine', vol: 0.13, dur: 7 },
+    pad: { wave: 'sine', vol: 0.02, att: 0.4 },
+    lead: { wave: 'triangle', vol: 0.05, dur: 3.5, att: 0.01, lp: 3200 },
+    arp: { wave: 'sine', vol: 0.02, dur: 2.5 },
+    echo: { time: 0.44, fb: 0.3, wet: 0.25 },
+    prog: [
+      ['C2', 'C4 E4 G4 B4'], ['A1', 'A3 C4 E4 G4'], ['F1', 'F3 A3 C4 E4'], ['G1', 'G3 B3 D4 E4'],
+      ['E2', 'E3 G3 B3 D4'], ['A1', 'A3 C4 E4 G4'], ['D2', 'D3 F3 A3 C4'], ['G1', 'G3 C4 D4 F4']
+    ],
+    bassPat: 'r . . . . . . . f . . . . . o .',
+    arpPat: '0 . 1 . 2 . 3 . 2 . 1 . 0 . 1 .',
+    melody: [
+      'E5 . . G5 . . B5 . . C6 . B5 . G5 . .',
+      'A5 . . G5 . E5 . . C5 . E5 . . G5 . .',
+      'F5 . A5 . . C6 . A5 . . G5 . F5 . E5 .',
+      'D5 . . G5 . . B5 . . E6 . D6 . . B5 .',
+      'G5 . B5 . . D6 . B5 . . G5 . E5 . G5 .',
+      'E5 . . A5 . . C6 . E6 . . D6 . C6 . .',
+      'D6 . C6 . A5 . . F5 . A5 . . C6 . D6 .',
+      'C6 . . . D6 . . . B5 . . . G5 . . .'
+    ].join(' ')
+  }),
+
+  // Lunar Garden — A minor, slow breathing flute over deep sine bass
+  lunar_garden: _buildAmbientTrack({
+    bpm: 62,
+    bass: { wave: 'sine', vol: 0.14, dur: 9 },
+    pad: { wave: 'sine', vol: 0.022, att: 0.5 },
+    lead: { wave: 'square', vol: 0.026, dur: 4, att: 0.05, lp: 1400 },
+    echo: { time: 0.5, fb: 0.35, wet: 0.3 },
+    prog: [
+      ['A1', 'A3 C4 E4 B4'], ['F1', 'F3 A3 C4 E4'], ['C2', 'C4 E4 G4 D5'], ['G1', 'G3 B3 D4 A4'],
+      ['A1', 'A3 C4 E4 B4'], ['D2', 'D3 F3 A3 E4'], ['F1', 'F3 A3 C4 E4'], ['E2', 'E3 A3 B3 D4']
+    ],
+    bassPat: 'r . . . . . . . . . . . f . . .',
+    melody: [
+      'E5 . . . A5 . . C6 . . B5 . A5 . . .',
+      'C6 . . A5 . . . F5 . . A5 . C6 . . .',
+      'E5 . G5 . . . C6 . . D6 . C6 . . G5 .',
+      'B5 . . D6 . . . A5 . . G5 . . B5 . .',
+      'A5 . . . E6 . . . D6 . C6 . B5 . A5 .',
+      'F5 . A5 . . E6 . D6 . . A5 . F5 . . .',
+      'A5 . C6 . E6 . . C6 . . A5 . . G5 . .',
+      'B5 . . . D6 . . . E6 . . . . . . .'
+    ].join(' ')
+  }),
+
+  // Twilight Station — E-flat major, warm pulsing bass, soft square lead
+  twilight_station: _buildAmbientTrack({
+    bpm: 76,
+    bass: { wave: 'triangle', vol: 0.16, dur: 3 },
+    pad: { wave: 'triangle', vol: 0.028, att: 0.3, lp: 1800 },
+    lead: { wave: 'square', vol: 0.03, dur: 3, att: 0.02, lp: 2200 },
+    arp: { wave: 'triangle', vol: 0.02, dur: 2 },
+    echo: { time: 0.4, fb: 0.2, wet: 0.15 },
+    prog: [
+      ['Eb2', 'Eb4 G4 Bb4 D5'], ['C2', 'C4 Eb4 G4 Bb4'], ['Ab1', 'Ab3 C4 Eb4 G4'], ['Bb1', 'Bb3 D4 F4 A4'],
+      ['G1', 'G3 Bb3 D4 F4'], ['C2', 'C4 Eb4 G4 Bb4'], ['F1', 'F3 Ab3 C4 Eb4'], ['Bb1', 'Bb3 D4 F4 Ab4']
+    ],
+    bassPat: 'r . . . . . o . . . . . r . . .',
+    arpPat: '. . 2 . . . 3 . . . 2 . . . 1 .',
+    melody: [
+      'G5 . Bb5 . . . D6 . C6 . Bb5 . . . G5 .',
+      'Eb5 . G5 . Bb5 . . G5 . . C6 . Bb5 . . .',
+      'Ab5 . . C6 . Eb6 . . D6 . C6 . Ab5 . . .',
+      'D6 . . F6 . . D6 . C6 . Bb5 . . A5 . .',
+      'Bb5 . D6 . . F6 . . Eb6 . D6 . Bb5 . G5 .',
+      'G5 . . Bb5 . C6 . . Eb6 . . D6 . C6 . Bb5',
+      'Ab5 . C6 . . Eb6 . C6 . . Ab5 . F5 . . .',
+      'D6 . . . F6 . . . Ab5 . . . Bb5 . . .'
+    ].join(' ')
+  }),
+
+  // Crystal Cavern — E minor, glassy bells with long echoes
+  crystal_cavern: _buildAmbientTrack({
+    bpm: 60,
+    bass: { wave: 'sine', vol: 0.12, dur: 10 },
+    pad: { wave: 'sine', vol: 0.02, att: 0.6 },
+    lead: { wave: 'triangle', vol: 0.06, dur: 4, att: 0.005, lp: 4200 },
+    arp: { wave: 'triangle', vol: 0.035, dur: 2 },
+    echo: { time: 0.5, fb: 0.45, wet: 0.4 },
+    prog: [
+      ['E2', 'E3 G3 B3 F#4'], ['C2', 'C4 E4 G4 B4'], ['G1', 'G3 B3 D4 A4'], ['D2', 'D4 F#4 A4 B4'],
+      ['E2', 'E3 G3 B3 F#4'], ['A1', 'A3 C4 E4 B4'], ['C2', 'C4 E4 G4 B4'], ['B1', 'B3 E4 F#4 A4']
+    ],
+    bassPat: 'r . . . . . . . . . . . . . . .',
+    arpPat: '0 . 2 . 3 . 2 . 1 . 2 . 3 . 2 .',
+    melody: [
+      'B5 . E6 . . B5 . G5 . B5 . . F#5 . . .',
+      'G5 . C6 . E6 . . C6 . . B5 . G5 . . .',
+      'D6 . B5 . G5 . . B5 . D6 . . A5 . . .',
+      'F#5 . A5 . B5 . . D6 . . B5 . A5 . F#5 .',
+      'E6 . . B5 . G5 . E5 . G5 . B5 . . E6 .',
+      'E5 . A5 . C6 . . E6 . . D6 . C6 . B5 .',
+      'E6 . D6 . C6 . . B5 . G5 . . E5 . . .',
+      'F#5 . . . A5 . . . B5 . . . . . . .'
+    ].join(' ')
+  }),
+
+  // Nebula Sunrise — G major, warm filtered strings with a feather-soft pulse
+  nebula_sunrise: _buildAmbientTrack({
+    bpm: 74,
+    bass: { wave: 'triangle', vol: 0.15, dur: 5 },
+    pad: { wave: 'sawtooth', vol: 0.014, att: 0.5, lp: 900 },
+    lead: { wave: 'triangle', vol: 0.06, dur: 3.5, att: 0.015, lp: 3500 },
+    arp: { wave: 'triangle', vol: 0.02, dur: 2.5 },
+    echo: { time: 0.4, fb: 0.25, wet: 0.2 },
+    perc: { kick: 0.12, hat: 0.012 },
+    prog: [
+      ['G1', 'G3 B3 D4 F#4'], ['E2', 'E3 G3 B3 D4'], ['C2', 'C4 E4 G4 B4'], ['D2', 'D4 F#4 A4 C5'],
+      ['B1', 'B3 D4 F#4 A4'], ['E2', 'E3 G3 B3 D4'], ['A1', 'A3 C4 E4 G4'], ['D2', 'D3 G3 A3 C4']
+    ],
+    bassPat: 'r . . . r . . . f . . . r . o .',
+    arpPat: '. . 1 . . . 2 . . . 3 . . . 2 .',
+    melody: [
+      'B5 . . D6 . . G6 . . D6 . B5 . . A5 .',
+      'G5 . B5 . . E6 . . D6 . B5 . G5 . . .',
+      'E6 . . D6 . C6 . . B5 . G5 . . C6 . .',
+      'A5 . C6 . D6 . . F#6 . . E6 . D6 . C6 .',
+      'D6 . F#5 . A5 . . D6 . . B5 . A5 . F#5 .',
+      'G5 . B5 . D6 . . E6 . . G6 . E6 . D6 .',
+      'C6 . E6 . . A5 . C6 . . E6 . D6 . C6 .',
+      'A5 . . . C6 . . . D6 . . . . . . .'
+    ].join(' ')
+  }),
+
+  // Silent Void — D minor/Phrygian drone, long silences, lonely distant notes
+  silent_void: _buildAmbientTrack({
+    bpm: 54,
+    bass: { wave: 'sine', vol: 0.12, dur: 14 },
+    pad: { wave: 'triangle', vol: 0.03, att: 1.2, lp: 700 },
+    lead: { wave: 'sine', vol: 0.06, dur: 10, att: 0.15, lp: 2500 },
+    arp: { wave: 'sine', vol: 0.012, dur: 6 },
+    echo: { time: 0.62, fb: 0.55, wet: 0.5 },
+    prog: [
+      ['D2', 'D3 A3 D4 E4'], ['D2', 'D3 A3 Eb4 A4'], ['Bb1', 'Bb3 F4 A4 D5'], ['A1', 'A3 E4 G4 B4'],
+      ['D2', 'D3 A3 D4 E4'], ['F1', 'F3 C4 E4 G4'], ['Eb2', 'Eb3 Bb3 D4 G4'], ['A1', 'A3 D4 E4 G4']
+    ],
+    bassPat: 'r . . . . . . . . . . . . . . .',
+    arpPat: '. . . . . . . . . . . . . . 3 .',
+    melody: [
+      'A5 . . . . . . . . . . . . . . .',
+      '. . . . . . . . E6 . . . . . . .',
+      'D6 . . . . . . . . . F5 . . . . .',
+      '. . . . . . . . . . . . . . . .',
+      '. . A5 . . . . . . . . . . . . .',
+      '. . . . . . G5 . . . . . . . . .',
+      'Bb5 . . . . . . . . . . . . . . .',
+      '. . . . . . . . . . D6 . . . . .'
+    ].join(' ')
+  })
+};
+
+// Ordered list of selectable ambient themes ('cosmic_drift' = original theme)
+const BGM_TRACK_KEYS = ['cosmic_drift', 'aurora_lullaby', 'lunar_garden', 'twilight_station', 'crystal_cavern', 'nebula_sunrise', 'silent_void'];
+let _normalBgmKey = 'cosmic_drift';
+let _bgmTrackSetting = 'cosmic_drift';
+try {
+  const savedTrack = localStorage.getItem('digithin_galaxy_bgm_track');
+  if (savedTrack && BGM_TRACK_KEYS.includes(savedTrack)) _bgmTrackSetting = savedTrack;
+} catch (_) {}
+_normalBgmKey = _bgmTrackSetting;
+
+let _normalEcho = null;
+function _disposeNormalEcho() {
+  if (!_normalEcho) return;
+  try {
+    ['send', 'delay', 'fb', 'wet'].forEach(k => { if (_normalEcho[k]) _normalEcho[k].disconnect(); });
+  } catch (_) {}
+  _normalEcho = null;
+}
+
+function _ensureNormalEcho(track, ctx, master) {
+  if (_normalEcho && _normalEcho.key === _normalBgmKey) return _normalEcho.send;
+  _disposeNormalEcho();
+  _normalEcho = { key: _normalBgmKey, send: null };
+  if (track.echo) {
+    const send = ctx.createGain();
+    const delay = ctx.createDelay(1.5);
+    const fb = ctx.createGain();
+    const wet = ctx.createGain();
+    delay.delayTime.value = track.echo.time;
+    fb.gain.value = track.echo.fb;
+    wet.gain.value = track.echo.wet;
+    send.connect(delay);
+    delay.connect(fb); fb.connect(delay);
+    delay.connect(wet); wet.connect(master);
+    _normalEcho = { key: _normalBgmKey, send, delay, fb, wet };
+  }
+  return _normalEcho.send;
+}
+
+function _ambientVoice(ctx, master, echoSend, wave, freq, time, dur, vol, att, lp) {
+  if (!freq) return;
+  const o = ctx.createOscillator();
+  const g = ctx.createGain();
+  o.type = wave;
+  o.frequency.setValueAtTime(freq, time);
+  if (lp) {
+    const f = ctx.createBiquadFilter();
+    f.type = 'lowpass';
+    f.frequency.setValueAtTime(lp, time);
+    o.connect(f); f.connect(g);
+  } else {
+    o.connect(g);
+  }
+  g.gain.setValueAtTime(0.001, time);
+  g.gain.linearRampToValueAtTime(vol, time + att);
+  g.gain.exponentialRampToValueAtTime(0.001, time + dur);
+  g.connect(master);
+  if (echoSend) g.connect(echoSend);
+  o.start(time);
+  o.stop(time + dur + 0.05);
+}
+
+function scheduleAmbientStep(track, stepIndex, time, ctx, master) {
+  if (!master || !track) return;
+  const echoSend = _ensureNormalEcho(track, ctx, master);
+  const sec16 = (60 / track.bpm) / 4;
+  const s = stepIndex % track.melody.length;
+  const chord = track.prog[Math.floor(s / 16) % track.prog.length];
+  const sc = s % 16;
+
+  // Bass
+  const bTok = track.bassPat[sc];
+  if (bTok) {
+    const ratio = bTok === 'f' ? 1.5 : (bTok === 'o' ? 2 : 1);
+    _ambientVoice(ctx, master, null, track.bass.wave, noteFreq(chord.root) * ratio, time, sec16 * track.bass.dur, track.bass.vol, 0.04, 0);
+  }
+
+  // Pad (one swelling chord per bar)
+  if (sc === 0) {
+    chord.notes.forEach(n => {
+      _ambientVoice(ctx, master, null, track.pad.wave, noteFreq(n), time, sec16 * 15.5, track.pad.vol, track.pad.att, track.pad.lp || 0);
+    });
+  }
+
+  // Arpeggio
+  if (track.arp && track.arpPat) {
+    const aTok = track.arpPat[sc];
+    if (aTok !== null && aTok !== undefined) {
+      _ambientVoice(ctx, master, echoSend, track.arp.wave, noteFreq(chord.notes[parseInt(aTok, 10)]), time, sec16 * track.arp.dur, track.arp.vol, 0.01, 0);
+    }
+  }
+
+  // Lead melody
+  const lTok = track.melody[s];
+  if (lTok) {
+    _ambientVoice(ctx, master, echoSend, track.lead.wave, noteFreq(lTok), time, sec16 * track.lead.dur, track.lead.vol, track.lead.att, track.lead.lp || 0);
+  }
+
+  // Feather-soft percussion (optional)
+  if (track.perc) {
+    if (sc === 0 || sc === 10) {
+      const kOsc = ctx.createOscillator();
+      const kGain = ctx.createGain();
+      kOsc.type = 'sine';
+      kOsc.frequency.setValueAtTime(110, time);
+      kOsc.frequency.exponentialRampToValueAtTime(42, time + 0.14);
+      kGain.gain.setValueAtTime(track.perc.kick, time);
+      kGain.gain.exponentialRampToValueAtTime(0.001, time + 0.18);
+      kOsc.connect(kGain); kGain.connect(master);
+      kOsc.start(time); kOsc.stop(time + 0.2);
+    }
+    if (sc % 4 === 2) {
+      const hat = ctx.createBufferSource();
+      hat.buffer = getNoiseBuffer(ctx);
+      const hf = ctx.createBiquadFilter();
+      hf.type = 'highpass';
+      hf.frequency.setValueAtTime(7000, time);
+      const hg = ctx.createGain();
+      hg.gain.setValueAtTime(track.perc.hat, time);
+      hg.gain.exponentialRampToValueAtTime(0.001, time + 0.03);
+      hat.connect(hf); hf.connect(hg); hg.connect(master);
+      hat.start(time); hat.stop(time + 0.035);
+    }
+  }
+}
+
+function getBgmTrackKey() {
+  return _bgmTrackSetting;
+}
+
+let _bgmPreviewTimer = null;
+
+function setBgmTrack(key, preview = false) {
+  if (!BGM_TRACK_KEYS.includes(key)) return;
+  _bgmTrackSetting = key;
+  try { localStorage.setItem('digithin_galaxy_bgm_track', key); } catch (_) {}
+
+  const gameActive = !!document.getElementById('screen-game')?.classList.contains('active');
+  clearTimeout(_bgmPreviewTimer);
+
+  if (_normalBgmPlaying && !_normalBgmPaused) {
+    // Switch seamlessly mid-match
+    stopNormalBgm(false);
+    startNormalBgm();
+  } else if (_normalBgmPlaying && _normalBgmPaused) {
+    // Paused match: next resume uses the new track from its beginning
+    _normalBgmKey = key;
+    _normalBgmStep = 0;
+    _disposeNormalEcho();
+  } else if (preview && !gameActive && !_bossBgmPlaying && isSoundEnabled()) {
+    // Menu preview (short audition)
+    startNormalBgm();
+    _bgmPreviewTimer = setTimeout(() => {
+      const inGame = !!document.getElementById('screen-game')?.classList.contains('active');
+      if (!inGame) stopNormalBgm(true);
+    }, 8000);
+  }
+}
+
 // ============================================================
 // 3. STEP SCHEDULERS (BOSS ACTION & NORMAL SPACE AMBIENCE)
 // ============================================================
@@ -720,11 +1073,18 @@ function runNormalBgmScheduler() {
   if (!_normalBgmPlaying || _normalBgmPaused) return;
   try {
     const ctx = actx();
-    const sec16th = (60 / NORMAL_SPACE_TRACK.bpm) / 4;
+    const ambient = AMBIENT_TRACKS[_normalBgmKey];
+    const bpm = ambient ? ambient.bpm : NORMAL_SPACE_TRACK.bpm;
+    const loopLen = ambient ? ambient.melody.length : 64;
+    const sec16th = (60 / bpm) / 4;
     while (_normalBgmNextTime < ctx.currentTime + 0.14) {
-      scheduleNormalSpaceStep(_normalBgmStep, _normalBgmNextTime, ctx, _normalBgmGain);
+      if (ambient) {
+        scheduleAmbientStep(ambient, _normalBgmStep, _normalBgmNextTime, ctx, _normalBgmGain);
+      } else {
+        scheduleNormalSpaceStep(_normalBgmStep, _normalBgmNextTime, ctx, _normalBgmGain);
+      }
       _normalBgmNextTime += sec16th;
-      _normalBgmStep = (_normalBgmStep + 1) % 64;
+      _normalBgmStep = (_normalBgmStep + 1) % loopLen;
     }
   } catch (_) {}
   _normalBgmTimer = setTimeout(runNormalBgmScheduler, 28);
@@ -762,6 +1122,8 @@ function startNormalBgm() {
   if (_normalBgmPlaying && !_normalBgmPaused) return;
   try {
     const ctx = actx();
+    _normalBgmKey = _bgmTrackSetting;
+    _disposeNormalEcho();
     if (!_normalBgmGain) {
       _normalBgmGain = ctx.createGain();
       _normalBgmGain.connect(ctx.destination);
@@ -803,6 +1165,7 @@ function stopNormalBgm(fade = true) {
   if (!fade) {
     _normalBgmPlaying = false;
     _normalBgmPaused = false;
+    _disposeNormalEcho();
     return;
   }
 
@@ -811,6 +1174,7 @@ function stopNormalBgm(fade = true) {
     _normalBgmPaused = false;
     clearTimeout(_normalBgmTimer);
     _normalBgmTimer = null;
+    _disposeNormalEcho();
   }, 480);
 }
 
@@ -961,7 +1325,29 @@ function updateAllBgmVolume() {
   } catch (_) {}
 }
 
+window.BGM_TRACK_KEYS = BGM_TRACK_KEYS;
+window.getBgmTrackKey = getBgmTrackKey;
+window.setBgmTrack = setBgmTrack;
 window.startNormalBgm = startNormalBgm;
+
+// Autostart the saved ambient track on page load (menu ambience).
+// Browsers keep the AudioContext suspended until a user gesture, so the
+// music is also (re)triggered on the first interaction.
+function autoStartSavedBgm() {
+  if (_normalBgmPlaying || _bossBgmPlaying) return;
+  const inGame = !!document.getElementById('screen-game')?.classList.contains('active');
+  if (inGame) return;
+  startNormalBgm();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', autoStartSavedBgm, { once: true });
+} else {
+  autoStartSavedBgm();
+}
+['pointerdown', 'keydown', 'click'].forEach(evt => {
+  document.addEventListener(evt, () => { actx(); autoStartSavedBgm(); }, { once: true });
+});
 window.stopNormalBgm = stopNormalBgm;
 window.startBossBgm = startBossBgm;
 window.stopBossBgm = stopBossBgm;

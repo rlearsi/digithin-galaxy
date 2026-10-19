@@ -295,6 +295,27 @@ function stepFingerGuide(direction = 1) {
   }
 }
 
+const SUPPORTED_BGM_TRACKS = [
+  { key: 'cosmic_drift', i18nKey: 'settings_bgm_cosmic_drift' },
+  { key: 'aurora_lullaby', i18nKey: 'settings_bgm_aurora_lullaby' },
+  { key: 'lunar_garden', i18nKey: 'settings_bgm_lunar_garden' },
+  { key: 'twilight_station', i18nKey: 'settings_bgm_twilight_station' },
+  { key: 'crystal_cavern', i18nKey: 'settings_bgm_crystal_cavern' },
+  { key: 'nebula_sunrise', i18nKey: 'settings_bgm_nebula_sunrise' },
+  { key: 'silent_void', i18nKey: 'settings_bgm_silent_void' }
+];
+
+function stepBgmTrack(direction = 1) {
+  const current = typeof getBgmTrackKey === 'function' ? getBgmTrackKey() : 'cosmic_drift';
+  const idx = SUPPORTED_BGM_TRACKS.findIndex(m => m.key === current);
+  const safeIdx = idx >= 0 ? idx : 0;
+  const next = SUPPORTED_BGM_TRACKS[(safeIdx + direction + SUPPORTED_BGM_TRACKS.length) % SUPPORTED_BGM_TRACKS.length].key;
+  if (typeof setBgmTrack === 'function') setBgmTrack(next, true);
+  updateSettingsUI();
+}
+
+window.SUPPORTED_BGM_TRACKS = SUPPORTED_BGM_TRACKS;
+window.stepBgmTrack = stepBgmTrack;
 window.SUPPORTED_DIFFICULTIES = SUPPORTED_DIFFICULTIES;
 window.stepDifficulty = stepDifficulty;
 window.SUPPORTED_FINGER_GUIDES = SUPPORTED_FINGER_GUIDES;
@@ -416,6 +437,14 @@ function updateSettingsUI() {
     diffSelect.value = currentDiff;
     diffSelect.disabled = inMatch;
     diffSelect.title = inMatch ? (typeof t === 'function' ? t('settings_diff_locked_match') : '') : '';
+  }
+
+  // Sync Game Music Stepper
+  const currentBgm = typeof getBgmTrackKey === 'function' ? getBgmTrackKey() : 'cosmic_drift';
+  const bgmObj = SUPPORTED_BGM_TRACKS.find(m => m.key === currentBgm) || SUPPORTED_BGM_TRACKS[0];
+  const bgmVal = $('settings-bgm-val');
+  if (bgmVal && typeof t === 'function') {
+    bgmVal.textContent = t(bgmObj.i18nKey);
   }
 
   // Sync Finger Guide Stepper & Dropdown
