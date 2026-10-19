@@ -120,7 +120,7 @@
     "skill_name_freezer": "Cryostase Sidérale",
     "skill_desc_freezer": "Gèle tous les mots sur la piste pendant {duration}s toutes les 2 minutes (Niv. {level}/5)",
     "skill_name_bomb": "Bombe Stellaire",
-    "skill_desc_bomb": "Déclenche une explosion cosmique toutes les 90s (Rayon : Niv. {level}/5 — plein écran au Niv. 5)",
+    "skill_desc_bomb": "Déclenche une explosion cosmique toutes les 90s (Rayon : Niv. {level}/5)",
     "skill_name_shield": "Bouclier de Plasma",
     "skill_desc_shield": "Confère {duration}s d'immunité totale au bouclier terrestre toutes les 3 minutes (Niv. {level}/5)",
     "skill_name_vortex": "Vortex Cosmique",

@@ -120,7 +120,7 @@
     "skill_name_freezer": "Sidereal Cryostasis",
     "skill_desc_freezer": "Freezes all falling words on the track for {duration}s every 2 minutes (Lv. {level}/5)",
     "skill_name_bomb": "Stellar Bomb",
-    "skill_desc_bomb": "Triggers a cosmic blast every 90s (Radius: Lv. {level}/5 — full screen at Lv. 5)",
+    "skill_desc_bomb": "Triggers a cosmic blast every 90s (Radius: Lv. {level}/5)",
     "skill_name_shield": "Plasma Shield",
     "skill_desc_shield": "Grants {duration}s of complete Earth shield immunity every 3 minutes (Lv. {level}/5)",
     "skill_name_vortex": "Cosmic Vortex",

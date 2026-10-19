@@ -235,22 +235,21 @@ function firePeriodicSkill(skillId) {
     def.onActivate(state);
   }
 
-  if (skillId === 'bomb') {
-    if (typeof playSound === 'function') playSound('bomb');
-  } else {
+  if (skillId !== 'bomb') {
     if (typeof playSound === 'function') playSound('skill');
+
+    const skillName = (typeof t === 'function' && t(`skill_name_${skillId}`) !== `skill_name_${skillId}`)
+      ? t(`skill_name_${skillId}`)
+      : (def.name || skillId);
+    const durSec = Math.round(duration / 1000);
+    const activateMsgKey = `fb_${skillId}_activated`;
+    const msg = (typeof t === 'function' && t(activateMsgKey, { dur: durSec }) !== activateMsgKey)
+      ? t(activateMsgKey, { dur: durSec })
+      : `⚡ ${skillName} (${durSec}s)!`;
+
+    showFeedback(msg, 'special');
   }
 
-  const skillName = (typeof t === 'function' && t(`skill_name_${skillId}`) !== `skill_name_${skillId}`)
-    ? t(`skill_name_${skillId}`)
-    : (def.name || skillId);
-  const durSec = Math.round(duration / 1000);
-  const activateMsgKey = `fb_${skillId}_activated`;
-  const msg = (typeof t === 'function' && t(activateMsgKey, { dur: durSec }) !== activateMsgKey)
-    ? t(activateMsgKey, { dur: durSec })
-    : `⚡ ${skillName} (${durSec}s)!`;
-
-  showFeedback(msg, 'special');
   updateHUD();
   if (typeof renderRunPerks === 'function') renderRunPerks();
 }
@@ -261,16 +260,19 @@ function onSkillExpired(skillId) {
     def.onExpire(state);
   }
 
-  const expireMsgKey = `fb_${skillId}_expired`;
-  const msg = (typeof t === 'function' && t(expireMsgKey) !== expireMsgKey)
-    ? t(expireMsgKey)
-    : `${def?.name || skillId} finished`;
-
   if (skillId === 'autodestroy') {
     clearEcoTargetingIndicator();
   }
 
-  showFeedback(msg, 'special');
+  // Habilidade instantânea (bomb) já exibiu seu feedback de impacto e não precisa de mensagem de expiração
+  if (skillId !== 'bomb') {
+    const expireMsgKey = `fb_${skillId}_expired`;
+    const msg = (typeof t === 'function' && t(expireMsgKey) !== expireMsgKey)
+      ? t(expireMsgKey)
+      : `${def?.name || skillId} finished`;
+    showFeedback(msg, 'special');
+  }
+
   updateHUD();
   if (typeof renderRunPerks === 'function') renderRunPerks();
 }

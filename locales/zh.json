@@ -120,7 +120,7 @@
     "skill_name_freezer": "星际冷冻",
     "skill_desc_freezer": "每2分钟冻结轨道上的所有符文10秒",
     "skill_name_bomb": "恒星炸弹",
-    "skill_desc_bomb": "每90秒引发一次宇宙爆炸 (爆炸半径: {level}/5级 — 5级全屏)",
+    "skill_desc_bomb": "每90秒引发一次宇宙爆炸 (爆炸半径: {level}/5级)",
     "skill_name_shield": "等离子护盾",
     "skill_desc_shield": "每3分钟为地球护盾提供{duration}秒完全无敌状态 ({level}/5级)",
     "skill_name_vortex": "宇宙旋涡",

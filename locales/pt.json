@@ -120,7 +120,7 @@
     "skill_name_freezer": "Criostase Sideral",
     "skill_desc_freezer": "Congela todos os vocábulos na esteira por {duration}s a cada 2 minutos (Nv. {level}/5)",
     "skill_name_bomb": "Bomba Estelar",
-    "skill_desc_bomb": "Detona uma explosão cósmica a cada 90s (Raio: Nv. {level}/5 — tela toda no Nv. 5)",
+    "skill_desc_bomb": "Detona uma explosão cósmica a cada 90s (Raio: Nv. {level}/5)",
     "skill_name_shield": "Escudo de Plasma",
     "skill_desc_shield": "Concede {duration}s de imunidade cósmica total no escudo da Terra a cada 3 minutos (Nv. {level}/5)",
     "skill_name_vortex": "Vórtice Cósmico",

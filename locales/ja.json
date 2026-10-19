@@ -120,7 +120,7 @@
     "skill_name_freezer": "恒星クライオスタシス",
     "skill_desc_freezer": "2分ごとに{duration}秒間、流れるすべての言葉を凍結停止します (Lv. {level}/5)",
     "skill_name_bomb": "ステラボム",
-    "skill_desc_bomb": "90秒ごとに宇宙爆発を起こします (爆風半径: Lv.{level}/5 — Lv.5で全画面)",
+    "skill_desc_bomb": "90秒ごとに宇宙爆発を起こします (爆風半径: Lv.{level}/5)",
     "skill_name_shield": "プラズマシールド",
     "skill_desc_shield": "3分ごとに{duration}秒間、地球シールドが完全無敵化します (Lv.{level}/5)",
     "skill_name_vortex": "コズミックヴォルテックス",

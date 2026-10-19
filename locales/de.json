@@ -120,7 +120,7 @@
     "skill_name_freezer": "Siderische Kryostase",
     "skill_desc_freezer": "Friert alle Wörter auf der Bahn für {duration}s alle 2 Minuten ein (St. {level}/5)",
     "skill_name_bomb": "Sternenbombe",
-    "skill_desc_bomb": "Löst alle 90s eine kosmische Explosion aus (Radius: St. {level}/5 — ganzer Bildschirm auf St. 5)",
+    "skill_desc_bomb": "Löst alle 90s eine kosmische Explosion aus (Radius: St. {level}/5)",
     "skill_name_shield": "Plasmaschild",
     "skill_desc_shield": "Gewährt alle 3 Minuten {duration}s vollständige Erdschild-Immunität (St. {level}/5)",
     "skill_name_vortex": "Kosmischer Vortex",
