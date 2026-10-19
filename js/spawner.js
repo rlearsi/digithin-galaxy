@@ -80,11 +80,14 @@ function genQueueItem() {
       : Infinity;
     const eligibleWords = state.unlockedWords.filter(w => (w.text || '').length <= maxLen);
     const candidatePool = eligibleWords.length > 0 ? eligibleWords : state.unlockedWords;
-    text = pick(candidatePool).text.toUpperCase();
+    const chosenWord = pick(candidatePool);
+    text = chosenWord.text.toUpperCase();
+    const meaning = chosenWord.meaning || '';
     // Rare chance to contain bonus XP surge
     if (Math.random() < CFG.wordSkillChance) {
       skill = { id: 'bonus_xp', name: '+25 XP' };
     }
+    return { text, type, skill, meaning };
   }
   return { text, type, skill };
 }
@@ -135,7 +138,7 @@ function spawnItem() {
   refillQueue();
 
   // Registra palavras que surgiram e passaram na tela na partida atual
-  if (next && next.type === 'word' && next.text) {
+  if (next && (next.type === 'word' || next.type === 'wildcard') && next.text) {
     if (!state.runWordsSeen) state.runWordsSeen = new Set();
     state.runWordsSeen.add(next.text.toLowerCase());
   }

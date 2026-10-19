@@ -170,6 +170,10 @@ button {
   background: var(--accent-amber);
   border-radius: var(--r-pill);
   padding: 2px 8px;
+  white-space: nowrap !important;
+  flex-shrink: 0;
+  min-width: 44px;
+  text-align: center;
   transition: transform 0.15s ease, background 0.15s ease;
 }
 .speed-badge.speed-up-flash {

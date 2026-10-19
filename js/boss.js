@@ -681,10 +681,26 @@ function completeBossMeaning() {
   }
   state.bossBattle.solvedCount = (state.bossBattle.solvedCount || 0) + 1;
 
+  if (!state.runWordsLearned) state.runWordsLearned = new Set();
+  state.runWordsLearned.add(wordKey);
+  if (!state.runWordsSeen) state.runWordsSeen = new Set();
+  state.runWordsSeen.add(wordKey);
+  if (!state.runDiscoveredWords) state.runDiscoveredWords = [];
+  if (!state.runDiscoveredWords.includes(wordKey)) {
+    state.runDiscoveredWords.unshift(wordKey);
+  }
+
+  if (!state.runWordStats) state.runWordStats = {};
+  state.runWordStats[wordKey] = (state.runWordStats[wordKey] || 0) + 1;
+
   if (!state.wordStats[wordKey]) state.wordStats[wordKey] = { count: 0 };
   state.wordStats[wordKey].count++;
   if (!state.unlockedWords.find(w => w.text.toLowerCase() === wordKey)) {
     state.unlockedWords.push({ ...state.bossBattle.currentWord, phase: state.phase });
+  }
+
+  if (typeof renderDiscoveredWordsHUD === 'function') {
+    renderDiscoveredWordsHUD();
   }
 
   // Deduct 1 boss life (Cada significado tira uma vida do boss)

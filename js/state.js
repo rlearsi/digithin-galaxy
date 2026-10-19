@@ -140,6 +140,8 @@ function defaultState() {
     wordStats:         { ...permStats },
     runWordsLearned:   new Set(), // Palavras completadas nesta run (utilizado para Palavra Nova vs Aprendida e Eco Cósmico)
     runWordsSeen:      new Set(), // Todas as palavras que passaram/surgiram nesta partida específica
+    runDiscoveredWords: [],       // Lista ordenada de palavras cósmicas que surgiram na corrida
+    runWordStats:       {},       // { [wordKey]: count } - vezes que cada palavra foi digitada nesta corrida específica
     skillSlots:        [],
     activeTimers:      {},
     vortexAccum:       0,
@@ -525,6 +527,9 @@ function loadSaveDataIntoState(save) {
 
   state.skillSlots = Array.isArray(save.skillSlots) ? [...save.skillSlots] : [];
   state.runWordsLearned = new Set(Array.isArray(save.runWordsLearned) ? save.runWordsLearned : []);
+  state.runWordsSeen = new Set(Array.isArray(save.runWordsSeen) ? save.runWordsSeen : []);
+  state.runDiscoveredWords = Array.isArray(save.runDiscoveredWords) ? [...save.runDiscoveredWords] : [];
+  state.runWordStats = save.runWordStats ? { ...save.runWordStats } : {};
   state.defeatedBossTypes = Array.isArray(save.defeatedBossTypes) ? [...save.defeatedBossTypes] : [];
   state.charsTyped = save.charsTyped || 0;
   state.startTime = Date.now();

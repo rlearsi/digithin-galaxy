@@ -140,6 +140,14 @@ async function setLanguage(lang) {
       state.wordStats = migrateWordStatsToLanguage(state.wordStats, lang);
     }
 
+    // 2.1 Migra palavras descobertas na corrida atual
+    if (Array.isArray(state.runDiscoveredWords) && state.runDiscoveredWords.length > 0 && typeof migrateWordToLanguage === 'function') {
+      state.runDiscoveredWords = state.runDiscoveredWords.map(wKey => {
+        const mig = migrateWordToLanguage({ text: wKey }, lang);
+        return mig && mig.text ? mig.text.toLowerCase() : wKey;
+      });
+    }
+
     // 3. Migra itens na fila da esteira (spawnQueue)
     if (Array.isArray(state.spawnQueue) && state.spawnQueue.length > 0) {
       state.spawnQueue = state.spawnQueue.map(item => {
@@ -282,6 +290,8 @@ function applyTranslations() {
   // Update HUD ONLY IF game match is currently in progress
   if (typeof isMatchInProgress === 'function' && isMatchInProgress() && typeof updateHUD === 'function') {
     try { updateHUD(); } catch (e) { console.warn('[i18n] updateHUD error:', e); }
+  } else if (typeof renderDiscoveredWordsHUD === 'function') {
+    try { renderDiscoveredWordsHUD(); } catch (_) {}
   }
 }
 

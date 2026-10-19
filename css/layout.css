@@ -608,13 +608,28 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
+  gap: 8px;
+  min-width: 0;
+  flex-wrap: nowrap;
 }
 .side-title {
-  font-size: 0.72rem;
-  letter-spacing: 0.10em;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
   color: var(--t2);
   font-weight: 800;
   text-transform: uppercase;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  flex: 1;
+  line-height: 1.2;
+}
+.side-card-header .btn-link {
+  font-size: 0.68rem;
+  white-space: nowrap !important;
+  flex-shrink: 0;
+  line-height: 1.2;
 }
 
 /* Unified Stats Dashboard (Modern Card Style) */
@@ -632,6 +647,9 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  gap: 8px;
+  min-width: 0;
+  flex-wrap: nowrap;
 }
 
 /* Player Shields Display (Organized inside Left Dashboard) */
@@ -782,7 +800,116 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-height: 0;
 }
+
+/* Empty hint when no words have been typed yet in this run */
+.hud-words-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+  padding: 20px 10px;
+  background: var(--glass-sub-card);
+  border-radius: 12px;
+  border: none !important;
+  box-shadow: none;
+}
+.hud-words-empty .hwe-svg {
+  color: var(--t3);
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+.hud-words-empty .hwe-text {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--t2);
+  line-height: 1.35;
+  opacity: 1 !important;
+}
+
+/* Discovered Word Card in HUD (Clean, modern & airy: subtle translucent surface, no heavy badges) */
+.hud-word-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: rgba(255, 255, 255, 0.035);
+  border-radius: 8px;
+  padding: 6px 8px;
+  border: none !important;
+  box-shadow: none;
+  transition: background 0.15s ease;
+  position: relative;
+  overflow: hidden;
+  animation: hudWordSlideIn 0.20s ease-out backwards;
+  transform: none !important;
+}
+.hud-word-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: none !important;
+}
+[data-theme="light"] .hud-word-card {
+  background: rgba(15, 23, 42, 0.04);
+}
+[data-theme="light"] .hud-word-card:hover {
+  background: rgba(15, 23, 42, 0.07);
+}
+@keyframes hudWordSlideIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Header: Word text (left) + Times typed (right) */
+.hwc-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+.hwc-word-text {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--t1);
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 1 !important;
+}
+.hwc-count {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--t3);
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  opacity: 1 !important;
+  background: none !important;
+  border: none !important;
+  padding: 0;
+}
+.hwc-count:hover {
+  color: var(--t2);
+}
+
+/* Meaning: clean, subtle modern typography */
+.hwc-meaning {
+  font-size: 0.67rem;
+  font-weight: 400;
+  color: var(--t2);
+  line-height: 1.35;
+  word-break: break-word;
+  opacity: 1 !important;
+}
+
 .word-tag {
   display: flex;
   align-items: center;
@@ -793,7 +920,7 @@
   font-size: 0.74rem;
   font-weight: 700;
   color: var(--t1);
-  border: none;
+  border: none !important;
   box-shadow: none;
 }
 .word-tag .wt-pts {

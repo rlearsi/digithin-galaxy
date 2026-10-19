@@ -1287,24 +1287,93 @@ function updateHUD() {
     }
   }
 
-  // Render unlocked words in side panel (misteriosamente aparece a partir da Fase 3)
-  if (wordsList) {
-    wordsList.innerHTML = '';
-    if (state.phase >= 3 && state.unlockedWords && state.unlockedWords.length > 0) {
-      state.unlockedWords.forEach(w => {
-        const completed = state.wordStats[w.text.toLowerCase()]?.count || 0;
-        const d = document.createElement('div');
-        d.className = 'word-tag';
-        d.innerHTML = `<span>${w.text.toUpperCase()}</span><span class="wt-pts">${completed > 0 ? `✓×${completed}` : `+${wordPts(w.text)}`}</span>`;
-        wordsList.appendChild(d);
-      });
-    }
-  }
+  // Render discovered words in HUD side panel
+  renderDiscoveredWordsHUD();
 
   renderSkills();
   if (typeof updateFingerGuideVisibility === 'function') {
     updateFingerGuideVisibility();
   }
+}
+
+/**
+ * Renders the Discovered Words HUD list for the current run, showing emerging words,
+ * their localized meanings, points, and times typed in this run (with total in tooltip).
+ */
+function renderDiscoveredWordsHUD() {
+  const listEl = wordsList || document.getElementById('words-list');
+  if (!listEl) return;
+  if (!state) {
+    listEl.innerHTML = '';
+    return;
+  }
+
+  if (!state.runWordsSeen) state.runWordsSeen = new Set();
+  if (!state.runDiscoveredWords) state.runDiscoveredWords = [];
+  if (!state.runWordStats) state.runWordStats = {};
+
+  const discovered = state.runDiscoveredWords;
+
+  // Empty state: keep completely empty without any unnecessary box or text
+  if (!discovered || discovered.length === 0) {
+    listEl.innerHTML = '';
+    return;
+  }
+
+  const curLang = typeof getLanguage === 'function' ? getLanguage() : 'en';
+
+  listEl.innerHTML = '';
+
+  discovered.forEach(wordKey => {
+    const wordObj = (typeof getWordObject === 'function')
+      ? getWordObject(wordKey, curLang)
+      : { text: wordKey.toUpperCase(), type: 'cosmos', meaning: '' };
+
+    const textUpper = (wordObj?.text || wordKey).toUpperCase();
+    const runCount = state.runWordStats[wordKey] || 0;
+    const totalCount = state.wordStats?.[wordKey]?.count || 0;
+    const meaning = wordObj?.meaning || '';
+
+    const tooltip = typeof t === 'function'
+      ? t('hud_typed_run_title', { run: runCount, total: totalCount })
+      : `Typed ${runCount}× in this run • ${totalCount}× total`;
+
+    const card = document.createElement('div');
+    card.className = 'hud-word-card';
+    card.setAttribute('data-word', wordKey);
+
+    card.innerHTML = `
+      <div class="hwc-header">
+        <span class="hwc-word-text">${textUpper}</span>
+        <span class="hwc-count" title="${tooltip}">×${runCount}</span>
+      </div>
+      ${meaning ? `<div class="hwc-meaning">${meaning}</div>` : ''}
+    `;
+
+    listEl.appendChild(card);
+  });
+}
+
+/**
+ * Registers a cosmic word when successfully typed in the run and updates HUD.
+ */
+function registerRunDiscoveredWord(wordText) {
+  if (!state || !wordText) return;
+  const key = String(wordText).trim().toLowerCase();
+  if (!state.runWordsSeen) state.runWordsSeen = new Set();
+  state.runWordsSeen.add(key);
+
+  if (!state.runDiscoveredWords) state.runDiscoveredWords = [];
+  if (!state.runDiscoveredWords.includes(key)) {
+    state.runDiscoveredWords.unshift(key);
+  }
+
+  renderDiscoveredWordsHUD();
+}
+
+if (typeof window !== 'undefined') {
+  window.renderDiscoveredWordsHUD = renderDiscoveredWordsHUD;
+  window.registerRunDiscoveredWord = registerRunDiscoveredWord;
 }
 
 // Vector SVG Icons for Mobile Skills (Rule 11: 100% SVG, strictly no emojis)

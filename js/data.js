@@ -309,6 +309,55 @@ function getWordForLanguage(concept, targetLang) {
 }
 
 /**
+ * Retrieves full localized word metadata (text, meaning, type, asset) for any given word text
+ * across current language, active WORD_POOL, boss words, and canonical concepts.
+ */
+function getWordObject(text, targetLang) {
+  if (!text || typeof text !== 'string') return null;
+  const lower = text.trim().toLowerCase();
+  const lang = targetLang || (typeof getLanguage === 'function' ? getLanguage() : 'en');
+
+  // 1. Check active WORD_POOL
+  if (typeof WORD_POOL !== 'undefined' && Array.isArray(WORD_POOL)) {
+    const found = WORD_POOL.find(w => w && w.text && w.text.toLowerCase() === lower);
+    if (found && found.meaning) return found;
+  }
+
+  // 2. Check state.unlockedWords
+  if (typeof state !== 'undefined' && state && Array.isArray(state.unlockedWords)) {
+    const found = state.unlockedWords.find(w => w && w.text && w.text.toLowerCase() === lower);
+    if (found && found.meaning) return found;
+  }
+
+  // 3. Check canonical concept across all languages and get active language version
+  if (typeof findWordConcept === 'function' && typeof getWordForLanguage === 'function') {
+    const concept = findWordConcept(lower);
+    if (concept) {
+      const loc = getWordForLanguage(concept, lang);
+      if (loc) return loc;
+    }
+  }
+
+  // 4. Check WORD_POOLS for target language directly
+  if (typeof WORD_POOLS !== 'undefined' && WORD_POOLS[lang]) {
+    const found = WORD_POOLS[lang].find(w => w && w.text && w.text.toLowerCase() === lower);
+    if (found) return found;
+  }
+
+  // 5. Check window.GAME_DATA_WORDS
+  if (typeof window !== 'undefined' && window.GAME_DATA_WORDS?.[lang]?.words) {
+    const found = window.GAME_DATA_WORDS[lang].words.find(w => w && w.text && w.text.toLowerCase() === lower);
+    if (found) return found;
+  }
+
+  return { text: text.toUpperCase(), type: 'cosmos', meaning: '' };
+}
+
+if (typeof window !== 'undefined') {
+  window.getWordObject = getWordObject;
+}
+
+/**
  * Migrates a single word object to the target language while strictly preserving game progression (phase, etc.).
  */
 function migrateWordToLanguage(wordObj, targetLang) {

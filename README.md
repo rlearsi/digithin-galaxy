@@ -1,6 +1,6 @@
 # 🌌 Digithin Galaxy — Jogo de Digitação Arcade Espacial
 
-[![Versão](https://img.shields.io/badge/versão-v1.20.1-8B5CF6?style=for-the-badge&logo=gamepad)](ChangeLog.md)
+[![Versão](https://img.shields.io/badge/versão-v1.21.5-8B5CF6?style=for-the-badge&logo=gamepad)](ChangeLog.md)
 [![Status](https://img.shields.io/badge/status-estável-10B981?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 [![Licença](https://img.shields.io/badge/licença-MIT-38BDF8?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 
@@ -328,6 +328,7 @@ A **Biblioteca Cósmica** cataloga todos os **75 termos astrofísicos** do jogo,
 ## 7. Design, UI e Experiência do Jogador
 
 - **Vidro Fosco Translúcido (Glassmorphism):** Superfícies aeroespaciais com refração calibrada (`backdrop-filter: blur(24px) saturate(200%)`), 100% sem bordas (`border: none !important`) e contraste otimizado.
+- **Design Clean & Minimalista em Listas e Feeds:** Eliminação de fundos escuros pesados e pílulas/badges redundantes; uso de tipografia pura para contadores (`×1`), superfícies translúcidas ultraleves (`rgba(255, 255, 255, 0.035)`) e legibilidade arejada.
 - **Estabilidade no Cursor:** Zero efeito de salto no hover (`transform: none !important`); o feedback interativo ocorre exclusivamente por tom de cor e luminosidade mais clara.
 - **Ícones Vetoriais Modernos em SVG:** 100% de ícones em SVG inline com traçado limpo, eliminando emojis nativos do sistema operacional em interfaces.
 - **Internacionalização Completa (7 Idiomas):** Suporte nativo em `pt`, `en`, `fr`, `de`, `ja`, `ko`, `zh` para todas as palavras, diálogos de chefões e opções de interface.

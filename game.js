@@ -900,6 +900,7 @@ function completeItem(item) {
     const charsCompleted = (item.text || '').length || 1;
     state.progress = Math.min(phaseGoal(), (state.progress || 0) + charsCompleted);
   } else {
+    const charLen = (item.text || '').length || 1;
     let baseXp = item.type === 'letter' ? 1 : item.type === 'syllable' ? 3 : Math.max(5, charLen * 2);
     if ((state.activeTimers?.haste || 0) > 0) baseXp = Math.floor(baseXp * 2);
     const bonusXp = (item.skill?.id === 'bonus_xp') ? 25 : 0;
@@ -922,16 +923,23 @@ function completeItem(item) {
   showFeedback(comboMult > 1 ? `+${pts} (${comboMult}× Combo!)` : `+${pts}`, 'success');
 
   // Track discovered word stats & farm coins every 10 words
-  if (item.type === 'word') {
+  if (item.type === 'word' || item.type === 'wildcard') {
     const key = item.text.toLowerCase();
     if (!state.runWordsLearned) state.runWordsLearned = new Set();
     state.runWordsLearned.add(key);
     if (!state.runWordsSeen) state.runWordsSeen = new Set();
     state.runWordsSeen.add(key);
+    if (!state.runDiscoveredWords) state.runDiscoveredWords = [];
+    if (!state.runDiscoveredWords.includes(key)) {
+      state.runDiscoveredWords.unshift(key);
+    }
+
+    if (!state.runWordStats) state.runWordStats = {};
+    state.runWordStats[key] = (state.runWordStats[key] || 0) + 1;
 
     // Remove micro-badge de palavra nova de quaisquer outras instâncias ativas desse termo
     state.activeItems.forEach(otherItem => {
-      if (otherItem.type === 'word' && (otherItem.text || '').toLowerCase() === key) {
+      if ((otherItem.type === 'word' || otherItem.type === 'wildcard') && (otherItem.text || '').toLowerCase() === key) {
         otherItem.el.querySelector('.new-word-badge')?.remove();
       }
     });
@@ -940,6 +948,7 @@ function completeItem(item) {
       renderQueue();
     }
 
+    if (!state.wordStats) state.wordStats = {};
     if (!state.wordStats[key]) state.wordStats[key] = { count: 0 };
     state.wordStats[key].count++;
 
@@ -949,6 +958,9 @@ function completeItem(item) {
     }
     if (typeof savePermanentWordStats === 'function') {
       savePermanentWordStats(state.wordStats);
+    }
+    if (typeof renderDiscoveredWordsHUD === 'function') {
+      renderDiscoveredWordsHUD();
     }
 
     // Requisito 10: a cada 10 palavras destruídas o jogador recebe +1 moeda
