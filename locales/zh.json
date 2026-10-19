@@ -133,6 +133,10 @@
     "skill_desc_dilation": "增加符文出现间隔与距离，最高可达{max}倍",
     "skill_name_autodestroy": "宇宙回响",
     "skill_desc_autodestroy": "每1分钟自动粉碎本局已掌握的词汇，持续10秒",
+    "skill_name_decoder": "宇宙解码器",
+    "skill_desc_decoder": "破译首领谜题 (等级 {level}/2)",
+    "skill_desc_decoder_lvl1": "首领专属效果：破译并揭示单词的第1个字母。",
+    "skill_desc_decoder_lvl2": "首领专属效果：破译并揭示第1个字母以及另一个随机字母。",
     "boss_reward_extralife": "+1 护盾",
     "boss_reward_extralife_desc": "为当前对局恢复或增加1点护盾",
     "boss_reward_continue": "接关币",
@@ -147,6 +151,7 @@
     "levelup_prompt": "选择1项在本局激活的宇宙能力：",
     "levelup_btn_pick": "选择",
     "fb_dilation_upgraded": "间距拉开已提升至最高{max}倍！",
+    "fb_decoder_upgraded": "🔍 解码器 等级 {level} 在首领战生效！",
     "lib_title": "符文词典",
     "lib_sub": "已发现的单词图鉴",
     "lib_discovered": "已发现单词",
@@ -517,7 +522,10 @@
     "hud_perk_lvl_max": "等级 {lvl} (满级)",
     "hud_perk_max": "满级",
     "hud_perk_new": "新",
-    "hud_perk_upgrade": "升级"
+    "hud_perk_upgrade": "升级",
+    "hud_perk_decoder_badge_1": "1个字母",
+    "hud_perk_decoder_badge_2": "2个字母",
+    "hud_perk_disabled_boss": "首领战禁用"
   },
   "syllables": [
     "ba",

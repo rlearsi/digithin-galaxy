@@ -133,6 +133,10 @@
     "skill_desc_dilation": "Aumenta o espaçamento e intervalo entre rúnicos em até {max}",
     "skill_name_autodestroy": "Eco Cósmico",
     "skill_desc_autodestroy": "Destrói automaticamente palavras já aprendidas naquela run a cada 1 minuto por 10s",
+    "skill_name_decoder": "Decodificador Cósmico",
+    "skill_desc_decoder": "Decodifica enigmas do Chefão (Nv. {level}/2)",
+    "skill_desc_decoder_lvl1": "Efeito exclusivo no Chefão: decifra e revela a 1ª letra da palavra.",
+    "skill_desc_decoder_lvl2": "Efeito exclusivo no Chefão: decifra e revela a 1ª letra e mais uma letra aleatória da palavra.",
     "boss_reward_extralife": "+1 Escudo",
     "boss_reward_extralife_desc": "Recupera ou adiciona 1 escudo para a partida atual",
     "boss_reward_continue": "Ficha Continue",
@@ -147,6 +151,7 @@
     "levelup_prompt": "Escolha 1 habilidade para ativar nesta corrida:",
     "levelup_btn_pick": "Escolher",
     "fb_dilation_upgraded": "Espaçamento aprimorado para até {max}!",
+    "fb_decoder_upgraded": "🔍 Decodificador Nv. {level} ativo no Chefão!",
     "lib_title": "Biblioteca de Rúnicos",
     "lib_sub": "Coleção de vocábulos descobertos",
     "lib_discovered": "Palavras Descobertas",
@@ -517,7 +522,10 @@
     "hud_perk_lvl_max": "Nv. {lvl} (MÁX)",
     "hud_perk_max": "MÁX",
     "hud_perk_new": "NOVA",
-    "hud_perk_upgrade": "Upgrade"
+    "hud_perk_upgrade": "Upgrade",
+    "hud_perk_decoder_badge_1": "1 Letra",
+    "hud_perk_decoder_badge_2": "2 Letras",
+    "hud_perk_disabled_boss": "Inativa no Boss"
   },
   "syllables": [
     "ca",

@@ -165,6 +165,7 @@ function defaultState() {
     defeatedBossTypes: [],
     pendingBoss:       null,
     pendingBossPhase:  null,
+    levelsSinceBoss:   0,
     bossBattle: {
       active:          false,
       boss:            null,
@@ -174,6 +175,7 @@ function defaultState() {
       lastDroppedWord: null,
       solvedCount:     0,
       currentWord:     null,
+      revealedIndices: [],
       boxItem:         null,
       damageCount:     0,
     },

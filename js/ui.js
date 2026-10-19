@@ -1328,6 +1328,8 @@ function getSkillSvgIcon(skillId) {
       return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
     case 'autodestroy':
       return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-2 2.5h3L11 8"/><circle cx="12" cy="14" r="7"/><path d="m10 14 4 4m0-4-4 4"/></svg>`;
+    case 'decoder':
+      return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20M12 2a14.5 14.5 0 0 1 0 20M2 12h20"/><circle cx="12" cy="12" r="3"/></svg>`;
     case 'extralife':
       return `<svg class="msb-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`;
     case 'continue':
@@ -1358,7 +1360,8 @@ function renderRunPerks() {
   }
   container.dataset.emptyState = 'false';
 
-  const currentKey = perkIds.map(id => `${id}:${perks[id]}`).join('|');
+  const bossStateStr = (state.bossBattle && state.bossBattle.active) ? 'boss:1' : 'boss:0';
+  const currentKey = `${bossStateStr}|` + perkIds.map(id => `${id}:${perks[id]}`).join('|');
   const needsRebuild = (container.dataset.perksKey !== currentKey);
 
   if (needsRebuild) {
@@ -1380,15 +1383,17 @@ function renderRunPerks() {
       ? t('skill_name_' + id)
       : (def.name || id);
 
+    const isBossDisabled = (id === 'bomb' && state.bossBattle && state.bossBattle.active);
     const isPassive = (def.type === 'passive');
-    const isRunning = !isPassive && (state.activeTimers && (state.activeTimers[id] || 0) > 0);
-    const isQueued = !isPassive && !isRunning && (state.skillQueue && state.skillQueue.includes(id));
+    const isRunning = !isPassive && !isBossDisabled && (state.activeTimers && (state.activeTimers[id] || 0) > 0);
+    const isQueued = !isPassive && !isBossDisabled && !isRunning && (state.skillQueue && state.skillQueue.includes(id));
     const timerSec = isRunning ? Math.ceil(state.activeTimers[id] / 1000) : 0;
     const cdSec = Math.max(0, Math.ceil((state.skillCooldowns?.[id] || 0) / 1000));
 
     // Dynamic classes: Passives ALWAYS get highlighted active color! Duration skills get active highlight while running!
     const cardClass = 'run-perk-card' +
-      (isPassive ? ' perk-always-active' :
+      (isBossDisabled ? ' perk-boss-disabled' :
+       isPassive ? ' perk-always-active' :
        isRunning ? ' perk-active' :
        isQueued ? ' perk-queued' : ' perk-cooldown');
 
@@ -1403,10 +1408,21 @@ function renderRunPerks() {
     let subTypeTxt = '';
     let statusBadgeHtml = '';
 
-    if (isPassive) {
+    if (isBossDisabled) {
+      subTypeTxt = typeof t === 'function' ? t('hud_perk_disabled_boss') : 'Inativa no Boss';
+      statusBadgeHtml = `<span class="perk-status-badge perk-status-disabled">${svgCd}<span>${subTypeTxt}</span></span>`;
+    } else if (isPassive) {
       subTypeTxt = typeof t === 'function' ? t('hud_perk_passive') : 'Passiva';
-      const maxMult = Math.min(5, 1 + lvl);
-      statusBadgeHtml = `<span class="perk-status-badge perk-status-passive">${svgPassive}+${maxMult}×</span>`;
+      if (id === 'decoder') {
+        const badgeKey = `hud_perk_decoder_badge_${lvl}`;
+        const badgeTxt = (typeof t === 'function' && t(badgeKey) !== badgeKey)
+          ? t(badgeKey)
+          : (lvl === 1 ? '1 Letra' : '2 Letras');
+        statusBadgeHtml = `<span class="perk-status-badge perk-status-passive">${svgPassive}${badgeTxt}</span>`;
+      } else {
+        const maxMult = Math.min(5, 1 + lvl);
+        statusBadgeHtml = `<span class="perk-status-badge perk-status-passive">${svgPassive}+${maxMult}×</span>`;
+      }
     } else if (isRunning) {
       subTypeTxt = typeof t === 'function' ? t('hud_perk_active_label') : 'Ativa';
       statusBadgeHtml = `<span class="perk-status-badge perk-status-running">${svgRunning}${timerSec}s</span>`;
@@ -3144,9 +3160,6 @@ function showAlienSpaceInvader(boss, remainingLives = 3, maxLives = 3) {
 }
 
 function hideAlienSpaceInvader() {
-  if (typeof stopBossBgm === 'function') {
-    stopBossBgm(true);
-  }
   const invader = $('alien-space-invader');
   if (!invader) return;
   invader.classList.add('alien-retreat');
@@ -3254,12 +3267,16 @@ function renderBossMeaningSlots(boxEl, targetWord, typedBuffer) {
   if (!slotsCont) return;
   slotsCont.innerHTML = '';
 
+  const revealed = state.bossBattle?.revealedIndices || [];
   const chars = targetWord.split('');
   for (let i = 0; i < chars.length; i++) {
     const slot = document.createElement('span');
     if (i < typedBuffer.length) {
       slot.className = 'bmb-slot filled';
       slot.textContent = typedBuffer[i];
+    } else if (revealed.includes(i)) {
+      slot.className = 'bmb-slot revealed';
+      slot.textContent = chars[i];
     } else {
       slot.className = 'bmb-slot empty';
       slot.textContent = '_';
@@ -3503,6 +3520,11 @@ function showLevelUpModal(choices, onPick) {
       sDesc = typeof t === 'function' ? t(skill.descKey, { duration: dur, level: nextLevel, max: 5 }) : `Immunity for ${dur}s`;
     } else if (skill.id === 'bomb') {
       sDesc = typeof t === 'function' ? t(skill.descKey, { level: nextLevel, max: 5 }) : `Explosion radius level ${nextLevel}`;
+    } else if (skill.id === 'decoder') {
+      const lvlKey = `skill_desc_decoder_lvl${nextLevel}`;
+      sDesc = (typeof t === 'function' && t(lvlKey) !== lvlKey)
+        ? t(lvlKey)
+        : (nextLevel === 1 ? 'Efeito exclusivo no Chefão: decifra e revela a 1ª letra da palavra.' : 'Efeito exclusivo no Chefão: decifra e revela a 1ª letra e mais uma letra aleatória da palavra.');
     } else {
       sDesc = (typeof t === 'function' && t(skill.descKey) !== skill.descKey)
         ? t(skill.descKey)

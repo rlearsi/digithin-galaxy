@@ -783,6 +783,9 @@ function startNormalBgm() {
 
 function stopNormalBgm(fade = true) {
   if (!_normalBgmPlaying) return;
+  clearTimeout(_normalBgmTimer);
+  _normalBgmTimer = null;
+
   try {
     const ctx = actx();
     if (_normalBgmGain) {
@@ -791,16 +794,24 @@ function stopNormalBgm(fade = true) {
         _normalBgmGain.gain.setValueAtTime(_normalBgmGain.gain.value, ctx.currentTime);
         _normalBgmGain.gain.linearRampToValueAtTime(0.001, ctx.currentTime + 0.45);
       } else {
+        _normalBgmGain.gain.cancelScheduledValues(ctx.currentTime);
         _normalBgmGain.gain.setValueAtTime(0.001, ctx.currentTime);
       }
     }
   } catch (_) {}
+
+  if (!fade) {
+    _normalBgmPlaying = false;
+    _normalBgmPaused = false;
+    return;
+  }
+
   setTimeout(() => {
     _normalBgmPlaying = false;
     _normalBgmPaused = false;
     clearTimeout(_normalBgmTimer);
     _normalBgmTimer = null;
-  }, fade ? 480 : 20);
+  }, 480);
 }
 
 function startBossBgm(boss) {
@@ -832,6 +843,9 @@ function startBossBgm(boss) {
 
 function stopBossBgm(fade = true) {
   if (!_bossBgmPlaying) return;
+  clearTimeout(_bossBgmTimer);
+  _bossBgmTimer = null;
+
   try {
     const ctx = actx();
     if (_bossBgmGain) {
@@ -840,10 +854,18 @@ function stopBossBgm(fade = true) {
         _bossBgmGain.gain.setValueAtTime(_bossBgmGain.gain.value, ctx.currentTime);
         _bossBgmGain.gain.linearRampToValueAtTime(0.001, ctx.currentTime + 0.45);
       } else {
+        _bossBgmGain.gain.cancelScheduledValues(ctx.currentTime);
         _bossBgmGain.gain.setValueAtTime(0.001, ctx.currentTime);
       }
     }
   } catch (_) {}
+
+  if (!fade) {
+    _bossBgmPlaying = false;
+    _bossBgmPaused = false;
+    return;
+  }
+
   setTimeout(() => {
     _bossBgmPlaying = false;
     _bossBgmPaused = false;
@@ -851,10 +873,12 @@ function stopBossBgm(fade = true) {
     _bossBgmTimer = null;
 
     // Retoma suavemente a trilha normal espacial se a partida continuar ativa
-    if (typeof state !== 'undefined' && state && !state.paused && !state.phaseComplete) {
+    const screenGame = document.getElementById('screen-game');
+    const isGameActive = screenGame?.classList.contains('active') && (typeof state === 'undefined' || !state?.gameOver);
+    if (isGameActive && (typeof state === 'undefined' || !state?.bossBattle || !state.bossBattle.active)) {
       startNormalBgm();
     }
-  }, fade ? 480 : 20);
+  }, 480);
 }
 
 function pauseBossBgm() {
@@ -936,3 +960,14 @@ function updateAllBgmVolume() {
     }
   } catch (_) {}
 }
+
+window.startNormalBgm = startNormalBgm;
+window.stopNormalBgm = stopNormalBgm;
+window.startBossBgm = startBossBgm;
+window.stopBossBgm = stopBossBgm;
+window.pauseBossBgm = pauseBossBgm;
+window.resumeBossBgm = resumeBossBgm;
+window.stopAllBgm = stopAllBgm;
+window.pauseAllBgm = pauseAllBgm;
+window.resumeActiveBgm = resumeActiveBgm;
+window.updateAllBgmVolume = updateAllBgmVolume;

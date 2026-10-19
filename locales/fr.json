@@ -133,6 +133,10 @@
     "skill_desc_dilation": "Augmente l'espacement et l'intervalle entre runiques jusqu'à {max}",
     "skill_name_autodestroy": "Écho Cosmique",
     "skill_desc_autodestroy": "Détruit automatiquement les mots appris de cette partie pendant 10s toutes les 1 minute",
+    "skill_name_decoder": "Décodeur Cosmique",
+    "skill_desc_decoder": "Décode les énigmes du Boss (Niv. {level}/2)",
+    "skill_desc_decoder_lvl1": "Effet exclusif contre le Boss : déchiffre et révèle la 1ère lettre du mot.",
+    "skill_desc_decoder_lvl2": "Effet exclusif contre le Boss : révèle la 1ère lettre plus une autre lettre aléatoire du mot.",
     "boss_reward_extralife": "+1 Bouclier",
     "boss_reward_extralife_desc": "Récupère ou ajoute 1 bouclier pour la partie en cours",
     "boss_reward_continue": "Jeton Continuer",
@@ -147,6 +151,7 @@
     "levelup_prompt": "Choisissez 1 compétence à activer pour cette partie :",
     "levelup_btn_pick": "Choisir",
     "fb_dilation_upgraded": "Espacement amélioré jusqu'à {max} !",
+    "fb_decoder_upgraded": "🔍 Décodeur Niv. {level} actif contre le Boss !",
     "lib_title": "Bibliothèque Runique",
     "lib_sub": "Collection de mots découverts",
     "lib_discovered": "Mots Découverts",
@@ -517,7 +522,10 @@
     "hud_perk_lvl_max": "Niv. {lvl} (MAX)",
     "hud_perk_max": "MAX",
     "hud_perk_new": "NOUVEAU",
-    "hud_perk_upgrade": "Amélioration"
+    "hud_perk_upgrade": "Amélioration",
+    "hud_perk_decoder_badge_1": "1 Lettre",
+    "hud_perk_decoder_badge_2": "2 Lettres",
+    "hud_perk_disabled_boss": "Inactive sur le Boss"
   },
   "syllables": [
     "de",

@@ -133,6 +133,10 @@
     "skill_desc_dilation": "룬의 출현 간격과 거리를 최대 {max}배까지 넓힙니다",
     "skill_name_autodestroy": "코스믹 에코",
     "skill_desc_autodestroy": "1분마다 10초 동안 이번 런에서 학습한 단어를 자동 파괴합니다",
+    "skill_name_decoder": "코스믹 디코더",
+    "skill_desc_decoder": "보스 수수께끼 해독 (Lv. {level}/2)",
+    "skill_desc_decoder_lvl1": "보스 전용 효과: 단어의 첫 번째 글자를 해독하여 표시.",
+    "skill_desc_decoder_lvl2": "보스 전용 효과: 첫 번째 글자와 다른 무작위 글자 하나를 해독하여 표시.",
     "boss_reward_extralife": "+1 실드",
     "boss_reward_extralife_desc": "현재 런의 실드를 1개 회복하거나 추가합니다",
     "boss_reward_continue": "이어하기 토큰",
@@ -147,6 +151,7 @@
     "levelup_prompt": "이번 런에서 활성화할 능력 1개를 선택하세요:",
     "levelup_btn_pick": "선택",
     "fb_dilation_upgraded": "간격 확장이 최대 {max}배로 강화되었습니다!",
+    "fb_decoder_upgraded": "🔍 디코더 Lv.{level} 보스전 적용!",
     "lib_title": "룬 라이브러리",
     "lib_sub": "발견한 단어 모음집",
     "lib_discovered": "발견한 단어",
@@ -517,7 +522,10 @@
     "hud_perk_lvl_max": "Lv. {lvl} (최대)",
     "hud_perk_max": "최대",
     "hud_perk_new": "신규",
-    "hud_perk_upgrade": "강화"
+    "hud_perk_upgrade": "강화",
+    "hud_perk_decoder_badge_1": "1글자",
+    "hud_perk_decoder_badge_2": "2글자",
+    "hud_perk_disabled_boss": "보스전 비활성"
   },
   "syllables": [
     "ga",

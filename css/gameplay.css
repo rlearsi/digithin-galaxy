@@ -286,6 +286,16 @@
   background: var(--glass-card);
 }
 
+.run-perk-card.perk-boss-disabled {
+  background: var(--glass-card);
+  filter: saturate(0.85);
+}
+
+.run-perk-card.perk-boss-disabled:hover {
+  filter: saturate(0.85) brightness(1.08);
+  transform: none !important;
+}
+
 .perk-card-left {
   display: flex;
   align-items: center;
@@ -402,6 +412,11 @@
 .perk-status-badge.perk-status-cd {
   background: var(--glass-sub-card);
   color: var(--t2);
+}
+
+.perk-status-badge.perk-status-disabled {
+  background: var(--glass-sub-card);
+  color: var(--t3);
 }
 
 /* ======================================================
@@ -1373,6 +1388,19 @@
   background: var(--glass-sub-card);
   border: none;
   color: var(--t3);
+}
+
+.bmb-slot.revealed {
+  background: rgba(6, 182, 212, 0.22);
+  color: #38BDF8;
+  border: none;
+  font-weight: 800;
+  animation: bmbRevealPulse 2s infinite alternate ease-in-out;
+}
+
+@keyframes bmbRevealPulse {
+  0% { transform: scale(1); filter: brightness(1); }
+  100% { transform: scale(1.04); filter: brightness(1.12); }
 }
 
 .bmb-slot.filled {

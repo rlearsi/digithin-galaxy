@@ -772,6 +772,27 @@ const SKILLS_CONFIG = {
       st.autodestroyAccum = 0;
     },
     onExpire: () => {}
+  },
+  decoder: {
+    id: 'decoder',
+    icon: '🔍',
+    image: 'assets/skills/decoder.webp',
+    nameKey: 'skill_name_decoder',
+    descKey: 'skill_desc_decoder',
+    get name() { return (typeof t === 'function') ? t(this.nameKey) : 'Decodificador Cósmico'; },
+    get desc() {
+      const lvl = (typeof state !== 'undefined' && state?.runPerks?.decoder) ? state.runPerks.decoder : 1;
+      const key = `skill_desc_decoder_lvl${lvl}`;
+      return (typeof t === 'function' && t(key) !== key)
+        ? t(key)
+        : (typeof t === 'function' ? t(this.descKey, { level: lvl, max: 2 }) : '');
+    },
+    maxLevel: 2,
+    color: '#06B6D4',
+    type: 'passive',
+    category: 'skill',
+    onActivate: () => {},
+    onExpire: () => {}
   }
 };
 

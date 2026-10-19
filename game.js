@@ -968,19 +968,6 @@ function completeItem(item) {
       }
     }
 
-    // Requisito 2: Surgimento aleatório de Alien Boss vindo do espaço para atacar a Terra
-    if (state.gameMode !== 'training' && (!state.bossBattle || !state.bossBattle.active)) {
-      const passedCount = Math.max(state.runWordsLearned?.size || 0, state.runWordsSeen?.size || 0);
-      if (passedCount >= 3) {
-        if (typeof state.alienInvasionCountdown === 'undefined' || state.alienInvasionCountdown === null) {
-          state.alienInvasionCountdown = 16 + Math.floor(Math.random() * 8);
-        }
-        state.alienInvasionCountdown--;
-        if (state.alienInvasionCountdown <= 0 && typeof triggerAlienBossInvasion === 'function') {
-          triggerAlienBossInvasion();
-        }
-      }
-    }
 
     // Track total words completed for achievement 'mestre_tipo' (100 Palavras Completas)
     try {

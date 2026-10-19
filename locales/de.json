@@ -133,6 +133,10 @@
     "skill_desc_dilation": "Erhöht den Abstand und das Intervall zwischen Runen bis zu {max}",
     "skill_name_autodestroy": "Kosmisches Echo",
     "skill_desc_autodestroy": "Zerstört gelernte Wörter dieses Laufs für 10s alle 1 Minute automatisch",
+    "skill_name_decoder": "Kosmischer Dekoder",
+    "skill_desc_decoder": "Entschlüsselt Boss-Rätsel (St. {level}/2)",
+    "skill_desc_decoder_lvl1": "Exklusiver Boss-Effekt: Entschlüsselt und enthüllt den 1. Buchstaben des Wortes.",
+    "skill_desc_decoder_lvl2": "Exklusiver Boss-Effekt: Enthüllt den 1. Buchstaben plus einen weiteren zufälligen Buchstaben.",
     "boss_reward_extralife": "+1 Schild",
     "boss_reward_extralife_desc": "Stellt 1 Schild für den aktuellen Durchlauf wieder her oder fügt es hinzu",
     "boss_reward_continue": "Continue-Münze",
@@ -147,6 +151,7 @@
     "levelup_prompt": "Wähle 1 Fähigkeit zur Aktivierung für diesen Durchlauf:",
     "levelup_btn_pick": "Wählen",
     "fb_dilation_upgraded": "Abstand verbessert bis zu {max}!",
+    "fb_decoder_upgraded": "🔍 Dekoder St. {level} aktiv gegen den Boss!",
     "lib_title": "Runenbibliothek",
     "lib_sub": "Sammlung entdeckter Wörter",
     "lib_discovered": "Wörter Entdeckt",
@@ -517,7 +522,10 @@
     "hud_perk_lvl_max": "St. {lvl} (MAX)",
     "hud_perk_max": "MAX",
     "hud_perk_new": "NEU",
-    "hud_perk_upgrade": "Upgrade"
+    "hud_perk_upgrade": "Upgrade",
+    "hud_perk_decoder_badge_1": "1 Buchstabe",
+    "hud_perk_decoder_badge_2": "2 Buchstaben",
+    "hud_perk_disabled_boss": "Inaktiv beim Boss"
   },
   "syllables": [
     "de",

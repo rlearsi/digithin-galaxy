@@ -133,6 +133,10 @@
     "skill_desc_dilation": "ルーンの出現間隔と距離を最大{max}倍に広げます",
     "skill_name_autodestroy": "コズミックエコー",
     "skill_desc_autodestroy": "1分ごとに10秒間、このランで学習済みの単語を自動破壊します",
+    "skill_name_decoder": "コズミック・デコーダー",
+    "skill_desc_decoder": "ボスの謎を解読 (Lv. {level}/2)",
+    "skill_desc_decoder_lvl1": "ボス戦限定効果：単語の1文字目を解読して表示。",
+    "skill_desc_decoder_lvl2": "ボス戦限定効果：1文字目に加えて別のランダムな1文字を解読して表示。",
     "boss_reward_extralife": "+1 シールド",
     "boss_reward_extralife_desc": "現在のランのシールドを1回復または追加します",
     "boss_reward_continue": "コンティニューコイン",
@@ -147,6 +151,7 @@
     "levelup_prompt": "このランで発動する能力を1つ選択してください：",
     "levelup_btn_pick": "選択",
     "fb_dilation_upgraded": "間隔拡大が最大{max}倍に強化されました！",
+    "fb_decoder_upgraded": "🔍 デコーダー Lv.{level} ボス戦で発動！",
     "lib_title": "ルーンライブラリ",
     "lib_sub": "発見した単語のコレクション",
     "lib_discovered": "発見した単語",
@@ -517,7 +522,10 @@
     "hud_perk_lvl_max": "Lv. {lvl} (MAX)",
     "hud_perk_max": "MAX",
     "hud_perk_new": "NEW",
-    "hud_perk_upgrade": "強化"
+    "hud_perk_upgrade": "強化",
+    "hud_perk_decoder_badge_1": "1文字",
+    "hud_perk_decoder_badge_2": "2文字",
+    "hud_perk_disabled_boss": "ボス戦無効"
   },
   "syllables": [
     "ka",

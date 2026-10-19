@@ -199,16 +199,69 @@ function getBossForPhase(phase) {
 }
 
 /**
+ * Computes which indices of the target word are revealed by the Decoder skill
+ * Level 1: reveals the 1st letter of the word (index 0)
+ * Level 2: reveals the 1st letter + another random letter of the word
+ */
+function computeBossRevealedIndices(targetWord, decoderLvl) {
+  const revealed = [];
+  if (!targetWord || typeof decoderLvl !== 'number' || decoderLvl < 1) return revealed;
+  if (targetWord.length > 0) {
+    revealed.push(0); // 1) Primeira letra da palavra no boss
+  }
+  if (decoderLvl >= 2 && targetWord.length > 1) {
+    // 2) Outra letra aleatória da palavra do boss
+    const candidates = [];
+    for (let i = 1; i < targetWord.length; i++) {
+      const ch = targetWord[i];
+      if (ch !== ' ' && ch !== '-') {
+        candidates.push(i);
+      }
+    }
+    if (candidates.length > 0) {
+      const picked = candidates[Math.floor(Math.random() * candidates.length)];
+      revealed.push(picked);
+    }
+  }
+  return revealed;
+}
+
+/**
+ * Checks and rolls for an Alien Boss invasion when completing the level XP (between levels)
+ */
+function checkBossSpawnOnLevelComplete() {
+  if (!state || state.gameMode === 'training') return false;
+  if (state.bossBattle && state.bossBattle.active) return false;
+  if (typeof isBossBattlesEnabled === 'function' && !isBossBattlesEnabled()) return false;
+
+  const pool = (typeof getBossWordPool === 'function') ? getBossWordPool() : [];
+  if (pool.length < 3) return false;
+
+  state.levelsSinceBoss = (state.levelsSinceBoss || 0) + 1;
+
+  // Wait at least 2 levels between boss battles
+  if (state.levelsSinceBoss < 2) return false;
+
+  const roll = Math.random();
+  // Probabilities: level 2 since boss: 35%, level 3: 60%, level 4+: 100%
+  const shouldSpawn = (state.levelsSinceBoss === 2 && roll < 0.35) ||
+                      (state.levelsSinceBoss === 3 && roll < 0.60) ||
+                      (state.levelsSinceBoss >= 4);
+
+  if (shouldSpawn) {
+    triggerAlienBossInvasion();
+    return true;
+  }
+  return false;
+}
+
+/**
  * Triggers a random Alien Boss invasion from outer space to attack Earth
  */
 function triggerAlienBossInvasion(overrideBoss) {
   if (!state || state.bossBattle?.active || state.paused || state.gameMode === 'training') return;
   const pool = getBossWordPool();
-  if (pool.length < 3) {
-    // Adia a invasão até que o jogador digite e aprenda mais palavras na run atual
-    state.alienInvasionCountdown = 10 + Math.floor(Math.random() * 6);
-    return;
-  }
+  if (pool.length < 3) return;
   state.pendingBossInvasion = false;
   const candidateBoss = overrideBoss || getRandomBoss(1);
   state.pendingBoss = candidateBoss;
@@ -285,8 +338,18 @@ function beginBossPhase() {
   state.typedBuffer     = '';
   state.spawnQueue      = [];
 
+  // Desabilita a habilidade "bomb" durante todo o confronto com o Boss
+  if (state.activeSkill === 'bomb') {
+    if (state.activeTimers) state.activeTimers.bomb = 0;
+    state.activeSkill = null;
+  }
+  if (state.skillQueue && state.skillQueue.includes('bomb')) {
+    state.skillQueue = state.skillQueue.filter(id => id !== 'bomb');
+  }
+
   renderBossHud(state.bossBattle.boss, state.bossBattle.boss.lives, state.bossBattle.boss.maxLives || 3);
   renderQueue();
+  if (typeof renderRunPerks === 'function') renderRunPerks();
   playSound('bossSpawn');
   if (typeof startBossBgm === 'function') {
     startBossBgm(state.bossBattle.boss);
@@ -407,6 +470,10 @@ function spawnBossMeaningBox() {
     <div class="bmb-slots"></div>
   `;
 
+  // Revela letras do enigma se a habilidade Decodificador Cósmico estiver ativa
+  const decoderLvl = (state.runPerks && state.runPerks.decoder) ? state.runPerks.decoder : 0;
+  state.bossBattle.revealedIndices = computeBossRevealedIndices(targetWord, decoderLvl);
+
   renderBossMeaningSlots(el, targetWord, '');
 
   clearTimeout(state.spawnTimer);
@@ -484,6 +551,9 @@ function updateBossLanguage(lang) {
       if (lenEl) lenEl.textContent = lettersText;
       const meaningEl = el.querySelector('.bmb-meaning');
       if (meaningEl) meaningEl.textContent = `"${state.bossBattle.currentWord.meaning}"`;
+
+      const decoderLvl = (state.runPerks && state.runPerks.decoder) ? state.runPerks.decoder : 0;
+      state.bossBattle.revealedIndices = computeBossRevealedIndices(targetWord, decoderLvl);
 
       state.typedBuffer = '';
       renderBossMeaningSlots(el, targetWord, '');
@@ -743,9 +813,6 @@ function grantBossReward(reward) {
 }
 
 function continueAfterBossVictory() {
-  if (typeof stopBossBgm === 'function') {
-    stopBossBgm(false);
-  }
   hideBossHud();
   if (typeof hideAlienSpaceInvader === 'function') {
     hideAlienSpaceInvader();
@@ -762,8 +829,8 @@ function continueAfterBossVictory() {
   state.speedMultiplier = state.preBossSpeed || diffCfg.initialSpeed || 1.0;
   state.preBossSpeed = null;
 
-  // Agenda a próxima invasão alienígena aleatória na partida contínua
-  state.alienInvasionCountdown = 16 + Math.floor(Math.random() * 10);
+  // Agenda a contagem para a próxima invasão alienígena aleatória entre fases
+  state.levelsSinceBoss = 0;
 
   // Retoma o fluxo contínuo normal do jogo sem reiniciar fase
   clearArea();
@@ -775,6 +842,15 @@ function continueAfterBossVictory() {
   state.rafId = requestAnimationFrame(gameLoop);
   scheduleSpawn();
   updateHUD();
+  if (typeof renderRunPerks === 'function') renderRunPerks();
+
+  // Garante o encerramento imediato de qualquer áudio residual do boss e retoma a trilha normal
+  if (typeof stopBossBgm === 'function') {
+    stopBossBgm(false);
+  }
+  if (typeof startNormalBgm === 'function') {
+    startNormalBgm();
+  }
 }
 
 let currentBossTestIndex = 0;
@@ -884,3 +960,6 @@ function startBossTest() {
   }
   beginBossPhase();
 }
+
+window.checkBossSpawnOnLevelComplete = checkBossSpawnOnLevelComplete;
+window.computeBossRevealedIndices = computeBossRevealedIndices;

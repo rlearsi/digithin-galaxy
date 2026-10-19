@@ -133,6 +133,10 @@
     "skill_desc_dilation": "Increases spacing and interval between runics up to {max}",
     "skill_name_autodestroy": "Cosmic Echo",
     "skill_desc_autodestroy": "Automatically shatters learned words from this run for 10s every 1 minute",
+    "skill_name_decoder": "Cosmic Decoder",
+    "skill_desc_decoder": "Decodes Boss enigmas (Lv. {level}/2)",
+    "skill_desc_decoder_lvl1": "Boss-exclusive effect: deciphers and reveals the 1st letter of the word.",
+    "skill_desc_decoder_lvl2": "Boss-exclusive effect: deciphers and reveals the 1st letter plus another random letter of the word.",
     "boss_reward_extralife": "+1 Shield",
     "boss_reward_extralife_desc": "Recovers or adds 1 shield for the current run",
     "boss_reward_continue": "Continue Token",
@@ -147,6 +151,7 @@
     "levelup_prompt": "Choose 1 ability to activate for this run:",
     "levelup_btn_pick": "Choose",
     "fb_dilation_upgraded": "Spacing upgraded up to {max}!",
+    "fb_decoder_upgraded": "🔍 Decoder Lv. {level} active against the Boss!",
     "lib_title": "Runic Library",
     "lib_sub": "Collection of discovered words",
     "lib_discovered": "Words Discovered",
@@ -517,7 +522,10 @@
     "hud_perk_lvl_max": "Lv. {lvl} (MAX)",
     "hud_perk_max": "MAX",
     "hud_perk_new": "NEW",
-    "hud_perk_upgrade": "Upgrade"
+    "hud_perk_upgrade": "Upgrade",
+    "hud_perk_decoder_badge_1": "1 Letter",
+    "hud_perk_decoder_badge_2": "2 Letters",
+    "hud_perk_disabled_boss": "Inactive on Boss"
   },
   "syllables": [
     "th",

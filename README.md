@@ -1,6 +1,6 @@
 # 🌌 Digithin Galaxy — Jogo de Digitação Arcade Espacial
 
-[![Versão](https://img.shields.io/badge/versão-v1.18-8B5CF6?style=for-the-badge&logo=gamepad)](ChangeLog.md)
+[![Versão](https://img.shields.io/badge/versão-v1.19.1-8B5CF6?style=for-the-badge&logo=gamepad)](ChangeLog.md)
 [![Status](https://img.shields.io/badge/status-estável-10B981?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 [![Licença](https://img.shields.io/badge/licença-MIT-38BDF8?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 
@@ -297,13 +297,14 @@ As habilidades obtidas no Level-Up atuam automaticamente ao longo da partida, ge
 | Habilidade | Tipo | Ciclo / Duração | Efeito em Jogo |
 |:---|:---:|:---:|:---|
 | **Dilação Espacial** | Passiva Permanente | Efeito Contínuo | Amplia o espaçamento e intervalo entre novos vocábulos gerados (2x a 5x). |
-| **Bomba Estelar** | Ativa Periódica | A cada 90s (Nv. 1 a 5) | Onda de choque estelar cujo raio expande a cada upgrade até atingir a tela toda no Nv. 5. |
+| **Bomba Estelar** | Ativa Periódica | A cada 90s (Nv. 1 a 5) | Onda de choque estelar cujo raio expande a cada upgrade até a tela toda (inativa durante Boss). |
 | **Escudo de Plasma** | Ativa Periódica | 10s a 50s a cada 180s | Imunidade absoluta no escudo da Terra: duração cresce de 10s (Nv. 1) a 50s (Nv. 5). |
 | **Criostase Sideral** | Ativa Periódica | 10s a cada 120s | Paralisa todos os vocábulos na esteira, suspendendo a queda em direção à Terra. |
 | **Vórtice Cósmico** | Ativa Periódica | A cada 180s | Abre um vórtice gravitacional temporário no centro da tela que suga todos os termos ativos da tela. |
 | **Desaceleração** | Ativa Periódica | 15s a cada 60s | Reduz a velocidade de descida dos vocábulos em 50%. |
 | **Eco Cósmico** | Ativa Periódica | 10s a cada 60s | Aniquila automaticamente termos aprendidos com mira inteligente (`.eco-target`) e buffer lock. |
 | **Pontos em Dobro** | Ativa Periódica | 10s a cada 30s | Dobra toda a pontuação recebida por digitação durante sua vigência (2x). |
+| **Decodificador Cósmico** | Passiva de Boss | Nv. 1 a 2 | Atua exclusivamente no Chefão: revela a 1ª letra (Nv. 1) e mais uma letra aleatória (Nv. 2) do enigma cósmico. |
 
 ---
 

@@ -87,6 +87,12 @@ function applyChosenLevelUpSkill(skillId) {
       ? t('fb_bomb_upgraded', { level: curLevel })
       : (isMax ? `💣 Bomba Nv. ${curLevel} (MÁX)!` : `💣 Bomba Nv. ${curLevel}!`);
     showFeedback(msg, 'special');
+  } else if (skillId === 'decoder') {
+    const curLevel = state.runPerks.decoder;
+    const msg = typeof t === 'function'
+      ? t('fb_decoder_upgraded', { level: curLevel })
+      : `🔍 Decodificador Nv. ${curLevel}!`;
+    showFeedback(msg, 'special');
   } else {
     // For periodic skills:
     // If acquiring for the first time, give quick first-trigger in 3s so the player enjoys it immediately!
@@ -123,6 +129,11 @@ function applyChosenLevelUpSkill(skillId) {
     state.level = (state.level || 1) + 1;
     state.xpRequired = getRequiredXpForLevel(state.level);
     triggerLevelUp();
+  } else {
+    // Sorteio do Alien Boss entre uma fase e outra após completar o XP do level
+    if (typeof checkBossSpawnOnLevelComplete === 'function') {
+      checkBossSpawnOnLevelComplete();
+    }
   }
 }
 
@@ -138,6 +149,11 @@ function updatePeriodicSkills(dt) {
   for (const skillId in state.runPerks) {
     const def = SKILLS_CONFIG[skillId];
     if (!def || def.type !== 'periodic') continue;
+
+    // A habilidade "bomb" fica estritamente desabilitada durante todo o confronto com o Boss
+    if (skillId === 'bomb' && state.bossBattle && state.bossBattle.active) {
+      continue;
+    }
 
     // If currently running active effect:
     if ((state.activeTimers?.[skillId] || 0) > 0) {
@@ -194,6 +210,9 @@ function updatePeriodicSkills(dt) {
 }
 
 function firePeriodicSkill(skillId) {
+  // A habilidade "bomb" não pode ser disparada durante o Boss
+  if (skillId === 'bomb' && state.bossBattle && state.bossBattle.active) return;
+
   const def = SKILLS_CONFIG[skillId];
   if (!def) return;
 
@@ -254,7 +273,7 @@ function onSkillExpired(skillId) {
 // ============================================================
 
 function triggerScreenBombExplosion() {
-  if (!gameArea) return;
+  if (!gameArea || (state.bossBattle && state.bossBattle.active)) return;
   playSound('bomb');
 
   const gRect = gameArea.getBoundingClientRect();
@@ -288,7 +307,7 @@ function triggerScreenBombExplosion() {
   const remainingItems = [];
 
   state.activeItems.forEach(item => {
-    if (item.removing) return;
+    if (item.removing || item.isBossMeaning) return;
 
     let isHit = false;
     if (isFullScreen) {
@@ -366,14 +385,14 @@ function triggerScreenBombExplosion() {
 }
 
 function triggerVortexScreenSuck() {
-  if (!gameArea) return;
+  if (!gameArea || (state.bossBattle && state.bossBattle.active)) return;
   playSound('skill');
 
   let extraPts = 0;
   let totalChars = 0;
 
   state.activeItems.forEach(item => {
-    if (item.removing) return;
+    if (item.removing || item.isBossMeaning) return;
     item.removing = true;
     item.el?.classList.add('swallowing');
     const pts = item.type === 'letter' ? 1 : item.type === 'syllable' ? 3 : wordPts(item.text);
