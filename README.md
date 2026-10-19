@@ -1,6 +1,6 @@
 # 🌌 Digithin Galaxy — Jogo de Digitação Arcade Espacial
 
-[![Versão](https://img.shields.io/badge/versão-v1.21.5-8B5CF6?style=for-the-badge&logo=gamepad)](ChangeLog.md)
+[![Versão](https://img.shields.io/badge/versão-v1.22-8B5CF6?style=for-the-badge&logo=gamepad)](ChangeLog.md)
 [![Status](https://img.shields.io/badge/status-estável-10B981?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 [![Licença](https://img.shields.io/badge/licença-MIT-38BDF8?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 
@@ -70,7 +70,16 @@ digithin-galaxy/
     ├── i18n.js           # Mecanismo de internacionalização e carregador de pacotes JSON
     ├── data.js           # Constantes (CFG), vocabulário cósmico (75 palavras) e chefões
     ├── state.js          # Estado global da corrida e persistência local (digithin_galaxy_*)
-    ├── ui.js             # Atualizações de HUD, notificações, partículas e modais
+    ├── ui.js             # Cache de DOM, tema, configurações, modais de regras/privacidade e fila
+    ├── keyboard.js       # Guia de dedos, teclado virtual mobile e adaptação de viewport
+    ├── hud.js            # HUD: PPM, pontuação animada, painéis laterais e palavras descobertas
+    ├── skills-hud.js     # Ícones de habilidades, perks da run e slots de habilidades
+    ├── effects.js        # Partículas, destroços celestes em canvas, explosões e confete
+    ├── progress-ui.js    # Modais de Conquistas e Mundos de Treinamento
+    ├── boss-ui.js        # Interface de batalha de chefões, sprites e modal de recompensa
+    ├── levelup-ui.js     # Modal de Level-Up e lógica de seleção
+    ├── slots-ui.js       # Slots de save e perfil da tela inicial
+    ├── updater.js        # Motor de atualização do app e renovação de cache
     ├── shop.js           # Mecânica de ofertas e inventário de habilidades
     ├── library.js        # Biblioteca Cósmica e estatísticas de vocabulário
     ├── spawner.js        # Motor de geração de vocábulos cósmicos e esteira de fila
