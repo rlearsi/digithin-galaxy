@@ -49,6 +49,7 @@ function startGame(mode = 'classic') {
   refillQueue();
   updateHUD();
   beginPhase();
+  if (typeof startNormalBgm === 'function') startNormalBgm();
   if (typeof saveGameProgress === 'function') saveGameProgress();
 }
 
@@ -133,6 +134,7 @@ function goToMainMenu() {
   state.activeTimers = {};
   if (typeof hideBossHud === 'function') hideBossHud();
   if (state.bossBattle) state.bossBattle.active = false;
+  if (typeof stopAllBgm === 'function') stopAllBgm();
 
   const pauseOverlay = $('pause-overlay');
   if (pauseOverlay) pauseOverlay.classList.add('hidden');
@@ -236,6 +238,7 @@ function gameOver() {
   state.paused = true;
   cancelAnimationFrame(state.rafId);
   clearTimeout(state.spawnTimer);
+  if (typeof stopAllBgm === 'function') stopAllBgm();
 
   // Close any open overlays or settings dialogs so they never bleed into Game Over
   if (typeof closeSettings === 'function') closeSettings();

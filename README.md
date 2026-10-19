@@ -1,6 +1,6 @@
 # 🌌 Digithin Galaxy — Jogo de Digitação Arcade Espacial
 
-[![Versão](https://img.shields.io/badge/versão-v1.17-8B5CF6?style=for-the-badge&logo=gamepad)](ChangeLog.md)
+[![Versão](https://img.shields.io/badge/versão-v1.17.1-8B5CF6?style=for-the-badge&logo=gamepad)](ChangeLog.md)
 [![Status](https://img.shields.io/badge/status-estável-10B981?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 [![Licença](https://img.shields.io/badge/licença-MIT-38BDF8?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 
@@ -19,6 +19,7 @@
   - [3.5 Multiplicadores de Combo e Modo Fúria](#35-multiplicadores-de-combo-e-modo-fúria)
   - [3.6 Batalhas Contra Comandantes Alienígenas](#36-batalhas-contra-comandantes-alienígenas)
   - [3.7 Modos de Jogo Disponíveis](#37-modos-de-jogo-disponíveis)
+  - [3.8 Trilha Sonora & Suíte Musical Procedural (Web Audio API)](#38-trilha-sonora--suíte-musical-procedural-web-audio-api)
 - [4. Habilidades Roguelike Periódicas](#4-habilidades-roguelike-periódicas)
 - [5. Guia Visual de Digitação (Finger Guide)](#5-guia-visual-de-digitação-finger-guide)
 - [6. Biblioteca Cósmica (Bestiário Astronômico)](#6-biblioteca-cósmica-bestiário-astronômico)
@@ -164,6 +165,128 @@ Durante a corrida contínua, aliens invasores surgem aleatoriamente vindo das pr
 2. **Modo Treinamento por Linhas do Teclado:** 4 Mundos pedagógicos (Linha Base, Linha Superior, Linha Inferior e Acentos) com progressão didática dedo-a-dedo.
 3. **Modo Zen (Treino Livre):** Modo descontraído com escudos ilimitados, ideal para treinar velocidade e vocabulário sem risco de derrota.
 4. **Modo Contra o Relógio (Time Attack 60s):** Desafio frenético de 1 minuto em busca do recorde máximo de palavras e WPM.
+
+---
+
+### 3.8 Trilha Sonora & Suíte Musical Procedural (Web Audio API)
+
+O Digithin Galaxy conta com um motor de áudio e música **100% nativo e procedural**, sintetizado em tempo real no navegador via **Web Audio API** através de osciladores, filtros biquad e geradores de ruído (`js/audio.js`). O sistema não utiliza nenhum arquivo externo de áudio (`.mp3` ou `.ogg`), garantindo carregamento instantâneo com zero latência, peso zero de download e sincronização matemática precisa.
+
+A suíte musical é composta por **7 faixas originais com identidades e especificações exclusivas**: uma faixa relaxante para a exploração normal e 6 temas dramáticos de ação e suspense para cada Comandante Alienígena.
+
+#### Tabela Comparativa da Suíte Musical
+
+| Faixa / Contexto | Invasor / Momento | BPM | Escala / Harmonia | Timbre Principal | Estilo Musical & Atmosfera |
+|:---|:---|:---:|:---|:---|:---|
+| **Cosmic Voyage** | Partida Normal (sem Boss) | **82** | Fá Maior Lídio / Pentatônica | Onda Senoidal (`sine`) macia + Sinos Triângulo | Ambient Espacial / Ethereal Synthwave |
+| **March of the Warlord** | **Kragthor** (Belicista `#EF4444`) | **144** | Mi Menor com Sensível Ré# e Trítono | Dente-de-serra (`sawtooth`) a 420Hz + Bumbo Duplo | Ação Militar Alienígena / Metal Arcade 16-bit |
+| **Psionic Dread** | **Vespera** (Psiônica `#A855F7`) | **124** | Dó Frígio (Intervalo de 2ª menor) | Triângulo a 280Hz + Onda Quadrada com vibrato | Puro Suspense Cósmico / Terror Alienígena |
+| **Titanium Siege** | **Xylarion** (Couraçado `#06B6D4`) | **134** | Ré Menor Dórico Sincopado | Dente-de-serra a 380Hz + Arpeggios Quadrados | Cyberpunk Industrial / Couraçado Mecha |
+| **Swarm Infiltration** | **Zorkon** (Colmeia `#10B981`) | **140** | Lá Menor Cromático Descendente | Dente-de-serra a 450Hz + Percussão Tribal | Caos Extraterrestre / Perseguição de Enxame |
+| **Singularity Abyss** | **Nebulor** (Matéria Escura `#6366F1`) | **120** | Si Lócrio / Menor com 5ª Diminuta | Triângulo ultra-grave a 260Hz + Lead Espectral | Terror Abissal / Singularidade Gravitacional |
+| **Imperial Cataclysm** | **Xenor** (Nave-Mãe `#F59E0B`) | **140** | Sol Menor Orquestral em Crescendo | Fanfarra Quadrada + Baixo Galopante a 400Hz | Clímax Imperial Sinfônico / Batalha Decisiva |
+
+---
+
+#### Fichas Técnicas Detalhadas de Cada Faixa
+
+##### 1. Cosmic Voyage (Trilha da Partida Normal)
+- **Contexto:** Toca suavemente durante a digitação regular de vocábulos e termos astronômicos, antes do surgimento de chefões.
+- **BPM:** `82 BPM` (Andamento calmo, contemplativo e relaxante).
+- **Harmonia & Modos:** Fá Maior Lídio / Pentatônica Cósmica com tétrades suaves e abertas:
+  * Compasso 1: `Fmaj7` (`['F4', 'A4', 'C5', 'E5']`)
+  * Compasso 2: `Cmaj7` (`['C4', 'E4', 'G4', 'B4']`)
+  * Compasso 3: `Dm7` (`['D4', 'F4', 'A4', 'C5']`)
+  * Compasso 4: `Am7` (`['A3', 'C4', 'E4', 'G4']`)
+  * Compasso 5 a 8: Progressão harmônica com `Bbmaj7`, `Fmaj7`, `Gm7` e `Cadd9`.
+- **Timbres & Formas de Onda:**
+  * **Pads Atmosféricos:** Ondas senoidais puras (`sine`) com envelope macio (ataque suave de 250ms e decaimento de 7.5 tempos), preenchendo o vácuo espacial com textura sedosa.
+  * **Sinos de Poeira Cósmica:** Onda triângulo (`triangle`) aveludada disparando notas estelares cintilantes nos contra-tempos.
+  * **Sub-Baixo Quente:** Onda senoidal pura em oitavas graves (`F1`, `C2`, `D2`, `A1`), criando sensação de sustentação gravitacional suave.
+- **Estilo:** Ambient Espacial / Chillout Lofi Sci-Fi.
+- **Objetivo Sonoro:** Proporcionar máximo conforto auditivo e concentração para a leitura e digitação, sem poluição sonora.
+
+##### 2. March of the Warlord (Tema do Boss Kragthor — `#EF4444`)
+- **Contexto:** Batalha contra o General Belicista Kragthor e sua frota armada de cruzadores pesados.
+- **BPM:** `144 BPM` (Ação frenética, urgente e veloz).
+- **Harmonia & Modos:** Mi Menor Natural e Menor Harmônico com o intervalo dissonante de trítono (`Bb2`) e a sensível dramática (`D#4` / `D#5`):
+  * Progressão: `Em` $\rightarrow$ `C` $\rightarrow$ `Am` $\rightarrow$ `B7`.
+- **Timbres & Formas de Onda:**
+  * **Baixo Galopante:** Onda dente-de-serra (`sawtooth`) com corte em filtro passa-baixas a 420Hz, simulando palhetada dupla contínua de baixo elétrico pesado.
+  * **Lead Melódico:** Onda dente-de-serra com ataque rápido e vibrato agressivo, executando riffs cortantes.
+  * **Bateria Militar de Assalto:** Bumbo analógico em triângulo descendo bruscamente de 140Hz para 30Hz em 80ms, com caixa estalada gerada por ruído branco filtrado a 1200Hz.
+- **Estilo:** Heavy Action Chiptune / Metal Arcade 16-bit (*Doom / Contra*).
+- **Objetivo Sonoro:** Impulsionar a adrenalina e velocidade de digitação em um ritmo marcial implacável.
+
+##### 3. Psionic Dread (Tema da Boss Vespera — `#A855F7`)
+- **Contexto:** Confronto contra a Rainha das Sombras Vespera e suas ondas psíquicas alienígenas.
+- **BPM:** `124 BPM` (Cadenciado, arrastado e tenso).
+- **Harmonia & Modos:** Dó Frígio (`C`, `Db`, `Eb`, `F`, `G`, `Ab`, `Bb`), explorando o choque psicológico da 2ª menor (`Db`) contra a tônica (`C`):
+  * Progressão: `Cm` $\rightarrow$ `Db` $\rightarrow$ `Fm` $\rightarrow$ `Gdim`.
+- **Timbres & Formas de Onda:**
+  * **Baixo Sombrio:** Onda triângulo (`triangle`) filtrada a 280Hz, emitindo passos furtivos no vácuo.
+  * **Lead Psiônico:** Onda quadrada (`square`) com sustentação misteriosa e modulação sutil de frequência evocando lamentos espaciais.
+  * **Arpeggiator Rápido:** Semicolcheias arpeggiadas que desenham nuvens mentais imprevisíveis.
+  * **Percussão Espectral:** Caixas secas e batimentos esparsos que quebram o padrão convencional de bateria.
+- **Estilo:** Dark Ambient Suspense / Chiptune Gótico (*Super Metroid / Castlevania: Symphony of the Night*).
+- **Objetivo Sonoro:** Criar clima de suspense e arrepios, fazendo o jogador sentir a pressão psíquica da invasão.
+
+##### 4. Titanium Siege (Tema do Boss Xylarion — `#06B6D4`)
+- **Contexto:** Batalha contra o Couraçado Cibernético Xylarion e sua armadura de titânio biomecânica.
+- **BPM:** `134 BPM` (Firme, mecânico e percussivo).
+- **Harmonia & Modos:** Ré Menor Dórico com 6ª maior (`B`) e síncopes industriais:
+  * Progressão: `Dm` $\rightarrow$ `G` $\rightarrow$ `F` $\rightarrow$ `Bb`.
+- **Timbres & Formas de Onda:**
+  * **Baixo Mecatrônico:** Onda dente-de-serra (`sawtooth`) filtrada a 380Hz com acentuação em oitavas robóticas sincopadas.
+  * **Lead Laser:** Onda quadrada (`square`) com estalidos agudos simulando disparos de lasers e circuitos integrados.
+  * **Percussão Industrial:** Bumbo de impacto sólido e pratos de ruído passa-altas a 6500Hz simulando engrenagens e turbinas metálicas.
+- **Estilo:** Cyberpunk Industrial / Mecha Arcade (*Mega Man X / OutRun 16-bit*).
+- **Objetivo Sonoro:** Transmitir a sensação de embate contra uma máquina impenetrável de engenharia alienígena avançada.
+
+##### 5. Swarm Infiltration (Tema do Boss Zorkon — `#10B981`)
+- **Contexto:** Combate contra a horda reptiliana adaptativa do Comandante Zorkon.
+- **BPM:** `140 BPM` (Frenético, ágil e sinuoso).
+- **Harmonia & Modos:** Lá Menor com arpeggios cromáticos descendentes (`A` $\rightarrow$ `G#` $\rightarrow$ `G` $\rightarrow$ `F#` $\rightarrow$ `F`):
+  * Progressão: `Am` $\rightarrow$ `Dm` $\rightarrow$ `F` $\rightarrow$ `E7`.
+- **Timbres & Formas de Onda:**
+  * **Baixo Serpenteante:** Onda dente-de-serra (`sawtooth`) com filtro aberto a 450Hz, correndo velozmente pelas notas da escala.
+  * **Lead de Enxame:** Onda quadrada rápida com notas staccato ultracurtas simulando o movimento de milhares de bio-drones.
+  * **Bateria Tribal:** Síncopes em semicolcheias rápidas e rufos de caixa em compasso acelerado.
+- **Estilo:** Extraterrestrial Chaos / Hive Swarm Rush.
+- **Objetivo Sonoro:** Gerar sensação de perseguição ininterrupta, forçando digitação rápida e reflexos afiados.
+
+##### 6. Singularity Abyss (Tema do Boss Nebulor — `#6366F1`)
+- **Contexto:** Duelo contra a Entidade Espectral Nebulor no horizonte de eventos de um buraco negro de matéria escura.
+- **BPM:** `120 BPM` (Profundo, gravitacional e imersivo).
+- **Harmonia & Modos:** Si Lócrio e Si Menor Abissal com acordes de 5ª diminuta:
+  * Progressão: `Bm` $\rightarrow$ `Fdim` $\rightarrow$ `Em` $\rightarrow$ `G`.
+- **Timbres & Formas de Onda:**
+  * **Pulso Gravitacional:** Baixo em onda triângulo (`triangle`) com filtro sub-grave a 260Hz, ressoando como ondas gravitacionais de baixa frequência.
+  * **Lead Espectral:** Onda dente-de-serra com notas longas em decaimento lento, ecoando no vazio absoluto.
+  * **Drums do Abismo:** Bumbos profundos com sustentação prolongada e percussão soturna.
+- **Estilo:** Cosmic Void Horror / Abyssal Space Chiptune (*FTL / Dead Space 16-bit*).
+- **Objetivo Sonoro:** Evocar a pequenez do ser humano perante as forças misteriosas e devoradoras da matéria escura.
+
+##### 7. Imperial Cataclysm (Tema do Boss Xenor — `#F59E0B`)
+- **Contexto:** A batalha final decisiva contra a Nave-Mãe Imperial do Imperador Xenor.
+- **BPM:** `140 BPM` (Grandioso, triunfal e dramático).
+- **Harmonia & Modos:** Sol Menor Épico com progressão clássica de confronto final em crescendo sinfônico:
+  * Progressão: `Gm` $\rightarrow$ `Eb` $\rightarrow$ `Cm` $\rightarrow$ `D7`.
+- **Timbres & Formas de Onda:**
+  * **Fanfarra Imperial:** Onda quadrada dupla com arpeggios heróicos e acordes orquestrais 16-bit.
+  * **Baixo Galopante Imperial:** Onda dente-de-serra a 400Hz mantendo o ritmo de marcha triunfal com oitavas duplas.
+  * **Percussão de Batalha:** Caixa marcial e bumbo sincronizados em compassos dramáticos.
+- **Estilo:** Clímax Sinfônico 16-bit / Boss Battle Final (*Final Fantasy VI / Chrono Trigger*).
+- **Objetivo Sonoro:** Clímax épico máximo, transmitindo a urgência heróica da última esperança de defesa do planeta Terra.
+
+---
+
+#### Ciclo de Transições e Gerenciamento Dinâmico de Áudio
+1. **Início da Partida (`startGame`):** A trilha relaxante *Cosmic Voyage* inicia suavemente através de um fade-in de 600ms.
+2. **Invasão do Boss (`beginBossPhase`):** O sistema realiza crossfade instantâneo: a música normal faz fade-out de 450ms e o tema de ação específico daquele chefe entra com impacto via fade-in de 350ms.
+3. **Derrota do Boss (`defeatBoss`):** O tema do chefe é interrompido com fade-out de 450ms e a trilha suave *Cosmic Voyage* é restabelecida automaticamente para a continuidade da corrida.
+4. **Pausa & Retomada (`pauseGame` / `resumeGame`):** A música ativa pausa imediatamente e retoma perfeitamente sincronizada ao final da contagem regressiva de 3 segundos.
+5. **Controle de Mudo (`toggleSound`):** Rampa suavemente os ganhos de masterização em 80ms, evitando estalos ou cortes abruptos de áudio.
 
 ---
 

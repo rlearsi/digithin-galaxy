@@ -32,7 +32,7 @@ function confirmGoToMainMenu() {
 }
 
 function executeExitToMainMenu() {
-  if (typeof stopBossBgm === 'function') stopBossBgm(false);
+  if (typeof stopAllBgm === 'function') stopAllBgm();
   cancelExitConfirm();
   if (typeof saveGameProgress === 'function') saveGameProgress();
   goToMainMenu();

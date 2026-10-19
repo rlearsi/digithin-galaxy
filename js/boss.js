@@ -283,7 +283,7 @@ function beginBossPhase() {
   renderQueue();
   playSound('bossSpawn');
   if (typeof startBossBgm === 'function') {
-    startBossBgm();
+    startBossBgm(state.bossBattle.boss);
   }
 
   const currentLang = typeof getLanguage === 'function' ? getLanguage() : 'en';

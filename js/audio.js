@@ -290,134 +290,304 @@ document.addEventListener('keydown', () => actx(), { once: true });
 document.addEventListener('click',   () => actx(), { once: true });
 
 // ============================================================
-// CHIPTUNE 8-BIT / 16-BIT PROCEDURAL BOSS BATTLE BGM ENGINE
+// PROCEDURAL RETRO 8-BIT / 16-BIT MUSIC SUITE
+// - 6 Distinct Dramatic / Suspense / Action Boss Themes
+// - 1 Calming, Ethereal Ambient Space Theme for Normal Match
 // ============================================================
+let _normalBgmPlaying = false;
+let _normalBgmPaused = false;
+let _normalBgmTimer = null;
+let _normalBgmGain = null;
+let _normalBgmNextTime = 0;
+let _normalBgmStep = 0;
+
 let _bossBgmPlaying = false;
 let _bossBgmPaused = false;
 let _bossBgmTimer = null;
 let _bossBgmGain = null;
-let _bossBgmNextStepTime = 0;
+let _bossBgmNextTime = 0;
 let _bossBgmStep = 0;
+let _activeBossTrackKey = 'alien_kragthor';
 
-const CHIPTUNE_BPM = 138;
-const SECONDS_PER_BEAT = 60 / CHIPTUNE_BPM;
-const SECONDS_PER_16TH = SECONDS_PER_BEAT / 4; // ~0.1087s
-const LOOKAHEAD_MS = 25;
-const SCHEDULE_AHEAD_TIME = 0.12;
-
-// Frequencies for musical notes (4-measure battle sequence)
+// Complete note frequency table
 const NOTE_FREQS = {
-  // Bass Octaves (1 & 2)
-  'A1': 55.00, 'Bb1': 58.27, 'B1': 61.74,
-  'C2': 65.41, 'C#2': 69.30, 'D2': 73.42, 'Eb2': 77.78, 'E2': 82.41, 'F2': 87.31, 'F#2': 92.50, 'G2': 98.00, 'G#2': 103.83, 'A2': 110.00, 'Bb2': 116.54, 'B2': 123.47,
-  // Mid Octaves (3 & 4)
-  'C3': 130.81, 'C#3': 138.59, 'D3': 146.83, 'Eb3': 155.56, 'E3': 164.81, 'F3': 174.61, 'F#3': 185.00, 'G3': 196.00, 'G#3': 207.65, 'A3': 220.00, 'Bb3': 233.08, 'B3': 246.94,
-  'C4': 261.63, 'C#4': 277.18, 'D4': 293.66, 'Eb4': 311.13, 'E4': 329.63, 'F4': 349.23, 'F#4': 369.99, 'G4': 392.00, 'G#4': 415.30, 'A4': 440.00, 'Bb4': 466.16, 'B4': 493.88,
-  // High Octaves (5 & 6)
-  'C5': 523.25, 'C#5': 554.37, 'D5': 587.33, 'Eb5': 622.25, 'E5': 659.25, 'F5': 698.46, 'F#5': 739.99, 'G5': 783.99, 'G#5': 830.61, 'A5': 880.00, 'Bb5': 932.33, 'B5': 987.77,
-  'C6': 1046.50, 'D6': 1174.66, 'E6': 1318.51
+  // Octaves 1 & 2 (Bass)
+  'E1': 41.20, 'F1': 43.65, 'F#1': 46.25, 'G1': 49.00, 'G#1': 51.91, 'A1': 55.00, 'Bb1': 58.27, 'B1': 61.74,
+  'C2': 65.41, 'C#2': 69.30, 'D2': 73.42, 'D#2': 77.78, 'Eb2': 77.78, 'E2': 82.41, 'F2': 87.31, 'F#2': 92.50,
+  'G2': 98.00, 'G#2': 103.83, 'Ab2': 103.83, 'A2': 110.00, 'Bb2': 116.54, 'B2': 123.47,
+  // Octaves 3 & 4 (Mid / Harmony)
+  'C3': 130.81, 'C#3': 138.59, 'Db3': 138.59, 'D3': 146.83, 'D#3': 155.56, 'Eb3': 155.56, 'E3': 164.81, 'F3': 174.61, 'F#3': 185.00,
+  'G3': 196.00, 'G#3': 207.65, 'Ab3': 207.65, 'A3': 220.00, 'Bb3': 233.08, 'B3': 246.94,
+  'C4': 261.63, 'C#4': 277.18, 'Db4': 277.18, 'D4': 293.66, 'D#4': 311.13, 'Eb4': 311.13, 'E4': 329.63, 'F4': 349.23, 'F#4': 369.99,
+  'G4': 392.00, 'G#4': 415.30, 'Ab4': 415.30, 'A4': 440.00, 'Bb4': 466.16, 'B4': 493.88,
+  // Octaves 5 & 6 (Lead & Chimes)
+  'C5': 523.25, 'C#5': 554.37, 'Db5': 554.37, 'D5': 587.33, 'D#5': 622.25, 'Eb5': 622.25, 'E5': 659.25, 'F5': 698.46, 'F#5': 739.99,
+  'G5': 783.99, 'G#5': 830.61, 'Ab5': 830.61, 'A5': 880.00, 'Bb5': 932.33, 'B5': 987.77,
+  'C6': 1046.50, 'C#6': 1108.73, 'D6': 1174.66, 'Eb6': 1244.51, 'E6': 1318.51, 'F6': 1396.91, 'G6': 1567.98
 };
 
-// 4-measure pattern (64 sixteenth steps, 16 steps per measure)
-// Measure 1: Dm, Measure 2: Bb, Measure 3: C, Measure 4: A7/Dm turnaround
-const BASS_PATTERN = [
-  // Measure 1 (Dm)
-  'D2', null, 'D2', null, 'D3', null, 'D2', null, 'D2', null, 'F2', null, 'D3', null, 'D2', null,
-  // Measure 2 (Bb)
-  'Bb1', null, 'Bb1', null, 'Bb2', null, 'Bb1', null, 'Bb1', null, 'D2', null, 'Bb2', null, 'Bb1', null,
-  // Measure 3 (C)
-  'C2', null, 'C2', null, 'C3', null, 'C2', null, 'C2', null, 'E2', null, 'C3', null, 'C2', null,
-  // Measure 4 (A7 / Dm turnaround)
-  'A1', null, 'A1', null, 'A2', null, 'A1', null, 'C#2', null, 'E2', null, 'A2', null, 'G2', null,
-];
-
-// Lead Melody (Square wave, energetic fast retro pulse)
-const LEAD_PATTERN = [
-  // Measure 1
-  'D5', null, 'D5', null, 'F5', null, 'A5', null, 'D6', null, 'C6', null, 'A5', null, 'F5', null,
-  // Measure 2
-  'Bb5', null, 'D5', null, 'F5', null, 'Bb5', null, 'A5', null, 'F5', null, 'D5', null, 'F5', null,
-  // Measure 3
-  'G5', null, 'C5', null, 'E5', null, 'G5', null, 'Bb5', null, 'A5', null, 'G5', null, 'E5', null,
-  // Measure 4
-  'A5', null, 'G5', null, 'F5', null, 'E5', null, 'F5', null, 'E5', null, 'C#5', null, 'E5', null,
-];
-
-// Arpeggio Chords (Square wave, classic rapid chiptune arpeggios on every 16th step)
-const CHORD_TABLE = [
-  // Measure 1: Dm [D4, F4, A4, D5]
-  ['D4', 'F4', 'A4', 'D5'],
-  // Measure 2: Bb [Bb3, D4, F4, Bb4]
-  ['Bb3', 'D4', 'F4', 'Bb4'],
-  // Measure 3: C [C4, E4, G4, C5]
-  ['C4', 'E4', 'G4', 'C5'],
-  // Measure 4: A [A3, C#4, E4, A4]
-  ['A3', 'C#4', 'E4', 'A4'],
-];
-
-// Noise buffer cache for crisp 8-bit snare and hi-hats
-let _chiptuneNoiseBuffer = null;
-function getChiptuneNoiseBuffer(ctx) {
-  if (!_chiptuneNoiseBuffer) {
-    const len = Math.floor(ctx.sampleRate * 0.15);
-    _chiptuneNoiseBuffer = ctx.createBuffer(1, len, ctx.sampleRate);
-    const data = _chiptuneNoiseBuffer.getChannelData(0);
+// Cached noise buffer for 8-bit & 16-bit snares and cosmic shimmer
+let _noiseBuf = null;
+function getNoiseBuffer(ctx) {
+  if (!_noiseBuf) {
+    const len = Math.floor(ctx.sampleRate * 0.20);
+    _noiseBuf = ctx.createBuffer(1, len, ctx.sampleRate);
+    const d = _noiseBuf.getChannelData(0);
     for (let i = 0; i < len; i++) {
-      data[i] = (Math.random() * 2 - 1) * (1 - i / len);
+      d[i] = (Math.random() * 2 - 1) * (1 - i / len);
     }
   }
-  return _chiptuneNoiseBuffer;
+  return _noiseBuf;
 }
 
-function scheduleChiptuneStep(stepIndex, time, ctx, masterGain) {
-  if (!masterGain) return;
+// ============================================================
+// 1. THE 6 PROCEDURAL BOSS THEMES (DRAMATIC, SUSPENSE & ACTION)
+// ============================================================
+const BOSS_TRACKS = {
+  // Kragthor: Warlord — Frenetic Alien Military Action (Doom / Contra 16-bit)
+  'alien_kragthor': {
+    bpm: 144,
+    bassType: 'sawtooth',
+    leadType: 'sawtooth',
+    filterFreq: 420,
+    bassPattern: [
+      'E2', 'E2', 'E3', 'E2',  'E2', 'E3', 'E2', 'G2',   'E2', 'E2', 'F2', 'E2',   'E2', 'E3', 'Bb2', 'A2',
+      'C2', 'C2', 'C3', 'C2',  'C2', 'C3', 'C2', 'E2',   'C2', 'C2', 'D2', 'C2',   'C2', 'C3', 'G2', 'F2',
+      'A1', 'A1', 'A2', 'A1',  'A1', 'A2', 'A1', 'C2',   'A1', 'A1', 'B1', 'A1',   'A1', 'A2', 'E2', 'D2',
+      'B1', 'B1', 'B2', 'B1',  'B1', 'D#2', 'B1', 'F#2', 'B1', 'B1', 'A2', 'G2',   'F#2', 'G2', 'F#2', 'D#2'
+    ],
+    leadPattern: [
+      'E5', null, 'G5', null,  'F#5', null, 'E5', null,  'Bb5', null, 'A5', null,  'G5', 'F#5', 'E5', null,
+      'C5', null, 'E5', null,  'G5', null, 'C6', null,   'B5', null, 'A5', null,   'G5', 'A5', 'G5', null,
+      'A5', null, 'C6', null,  'E6', null, 'D6', null,   'C6', null, 'B5', null,   'A5', 'B5', 'A5', null,
+      'B5', null, 'D#5', null, 'F#5', null, 'A5', null,  'G5', 'F#5', 'E5', 'D#5', 'E5', null, null, null
+    ],
+    chords: [
+      ['E4', 'G4', 'B4', 'E5'],
+      ['C4', 'E4', 'G4', 'C5'],
+      ['A3', 'C4', 'E4', 'A4'],
+      ['B3', 'D#4', 'F#4', 'B4']
+    ],
+    drumStyle: 'heavy_assault'
+  },
+
+  // Vespera: Psionic — Pure Cosmic Suspense & Alien Dread (Super Metroid / Castlevania)
+  'alien_vespera': {
+    bpm: 124,
+    bassType: 'triangle',
+    leadType: 'square',
+    filterFreq: 280,
+    bassPattern: [
+      'C2', null, 'C2', 'Db2', null, 'C2', null, 'G2',   'C2', null, 'Db2', null, 'F2', null, 'Db2', null,
+      'Db2', null, 'Db2', 'Eb2', null, 'Db2', null, 'Ab2', 'Db2', null, 'Eb2', null, 'Gb2', null, 'Eb2', null,
+      'F1', null, 'F1', 'Ab1', null, 'F1', null, 'C2',   'F1', null, 'Ab1', null, 'Db2', null, 'C2', null,
+      'G1', null, 'G1', 'Db2', null, 'G1', null, 'Eb2',  'G1', null, 'Db2', null, 'C2', null, 'B1', null
+    ],
+    leadPattern: [
+      'C5', null, 'Db5', null, 'Eb5', null, 'G5', null,  'F#5', null, 'Eb5', null, 'Db5', null, 'C5', null,
+      'Db5', null, 'F5', null, 'Ab5', null, 'C6', null,  'Bb5', null, 'Ab5', null, 'F5', null, 'Eb5', null,
+      'Ab5', null, 'G5', null, 'F5', null, 'Eb5', null,  'Db5', null, 'C5', null, 'Bb4', null, 'C5', null,
+      'Db5', null, 'Eb5', null, 'G5', null, 'F#5', null, 'Eb5', null, 'Db5', null, 'C5', null, null, null
+    ],
+    chords: [
+      ['C4', 'Eb4', 'G4', 'C5'],
+      ['Db4', 'F4', 'Ab4', 'Db5'],
+      ['F3', 'Ab3', 'C4', 'F4'],
+      ['G3', 'Bb3', 'Db4', 'G4']
+    ],
+    drumStyle: 'psionic_creeping'
+  },
+
+  // Xylarion: Dreadnought — Heavy Industrial Titanium Confrontation
+  'alien_xylarion': {
+    bpm: 134,
+    bassType: 'sawtooth',
+    leadType: 'square',
+    filterFreq: 380,
+    bassPattern: [
+      'D2', 'D2', null, 'D2',  'F2', null, 'G2', null,   'D2', 'D2', null, 'D2',  'Ab2', 'G2', 'F2', 'D2',
+      'G1', 'G1', null, 'G1',  'Bb1', null, 'C2', null,  'G1', 'G1', null, 'G1',  'Db2', 'C2', 'Bb1', 'G1',
+      'F1', 'F1', null, 'F1',  'A1', null, 'C2', null,   'F1', 'F1', null, 'F1',  'B1', 'Bb1', 'A1', 'F1',
+      'Bb1', 'Bb1', null, 'Bb1','D2', null, 'F2', null,  'A1', null, 'C#2', null, 'D2', null, 'E2', null
+    ],
+    leadPattern: [
+      'D5', null, 'F5', 'G5',  'Ab5', 'G5', 'F5', 'D5',  'C5', 'D5', 'F5', 'G5',  'A5', 'C6', 'D6', null,
+      'G5', null, 'Bb5', 'C6', 'Db6', 'C6', 'Bb5', 'G5', 'F5', 'G5', 'Bb5', 'C6', 'D6', 'F6', 'G6', null,
+      'F5', null, 'A5', 'C6',  'E6', 'D6', 'C6', 'A5',   'G5', 'A5', 'C6', 'D6',  'C6', 'Bb5', 'A5', null,
+      'Bb5', null, 'D6', null, 'F6', null, 'E6', null,  'C#6', null, 'A5', null, 'D6', null, null, null
+    ],
+    chords: [
+      ['D4', 'F4', 'A4', 'D5'],
+      ['G3', 'B3', 'D4', 'G4'],
+      ['F3', 'A3', 'C4', 'F4'],
+      ['Bb3', 'D4', 'F4', 'Bb4']
+    ],
+    drumStyle: 'industrial_march'
+  },
+
+  // Zorkon: Reptilian Swarm — Rapid Extraterrestrial Chaos & Hive Alert
+  'alien_zorkon': {
+    bpm: 140,
+    bassType: 'sawtooth',
+    leadType: 'square',
+    filterFreq: 450,
+    bassPattern: [
+      'A1', 'A1', 'C2', 'A1',  'Eb2', 'D2', 'C2', 'A1',  'A1', 'A1', 'F2', 'E2',  'D2', 'C2', 'B1', 'C2',
+      'D2', 'D2', 'F2', 'D2',  'Ab2', 'G2', 'F2', 'D2',  'D2', 'D2', 'Bb2', 'A2', 'G2', 'F2', 'E2', 'F2',
+      'F1', 'F1', 'A1', 'F1',  'C2', 'B1', 'A1', 'F1',   'F1', 'F1', 'D2', 'C2',  'B1', 'A1', 'G#1', 'A1',
+      'E1', 'E1', 'G#1', 'E1', 'B1', 'A1', 'G#1', 'E1',  'E1', 'E1', 'D2', 'C2',  'B1', 'C2', 'B1', 'G#1'
+    ],
+    leadPattern: [
+      'A5', 'C6', 'B5', 'Bb5', 'A5', 'G#5', 'A5', 'E5', 'F5', 'E5', 'Eb5', 'D5', 'C5', 'B4', 'A4', 'C5',
+      'D5', 'F5', 'E5', 'Eb5', 'D5', 'C#5', 'D5', 'A5', 'Bb5', 'A5', 'Ab5', 'G5', 'F5', 'E5', 'D5', 'F5',
+      'C6', 'B5', 'A5', 'G#5', 'A5', 'E5', 'F5', 'A5',  'D6', 'C6', 'B5', 'A5',  'G#5', 'A5', 'B5', 'D6',
+      'E6', null, 'D6', null,  'C6', null, 'B5', null,  'G#5', null, 'B5', null, 'A5', null, null, null
+    ],
+    chords: [
+      ['A3', 'C4', 'E4', 'A4'],
+      ['D4', 'F4', 'A4', 'D5'],
+      ['F3', 'A3', 'C4', 'F4'],
+      ['E3', 'G#3', 'B3', 'E4']
+    ],
+    drumStyle: 'swarm_pulse'
+  },
+
+  // Nebulor: Dark Matter — Abyssal Cosmic Void & Gravitational Singularity
+  'alien_nebulor': {
+    bpm: 120,
+    bassType: 'triangle',
+    leadType: 'sawtooth',
+    filterFreq: 260,
+    bassPattern: [
+      'B1', null, 'B1', null,  'F2', null, 'E2', null,   'B1', null, 'D2', null,  'C2', null, 'B1', null,
+      'G1', null, 'G1', null,  'Db2', null, 'C2', null,  'G1', null, 'Bb1', null, 'Ab1', null, 'G1', null,
+      'E1', null, 'E1', null,  'Bb1', null, 'A1', null,  'E1', null, 'G1', null,  'F1', null, 'E1', null,
+      'F#1', null, 'F#1', null,'C2', null, 'B1', null,   'F#1', null, 'A1', null, 'G1', null, 'F#1', null
+    ],
+    leadPattern: [
+      'B4', null, 'D5', null,  'F5', null, 'E5', null,   'G5', null, 'F5', null,  'D5', null, 'C#5', null,
+      'G4', null, 'Bb4', null, 'Db5', null, 'C5', null,  'Eb5', null, 'Db5', null, 'Bb4', null, 'A4', null,
+      'E4', null, 'G4', null,  'Bb4', null, 'A4', null,  'C5', null, 'Bb4', null, 'G4', null, 'F#4', null,
+      'F#4', null, 'A4', null, 'C5', null, 'B4', null,   'D#5', null, 'C5', null, 'B4', null, null, null
+    ],
+    chords: [
+      ['B3', 'D4', 'F4', 'B4'],
+      ['G3', 'Bb3', 'Db4', 'G4'],
+      ['E3', 'G3', 'Bb3', 'E4'],
+      ['F#3', 'A3', 'C4', 'F#4']
+    ],
+    drumStyle: 'dark_abyss'
+  },
+
+  // Xenor: Galactic Mothership — Climax Imperial Confrontation
+  'alien_xenor': {
+    bpm: 140,
+    bassType: 'sawtooth',
+    leadType: 'square',
+    filterFreq: 400,
+    bassPattern: [
+      'G1', 'G1', 'G2', 'G1',  'Bb1', 'Bb1', 'Bb2', 'Bb1', 'Eb2', 'Eb2', 'Eb3', 'Eb2', 'D2', 'D2', 'F#2', 'D2',
+      'C2', 'C2', 'C3', 'C2',  'Eb2', 'Eb2', 'Eb3', 'Eb2', 'Ab2', 'Ab2', 'Ab3', 'Ab2', 'G2', 'G2', 'B2', 'G2',
+      'Eb2', 'Eb2', 'Eb3', 'Eb2','G2', 'G2', 'G3', 'G2',   'Bb2', 'Bb2', 'Bb3', 'Bb2', 'A2', 'A2', 'C3', 'A2',
+      'D2', 'D2', 'D3', 'D2',  'F#2', 'F#2', 'F#3', 'F#2', 'A2', 'A2', 'A3', 'A2',    'D3', 'C3', 'Bb2', 'A2'
+    ],
+    leadPattern: [
+      'G5', null, 'Bb5', 'A5', 'G5', 'D6', 'C6', 'Bb5', 'A5', 'Bb5', 'C6', 'D6', 'Eb6', 'D6', 'C6', 'Bb5',
+      'C5', null, 'Eb5', 'D5', 'C5', 'G5', 'F5', 'Eb5', 'D5', 'Eb5', 'F5', 'G5', 'Ab5', 'G5', 'F5', 'Eb5',
+      'Eb5', null, 'G5', 'F5', 'Eb5', 'Bb5', 'Ab5', 'G5', 'F5', 'G5', 'Ab5', 'Bb5', 'C6', 'Bb5', 'A5', 'G5',
+      'D6', null, 'F#6', null, 'A6', null, 'G6', null,  'F#6', 'E6', 'D6', 'C6', 'Bb5', 'A5', 'G5', null
+    ],
+    chords: [
+      ['G3', 'Bb3', 'D4', 'G4'],
+      ['C4', 'Eb4', 'G4', 'C5'],
+      ['Eb3', 'G3', 'Bb3', 'Eb4'],
+      ['D4', 'F#4', 'A4', 'D5']
+    ],
+    drumStyle: 'imperial_march'
+  }
+};
+
+// ============================================================
+// 2. THE CALM AMBIENT SPACE THEME (NORMAL GAMEPLAY WITHOUT BOSS)
+// ============================================================
+const NORMAL_SPACE_TRACK = {
+  bpm: 82,
+  bassPattern: [
+    'F1', null, null, null,  'F2', null, null, null,  'C2', null, null, null,  'C3', null, null, null,
+    'D2', null, null, null,  'D3', null, null, null,  'A1', null, null, null,  'A2', null, null, null,
+    'Bb1', null, null, null, 'Bb2', null, null, null, 'F1', null, null, null,  'F2', null, null, null,
+    'G1', null, null, null,  'G2', null, null, null,  'C2', null, null, null,  'E2', null, null, null
+  ],
+  padChords: [
+    ['F4', 'A4', 'C5', 'E5'],  // Fmaj7
+    ['C4', 'E4', 'G4', 'B4'],  // Cmaj7
+    ['D4', 'F4', 'A4', 'C5'],  // Dm7
+    ['A3', 'C4', 'E4', 'G4'],  // Am7
+    ['Bb3', 'D4', 'F4', 'A4'], // Bbmaj7
+    ['F3', 'A3', 'C4', 'E4'],  // Fmaj7
+    ['G3', 'Bb3', 'D4', 'F4'], // Gm7
+    ['C4', 'E4', 'G4', 'D5']   // Cadd9
+  ],
+  chimesPattern: [
+    'C6', null, null, 'E5', null, null, 'A5', null,  'G5', null, null, 'C5', null, null, 'E5', null,
+    'F5', null, null, 'A5', null, null, 'C6', null,  'E5', null, null, 'G5', null, null, 'B5', null,
+    'D5', null, null, 'F5', null, null, 'A5', null,  'C5', null, null, 'E5', null, null, 'G5', null,
+    'G5', null, null, 'B5', null, null, 'D6', null,  'C6', null, null, 'E6', null, null, null, null
+  ]
+};
+
+// ============================================================
+// 3. STEP SCHEDULERS (BOSS ACTION & NORMAL SPACE AMBIENCE)
+// ============================================================
+
+function scheduleBossBattleStep(track, stepIndex, time, ctx, masterGain) {
+  if (!masterGain || !track) return;
+  const sec16th = (60 / track.bpm) / 4;
   const stepInMeasure = stepIndex % 16;
   const measureIndex = Math.floor(stepIndex / 16) % 4;
 
-  // 1. DRUMS (8-bit kick & snare & hi-hat)
-  // Kick on beats 1 and 3 (steps 0, 8, and syncopation on step 10)
-  if (stepInMeasure === 0 || stepInMeasure === 8 || stepInMeasure === 10) {
-    const kickOsc = ctx.createOscillator();
-    const kickGain = ctx.createGain();
-    kickOsc.type = 'triangle';
-    kickOsc.frequency.setValueAtTime(125, time);
-    kickOsc.frequency.exponentialRampToValueAtTime(32, time + 0.08);
-    kickGain.gain.setValueAtTime(0.24, time);
-    kickGain.gain.exponentialRampToValueAtTime(0.001, time + 0.09);
-    kickOsc.connect(kickGain);
-    kickGain.connect(masterGain);
-    kickOsc.start(time);
-    kickOsc.stop(time + 0.10);
+  // 1. DRUMS (Dynamic 16-bit action percussion)
+  const isKick = (stepInMeasure === 0 || stepInMeasure === 8 || (track.drumStyle === 'heavy_assault' && (stepInMeasure === 6 || stepInMeasure === 10)));
+  if (isKick) {
+    const kOsc = ctx.createOscillator();
+    const kGain = ctx.createGain();
+    kOsc.type = 'triangle';
+    kOsc.frequency.setValueAtTime(140, time);
+    kOsc.frequency.exponentialRampToValueAtTime(30, time + 0.08);
+    kGain.gain.setValueAtTime(0.25, time);
+    kGain.gain.exponentialRampToValueAtTime(0.001, time + 0.09);
+    kOsc.connect(kGain);
+    kGain.connect(masterGain);
+    kOsc.start(time);
+    kOsc.stop(time + 0.10);
   }
 
-  // Snare on beats 2 and 4 (steps 4, 12, with roll on step 14 in measure 4)
   const isSnare = (stepInMeasure === 4 || stepInMeasure === 12 || (measureIndex === 3 && stepInMeasure === 14));
   if (isSnare) {
     const noise = ctx.createBufferSource();
-    noise.buffer = getChiptuneNoiseBuffer(ctx);
+    noise.buffer = getNoiseBuffer(ctx);
     const filter = ctx.createBiquadFilter();
     filter.type = 'bandpass';
-    filter.frequency.setValueAtTime(1400, time);
-    filter.Q.value = 1.2;
-    const noiseGain = ctx.createGain();
-    noiseGain.gain.setValueAtTime(0.16, time);
-    noiseGain.gain.exponentialRampToValueAtTime(0.001, time + 0.09);
+    filter.frequency.setValueAtTime(1200, time);
+    filter.Q.value = 1.3;
+    const nGain = ctx.createGain();
+    nGain.gain.setValueAtTime(0.18, time);
+    nGain.gain.exponentialRampToValueAtTime(0.001, time + 0.085);
     noise.connect(filter);
-    filter.connect(noiseGain);
-    noiseGain.connect(masterGain);
+    filter.connect(nGain);
+    nGain.connect(masterGain);
     noise.start(time);
-    noise.stop(time + 0.10);
+    noise.stop(time + 0.095);
   }
 
-  // Hi-hat on offbeats (steps 2, 6, 10, 14)
   if (stepInMeasure % 2 === 0 && !isSnare) {
     const hat = ctx.createBufferSource();
-    hat.buffer = getChiptuneNoiseBuffer(ctx);
+    hat.buffer = getNoiseBuffer(ctx);
     const hFilter = ctx.createBiquadFilter();
     hFilter.type = 'highpass';
-    hFilter.frequency.setValueAtTime(7000, time);
+    hFilter.frequency.setValueAtTime(6500, time);
     const hGain = ctx.createGain();
-    hGain.gain.setValueAtTime(0.05, time);
+    hGain.gain.setValueAtTime(0.045, time);
     hGain.gain.exponentialRampToValueAtTime(0.001, time + 0.025);
     hat.connect(hFilter);
     hFilter.connect(hGain);
@@ -426,84 +596,226 @@ function scheduleChiptuneStep(stepIndex, time, ctx, masterGain) {
     hat.stop(time + 0.03);
   }
 
-  // 2. BASS (Punchy triangle / sawtooth 8-bit bass)
-  const bassNote = BASS_PATTERN[stepIndex % BASS_PATTERN.length];
+  // 2. BASSLINE (Punchy and driving)
+  const bassNote = track.bassPattern[stepIndex % track.bassPattern.length];
   if (bassNote && NOTE_FREQS[bassNote]) {
-    const bassOsc = ctx.createOscillator();
-    const bassGain = ctx.createGain();
-    bassOsc.type = 'sawtooth';
-    bassOsc.frequency.setValueAtTime(NOTE_FREQS[bassNote], time);
-    // Lowpass filter for smooth 16-bit arcade warmth
-    const bassFilter = ctx.createBiquadFilter();
-    bassFilter.type = 'lowpass';
-    bassFilter.frequency.setValueAtTime(320, time);
+    const bOsc = ctx.createOscillator();
+    const bGain = ctx.createGain();
+    bOsc.type = track.bassType || 'sawtooth';
+    bOsc.frequency.setValueAtTime(NOTE_FREQS[bassNote], time);
 
-    bassGain.gain.setValueAtTime(0.18, time);
-    bassGain.gain.exponentialRampToValueAtTime(0.001, time + SECONDS_PER_16TH * 1.6);
-    bassOsc.connect(bassFilter);
-    bassFilter.connect(bassGain);
-    bassGain.connect(masterGain);
-    bassOsc.start(time);
-    bassOsc.stop(time + SECONDS_PER_16TH * 1.8);
+    const bFilter = ctx.createBiquadFilter();
+    bFilter.type = 'lowpass';
+    bFilter.frequency.setValueAtTime(track.filterFreq || 350, time);
+
+    bGain.gain.setValueAtTime(0.20, time);
+    bGain.gain.exponentialRampToValueAtTime(0.001, time + sec16th * 1.5);
+    bOsc.connect(bFilter);
+    bFilter.connect(bGain);
+    bGain.connect(masterGain);
+    bOsc.start(time);
+    bOsc.stop(time + sec16th * 1.6);
   }
 
-  // 3. ARPEGGIO CHORD (Fast 16th-note chiptune arp)
-  const chordNotes = CHORD_TABLE[measureIndex];
+  // 3. ARPEGGIATOR (Fast tense 16th-note chords)
+  const chordNotes = track.chords[measureIndex];
   if (chordNotes && chordNotes.length > 0) {
     const arpNote = chordNotes[stepInMeasure % chordNotes.length];
     if (arpNote && NOTE_FREQS[arpNote]) {
-      const arpOsc = ctx.createOscillator();
-      const arpGain = ctx.createGain();
-      arpOsc.type = 'square';
-      arpOsc.frequency.setValueAtTime(NOTE_FREQS[arpNote], time);
-      arpGain.gain.setValueAtTime(0.045, time);
-      arpGain.gain.exponentialRampToValueAtTime(0.001, time + SECONDS_PER_16TH * 0.85);
-      arpOsc.connect(arpGain);
-      arpGain.connect(masterGain);
-      arpOsc.start(time);
-      arpOsc.stop(time + SECONDS_PER_16TH * 0.95);
+      const aOsc = ctx.createOscillator();
+      const aGain = ctx.createGain();
+      aOsc.type = 'square';
+      aOsc.frequency.setValueAtTime(NOTE_FREQS[arpNote], time);
+      aGain.gain.setValueAtTime(0.045, time);
+      aGain.gain.exponentialRampToValueAtTime(0.001, time + sec16th * 0.82);
+      aOsc.connect(aGain);
+      aGain.connect(masterGain);
+      aOsc.start(time);
+      aOsc.stop(time + sec16th * 0.90);
     }
   }
 
-  // 4. LEAD MELODY (Square wave with vibrant arcade attack)
-  const leadNote = LEAD_PATTERN[stepIndex % LEAD_PATTERN.length];
+  // 4. DRAMATIC LEAD MELODY
+  const leadNote = track.leadPattern[stepIndex % track.leadPattern.length];
   if (leadNote && NOTE_FREQS[leadNote]) {
-    const leadOsc = ctx.createOscillator();
-    const leadGain = ctx.createGain();
-    leadOsc.type = 'square';
-    leadOsc.frequency.setValueAtTime(NOTE_FREQS[leadNote], time);
-    leadGain.gain.setValueAtTime(0.001, time);
-    leadGain.gain.linearRampToValueAtTime(0.095, time + 0.008);
-    leadGain.gain.exponentialRampToValueAtTime(0.001, time + SECONDS_PER_16TH * 1.7);
-    leadOsc.connect(leadGain);
-    leadGain.connect(masterGain);
-    leadOsc.start(time);
-    leadOsc.stop(time + SECONDS_PER_16TH * 1.8);
+    const lOsc = ctx.createOscillator();
+    const lGain = ctx.createGain();
+    lOsc.type = track.leadType || 'square';
+    lOsc.frequency.setValueAtTime(NOTE_FREQS[leadNote], time);
+    lGain.gain.setValueAtTime(0.001, time);
+    lGain.gain.linearRampToValueAtTime(0.095, time + 0.008);
+    lGain.gain.exponentialRampToValueAtTime(0.001, time + sec16th * 1.6);
+    lOsc.connect(lGain);
+    lGain.connect(masterGain);
+    lOsc.start(time);
+    lOsc.stop(time + sec16th * 1.7);
   }
 }
 
-function runChiptuneScheduler() {
+function scheduleNormalSpaceStep(stepIndex, time, ctx, masterGain) {
+  if (!masterGain) return;
+  const sec16th = (60 / NORMAL_SPACE_TRACK.bpm) / 4; // ~0.183s
+  const stepInMeasure = stepIndex % 8;
+  const measureIdx = Math.floor(stepIndex / 8) % NORMAL_SPACE_TRACK.padChords.length;
+
+  // 1. WARM SINE BASS (Deep cosmic floor, soft and rounded)
+  const bassNote = NORMAL_SPACE_TRACK.bassPattern[stepIndex % NORMAL_SPACE_TRACK.bassPattern.length];
+  if (bassNote && NOTE_FREQS[bassNote]) {
+    const bOsc = ctx.createOscillator();
+    const bGain = ctx.createGain();
+    bOsc.type = 'sine';
+    bOsc.frequency.setValueAtTime(NOTE_FREQS[bassNote], time);
+    bGain.gain.setValueAtTime(0.001, time);
+    bGain.gain.linearRampToValueAtTime(0.14, time + 0.05);
+    bGain.gain.exponentialRampToValueAtTime(0.001, time + sec16th * 3.8);
+    bOsc.connect(bGain);
+    bGain.connect(masterGain);
+    bOsc.start(time);
+    bOsc.stop(time + sec16th * 4.0);
+  }
+
+  // 2. ETHEREAL PAD CHORDS (Velvety smooth cosmic harmony)
+  if (stepInMeasure === 0) {
+    const chord = NORMAL_SPACE_TRACK.padChords[measureIdx];
+    if (chord) {
+      chord.forEach((note, nIdx) => {
+        if (!NOTE_FREQS[note]) return;
+        const pOsc = ctx.createOscillator();
+        const pGain = ctx.createGain();
+        pOsc.type = 'sine';
+        pOsc.frequency.setValueAtTime(NOTE_FREQS[note], time);
+        pGain.gain.setValueAtTime(0.001, time);
+        pGain.gain.linearRampToValueAtTime(0.022, time + 0.25);
+        pGain.gain.exponentialRampToValueAtTime(0.001, time + sec16th * 7.5);
+        pOsc.connect(pGain);
+        pGain.connect(masterGain);
+        pOsc.start(time);
+        pOsc.stop(time + sec16th * 7.8);
+      });
+    }
+  }
+
+  // 3. TWINKLING SPACE CHIMES (Soft triangle notes like gentle stardust)
+  const chimeNote = NORMAL_SPACE_TRACK.chimesPattern[stepIndex % NORMAL_SPACE_TRACK.chimesPattern.length];
+  if (chimeNote && NOTE_FREQS[chimeNote]) {
+    const cOsc = ctx.createOscillator();
+    const cGain = ctx.createGain();
+    cOsc.type = 'triangle';
+    cOsc.frequency.setValueAtTime(NOTE_FREQS[chimeNote], time);
+    cGain.gain.setValueAtTime(0.001, time);
+    cGain.gain.linearRampToValueAtTime(0.038, time + 0.015);
+    cGain.gain.exponentialRampToValueAtTime(0.001, time + sec16th * 2.2);
+    cOsc.connect(cGain);
+    cGain.connect(masterGain);
+    cOsc.start(time);
+    cOsc.stop(time + sec16th * 2.4);
+  }
+}
+
+// ============================================================
+// 4. BGM SCHEDULERS & ENGINE RUNNERS
+// ============================================================
+
+function runNormalBgmScheduler() {
+  if (!_normalBgmPlaying || _normalBgmPaused) return;
+  try {
+    const ctx = actx();
+    const sec16th = (60 / NORMAL_SPACE_TRACK.bpm) / 4;
+    while (_normalBgmNextTime < ctx.currentTime + 0.14) {
+      scheduleNormalSpaceStep(_normalBgmStep, _normalBgmNextTime, ctx, _normalBgmGain);
+      _normalBgmNextTime += sec16th;
+      _normalBgmStep = (_normalBgmStep + 1) % 64;
+    }
+  } catch (_) {}
+  _normalBgmTimer = setTimeout(runNormalBgmScheduler, 28);
+}
+
+function runBossBgmScheduler() {
   if (!_bossBgmPlaying || _bossBgmPaused) return;
   try {
     const ctx = actx();
-    while (_bossBgmNextStepTime < ctx.currentTime + SCHEDULE_AHEAD_TIME) {
-      scheduleChiptuneStep(_bossBgmStep, _bossBgmNextStepTime, ctx, _bossBgmGain);
-      _bossBgmNextStepTime += SECONDS_PER_16TH;
+    const track = BOSS_TRACKS[_activeBossTrackKey] || BOSS_TRACKS['alien_kragthor'];
+    const sec16th = (60 / track.bpm) / 4;
+    while (_bossBgmNextTime < ctx.currentTime + 0.14) {
+      scheduleBossBattleStep(track, _bossBgmStep, _bossBgmNextTime, ctx, _bossBgmGain);
+      _bossBgmNextTime += sec16th;
       _bossBgmStep = (_bossBgmStep + 1) % 64;
     }
   } catch (_) {}
-  _bossBgmTimer = setTimeout(runChiptuneScheduler, LOOKAHEAD_MS);
+  _bossBgmTimer = setTimeout(runBossBgmScheduler, 25);
 }
 
-function startBossBgm() {
-  if (_bossBgmPlaying && !_bossBgmPaused) return;
+// ============================================================
+// 5. PUBLIC API: TRANSITIONS & PLAYBACK CONTROLS
+// ============================================================
+
+function getBossTrackKey(boss) {
+  if (!boss) return 'alien_kragthor';
+  const id = boss.id || '';
+  if (BOSS_TRACKS[id]) return id;
+  const match = Object.keys(BOSS_TRACKS).find(k => id.includes(k.replace('alien_', '')) || (boss.nameKey && boss.nameKey.includes(k.replace('alien_', ''))));
+  return match || 'alien_kragthor';
+}
+
+function startNormalBgm() {
+  if (_bossBgmPlaying) return; // Não toca se o boss estiver em andamento
+  if (_normalBgmPlaying && !_normalBgmPaused) return;
+  try {
+    const ctx = actx();
+    if (!_normalBgmGain) {
+      _normalBgmGain = ctx.createGain();
+      _normalBgmGain.connect(ctx.destination);
+    }
+    const targetVol = isSoundEnabled() ? 0.75 : 0.001;
+    _normalBgmGain.gain.cancelScheduledValues(ctx.currentTime);
+    _normalBgmGain.gain.setValueAtTime(0.001, ctx.currentTime);
+    _normalBgmGain.gain.linearRampToValueAtTime(targetVol, ctx.currentTime + 0.6);
+
+    _normalBgmPlaying = true;
+    _normalBgmPaused = false;
+    _normalBgmStep = 0;
+    _normalBgmNextTime = ctx.currentTime + 0.05;
+
+    clearTimeout(_normalBgmTimer);
+    runNormalBgmScheduler();
+  } catch (_) {}
+}
+
+function stopNormalBgm(fade = true) {
+  if (!_normalBgmPlaying) return;
+  try {
+    const ctx = actx();
+    if (_normalBgmGain) {
+      if (fade) {
+        _normalBgmGain.gain.cancelScheduledValues(ctx.currentTime);
+        _normalBgmGain.gain.setValueAtTime(_normalBgmGain.gain.value, ctx.currentTime);
+        _normalBgmGain.gain.linearRampToValueAtTime(0.001, ctx.currentTime + 0.45);
+      } else {
+        _normalBgmGain.gain.setValueAtTime(0.001, ctx.currentTime);
+      }
+    }
+  } catch (_) {}
+  setTimeout(() => {
+    _normalBgmPlaying = false;
+    _normalBgmPaused = false;
+    clearTimeout(_normalBgmTimer);
+    _normalBgmTimer = null;
+  }, fade ? 480 : 20);
+}
+
+function startBossBgm(boss) {
+  // 1. Fade out suave da música normal da partida
+  stopNormalBgm(true);
+
+  _activeBossTrackKey = getBossTrackKey(boss);
+
   try {
     const ctx = actx();
     if (!_bossBgmGain) {
       _bossBgmGain = ctx.createGain();
       _bossBgmGain.connect(ctx.destination);
     }
-    const targetVol = isSoundEnabled() ? 0.85 : 0.001;
+    const targetVol = isSoundEnabled() ? 0.90 : 0.001;
     _bossBgmGain.gain.cancelScheduledValues(ctx.currentTime);
     _bossBgmGain.gain.setValueAtTime(0.001, ctx.currentTime);
     _bossBgmGain.gain.linearRampToValueAtTime(targetVol, ctx.currentTime + 0.35);
@@ -511,10 +823,10 @@ function startBossBgm() {
     _bossBgmPlaying = true;
     _bossBgmPaused = false;
     _bossBgmStep = 0;
-    _bossBgmNextStepTime = ctx.currentTime + 0.05;
+    _bossBgmNextTime = ctx.currentTime + 0.05;
 
     clearTimeout(_bossBgmTimer);
-    runChiptuneScheduler();
+    runBossBgmScheduler();
   } catch (_) {}
 }
 
@@ -537,43 +849,90 @@ function stopBossBgm(fade = true) {
     _bossBgmPaused = false;
     clearTimeout(_bossBgmTimer);
     _bossBgmTimer = null;
+
+    // Retoma suavemente a trilha normal espacial se a partida continuar ativa
+    if (typeof state !== 'undefined' && state && !state.paused && !state.phaseComplete) {
+      startNormalBgm();
+    }
   }, fade ? 480 : 20);
 }
 
 function pauseBossBgm() {
-  if (!_bossBgmPlaying || _bossBgmPaused) return;
-  _bossBgmPaused = true;
-  clearTimeout(_bossBgmTimer);
-  _bossBgmTimer = null;
-  if (_bossBgmGain) {
-    try {
-      const ctx = actx();
-      _bossBgmGain.gain.setValueAtTime(0.001, ctx.currentTime);
-    } catch (_) {}
-  }
+  pauseAllBgm();
 }
 
 function resumeBossBgm() {
-  if (!_bossBgmPlaying || !_bossBgmPaused) return;
-  try {
-    const ctx = actx();
-    _bossBgmPaused = false;
-    const targetVol = isSoundEnabled() ? 0.85 : 0.001;
+  resumeActiveBgm();
+}
+
+function pauseAllBgm() {
+  if (_bossBgmPlaying) {
+    _bossBgmPaused = true;
+    clearTimeout(_bossBgmTimer);
     if (_bossBgmGain) {
-      _bossBgmGain.gain.cancelScheduledValues(ctx.currentTime);
-      _bossBgmGain.gain.linearRampToValueAtTime(targetVol, ctx.currentTime + 0.2);
+      try { _bossBgmGain.gain.setValueAtTime(0.001, actx().currentTime); } catch (_) {}
     }
-    _bossBgmNextStepTime = ctx.currentTime + 0.05;
-    runChiptuneScheduler();
-  } catch (_) {}
+  }
+  if (_normalBgmPlaying) {
+    _normalBgmPaused = true;
+    clearTimeout(_normalBgmTimer);
+    if (_normalBgmGain) {
+      try { _normalBgmGain.gain.setValueAtTime(0.001, actx().currentTime); } catch (_) {}
+    }
+  }
+}
+
+function resumeActiveBgm() {
+  const isMuted = !isSoundEnabled();
+  if (_bossBgmPlaying && _bossBgmPaused) {
+    try {
+      const ctx = actx();
+      _bossBgmPaused = false;
+      if (_bossBgmGain) {
+        _bossBgmGain.gain.cancelScheduledValues(ctx.currentTime);
+        _bossBgmGain.gain.linearRampToValueAtTime(isMuted ? 0.001 : 0.90, ctx.currentTime + 0.2);
+      }
+      _bossBgmNextTime = ctx.currentTime + 0.05;
+      runBossBgmScheduler();
+    } catch (_) {}
+  } else if (_normalBgmPlaying && _normalBgmPaused) {
+    try {
+      const ctx = actx();
+      _normalBgmPaused = false;
+      if (_normalBgmGain) {
+        _normalBgmGain.gain.cancelScheduledValues(ctx.currentTime);
+        _normalBgmGain.gain.linearRampToValueAtTime(isMuted ? 0.001 : 0.75, ctx.currentTime + 0.2);
+      }
+      _normalBgmNextTime = ctx.currentTime + 0.05;
+      runNormalBgmScheduler();
+    } catch (_) {}
+  } else if (!_bossBgmPlaying && !_normalBgmPlaying && typeof state !== 'undefined' && state && !state.paused && !state.phaseComplete) {
+    startNormalBgm();
+  }
+}
+
+function stopAllBgm() {
+  stopBossBgm(false);
+  stopNormalBgm(false);
 }
 
 function updateBossBgmVolume() {
-  if (!_bossBgmGain) return;
+  updateAllBgmVolume();
+}
+
+function updateAllBgmVolume() {
+  const isMuted = !isSoundEnabled();
   try {
     const ctx = actx();
-    const targetVol = (_bossBgmPlaying && !_bossBgmPaused && isSoundEnabled()) ? 0.85 : 0.001;
-    _bossBgmGain.gain.cancelScheduledValues(ctx.currentTime);
-    _bossBgmGain.gain.linearRampToValueAtTime(targetVol, ctx.currentTime + 0.1);
+    if (_bossBgmGain) {
+      const target = (_bossBgmPlaying && !_bossBgmPaused && !isMuted) ? 0.90 : 0.001;
+      _bossBgmGain.gain.cancelScheduledValues(ctx.currentTime);
+      _bossBgmGain.gain.linearRampToValueAtTime(target, ctx.currentTime + 0.08);
+    }
+    if (_normalBgmGain) {
+      const target = (_normalBgmPlaying && !_normalBgmPaused && !isMuted) ? 0.75 : 0.001;
+      _normalBgmGain.gain.cancelScheduledValues(ctx.currentTime);
+      _normalBgmGain.gain.linearRampToValueAtTime(target, ctx.currentTime + 0.08);
+    }
   } catch (_) {}
 }
