@@ -3490,7 +3490,7 @@ function showBossRewardModal(skills, onPick) {
 function showLevelUpModal(choices, onPick) {
   const modal = document.getElementById('modal-levelup');
   const grid = document.getElementById('levelup-skills-grid');
-  const subEl = document.getElementById('levelup-sub-text');
+  const subEl = document.getElementById('levelup-sub-text') || (modal && modal.querySelector('.levelup-sub'));
   if (!modal || !grid) return;
 
   grid.innerHTML = '';
@@ -3499,7 +3499,8 @@ function showLevelUpModal(choices, onPick) {
   state.selectedLevelUpIndex = 0;
 
   if (subEl) {
-    subEl.textContent = typeof t === 'function' ? t('levelup_sub', { level: state.level }) : `You reached Level ${state.level}!`;
+    const displayLvl = (state && state.level) ? state.level : 1;
+    subEl.textContent = typeof t === 'function' ? t('levelup_sub', { level: displayLvl }) : `You reached Level ${displayLvl}!`;
   }
 
   choices.forEach((skill, index) => {
@@ -3515,9 +3516,6 @@ function showLevelUpModal(choices, onPick) {
     if (skill.id === 'dilation') {
       const maxMultiplier = Math.min(5, 1 + nextLevel);
       sDesc = typeof t === 'function' ? t(skill.descKey, { max: maxMultiplier }) : `Spacing up to ${maxMultiplier}`;
-    } else if (skill.id === 'shield') {
-      const dur = Math.min(5, nextLevel) * 10;
-      sDesc = typeof t === 'function' ? t(skill.descKey, { duration: dur, level: nextLevel, max: 5 }) : `Immunity for ${dur}s`;
     } else if (skill.id === 'bomb') {
       sDesc = typeof t === 'function' ? t(skill.descKey, { level: nextLevel, max: 5 }) : `Explosion radius level ${nextLevel}`;
     } else if (skill.id === 'decoder') {
@@ -3525,6 +3523,11 @@ function showLevelUpModal(choices, onPick) {
       sDesc = (typeof t === 'function' && t(lvlKey) !== lvlKey)
         ? t(lvlKey)
         : (nextLevel === 1 ? 'Efeito exclusivo no Chefão: decifra e revela a 1ª letra da palavra.' : 'Efeito exclusivo no Chefão: decifra e revela a 1ª letra e mais uma letra aleatória da palavra.');
+    } else if (skill.durationByLevel) {
+      const dur = Math.round(getSkillDuration(skill.id, nextLevel) / 1000);
+      sDesc = typeof t === 'function'
+        ? t(skill.descKey, { duration: dur, level: nextLevel, max: skill.maxLevel || 5 })
+        : (skill.desc || `${dur}s`);
     } else {
       sDesc = (typeof t === 'function' && t(skill.descKey) !== skill.descKey)
         ? t(skill.descKey)

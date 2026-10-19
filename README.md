@@ -1,6 +1,6 @@
 # 🌌 Digithin Galaxy — Jogo de Digitação Arcade Espacial
 
-[![Versão](https://img.shields.io/badge/versão-v1.19.1-8B5CF6?style=for-the-badge&logo=gamepad)](ChangeLog.md)
+[![Versão](https://img.shields.io/badge/versão-v1.20-8B5CF6?style=for-the-badge&logo=gamepad)](ChangeLog.md)
 [![Status](https://img.shields.io/badge/status-estável-10B981?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 [![Licença](https://img.shields.io/badge/licença-MIT-38BDF8?style=for-the-badge)](https://github.com/rlearsi/digithin-galaxy)
 
@@ -294,17 +294,17 @@ A suíte musical é composta por **7 faixas originais com identidades e especifi
 
 As habilidades obtidas no Level-Up atuam automaticamente ao longo da partida, gerenciadas pelo painel lateral direito ("Perks da Run") com recargas automáticas e fila de ativação inteligente:
 
-| Habilidade | Tipo | Ciclo / Duração | Efeito em Jogo |
-|:---|:---:|:---:|:---|
-| **Dilação Espacial** | Passiva Permanente | Efeito Contínuo | Amplia o espaçamento e intervalo entre novos vocábulos gerados (2x a 5x). |
-| **Bomba Estelar** | Ativa Periódica | A cada 90s (Nv. 1 a 5) | Onda de choque estelar cujo raio expande a cada upgrade até a tela toda (inativa durante Boss). |
-| **Escudo de Plasma** | Ativa Periódica | 10s a 50s a cada 180s | Imunidade absoluta no escudo da Terra: duração cresce de 10s (Nv. 1) a 50s (Nv. 5). |
-| **Criostase Sideral** | Ativa Periódica | 10s a cada 120s | Paralisa todos os vocábulos na esteira, suspendendo a queda em direção à Terra. |
-| **Vórtice Cósmico** | Ativa Periódica | A cada 180s | Abre um vórtice gravitacional temporário no centro da tela que suga todos os termos ativos da tela. |
-| **Desaceleração** | Ativa Periódica | 15s a cada 60s | Reduz a velocidade de descida dos vocábulos em 50%. |
-| **Eco Cósmico** | Ativa Periódica | 10s a cada 60s | Aniquila automaticamente termos aprendidos com mira inteligente (`.eco-target`) e buffer lock. |
-| **Pontos em Dobro** | Ativa Periódica | 10s a cada 30s | Dobra toda a pontuação recebida por digitação durante sua vigência (2x). |
-| **Decodificador Cósmico** | Passiva de Boss | Nv. 1 a 2 | Atua exclusivamente no Chefão: revela a 1ª letra (Nv. 1) e mais uma letra aleatória (Nv. 2) do enigma cósmico. |
+| Habilidade | Tipo | Ciclo (Intervalo) | Duração por Nível | Efeito em Jogo |
+|:---|:---:|:---:|:---:|:---|
+| **Escudo de Plasma** | Ativa Periódica | A cada 180s | 10s, 20s, 30s, 40s e 50s | Imunidade absoluta no escudo da Terra contra o impacto de destroços. |
+| **Desaceleração** | Ativa Periódica | A cada 60s | 5s, 10s, 15s, 20s e 25s | Reduz a velocidade de descida dos vocábulos cósmicos em 50%. |
+| **Eco Cósmico** | Ativa Periódica | A cada 60s | 3s, 7s, 15s, 27s e 35s | Aniquila automaticamente termos aprendidos com mira inteligente (`.eco-target`). |
+| **XP em Dobro (Pontos)** | Ativa Periódica | A cada 5 min (300s) | 10s, 20s, 30s, 45s e 60s | Dobra toda a pontuação e experiência recebida ao digitar termos (2x). |
+| **Bomba Estelar** | Ativa Periódica | A cada 90s | *Instantânea* (Raio: Nv. 1 a 5 até a tela toda) | Onda de choque que destrói vocábulos na área (inativa durante Boss). |
+| **Criostase Sideral** | Ativa Periódica | A cada 120s | 5s, 10s, 15s, 20s e 25s | Paralisa todos os vocábulos na esteira, suspendendo a queda em direção à Terra. |
+| **Vórtice Cósmico** | Ativa Periódica | A cada 60s (1 min) | *Instantânea* (suga 1x tudo na tela) | Abre um vórtice gravitacional central que suga todos os termos ativos da tela. |
+| **Dilação Espacial** | Passiva Permanente | Efeito Contínuo | Permanente (Espaçamento: 2x, 3x, 4x e 5x) | Amplia o espaçamento e intervalo entre novos vocábulos gerados. |
+| **Decodificador Cósmico** | Passiva de Boss | Exclusivo no Boss | Permanente no Boss (1ª letra / 1ª + 1 aleatória) | Decifra e revela letras nos enigmas cósmicos dos Comandantes Alienígenas. |
 
 ---
 

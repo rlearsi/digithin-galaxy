@@ -67,38 +67,46 @@ function applyChosenLevelUpSkill(skillId) {
   state.runPerks[skillId] = (state.runPerks[skillId] || 0) + 1;
 
   const def = SKILLS_CONFIG[skillId];
+  const curLevel = state.runPerks[skillId];
+
+  // For periodic skills, if acquiring for the first time, give quick first-trigger in 3s so the player enjoys it immediately!
+  if (def?.type === 'periodic' && state.skillCooldowns[skillId] === undefined) {
+    state.skillCooldowns[skillId] = 3000;
+  }
 
   if (skillId === 'dilation') {
-    const curLevel = state.runPerks.dilation;
     const maxMultiplier = Math.min(5, 1 + curLevel);
     const msg = typeof t === 'function' ? t('fb_dilation_upgraded', { max: maxMultiplier }) : `Spacing upgraded up to ${maxMultiplier}!`;
     showFeedback(msg, 'special');
   } else if (skillId === 'shield') {
-    const curLevel = state.runPerks.shield;
-    const dur = Math.min(5, curLevel) * 10;
+    const dur = [10, 20, 30, 40, 50][Math.min(5, Math.max(1, curLevel)) - 1];
     const msg = typeof t === 'function'
       ? t('fb_shield_upgraded', { dur, level: curLevel })
-      : `🛡️ Imunidade Nv. ${curLevel} (${dur}s)!`;
+      : `🛡️ Escudo de Plasma Nv. ${curLevel} (${dur}s)!`;
     showFeedback(msg, 'special');
   } else if (skillId === 'bomb') {
-    const curLevel = state.runPerks.bomb;
     const isMax = curLevel >= 5;
     const msg = typeof t === 'function'
       ? t('fb_bomb_upgraded', { level: curLevel })
-      : (isMax ? `💣 Bomba Nv. ${curLevel} (MÁX)!` : `💣 Bomba Nv. ${curLevel}!`);
+      : (isMax ? `💣 Bomba Estelar Nv. ${curLevel} (MÁX)!` : `💣 Bomba Estelar Nv. ${curLevel}!`);
     showFeedback(msg, 'special');
   } else if (skillId === 'decoder') {
-    const curLevel = state.runPerks.decoder;
     const msg = typeof t === 'function'
       ? t('fb_decoder_upgraded', { level: curLevel })
-      : `🔍 Decodificador Nv. ${curLevel}!`;
+      : `🔍 Decodificador Cósmico Nv. ${curLevel}!`;
+    showFeedback(msg, 'special');
+  } else if (def?.durationByLevel) {
+    const dur = Math.round(getSkillDuration(skillId, curLevel) / 1000);
+    const isMax = curLevel >= (def.maxLevel || 5);
+    const upgKey = `fb_${skillId}_upgraded`;
+    const skillName = (typeof t === 'function' && t(`skill_name_${skillId}`) !== `skill_name_${skillId}`)
+      ? t(`skill_name_${skillId}`)
+      : (def?.name || skillId);
+    const msg = (typeof t === 'function' && t(upgKey, { dur, level: curLevel }) !== upgKey)
+      ? t(upgKey, { dur, level: curLevel })
+      : `⚡ ${skillName} Nv. ${curLevel} (${dur}s)${isMax ? ' (MÁX)' : ''}!`;
     showFeedback(msg, 'special');
   } else {
-    // For periodic skills:
-    // If acquiring for the first time, give quick first-trigger in 3s so the player enjoys it immediately!
-    if (state.skillCooldowns[skillId] === undefined) {
-      state.skillCooldowns[skillId] = 3000;
-    }
     const skillName = (typeof t === 'function' && t(`skill_name_${skillId}`) !== `skill_name_${skillId}`)
       ? t(`skill_name_${skillId}`)
       : (def?.name || skillId);
@@ -217,11 +225,10 @@ function firePeriodicSkill(skillId) {
   if (!def) return;
 
   state.activeSkill = skillId;
-  let duration = def.duration || 10000;
-  if (skillId === 'shield') {
-    const lvl = Math.min(5, Math.max(1, state.runPerks?.shield || 1));
-    duration = lvl * 10000; // Nv 1: 10s, Nv 2: 20s, Nv 3: 30s, Nv 4: 40s, Nv 5: 50s
-  }
+  const curLvl = state.runPerks?.[skillId] || 1;
+  const duration = (typeof getSkillDuration === 'function')
+    ? getSkillDuration(skillId, curLvl)
+    : (def.duration || 10000);
   state.activeTimers[skillId] = duration;
 
   if (typeof def.onActivate === 'function') {

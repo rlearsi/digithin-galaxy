@@ -176,7 +176,7 @@ function loseShield() {
   // Shield immunity protects shields
   if ((state.activeTimers?.shield || 0) > 0) {
     playSound('skill');
-    const msg = typeof t === 'function' ? t('fb_shield_blocked') : '🛡️ Dano bloqueado pela Imunidade!';
+    const msg = typeof t === 'function' ? t('fb_shield_blocked') : '🛡️ Dano bloqueado pelo Escudo de Plasma!';
     showFeedback(msg, 'special');
     return;
   }
@@ -471,7 +471,7 @@ function gameLoop(ts) {
     const underSqrt = Math.max(0, shieldR * shieldR - boardCenterDx * boardCenterDx);
     const shieldBarrierY = shieldCenterY - Math.sqrt(underSqrt);
 
-    // Quando a Imunidade estiver ativa: destrói os objetos assim que tocar na barreira da imunidade
+    // Quando o Escudo de Plasma estiver ativo: destrói os objetos assim que tocar na barreira da imunidade
     if (isImmunityActive && (item.y + h >= shieldBarrierY)) {
       item.removing = true;
       item.el.classList.remove('danger', 'in-black-hole-pull', 'typing-target', 'eco-target');
@@ -496,7 +496,7 @@ function gameLoop(ts) {
         }, 300);
       }
 
-      const blockMsg = typeof t === 'function' ? t('fb_shield_blocked') : '🛡️ Dano bloqueado pela Imunidade!';
+      const blockMsg = typeof t === 'function' ? t('fb_shield_blocked') : '🛡️ Dano bloqueado pelo Escudo de Plasma!';
       showFeedback(blockMsg, 'special');
 
       if (item.isBossMeaning) {
@@ -900,8 +900,8 @@ function completeItem(item) {
     const charsCompleted = (item.text || '').length || 1;
     state.progress = Math.min(phaseGoal(), (state.progress || 0) + charsCompleted);
   } else {
-    const charLen = (item.text || '').length || 1;
-    const baseXp = item.type === 'letter' ? 1 : item.type === 'syllable' ? 3 : Math.max(5, charLen * 2);
+    let baseXp = item.type === 'letter' ? 1 : item.type === 'syllable' ? 3 : Math.max(5, charLen * 2);
+    if ((state.activeTimers?.haste || 0) > 0) baseXp = Math.floor(baseXp * 2);
     const bonusXp = (item.skill?.id === 'bonus_xp') ? 25 : 0;
     if (typeof addPlayerXp === 'function') {
       addPlayerXp(baseXp + bonusXp);

@@ -613,9 +613,15 @@ const SKILLS_CONFIG = {
     nameKey: 'skill_name_freezer',
     descKey: 'skill_desc_freezer',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
-    get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
-    duration: 10000,
+    get desc() {
+      const lvl = (typeof state !== 'undefined' && state?.runPerks?.freezer) ? state.runPerks.freezer : 1;
+      const dur = [5, 10, 15, 20, 25][Math.min(5, Math.max(1, lvl)) - 1];
+      return (typeof t === 'function') ? t(this.descKey, { duration: dur, level: lvl, max: 5 }) : '';
+    },
+    duration: 5000,
+    durationByLevel: [5000, 10000, 15000, 20000, 25000],
     interval: 120000, // 2 minutes
+    maxLevel: 5,
     color: '#06B6D4',
     type: 'periodic',
     category: 'skill',
@@ -659,10 +665,11 @@ const SKILLS_CONFIG = {
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
     get desc() {
       const lvl = (typeof state !== 'undefined' && state?.runPerks?.shield) ? state.runPerks.shield : 1;
-      const dur = Math.min(5, Math.max(1, lvl)) * 10;
+      const dur = [10, 20, 30, 40, 50][Math.min(5, Math.max(1, lvl)) - 1];
       return (typeof t === 'function') ? t(this.descKey, { duration: dur, level: lvl, max: 5 }) : '';
     },
     duration: 10000,
+    durationByLevel: [10000, 20000, 30000, 40000, 50000],
     interval: 180000, // 3 minutes
     maxLevel: 5,
     color: '#A855F7',
@@ -685,8 +692,9 @@ const SKILLS_CONFIG = {
     descKey: 'skill_desc_vortex',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
     get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
-    duration: 3000,
-    interval: 180000, // 3 minutes
+    duration: 2500,
+    interval: 60000, // 1 minute (conforme documentação)
+    maxLevel: 1,
     color: '#8B5CF6',
     type: 'periodic',
     category: 'skill',
@@ -704,9 +712,15 @@ const SKILLS_CONFIG = {
     nameKey: 'skill_name_slowdown',
     descKey: 'skill_desc_slowdown',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
-    get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
-    duration: 15000,
+    get desc() {
+      const lvl = (typeof state !== 'undefined' && state?.runPerks?.slowdown) ? state.runPerks.slowdown : 1;
+      const dur = [5, 10, 15, 20, 25][Math.min(5, Math.max(1, lvl)) - 1];
+      return (typeof t === 'function') ? t(this.descKey, { duration: dur, level: lvl, max: 5 }) : '';
+    },
+    duration: 5000,
+    durationByLevel: [5000, 10000, 15000, 20000, 25000],
     interval: 60000, // 1 minute
+    maxLevel: 5,
     color: '#3B82F6',
     type: 'periodic',
     category: 'skill',
@@ -726,10 +740,16 @@ const SKILLS_CONFIG = {
     nameKey: 'skill_name_haste',
     descKey: 'skill_desc_haste',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
-    get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
+    get desc() {
+      const lvl = (typeof state !== 'undefined' && state?.runPerks?.haste) ? state.runPerks.haste : 1;
+      const dur = [10, 20, 30, 45, 60][Math.min(5, Math.max(1, lvl)) - 1];
+      return (typeof t === 'function') ? t(this.descKey, { duration: dur, level: lvl, max: 5 }) : '';
+    },
     duration: 10000,
-    interval: 30000, // 30s
-    speedBonus: 0, // No speed increase as requested!
+    durationByLevel: [10000, 20000, 30000, 45000, 60000],
+    interval: 300000, // 5 minutes (conforme documentação)
+    maxLevel: 5,
+    speedBonus: 0,
     color: '#FF9F1A',
     type: 'periodic',
     category: 'skill',
@@ -748,7 +768,7 @@ const SKILLS_CONFIG = {
       const maxMultiplier = Math.min(5, 1 + lvl);
       return (typeof t === 'function') ? t(this.descKey, { max: maxMultiplier }) : `Spacing up to ${maxMultiplier}`;
     },
-    maxLevel: 4, // Level 1 -> up to 2x, Level 2 -> up to 3x, Level 3 -> up to 4x, Level 4 -> up to 5x
+    maxLevel: 4,
     color: '#A855F7',
     type: 'passive',
     category: 'skill',
@@ -762,9 +782,15 @@ const SKILLS_CONFIG = {
     nameKey: 'skill_name_autodestroy',
     descKey: 'skill_desc_autodestroy',
     get name() { return (typeof t === 'function') ? t(this.nameKey) : ''; },
-    get desc() { return (typeof t === 'function') ? t(this.descKey) : ''; },
-    duration: 10000,
+    get desc() {
+      const lvl = (typeof state !== 'undefined' && state?.runPerks?.autodestroy) ? state.runPerks.autodestroy : 1;
+      const dur = [3, 7, 15, 27, 35][Math.min(5, Math.max(1, lvl)) - 1];
+      return (typeof t === 'function') ? t(this.descKey, { duration: dur, level: lvl, max: 5 }) : '';
+    },
+    duration: 3000,
+    durationByLevel: [3000, 7000, 15000, 27000, 35000],
     interval: 60000, // 1 minute
+    maxLevel: 5,
     color: '#F59E0B',
     type: 'periodic',
     category: 'skill',
@@ -795,6 +821,17 @@ const SKILLS_CONFIG = {
     onExpire: () => {}
   }
 };
+
+function getSkillDuration(skillId, level = 1) {
+  const def = (typeof SKILLS_CONFIG !== 'undefined' && SKILLS_CONFIG[skillId]) || null;
+  if (!def) return 10000;
+  if (Array.isArray(def.durationByLevel)) {
+    const idx = Math.min(Math.max(1, level), def.durationByLevel.length) - 1;
+    return def.durationByLevel[idx];
+  }
+  return def.duration || 10000;
+}
+window.getSkillDuration = getSkillDuration;
 
 // 2. BOSS SPECIAL REWARDS (Choose 1 among 3 upon defeating a boss)
 const BOSS_REWARDS_CONFIG = {
